@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>情境劇 · 第一季</title>
+<style>
+/* 字型：把 Cubic_11.ttf 放進 ./fonts/ 即可離線使用
+   https://github.com/ACh-K/Cubic-11 （SIL OFL 1.1，可免費商用） */
+@font-face{
+  font-family:'Cubic11';
+  src:url('../fonts/Cubic_11.ttf') format('truetype'),
+      url('https://cdn.jsdelivr.net/gh/ACh-K/Cubic-11@main/fonts/ttf/Cubic_11.ttf') format('truetype');
+  font-display:swap;
+}
+:root{
+  --ink:#2a2438; --paper:#f7f2e6; --frame:#1b1826; --frame-in:#7fa8d9;
+  --rule:#cdbfa6; --dim:#7a6a52;
+  --ok:#2f6b3f; --bad:#9c3a2e; --mid:#8a6a2a;
+  --ui-bg:#2f2942; --ui-line:#4d4468; --ui-text:#d8d2e4;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{background:#15121f}
+body{
+  font-family:'Cubic11',ui-monospace,monospace;
+  -webkit-font-smoothing:none; font-smooth:never; text-rendering:optimizeSpeed;
+  color:var(--ink); display:flex; justify-content:center; min-height:100vh;
+}
+/* 字級一律 11 的倍數，否則點陣會被抗鋸齒糊掉 */
+.t11{font-size:11px}
+.t22{font-size:22px;line-height:33px}
+
+#app{width:100%;max-width:560px;background:#15121f}
+#scene{line-height:0;border-bottom:3px solid var(--frame)}
+#scene svg{width:100%;height:auto;display:block;image-rendering:pixelated}
+
+#box{background:var(--frame);padding:3px;cursor:pointer;user-select:none}
+#box>div{background:var(--frame-in);padding:2px}
+#pane{background:var(--paper);padding:16px 14px 12px}
+#who{color:var(--dim);margin-bottom:10px}
+#txt{min-height:231px;white-space:pre-wrap}
+#arw{text-align:right;height:26px;line-height:26px}
+#opts{display:none;flex-direction:column;border-top:2px solid var(--rule);padding-top:10px}
+.ln{display:flex;gap:10px;padding:5px 2px;cursor:pointer}
+.ln .ar{width:16px;flex:none;color:var(--bad)}
+.ln:hover .ar::after,.ln:focus-visible .ar::after{content:'▶'}
+.ln:focus-visible{outline:2px solid var(--frame-in);outline-offset:2px}
+
+#after{padding:14px;display:none}
+.card{background:var(--paper);border:3px solid var(--frame);padding:14px;margin-bottom:10px}
+.card .tag{color:var(--dim);margin-bottom:8px}
+.words span{display:inline-block;margin:0 10px 4px 0}
+
+.bar{display:flex;gap:6px;padding:10px 12px;align-items:center;flex-wrap:wrap}
+button,select{
+  font-family:inherit;font-size:11px;color:var(--ui-text);
+  background:var(--ui-bg);border:2px solid var(--ui-line);padding:7px 10px;cursor:pointer;
+}
+button:hover{background:#3b3450}
+button:focus-visible,select:focus-visible{outline:2px solid var(--frame-in);outline-offset:2px}
+#pick{flex:1;min-width:150px}
+.note{font-size:11px;color:#7d7392}
+.sp{flex:1}
+@media(prefers-reduced-motion:reduce){#arw{visibility:hidden}}
+</style>
+</head>
+<body>
+<div id="app">
+  <div id="scene"></div>
+
+  <div class="bar">
+    <button id="bPrev">←</button>
+    <select id="pick" aria-label="選擇集數"></select>
+    <button id="bNext">→</button>
+  </div>
+
+  <div id="box">
+    <div><div id="pane">
+      <div id="who" class="t11"></div>
+      <div id="txt" class="t22"></div>
+      <div id="arw" class="t22"></div>
+      <div id="opts" class="t22"></div>
+    </div></div>
+  </div>
+
+  <div id="after">
+    <div class="card" id="cWhy">
+      <div class="tag t11">為什麼</div>
+      <div class="t22" id="whyBody"></div>
+    </div>
+    <div class="card">
+      <div class="tag t11">本集目標字</div>
+      <div class="t22 words" id="wordBody"></div>
+    </div>
+    <div class="bar" style="padding:0">
+      <button id="bRetry">再試一次</button>
+      <button id="bGo">下一集</button>
+      <span class="sp"></span>
+      <span class="note" id="prog"></span>
+    </div>
+  </div>
+
+  <div class="bar">
+    <span class="note" id="pos"></span>
+    <span class="sp"></span>
+    <button id="bSnd">音效：開</button>
+    <button id="bReset">清除進度</button>
+  </div>
+</div>
+
+<script src="data/content.js"></script>
+<script src="data/scenes-extra.js"></script>
+<script src="data/interludes.js"></script>
+<script src="data/season2.js"></script>
+<script>
+
+/* ── 防呆：直接開原始版會少掉旁邊的資料檔 ── */
+if(typeof CONTENT === 'undefined'){
+  document.body.innerHTML =
+    '<div style="max-width:520px;margin:60px auto;padding:24px;background:#f7f2e6;'
+  + 'border:3px solid #1b1826;color:#2a2438;font-size:15px;line-height:1.9">'
+  + '<b style="font-size:17px">找不到內容檔</b><br><br>'
+  + '這是開發用的原始版，需要同一個資料夾裡的 js 檔才能執行。<br><br>'
+  + '要直接開來玩，請用 <b>dist/</b> 裡的版本——那是把所有內容內嵌好的單一檔案。<br><br>'
+  + '如果你改過內容，重新執行 <b>python tools/build.py</b> 就會產生最新的 dist 檔。'
+  + '</div>';
+  throw new Error('CONTENT not loaded');
+}
+/* ═══ 引擎 ═══════════════════════════════════════════
+   內容全部來自 content.js，這裡只負責流程。
+   選項欄位：[en, verdict, head, result, why]
+   ═══════════════════════════════════════════════════ */
+const $ = id => document.getElementById(id);
+const KEY = 'pxeng.v2';
+
+const IDLE_DEFAULT = {
+  david:'David 正在講電話。\n他抬手比了個「等一下」。',
+  priya:'Priya 戴著耳機。\n螢幕上是一整排數字。',
+  sam:'Sam 抬頭：\n「Morning! Need anything?」',
+  clerk:'店員正在忙別的客人。',
+  passerby:'那個人看了你一眼，\n繼續等他的公車。',
+  phone:'手機安靜地躺在桌上。'
+};
+
+const S = { i:0, phase:'idle', typing:false, buf:'', sound:true, timer:null, blink:null, ac:null };
+
+/* ── 音效 ── */
+function blip(){
+  if(!S.sound) return;
+  try{
+    S.ac = S.ac || new (window.AudioContext||window.webkitAudioContext)();
+    const o=S.ac.createOscillator(), g=S.ac.createGain();
+    o.type='square'; o.frequency.value=660; g.gain.value=0.03;
+    o.connect(g); g.connect(S.ac.destination);
+    o.start(); o.stop(S.ac.currentTime+0.03);
+  }catch(e){}
+}
+
+/* ── 打字 ── */
+function type(text, done){
+  S.buf=text; S.typing=true; let i=0;
+  $('txt').textContent=''; $('arw').textContent='';
+  clearInterval(S.timer);
+  S.timer=setInterval(()=>{
+    i++; $('txt').textContent=text.slice(0,i);
+    if(i%3===0) blip();
+    if(i>=text.length){ clearInterval(S.timer); S.typing=false; done && done(); }
+  },20);
+}
+const skip = () => { clearInterval(S.timer); S.typing=false; $('txt').textContent=S.buf; };
+function blinkOn(){ clearInterval(S.blink); let on=true;
+  S.blink=setInterval(()=>{ $('arw').textContent=on?'▼':''; on=!on; },480); }
+const blinkOff = () => { clearInterval(S.blink); $('arw').textContent=''; };
+
+/* ── 場景 ── */
+function mount(ep){
+  $('scene').innerHTML = CONTENT.scenes[ep.scene];
+  $('scene').querySelectorAll('[data-actor]').forEach(g=>
+    g.addEventListener('click', ()=> talkTo(g.dataset.actor)));
+  mark(ep.actor);
+}
+function mark(key){
+  const m=$('scene').querySelector('[data-mark]'), a=CONTENT.actors[key];
+  if(m&&a) m.setAttribute('transform',`translate(${a.mark[0]},${a.mark[1]})`);
+}
+const ep = () => CONTENT.episodes[S.i];
+const label = e => e.label || CONTENT.actors[e.actor].label;
+
+/* ── 流程 ── */
+function render(){
+  const e=ep();
+  $('after').style.display='none';
+  $('opts').style.display='none';
+  $('pos').textContent = `第 ${e.id} 集 · ${e.stage} · 場景 ${e.scene}`;
+  $('pick').value = String(S.i);
+  mount(e);
+  const iv = CONTENT.interludes && CONTENT.interludes[e.id];
+  if(iv && !S.skipIntro){ startInterlude(iv); return; }
+  S.skipIntro = false;
+  $('who').textContent = label(e);
+  S.phase='narrating';
+  type(e.n + '\n\nGoal: ' + e.goal, blinkOn);
+}
+
+/* ── 過場章節：三頁英文，讀完顯示字彙 ── */
+function startInterlude(iv){
+  S.iv = iv; S.page = 0;
+  $('who').textContent = iv.title;
+  S.phase = 'reading';
+  type(iv.pages[0], blinkOn);
+}
+function nextPage(){
+  S.page++;
+  if(S.page < S.iv.pages.length){ type(S.iv.pages[S.page], blinkOn); return; }
+  blinkOff();
+  $('whyBody').textContent = '這一章的字，下一集會用到。';
+  $('cWhy').style.borderColor = 'var(--frame)';
+  $('wordBody').innerHTML = S.iv.gloss
+    .map(g=>`<span><b>${g[0]}</b>　${g[1]}</span>`).join('');
+  $('after').style.display='block';
+  $('bRetry').textContent = '重讀這一章';
+  $('bGo').textContent = '開始這一集';
+  S.phase = 'readDone';
+}
+
+function talkTo(key){
+  const e=ep();
+  if(key===e.actor){ render(); return; }
+  blinkOff();
+  $('opts').style.display='none'; $('after').style.display='none';
+  mark(key);
+  $('who').textContent = CONTENT.actors[key].label;
+  const byScene = (CONTENT.idleByScene && CONTENT.idleByScene[e.scene]) || {};
+  S.phase='idle';
+  type((e.idle && e.idle[key]) || byScene[key] || IDLE_DEFAULT[key] || '……');
+}
+
+function showOptions(){
+  blinkOff();
+  const e=ep(), box=$('opts');
+  box.style.display='flex';
+  box.innerHTML = e.o.map((o,n)=>
+    `<div class="ln" data-n="${n}" tabindex="0"><span class="ar"></span><span>${o[0]}</span></div>`).join('');
+  box.querySelectorAll('.ln').forEach(el=>{
+    const go = ev => { ev.stopPropagation(); choose(+el.dataset.n); };
+    el.addEventListener('click', go);
+    el.addEventListener('keydown', ev=>{ if(ev.key==='Enter'||ev.key===' ') go(ev); });
+  });
+  S.phase='choosing';
+}
+
+function choose(n){
+  const e=ep(), o=e.o[n];
+  const [en, verdict, head, result, why] = o;
+  $('opts').style.display='none';
+  $('who').textContent = verdict==='ok' ? '結果 — 最佳' : '結果';
+  save(e.id, n, verdict);
+  type(head + '\n' + result, ()=>{
+    $('whyBody').textContent = why;
+    $('cWhy').style.borderColor =
+      verdict==='ok' ? 'var(--ok)' : verdict==='bad' ? 'var(--bad)' : 'var(--mid)';
+    $('wordBody').innerHTML = (e.w||[]).map(w=>`<span>${w}</span>`).join('');
+    $('after').style.display='block';
+    drawProgress();
+  });
+  S.phase='result';
+}
+
+/* ── 進度 ── */
+function load(){ try{ return JSON.parse(localStorage.getItem(KEY)||'{}'); }catch(e){ return {}; } }
+function save(id,pick,verdict){
+  try{ const d=load(); d[id]={pick,verdict,at:Date.now()};
+    localStorage.setItem(KEY,JSON.stringify(d)); }catch(e){}
+}
+function drawProgress(){
+  const d=load(), done=Object.keys(d).length;
+  const best=Object.values(d).filter(x=>x.verdict==='ok').length;
+  $('prog').textContent = `已玩 ${done} / ${CONTENT.episodes.length}　最佳解 ${best}`;
+}
+
+/* ── 集數選單 ── */
+function buildPicker(){
+  $('pick').innerHTML = CONTENT.episodes.map((e,n)=>{
+    const d=load()[e.id];
+    const flag = d ? (d.verdict==='ok'?'●':'○') : '　';
+    return `<option value="${n}">${flag} 第 ${e.id} 集 · ${e.stage}</option>`;
+  }).join('');
+}
+
+/* ── 輸入 ── */
+$('box').addEventListener('click', ()=>{
+  if(S.typing){ skip(); if(S.phase==='narrating'||S.phase==='reading') blinkOn(); return; }
+  if(S.phase==='reading'){ nextPage(); return; }
+  if(S.phase==='narrating') showOptions();
+});
+document.addEventListener('keydown', e=>{
+  if(document.activeElement && document.activeElement.tagName!=='BODY') return;
+  if(e.key==='Enter'||e.key===' '){ e.preventDefault(); $('box').click(); }
+  if(e.key==='ArrowLeft') $('bPrev').click();
+  if(e.key==='ArrowRight') $('bNext').click();
+});
+const jump = d => { S.i=(S.i+d+CONTENT.episodes.length)%CONTENT.episodes.length; buildPicker(); render(); };
+$('bPrev').onclick = ()=> jump(-1);
+$('bNext').onclick = ()=> jump(1);
+$('bGo').onclick   = ()=>{
+  if(S.phase==='readDone'){ S.skipIntro=true; resetLabels(); render(); return; }
+  jump(1);
+};
+$('bRetry').onclick= ()=>{
+  if(S.phase==='readDone'){ $('after').style.display='none'; startInterlude(S.iv); return; }
+  resetLabels(); S.skipIntro=true; render();
+};
+function resetLabels(){ $('bRetry').textContent='再試一次'; $('bGo').textContent='下一集'; }
+$('pick').onchange = e => { S.i=+e.target.value; resetLabels(); render(); };
+$('bSnd').onclick  = ()=>{ S.sound=!S.sound; $('bSnd').textContent='音效：'+(S.sound?'開':'關'); };
+$('bReset').onclick= ()=>{ try{ localStorage.removeItem(KEY); }catch(e){} buildPicker(); drawProgress(); };
+
+buildPicker();
+drawProgress();
+render();
+</script>
+</body>
+</html>

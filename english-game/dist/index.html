@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>情境英語 · 首頁</title>
+<style>
+@font-face{
+  font-family:'Cubic11';
+  src:url('../fonts/Cubic_11.ttf') format('truetype'),
+      url('./fonts/Cubic_11.ttf') format('truetype'),
+      url('https://cdn.jsdelivr.net/gh/ACh-K/Cubic-11@main/fonts/ttf/Cubic_11.ttf') format('truetype');
+  font-display:swap;
+}
+:root{
+  --ink:#2a2438; --paper:#f7f2e6; --frame:#1b1826; --frame-in:#7fa8d9; --dim:#7a6a52;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{background:#15121f}
+body{
+  font-family:'Cubic11',ui-monospace,monospace;
+  -webkit-font-smoothing:none;font-smooth:never;text-rendering:optimizeSpeed;
+  color:#e8e2d6;display:flex;justify-content:center;min-height:100vh;
+}
+#app{width:100%;max-width:560px;padding:0 0 30px}
+
+header{
+  padding:22px 16px 18px;border-bottom:3px solid var(--frame);
+  background:repeating-linear-gradient(45deg,#2a2438 0 8px,#241f33 8px 16px);
+}
+h1{font-size:22px;line-height:30px;font-weight:normal;color:#ffe6b8}
+header p{font-size:12px;line-height:20px;color:#9b93ad;margin-top:8px}
+
+.grid{display:flex;flex-direction:column;gap:10px;padding:14px}
+a.mode{
+  display:block;text-decoration:none;color:var(--ink);
+  background:var(--paper);border:3px solid var(--frame);
+  padding:14px 16px;box-shadow:0 3px 0 rgba(0,0,0,.4);
+}
+a.mode:hover{background:#fffaf0}
+a.mode:active{transform:translateY(2px);box-shadow:0 1px 0 rgba(0,0,0,.4)}
+a.mode .t{font-size:18px;line-height:26px}
+a.mode .d{font-size:13px;line-height:21px;color:var(--dim);margin-top:6px}
+a.mode .n{font-size:11px;color:#9a8f78;margin-top:8px}
+
+.note{padding:6px 18px 0;font-size:12px;line-height:21px;color:#8b839c}
+.note b{color:#c9c2d8}
+footer{padding:16px 18px;font-size:11px;line-height:19px;color:#6f6884}
+</style>
+</head>
+<body>
+<div id="app">
+
+  <header>
+    <h1>情境英語</h1>
+    <p>五個模式，同一套字庫。關卡教你怎麼講，閱讀養語感，<br>
+       聽力練反應，兩個小遊戲把字釘進去。</p>
+  </header>
+
+  <div class="grid">
+
+    <a class="mode" href="./game.html">
+      <div class="t">▸ 關卡</div>
+      <div class="d">情境選擇題。四個選項文法都對，差別在後果。<br>
+        從全中文敘述一路走到全英文。</div>
+      <div class="n">65 集 · 260 個選項 · 12 段過場</div>
+    </a>
+
+    <a class="mode" href="./read.html">
+      <div class="t">▸ 閱讀</div>
+      <div class="d">像素插圖的短篇故事。任何字都能點開看中文，<br>
+        可以朗讀、逐字高亮，小考隔天才解鎖。</div>
+      <div class="n">64 章 · 320 題 · 一條從停電夜走到鉛筆紙條的線</div>
+    </a>
+
+    <a class="mode" href="./listen.html">
+      <div class="t">▸ 聽力</div>
+      <div class="d">對齊多益 Part 1–4。前兩部分作答前不顯示任何文字，<br>
+        答完才放出文字稿，文字稿的字也能點。</div>
+      <div class="n">118 題 · 長度分四級到考試規格</div>
+    </a>
+
+    <a class="mode" href="./cards.html">
+      <div class="t">▸ 字彙對戰</div>
+      <div class="d">一局 52 手。對面出英文，你從八張中文牌裡挑。<br>
+        錯過的字會越出越兇，結算列出還沒記起來的。</div>
+      <div class="n">牌庫 2,300+ 字 · 舊單字與新單字兩種模式</div>
+    </a>
+
+    <a class="mode" href="./memory.html">
+      <div class="t">▸ 翻牌配對</div>
+      <div class="d">中英配對，跟電腦搶。開局先全部翻開複習一次。<br>
+        電腦記憶力可調——完美記憶那檔幾乎贏不了。</div>
+      <div class="n">6 / 8 / 10 對 · 單局或三五局制 · 與卡牌共用複習清單</div>
+    </a>
+
+  </div>
+
+  <div class="note">
+    <b>建議的順序</b><br>
+    新的一天從<b>閱讀</b>開始，讀一章；接著<b>聽力</b>兩三題；
+    最後用<b>字彙對戰</b>或<b>翻牌配對</b>把剛剛遇到的字釘一次。
+    關卡不用天天玩，卡住的時候拿來換腦袋。
+  </div>
+
+  <footer>
+    全部離線可用，進度存在瀏覽器本機。<br>
+    字型 Cubic 11（SIL OFL 1.1）· 內容與題目皆為原創。
+  </footer>
+</div>
+</body>
+</html>

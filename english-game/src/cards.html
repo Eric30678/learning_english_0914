@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>字彙對戰 · 52 手</title>
+<style>
+@font-face{
+  font-family:'Cubic11';
+  src:url('../fonts/Cubic_11.ttf') format('truetype'),
+      url('https://cdn.jsdelivr.net/gh/ACh-K/Cubic-11@main/fonts/ttf/Cubic_11.ttf') format('truetype');
+  font-display:swap;
+}
+:root{
+  --ink:#2a2438; --paper:#f7f2e6; --frame:#1b1826; --frame-in:#7fa8d9;
+  --rule:#cdbfa6; --dim:#7a6a52;
+  --ok:#2f6b3f; --bad:#9c3a2e; --warn:#8a6a2a;
+  --felt:#24503f; --felt2:#1d4234;
+  --ui-bg:#2f2942; --ui-line:#4d4468; --ui-text:#d8d2e4;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{background:#15121f}
+body{
+  font-family:'Cubic11',ui-monospace,monospace;
+  -webkit-font-smoothing:none;font-smooth:never;text-rendering:optimizeSpeed;
+  color:var(--ink);display:flex;justify-content:center;min-height:100vh;
+}
+#app{width:100%;max-width:560px;background:#15121f}
+
+/* 牌桌 */
+#table{
+  background:
+    repeating-linear-gradient(45deg,var(--felt) 0 6px,var(--felt2) 6px 12px);
+  border-bottom:3px solid var(--frame);
+  padding:18px 14px 22px;text-align:center;
+}
+#round{font-size:11px;color:#9dc4b0;margin-bottom:10px;letter-spacing:.05em}
+#enemy{
+  display:inline-block;background:var(--paper);border:3px solid var(--frame);
+  padding:18px 20px;min-width:200px;box-shadow:0 4px 0 rgba(0,0,0,.35);
+}
+#enemy .w{font-size:26px;line-height:34px;color:var(--ink);word-break:break-word}
+#enemy .tag{font-size:11px;color:var(--dim);margin-top:8px}
+#verdict{margin-top:12px;font-size:15px;line-height:22px;min-height:44px;color:#e8e2d6}
+#verdict b{color:#ffe6b8}
+
+/* 手牌 */
+#hand{display:grid;grid-template-columns:repeat(2,1fr);gap:8px;padding:12px}
+.card{
+  font-family:inherit;font-size:17px;line-height:24px;color:var(--ink);
+  background:var(--paper);border:3px solid var(--frame);
+  padding:14px 10px;min-height:66px;cursor:pointer;
+  box-shadow:0 3px 0 rgba(0,0,0,.4);
+  display:flex;align-items:center;justify-content:center;text-align:center;
+}
+.card:hover{background:#fffaf0}
+.card:active{transform:translateY(2px);box-shadow:0 1px 0 rgba(0,0,0,.4)}
+.card:focus-visible{outline:3px solid var(--frame-in);outline-offset:2px}
+.card.right{background:#d7ecd9;border-color:var(--ok)}
+.card.wrong{background:#f2d9d4;border-color:var(--bad)}
+.card.dim{opacity:.45}
+@media(min-width:430px){#hand{grid-template-columns:repeat(4,1fr)}}
+
+.bar{display:flex;gap:6px;padding:10px 12px;align-items:center;flex-wrap:wrap}
+button,select{
+  font-family:inherit;font-size:12px;color:var(--ui-text);
+  background:var(--ui-bg);border:2px solid var(--ui-line);padding:8px 12px;cursor:pointer;
+}
+button:hover:not(:disabled){background:#3b3450}
+button:disabled{opacity:.45;cursor:default}
+.sp{flex:1}
+.note{font-size:11px;color:#7d7392}
+
+/* 結算 */
+#result{padding:12px;display:none}
+.panel{background:var(--paper);border:3px solid var(--frame);padding:16px;margin-bottom:10px}
+.panel h2{font-size:16px;margin-bottom:10px;font-weight:normal}
+.big{font-size:30px;line-height:38px}
+.row{display:flex;justify-content:space-between;font-size:15px;line-height:26px;
+     border-bottom:1px dotted var(--rule);padding:3px 0}
+.row:last-child{border-bottom:0}
+.row .en{color:var(--ink)}
+.row .zh{color:var(--dim)}
+.row.miss3{background:#f7e4de}
+</style>
+</head>
+<body>
+<div id="app">
+
+  <div id="table">
+    <div id="round">準備中</div>
+    <div id="enemy"><div class="w">—</div><div class="tag"></div></div>
+    <div id="verdict">選出對應的中文牌。</div>
+  </div>
+
+  <div id="hand"></div>
+
+  <div class="bar">
+    <button id="bNew">新的一局</button>
+    <select id="mode" aria-label="出題範圍">
+      <option value="mix">舊單字 · 章節教過的</option>
+      <option value="new">新單字 · 閱讀不會出現</option>
+      <option value="both">兩邊混合</option>
+      <option value="weak">只出我記不住的</option>
+      <option value="core">只出重點字</option>
+    </select>
+    <span class="sp"></span>
+    <span class="note" id="stat"></span>
+  </div>
+
+  <div id="result"></div>
+
+  <div class="bar">
+    <span class="note" id="poolInfo"></span>
+    <span class="sp"></span>
+    <button id="bReset">清除記錄</button>
+  </div>
+</div>
+
+<script src="data/content.js"></script>
+<script src="data/scenes-extra.js"></script>
+<script src="data/interludes.js"></script>
+<script src="data/season2.js"></script>
+<script src="data/chapters.js"></script>
+<script src="data/chapters-2.js"></script>
+<script src="data/chapters-3.js"></script>
+<script src="data/chapters-4.js"></script>
+<script src="data/chapters-5.js"></script>
+<script src="data/chapters-6.js"></script>
+<script src="data/chapters-7.js"></script>
+<script src="data/chapters-8.js"></script>
+<script src="data/chapters-9.js"></script>
+<script src="data/chapters-final.js"></script>
+<script src="data/scenes-more.js"></script>
+<script src="data/listening.js"></script>
+<script src="data/listening-2.js"></script>
+<script src="data/dict.js"></script>
+<script src="data/vocab-extra.js"></script>
+<script src="data/vocab-extra-2.js"></script>
+<script>
+
+/* ── 防呆：直接開原始版會少掉旁邊的資料檔 ── */
+if(typeof CONTENT === 'undefined'){
+  document.body.innerHTML =
+    '<div style="max-width:520px;margin:60px auto;padding:24px;background:#f7f2e6;'
+  + 'border:3px solid #1b1826;color:#2a2438;font-size:15px;line-height:1.9">'
+  + '<b style="font-size:17px">找不到內容檔</b><br><br>'
+  + '這是開發用的原始版，需要同一個資料夾裡的 js 檔才能執行。<br><br>'
+  + '要直接開來玩，請用 <b>dist/</b> 裡的版本——那是把所有內容內嵌好的單一檔案。<br><br>'
+  + '如果你改過內容，重新執行 <b>python tools/build.py</b> 就會產生最新的 dist 檔。'
+  + '</div>';
+  throw new Error('CONTENT not loaded');
+}
+const $ = id => document.getElementById(id);
+const KEY = 'pxcards.v1';
+const HAND = 8;
+const ROUNDS = 52;
+
+/* ═══ 1. 建牌庫 ═══════════════════════════════════════
+   來源是 CONTENT.dict（約 1,500 筆，含閱讀章節收割 + 聽力補充）。
+   但字典裡有一堆太簡單的字，那些當題目沒有意義，全部濾掉。
+   ═══════════════════════════════════════════════════ */
+
+/* 太簡單、不值得考的字。功能字在 dict.js 已經移除，
+   這裡處理的是「認得但不需要練」的基礎字。 */
+const TOO_EASY = `
+day days night morning afternoon evening today tomorrow yesterday week month year time hour minute
+man woman men women boy girl people person child children friend family father mother sister brother
+good bad big small large long short new old young high low hot cold warm cool easy hard fast slow
+go goes went come came see saw look watch know knew think thought say said tell told ask asked
+get got give gave take took make made put want need like love feel find found use used work works
+buy sell pay eat drink sleep walk run sit stand open close start stop begin end
+home house room door window table chair bed floor wall food water coffee tea lunch dinner breakfast
+car bus train taxi road street city town country place name number word thing things way
+one two three four five six seven eight nine ten first second third last next
+eleven twelve thirteen fourteen fifteen sixteen seventeen eighteen nineteen twenty
+thirty forty fifty sixty seventy eighty ninety hundred thousand million half
+call calls cheap expensive free full empty ready right wrong same different
+morning night early late soon now then every each other another
+red blue green black white yellow orange colour color
+yes no okay ok please thanks thank sorry hello hi bye
+i you he she it we they me him her us them my your his its our their
+` .trim().split(/\s+/);
+const EASY = new Set(TOO_EASY);
+
+function buildPool(){
+  const D = CONTENT.dict || {};
+  const n = w => w.toLowerCase().trim();
+
+  /* 重點字：關卡的 w 欄位、過場的 gloss、章節的 *[ ] 標記 */
+  const core = new Set();
+  (CONTENT.episodes||[]).forEach(e=>(e.w||[]).forEach(w=>core.add(n(w))));
+  Object.values(CONTENT.interludes||{}).forEach(i=>i.gloss.forEach(g=>core.add(n(g[0]))));
+  (CONTENT.chapters||[]).forEach(c=>c.pages.forEach(p=>
+    (p.t.match(/\*\[([^\]|]+)\|/g)||[]).forEach(m=>core.add(n(m.slice(2,-1))))));
+
+  /* 把變化形還原回原形，用來判斷「原形是不是太簡單」。
+     called → call、asks → ask、counts → count、written → write。
+     否則 call 被濾掉了，called 還是會混進牌庫。 */
+  const IRREG = {written:'write',said:'say',told:'tell',gave:'give',took:'take',
+    made:'make',found:'find',went:'go',came:'come',saw:'see',knew:'know',
+    thought:'think',got:'get',put:'put',paid:'pay',ran:'run',sat:'sit',
+    stood:'stand',slept:'sleep',ate:'eat',drank:'drink',bought:'buy',sold:'sell'};
+  function baseForms(w){
+    if(IRREG[w]) return [w, IRREG[w]];
+    const out = [w];
+    [['iest','y'],['est',''],['ier','y'],['er',''],
+     ['ies','y'],['ied','y'],['ing',''],['ed',''],['es',''],['s','']].forEach(([suf,rep])=>{
+      if(w.endsWith(suf) && w.length - suf.length >= 2){
+        out.push(w.slice(0, -suf.length) + rep);
+        out.push(w.slice(0, -suf.length) + rep + 'e');   // making → make
+      }
+    });
+    return out;
+  }
+
+  const seenZh = new Set();
+  const pool = [];
+  Object.keys(D).forEach(k=>{
+    const zh = String(D[k]).trim();
+
+    if(k.length < 3) return;                 // 太短
+    if(/^=/.test(zh)) return;                // 縮讀說明，不適合當牌
+    if(/[A-Za-z]{3,}/.test(zh)) return;      // 中文欄位混了英文的異常資料
+
+    // 中文只有一個字通常太模糊：「等」「筆」「燈」當選項無法分辨
+    const zhCore = zh.replace(/[（(].*?[)）]/g,'').split(/[／/、]/)[0].trim();
+    if(zhCore.length < 2) return;
+
+    // 原形太簡單的，變化形也不要（called、asks、counts…）
+    if(baseForms(k).some(b => EASY.has(b))) return;
+
+    if(seenZh.has(zh)) return;               // 中文重複會造成兩張正解
+    seenZh.add(zh);
+    pool.push({ en:k, zh, core:core.has(k) });
+  });
+  return pool;
+}
+
+const POOL = buildPool();
+const CORE_POOL = POOL.filter(x=>x.core);
+
+/* 新單字庫：閱讀內容裡不會出現的字，純粹用來補量。
+   這些是手工整理的，格式已經符合牌面限制，只做基本檢查。 */
+function buildExtraPool(){
+  const E = CONTENT.extraVocab || {};
+  const seenZh = new Set(), out = [];
+  Object.keys(E).forEach(k=>{
+    const zh = String(E[k]).trim();
+    const zhCore = zh.replace(/[（(].*?[)）]/g,'').split(/[／/、]/)[0].trim();
+    if(zhCore.length < 2 || zhCore.length > 6) return;
+    if(k.length > 24) return;      // 卡牌一次只顯示一張英文，長片語放得下
+    if(seenZh.has(zhCore)) return;
+    seenZh.add(zhCore);
+    out.push({ en:k, zh:zhCore, core:true, isNew:true });
+  });
+  return out;
+}
+const EXTRA_POOL = buildExtraPool();
+const ALL_POOL = POOL.concat(EXTRA_POOL);
+
+/* 依模式決定從哪個池抽 */
+function sourceFor(mode){
+  if(mode === 'new')  return EXTRA_POOL.length ? EXTRA_POOL : POOL;
+  if(mode === 'both') return ALL_POOL;
+  if(mode === 'core') return CORE_POOL.length > 60 ? CORE_POOL : POOL;
+  return POOL;                       // mix ＝ 舊單字
+}
+
+/* ═══ 2. 記錄：哪些字記不住 ═══════════════════════════
+   miss 累計跨局保存。miss >= 3 視為「還沒記起來」，
+   之後出現的機率會提高。
+   ═══════════════════════════════════════════════════ */
+function load(){ try{ return JSON.parse(localStorage.getItem(KEY)||'{}'); }catch(e){ return {}; } }
+function save(d){ try{ localStorage.setItem(KEY, JSON.stringify(d)); }catch(e){} }
+const REC = load();               // { en: {miss, hit} }
+const missOf = en => (REC[en] && REC[en].miss) || 0;
+
+/* 依 miss 次數決定權重：沒錯過 1、錯 1 次 3、錯 2 次 5、錯 3 次以上 8 */
+function weightOf(x){
+  const m = missOf(x.en);
+  if(m >= 3) return 8;
+  if(m === 2) return 5;
+  if(m === 1) return 3;
+  return 1;
+}
+
+function pickDeck(mode){
+  let src = sourceFor(mode);
+  if(mode === 'weak'){
+    const weak = ALL_POOL.filter(x=>missOf(x.en) > 0);
+    src = weak.length >= HAND + 4 ? weak : ALL_POOL;
+  }
+  /* 加權抽樣，不重複 */
+  const bag = [];
+  src.forEach(x=>{ const w = weightOf(x); for(let i=0;i<w;i++) bag.push(x); });
+  const deck = [], used = new Set();
+  let guard = 0;
+  while(deck.length < ROUNDS && guard++ < 60000){
+    const x = bag[Math.floor(Math.random()*bag.length)];
+    if(used.has(x.en)) continue;
+    used.add(x.en); deck.push(x);
+  }
+  return deck;
+}
+
+/* ═══ 3. 一局 ═══════════════════════════════════════ */
+const S = { deck:[], hand:[], i:0, right:0, wrong:[], locked:false, mode:'mix' };
+
+function newGame(){
+  S.mode = $('mode').value;
+  S.deck = pickDeck(S.mode);
+  S.i = 0; S.right = 0; S.wrong = []; S.locked = false;
+  $('result').style.display = 'none';
+  /* 起手 8 張：本局前 8 個字 */
+  S.hand = S.deck.slice(0, HAND).map(x=>x);
+  deal();
+}
+
+/* 補牌：從牌堆裡還沒用過、也不在手上的字補一張 */
+function drawCard(){
+  const inHand = new Set(S.hand.map(x=>x && x.en));
+  for(let j = S.i + HAND; j < S.deck.length; j++){
+    const c = S.deck[j];
+    if(!inHand.has(c.en)) return c;
+  }
+  /* 牌堆用完就從全庫補，避免手牌變空 */
+  for(let g=0; g<400; g++){
+    const c = POOL[Math.floor(Math.random()*POOL.length)];
+    if(!inHand.has(c.en)) return c;
+  }
+  return null;
+}
+
+function deal(){
+  if(S.i >= ROUNDS){ finish(); return; }
+  S.locked = false;
+  /* 對手出的英文牌 = 手牌其中一張的英文面 */
+  const idx = Math.floor(Math.random()*S.hand.length);
+  S.target = S.hand[idx];
+  $('round').textContent = `第 ${S.i+1} 手 / ${ROUNDS}　·　答對 ${S.right}`;
+  $('enemy').querySelector('.w').textContent = S.target.en;
+  const m = missOf(S.target.en);
+  $('enemy').querySelector('.tag').textContent =
+    m >= 3 ? '這個字你錯過 ' + m + ' 次' : (m ? '複習中' : '');
+  $('verdict').textContent = '選出對應的中文牌。';
+  renderHand();
+  $('stat').textContent = `牌庫 ${POOL.length} 字　記不住 ${Object.values(REC).filter(r=>r.miss>=3).length}`;
+}
+
+function renderHand(){
+  $('hand').innerHTML = S.hand.map((c,n)=>
+    `<button class="card" data-n="${n}">${c.zh}</button>`).join('');
+  $('hand').querySelectorAll('.card').forEach(b=>{
+    b.onclick = ()=> play(+b.dataset.n);
+    b.onkeydown = e=>{ if(e.key==='Enter'||e.key===' '){ e.preventDefault(); play(+b.dataset.n); } };
+  });
+}
+
+function play(n){
+  if(S.locked) return;
+  S.locked = true;
+  const chosen = S.hand[n];
+  const ok = chosen.en === S.target.en;
+  const cards = $('hand').querySelectorAll('.card');
+  const rightIdx = S.hand.findIndex(c=>c.en === S.target.en);
+
+  cards.forEach((b,k)=>{ if(k!==n && k!==rightIdx) b.classList.add('dim'); });
+  cards[rightIdx].classList.add('right');
+  if(!ok) cards[n].classList.add('wrong');
+
+  const r = REC[S.target.en] || (REC[S.target.en] = {miss:0, hit:0});
+  if(ok){
+    S.right++; r.hit++;
+    $('verdict').innerHTML = `<b>對了。</b>　${S.target.en} ＝ ${S.target.zh}`;
+  }else{
+    r.miss++;
+    S.wrong.push({ en:S.target.en, zh:S.target.zh, chose:chosen.zh, miss:r.miss });
+    $('verdict').innerHTML =
+      `<b>不是這張。</b>　${S.target.en} ＝ ${S.target.zh}` +
+      `<br><span style="color:#d9a89a">你出的是「${chosen.zh}」（${chosen.en}）</span>`;
+  }
+  save(REC);
+
+  setTimeout(()=>{
+    /* 打出去的牌換一張新的；答錯的字留在手上，等一下還會再遇到 */
+    const fresh = drawCard();
+    if(fresh) S.hand[rightIdx] = fresh;
+    S.i++;
+    deal();
+  }, ok ? 780 : 1900);
+}
+
+/* ═══ 4. 結算 ═══════════════════════════════════════ */
+function finish(){
+  const pct = Math.round(S.right / ROUNDS * 100);
+  const m3 = Object.entries(REC).filter(([,r])=>r.miss>=3);
+  const zhOf = {}; POOL.forEach(x=>zhOf[x.en]=x.zh);
+
+  let html = `<div class="panel">
+    <h2>結算</h2>
+    <div class="big">${S.right} / ${ROUNDS}　${pct}%</div>
+    <div style="margin-top:10px;color:var(--dim);font-size:14px;line-height:1.9">
+      ${pct>=90?'這批字你已經很熟了，換「全部字庫」抽新的。'
+        :pct>=70?'大致穩了。下一局選「只出我記不住的」把缺口補掉。'
+        :'錯得不少，但那正是這個模式要抓的東西。同一批再玩一次。'}
+    </div></div>`;
+
+  if(S.wrong.length){
+    html += `<div class="panel"><h2>這一局錯的 ${S.wrong.length} 個</h2>`;
+    html += S.wrong.map(w=>
+      `<div class="row${w.miss>=3?' miss3':''}">
+         <span class="en">${w.en}</span><span class="zh">${w.zh}${w.miss>=3?'　· 錯 '+w.miss+' 次':''}</span>
+       </div>`).join('');
+    html += `</div>`;
+  }
+
+  if(m3.length){
+    html += `<div class="panel"><h2>累計還沒記起來的 ${m3.length} 個</h2>
+      <div style="color:var(--dim);font-size:13px;margin-bottom:8px">錯過三次以上，之後出現機率會提高。</div>`;
+    html += m3.sort((a,b)=>b[1].miss-a[1].miss).slice(0,40).map(([en,r])=>
+      `<div class="row miss3"><span class="en">${en}</span>
+       <span class="zh">${zhOf[en]||''}　· ${r.miss} 次</span></div>`).join('');
+    html += `</div>`;
+  }
+
+  $('result').innerHTML = html;
+  $('result').style.display = 'block';
+  $('round').textContent = '本局結束';
+  $('enemy').querySelector('.w').textContent = '—';
+  $('enemy').querySelector('.tag').textContent = '';
+  $('verdict').textContent = '按「新的一局」再來一次。';
+  $('hand').innerHTML = '';
+  $('result').scrollIntoView({behavior:'smooth', block:'start'});
+}
+
+/* ═══ 5. 綁定 ═══════════════════════════════════════ */
+$('bNew').onclick = newGame;
+$('mode').onchange = newGame;
+$('bReset').onclick = ()=>{
+  if(!confirm('清除所有答題記錄？')) return;
+  Object.keys(REC).forEach(k=>delete REC[k]);
+  save(REC); newGame();
+};
+document.addEventListener('keydown', e=>{
+  const k = '12345678'.indexOf(e.key);
+  if(k >= 0 && S.hand[k]) play(k);
+});
+
+$('poolInfo').textContent =
+  `牌庫 ${POOL.length} 字（重點字 ${CORE_POOL.length}）· 已濾掉基礎字 · 按數字鍵 1–8 也能出牌`;
+newGame();
+</script>
+</body>
+</html>

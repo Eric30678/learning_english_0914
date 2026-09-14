@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>閱讀章節 · 第一輯</title>
+<style>
+@font-face{
+  font-family:'Cubic11';
+  src:url('../fonts/Cubic_11.ttf') format('truetype'),
+      url('https://cdn.jsdelivr.net/gh/ACh-K/Cubic-11@main/fonts/ttf/Cubic_11.ttf') format('truetype');
+  font-display:swap;
+}
+:root{
+  --ink:#2a2438; --paper:#f7f2e6; --frame:#1b1826; --frame-in:#7fa8d9;
+  --rule:#cdbfa6; --dim:#7a6a52; --key:#b08a4a;
+  --ok:#2f6b3f; --bad:#9c3a2e;
+  --ui-bg:#2f2942; --ui-line:#4d4468; --ui-text:#d8d2e4;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{background:#15121f}
+body{
+  font-family:'Cubic11',ui-monospace,monospace;
+  -webkit-font-smoothing:none;font-smooth:never;text-rendering:optimizeSpeed;
+  color:var(--ink);display:flex;justify-content:center;min-height:100vh;
+}
+#app{width:100%;max-width:560px;background:#15121f}
+#art{line-height:0;border-bottom:3px solid var(--frame);position:relative}
+#art svg{width:100%;height:auto;display:block;image-rendering:pixelated}
+#tintLayer{position:absolute;inset:0;pointer-events:none}
+
+#box{background:var(--frame);padding:3px}
+#box>div{background:var(--frame-in);padding:2px}
+#pane{background:var(--paper);padding:16px 14px 12px}
+#hd{font-size:11px;color:var(--dim);margin-bottom:10px}
+#pg{font-size:22px;line-height:36px;min-height:180px}
+.gw{border-bottom:1px dotted #bda68a;cursor:pointer}
+.gw.key{border-bottom:2px dotted var(--key)}
+.gw.old{border-bottom:2px dotted #5d8a63}
+.gw.on{background:#ffe6b8;border-bottom-color:#8a6a2a}
+.w.spk{background:#cfe3f5;border-radius:2px}
+#pg.long{font-size:18px;line-height:29px}
+#speak{display:flex;gap:6px;padding:0 12px 10px;align-items:center;flex-wrap:wrap}
+#speak .note{font-size:11px;color:#7d7392}
+#tip{border-top:2px solid var(--rule);padding-top:10px;margin-top:8px;
+     min-height:46px;font-size:15px;line-height:1.7;color:#6b5f4a}
+
+.bar{display:flex;gap:6px;padding:10px 12px;align-items:center;flex-wrap:wrap}
+button,select{
+  font-family:inherit;font-size:12px;color:var(--ui-text);
+  background:var(--ui-bg);border:2px solid var(--ui-line);padding:8px 12px;cursor:pointer;
+}
+button:hover{background:#3b3450}
+button:focus-visible,select:focus-visible{outline:2px solid var(--frame-in);outline-offset:2px}
+#pick{flex:1;min-width:160px}
+.sp{flex:1}
+.note{font-size:11px;color:#7d7392}
+#dots{flex:1;display:flex;gap:5px;justify-content:center}
+.dot{width:7px;height:7px;background:#4d4468}
+.dot.on{background:#7fa8d9}
+
+#quiz{padding:12px;display:none}
+.qcard{background:var(--paper);border:3px solid var(--frame);padding:14px;margin-bottom:10px}
+.qp{font-size:18px;line-height:28px;margin-bottom:12px}
+.qo{display:block;width:100%;text-align:left;font-family:inherit;font-size:18px;
+    line-height:26px;color:var(--ink);background:#efe8d8;border:2px solid var(--rule);
+    padding:9px 12px;margin-bottom:6px;cursor:pointer}
+.qo:hover{background:#e6dcc6}
+.qo.right{background:#d7ecd9;border-color:var(--ok)}
+.qo.wrong{background:#f2d9d4;border-color:var(--bad)}
+.qx{font-size:15px;line-height:1.8;color:#6b5f4a;margin-top:8px;display:none}
+#score{font-size:18px;line-height:30px}
+</style>
+</head>
+<body>
+<div id="app">
+  <div id="art"><div id="tintLayer"></div></div>
+
+  <div class="bar">
+    <select id="pick" aria-label="選擇章節"></select>
+    <button id="bDue">複習</button>
+    <button id="bq">跳到小考</button>
+  </div>
+
+  <div id="reader">
+    <div id="box"><div><div id="pane">
+      <div id="hd"></div>
+      <div id="pg"></div>
+      <div id="tip">點任何一個字看中文</div>
+    </div></div></div>
+    <div class="bar">
+      <button id="bp">←</button>
+      <div id="dots"></div>
+      <button id="bn">→</button>
+    </div>
+    <div id="speak">
+      <button id="bPlay">▶ 朗讀</button>
+      <button id="bRate">速度 0.85×</button>
+      <button id="bAuto">自動播放：關</button>
+      <span class="sp"></span>
+      <span class="note" id="sInfo"></span>
+    </div>
+  </div>
+
+  <div id="quiz"></div>
+
+  <div class="bar">
+    <span class="note" id="pos"></span>
+    <span class="sp"></span>
+    <button id="bReset">清除進度</button>
+  </div>
+</div>
+
+<script src="data/content.js"></script>
+<script src="data/scenes-extra.js"></script>
+<script src="data/listening.js"></script>
+<script src="data/listening-2.js"></script>
+<script src="data/chapters.js"></script>
+<script src="data/chapters-2.js"></script>
+<script src="data/chapters-3.js"></script>
+<script src="data/chapters-4.js"></script>
+<script src="data/chapters-5.js"></script>
+<script src="data/chapters-6.js"></script>
+<script src="data/chapters-7.js"></script>
+<script src="data/chapters-8.js"></script>
+<script src="data/chapters-9.js"></script>
+<script src="data/chapters-final.js"></script>
+<script src="data/scenes-more.js"></script>
+<script>
+
+/* ── 防呆：直接開原始版會少掉旁邊的資料檔 ── */
+if(typeof CONTENT === 'undefined'){
+  document.body.innerHTML =
+    '<div style="max-width:520px;margin:60px auto;padding:24px;background:#f7f2e6;'
+  + 'border:3px solid #1b1826;color:#2a2438;font-size:15px;line-height:1.9">'
+  + '<b style="font-size:17px">找不到內容檔</b><br><br>'
+  + '這是開發用的原始版，需要同一個資料夾裡的 js 檔才能執行。<br><br>'
+  + '要直接開來玩，請用 <b>dist/</b> 裡的版本——那是把所有內容內嵌好的單一檔案。<br><br>'
+  + '如果你改過內容，重新執行 <b>python tools/build.py</b> 就會產生最新的 dist 檔。'
+  + '</div>';
+  throw new Error('CONTENT not loaded');
+}
+const $ = id => document.getElementById(id);
+const KEY = 'pxread.v1';
+let ci = 0, pi = 0;
+
+/* ── 場景 + 光線 ── */
+function paint(page){
+  $('art').innerHTML = CONTENT.scenes[page.scene] + '<div id="tintLayer"></div>';
+  const t = CONTENT.tints[page.tint];
+  if(t){
+    const l = $('tintLayer');
+    l.style.background = t[0];
+    l.style.opacity = t[1];
+    l.style.position = 'absolute';
+    l.style.inset = '0';
+    l.style.pointerEvents = 'none';
+  }
+}
+
+/* ── 文字：[字|中文] 與 *[重點字|中文] ── */
+/* ── 文字解析
+   把 [字|中文] / *[重點|中文] / ~[回收|中文] 拆成 token，
+   每個英文字都包一層 <span class="w" data-i="起始字元位置">，
+   朗讀時才能用 charIndex 對上，做逐字高亮。
+   同時產出純文字給語音合成用。                       ── */
+function parse(t){
+  const re = /([*~]?)\[([^\]|]+)\|([^\]]+)\]/g;
+  let html = '', plain = '', last = 0, m;
+
+  const emit = (text, cls, gloss) => {
+    // 依空白切開，保留空白
+    text.split(/(\s+)/).forEach(tok=>{
+      if(!tok) return;
+      if(/^\s+$/.test(tok)){
+        html += tok.replace(/\n/g,'<br>');
+        plain += tok.replace(/\n/g,' ');
+        return;
+      }
+      const start = plain.length;
+      html += `<span class="w${cls?' '+cls:''}" data-i="${start}"`
+            + (gloss ? ` data-z="${gloss}"` : '') + `>${tok}</span>`;
+      plain += tok;
+    });
+  };
+
+  while((m = re.exec(t)) !== null){
+    emit(t.slice(last, m.index), '', null);
+    const cls = 'gw' + (m[1]==='*' ? ' key' : m[1]==='~' ? ' old' : '');
+    emit(m[2], cls, m[3]);
+    last = re.lastIndex;
+  }
+  emit(t.slice(last), '', null);
+  return { html, plain };
+}
+
+const ch = () => CONTENT.chapters[ci];
+
+function draw(){
+  const c = ch(), p = c.pages[pi];
+  $('quiz').style.display='none';
+  $('reader').style.display='block';
+  paint(p);
+  $('hd').textContent = `${c.title.toUpperCase()}　·　${pi+1} / ${c.pages.length}`;
+  $('pg').className = c.long ? 'long' : '';
+  const res = parse(p.t);
+  $('pg').innerHTML = res.html;
+  PLAIN = res.plain;
+  stopSpeech();
+  $('tip').textContent = '點字看中文　·　長按或雙擊可單獨聽那個字';
+  $('dots').innerHTML = c.pages.map((_,n)=>`<span class="dot${n===pi?' on':''}"></span>`).join('');
+  $('pos').textContent = `${c.zh}　${c.blurb}`;
+  $('pg').querySelectorAll('.gw').forEach(el=>{
+    el.onclick = ()=>{
+      $('pg').querySelectorAll('.gw').forEach(x=>x.classList.remove('on'));
+      el.classList.add('on');
+      $('tip').innerHTML = `<b style="color:var(--ink)">${el.textContent}</b>　${el.dataset.z}`
+        + (el.classList.contains('key') ? '　<span style="color:var(--key)">· 本章重點</span>'
+         : el.classList.contains('old') ? '　<span style="color:#5d8a63">· 之前學過，這裡是複習</span>' : '');
+    };
+  });
+  $('pg').querySelectorAll('.w').forEach(el=>{
+    el.ondblclick = ev => { ev.stopPropagation(); sayWord(el.textContent); };
+  });
+  if(AUTO) setTimeout(play, 350);
+}
+
+/* ═══ 朗讀：瀏覽器內建語音合成，零成本、不需音檔 ═══
+   speechSynthesis 是各家瀏覽器都有的 Web Speech API。
+   onboundary 會回報唸到第幾個字元，用它來做逐字高亮。
+   注意：iOS Safari 必須由使用者點擊觸發第一次播放。   */
+let PLAIN = '';
+let AUTO = false;
+let RATES = [0.7, 0.85, 1.0], ri = 1;
+let VOICE = null, SPEAKING = false;
+
+function pickVoice(){
+  if(!('speechSynthesis' in window)) return;
+  const vs = speechSynthesis.getVoices();
+  if(!vs.length) return;
+  // 優先英式，其次任何英文
+  VOICE = vs.find(v=>/en[-_]GB/i.test(v.lang))
+       || vs.find(v=>/^en/i.test(v.lang))
+       || null;
+  $('sInfo').textContent = VOICE ? VOICE.name.slice(0,28) : '找不到英文語音';
+}
+if('speechSynthesis' in window){
+  pickVoice();
+  speechSynthesis.onvoiceschanged = pickVoice;
+} else {
+  $('sInfo').textContent = '此瀏覽器不支援朗讀';
+  $('bPlay').disabled = true;
+}
+
+function clearHL(){ $('pg').querySelectorAll('.w.spk').forEach(x=>x.classList.remove('spk')); }
+
+function stopSpeech(){
+  if(!('speechSynthesis' in window)) return;
+  speechSynthesis.cancel();
+  SPEAKING = false;
+  clearHL();
+  $('bPlay').textContent = '▶ 朗讀';
+}
+
+function play(){
+  if(!('speechSynthesis' in window) || !PLAIN.trim()) return;
+  if(SPEAKING){ stopSpeech(); return; }
+  const u = new SpeechSynthesisUtterance(PLAIN);
+  if(VOICE) u.voice = VOICE;
+  u.lang = VOICE ? VOICE.lang : 'en-GB';
+  u.rate = RATES[ri];
+  u.pitch = 1;
+
+  const spans = [...$('pg').querySelectorAll('.w')]
+    .map(el=>({el, i:+el.dataset.i}))
+    .sort((a,b)=>a.i-b.i);
+
+  u.onboundary = e=>{
+    if(e.name && e.name !== 'word') return;
+    let hit = null;
+    for(const s of spans){ if(s.i <= e.charIndex) hit = s; else break; }
+    if(hit){ clearHL(); hit.el.classList.add('spk'); }
+  };
+  u.onend = ()=>{
+    SPEAKING = false; clearHL();
+    $('bPlay').textContent = '▶ 朗讀';
+    if(AUTO && pi < ch().pages.length-1){ pi++; draw(); }
+  };
+  u.onerror = ()=>{ SPEAKING=false; clearHL(); $('bPlay').textContent='▶ 朗讀'; };
+
+  speechSynthesis.cancel();
+  speechSynthesis.speak(u);
+  SPEAKING = true;
+  $('bPlay').textContent = '■ 停止';
+}
+
+function sayWord(w){
+  if(!('speechSynthesis' in window)) return;
+  speechSynthesis.cancel();
+  const u = new SpeechSynthesisUtterance(w);
+  if(VOICE) u.voice = VOICE;
+  u.rate = 0.8;
+  speechSynthesis.speak(u);
+}
+
+$('bPlay').onclick = play;
+$('bRate').onclick = ()=>{
+  ri = (ri+1) % RATES.length;
+  $('bRate').textContent = `速度 ${RATES[ri]}×`;
+  if(SPEAKING){ stopSpeech(); play(); }
+};
+$('bAuto').onclick = ()=>{
+  AUTO = !AUTO;
+  $('bAuto').textContent = '自動播放：' + (AUTO ? '開' : '關');
+  if(AUTO && !SPEAKING) play();
+};
+
+/* ── 讀完的閘門：小考隔天才解鎖 ── */
+const DAY = 24*60*60*1000;
+function markRead(id){
+  try{ const d=load(); d[id]=Object.assign({},d[id],{readAt:Date.now()});
+    localStorage.setItem(KEY,JSON.stringify(d)); }catch(e){}
+}
+function dueList(){
+  const d=load(), now=Date.now();
+  return CONTENT.chapters.filter(c=>{
+    const r=d[c.id];
+    return r && r.readAt && !r.total && (now-r.readAt) >= DAY;
+  });
+}
+function showGate(){
+  const c = ch();
+  markRead(c.id);
+  $('reader').style.display='none';
+  $('quiz').style.display='block';
+  $('quiz').innerHTML = `<div class="qcard">
+    <div class="qp">讀完了。</div>
+    <div class="qx" style="display:block">這一章的小考明天才解鎖。<br>
+    隔一天再考，測的才是記住的東西；現在馬上考，測的只是剛剛看過的短期記憶。</div>
+    <div class="bar" style="padding:12px 0 0">
+      <button id="bNow">現在就考（不算複習）</button>
+      <button id="bBack2">回去重讀</button>
+      <button id="bNext2">下一章</button>
+    </div></div>`;
+  $('bNow').onclick = showQuiz;
+  $('bBack2').onclick = ()=>{ pi=0; draw(); };
+  $('bNext2').onclick = ()=>{ ci=(ci+1)%CONTENT.chapters.length; pi=0; buildPicker(); draw(); };
+}
+function refreshDue(){
+  const n = dueList().length;
+  $('bDue').textContent = n ? `複習 ${n}` : '複習';
+  $('bDue').disabled = !n;
+  $('bDue').style.opacity = n ? '1' : '.5';
+}
+
+/* ── 小考 ── */
+function showQuiz(){
+  const c = ch();
+  $('reader').style.display='none';
+  $('quiz').style.display='block';
+  let done = 0, right = 0;
+  $('quiz').innerHTML = c.quiz.map((q,n)=>{
+    const [prompt, opts, ans, why] = q;
+    return `<div class="qcard" data-n="${n}">
+      <div class="qp">${n+1}. ${prompt}</div>
+      ${opts.map((o,m)=>`<button class="qo" data-m="${m}">${o}</button>`).join('')}
+      <div class="qx"></div></div>`;
+  }).join('') + `<div class="qcard"><div id="score">答對 0 / ${c.quiz.length}</div>
+      <div class="bar" style="padding:10px 0 0"><button id="bBack">回去重讀</button>
+      <button id="bNextCh">下一章</button></div></div>`;
+
+  $('quiz').querySelectorAll('.qcard[data-n]').forEach(card=>{
+    const n = +card.dataset.n, [ , opts, ans, why] = c.quiz[n];
+    card.querySelectorAll('.qo').forEach(btn=>{
+      btn.onclick = ()=>{
+        if(card.dataset.done) return;
+        card.dataset.done = '1';
+        const m = +btn.dataset.m;
+        card.querySelectorAll('.qo')[ans].classList.add('right');
+        if(m !== ans) btn.classList.add('wrong'); else right++;
+        const x = card.querySelector('.qx');
+        x.style.display='block';
+        x.textContent = (m===ans ? '對了。' : '再記一次：') + why;
+        done++;
+        $('score').textContent = `答對 ${right} / ${c.quiz.length}`;
+        if(done === c.quiz.length) save(c.id, right, c.quiz.length);
+      };
+    });
+  });
+  $('bBack').onclick = ()=>{ pi=0; draw(); };
+  $('bNextCh').onclick = ()=>{ ci=(ci+1)%CONTENT.chapters.length; pi=0; buildPicker(); draw(); };
+}
+
+/* ── 進度 ── */
+function load(){ try{ return JSON.parse(localStorage.getItem(KEY)||'{}'); }catch(e){ return {}; } }
+function save(id,right,total){
+  try{ const d=load(); d[id]={right,total,at:Date.now()};
+    localStorage.setItem(KEY,JSON.stringify(d)); buildPicker(); refreshDue(); }catch(e){}
+}
+function buildPicker(){
+  const d = load();
+  $('pick').innerHTML = CONTENT.chapters.map((c,n)=>{
+    const r = d[c.id];
+    const flag = r ? (r.right===r.total ? '●' : '◐') : '　';
+    return `<option value="${n}"${n===ci?' selected':''}>${flag} ${c.title} · ${c.zh}</option>`;
+  }).join('');
+}
+
+/* ── 輸入 ── */
+$('bn').onclick = ()=>{
+  if(pi < ch().pages.length-1){ pi++; draw(); } else showGate();
+};
+$('bp').onclick = ()=>{ if(pi>0){ pi--; draw(); } };
+$('art').onclick = ()=> $('bn').click();
+$('bq').onclick = showQuiz;
+$('bDue').onclick = ()=>{
+  const d = dueList();
+  if(!d.length) return;
+  ci = CONTENT.chapters.indexOf(d[0]); pi = 0; buildPicker(); showQuiz();
+};
+$('pick').onchange = e => { ci=+e.target.value; pi=0; draw(); };
+$('bReset').onclick = ()=>{ try{ localStorage.removeItem(KEY); }catch(e){} buildPicker(); };
+document.addEventListener('keydown', e=>{
+  if(e.key==='ArrowRight'||e.key===' '){ e.preventDefault(); $('bn').click(); }
+  if(e.key==='ArrowLeft') $('bp').click();
+});
+
+buildPicker();
+refreshDue();
+draw();
+</script>
+</body>
+</html>

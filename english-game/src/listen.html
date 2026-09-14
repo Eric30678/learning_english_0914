@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>聽力練習 · Part 1–4</title>
+<style>
+@font-face{
+  font-family:'Cubic11';
+  src:url('../fonts/Cubic_11.ttf') format('truetype'),
+      url('https://cdn.jsdelivr.net/gh/ACh-K/Cubic-11@main/fonts/ttf/Cubic_11.ttf') format('truetype');
+  font-display:swap;
+}
+:root{
+  --ink:#2a2438; --paper:#f7f2e6; --frame:#1b1826; --frame-in:#7fa8d9;
+  --rule:#cdbfa6; --dim:#7a6a52;
+  --ok:#2f6b3f; --bad:#9c3a2e;
+  --ui-bg:#2f2942; --ui-line:#4d4468; --ui-text:#d8d2e4;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{background:#15121f}
+body{
+  font-family:'Cubic11',ui-monospace,monospace;
+  -webkit-font-smoothing:none;font-smooth:never;text-rendering:optimizeSpeed;
+  color:var(--ink);display:flex;justify-content:center;min-height:100vh;
+}
+#app{width:100%;max-width:560px;background:#15121f}
+#art{line-height:0;border-bottom:3px solid var(--frame);position:relative}
+#art svg{width:100%;height:auto;display:block;image-rendering:pixelated}
+#tintLayer{position:absolute;inset:0;pointer-events:none}
+
+.bar{display:flex;gap:6px;padding:10px 12px;align-items:center;flex-wrap:wrap}
+button,select{
+  font-family:inherit;font-size:12px;color:var(--ui-text);
+  background:var(--ui-bg);border:2px solid var(--ui-line);padding:8px 12px;cursor:pointer;
+}
+button:hover:not(:disabled){background:#3b3450}
+button:disabled{opacity:.45;cursor:default}
+button:focus-visible,select:focus-visible{outline:2px solid var(--frame-in);outline-offset:2px}
+.sp{flex:1}
+.note{font-size:11px;color:#7d7392}
+
+#card{background:var(--frame);padding:3px;margin:0 12px}
+#card>div{background:var(--frame-in);padding:2px}
+#pane{background:var(--paper);padding:16px 14px}
+#hd{font-size:11px;color:var(--dim);margin-bottom:10px}
+#qt{font-size:18px;line-height:28px;margin-bottom:12px;min-height:28px}
+.opt{display:block;width:100%;text-align:left;font-family:inherit;font-size:18px;
+     line-height:26px;color:var(--ink);background:#efe8d8;border:2px solid var(--rule);
+     padding:10px 12px;margin-bottom:6px;cursor:pointer}
+.opt:hover{background:#e6dcc6}
+.opt.right{background:#d7ecd9;border-color:var(--ok)}
+.opt.wrong{background:#f2d9d4;border-color:var(--bad)}
+.opt .lab{display:inline-block;width:26px;font-weight:bold}
+.hidden-text{color:transparent;user-select:none}
+#tape{border-top:2px solid var(--rule);margin-top:10px;padding-top:10px;
+      font-size:15px;line-height:1.85;display:none}
+#tape .sp1{color:#2f5580}
+#tape .sp2{color:#7a4a52}
+#tape .exp{margin-top:10px;color:#6b5f4a}
+.gw.dictw{border-bottom:1px dotted #bda68a;cursor:pointer}
+.gw.dictw.on{background:#ffe6b8;border-bottom-color:#8a6a2a}
+#wtip{margin-top:8px;font-size:15px;line-height:1.7;color:#8a6a2a;min-height:26px}
+#big{padding:12px}
+</style>
+</head>
+<body>
+<div id="app">
+  <div id="art"><div id="tintLayer"></div></div>
+
+  <div class="bar">
+    <select id="part" aria-label="選擇 Part">
+      <option value="1">Part 1 · 照片描述</option>
+      <option value="2">Part 2 · 應答問題</option>
+      <option value="3">Part 3 · 簡短對話</option>
+      <option value="4">Part 4 · 簡短獨白</option>
+    </select>
+    <button id="bPrev">←</button>
+    <button id="bNext">→</button>
+    <span class="sp"></span>
+    <span class="note" id="pos"></span>
+  </div>
+
+  <div id="card"><div><div id="pane">
+    <div id="hd"></div>
+    <div id="qt"></div>
+    <div id="opts"></div>
+    <div id="tape"></div>
+  </div></div></div>
+
+  <div class="bar">
+    <button id="bPlay">▶ 播放</button>
+    <button id="bRate">速度 0.9×</button>
+    <span class="sp"></span>
+    <span class="note" id="plays"></span>
+  </div>
+
+  <div class="bar">
+    <span class="note" id="score"></span>
+    <span class="sp"></span>
+    <button id="bVoice">語音</button>
+    <button id="bReset">清除成績</button>
+  </div>
+</div>
+
+<script src="data/content.js"></script>
+<script src="data/scenes-extra.js"></script>
+<script src="data/chapters.js"></script>
+<script src="data/chapters-2.js"></script>
+<script src="data/chapters-3.js"></script>
+<script src="data/chapters-4.js"></script>
+<script src="data/chapters-5.js"></script>
+<script src="data/chapters-6.js"></script>
+<script src="data/chapters-7.js"></script>
+<script src="data/chapters-8.js"></script>
+<script src="data/chapters-9.js"></script>
+<script src="data/chapters-final.js"></script>
+<script src="data/scenes-more.js"></script>
+<script src="data/listening.js"></script>
+<script src="data/listening-2.js"></script>
+<script src="data/dict.js"></script>
+<script>
+
+/* ── 防呆：直接開原始版會少掉旁邊的資料檔 ── */
+if(typeof CONTENT === 'undefined'){
+  document.body.innerHTML =
+    '<div style="max-width:520px;margin:60px auto;padding:24px;background:#f7f2e6;'
+  + 'border:3px solid #1b1826;color:#2a2438;font-size:15px;line-height:1.9">'
+  + '<b style="font-size:17px">找不到內容檔</b><br><br>'
+  + '這是開發用的原始版，需要同一個資料夾裡的 js 檔才能執行。<br><br>'
+  + '要直接開來玩，請用 <b>dist/</b> 裡的版本——那是把所有內容內嵌好的單一檔案。<br><br>'
+  + '如果你改過內容，重新執行 <b>python tools/build.py</b> 就會產生最新的 dist 檔。'
+  + '</div>';
+  throw new Error('CONTENT not loaded');
+}
+const $ = id => document.getElementById(id);
+const KEY = 'pxlisten.v1';
+const L = CONTENT.listening;
+
+let part = 1, idx = 0, sub = 0;      // sub：Part 3/4 的第幾題
+let answered = false, playCount = 0;
+let RATES = [0.75, 0.9, 1.0], ri = 1;
+let V1 = null, V2 = null;
+
+/* ── 語音：盡量兩個不同的英文語音；只有一個時用音高區分 ── */
+function pickVoices(){
+  if(!('speechSynthesis' in window)) return;
+  const vs = speechSynthesis.getVoices().filter(v=>/^en/i.test(v.lang));
+  if(!vs.length) return;
+  V1 = vs[0];
+  V2 = vs.find(v=>v !== V1) || V1;
+  $('bVoice').textContent = V2 && V2 !== V1 ? '語音 ×2' : '語音 ×1';
+}
+if('speechSynthesis' in window){
+  pickVoices();
+  speechSynthesis.onvoiceschanged = pickVoices;
+}else{
+  $('bPlay').disabled = true;
+  $('bVoice').textContent = '不支援朗讀';
+}
+
+/* ── 依序播放多句，可指定講者 ── */
+function speakQueue(items, done){
+  if(!('speechSynthesis' in window)) return;
+  speechSynthesis.cancel();
+  let i = 0;
+  const next = ()=>{
+    if(i >= items.length){ done && done(); return; }
+    const it = items[i++];
+    const u = new SpeechSynthesisUtterance(it.t);
+    // M / W / M2 三個講者。有兩個語音時 W 用第二個，
+    // M2 一律靠音高區分（系統很少有三個英文語音）。
+    u.voice = (it.who === 'W') ? V2 : V1;
+    if(V2 === V1 && it.who === 'W') u.pitch = 1.35;
+    if(it.who === 'M')  u.pitch = 0.85;
+    if(it.who === 'M2') u.pitch = 1.10;
+    u.rate = RATES[ri];
+    u.onend = ()=> setTimeout(next, it.gap || 420);
+    u.onerror = next;
+    speechSynthesis.speak(u);
+  };
+  next();
+}
+const stopAll = ()=>{ if('speechSynthesis' in window) speechSynthesis.cancel(); };
+
+/* ── 場景 ── */
+function paint(scene, tint){
+  if(!scene){ $('art').innerHTML = ''; return; }
+  $('art').innerHTML = CONTENT.scenes[scene] + '<div id="tintLayer"></div>';
+  const t = CONTENT.tints[tint];
+  if(t){
+    const l = $('tintLayer');
+    Object.assign(l.style, {background:t[0], opacity:t[1], position:'absolute', inset:'0', pointerEvents:'none'});
+  }
+}
+
+/* ── 目前的題目物件 ── */
+function cur(){
+  if(part === 1) return L.part1[idx];
+  if(part === 2) return L.part2[idx];
+  return (part === 3 ? L.part3 : L.part4)[idx];
+}
+function count(){
+  if(part === 1) return L.part1.length;
+  if(part === 2) return L.part2.length;
+  return (part === 3 ? L.part3 : L.part4).length;
+}
+
+/* ── 畫面 ── */
+function render(){
+  answered = false; playCount = 0;
+  stopAll();
+  const c = cur();
+  $('tape').style.display = 'none';
+  $('tape').innerHTML = '';
+  $('plays').textContent = '';
+
+  if(part === 1){
+    paint(c.scene, c.tint);
+    $('hd').textContent = `PART 1 · 照片描述　${idx+1} / ${count()}`;
+    $('qt').textContent = '看圖，聽四句描述，選最符合的一句。';
+    // Part 1 不顯示任何文字
+    $('opts').innerHTML = ['A','B','C','D'].map((lab,n)=>
+      `<button class="opt" data-n="${n}"><span class="lab">${lab}</span><span class="hidden-text">${c.options[n]}</span></button>`).join('');
+  }
+  else if(part === 2){
+    paint(null);
+    const SK = {number:'數字',sound:'近音',reduce:'縮讀',correct:'改口',wh:'疑問詞',statement:'陳述回應'};
+    $('hd').textContent = `PART 2 · 應答問題　${idx+1} / ${count()}`
+      + (c.skill ? `　· ${SK[c.skill]||''}` : '');
+    $('qt').textContent = '聽一個問句和三個回應，選最適合的回應。';
+    $('opts').innerHTML = ['A','B','C'].map((lab,n)=>
+      `<button class="opt" data-n="${n}"><span class="lab">${lab}</span><span class="hidden-text">${c.options[n]}</span></button>`).join('');
+  }
+  else{
+    paint(c.scene, c.tint);
+    const q = c.qs[sub];
+    $('hd').textContent = `PART ${part} · ${part===3?'簡短對話':'簡短獨白'}　`
+      + `第 ${idx+1} 組　題 ${sub+1} / ${c.qs.length}`
+      + (c.level ? `　· L${c.level} · ${c.words} 字` : '');
+    $('qt').textContent = q.q;
+    // Part 3/4 的題目與選項是印出來的
+    $('opts').innerHTML = q.options.map((o,n)=>
+      `<button class="opt" data-n="${n}"><span class="lab">${'ABCD'[n]}</span>${o}</button>`).join('');
+  }
+
+  $('pos').textContent = part <= 2 ? `${idx+1} / ${count()}`
+                                   : `第 ${idx+1} 組 · 題 ${sub+1}`;
+  bindOptions();
+  drawScore();
+}
+
+function bindOptions(){
+  $('opts').querySelectorAll('.opt').forEach(btn=>{
+    btn.onclick = ()=>{
+      if(answered) return;
+      answered = true;
+      const c = cur();
+      const ans = (part <= 2) ? c.answer : c.qs[sub].answer;
+      const n = +btn.dataset.n;
+      const all = $('opts').querySelectorAll('.opt');
+      all[ans].classList.add('right');
+      if(n !== ans) btn.classList.add('wrong');
+      // Part 1/2 作答後才放出文字，並套上字典
+      all.forEach((b,i)=>{
+        const h = b.querySelector('.hidden-text');
+        if(h){ h.classList.remove('hidden-text'); h.innerHTML = G(c.options[i]); }
+      });
+      bindDict($('opts'));
+      showTape(n === ans);
+      save(n === ans);
+      drawScore();
+    };
+  });
+}
+
+const G = t => (CONTENT.glossify ? CONTENT.glossify(t) : t);
+
+function showTape(right){
+  const c = cur();
+  let html = '';
+  if(part <= 2){
+    if(part === 2) html += `<div><b>Q:</b> ${G(c.q)}</div>`;
+    html += `<div class="exp">${right?'對了。':'再聽一次：'}${c.note}</div>`;
+  }else{
+    html += `<div style="color:var(--dim);font-size:11px;margin-bottom:6px;">文字稿　·　點任何一個字看中文</div>`;
+    html += c.lines.map(([who,t])=>
+      `<div class="${who==='W'?'sp2':'sp1'}"><b>${who}:</b> ${G(t)}</div>`).join('');
+    html += `<div class="exp">${right?'對了。':'再看一次：'}${c.qs[sub].note}</div>`;
+  }
+  html += '<div id="wtip"></div>';
+  $('tape').innerHTML = html;
+  $('tape').style.display = 'block';
+  bindDict($('tape'));
+}
+
+/* 點字查中文——聽完之後才開放，不影響聽的過程 */
+function bindDict(root){
+  root.querySelectorAll('.dictw').forEach(el=>{
+    el.onclick = ev=>{
+      ev.stopPropagation();
+      root.querySelectorAll('.dictw').forEach(x=>x.classList.remove('on'));
+      el.classList.add('on');
+      const tip = root.querySelector('#wtip') || $('wtip');
+      if(tip) tip.innerHTML = `<b style="color:var(--ink)">${el.textContent}</b>　${el.dataset.z}`;
+    };
+  });
+}
+
+/* ── 播放 ── */
+$('bPlay').onclick = ()=>{
+  const c = cur();
+  playCount++;
+  $('plays').textContent = `已播放 ${playCount} 次`;
+  if(part === 1){
+    speakQueue(c.options.map((t,n)=>({who:'M', t:`${'ABCD'[n]}. ${t}`, gap:500})));
+  }else if(part === 2){
+    speakQueue([{who:'M', t:c.q, gap:700}]
+      .concat(c.options.map((t,n)=>({who:'W', t:`${'ABC'[n]}. ${t}`, gap:500}))));
+  }else{
+    const items = c.lines.map(([who,t])=>({who, t}));
+    speakQueue([{who:'M', t:c.intro, gap:700}].concat(items));
+  }
+};
+$('bRate').onclick = ()=>{
+  ri = (ri+1) % RATES.length;
+  $('bRate').textContent = `速度 ${RATES[ri]}×`;
+};
+$('bVoice').onclick = ()=>{ const t=V1; V1=V2; V2=t; pickVoicesLabel(); };
+function pickVoicesLabel(){ $('bVoice').textContent = V2 && V2 !== V1 ? '語音 ×2（已交換）' : '語音 ×1'; }
+
+/* ── 導覽 ── */
+function step(d){
+  stopAll();
+  if(part <= 2){
+    idx = (idx + d + count()) % count();
+  }else{
+    const qs = cur().qs.length;
+    sub += d;
+    if(sub >= qs){ sub = 0; idx = (idx+1) % count(); }
+    if(sub < 0){ idx = (idx - 1 + count()) % count(); sub = cur().qs.length - 1; }
+  }
+  render();
+}
+$('bPrev').onclick = ()=> step(-1);
+$('bNext').onclick = ()=> step(1);
+$('part').onchange = e => { part = +e.target.value; idx = 0; sub = 0; render(); };
+document.addEventListener('keydown', e=>{
+  if(e.key === 'ArrowRight') step(1);
+  if(e.key === 'ArrowLeft') step(-1);
+  if(e.key === ' '){ e.preventDefault(); $('bPlay').click(); }
+});
+
+/* ── 成績 ── */
+function load(){ try{ return JSON.parse(localStorage.getItem(KEY)||'{}'); }catch(e){ return {}; } }
+function save(right){
+  try{
+    const d = load(), k = `p${part}`;
+    d[k] = d[k] || {right:0, total:0};
+    d[k].right += right ? 1 : 0;
+    d[k].total += 1;
+    localStorage.setItem(KEY, JSON.stringify(d));
+  }catch(e){}
+}
+function drawScore(){
+  const d = load();
+  const parts = [1,2,3,4].map(p=>{
+    const r = d[`p${p}`];
+    return r ? `P${p} ${r.right}/${r.total}` : `P${p} —`;
+  });
+  $('score').textContent = parts.join('　');
+}
+$('bReset').onclick = ()=>{ try{ localStorage.removeItem(KEY); }catch(e){} drawScore(); };
+
+render();
+</script>
+</body>
+</html>
