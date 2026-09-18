@@ -50,7 +50,8 @@ button,select{
   font-family:inherit;font-size:12px;color:var(--ui-text);
   background:var(--ui-bg);border:2px solid var(--ui-line);padding:8px 12px;cursor:pointer;
 }
-button:hover{background:#3b3450}
+@media (hover:hover) and (pointer:fine){ button:hover{background:#3b3450} }
+button:active{background:#3b3450}
 button:focus-visible,select:focus-visible{outline:2px solid var(--frame-in);outline-offset:2px}
 #pick{flex:1;min-width:160px}
 .sp{flex:1}
@@ -65,7 +66,8 @@ button:focus-visible,select:focus-visible{outline:2px solid var(--frame-in);outl
 .qo{display:block;width:100%;text-align:left;font-family:inherit;font-size:18px;
     line-height:26px;color:var(--ink);background:#efe8d8;border:2px solid var(--rule);
     padding:9px 12px;margin-bottom:6px;cursor:pointer}
-.qo:hover{background:#e6dcc6}
+@media (hover:hover) and (pointer:fine){ .qo:hover{background:#e6dcc6} }
+.qo:active{background:#e6dcc6}
 .qo.right{background:#d7ecd9;border-color:var(--ok)}
 .qo.wrong{background:#f2d9d4;border-color:var(--bad)}
 .qx{font-size:15px;line-height:1.8;color:#6b5f4a;margin-top:8px;display:none}

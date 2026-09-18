@@ -34,7 +34,8 @@ button,select{
   font-family:inherit;font-size:12px;color:var(--ui-text);
   background:var(--ui-bg);border:2px solid var(--ui-line);padding:8px 12px;cursor:pointer;
 }
-button:hover:not(:disabled){background:#3b3450}
+@media (hover:hover) and (pointer:fine){ button:hover:not(:disabled){background:#3b3450} }
+button:active:not(:disabled){background:#3b3450}
 button:disabled{opacity:.45;cursor:default}
 button:focus-visible,select:focus-visible{outline:2px solid var(--frame-in);outline-offset:2px}
 .sp{flex:1}
@@ -48,7 +49,8 @@ button:focus-visible,select:focus-visible{outline:2px solid var(--frame-in);outl
 .opt{display:block;width:100%;text-align:left;font-family:inherit;font-size:18px;
      line-height:26px;color:var(--ink);background:#efe8d8;border:2px solid var(--rule);
      padding:10px 12px;margin-bottom:6px;cursor:pointer}
-.opt:hover{background:#e6dcc6}
+@media (hover:hover) and (pointer:fine){ .opt:hover{background:#e6dcc6} }
+.opt:active{background:#e6dcc6}
 .opt.right{background:#d7ecd9;border-color:var(--ok)}
 .opt.wrong{background:#f2d9d4;border-color:var(--bad)}
 .opt .lab{display:inline-block;width:26px;font-weight:bold}

@@ -34,7 +34,8 @@ a.mode{
   background:var(--paper);border:3px solid var(--frame);
   padding:12px;box-shadow:0 3px 0 rgba(0,0,0,.45);
 }
-a.mode:hover{background:#fffaf0}
+@media (hover:hover) and (pointer:fine){ a.mode:hover{background:#fffaf0} }
+a.mode:active{background:#fffaf0}
 a.mode:active{transform:translateY(2px);box-shadow:0 1px 0 rgba(0,0,0,.45)}
 a.mode:focus-visible{outline:3px solid #7fa8d9;outline-offset:2px}
 a.mode .ico{flex:none;width:56px;line-height:0}

@@ -38,11 +38,13 @@ button,select{
   font-family:inherit;font-size:12px;color:var(--ui-text);
   background:var(--ui-bg);border:2px solid var(--ui-line);padding:8px 12px;cursor:pointer;
 }
-button:hover:not(:disabled){background:#3b3450}
+@media (hover:hover) and (pointer:fine){ button:hover:not(:disabled){background:#3b3450} }
+button:active:not(:disabled){background:#3b3450}
 button:disabled{opacity:.45;cursor:default}
 button:focus-visible,select:focus-visible,.opt:focus-visible{outline:2px solid var(--frame-in);outline-offset:2px}
 button.go{background:#2f6b3f;border-color:#4f9a62;color:#eef7ef}
-button.go:hover:not(:disabled){background:#3a7f4c}
+@media (hover:hover) and (pointer:fine){ button.go:hover:not(:disabled){background:#3a7f4c} }
+button.go:active:not(:disabled){background:#3a7f4c}
 #unit{flex:1;min-width:180px}
 .sp{flex:1}
 .note{font-size:11px;color:#7d7392}
@@ -83,7 +85,8 @@ button.go:hover:not(:disabled){background:#3a7f4c}
 .opt{display:block;width:100%;text-align:left;font-family:inherit;font-size:18px;
      line-height:26px;color:var(--ink);background:#efe8d8;border:2px solid var(--rule);
      padding:9px 12px;margin-bottom:6px;cursor:pointer}
-.opt:hover{background:#e6dcc6}
+@media (hover:hover) and (pointer:fine){ .opt:hover{background:#e6dcc6} }
+.opt:active{background:#e6dcc6}
 .opt.right{background:#d7ecd9;border-color:var(--ok)}
 .opt.wrong{background:#f2d9d4;border-color:var(--bad)}
 .fb{font-size:15px;line-height:25px;color:#6b5f4a;min-height:25px;margin-top:6px}
