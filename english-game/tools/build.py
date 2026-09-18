@@ -7,8 +7,20 @@
     python build.py
 
 產出
-    dist/game.html    關卡模式（65 集）
-    dist/read.html    閱讀模式（11 章）
+    （dist/index.html 是手寫的首頁，不從 src 產生，這支腳本不會動它）
+    dist/game.html      關卡
+    dist/read.html      閱讀
+    dist/listen.html    聽力
+    dist/cards.html     字彙對戰
+    dist/memory.html    翻牌配對
+    dist/phrases.html   片語速記
+
+為什麼 dist 比 src 大很多
+────────────────────────────────────────────
+src 的 html 只有畫面和程式，內容放在 data/*.js，各頁共用。
+dist 把每一頁用到的 js 全部複製進那一頁，所以每個檔案都帶著一整份
+字庫、章節、場景圖——src 的 memory.html 32 KB，dist 的會到 500 KB 左右。
+這是正常的：換來的是單一檔案、不用旁邊的資料夾也能開。
 
 為什麼需要這支腳本
 ────────────────────────────────────────────
@@ -27,12 +39,14 @@ from pathlib import Path
 ROOT = Path(__file__).parent.parent / "src"
 DIST = Path(__file__).parent.parent / "dist"
 
+# 舊版把 index.html 當成關卡頁；首頁獨立出來之後，關卡在 game.html。
 TARGETS = [
-    ("index.html", "game.html"),
+    ("game.html", "game.html"),
     ("read.html", "read.html"),
     ("listen.html", "listen.html"),
     ("cards.html", "cards.html"),
     ("memory.html", "memory.html"),
+    ("phrases.html", "phrases.html"),
 ]
 
 SRC_RE = re.compile(r'[ \t]*<script src="([^"]+)"></script>\n?')
@@ -70,7 +84,8 @@ def main():
         out = inline(p)
         target = DIST / dst
         target.write_text(out, encoding="utf-8")
-        print(f"{src} → dist/{dst}　{len(out)/1024:.0f} KB")
+        size = target.stat().st_size          # 實際位元組數；中文一個字 3 bytes
+        print(f"{src} → dist/{dst}　{size/1024:.0f} KB")
 
     print("\n完成。dist/ 裡的檔案可以單獨開啟或直接傳給別人。")
 
