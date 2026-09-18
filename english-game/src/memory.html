@@ -13,7 +13,7 @@
 }
 :root{
   --ink:#2a2438; --paper:#f7f2e6; --frame:#1b1826; --frame-in:#7fa8d9;
-  --rule:#cdbfa6; --dim:#7a6a52;
+  --rule:#cdbfa6; --dim:#7a6a52; --ring:#c0463a;
   --ok:#2f6b3f; --bad:#9c3a2e;
   --felt:#2a3d52; --felt2:#223446;
   --ui-bg:#2f2942; --ui-line:#4d4468; --ui-text:#d8d2e4;
@@ -40,34 +40,62 @@ body{
 .side.cpu.turn{border-color:var(--cpu)}
 
 #msg{padding:10px 12px;font-size:13px;line-height:20px;color:#c9c2d8;min-height:40px;text-align:center}
+#msg button{margin-left:6px;padding:4px 10px}
 
-/* 牌桌 */
+/* 牌桌：上列英文、下列中文 */
 #board{
-  display:grid;gap:7px;padding:0 12px 12px;
+  display:grid;gap:7px;padding:12px;
   background:repeating-linear-gradient(45deg,var(--felt) 0 8px,var(--felt2) 8px 16px);
-  padding-top:12px;
 }
+.rowlab{grid-column:1/-1;font-size:11px;color:#9fb3cc;line-height:14px}
 .cell{
-  position:relative;aspect-ratio:3/4;border:3px solid var(--frame);
+  position:relative;border:3px solid var(--frame);
   background:#3f5a7d;cursor:pointer;overflow:hidden;
   display:flex;align-items:center;justify-content:center;text-align:center;
-  font-size:14px;line-height:19px;padding:4px;word-break:break-word;
+  font-family:inherit;color:var(--ink);
+  font-size:15px;line-height:20px;padding:6px;word-break:break-word;
   box-shadow:0 3px 0 rgba(0,0,0,.35);
 }
+.cell.top{min-height:84px}
+.cell.bot{min-height:64px;background:#6b4f38}
+#board.sent .cell.top{min-height:156px;font-size:13px;line-height:19px;text-align:left;align-items:flex-start;padding:8px}
 .cell .back{
   position:absolute;inset:0;
-  background:
-    repeating-linear-gradient(45deg,#4a6a92 0 5px,#3f5a7d 5px 10px);
+  background:repeating-linear-gradient(45deg,#4a6a92 0 5px,#3f5a7d 5px 10px);
 }
+.cell.bot .back{background:repeating-linear-gradient(45deg,#7d5e44 0 5px,#6b4f38 5px 10px)}
 .cell.up{background:var(--paper);color:var(--ink)}
 .cell.up .back{display:none}
 .cell.en{background:#eef3f8}
-.cell.zh{background:#f7f2e6}
+.cell.zh{background:#f7f2e6;font-size:17px}
 .cell.gone{visibility:hidden}
 .cell.you{background:#d9e4f5;border-color:var(--you)}
 .cell.cpu{background:#f5ded7;border-color:var(--cpu)}
 .cell.peek{background:#fff7e0}
+.cell.pick{outline:3px solid #ffe6b8;outline-offset:-6px}
 .cell:focus-visible{outline:3px solid var(--frame-in);outline-offset:2px}
+.cell .f{display:block;width:100%}
+.ring{border:2px solid var(--ring);border-radius:10px;padding:0 3px;margin:0 -1px;color:#7a1f16;
+      -webkit-box-decoration-break:clone;box-decoration-break:clone}
+#board.sent .cell.top .ring{overflow-wrap:anywhere}
+@media (max-width:420px){ #board.sent .cell.top{font-size:12px;line-height:18px;padding:6px} }
+#board.p4{gap:5px;padding:10px}
+#board.sent.p4 .cell.top{font-size:12px;line-height:17px;padding:6px;min-height:170px}
+#board.p4 .cell.zh{font-size:15px}
+@media (max-width:420px){
+  #board.sent.p4 .cell.top{font-size:11px;line-height:16px;padding:4px 3px;min-height:190px;border-width:2px}
+  #board.p4 .cell.bot{min-height:58px;padding:3px;border-width:2px}
+  #board.p4 .cell.zh{font-size:13px;line-height:17px}
+  #board.p4 .ring{padding:0 1px;border-radius:7px}
+}
+
+/* 句子複盤：拿走一對之後，整句攤開，其他字也能點 */
+#ctx{margin:0 12px 4px;background:var(--paper);border:3px solid var(--frame);padding:10px 12px;display:none}
+#ctx .s{font-size:16px;line-height:28px}
+#ctx .h{font-size:11px;color:var(--dim);margin-bottom:4px}
+#ctxTip{font-size:14px;line-height:22px;color:#8a6a2a;min-height:22px;margin-top:4px}
+.sw{border-bottom:1px dotted #bda68a;cursor:pointer}
+.sw.on{background:#ffe6b8;border-bottom-color:#8a6a2a}
 
 .bar{display:flex;gap:6px;padding:10px 12px;align-items:center;flex-wrap:wrap}
 button,select{
@@ -75,7 +103,7 @@ button,select{
   background:var(--ui-bg);border:2px solid var(--ui-line);padding:8px 12px;cursor:pointer;
 }
 button:hover:not(:disabled){background:#3b3450}
-button:disabled{opacity:.45;cursor:default}
+button:disabled,select:disabled{opacity:.45;cursor:default}
 .sp{flex:1}
 .note{font-size:11px;color:#7d7392}
 
@@ -83,10 +111,14 @@ button:disabled{opacity:.45;cursor:default}
 .panel{background:var(--paper);border:3px solid var(--frame);padding:16px;margin-bottom:10px}
 .panel h2{font-size:16px;margin-bottom:10px;font-weight:normal}
 .big{font-size:28px;line-height:36px}
-.row{display:flex;justify-content:space-between;font-size:15px;line-height:26px;
+.row{display:flex;justify-content:space-between;gap:10px;font-size:15px;line-height:26px;
      border-bottom:1px dotted var(--rule);padding:3px 0}
 .row:last-child{border-bottom:0}
-.row .zh{color:var(--dim)}
+.row .zh{color:var(--dim);flex:none}
+.srow{border-bottom:1px dotted var(--rule);padding:8px 0;font-size:14px;line-height:24px}
+.srow:last-child{border-bottom:0}
+.srow .zh{color:var(--dim);font-size:13px}
+@media (prefers-reduced-motion:reduce){ #result{scroll-behavior:auto} }
 </style>
 </head>
 <body>
@@ -101,13 +133,26 @@ button:disabled{opacity:.45;cursor:default}
 
   <div id="board"></div>
 
+  <div id="ctx">
+    <div class="h" id="ctxH"></div>
+    <div class="s" id="ctxS"></div>
+    <div id="ctxTip"></div>
+  </div>
+
   <div class="bar">
     <button id="bNew">新的一局</button>
-    <select id="size" aria-label="牌數">
-      <option value="6">6 對（12 張）</option>
-      <option value="8" selected>8 對（16 張）</option>
-      <option value="10">10 對（20 張）</option>
+    <select id="kind" aria-label="題型">
+      <option value="sent" selected>句中字義（考試題型）</option>
+      <option value="word">純單字</option>
     </select>
+    <select id="size" aria-label="牌數">
+      <option value="3" selected>3 對（6 張）</option>
+      <option value="4">4 對（8 張）</option>
+    </select>
+  </div>
+
+  <div class="bar">
+    <select id="mode" aria-label="出題範圍"></select>
     <select id="games" aria-label="局數">
       <option value="1">單局</option>
       <option value="3" selected>三局制</option>
@@ -120,18 +165,7 @@ button:disabled{opacity:.45;cursor:default}
       <option value="1">電腦：完美記憶</option>
     </select>
   </div>
-
-  <div class="bar">
-    <select id="mode" aria-label="出題範圍">
-      <option value="mix">舊單字 · 章節教過的</option>
-      <option value="new">新單字 · 閱讀不會出現</option>
-      <option value="both">兩邊混合</option>
-      <option value="weak">只出我記不住的</option>
-      <option value="core">只出重點字</option>
-    </select>
-    <span class="sp"></span>
-    <span class="note" id="info"></span>
-  </div>
+  <div class="bar" style="padding-top:0"><span class="note" id="info"></span></div>
 
   <div id="result"></div>
 </div>
@@ -262,43 +296,124 @@ function sourceFor(mode){
   return POOL;                       // mix ＝ 舊單字
 }
 
+/* ═══ 1b. 句子庫：考試題型用 ═══════════════════════════
+   從閱讀章節切出整句，挑其中一個字圈起來，問它在這句裡的意思。
+   答案用章節標註的中文——那是「在這個句子裡」的意思，
+   不是字典第一義。跟考試的「in this sentence, X is closest to」同一件事。
+   ═══════════════════════════════════════════════════ */
+const MARK = /([*~]?)\[([^\]|]+)\|([^\]]+)\]/g;
+
+function tokenize(s){
+  const out = []; let last = 0, m;
+  MARK.lastIndex = 0;
+  while((m = MARK.exec(s)) !== null){
+    if(m.index > last) out.push({t:s.slice(last, m.index), z:null, c:''});
+    out.push({t:m[2], z:m[3], c:m[1]});
+    last = MARK.lastIndex;
+  }
+  if(last < s.length) out.push({t:s.slice(last), z:null, c:''});
+  return out;
+}
+const plainOf = toks => toks.map(t=>t.t).join('');
+const esc = t => String(t).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
+
+function buildSentPool(){
+  const out = [], seen = new Set();
+  (CONTENT.chapters||[]).forEach(c=>c.pages.forEach(p=>{
+    const flat = p.t.replace(/\s*\n\s*/g,' ').trim();
+    flat.split(/(?<=[.!?])\s+(?=[\[*~"'A-Z0-9])/).forEach(s=>{
+      const toks = tokenize(s);
+      const wc = plainOf(toks).trim().split(/\s+/).length;
+      if(wc < 5 || wc > 22) return;
+      toks.forEach((tk, ti)=>{
+        if(!tk.z) return;
+        const w = tk.t.trim(), lw = w.toLowerCase();
+        const zh = tk.z.replace(/[（(].*?[)）]/g,'').trim();
+        if(zh.length < 2 || zh.length > 7) return;
+        const key = tk.c === '*' || tk.c === '~';
+        if(!key){
+          if(/^[A-Z]/.test(w) || w.length < 5 || /\s/.test(w)) return;
+          if(baseForms(lw).some(b=>EASY.has(b))) return;
+        }
+        const id = lw + '|' + zh;
+        if(seen.has(id)) return;
+        seen.add(id);
+        out.push({ en:w, zh, toks, ti, core:key, ch:c.title, wc });
+      });
+    });
+  }));
+  return out;
+}
+const SENT_POOL = buildSentPool();
+const SENT_CORE = SENT_POOL.filter(x=>x.core);
+
+/* 句子畫成 HTML：目標字加圈；live=true 時其他有中文的字可以點 */
+function sentHTML(x, live){
+  return x.toks.map((tk,i)=>{
+    if(i === x.ti) return `<span class="ring">${esc(tk.t)}</span>`;
+    if(live && tk.z) return `<span class="sw" data-z="${esc(tk.z)}">${esc(tk.t)}</span>`;
+    return esc(tk.t);
+  }).join('');
+}
+
 function loadRec(){ try{ return JSON.parse(localStorage.getItem(CARD_KEY)||'{}'); }catch(e){ return {}; } }
 function saveRec(d){ try{ localStorage.setItem(CARD_KEY, JSON.stringify(d)); }catch(e){} }
 
-function pickWords(count, mode){
-  let src = sourceFor(mode);
-  if(mode==='weak'){
-    const rec = loadRec();
-    const weak = ALL_POOL.filter(x=>rec[x.en] && rec[x.en].miss>0);
-    if(weak.length >= count) src = weak;
+/* 出題範圍：兩種題型各自的選單 */
+const MODES = {
+  sent: [['core','章節重點字'],['all','章節裡所有生字'],['weak','只出我記不住的']],
+  word: [['mix','舊單字 · 章節教過的'],['new','新單字 · 閱讀不會出現'],['both','兩邊混合'],
+         ['weak','只出我記不住的'],['core','只出重點字']]
+};
+function fillModes(){
+  const k = $('kind').value;
+  $('mode').innerHTML = MODES[k].map(([v,t])=>`<option value="${v}">${t}</option>`).join('');
+
+  $('info').textContent = k === 'sent'
+    ? `句庫 ${SENT_POOL.length} 題（重點字 ${SENT_CORE.length}）　上列翻句子、下列翻中文，一次各翻一張`
+    : `牌庫 ${POOL.length + EXTRA_POOL.length} 字　上列翻英文、下列翻中文，一次各翻一張`;
+}
+
+function pickItems(count, kind, mode){
+  let src;
+  const rec = loadRec();
+  if(kind === 'sent'){
+    src = mode === 'core' ? SENT_CORE : SENT_POOL;
+    // 四對的時候牌比較窄，只挑短句，不然一張牌會被擠成很長一條
+    if(count >= 4){ const short = src.filter(x=>x.wc <= 13); if(short.length > 40) src = short; }
+    if(mode === 'weak'){
+      const weak = SENT_POOL.filter(x=>rec[x.en.toLowerCase()] && rec[x.en.toLowerCase()].miss>0);
+      if(weak.length >= count*2) src = weak;
+    }
+  }else{
+    src = sourceFor(mode);
+    if(mode === 'weak'){
+      const weak = ALL_POOL.filter(x=>rec[x.en] && rec[x.en].miss>0);
+      if(weak.length >= count) src = weak;
+    }
   }
-  const out = [], used = new Set();
+  // 同一局裡英文、中文都不能重複，不然會有兩張牌都對
+  const out = [], usedEn = new Set(), usedZh = new Set();
   let guard = 0;
-  while(out.length<count && guard++<20000){
+  while(out.length < count && guard++ < 20000){
     const x = src[Math.floor(Math.random()*src.length)];
-    if(used.has(x.en)) continue;
-    used.add(x.en); out.push(x);
+    const en = x.en.toLowerCase();
+    if(usedEn.has(en) || usedZh.has(x.zh)) continue;
+    usedEn.add(en); usedZh.add(x.zh); out.push(x);
   }
   return out;
 }
 
 /* ═══ 2. 電腦的記憶 ═══════════════════════════════════
-   完美記憶的電腦在這個遊戲裡幾乎必勝——你每翻錯一次，
-   那兩張牌的位置就等於送給它。所以記憶力做成可調的：
    每看到一張牌，只有 retain 的機率會被記住。
-
    你的優勢是真的：你懂字義，它只是在記位置。
-   有意義的材料本來就比較好記。
    ═══════════════════════════════════════════════════ */
 const S = {
-  cards:[], pairs:8, retain:0.7, mode:'mix',
+  cards:[], pairs:3, retain:0.7, mode:'core', kind:'sent',
   you:0, cpu:0, turn:'you', busy:false,
-  first:null, mem:new Map(),           // index → 牌的資料（電腦記得的）
-  wonYou:[], wonCpu:[], started:false
+  first:null, mem:new Map(),
+  wonYou:[], wonCpu:[], started:false, peekTimer:null
 };
-
-/* 系列賽：連打幾局、累計比分。一局牌數有上限（手機排版），
-   想要份量就用局數堆，不要把單局的牌加到看不清楚。 */
 const SERIES = { total:3, game:1, you:0, cpu:0, allCpu:[], allYou:[] };
 
 function newSeries(){
@@ -308,126 +423,161 @@ function newSeries(){
   newGame();
 }
 
-function cpuSee(i){
-  if(Math.random() <= S.retain) S.mem.set(i, S.cards[i]);
-}
+function cpuSee(i){ if(Math.random() <= S.retain) S.mem.set(i, S.cards[i]); }
 function cpuForget(){
   if(S.retain >= 1) return;
-  // 記憶力越差，越容易把已經記住的忘掉
   const p = (1 - S.retain) * 0.12;
   [...S.mem.keys()].forEach(k=>{ if(Math.random() < p) S.mem.delete(k); });
 }
 
-/* ═══ 3. 開局 ═══════════════════════════════════════ */
+/* ═══ 3. 開局 ═══════════════════════════════════════
+   上列是英文（句子或單字），下列是中文。各自洗牌。 */
+function shuffle(a){
+  for(let i=a.length-1;i>0;i--){ const j=Math.floor(Math.random()*(i+1)); [a[i],a[j]]=[a[j],a[i]]; }
+  return a;
+}
 function newGame(){
+  clearInterval(S.peekTimer);
+  S.kind = $('kind').value;
   S.pairs = +$('size').value;
   S.retain = +$('level').value;
   S.mode = $('mode').value;
   S.you = S.cpu = 0; S.turn = 'you'; S.busy = true;
   S.first = null; S.mem = new Map(); S.wonYou = []; S.wonCpu = [];
   $('result').style.display = 'none';
+  $('ctx').style.display = 'none';
 
-  const words = pickWords(S.pairs, S.mode);
-  S.cards = [];
-  words.forEach((w,n)=>{
-    S.cards.push({ id:n, face:'en', text:w.en, en:w.en, zh:w.zh });
-    S.cards.push({ id:n, face:'zh', text:w.zh, en:w.en, zh:w.zh });
-  });
-  for(let i=S.cards.length-1;i>0;i--){
-    const j = Math.floor(Math.random()*(i+1));
-    [S.cards[i],S.cards[j]] = [S.cards[j],S.cards[i]];
-  }
+  const items = pickItems(S.pairs, S.kind, S.mode);
+  S.pairs = items.length;
+  const top = shuffle(items.map((x,n)=>({ id:n, row:'top', face:'en', item:x })));
+  const bot = shuffle(items.map((x,n)=>({ id:n, row:'bot', face:'zh', item:x })));
+  S.cards = top.concat(bot);
 
-  const cols = S.pairs<=6 ? 4 : (S.pairs<=8 ? 4 : 5);
-  $('board').style.gridTemplateColumns = `repeat(${cols},1fr)`;
+  $('board').className = (S.kind === 'sent' ? 'sent' : '') + (S.pairs >= 4 ? ' p4' : '');
+  $('board').style.gridTemplateColumns = `repeat(${S.pairs},1fr)`;
   renderBoard();
   updateScore();
   peekPhase();
 }
 
+function faceHTML(c){
+  const inner = c.face === 'zh' ? esc(c.item.zh)
+              : S.kind === 'sent' ? sentHTML(c.item, false) : esc(c.item.en);
+  return `<span class="f">${inner}</span>`;
+}
+
 /* 開局複習：全部翻開看一次，雙方都看得到 */
 function peekPhase(){
-  const secs = Math.max(4, Math.round(S.pairs * 0.9));
-  let left = secs;
+  let left = S.kind === 'sent' ? 14 + (S.pairs-3)*5 : 5;
   document.querySelectorAll('.cell').forEach((el,i)=>{
     el.classList.add('up','peek', S.cards[i].face);
-    el.textContent = S.cards[i].text;
+    el.innerHTML = faceHTML(S.cards[i]);
   });
-  $('msg').innerHTML = `先看一次全部的牌。<b>${left}</b> 秒後蓋起來。`;
-  const t = setInterval(()=>{
-    left--;
-    if(left>0){ $('msg').innerHTML = `先看一次全部的牌。<b>${left}</b> 秒後蓋起來。`; return; }
-    clearInterval(t);
+  const say = ()=>{ $('msg').innerHTML = `先看一次全部的牌。<b>${left}</b> 秒後蓋起來。<button id="bSkip">看好了</button>`;
+                    $('bSkip').onclick = endPeek; };
+  const endPeek = ()=>{
+    clearInterval(S.peekTimer);
     document.querySelectorAll('.cell').forEach(el=>{
-      el.classList.remove('up','peek','en','zh'); el.textContent='';
+      el.classList.remove('up','peek','en','zh'); el.innerHTML = '<span class="back"></span>';
     });
     S.busy = false; S.started = true;
     $('msg').textContent = (SERIES.total>1 ? `第 ${SERIES.game} / ${SERIES.total} 局　` : '')
-      + '你先。翻兩張牌，中英對上就拿走，還可以再翻。';
-  }, 1000);
+      + (S.kind === 'sent' ? '你先。上面翻一句，下面翻一個意思，對上就拿走。' : '你先。上下各翻一張，中英對上就拿走。');
+  };
+  say();
+  S.peekTimer = setInterval(()=>{ left--; if(left>0) say(); else endPeek(); }, 1000);
 }
 
 function renderBoard(){
-  $('board').innerHTML = S.cards.map((c,i)=>
-    `<button class="cell" data-i="${i}"><span class="back"></span></button>`).join('');
-  $('board').querySelectorAll('.cell').forEach(el=>{
-    el.onclick = ()=> flip(+el.dataset.i);
-  });
+  const cell = (c,i)=>`<button class="cell ${c.row}" data-i="${i}" aria-label="${c.row==='top'?'英文牌':'中文牌'}"><span class="back"></span></button>`;
+  const n = S.pairs;
+  $('board').innerHTML =
+      `<div class="rowlab">${S.kind==='sent'?'句子 · 圈起來的字是什麼意思':'英文'}</div>`
+    + S.cards.slice(0,n).map((c,i)=>cell(c,i)).join('')
+    + `<div class="rowlab">中文</div>`
+    + S.cards.slice(n).map((c,i)=>cell(c,i+n)).join('');
+  $('board').querySelectorAll('.cell').forEach(el=>{ el.onclick = ()=> flip(+el.dataset.i); });
 }
 const cellAt = i => $('board').querySelectorAll('.cell')[i];
+const rowOf = i => S.cards[i].row;
 
 function showCard(i){
   const el = cellAt(i), c = S.cards[i];
   el.classList.add('up', c.face);
-  el.textContent = c.text;
+  el.innerHTML = faceHTML(c);
 }
 function hideCard(i){
   const el = cellAt(i);
-  el.classList.remove('up','en','zh');
+  el.classList.remove('up','en','zh','pick');
   el.innerHTML = '<span class="back"></span>';
 }
+const isGone = i => cellAt(i).classList.contains('gone');
 
-/* ═══ 4. 玩家翻牌 ═══════════════════════════════════ */
+/* 拿走一對之後：整句攤開，句子裡其他字也能點 */
+function showCtx(item, who){
+  if(S.kind !== 'sent'){ $('ctx').style.display = 'none'; return; }
+  $('ctxH').textContent = `${who}拿走的這一句　·　點其他字看中文　·　出自〈${item.ch}〉`;
+  $('ctxS').innerHTML = sentHTML(item, true);
+  $('ctxTip').innerHTML = `<b style="color:var(--ink)">${esc(item.en)}</b>　${esc(item.zh)}　<span style="color:var(--dim)">（在這句裡的意思）</span>`;
+  $('ctx').style.display = 'block';
+  bindWords($('ctxS'), $('ctxTip'));
+}
+function bindWords(root, tip){
+  root.querySelectorAll('.sw').forEach(el=>{
+    el.onclick = ()=>{
+      root.querySelectorAll('.sw').forEach(x=>x.classList.remove('on'));
+      el.classList.add('on');
+      tip.innerHTML = `<b style="color:var(--ink)">${esc(el.textContent)}</b>　${esc(el.dataset.z)}`;
+    };
+  });
+}
+const pairText = c => `${c.item.en} ＝ ${c.item.zh}`;
+
+/* ═══ 4. 玩家翻牌：上下各一張 ════════════════════════ */
 function flip(i){
   if(S.busy || S.turn!=='you') return;
   const el = cellAt(i);
-  if(el.classList.contains('gone') || el.classList.contains('up')) return;
+  if(isGone(i) || el.classList.contains('up')) return;
+
+  if(S.first !== null && rowOf(S.first) === rowOf(i)){
+    $('msg').textContent = rowOf(i) === 'top' ? '這張也是上列。第二張請翻下面的中文。' : '這張也是中文。第二張請翻上面那一列。';
+    return;
+  }
 
   showCard(i);
-  cpuSee(i);                              // 你翻開的牌，電腦也看得到
+  cpuSee(i);
 
-  if(S.first === null){ S.first = i; return; }
+  if(S.first === null){ S.first = i; el.classList.add('pick'); return; }
 
   const a = S.first, b = i;
   S.first = null; S.busy = true;
+  const en = rowOf(a) === 'top' ? a : b, zh = en === a ? b : a;
 
   if(S.cards[a].id === S.cards[b].id){
     setTimeout(()=>{
       cellAt(a).classList.add('you'); cellAt(b).classList.add('you');
       setTimeout(()=>{ cellAt(a).classList.add('gone'); cellAt(b).classList.add('gone'); }, 420);
       S.mem.delete(a); S.mem.delete(b);
-      S.you++; S.wonYou.push(S.cards[a]);
+      S.you++; S.wonYou.push(S.cards[a].item);
       updateScore();
-      $('msg').innerHTML = `<b>${S.cards[a].en} ＝ ${S.cards[a].zh}</b>　拿走了，再翻一次。`;
+      $('msg').innerHTML = `<b>${esc(pairText(S.cards[a]))}</b>　拿走了，再翻一次。`;
+      showCtx(S.cards[a].item, '你');
       S.busy = false;
       checkEnd();
     }, 380);
   }else{
-    $('msg').textContent = `${S.cards[a].en} 不是 ${S.cards[b].zh}。`;
+    $('msg').textContent = `${S.cards[en].item.en} 在這裡不是「${S.cards[zh].item.zh}」。`;
     setTimeout(()=>{
       hideCard(a); hideCard(b);
       S.busy = false;
       if(!checkEnd()){ S.turn='cpu'; updateScore(); setTimeout(cpuTurn, 700); }
-    }, 1250);
+    }, 1500);
   }
 }
 
-/* ═══ 5. 電腦回合 ═══════════════════════════════════ */
-function aliveIdx(){
-  const out = [];
-  S.cards.forEach((c,i)=>{ if(!cellAt(i).classList.contains('gone')) out.push(i); });
-  return out;
-}
+/* ═══ 5. 電腦回合：一樣上下各翻一張 ══════════════════ */
+function aliveIdx(){ return S.cards.map((c,i)=>i).filter(i=>!isGone(i)); }
+const rnd = a => a[Math.floor(Math.random()*a.length)];
 
 function cpuTurn(){
   if(S.busy) return;
@@ -435,38 +585,29 @@ function cpuTurn(){
   const alive = aliveIdx();
   if(!alive.length) return;
 
-  /* 記憶裡有沒有現成的一對 */
   const known = [...S.mem.entries()].filter(([i])=>alive.includes(i));
-  let a = null, b = null;
-  for(let x=0;x<known.length && a===null;x++){
-    for(let y=x+1;y<known.length;y++){
-      if(known[x][1].id === known[y][1].id){ a = known[x][0]; b = known[y][0]; break; }
-    }
+  for(const [i,c] of known){
+    const m = known.find(([j,d])=> j!==i && d.id===c.id);
+    if(m){ cpuPlay(i, m[0]); return; }
   }
 
-  if(a !== null){ cpuPlay(a, b); return; }
-
-  /* 沒有現成的一對，翻一張沒看過的 */
   const unknown = alive.filter(i=>!S.mem.has(i));
-  a = unknown.length ? unknown[Math.floor(Math.random()*unknown.length)]
-                     : alive[Math.floor(Math.random()*alive.length)];
+  const a = unknown.length ? rnd(unknown) : rnd(alive);
   S.busy = true;
   showCard(a); cpuSee(a);
   $('msg').textContent = '電腦在想…';
 
   setTimeout(()=>{
-    /* 翻開之後，看記憶裡有沒有配得上的 */
-    const match = [...S.mem.entries()]
-      .find(([i,c])=> i!==a && alive.includes(i) && c.id===S.cards[a].id);
+    const other = alive.filter(i=>rowOf(i) !== rowOf(a));
+    const match = [...S.mem.entries()].find(([i,c])=> other.includes(i) && c.id===S.cards[a].id);
     let second;
     if(match) second = match[0];
     else{
-      const rest = alive.filter(i=>i!==a && !S.mem.has(i));
-      second = rest.length ? rest[Math.floor(Math.random()*rest.length)]
-                           : alive.filter(i=>i!==a)[0];
+      const rest = other.filter(i=>!S.mem.has(i));
+      second = rest.length ? rnd(rest) : rnd(other);
     }
     showCard(second); cpuSee(second);
-    setTimeout(()=> resolveCpu(a, second), 700);
+    setTimeout(()=> resolveCpu(a, second), 900);
   }, 800);
 }
 
@@ -474,7 +615,7 @@ function cpuPlay(a,b){
   S.busy = true;
   $('msg').textContent = '電腦記得這兩張。';
   showCard(a);
-  setTimeout(()=>{ showCard(b); setTimeout(()=>resolveCpu(a,b), 600); }, 550);
+  setTimeout(()=>{ showCard(b); setTimeout(()=>resolveCpu(a,b), 700); }, 550);
 }
 
 function resolveCpu(a,b){
@@ -482,22 +623,22 @@ function resolveCpu(a,b){
     cellAt(a).classList.add('cpu'); cellAt(b).classList.add('cpu');
     setTimeout(()=>{ cellAt(a).classList.add('gone'); cellAt(b).classList.add('gone'); }, 420);
     S.mem.delete(a); S.mem.delete(b);
-    S.cpu++; S.wonCpu.push(S.cards[a]);
+    S.cpu++; S.wonCpu.push(S.cards[a].item);
     updateScore();
-    $('msg').innerHTML = `電腦拿走 <b>${S.cards[a].en} ＝ ${S.cards[a].zh}</b>，繼續翻。`;
+    $('msg').innerHTML = `電腦拿走 <b>${esc(pairText(S.cards[a]))}</b>，繼續翻。`;
+    showCtx(S.cards[a].item, '電腦');
     S.busy = false;
-    if(!checkEnd()) setTimeout(cpuTurn, 800);
+    if(!checkEnd()) setTimeout(cpuTurn, 1400);
   }else{
     $('msg').textContent = '電腦翻錯了。換你。';
     setTimeout(()=>{
       hideCard(a); hideCard(b);
       S.busy = false;
       if(!checkEnd()){ S.turn='you'; updateScore(); $('msg').textContent='換你翻。'; }
-    }, 1150);
+    }, 1300);
   }
 }
 
-/* 系列賽還沒打完：顯示這一局的結果與下一局按鈕 */
 function nextGamePanel(){
   const won = S.you > S.cpu;
   $('result').innerHTML = `<div class="panel">
@@ -523,11 +664,17 @@ function updateScore(){
 }
 
 /* ═══ 6. 結算 ═══════════════════════════════════════ */
+function listHTML(arr){
+  if(S.kind === 'sent'){
+    return arr.map(x=>`<div class="srow">${sentHTML(x, true)}<div class="zh">${esc(x.en)} ＝ ${esc(x.zh)}</div></div>`).join('');
+  }
+  return arr.map(x=>`<div class="row"><span>${esc(x.en)}</span><span class="zh">${esc(x.zh)}</span></div>`).join('');
+}
+
 function checkEnd(){
   if(S.you + S.cpu < S.pairs) return false;
   S.busy = true;
 
-  /* 累計到系列賽 */
   if(S.you > S.cpu) SERIES.you++;
   else if(S.cpu > S.you) SERIES.cpu++;
   SERIES.allYou = SERIES.allYou.concat(S.wonYou);
@@ -536,7 +683,7 @@ function checkEnd(){
   const decided = SERIES.you > SERIES.total/2 || SERIES.cpu > SERIES.total/2;
   const seriesOver = SERIES.total === 1 || decided || SERIES.game >= SERIES.total;
 
-  if(!seriesOver){ nextGamePanel(); return true; }
+  if(!seriesOver){ setTimeout(nextGamePanel, 600); return true; }
 
   const win = SERIES.total === 1 ? S.you > S.cpu : SERIES.you > SERIES.cpu;
   const draw = SERIES.total === 1 ? S.you === S.cpu : SERIES.you === SERIES.cpu;
@@ -552,46 +699,48 @@ function checkEnd(){
           : S.retain>=0.9 ? '對手記憶力很強，這局贏得漂亮。'
           : '穩定發揮。可以把電腦的記憶力調高一階。')
         : draw ? '差一對。再一局。'
-        : '它記位置，你記意思——把記得住的字先拿下來，通常就追得回來。'}
+        : '它記位置，你記意思——把看得懂的句子先拿下來，通常就追得回來。'}
     </div></div>`;
 
   const mineAll = SERIES.total===1 ? S.wonYou : SERIES.allYou;
   const theirsAll = SERIES.total===1 ? S.wonCpu : SERIES.allCpu;
 
   if(mineAll.length){
-    html += `<div class="panel"><h2>你拿到的 ${mineAll.length} 對</h2>`
-      + mineAll.map(c=>`<div class="row"><span>${c.en}</span><span class="zh">${c.zh}</span></div>`).join('')
-      + `</div>`;
+    html += `<div class="panel"><h2>你拿到的 ${mineAll.length} 對</h2>${listHTML(mineAll)}</div>`;
   }
   if(theirsAll.length){
-    html += `<div class="panel"><h2>被電腦拿走的 ${theirsAll.length} 對</h2>`
-      + theirsAll.map(c=>`<div class="row"><span>${c.en}</span><span class="zh">${c.zh}</span></div>`).join('')
-      + `<div class="bar" style="padding:12px 0 0">
-           <button id="bWeak">把這些加入複習清單</button></div></div>`;
+    html += `<div class="panel"><h2>被電腦拿走的 ${theirsAll.length} 對</h2>${listHTML(theirsAll)}
+      <div class="bar" style="padding:12px 0 0"><button id="bWeak">把這些加入複習清單</button></div></div>`;
   }
+  html += `<div class="panel" style="padding:10px 16px;position:sticky;bottom:0;margin-bottom:0"><div id="resTip" style="font-size:14px;line-height:22px;color:#8a6a2a;min-height:22px">${S.kind==='sent'?'句子裡有底線的字都可以點。':''}</div></div>`;
 
-  $('result').innerHTML = html;
-  $('result').style.display = 'block';
-  const bw = $('bWeak');
-  if(bw) bw.onclick = ()=>{
-    const rec = loadRec();
-    theirsAll.forEach(c=>{
-      const r = rec[c.en] || (rec[c.en] = {miss:0, hit:0});
-      r.miss += 1;
-    });
-    saveRec(rec);
-    bw.textContent = '已加入，字彙對戰會優先出這些字';
-    bw.disabled = true;
-  };
-  $('msg').textContent = '本局結束。';
-  $('result').scrollIntoView({behavior:'smooth', block:'start'});
+  setTimeout(()=>{
+    $('result').innerHTML = html;
+    $('result').style.display = 'block';
+    bindWords($('result'), $('resTip'));
+    const bw = $('bWeak');
+    if(bw) bw.onclick = ()=>{
+      const rec = loadRec();
+      theirsAll.forEach(x=>{
+        const k = S.kind === 'sent' ? x.en.toLowerCase() : x.en;
+        const r = rec[k] || (rec[k] = {miss:0, hit:0});
+        r.miss += 1;
+      });
+      saveRec(rec);
+      bw.textContent = '已加入，字彙對戰和「只出我記不住的」會優先出這些字';
+      bw.disabled = true;
+    };
+    $('msg').textContent = '本局結束。';
+    $('result').scrollIntoView({behavior:'smooth', block:'start'});
+  }, 600);
   return true;
 }
 
 /* ═══ 7. 綁定 ═══════════════════════════════════════ */
 $('bNew').onclick = newSeries;
+$('kind').onchange = ()=>{ fillModes(); newSeries(); };
 ['size','level','mode','games'].forEach(id=> $(id).onchange = newSeries);
-$('info').textContent = `牌庫 ${POOL.length} 字（重點字 ${CORE_POOL.length}）`;
+fillModes();
 newSeries();
 </script>
 </body>

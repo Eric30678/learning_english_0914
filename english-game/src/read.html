@@ -70,6 +70,20 @@ button:focus-visible,select:focus-visible{outline:2px solid var(--frame-in);outl
 .qo.wrong{background:#f2d9d4;border-color:var(--bad)}
 .qx{font-size:15px;line-height:1.8;color:#6b5f4a;margin-top:8px;display:none}
 #score{font-size:18px;line-height:30px}
+/* 小考計時：黏在畫面頂端 */
+#tbar{position:sticky;top:0;z-index:5;background:#1d1a2b;border:3px solid var(--frame);
+      padding:8px 10px;margin-bottom:10px;color:#e8e2d6}
+#tbar .l{display:flex;align-items:center;gap:8px;flex-wrap:wrap}
+#tLeft{font-size:24px;line-height:28px;min-width:74px}
+#tLeft.warn{color:#ffb46b}
+#tLeft.over{color:#f08a7a}
+#tInfo{font-size:11px;line-height:16px;color:#9b93ad;flex:1;min-width:150px}
+#tGauge{height:8px;background:#2f2942;margin-top:7px;border:2px solid #3a3350}
+#tGauge i{display:block;height:100%;background:#7fa8d9;width:100%}
+#tGauge i.warn{background:#ffb46b}
+#tbar button{padding:5px 9px;font-size:11px}
+.qsec{font-size:11px;color:var(--dim);margin-left:6px}
+.qcard.timeout{border-color:var(--bad)}
 </style>
 </head>
 <body>
@@ -197,6 +211,7 @@ function parse(t){
 const ch = () => CONTENT.chapters[ci];
 
 function draw(){
+  stopTimer();
   const c = ch(), p = c.pages[pi];
   $('quiz').style.display='none';
   $('reader').style.display='block';
@@ -353,27 +368,102 @@ function refreshDue(){
   $('bDue').style.opacity = n ? '1' : '.5';
 }
 
-/* ── 小考 ── */
+/* ── 小考 ──
+   計時對照考試節奏：單字、字義題一題 30 秒（像考試前半的短題），
+   要讀懂段落、推論、兩篇對照的理解題一題 60 秒（像後半的長篇）。
+   整份小考給一個總時間，跟真的考試一樣——自己分配。
+   時間到，沒答的題目直接算錯，並把答案攤開。           ── */
+const TKEY = 'pxread.timer';
+let QT = null;
+function timerOn(){ try{ return localStorage.getItem(TKEY) !== 'off'; }catch(e){ return true; } }
+function setTimerOn(v){ try{ localStorage.setItem(TKEY, v ? 'on' : 'off'); }catch(e){} }
+function stopTimer(){ if(QT){ clearInterval(QT); QT = null; } }
+
+function qSecs(prompt, short){
+  const p = prompt.replace(/^\d+\.\s*/,'');
+  if(/【交叉】|【文件|推論|為什麼|主要目的|想說明|重點|做法|問題|怎麼確定|會怎樣|哪一項|幾/.test(p)) return 60;
+  if(/「[^」]+」|英文|是什麼意思|的意思|等於|最接近|差別|是指|^[A-Za-z]/.test(p)) return 30;
+  return short ? 30 : 60;            // 前面的短篇章節，其餘題目也是字彙題
+}
+const mmss = t => `${Math.floor(t/60)}:${String(t%60).padStart(2,'0')}`;
+
 function showQuiz(){
   const c = ch();
+  stopTimer();
   $('reader').style.display='none';
   $('quiz').style.display='block';
-  let done = 0, right = 0;
-  $('quiz').innerHTML = c.quiz.map((q,n)=>{
-    const [prompt, opts, ans, why] = q;
+  let done = 0, right = 0, over = false;
+  const secs = c.quiz.map(q=>qSecs(q[0], !c.long));
+  const budget = secs.reduce((a,b)=>a+b, 0);
+  const nShort = secs.filter(x=>x===30).length, nLong = secs.length - nShort;
+  let left = budget; const t0 = Date.now();
+  const on = timerOn();
+
+  $('quiz').innerHTML = `<div id="tbar"><div class="l">
+      <span id="tLeft">${on ? mmss(left) : '不計時'}</span>
+      <span id="tInfo">${nShort ? `字義題 ${nShort} 題 × 30 秒` : ''}${nShort&&nLong?'　':''}${nLong ? `理解題 ${nLong} 題 × 60 秒` : ''}<br>共 ${mmss(budget)}，自己分配</span>
+      <button id="tTog">${on ? '關掉計時' : '開啟計時'}</button></div>
+      <div id="tGauge"${on?'':' style="display:none"'}><i></i></div></div>`
+    + c.quiz.map((q,n)=>{
+    const [prompt, opts] = q;
     return `<div class="qcard" data-n="${n}">
-      <div class="qp">${n+1}. ${prompt}</div>
+      <div class="qp">${n+1}. ${prompt}<span class="qsec">${secs[n]} 秒</span></div>
       ${opts.map((o,m)=>`<button class="qo" data-m="${m}">${o}</button>`).join('')}
       <div class="qx"></div></div>`;
   }).join('') + `<div class="qcard"><div id="score">答對 0 / ${c.quiz.length}</div>
+      <div class="qx" id="tUsed" style="display:none"></div>
       <div class="bar" style="padding:10px 0 0"><button id="bBack">回去重讀</button>
+      <button id="bRetry">重考一次</button>
       <button id="bNextCh">下一章</button></div></div>`;
+
+  const finish = ()=>{
+    stopTimer();
+    save(c.id, right, c.quiz.length);
+    const used = Math.round((Date.now()-t0)/1000);
+    const u = $('tUsed'); u.style.display = 'block';
+    u.textContent = on
+      ? (over ? `時間到。這份的考試節奏是 ${mmss(budget)}。`
+              : `用了 ${mmss(used)}，剩 ${mmss(Math.max(0,left))}。` + (used <= budget*0.7 ? '速度夠，可以把省下的時間拿去檢查。' : ''))
+      : `用了 ${mmss(used)}（考試節奏是 ${mmss(budget)}）。`;
+  };
+
+  const lockRest = ()=>{
+    over = true;
+    $('quiz').querySelectorAll('.qcard[data-n]').forEach(card=>{
+      if(card.dataset.done) return;
+      card.dataset.done = '1';
+      card.classList.add('timeout');
+      const n = +card.dataset.n, [ , , ans, why] = c.quiz[n];
+      card.querySelectorAll('.qo')[ans].classList.add('right');
+      const x = card.querySelector('.qx');
+      x.style.display = 'block';
+      x.textContent = '時間到，這題沒作答。' + why;
+      done++;
+    });
+    finish();
+  };
+
+  const tick = ()=>{
+    left = budget - Math.floor((Date.now()-t0)/1000);
+    const el = $('tLeft'); if(!el){ stopTimer(); return; }
+    el.textContent = mmss(Math.max(0,left));
+    const frac = Math.max(0, left/budget);
+    const g = $('tGauge').firstElementChild;
+    g.style.width = (frac*100) + '%';
+    const warn = left <= Math.max(20, budget*0.2);
+    el.classList.toggle('warn', warn && left > 0);
+    g.classList.toggle('warn', warn);
+    if(left <= 0){ el.classList.add('over'); el.textContent = '0:00'; lockRest(); }
+  };
+  if(on) QT = setInterval(tick, 250);
+
+  $('tTog').onclick = ()=>{ setTimerOn(!on); showQuiz(); };
 
   $('quiz').querySelectorAll('.qcard[data-n]').forEach(card=>{
     const n = +card.dataset.n, [ , opts, ans, why] = c.quiz[n];
     card.querySelectorAll('.qo').forEach(btn=>{
       btn.onclick = ()=>{
-        if(card.dataset.done) return;
+        if(card.dataset.done || over) return;
         card.dataset.done = '1';
         const m = +btn.dataset.m;
         card.querySelectorAll('.qo')[ans].classList.add('right');
@@ -383,12 +473,13 @@ function showQuiz(){
         x.textContent = (m===ans ? '對了。' : '再記一次：') + why;
         done++;
         $('score').textContent = `答對 ${right} / ${c.quiz.length}`;
-        if(done === c.quiz.length) save(c.id, right, c.quiz.length);
+        if(done === c.quiz.length) finish();
       };
     });
   });
-  $('bBack').onclick = ()=>{ pi=0; draw(); };
-  $('bNextCh').onclick = ()=>{ ci=(ci+1)%CONTENT.chapters.length; pi=0; buildPicker(); draw(); };
+  $('bBack').onclick = ()=>{ stopTimer(); pi=0; draw(); };
+  $('bRetry').onclick = ()=>{ showQuiz(); window.scrollTo(0,0); };
+  $('bNextCh').onclick = ()=>{ stopTimer(); ci=(ci+1)%CONTENT.chapters.length; pi=0; buildPicker(); draw(); };
 }
 
 /* ── 進度 ── */

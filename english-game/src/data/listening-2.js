@@ -113,9 +113,9 @@ CONTENT.listening.part1.push(
   options:[
    'The blinds have been lowered.',
    'Someone is erasing the board.',
-   'Chairs are placed around a table.',
-   'A presentation is in progress.'],
-  note:'椅子繞著桌子。D 的 in progress 需要有人在講、有畫面在放，圖上都沒有。'},
+   'A man is standing next to the board.',
+   'All the seats are empty.'],
+  note:'白板旁站著一個人。B 擦白板的動作沒發生；D 與畫面相反——桌邊坐著兩個人。'},
 
  {scene:'office', tint:'dawn', answer:1,
   options:[
@@ -123,7 +123,7 @@ CONTENT.listening.part1.push(
    'Monitors have been left on.',
    'The floor is being mopped.',
    'Someone is answering the phone.'],
-  note:'螢幕亮著。清晨的辦公室沒有人——A、C、D 都需要人。'},
+  note:'螢幕亮著。畫面裡的兩個人已經坐在桌前，不是正在抵達（A）；拖地、接電話也都沒有發生。'},
 
  {scene:'counter', tint:'dusk', answer:3,
   options:[

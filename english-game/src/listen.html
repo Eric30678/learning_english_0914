@@ -118,6 +118,7 @@ button:focus-visible,select:focus-visible{outline:2px solid var(--frame-in);outl
 <script src="data/scenes-more.js"></script>
 <script src="data/listening.js"></script>
 <script src="data/listening-2.js"></script>
+<script src="data/listening-3.js"></script>
 <script src="data/dict.js"></script>
 <script>
 
@@ -225,7 +226,8 @@ function render(){
   }
   else if(part === 2){
     paint(null);
-    const SK = {number:'數字',sound:'近音',reduce:'縮讀',correct:'改口',wh:'疑問詞',statement:'陳述回應'};
+    const SK = {number:'數字',sound:'近音',reduce:'縮讀',correct:'改口',wh:'疑問詞',statement:'陳述回應',
+                yesno:'間接回答',choice:'選擇疑問',suggest:'提議請求',tag:'附加／否定問句'};
     $('hd').textContent = `PART 2 · 應答問題　${idx+1} / ${count()}`
       + (c.skill ? `　· ${SK[c.skill]||''}` : '');
     $('qt').textContent = '聽一個問句和三個回應，選最適合的回應。';

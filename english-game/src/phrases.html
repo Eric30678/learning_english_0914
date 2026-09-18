@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>片語速記</title>
+<style>
+@font-face{
+  font-family:'Cubic11';
+  src:url('../fonts/Cubic_11.ttf') format('truetype'),
+      url('https://cdn.jsdelivr.net/gh/ACh-K/Cubic-11@main/fonts/ttf/Cubic_11.ttf') format('truetype');
+  font-display:swap;
+}
+:root{
+  --ink:#2a2438; --paper:#f7f2e6; --frame:#1b1826; --frame-in:#7fa8d9;
+  --rule:#cdbfa6; --dim:#7a6a52; --key:#b08a4a; --mark:#c0463a;
+  --ok:#2f6b3f; --bad:#9c3a2e;
+  --ui-bg:#2f2942; --ui-line:#4d4468; --ui-text:#d8d2e4;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{background:#15121f}
+body{
+  font-family:'Cubic11',ui-monospace,monospace;
+  -webkit-font-smoothing:none;font-smooth:never;text-rendering:optimizeSpeed;
+  color:var(--ink);display:flex;justify-content:center;min-height:100vh;
+}
+#app{width:100%;max-width:560px;background:#15121f;padding-bottom:20px}
+
+/* 頂端：一疊索引卡的側面 */
+#top{background:#24503f;border-bottom:3px solid var(--frame);padding:12px 12px 10px;position:relative}
+#top h1{font-weight:normal;font-size:20px;line-height:26px;color:#f2ecd8;text-shadow:2px 2px 0 var(--frame)}
+#top p{font-size:12px;line-height:19px;color:#b9d6c6;margin-top:4px}
+#stack{position:absolute;right:12px;top:12px;width:62px;height:44px}
+#stack i{position:absolute;left:0;right:0;height:8px;background:var(--paper);border:2px solid var(--frame)}
+
+.bar{display:flex;gap:6px;padding:10px 12px;align-items:center;flex-wrap:wrap}
+button,select{
+  font-family:inherit;font-size:12px;color:var(--ui-text);
+  background:var(--ui-bg);border:2px solid var(--ui-line);padding:8px 12px;cursor:pointer;
+}
+button:hover:not(:disabled){background:#3b3450}
+button:disabled{opacity:.45;cursor:default}
+button:focus-visible,select:focus-visible,.opt:focus-visible{outline:2px solid var(--frame-in);outline-offset:2px}
+button.go{background:#2f6b3f;border-color:#4f9a62;color:#eef7ef}
+button.go:hover:not(:disabled){background:#3a7f4c}
+#unit{flex:1;min-width:180px}
+.sp{flex:1}
+.note{font-size:11px;color:#7d7392}
+
+/* 索引卡 */
+.card{background:var(--frame);padding:3px;margin:0 12px}
+.card>div{background:#e9dfc8;padding:2px}
+.pane{background:var(--paper);padding:14px 14px 16px;position:relative;
+      background-image:repeating-linear-gradient(to bottom,transparent 0 31px,#e6dcc6 31px 32px);
+      background-position:0 52px}
+.pane::before{content:'';position:absolute;left:0;right:0;top:44px;height:2px;background:#d99a8a}
+.hd{font-size:11px;color:var(--dim);height:30px;display:flex;align-items:center}
+.hd .sp{flex:1}
+.ph{font-size:30px;line-height:40px;margin-top:10px;word-break:break-word}
+.zh{font-size:19px;line-height:30px;color:#6b3f2a;margin-top:4px}
+.ex{font-size:18px;line-height:32px;margin-top:16px}
+.ex b{font-weight:normal;border-bottom:3px solid var(--mark);color:#7a1f16}
+.ez{font-size:14px;line-height:24px;color:var(--dim);margin-top:4px}
+.pips{display:flex;gap:4px}
+.pip{width:10px;height:10px;background:#d6cbb2;border:2px solid #b9ab8e}
+.pip.on{background:var(--key);border-color:#8a6a2a}
+.pip.ok{background:#8fc39b;border-color:var(--ok)}
+.pip.no{background:#e3a397;border-color:var(--bad)}
+
+/* 清單 */
+.li{display:flex;gap:10px;align-items:baseline;border-bottom:1px dotted var(--rule);padding:7px 0;font-size:15px;line-height:22px}
+.li:last-child{border-bottom:0}
+.li .p{flex:1}
+.li .z{color:#6b3f2a;font-size:14px;flex:none;max-width:48%;text-align:right}
+
+/* 考試 */
+.qtype{font-size:12px;color:#fff;background:#4a6fb0;padding:2px 7px;margin-right:8px}
+.qtype.cl{background:#7a5a9a}
+.qs{font-size:20px;line-height:34px;margin-top:12px;min-height:68px}
+.qs b{font-weight:normal;border-bottom:3px solid var(--mark);color:#7a1f16}
+.blank{display:inline-block;min-width:86px;border-bottom:3px solid var(--ink);text-align:center;color:var(--ok)}
+.opts{margin-top:10px}
+.opt{display:block;width:100%;text-align:left;font-family:inherit;font-size:18px;
+     line-height:26px;color:var(--ink);background:#efe8d8;border:2px solid var(--rule);
+     padding:9px 12px;margin-bottom:6px;cursor:pointer}
+.opt:hover{background:#e6dcc6}
+.opt.right{background:#d7ecd9;border-color:var(--ok)}
+.opt.wrong{background:#f2d9d4;border-color:var(--bad)}
+.fb{font-size:15px;line-height:25px;color:#6b5f4a;min-height:25px;margin-top:6px}
+.big{font-size:30px;line-height:40px;margin-top:6px}
+.hidden{display:none}
+@media (max-width:380px){ .ph{font-size:25px;line-height:34px} .qs{font-size:18px;line-height:30px} }
+</style>
+</head>
+<body>
+<div id="app">
+
+  <div id="top">
+    <h1>片語速記</h1>
+    <p>一組八個。讀完馬上考，錯的當場再考一次。</p>
+    <div id="stack" aria-hidden="true"></div>
+  </div>
+
+  <div class="bar">
+    <select id="unit" aria-label="選擇片語組"></select>
+    <button id="bList">看整組</button>
+  </div>
+
+  <div id="view"></div>
+
+  <div class="bar">
+    <span class="note" id="stat"></span>
+    <span class="sp"></span>
+    <button id="bReset">清除紀錄</button>
+  </div>
+</div>
+
+<script src="data/phrases.js"></script>
+<script>
+if(typeof PHRASE_UNITS === 'undefined'){
+  document.body.innerHTML = '<div style="max-width:520px;margin:60px auto;padding:24px;background:#f7f2e6;border:3px solid #1b1826;color:#2a2438;font-size:15px;line-height:1.9"><b>找不到片語資料</b><br><br>需要同一個資料夾裡的 data/phrases.js。</div>';
+  throw new Error('PHRASE_UNITS not loaded');
+}
+const $ = id => document.getElementById(id);
+const KEY = 'pxphrase.v1';
+const U = PHRASE_UNITS;
+const MIX = -1;                             // 混合複習
+U.forEach((u,ui)=>u.items.forEach(it=>{ it.ui = ui; }));
+
+/* 疊卡裝飾：幾組就疊幾張（最多六張） */
+$('stack').innerHTML = Array.from({length:6},(_,i)=>`<i style="top:${i*6}px;left:${i%2?4:0}px;right:${i%2?0:4}px"></i>`).join('');
+
+const esc = t => String(t).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');
+const marked = e => esc(e).replace(/\{([^}]+)\}/g,'<b>$1</b>');
+const plain  = e => e.replace(/[{}]/g,'');
+const shuffle = a => { for(let i=a.length-1;i>0;i--){ const j=Math.floor(Math.random()*(i+1)); [a[i],a[j]]=[a[j],a[i]]; } return a; };
+
+function load(){ try{ return JSON.parse(localStorage.getItem(KEY)||'{}'); }catch(e){ return {}; } }
+function store(d){ try{ localStorage.setItem(KEY, JSON.stringify(d)); }catch(e){} }
+
+/* ── 朗讀 ── */
+let VOICE = null;
+function pickVoice(){
+  if(!('speechSynthesis' in window)) return;
+  const vs = speechSynthesis.getVoices();
+  VOICE = vs.find(v=>/en[-_]US/i.test(v.lang)) || vs.find(v=>/^en/i.test(v.lang)) || null;
+}
+if('speechSynthesis' in window){ pickVoice(); speechSynthesis.onvoiceschanged = pickVoice; }
+function say(parts){
+  if(!('speechSynthesis' in window)) return;
+  speechSynthesis.cancel();
+  parts.forEach(t=>{
+    const u = new SpeechSynthesisUtterance(t);
+    if(VOICE) u.voice = VOICE;
+    u.lang = VOICE ? VOICE.lang : 'en-US';
+    u.rate = 0.85;
+    speechSynthesis.speak(u);
+  });
+}
+
+/* ── 狀態 ── */
+let unit = 0, mode = 'study', k = 0;
+let Q = [], qi = 0, wrong = [], right = 0, pool = [];
+
+function buildPicker(){
+  const d = load();
+  const opts = U.map((u,i)=>{
+    const r = d[i];
+    const flag = !r ? '　' : r.best === r.total ? '●' : '◐';
+    return `<option value="${i}"${i===unit?' selected':''}>${flag} 第 ${i+1} 組 · ${u.t}</option>`;
+  });
+  const learned = Object.keys(d).filter(k=>+k>=0).length;
+  opts.push(`<option value="${MIX}"${unit===MIX?' selected':''}${learned?'':' disabled'}>★ 混合複習（從考過的組抽 12 題）</option>`);
+  $('unit').innerHTML = opts.join('');
+  const done = Object.keys(d).filter(k=>+k>=0 && d[k].best===d[k].total).length;
+  $('stat').textContent = `${U.length} 組 · ${U.reduce((a,u)=>a+u.items.length,0)} 個片語　全對 ${done} 組`;
+}
+
+/* ═══ 讀 ═══════════════════════════════════════════ */
+function study(){
+  mode = 'study';
+  const items = U[unit].items, it = items[k];
+  const last = k === items.length - 1;
+  $('view').innerHTML = `<div class="card"><div><div class="pane">
+      <div class="hd"><span>第 ${unit+1} 組 · ${esc(U[unit].t)}</span><span class="sp"></span>
+        <span class="pips">${items.map((_,n)=>`<span class="pip${n<=k?' on':''}"></span>`).join('')}</span></div>
+      <div class="ph">${esc(it.p)}</div>
+      <div class="zh">${esc(it.z)}</div>
+      <div class="ex">${marked(it.e)}</div>
+      <div class="ez">${esc(it.ez)}</div>
+    </div></div></div>
+    <div class="bar">
+      <button id="bPrev"${k===0?' disabled':''}>←</button>
+      <button id="bSay">▶ 念一次</button>
+      <span class="sp"></span>
+      ${last ? '<button id="bNext" class="go">讀完了，馬上考</button>' : '<button id="bNext">→</button>'}
+    </div>`;
+  $('bPrev').onclick = ()=>{ if(k>0){ k--; study(); } };
+  $('bNext').onclick = ()=>{ if(last) startQuiz(); else { k++; study(); } };
+  $('bSay').onclick = ()=> say([it.p, plain(it.e)]);
+}
+
+function listAll(){
+  mode = 'list';
+  const items = U[unit].items;
+  $('view').innerHTML = `<div class="card"><div><div class="pane" style="background-image:none">
+      <div class="hd"><span>第 ${unit+1} 組 · ${esc(U[unit].t)}　整組一覽</span></div>
+      ${items.map(it=>`<div class="li"><span class="p">${esc(it.p)}</span><span class="z">${esc(it.z)}</span></div>`).join('')}
+    </div></div></div>
+    <div class="bar"><button id="bBackStudy">一張一張讀</button><span class="sp"></span>
+      <button id="bGo" class="go">直接考</button></div>`;
+  $('bBackStudy').onclick = ()=>{ k = 0; study(); };
+  $('bGo').onclick = ()=> startQuiz();
+}
+
+/* ═══ 考 ═══════════════════════════════════════════
+   兩種題目，每個片語各一題：
+   意思題：學習時的例句，片語畫線，選中文。
+   填空題：沒看過的新句子，挖空，選片語。
+   誘答一律從同一組裡抽，並排除意思太接近的（no）。  */
+function distractors(it, n){
+  const ban = new Set([it.p].concat(it.no||[]));
+  return shuffle(U[it.ui].items.filter(x=>!ban.has(x.p))).slice(0, n);
+}
+function makeQs(items){
+  const mean = items.map(it=>({type:'mean', it, opts:shuffle([it].concat(distractors(it,3)))}));
+  const clz  = items.map(it=>({type:'cloze', it, opts:shuffle([it].concat(distractors(it,3)))}));
+  // 前半意思題、後半填空題，各自打亂——先認得，再用得出來
+  return shuffle(mean).concat(shuffle(clz));
+}
+
+function startQuiz(itemsOverride){
+  mode = 'quiz';
+  let items;
+  if(itemsOverride) items = itemsOverride;
+  else if(unit === MIX){
+    const d = load();
+    const src = Object.keys(d).filter(x=>+x>=0).flatMap(x=>U[+x].items);
+    items = shuffle(src.slice()).slice(0, 6);
+  }else items = U[unit].items;
+  pool = items;
+  Q = makeQs(items); qi = 0; wrong = []; right = 0;
+  ask();
+}
+
+function ask(){
+  const q = Q[qi], it = q.it;
+  const isMean = q.type === 'mean';
+  const body = isMean ? marked(it.e) : esc(it.q).replace('___','<span class="blank" id="blank">　</span>');
+  $('view').innerHTML = `<div class="card"><div><div class="pane" style="background-image:none">
+      <div class="hd"><span class="qtype${isMean?'':' cl'}">${isMean?'意思':'填空'}</span>
+        <span>${isMean?'畫線的片語是什麼意思？':'空格填哪一個？'}</span><span class="sp"></span>
+        <span>${qi+1} / ${Q.length}</span></div>
+      <div class="qs">${body}</div>
+      <div class="opts">${q.opts.map((o,n)=>`<button class="opt" data-n="${n}">${esc(isMean ? o.z : o.p)}</button>`).join('')}</div>
+      <div class="fb" id="fb"></div>
+    </div></div></div>
+    <div class="bar"><span class="note">答對 ${right}　答錯 ${wrong.length}</span><span class="sp"></span>
+      <button id="bNextQ" disabled>下一題</button></div>`;
+  const btns = [...$('view').querySelectorAll('.opt')];
+  btns.forEach(b=>b.onclick = ()=>{
+    if(b.dataset.done || btns.some(x=>x.dataset.done)) return;
+    btns.forEach(x=>x.dataset.done = '1');
+    const pick = q.opts[+b.dataset.n], ok = pick === it;
+    btns[q.opts.indexOf(it)].classList.add('right');
+    if(!ok){ b.classList.add('wrong'); wrong.push(q); } else right++;
+    if(!isMean){ const bl = $('blank'); bl.textContent = it.a || it.p; }
+    $('fb').innerHTML = (ok ? '對了。' : '')
+      + `<b style="font-weight:normal;color:var(--ink)">${esc(it.p)}</b>　${esc(it.z)}`
+      + (isMean ? `<br><span style="font-size:13px">${esc(it.ez)}</span>` : '');
+    const nx = $('bNextQ'); nx.disabled = false; nx.focus();
+    if(!isMean) say([it.q.replace('___', it.a || it.p)]);
+  });
+  $('bNextQ').onclick = ()=>{ qi++; if(qi < Q.length) ask(); else result(); };
+}
+
+function result(){
+  mode = 'result';
+  const total = Q.length, score = right;
+  if(unit !== MIX){
+    const d = load(), r = d[unit] || {best:0, total, tries:0};
+    r.best = Math.max(r.best, score); r.total = total; r.tries = (r.tries||0)+1; r.at = Date.now();
+    d[unit] = r; store(d); buildPicker();
+  }
+  const missed = [...new Set(wrong.map(q=>q.it))];
+  $('view').innerHTML = `<div class="card"><div><div class="pane" style="background-image:none">
+      <div class="hd"><span>${unit===MIX ? '混合複習' : `第 ${unit+1} 組 · ${esc(U[unit].t)}`}　結果</span></div>
+      <div class="big" style="color:${score===total?'var(--ok)':score>=total*0.75?'var(--ink)':'var(--bad)'}">${score} / ${total}</div>
+      <div class="fb">${score===total ? '整組全對。隔天用混合複習再抽一次，才算真的記住。'
+          : missed.length ? `有 ${missed.length} 個片語還不穩。趁剛讀完，錯的馬上再考一次。` : ''}</div>
+      ${missed.map(it=>`<div class="li"><span class="p">${esc(it.p)}<br><span style="font-size:13px;color:var(--dim)">${esc(plain(it.e))}</span></span><span class="z">${esc(it.z)}</span></div>`).join('')}
+    </div></div></div>
+    <div class="bar">
+      ${missed.length ? '<button id="bRetry" class="go">只考錯的</button>' : ''}
+      <button id="bAgain">整組再考</button>
+      ${unit!==MIX ? '<button id="bReread">重讀</button>' : ''}
+      <span class="sp"></span>
+      ${unit!==MIX && unit < U.length-1 ? '<button id="bNextU">下一組</button>' : ''}
+    </div>`;
+  if($('bRetry')) $('bRetry').onclick = ()=> startQuiz(missed);
+  $('bAgain').onclick = ()=> startQuiz(unit===MIX ? null : undefined);
+  if($('bReread')) $('bReread').onclick = ()=>{ k = 0; study(); };
+  if($('bNextU')) $('bNextU').onclick = ()=>{ unit++; k = 0; buildPicker(); study(); };
+}
+
+/* ── 綁定 ── */
+$('unit').onchange = e=>{
+  unit = +e.target.value; k = 0;
+  if(unit === MIX){ $('bList').disabled = true; startQuiz(); }
+  else { $('bList').disabled = false; study(); }
+};
+$('bList').onclick = ()=> mode === 'list' ? (k=0, study()) : listAll();
+$('bReset').onclick = ()=>{ try{ localStorage.removeItem(KEY); }catch(e){} buildPicker(); };
+document.addEventListener('keydown', e=>{
+  if(mode === 'study'){
+    if(e.key === 'ArrowRight'){ e.preventDefault(); $('bNext').click(); }
+    if(e.key === 'ArrowLeft') $('bPrev').click();
+  }else if(mode === 'quiz'){
+    if(/^[1-4]$/.test(e.key)){ const b = $('view').querySelectorAll('.opt')[+e.key-1]; if(b) b.click(); }
+    if(e.key === 'Enter' && !$('bNextQ').disabled){ e.preventDefault(); $('bNextQ').click(); }
+  }
+});
+
+/* 從上次停的那一組開始：第一個還沒全對的 */
+(function(){
+  const d = load();
+  const n = U.findIndex((_,i)=>!d[i] || d[i].best < d[i].total);
+  unit = n < 0 ? 0 : n;
+})();
+buildPicker();
+study();
+</script>
+</body>
+</html>
