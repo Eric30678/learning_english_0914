@@ -37,7 +37,8 @@ a.mode{
   background:var(--paper);border:3px solid var(--frame);
   padding:14px 16px;box-shadow:0 3px 0 rgba(0,0,0,.4);
 }
-a.mode:hover{background:#fffaf0}
+@media (hover:hover) and (pointer:fine){ a.mode:hover{background:#fffaf0} }
+a.mode:active{background:#fffaf0}
 a.mode:active{transform:translateY(2px);box-shadow:0 1px 0 rgba(0,0,0,.4)}
 a.mode .t{font-size:18px;line-height:26px}
 a.mode .d{font-size:13px;line-height:21px;color:var(--dim);margin-top:6px}
