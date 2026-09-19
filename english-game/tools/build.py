@@ -14,6 +14,7 @@
     dist/cards.html     字彙對戰
     dist/memory.html    翻牌配對
     dist/phrases.html   片語速記
+    dist/grammar.html   文法故事
 
 為什麼 dist 比 src 大很多
 ────────────────────────────────────────────
@@ -47,6 +48,7 @@ TARGETS = [
     ("cards.html", "cards.html"),
     ("memory.html", "memory.html"),
     ("phrases.html", "phrases.html"),
+    ("grammar.html", "grammar.html"),
 ]
 
 SRC_RE = re.compile(r'[ \t]*<script src="([^"]+)"></script>\n?')
