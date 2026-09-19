@@ -99,13 +99,11 @@ button:disabled{opacity:.45;cursor:default}
 
   <div class="bar">
     <button id="bNew">新的一局</button>
-    <select id="mode" aria-label="出題範圍">
-      <option value="mix">舊單字 · 章節教過的</option>
-      <option value="new">新單字 · 閱讀不會出現</option>
-      <option value="both">兩邊混合</option>
-      <option value="weak">只出我記不住的</option>
-      <option value="core">只出重點字</option>
+    <select id="bank" aria-label="字庫">
+      <option value="toeic">多益單字</option>
+      <option value="hs">高中單字</option>
     </select>
+    <select id="mode" aria-label="出題範圍"></select>
     <span class="sp"></span>
     <span class="note" id="stat"></span>
   </div>
@@ -139,6 +137,12 @@ button:disabled{opacity:.45;cursor:default}
 <script src="data/dict.js"></script>
 <script src="data/vocab-extra.js"></script>
 <script src="data/vocab-extra-2.js"></script>
+<script src="data/hs-vocab-2.js"></script>
+<script src="data/hs-vocab-3.js"></script>
+<script src="data/hs-vocab-4.js"></script>
+<script src="data/hs-vocab-4b.js"></script>
+<script src="data/hs-vocab-5.js"></script>
+<script src="data/hs-vocab-6.js"></script>
 <script>
 
 /* ── 防呆：直接開原始版會少掉旁邊的資料檔 ── */
@@ -261,11 +265,47 @@ function buildExtraPool(){
 const EXTRA_POOL = buildExtraPool();
 const ALL_POOL = POOL.concat(EXTRA_POOL);
 
+/* 高中單字：大考中心詞彙表第 2–6 級，中文為自行撰寫。
+   牌面只放第一個意思（分號前），對錯時再顯示完整解釋。 */
+function buildHsPool(){
+  const V = (typeof HS_VOCAB !== 'undefined') ? HS_VOCAB : {};
+  const out = [], seen = new Set();
+  Object.keys(V).sort().forEach(lv=>{
+    String(V[lv]).trim().split('\n').forEach(line=>{
+      const [en, zhFull] = line.split('|').map(t=>t && t.trim());
+      if(!en || !zhFull || seen.has(en)) return;
+      seen.add(en);
+      const zh = zhFull.split('；')[0];
+      out.push({ en, zh, zhFull, lv:+lv, hs:true });
+    });
+  });
+  return out;
+}
+const HS_POOL = buildHsPool();
+
+const MODES = {
+  toeic: [['mix','舊單字 · 章節教過的'],['new','新單字 · 閱讀不會出現'],['both','兩邊混合'],
+          ['weak','只出我記不住的'],['core','只出重點字']],
+  hs:    [['lv2','第 2 級'],['lv3','第 3 級'],['lv4','第 4 級'],['lv5','第 5 級'],['lv6','第 6 級'],
+          ['hs24','第 2–4 級混合'],['hs46','第 4–6 級混合（多益常見）'],['hsall','全部混合'],['hsweak','只出我記不住的']]
+};
+const BANK_KEY = 'pxcards.bank';
+function fillModes(){
+  const b = $('bank').value;
+  $('mode').innerHTML = MODES[b].map(([v,t])=>`<option value="${v}">${t}</option>`).join('');
+  try{ localStorage.setItem(BANK_KEY, b); }catch(e){}
+  updatePoolInfo();
+}
+
 /* 依模式決定從哪個池抽 */
 function sourceFor(mode){
   if(mode === 'new')  return EXTRA_POOL.length ? EXTRA_POOL : POOL;
   if(mode === 'both') return ALL_POOL;
   if(mode === 'core') return CORE_POOL.length > 60 ? CORE_POOL : POOL;
+  if(/^lv\d$/.test(mode)) return HS_POOL.filter(x=>x.lv === +mode.slice(2));
+  if(mode === 'hs24') return HS_POOL.filter(x=>x.lv >= 2 && x.lv <= 4);
+  if(mode === 'hs46') return HS_POOL.filter(x=>x.lv >= 4);
+  if(mode === 'hsall' || mode === 'hsweak') return HS_POOL;
   return POOL;                       // mix ＝ 舊單字
 }
 
@@ -293,15 +333,19 @@ function pickDeck(mode){
     const weak = ALL_POOL.filter(x=>missOf(x.en) > 0);
     src = weak.length >= HAND + 4 ? weak : ALL_POOL;
   }
+  if(mode === 'hsweak'){
+    const weak = HS_POOL.filter(x=>missOf(x.en) > 0);
+    src = weak.length >= HAND + 4 ? weak : HS_POOL;
+  }
   /* 加權抽樣，不重複 */
   const bag = [];
   src.forEach(x=>{ const w = weightOf(x); for(let i=0;i<w;i++) bag.push(x); });
-  const deck = [], used = new Set();
+  const deck = [], used = new Set(), usedZh = new Set();
   let guard = 0;
   while(deck.length < ROUNDS && guard++ < 60000){
     const x = bag[Math.floor(Math.random()*bag.length)];
-    if(used.has(x.en)) continue;
-    used.add(x.en); deck.push(x);
+    if(used.has(x.en) || usedZh.has(x.zh)) continue;
+    used.add(x.en); usedZh.add(x.zh); deck.push(x);
   }
   return deck;
 }
@@ -322,14 +366,16 @@ function newGame(){
 /* 補牌：從牌堆裡還沒用過、也不在手上的字補一張 */
 function drawCard(){
   const inHand = new Set(S.hand.map(x=>x && x.en));
+  const zhInHand = new Set(S.hand.map(x=>x && x.zh));
   for(let j = S.i + HAND; j < S.deck.length; j++){
     const c = S.deck[j];
-    if(!inHand.has(c.en)) return c;
+    if(!inHand.has(c.en) && !zhInHand.has(c.zh)) return c;
   }
-  /* 牌堆用完就從全庫補，避免手牌變空 */
+  /* 牌堆用完就從目前字庫補，避免手牌變空 */
+  const src = sourceFor(S.mode === 'hsweak' ? 'hsall' : S.mode === 'weak' ? 'both' : S.mode);
   for(let g=0; g<400; g++){
-    const c = POOL[Math.floor(Math.random()*POOL.length)];
-    if(!inHand.has(c.en)) return c;
+    const c = src[Math.floor(Math.random()*src.length)];
+    if(!inHand.has(c.en) && !zhInHand.has(c.zh)) return c;
   }
   return null;
 }
@@ -347,7 +393,7 @@ function deal(){
     m >= 3 ? '這個字你錯過 ' + m + ' 次' : (m ? '複習中' : '');
   $('verdict').textContent = '選出對應的中文牌。';
   renderHand();
-  $('stat').textContent = `牌庫 ${POOL.length} 字　記不住 ${Object.values(REC).filter(r=>r.miss>=3).length}`;
+  $('stat').textContent = `這局範圍 ${sourceFor(S.mode === 'hsweak' ? 'hsall' : S.mode === 'weak' ? 'both' : S.mode).length} 字`;
 }
 
 function renderHand(){
@@ -374,12 +420,12 @@ function play(n){
   const r = REC[S.target.en] || (REC[S.target.en] = {miss:0, hit:0});
   if(ok){
     S.right++; r.hit++;
-    $('verdict').innerHTML = `<b>對了。</b>　${S.target.en} ＝ ${S.target.zh}`;
+    $('verdict').innerHTML = `<b>對了。</b>　${S.target.en} ＝ ${S.target.zhFull || S.target.zh}`;
   }else{
     r.miss++;
-    S.wrong.push({ en:S.target.en, zh:S.target.zh, chose:chosen.zh, miss:r.miss });
+    S.wrong.push({ en:S.target.en, zh:S.target.zhFull || S.target.zh, chose:chosen.zh, miss:r.miss });
     $('verdict').innerHTML =
-      `<b>不是這張。</b>　${S.target.en} ＝ ${S.target.zh}` +
+      `<b>不是這張。</b>　${S.target.en} ＝ ${S.target.zhFull || S.target.zh}` +
       `<br><span style="color:#d9a89a">你出的是「${chosen.zh}」（${chosen.en}）</span>`;
   }
   save(REC);
@@ -396,14 +442,16 @@ function play(n){
 /* ═══ 4. 結算 ═══════════════════════════════════════ */
 function finish(){
   const pct = Math.round(S.right / ROUNDS * 100);
-  const m3 = Object.entries(REC).filter(([,r])=>r.miss>=3);
-  const zhOf = {}; POOL.forEach(x=>zhOf[x.en]=x.zh);
+  const isHs = $('bank').value === 'hs';
+  const zhOf = {};
+  (isHs ? HS_POOL : ALL_POOL).forEach(x=>zhOf[x.en] = x.zhFull || x.zh);
+  const m3 = Object.entries(REC).filter(([en,r])=>r.miss>=3 && zhOf[en]);
 
   let html = `<div class="panel">
     <h2>結算</h2>
     <div class="big">${S.right} / ${ROUNDS}　${pct}%</div>
     <div style="margin-top:10px;color:var(--dim);font-size:14px;line-height:1.9">
-      ${pct>=90?'這批字你已經很熟了，換「全部字庫」抽新的。'
+      ${pct>=90?'這批字你已經很熟了，換下一級或混合模式抽新的。'
         :pct>=70?'大致穩了。下一局選「只出我記不住的」把缺口補掉。'
         :'錯得不少，但那正是這個模式要抓的東西。同一批再玩一次。'}
     </div></div>`;
@@ -449,8 +497,16 @@ document.addEventListener('keydown', e=>{
   if(k >= 0 && S.hand[k]) play(k);
 });
 
-$('poolInfo').textContent =
-  `牌庫 ${POOL.length} 字（重點字 ${CORE_POOL.length}）· 已濾掉基礎字 · 按數字鍵 1–8 也能出牌`;
+function updatePoolInfo(){
+  const hs = $('bank').value === 'hs';
+  const lv = n => HS_POOL.filter(x=>x.lv===n).length;
+  $('poolInfo').textContent = hs
+    ? `高中單字 ${HS_POOL.length} 字（2 級 ${lv(2)}、3 級 ${lv(3)}、4 級 ${lv(4)}、5 級 ${lv(5)}、6 級 ${lv(6)}）· 依大考中心詞彙表分級 · 數字鍵 1–8 出牌`
+    : `多益單字 ${ALL_POOL.length} 字（重點字 ${CORE_POOL.length}）· 已濾掉基礎字 · 數字鍵 1–8 出牌`;
+}
+$('bank').onchange = ()=>{ fillModes(); newGame(); };
+try{ const b = localStorage.getItem(BANK_KEY); if(b && MODES[b]) $('bank').value = b; }catch(e){}
+fillModes();
 newGame();
 </script>
 </body>

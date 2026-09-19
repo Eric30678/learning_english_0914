@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>文法故事</title>
+<style>
+@font-face{
+  font-family:'Cubic11';
+  src:url('../fonts/Cubic_11.ttf') format('truetype'),
+      url('https://cdn.jsdelivr.net/gh/ACh-K/Cubic-11@main/fonts/ttf/Cubic_11.ttf') format('truetype');
+  font-display:swap;
+}
+:root{
+  --ink:#2a2438; --paper:#f7f2e6; --frame:#1b1826; --frame-in:#7fa8d9;
+  --rule:#cdbfa6; --dim:#7a6a52; --key:#b08a4a;
+  --ok:#2f6b3f; --bad:#9c3a2e; --cur:#ffe6b8;
+  --ui-bg:#2f2942; --ui-line:#4d4468; --ui-text:#d8d2e4;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{background:#15121f}
+body{
+  font-family:'Cubic11',ui-monospace,monospace;
+  -webkit-font-smoothing:none;font-smooth:never;text-rendering:optimizeSpeed;
+  color:var(--ink);display:flex;justify-content:center;min-height:100vh;
+}
+#app{width:100%;max-width:560px;background:#15121f}
+
+#top{background:#3d3a6b;border-bottom:3px solid var(--frame);padding:12px}
+#top h1{font-weight:normal;font-size:20px;line-height:26px;color:#f2ecd8;text-shadow:2px 2px 0 var(--frame)}
+#top p{font-size:12px;line-height:19px;color:#c9c4ea;margin-top:4px}
+
+.bar{display:flex;gap:6px;padding:10px 12px;align-items:center;flex-wrap:wrap}
+button,select{
+  font-family:inherit;font-size:12px;color:var(--ui-text);
+  background:var(--ui-bg);border:2px solid var(--ui-line);padding:8px 12px;cursor:pointer;
+}
+@media (hover:hover) and (pointer:fine){
+  button:hover:not(:disabled){background:#3b3450}
+  button.go:hover:not(:disabled){background:#3a7f4c}
+  .opt:hover:not(:disabled){background:#e6dcc6}
+}
+button:active:not(:disabled){background:#3b3450}
+button:disabled{opacity:.45;cursor:default}
+button:focus-visible,select:focus-visible{outline:2px solid var(--frame-in);outline-offset:2px}
+button.go{background:#2f6b3f;border-color:#4f9a62;color:#eef7ef}
+#ep{flex:1;min-width:200px}
+.sp{flex:1}
+.note{font-size:11px;color:#7d7392}
+
+/* 文法重點卡 */
+details.lesson{margin:0 12px 10px;background:#ece6f7;border:3px solid var(--frame)}
+details.lesson summary{cursor:pointer;padding:10px 12px;font-size:14px;line-height:20px;list-style:none;display:flex;gap:8px;align-items:center}
+details.lesson summary::-webkit-details-marker{display:none}
+details.lesson summary::before{content:'▸';color:#5a4f8a}
+details.lesson[open] summary::before{content:'▾'}
+details.lesson summary .tp{color:#5a4f8a}
+details.lesson .lb{padding:0 12px 12px}
+details.lesson .lb p{font-size:14px;line-height:24px;margin-top:6px}
+details.lesson .lb b{font-weight:normal;background:#d8cff0;padding:0 2px}
+
+/* 文件 */
+.doc{margin:0 12px;background:var(--frame);padding:3px}
+.doc>div{background:var(--paper);padding:14px 14px 18px}
+.head{border-bottom:2px solid var(--rule);padding-bottom:8px;margin-bottom:10px}
+.head div{font-size:13px;line-height:21px;color:#5a4f40}
+.head div:first-child{font-size:14px;color:var(--ink)}
+.txt p{font-size:17px;line-height:31px;margin-bottom:12px;overflow-wrap:break-word}
+.txt p:last-child{margin-bottom:0}
+.sw{background:#efe6cf;border-bottom:1px dotted #bda68a;cursor:pointer;padding:0 1px}
+.sw.on{background:#ffe6b8;border-bottom-color:#8a6a2a}
+.bl{display:inline-block;min-width:74px;text-align:center;border-bottom:3px solid #9a8e76;color:#9a8e76;padding:0 4px;line-height:24px}
+.bl.cur{background:var(--cur);border-bottom-color:var(--ink);color:var(--ink)}
+.bl.ok{color:var(--ok);border-bottom-color:var(--ok)}
+.bl.no{color:var(--bad);border-bottom-color:var(--bad)}
+.bl s{color:#b58b82;margin-right:4px}
+.zh{margin:10px 12px 0;background:#efe8d8;border:3px solid var(--frame);padding:12px 14px;font-size:15px;line-height:27px;white-space:pre-line;color:#4a4034}
+
+/* 作答面板：黏在畫面下方 */
+#panel{position:sticky;bottom:0;z-index:4;margin-top:12px;background:#1d1a2b;border-top:3px solid var(--frame);
+       padding:10px 12px calc(12px + env(safe-area-inset-bottom,0px))}
+#tip{font-size:13px;line-height:20px;color:#ffd79a;min-height:20px;margin-bottom:6px}
+#tip .d{color:#9b93ad}
+.qh{font-size:12px;color:#b8b0cc;margin-bottom:6px;display:flex}
+.opts{display:grid;grid-template-columns:1fr 1fr;gap:6px}
+.opt{font-family:inherit;font-size:16px;line-height:22px;color:var(--ink);background:#efe8d8;
+     border:2px solid var(--rule);padding:9px 8px;cursor:pointer;text-align:left;word-break:break-word}
+.opt .k{color:#9a8e76;font-size:12px;margin-right:4px}
+.opt:disabled{opacity:1;cursor:default}
+.opt:disabled:not(.right):not(.wrong){opacity:.6}
+.opt.right{background:#d7ecd9;border-color:var(--ok)}
+.opt.wrong{background:#f2d9d4;border-color:var(--bad)}
+.why{font-size:14px;line-height:23px;color:#e8e2d6;margin-top:8px;min-height:0}
+.why b{font-weight:normal;color:#9fd8ad}
+.why b.x{color:#f0a598}
+.nx{display:flex;justify-content:flex-end;margin-top:8px}
+
+/* 結果 */
+.res{margin:12px;background:var(--paper);border:3px solid var(--frame);padding:14px}
+.res h2{font-weight:normal;font-size:15px;color:var(--dim)}
+.big{font-size:30px;line-height:40px;margin:4px 0}
+.li{border-bottom:1px dotted var(--rule);padding:8px 0;font-size:14px;line-height:23px}
+.li:last-child{border-bottom:0}
+.li .w{color:var(--dim);font-size:13px}
+.hidden{display:none}
+@media (max-width:380px){ .txt p{font-size:16px;line-height:29px} .opt{font-size:15px} }
+</style>
+</head>
+<body>
+<div id="app">
+
+  <div id="top">
+    <h1>文法故事</h1>
+    <p>新人米亞在基隆一家貿易公司的第一年。一集一個文法重點，題目照多益 Part 5、6 的樣子出。灰底的字可以點看中文。</p>
+  </div>
+
+  <div class="bar">
+    <select id="ep" aria-label="選擇集數"></select>
+  </div>
+
+  <div id="view"></div>
+
+  <div class="bar">
+    <span class="note" id="stat"></span>
+    <span class="sp"></span>
+    <button id="bReset">清除紀錄</button>
+  </div>
+</div>
+
+<script src="data/grammar-1.js"></script>
+<script src="data/grammar-2.js"></script>
+<script>
+if(typeof GRAMMAR === 'undefined'){
+  document.body.innerHTML = '<div style="max-width:520px;margin:60px auto;padding:24px;background:#f7f2e6;border:3px solid #1b1826;color:#2a2438;font-size:15px;line-height:1.9"><b>找不到文法資料</b><br><br>需要同一個資料夾裡的 data/grammar-1.js、data/grammar-2.js。</div>';
+  throw new Error('GRAMMAR not loaded');
+}
+const $ = id => document.getElementById(id);
+const KEY = 'pxgrammar.v1';
+const REVIEW = -1;
+const esc = t => String(t).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
+const shuffle = a => { for(let i=a.length-1;i>0;i--){ const j=Math.floor(Math.random()*(i+1)); [a[i],a[j]]=[a[j],a[i]]; } return a; };
+
+function load(){ try{ const d = JSON.parse(localStorage.getItem(KEY)||'{}'); d.done=d.done||{}; d.wrong=d.wrong||{}; return d; }catch(e){ return {done:{},wrong:{}}; } }
+function store(d){ try{ localStorage.setItem(KEY, JSON.stringify(d)); }catch(e){} }
+
+/* ── 文字轉 HTML：[字|中文] 可點；{n} 是空格 ── */
+function inline(s, fill){
+  return esc(s)
+    .replace(/\[([^\]|]+)\|([^\]]+)\]/g, (m,w,z)=>`<span class="sw" data-z="${z}">${w}</span>`)
+    .replace(/\{(\d+)\}/g, (m,n)=> fill ? fill(+n) : `<span class="bl" data-n="${n}">(${n})</span>`);
+}
+function paras(text, fill){
+  return text.split(/\n\s*\n/).map(p=>`<p>${inline(p, fill).replace(/\n/g,'<br>')}</p>`).join('');
+}
+function bindGloss(root){
+  root.querySelectorAll('.sw').forEach(el=> el.onclick = ()=>{
+    root.querySelectorAll('.sw.on').forEach(x=>x.classList.remove('on'));
+    el.classList.add('on');
+    const tip = $('tip');
+    if(tip) tip.innerHTML = `${esc(el.textContent)}　${esc(el.dataset.z)}`;
+  });
+}
+
+/* ── 選單 ── */
+let cur = 0;
+function buildPicker(){
+  const d = load();
+  const opts = GRAMMAR.map((e,i)=>{
+    const r = d.done[e.id];
+    const flag = !r ? '　' : r.best === r.total ? '●' : '◐';
+    return `<option value="${i}"${i===cur?' selected':''}>${flag} 第 ${i+1} 集 · ${e.t}　〔${e.topic}〕</option>`;
+  });
+  const nw = Object.keys(d.wrong).length;
+  opts.push(`<option value="${REVIEW}"${cur===REVIEW?' selected':''}${nw?'':' disabled'}>★ 錯題重練（${nw} 題）</option>`);
+  $('ep').innerHTML = opts.join('');
+  const full = GRAMMAR.filter(e=>d.done[e.id] && d.done[e.id].best===d.done[e.id].total).length;
+  const total = GRAMMAR.reduce((a,e)=>a+e.qs.length,0);
+  $('stat').textContent = `${GRAMMAR.length} 集 · ${total} 題　全對 ${full} 集`;
+}
+
+/* ═══ 一集 ═══════════════════════════════════════ */
+let E, qi, right, picks;
+function episode(i){
+  cur = i; E = GRAMMAR[i]; qi = 0; right = 0; picks = [];
+  $('ep').value = String(i);
+  const seen = !!load().done[E.id];
+  $('view').innerHTML = `
+    <details class="lesson"${seen?'':' open'}>
+      <summary><span>文法重點</span><span class="tp">${esc(E.topic)}</span></summary>
+      <div class="lb">${E.lesson.map(p=>`<p>${p}</p>`).join('')}</div>
+    </details>
+    <div class="doc"><div>
+      ${E.head ? `<div class="head">${E.head.map(h=>`<div>${esc(h)}</div>`).join('')}</div>` : ''}
+      <div class="txt" id="txt">${paras(E.text)}</div>
+    </div></div>
+    <div id="after"></div>
+    <div id="panel"></div>`;
+  bindGloss($('txt'));
+  ask();
+}
+
+/* 選項每次都洗牌顯示：資料裡的正解位置不平均，不洗會被看出規律 */
+function optsHTML(q){
+  return shuffle([0,1,2,3]).map((m,k)=>`<button class="opt" data-m="${m}"><span class="k">${'ABCD'[k]}</span>${esc(q.o[m])}</button>`).join('');
+}
+function blankEl(n){ return $('txt').querySelector(`.bl[data-n="${n}"]`); }
+
+function ask(){
+  const q = E.qs[qi], n = qi + 1;
+  $('txt').querySelectorAll('.bl.cur').forEach(x=>x.classList.remove('cur'));
+  const bl = blankEl(n); bl.classList.add('cur');
+  $('panel').innerHTML = `
+    <div id="tip"><span class="d">灰底字點一下看中文</span></div>
+    <div class="qh"><span>第 ${n} 題 · 空格 (${n}) 填哪一個？</span><span class="sp"></span><span>${n} / ${E.qs.length}</span></div>
+    <div class="opts">${optsHTML(q)}</div>
+    <div class="why" id="why"></div>`;
+  bindGloss($('txt'));
+  const btns = [...$('panel').querySelectorAll('.opt')];
+  btns.forEach(b=> b.onclick = ()=>{
+    if(btns[0].disabled) return;
+    btns.forEach(x=> x.disabled = true);
+    const m = +b.dataset.m, ok = m === q.a;
+    btns.find(x=>+x.dataset.m===q.a).classList.add('right');
+    if(!ok) b.classList.add('wrong'); else right++;
+    picks.push(m);
+    bl.classList.remove('cur'); bl.classList.add(ok ? 'ok' : 'no');
+    bl.innerHTML = ok ? esc(q.o[q.a]) : `<s>${esc(q.o[m])}</s>${esc(q.o[q.a])}`;
+    const d = load(), key = `${E.id}-${n}`;
+    if(ok) delete d.wrong[key]; else d.wrong[key] = 1;
+    store(d);
+    const last = qi === E.qs.length - 1;
+    $('why').innerHTML = `${ok ? '<b>對了。</b>' : `<b class="x">正解是 ${esc(q.o[q.a])}。</b>`}${esc(q.why)}
+      <div class="nx"><button id="bNext" class="go">${last ? '看結果' : '下一題'}</button></div>`;
+    $('bNext').onclick = ()=>{ qi++; if(qi < E.qs.length){ ask(); focusBlank(); } else finish(); };
+    $('bNext').focus({preventScroll:true});
+  });
+}
+function focusBlank(){
+  const bl = blankEl(qi+1);
+  if(bl) bl.scrollIntoView({block:'center', behavior:'smooth'});
+}
+
+function finish(){
+  const d = load(), total = E.qs.length;
+  const r = d.done[E.id] || {best:0,total,tries:0};
+  r.best = Math.max(r.best, right); r.total = total; r.tries = (r.tries||0)+1;
+  d.done[E.id] = r; store(d); buildPicker();
+  const misses = E.qs.map((q,i)=>({q,i,m:picks[i]})).filter(x=>x.m!==x.q.a);
+  $('panel').remove();
+  $('after').innerHTML = `
+    <div class="res">
+      <h2>第 ${cur+1} 集 · ${esc(E.t)}</h2>
+      <div class="big" style="color:${right===total?'var(--ok)':right>=total-1?'var(--ink)':'var(--bad)'}">${right} / ${total}</div>
+      <div style="font-size:14px;line-height:23px;color:var(--dim)">${right===total ? '這集的重點抓到了。' : `錯的 ${misses.length} 題已經收進「錯題重練」。`}</div>
+      ${misses.map(x=>`<div class="li">(${x.i+1}) ${esc(x.q.o[x.q.a])}　<span class="w">你選 ${esc(x.q.o[x.m])}</span><br><span class="w">${esc(x.q.why)}</span></div>`).join('')}
+    </div>
+    <div class="bar">
+      <button id="bZh">看全文翻譯</button>
+      <button id="bAgain">重做這集</button>
+      <span class="sp"></span>
+      ${cur < GRAMMAR.length-1 ? '<button id="bNextEp" class="go">下一集</button>' : ''}
+    </div>
+    <div class="zh hidden" id="zh">${esc(E.zh)}</div>
+    <div style="height:16px"></div>`;
+  $('bZh').onclick = ()=>{ const z=$('zh'); z.classList.toggle('hidden'); $('bZh').textContent = z.classList.contains('hidden') ? '看全文翻譯' : '收起翻譯'; if(!z.classList.contains('hidden')) z.scrollIntoView({behavior:'smooth',block:'nearest'}); };
+  $('bAgain').onclick = ()=>{ episode(cur); window.scrollTo(0,0); };
+  if($('bNextEp')) $('bNextEp').onclick = ()=>{ cur++; buildPicker(); episode(cur); window.scrollTo(0,0); };
+  $('after').scrollIntoView({behavior:'smooth', block:'start'});
+}
+
+/* ═══ 錯題重練：把錯的空格抽成單句，像 Part 5 ═══════ */
+function sentenceFor(e, n){
+  const para = e.text.split(/\n\s*\n/).find(p=>p.includes(`{${n}}`));
+  const sents = para.replace(/\n/g,' ').split(/(?<=[.!?]["”]?)\s+(?=["“]?[A-Z{\[])/);
+  const s = sents.find(x=>x.includes(`{${n}}`)) || para;
+  // 同一句裡的其他空格直接填正解
+  return s.replace(/\{(\d+)\}/g, (m,k)=> +k===n ? m : e.qs[+k-1].o[e.qs[+k-1].a]);
+}
+let R, ri, rRight;
+function review(){
+  cur = REVIEW;
+  const d = load();
+  R = shuffle(Object.keys(d.wrong).map(k=>{
+    const [id, n] = k.split('-'); const e = GRAMMAR.find(x=>x.id===id);
+    return e && e.qs[+n-1] ? {e, n:+n, key:k} : null;
+  }).filter(Boolean)).slice(0, 12);
+  ri = 0; rRight = 0;
+  if(!R.length){ $('view').innerHTML = '<div class="res">沒有錯題了。</div>'; return; }
+  reviewAsk();
+}
+function reviewAsk(){
+  const {e, n, key} = R[ri], q = e.qs[n-1];
+  $('view').innerHTML = `
+    <div class="doc"><div>
+      <div class="head"><div>錯題重練　${ri+1} / ${R.length}</div><div>出自第 ${GRAMMAR.indexOf(e)+1} 集〈${esc(e.t)}〉· ${esc(e.topic)}</div></div>
+      <div class="txt" id="txt"><p>${inline(sentenceFor(e,n))}</p></div>
+    </div></div>
+    <div id="panel">
+      <div id="tip"><span class="d">灰底字點一下看中文</span></div>
+      <div class="opts">${optsHTML(q)}</div>
+      <div class="why" id="why"></div>
+    </div>`;
+  const bl = $('txt').querySelector('.bl'); bl.classList.add('cur');
+  bindGloss($('txt'));
+  const btns = [...$('panel').querySelectorAll('.opt')];
+  btns.forEach(b=> b.onclick = ()=>{
+    if(btns[0].disabled) return;
+    btns.forEach(x=> x.disabled = true);
+    const m = +b.dataset.m, ok = m === q.a;
+    btns.find(x=>+x.dataset.m===q.a).classList.add('right');
+    if(!ok) b.classList.add('wrong'); else rRight++;
+    bl.classList.remove('cur'); bl.classList.add(ok?'ok':'no');
+    bl.innerHTML = ok ? esc(q.o[q.a]) : `<s>${esc(q.o[m])}</s>${esc(q.o[q.a])}`;
+    const d = load(); if(ok) delete d.wrong[key]; store(d);
+    const last = ri === R.length-1;
+    $('why').innerHTML = `${ok ? '<b>對了，這題從錯題清單移除。</b>' : `<b class="x">正解是 ${esc(q.o[q.a])}。</b>`}${esc(q.why)}
+      <div class="nx"><button id="bNext" class="go">${last?'看結果':'下一題'}</button></div>`;
+    $('bNext').onclick = ()=>{ ri++; if(ri < R.length) reviewAsk(); else reviewDone(); };
+    $('bNext').focus({preventScroll:true});
+  });
+}
+function reviewDone(){
+  buildPicker();
+  const left = Object.keys(load().wrong).length;
+  $('view').innerHTML = `<div class="res"><h2>錯題重練</h2>
+    <div class="big">${rRight} / ${R.length}</div>
+    <div style="font-size:14px;line-height:23px;color:var(--dim)">${left ? `清單裡還有 ${left} 題。` : '錯題清空了。'}</div></div>
+    <div class="bar">${left ? '<button id="bMore" class="go">再練一輪</button>' : ''}</div>`;
+  if($('bMore')) $('bMore').onclick = review;
+}
+
+/* ── 綁定 ── */
+$('ep').onchange = e=>{ const v = +e.target.value; if(v === REVIEW) review(); else episode(v); window.scrollTo(0,0); };
+$('bReset').onclick = ()=>{ if(!confirm('清除所有文法紀錄和錯題？')) return; try{ localStorage.removeItem(KEY); }catch(e){} buildPicker(); episode(cur < 0 ? 0 : cur); };
+document.addEventListener('keydown', e=>{
+  if(/^[1-4]$/.test(e.key)){ const b = document.querySelectorAll('#panel .opt')[+e.key-1]; if(b && !b.disabled) b.click(); }
+  if(e.key === 'Enter' && $('bNext')){ e.preventDefault(); $('bNext').click(); }
+});
+
+/* 從第一集還沒全對的開始 */
+(function(){
+  const d = load();
+  const n = GRAMMAR.findIndex(e=>!d.done[e.id] || d.done[e.id].best < d.done[e.id].total);
+  cur = n < 0 ? 0 : n;
+})();
+buildPicker();
+episode(cur);
+</script>
+</body>
+</html>
