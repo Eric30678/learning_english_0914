@@ -122,7 +122,7 @@ button.go:active:not(:disabled){background:#3a7f4c}
 /* ───── data/phrases.js ───── */
 /* ═══════════════════════════════════════════════════════
    phrases.js — 片語速記
-   仿「狄克森片語」的背法：一組八個，讀完馬上考。共 25 組、200 個。
+   仿「狄克森片語」的背法：一組八個，讀完馬上考。共 38 組、304 個。
    片語本身是英語常用片語；例句、翻譯、考題全部原創。
 
    欄位
@@ -610,6 +610,253 @@ var PHRASE_UNITS = [
   q:'There were a few problems, but ___ the event was a success.', no:['more or less']},
  {p:'to be honest', z:'老實說', e:'{To be honest}, I didn\'t enjoy the film.', ez:'老實說，我不喜歡那部電影。',
   q:'___, I don\'t think the plan will work.', no:['in other words']}
+]},
+
+{ t:'時間副詞二', items:[
+ {p:'all along', z:'一直；從一開始', e:'She knew {all along} that the plan would fail.', ez:'她從一開始就知道計畫會失敗。',
+  q:'I blamed myself, but it was his mistake ___.', no:['in the end']},
+ {p:'before long', z:'不久之後', e:'{Before long}, the room was full.', ez:'沒多久房間就滿了。',
+  q:'Keep walking and ___ you\'ll see the station.', no:['in the end']},
+ {p:'for the time being', z:'暫時', e:'You can use my desk {for the time being}.', ez:'你可以暫時用我的桌子。',
+  q:'The shop is closed ___, but it will reopen next month.', no:['at the moment','in the meantime']},
+ {p:'from time to time', z:'不時；偶爾', e:'I visit my old school {from time to time}.', ez:'我偶爾會回母校看看。',
+  q:'We still meet for coffee ___.'},
+ {p:'in the meantime', z:'在這期間', e:'The doctor is coming. {In the meantime}, please fill out this form.', ez:'醫生快到了，這段時間請先填表。',
+  q:'Dinner is in an hour. ___, have some fruit.', no:['for the time being']},
+ {p:'in the end', z:'最後', e:'We argued for hours, but {in the end} we agreed.', ez:'我們吵了好幾個小時，最後還是達成共識。',
+  q:'They looked at five flats and ___ chose the cheapest one.', no:['all along','before long']},
+ {p:'in a row', z:'連續', e:'It has rained for five days {in a row}.', ez:'已經連續下五天雨了。',
+  q:'She won the prize three years ___.'},
+ {p:'at the moment', z:'目前；此刻', e:'Mr. Chen is busy {at the moment}.', ez:'陳先生現在正在忙。',
+  q:'I\'m sorry, all our staff are busy ___. Please hold.', no:['for the time being']}
+]},
+
+{ t:'原因與關係（介系詞片語）', items:[
+ {p:'because of', z:'因為', e:'The match was stopped {because of} the rain.', ez:'比賽因雨中斷。',
+  q:'We stayed inside ___ the heavy rain.', no:['thanks to']},
+ {p:'thanks to', z:'多虧；由於', e:'{Thanks to} your help, we finished early.', ez:'多虧你幫忙，我們提早完成。',
+  q:'___ the new system, orders now arrive in two days.', no:['because of']},
+ {p:'in spite of', z:'儘管', e:'They went out {in spite of} the storm.', ez:'儘管有暴風雨，他們還是出門了。',
+  q:'She came to work ___ her bad cold.'},
+ {p:'according to', z:'根據', e:'{According to} the forecast, it will rain.', ez:'根據預報，會下雨。',
+  q:'___ the report, sales rose by ten per cent.'},
+ {p:'apart from', z:'除了（…以外）', e:'{Apart from} Tom, everyone came.', ez:'除了湯姆，大家都來了。',
+  q:'The hotel was great, ___ the noise from the street.', no:['in addition to']},
+ {p:'as for', z:'至於', e:'{As for} me, I\'ll have tea.', ez:'至於我，喝茶就好。',
+  q:'Most of us took the train. ___ Ken, he drove.'},
+ {p:'in addition to', z:'除…之外還有', e:'{In addition to} English, she speaks Thai.', ez:'她除了英文還會說泰文。',
+  q:'___ a salary, you\'ll get free lunches.', no:['apart from']},
+ {p:'on behalf of', z:'代表', e:'I\'m writing {on behalf of} my manager.', ez:'我代表我的主管寫信。',
+  q:'She accepted the award ___ the whole team.'}
+]},
+
+{ t:'各種狀態', items:[
+ {p:'out of stock', z:'缺貨', e:'That size is {out of stock}.', ez:'那個尺寸缺貨。',
+  q:'Sorry, the blue ones are ___. We\'ll have more next week.'},
+ {p:'out of reach', z:'拿不到；搆不著', e:'Keep medicine {out of reach} of children.', ez:'藥品請放在孩子拿不到的地方。',
+  q:'The top shelf is ___ for most people.'},
+ {p:'out of the question', z:'不可能', e:'A pay rise this year is {out of the question}.', ez:'今年加薪是不可能的。',
+  q:'Driving there in this snow is ___.'},
+ {p:'out of work', z:'失業', e:'He has been {out of work} since March.', ez:'他三月起就失業了。',
+  q:'When the factory closed, two hundred people were ___.'},
+ {p:'up to date', z:'最新的', e:'Keep your software {up to date}.', ez:'軟體要保持最新。',
+  q:'Please make sure your contact details are ___.', no:['out of date']},
+ {p:'out of date', z:'過時；過期', e:'This map is {out of date}.', ez:'這張地圖過時了。',
+  q:'Don\'t drink that milk — it\'s ___.', no:['up to date']},
+ {p:'on duty', z:'值班中', e:'Two nurses are {on duty} tonight.', ez:'今晚有兩位護理師值班。',
+  q:'Ask the guard who is ___ at the gate.'},
+ {p:'on foot', z:'步行', e:'We went to the market {on foot}.', ez:'我們走路去市場。',
+  q:'The hotel is close, so we can go ___.'}
+]},
+
+{ t:'生活慣用語', items:[
+ {p:'a piece of cake', z:'很簡單', e:'The test was {a piece of cake}.', ez:'那個考試超簡單。',
+  q:'Don\'t worry about the form — it\'s ___.'},
+ {p:'under the weather', z:'身體不太舒服', e:'I\'m feeling a bit {under the weather} today.', ez:'我今天有點不舒服。',
+  q:'She stayed home because she was ___.'},
+ {p:'out of the blue', z:'突然；毫無預警', e:'He called me {out of the blue} after ten years.', ez:'十年沒聯絡，他突然打給我。',
+  q:'The job offer came completely ___.'},
+ {p:'ring a bell', z:'聽起來耳熟', e:'The name {rings a bell}, but I can\'t remember him.', ez:'這名字有點耳熟，但我想不起他。',
+  q:'Does the name "Lin & Co." ___?'},
+ {p:'break the ice', z:'打破僵局；破冰', e:'He told a joke to {break the ice}.', ez:'他講了個笑話來破冰。',
+  q:'A short game at the start helps people ___.'},
+ {p:'call it a day', z:'今天到此為止', e:'It\'s eight o\'clock — let\'s {call it a day}.', ez:'八點了，今天就到這裡吧。',
+  q:'We\'re all tired. Why don\'t we ___?'},
+ {p:'get the hang of', z:'掌握訣竅', e:'You\'ll {get the hang of} it after a few tries.', ez:'試幾次你就會抓到訣竅。',
+  q:'It takes a week or two to ___ the new software.'},
+ {p:'on the tip of one\'s tongue', z:'話到嘴邊（想不起來）', e:'Her name is {on the tip of my tongue}.', ez:'她的名字就在嘴邊，一時想不起來。',
+  q:'The answer is ___ — give me a second.', a:'on the tip of my tongue'}
+]},
+
+{ t:'職務與交接', items:[
+ {p:'take over', z:'接管；接手', e:'Ms. Wu will {take over} as manager in May.', ez:'吳小姐五月會接任經理。',
+  q:'Who will ___ your work while you\'re on holiday?', no:['hand over','take on']},
+ {p:'take on', z:'承擔；雇用', e:'We\'re {taking on} three new staff this year.', ez:'我們今年會新聘三位員工。',
+  q:'I can\'t ___ any more projects right now.', no:['take over']},
+ {p:'lay off', z:'裁員；解雇', e:'The factory {laid off} fifty workers.', ez:'工廠裁掉了五十名工人。',
+  q:'If sales keep falling, the company may ___ staff.'},
+ {p:'step down', z:'辭職；下台', e:'The CEO {stepped down} after ten years.', ez:'執行長做了十年後卸任。',
+  q:'He decided to ___ as chairman at the end of the year.'},
+ {p:'hand over', z:'移交', e:'Please {hand over} your keys when you leave.', ez:'離職時請交還鑰匙。',
+  q:'Before you go on leave, ___ the project to Anna.', no:['take over']},
+ {p:'draw up', z:'擬定（文件）', e:'The lawyer will {draw up} the contract.', ez:'律師會擬好合約。',
+  q:'Let\'s ___ a list of everything we need.'},
+ {p:'run through', z:'快速過一遍', e:'Let\'s {run through} the plan once more.', ez:'我們把計畫再快速過一次。',
+  q:'Could we quickly ___ the main points before the meeting?'},
+ {p:'get down to', z:'開始認真處理', e:'Let\'s {get down to} business.', ez:'我們來談正事吧。',
+  q:'Enough chatting — let\'s ___ work.'}
+]},
+
+{ t:'應該與寧願', items:[
+ {p:'had better', z:'最好（不然會…）', e:'You {had better} take an umbrella.', ez:'你最好帶把傘。',
+  q:'It\'s getting late. We ___ go home now.', no:['would rather']},
+ {p:'would rather', z:'寧願', e:'I {would rather} stay home tonight.', ez:'我今晚寧願待在家。',
+  q:'I ___ walk than wait for the bus.', no:['had better']},
+ {p:'supposed to', z:'應該（按規定或預期）', e:'We\'re {supposed to} arrive at eight.', ez:'我們應該八點到。',
+  q:'You\'re ___ wear a badge in this building.', no:['about to']},
+ {p:'about to', z:'正要', e:'I was {about to} call you.', ez:'我正要打給你。',
+  q:'Hurry up — the train is ___ leave.', no:['supposed to']},
+ {p:'no longer', z:'不再', e:'He {no longer} works here.', ez:'他已經不在這裡工作了。',
+  q:'This model is ___ available.'},
+ {p:'make a difference', z:'有影響；有差別', e:'A small change can {make a difference}.', ez:'小小的改變就能帶來不同。',
+  q:'Even ten minutes of exercise a day can ___.'},
+ {p:'pay attention to', z:'注意', e:'Please {pay attention to} the safety rules.', ez:'請注意安全規定。',
+  q:'___ the signs, or you\'ll get lost.'},
+ {p:'keep track of', z:'記錄；掌握', e:'I use an app to {keep track of} my spending.', ez:'我用 app 記錄花費。',
+  q:'It\'s hard to ___ all these emails.'}
+]},
+
+{ t:'居家生活', items:[
+ {p:'clean up', z:'清理乾淨', e:'Let\'s {clean up} the kitchen.', ez:'我們把廚房清乾淨。',
+  q:'Please ___ the room before the guests arrive.'},
+ {p:'fill up', z:'加滿；裝滿', e:'{Fill up} the tank before the trip.', ez:'出發前把油加滿。',
+  q:'I need to ___ the car at the next gas station.'},
+ {p:'use up', z:'用光', e:'We\'ve {used up} all the coffee.', ez:'咖啡全用完了。',
+  q:'Don\'t ___ all the hot water.'},
+ {p:'eat out', z:'外食', e:'We {eat out} every Friday.', ez:'我們每週五外食。',
+  q:'I\'m too tired to cook — let\'s ___ tonight.', no:['stay in']},
+ {p:'stay in', z:'待在家', e:'It\'s raining, so we\'ll {stay in}.', ez:'在下雨，我們待在家。',
+  q:'It\'s too cold to go out — let\'s ___ and watch a film.', no:['eat out']},
+ {p:'sleep in', z:'睡晚一點', e:'I {slept in} on Sunday.', ez:'我週日睡到很晚。',
+  q:'It\'s a holiday, so you can ___ tomorrow.'},
+ {p:'grow up', z:'長大', e:'I {grew up} in Hualien.', ez:'我在花蓮長大。',
+  q:'What do you want to be when you ___?'},
+ {p:'settle down', z:'安定下來', e:'They want to {settle down} near the sea.', ez:'他們想在海邊定居。',
+  q:'After years of travelling, he wants to ___ and buy a house.'}
+]},
+
+{ t:'交通與旅行', items:[
+ {p:'see off', z:'送行', e:'We {saw} her {off} at the airport.', ez:'我們去機場送她。',
+  q:'My parents came to the station to ___.', a:'see me off'},
+ {p:'drop off', z:'讓…下車；放下', e:'Can you {drop} me {off} at the bank?', ez:'可以讓我在銀行下車嗎？',
+  q:'I\'ll ___ the kids at school on my way to work.'},
+ {p:'look around', z:'四處看看', e:'We {looked around} the old town.', ez:'我們在老城區逛了逛。',
+  q:'We have an hour, so let\'s ___ the market.'},
+ {p:'show around', z:'帶…參觀', e:'Let me {show} you {around} the office.', ez:'我帶你參觀辦公室。',
+  q:'On your first day, Kim will ___.', a:'show you around'},
+ {p:'head for', z:'前往', e:'We {headed for} the beach after lunch.', ez:'午餐後我們往海邊去。',
+  q:'Let\'s ___ the exit before the crowd leaves.'},
+ {p:'get away', z:'逃走；出去度假', e:'We\'re hoping to {get away} for a weekend.', ez:'我們想出去玩個週末。',
+  q:'The thief managed to ___ before the police came.'},
+ {p:'slow down', z:'慢下來', e:'{Slow down} — there\'s a school here.', ez:'慢一點，這裡有學校。',
+  q:'Please ___; you\'re driving too fast.', no:['speed up']},
+ {p:'speed up', z:'加快', e:'We need to {speed up} the process.', ez:'我們得加快流程。',
+  q:'If we don\'t ___, we\'ll miss the deadline.', no:['slow down']}
+]},
+
+{ t:'問題與對策', items:[
+ {p:'come up with', z:'想出（點子）', e:'She {came up with} a great idea.', ez:'她想出一個好點子。',
+  q:'We need to ___ a new name for the product.'},
+ {p:'clear up', z:'釐清；（天氣）放晴', e:'Let\'s {clear up} this misunderstanding.', ez:'我們把這個誤會講清楚。',
+  q:'The sky should ___ by the afternoon.'},
+ {p:'rule out', z:'排除（可能性）', e:'The doctor {ruled out} a broken bone.', ez:'醫生排除了骨折的可能。',
+  q:'We can\'t ___ the possibility of a delay.'},
+ {p:'narrow down', z:'縮小範圍', e:'We {narrowed} it {down} to three choices.', ez:'我們把範圍縮小到三個選項。',
+  q:'Let\'s ___ the list to five candidates.'},
+ {p:'mess up', z:'搞砸', e:'I {messed up} the presentation.', ez:'我把簡報搞砸了。',
+  q:'Check the numbers again — don\'t ___ the order.'},
+ {p:'fall through', z:'（計畫）落空', e:'The deal {fell through} at the last minute.', ez:'交易在最後一刻告吹。',
+  q:'If the loan doesn\'t come, our plans may ___.'},
+ {p:'set back', z:'使延誤；使倒退', e:'The storm {set} the project {back} by a week.', ez:'暴風雨讓專案延誤了一週。',
+  q:'A single mistake could ___ the whole project.', no:['hold up']},
+ {p:'hold up', z:'耽擱；阻礙', e:'Sorry I\'m late — I was {held up} in traffic.', ez:'抱歉遲到，我被塞在路上。',
+  q:'An accident on the highway will ___ traffic for hours.', no:['set back']}
+]},
+
+{ t:'人際往來二', items:[
+ {p:'get together', z:'聚會', e:'Let\'s {get together} next weekend.', ez:'我們下週末聚一聚吧。',
+  q:'The whole family will ___ for New Year.'},
+ {p:'hear from', z:'收到…的消息', e:'Have you {heard from} Lisa lately?', ez:'你最近有麗莎的消息嗎？',
+  q:'We hope to ___ you soon.'},
+ {p:'let down', z:'讓…失望', e:'I promised to help, and I won\'t {let} you {down}.', ez:'我答應幫你，就不會讓你失望。',
+  q:'Please don\'t ___ the team; we\'re counting on you.'},
+ {p:'pick on', z:'欺負；找碴', e:'The older boys {picked on} him.', ez:'大男孩們欺負他。',
+  q:'Don\'t ___ people who are smaller than you.'},
+ {p:'split up', z:'分手；拆開', e:'They {split up} after two years.', ez:'他們交往兩年後分手了。',
+  q:'If the couple can\'t agree, they may ___.', no:['make up']},
+ {p:'make up', z:'和好', e:'They argued but {made up} the next day.', ez:'他們吵架，隔天就和好了。',
+  q:'After the fight, the two friends decided to ___.', no:['split up']},
+ {p:'go out with', z:'和…約會；交往', e:'Is Ken {going out with} Amy?', ez:'阿肯在跟艾咪交往嗎？',
+  q:'She wants to ___ someone who likes hiking.'},
+ {p:'talk into', z:'說服（某人）去做', e:'She {talked} me {into} joining the club.', ez:'她說服我加入社團。',
+  q:'My friend tried to ___ skydiving.', a:'talk me into'}
+]},
+
+{ t:'組裝與歸位', items:[
+ {p:'turn up', z:'（音量）調大；出現', e:'Can you {turn up} the volume?', ez:'可以把音量調大嗎？',
+  q:'I can\'t hear the radio — please ___ the sound.'},
+ {p:'turn into', z:'變成', e:'The old factory was {turned into} a museum.', ez:'舊工廠被改成博物館。',
+  q:'Water will ___ ice below zero degrees.'},
+ {p:'hand out', z:'分發', e:'The teacher {handed out} the tests.', ez:'老師發下考卷。',
+  q:'Please ___ these leaflets at the entrance.'},
+ {p:'put together', z:'組裝；整理', e:'It took an hour to {put together} the desk.', ez:'組裝桌子花了一小時。',
+  q:'Can you help me ___ this bookshelf?', no:['take apart']},
+ {p:'take apart', z:'拆開', e:'He {took} the radio {apart} to fix it.', ez:'他把收音機拆開來修。',
+  q:'To get the bed through the door, we\'ll have to ___.', a:'take it apart', no:['put together']},
+ {p:'put back', z:'放回', e:'{Put} the book {back} on the shelf.', ez:'把書放回書架。',
+  q:'When you finish, please ___ the tools where you found them.'},
+ {p:'take back', z:'退回；收回', e:'I\'m {taking} these shoes {back} to the shop.', ez:'我要把這雙鞋拿回去退。',
+  q:'If it doesn\'t fit, you can ___ within 30 days.', a:'take it back'},
+ {p:'look through', z:'瀏覽；翻看', e:'I {looked through} the report last night.', ez:'我昨晚翻過那份報告。',
+  q:'Could you ___ these photos and pick the best ones?'}
+]},
+
+{ t:'take / make / have', items:[
+ {p:'take place', z:'舉行；發生', e:'The meeting will {take place} on Monday.', ez:'會議將在週一舉行。',
+  q:'The concert will ___ in the city park.'},
+ {p:'take one\'s time', z:'慢慢來', e:'There\'s no rush — {take your time}.', ez:'不急，慢慢來。',
+  q:'You don\'t have to hurry. ___.', a:'Take your time'},
+ {p:'make room for', z:'騰出空間給', e:'Can you {make room for} one more?', ez:'可以再擠一個位子嗎？',
+  q:'We moved the sofa to ___ the new table.'},
+ {p:'make the most of', z:'充分利用', e:'{Make the most of} the sunny weather.', ez:'好好把握晴天。',
+  q:'You\'re only here for two days, so ___ it.'},
+ {p:'have a word with', z:'跟…談一下', e:'Can I {have a word with} you after the meeting?', ez:'會後可以跟你談一下嗎？',
+  q:'I\'ll ___ the manager about the noise.'},
+ {p:'give it a try', z:'試試看', e:'I\'ve never skied, but I\'ll {give it a try}.', ez:'我沒滑過雪，但我願意試試。',
+  q:'The new café looks good — let\'s ___.'},
+ {p:'change one\'s mind', z:'改變主意', e:'She {changed her mind} about the trip.', ez:'她對這趟旅行改變主意了。',
+  q:'If you ___, just call me before Friday.', a:'change your mind'},
+ {p:'catch one\'s eye', z:'吸引目光', e:'A red dress {caught my eye}.', ez:'一件紅洋裝吸引了我的目光。',
+  q:'The bright sign is designed to ___.', a:'catch your eye'}
+]},
+
+{ t:'條件與目的', items:[
+ {p:'as long as', z:'只要', e:'You can borrow it {as long as} you return it.', ez:'只要記得還，你就可以借。',
+  q:'You can stay here ___ you keep quiet.'},
+ {p:'as soon as', z:'一…就', e:'Call me {as soon as} you arrive.', ez:'你一到就打給我。',
+  q:'I\'ll send the file ___ it\'s ready.'},
+ {p:'in case', z:'以防', e:'Take an umbrella {in case} it rains.', ez:'帶把傘以防下雨。',
+  q:'Write down my number ___ you get lost.'},
+ {p:'even though', z:'即使；雖然', e:'{Even though} it was late, he kept working.', ez:'雖然很晚了，他還在工作。',
+  q:'She went to work ___ she felt ill.'},
+ {p:'so that', z:'以便', e:'Speak slowly {so that} everyone can follow.', ez:'說慢一點，讓大家跟得上。',
+  q:'Leave early ___ you don\'t miss the train.', no:['in case']},
+ {p:'as if', z:'好像', e:'He talks {as if} he knows everything.', ez:'他講話好像什麼都懂。',
+  q:'She looked ___ she hadn\'t slept for days.'},
+ {p:'now that', z:'既然', e:'{Now that} you\'re here, we can start.', ez:'既然你到了，我們就開始吧。',
+  q:'___ the rain has stopped, let\'s go out.'},
+ {p:'in order to', z:'為了', e:'She saves money {in order to} travel.', ez:'她存錢是為了旅行。',
+  q:'He moved closer to work ___ save time.'}
 ]}
 
 

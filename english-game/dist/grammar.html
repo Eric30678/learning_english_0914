@@ -1,0 +1,840 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>文法故事</title>
+<style>
+@font-face{
+  font-family:'Cubic11';
+  src:url('../fonts/Cubic_11.ttf') format('truetype'),
+      url('https://cdn.jsdelivr.net/gh/ACh-K/Cubic-11@main/fonts/ttf/Cubic_11.ttf') format('truetype');
+  font-display:swap;
+}
+:root{
+  --ink:#2a2438; --paper:#f7f2e6; --frame:#1b1826; --frame-in:#7fa8d9;
+  --rule:#cdbfa6; --dim:#7a6a52; --key:#b08a4a;
+  --ok:#2f6b3f; --bad:#9c3a2e; --cur:#ffe6b8;
+  --ui-bg:#2f2942; --ui-line:#4d4468; --ui-text:#d8d2e4;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{background:#15121f}
+body{
+  font-family:'Cubic11',ui-monospace,monospace;
+  -webkit-font-smoothing:none;font-smooth:never;text-rendering:optimizeSpeed;
+  color:var(--ink);display:flex;justify-content:center;min-height:100vh;
+}
+#app{width:100%;max-width:560px;background:#15121f}
+
+#top{background:#3d3a6b;border-bottom:3px solid var(--frame);padding:12px}
+#top h1{font-weight:normal;font-size:20px;line-height:26px;color:#f2ecd8;text-shadow:2px 2px 0 var(--frame)}
+#top p{font-size:12px;line-height:19px;color:#c9c4ea;margin-top:4px}
+
+.bar{display:flex;gap:6px;padding:10px 12px;align-items:center;flex-wrap:wrap}
+button,select{
+  font-family:inherit;font-size:12px;color:var(--ui-text);
+  background:var(--ui-bg);border:2px solid var(--ui-line);padding:8px 12px;cursor:pointer;
+}
+@media (hover:hover) and (pointer:fine){
+  button:hover:not(:disabled){background:#3b3450}
+  button.go:hover:not(:disabled){background:#3a7f4c}
+  .opt:hover:not(:disabled){background:#e6dcc6}
+}
+button:active:not(:disabled){background:#3b3450}
+button:disabled{opacity:.45;cursor:default}
+button:focus-visible,select:focus-visible{outline:2px solid var(--frame-in);outline-offset:2px}
+button.go{background:#2f6b3f;border-color:#4f9a62;color:#eef7ef}
+#ep{flex:1;min-width:200px}
+.sp{flex:1}
+.note{font-size:11px;color:#7d7392}
+
+/* 文法重點卡 */
+details.lesson{margin:0 12px 10px;background:#ece6f7;border:3px solid var(--frame)}
+details.lesson summary{cursor:pointer;padding:10px 12px;font-size:14px;line-height:20px;list-style:none;display:flex;gap:8px;align-items:center}
+details.lesson summary::-webkit-details-marker{display:none}
+details.lesson summary::before{content:'▸';color:#5a4f8a}
+details.lesson[open] summary::before{content:'▾'}
+details.lesson summary .tp{color:#5a4f8a}
+details.lesson .lb{padding:0 12px 12px}
+details.lesson .lb p{font-size:14px;line-height:24px;margin-top:6px}
+details.lesson .lb b{font-weight:normal;background:#d8cff0;padding:0 2px}
+
+/* 文件 */
+.doc{margin:0 12px;background:var(--frame);padding:3px}
+.doc>div{background:var(--paper);padding:14px 14px 18px}
+.head{border-bottom:2px solid var(--rule);padding-bottom:8px;margin-bottom:10px}
+.head div{font-size:13px;line-height:21px;color:#5a4f40}
+.head div:first-child{font-size:14px;color:var(--ink)}
+.txt p{font-size:17px;line-height:31px;margin-bottom:12px;overflow-wrap:break-word}
+.txt p:last-child{margin-bottom:0}
+.sw{background:#efe6cf;border-bottom:1px dotted #bda68a;cursor:pointer;padding:0 1px}
+.sw.on{background:#ffe6b8;border-bottom-color:#8a6a2a}
+.bl{display:inline-block;min-width:74px;text-align:center;border-bottom:3px solid #9a8e76;color:#9a8e76;padding:0 4px;line-height:24px}
+.bl.cur{background:var(--cur);border-bottom-color:var(--ink);color:var(--ink)}
+.bl.ok{color:var(--ok);border-bottom-color:var(--ok)}
+.bl.no{color:var(--bad);border-bottom-color:var(--bad)}
+.bl s{color:#b58b82;margin-right:4px}
+.zh{margin:10px 12px 0;background:#efe8d8;border:3px solid var(--frame);padding:12px 14px;font-size:15px;line-height:27px;white-space:pre-line;color:#4a4034}
+
+/* 作答面板：黏在畫面下方 */
+#panel{position:sticky;bottom:0;z-index:4;margin-top:12px;background:#1d1a2b;border-top:3px solid var(--frame);
+       padding:10px 12px calc(12px + env(safe-area-inset-bottom,0px))}
+#tip{font-size:13px;line-height:20px;color:#ffd79a;min-height:20px;margin-bottom:6px}
+#tip .d{color:#9b93ad}
+.qh{font-size:12px;color:#b8b0cc;margin-bottom:6px;display:flex}
+.opts{display:grid;grid-template-columns:1fr 1fr;gap:6px}
+.opt{font-family:inherit;font-size:16px;line-height:22px;color:var(--ink);background:#efe8d8;
+     border:2px solid var(--rule);padding:9px 8px;cursor:pointer;text-align:left;word-break:break-word}
+.opt .k{color:#9a8e76;font-size:12px;margin-right:4px}
+.opt:disabled{opacity:1;cursor:default}
+.opt:disabled:not(.right):not(.wrong){opacity:.6}
+.opt.right{background:#d7ecd9;border-color:var(--ok)}
+.opt.wrong{background:#f2d9d4;border-color:var(--bad)}
+.why{font-size:14px;line-height:23px;color:#e8e2d6;margin-top:8px;min-height:0}
+.why b{font-weight:normal;color:#9fd8ad}
+.why b.x{color:#f0a598}
+.nx{display:flex;justify-content:flex-end;margin-top:8px}
+
+/* 結果 */
+.res{margin:12px;background:var(--paper);border:3px solid var(--frame);padding:14px}
+.res h2{font-weight:normal;font-size:15px;color:var(--dim)}
+.big{font-size:30px;line-height:40px;margin:4px 0}
+.li{border-bottom:1px dotted var(--rule);padding:8px 0;font-size:14px;line-height:23px}
+.li:last-child{border-bottom:0}
+.li .w{color:var(--dim);font-size:13px}
+.hidden{display:none}
+@media (max-width:380px){ .txt p{font-size:16px;line-height:29px} .opt{font-size:15px} }
+</style>
+</head>
+<body>
+<div id="app">
+
+  <div id="top">
+    <h1>文法故事</h1>
+    <p>新人米亞在基隆一家貿易公司的第一年。一集一個文法重點，題目照多益 Part 5、6 的樣子出。灰底的字可以點看中文。</p>
+  </div>
+
+  <div class="bar">
+    <select id="ep" aria-label="選擇集數"></select>
+  </div>
+
+  <div id="view"></div>
+
+  <div class="bar">
+    <span class="note" id="stat"></span>
+    <span class="sp"></span>
+    <button id="bReset">清除紀錄</button>
+  </div>
+</div>
+
+<script>
+/* ───── data/grammar-1.js ───── */
+/* ═══════════════════════════════════════════════════════
+   grammar-1.js — 文法故事（第 1–8 集）
+   一個連續的職場故事：陳米亞到基隆一家小貿易公司上班的第一年。
+   每集一個文法重點，故事寫成多益 Part 6 的樣子（email、公告、備忘錄），
+   每個空格是 Part 5 的四選一。
+
+   欄位
+   ──────────────────────────────────────────────────────
+   id     編號（錯題紀錄用，不要改）
+   t      集名
+   topic  這集的文法重點
+   lesson 重點說明（每一項一段，可含 <b>）
+   head   文件抬頭（email 的 From / To / Subject），沒有就省略
+   text   正文。[字|中文] 可點看中文；{1} {2}… 是空格；空一行分段
+   qs     每個空格：o 四個選項、a 正解索引、why 解說
+   zh     全文翻譯（做完才顯示）
+   ═══════════════════════════════════════════════════════ */
+var GRAMMAR = [
+
+{ id:'g01', t:'第一天', topic:'詞性（一）：形容詞與副詞',
+  lesson:[
+   '多益 Part 5 最常考「詞性」：四個選項長得很像，只差在字尾，例如 quick / quickly / quickness / quicker。',
+   '<b>形容詞</b>修飾名詞，或放在 be 動詞、look、seem、feel 後面：a <b>quiet</b> room、She looks <b>nervous</b>.',
+   '<b>副詞</b>修飾動詞、形容詞或其他副詞，常以 -ly 結尾：She spoke <b>quietly</b>. It was <b>extremely</b> busy.',
+   '做法：找出空格「在修飾誰」。修飾名詞 → 形容詞；修飾動詞或形容詞 → 副詞。'],
+  text:`Mia Chen had never felt so {1} in her life. It was her first day at Harbor Line Trading, a small [shipping|海運] company near Keelung [Port|港口].
+
+She [arrived|抵達] {2} early, at 8:15, and waited in the [lobby|大廳]. At 8:30, a tall man walked in {3}. "You must be Mia," he said with a {4} [smile|微笑]. "I'm Daniel Ho, the office [manager|經理]."
+
+Mr. Ho [showed her around|帶她參觀] the office. Everyone looked {5}, but they all stopped to say hello. "We are a small team," he [explained|解釋], "so we work very {6} with each other."`,
+  qs:[
+   {o:['nervous','nervously','nervousness','nerve'], a:0, why:'felt 後面接形容詞，描述她的感覺：feel + 形容詞。'},
+   {o:['surprise','surprising','surprisingly','surprised'], a:2, why:'空格修飾後面的副詞 early，要用副詞 surprisingly（出乎意料地早）。'},
+   {o:['quick','quickly','quickness','quicker'], a:1, why:'修飾動詞 walked，用副詞 quickly。'},
+   {o:['friend','friendly','friendliness','friendship'], a:1, why:'空格在 a 和名詞 smile 中間，要形容詞。friendly 雖然是 -ly 結尾，其實是形容詞——別被字尾騙了。'},
+   {o:['busy','busily','business','busier'], a:0, why:'look（看起來）後面接形容詞。business 是名詞「生意」；busier 後面要有 than。'},
+   {o:['close','closely','closeness','closed'], a:1, why:'修飾動詞 work，用副詞 closely（密切地）。close 當副詞是「靠近」，意思不對。'}],
+  zh:`陳米亞這輩子從沒這麼緊張過。今天是她在海線貿易上班的第一天，那是一家靠近基隆港的小型海運公司。
+
+她出乎意料地早到，八點十五分就在大廳等。八點半，一個高個子男人快步走進來。「妳一定是米亞，」他友善地笑著說，「我是何丹尼，辦公室經理。」
+
+何經理帶她參觀辦公室。每個人看起來都很忙，但都停下來打招呼。「我們是小團隊，」他解釋，「所以大家合作得非常密切。」`},
+
+{ id:'g02', t:'門禁卡', topic:'詞性（二）：名詞與動詞',
+  lesson:[
+   '<b>名詞</b>放在 a / the、所有格（my / her）、形容詞、介系詞後面，或當主詞、受詞。',
+   '常見名詞字尾：-tion、-sion、-ment、-ance / -ence、-ity、-ness；指人的：-er / -or / -ant。',
+   '<b>動詞</b>放在主詞後面；情態動詞（can / will / must / should）和 please 後面接<b>原形動詞</b>。',
+   '有些字名詞、動詞同形（access、contact、request），看位置決定。'],
+  head:['From: Raj Patel, IT Department','To: Mia Chen','Subject: Your access card'],
+  text:`Hi Mia,
+
+Welcome to the team! Your [access card|門禁卡] is ready for {1}. Please bring your ID to the IT office on the second floor, and I will {2} your details before I give you the card.
+
+The card gives you {3} to the main office and the meeting rooms. For [security|安全] reasons, it does not open the [warehouse|倉庫]. If you need to go there, please ask Tina for {4}.
+
+One more thing: our new system sends an [automatic|自動的] {5} to your phone every time you use the card. If you get a message but did not use your card, please {6} me [immediately|立刻].
+
+Best,
+Raj`,
+  qs:[
+   {o:['collect','collection','collector','collected'], a:1, why:'介系詞 for 後面接名詞。ready for collection＝可以領取了。collector 是「收藏家」，指人。'},
+   {o:['confirmation','confirm','confirming','confirmed'], a:1, why:'情態動詞 will 後面接原形動詞 confirm（確認）。'},
+   {o:['access','accessible','accessibly','accessed'], a:0, why:'give 人 + 東西，空格是「東西」，要名詞。access 在這裡是名詞「進入的權限」。'},
+   {o:['permit','permission','permissive','permitted'], a:1, why:'ask for 後面接名詞 permission（許可）。permit 當名詞是「許可證」，可數，前面要有 a。'},
+   {o:['notify','notification','notified','notifying'], a:1, why:'an automatic ___：冠詞 + 形容詞後面要名詞 notification（通知）。'},
+   {o:['contact','contacted','contactable','contacting'], a:0, why:'please 後面接原形動詞，是祈使句。'}],
+  zh:`嗨米亞：
+
+歡迎加入！妳的門禁卡可以領了。請帶身分證到二樓資訊室，我確認完妳的資料就會把卡交給妳。
+
+這張卡可以進主辦公室和會議室。為了安全，它打不開倉庫；需要去的話，請找蒂娜取得許可。
+
+還有一件事：新系統會在妳每次刷卡時，自動傳一則通知到妳手機。如果收到訊息但妳沒刷卡，請立刻聯絡我。
+
+拉吉`},
+
+{ id:'g03', t:'會議改期', topic:'時態（一）：現在、進行、過去、未來',
+  lesson:[
+   '時態題先找<b>時間線索</b>。',
+   '<b>現在簡單式</b>：習慣、事實、時刻表——usually、always、every Monday。時刻表上的未來也可以用：The shop opens at 9.',
+   '<b>現在進行式</b>（be + V-ing）：此刻正在發生——now、right now、at the moment。',
+   '<b>過去簡單式</b>：過去某個時間點——yesterday、last Friday、two days ago。',
+   '<b>未來式</b>（will / be going to）：tomorrow、next week。'],
+  head:['MEMO','To: All sales staff','From: Daniel Ho','Date: Monday, March 3','Re: Weekly meeting'],
+  text:`We usually {1} every Monday at 10 a.m. This week, [however|然而], the meeting will be on Wednesday, because several of you {2} a [trade fair|商展] in Taichung right now.
+
+Last Friday, Ms. Walker from Brightway Foods {3} us to ask about a new [contract|合約]. She {4} our office next Thursday to [discuss|討論] the details, so we need to prepare our [proposal|提案] before then.
+
+At Wednesday's meeting, Tina {5} the numbers from last [quarter|季]. Please read the [attached|附加的] report before you come. The meeting room {6} at 9:45, so please don't arrive too early.`,
+  qs:[
+   {o:['meet','meets','are meeting','met'], a:0, why:'usually、every Monday 是習慣，用現在簡單式；主詞 We 是複數，用原形 meet。'},
+   {o:['attend','attended','are attending','will attend'], a:2, why:'right now 表示「此刻正在」，用現在進行式 are attending（正在參加）。'},
+   {o:['calls','called','has called','is calling'], a:1, why:'Last Friday 是明確的過去時間，用過去簡單式。有明確過去時間時不能用現在完成式。'},
+   {o:['visited','visits','will visit','was visiting'], a:2, why:'next Thursday 是未來，用 will visit。'},
+   {o:['present','presented','will present','has presented'], a:2, why:'會議在週三，還沒發生，用未來式 will present（報告）。'},
+   {o:['opened','opens','has opened','opening'], a:1, why:'會議室幾點開，像時刻表，未來的時間表用現在簡單式 opens。'}],
+  zh:`我們通常每週一早上十點開會。但這週會議改到週三，因為你們有幾位現在正在台中參加商展。
+
+上週五，晴路食品的沃克女士打電話來詢問新合約。她下週四會來辦公室討論細節，所以我們得在那之前準備好提案。
+
+週三的會議上，蒂娜會報告上一季的數字。來之前請先看附件報告。會議室九點四十五分才開，所以請不要太早到。`},
+
+{ id:'g04', t:'倉庫', topic:'時態（二）：現在完成式',
+  lesson:[
+   '<b>現在完成式</b>（have / has + 過去分詞）：從過去<b>持續到現在</b>，或過去發生、<b>影響到現在</b>。',
+   '線索：<b>since</b> + 時間點（since 2019、since last summer）、<b>for</b> + 一段時間（for six years）、already、yet、so far、recently。',
+   '<b>陷阱</b>：有明確的過去時間（yesterday、in 2009、last year、ago），一律用過去式，不能用現在完成式。'],
+  text:`On Thursday, Tina took Mia to the [warehouse|倉庫]. "I {1} here for six years," Tina said, "and this is still my [favourite|最喜歡的] place."
+
+The warehouse manager, Mr. Lin, {2} the company in 2009. He knows every [shelf|架子]. "We {3} three new [forklifts|堆高機] since last summer," he told Mia, "so things move much faster now."
+
+Mia asked about the yearly [stock check|盤點]. "We {4} it yet," Mr. Lin said. "We usually do it in April. Last year it {5} four whole days."
+
+Before they left, Tina checked her list. "So far, we {6} two problems: a broken [pallet|棧板] and a [missing|不見的] box. Not bad for one morning."`,
+  qs:[
+   {o:['work','worked','have worked','am worked'], a:2, why:'for six years，而且她現在還在這裡工作——從過去持續到現在，用現在完成式。'},
+   {o:['has joined','joined','joins','was joining'], a:1, why:'in 2009 是明確的過去時間，用過去簡單式 joined。'},
+   {o:['buy','bought','have bought','are buying'], a:2, why:'since last summer（從去年夏天以來），搭配現在完成式。'},
+   {o:['didn\'t start','haven\'t started','don\'t start','won\'t started'], a:1, why:'yet 用在現在完成式的否定句：haven\'t started yet（還沒開始）。'},
+   {o:['has taken','takes','took','is taking'], a:2, why:'Last year 是明確的過去時間，用過去式 took（花了）。'},
+   {o:['found','have found','find','had found'], a:1, why:'So far（到目前為止）是現在完成式的典型線索。'}],
+  zh:`週四，蒂娜帶米亞去倉庫。「我在這裡工作六年了，」蒂娜說，「這裡還是我最喜歡的地方。」
+
+倉庫主管林先生 2009 年進公司，每個架子他都熟。「從去年夏天到現在，我們買了三台新堆高機，」他告訴米亞，「所以現在東西搬得快多了。」
+
+米亞問起年度盤點。「我們還沒開始，」林先生說，「通常四月做。去年花了整整四天。」
+
+離開前蒂娜看了看清單。「到目前為止發現兩個問題：一個壞掉的棧板和一個不見的箱子。一個早上來說不算差。」`},
+
+{ id:'g05', t:'新印表機', topic:'被動語態',
+  lesson:[
+   '主詞自己「做」動作 → 主動；主詞「被」做 → <b>被動：be + 過去分詞</b>。',
+   '判斷：主詞能不能自己做這件事？印表機不會自己安裝 → The printer <b>was installed</b>.',
+   '時態照樣要對：is made / was made / has been made / will be made / should be made。',
+   '情態動詞 + 被動：should <b>be</b> reported、must <b>be</b> signed。'],
+  head:['NOTICE','New printer on the second floor'],
+  text:`A new [colour|彩色] printer {1} on the second floor last Tuesday. It {2} in the corner next to the kitchen, where the old [copier|影印機] used to be.
+
+All staff can use the printer, but each print job {3} to your [department|部門]. To print, simply [tap|輕碰] your [access card|門禁卡] on the [reader|讀卡機].
+
+The old copier {4} to our Taichung office next week. Until then, it has {5} to the [storage room|儲藏室].
+
+If the printer stops working, please do not try to fix it yourself. Problems should {6} to the IT department.`,
+  qs:[
+   {o:['installed','was installed','has installed','installing'], a:1, why:'印表機不會自己安裝，要被動；last Tuesday 是過去 → was installed。'},
+   {o:['places','is placed','placing','has placed'], a:1, why:'印表機是「被放在」角落，被動的現在式 is placed。'},
+   {o:['charges','is charged','charging','charged'], a:1, why:'費用是「被記到」各部門，被動 is charged。只寫 charged 缺少 be 動詞。'},
+   {o:['will send','will be sent','sends','sent'], a:1, why:'影印機是「被送走」，next week 是未來 → will be sent。'},
+   {o:['moved','been moved','move','moving'], a:1, why:'has 後面接過去分詞；影印機是被搬的，所以是 has been moved。'},
+   {o:['report','reported','be reported','reporting'], a:2, why:'should 後面接原形；問題是「被回報」，所以 should be reported。'}],
+  zh:`公告：二樓新印表機
+
+上週二，一台新的彩色印表機裝在二樓，就在茶水間旁邊的角落，原本放舊影印機的地方。
+
+所有同仁都能使用，但每次列印都會記到你的部門。要列印，只要把門禁卡輕碰讀卡機即可。
+
+舊影印機下週會送到台中辦公室，在那之前先搬到儲藏室。
+
+印表機故障時請不要自己修，問題請回報資訊部。`},
+
+{ id:'g06', t:'客戶來訪', topic:'主詞與動詞一致',
+  lesson:[
+   '動詞要跟「真正的主詞」一致，不是跟最靠近的名詞：The list <b>of products</b> <b>is</b> ready.（主詞是 list）',
+   '<b>Each / Every</b> + 單數名詞 → 單數動詞；Each of + 複數名詞 → 還是單數（主詞是 Each）。',
+   '<b>A number of</b> + 複數（許多）→ 複數動詞；<b>The number of</b> + 複數（…的數量）→ 單數動詞。',
+   '<b>Neither A nor B / Either A or B</b> → 動詞跟靠近的 B 一致。'],
+  text:`Ms. Walker arrived on Thursday afternoon. The [samples|樣品] from our new [supplier|供應商] {1} already on the table.
+
+"Each of these items {2} been tested for [quality|品質]," Mr. Ho [explained|解釋]. Ms. Walker looked carefully. "The number of [options|選擇] {3} [impressive|令人印象深刻的]," she said. "But a number of my customers {4} asked for [organic|有機的] products."
+
+Mia checked her notes. "Neither the green tea nor the [dried fruits|果乾] {5} organic yet," she said, "but our supplier plans to change that next year."
+
+Ms. Walker smiled. "Every company I work with {6} it has a plan. Yours actually sounds real."`,
+  qs:[
+   {o:['is','are','was','be'], a:1, why:'主詞是 samples（複數），from our new supplier 只是修飾，動詞用 are。'},
+   {o:['have','has','having','are'], a:1, why:'Each of + 複數名詞，真正的主詞是 Each（單數）→ has been tested。'},
+   {o:['is','are','were','have'], a:0, why:'The number of + 複數名詞，主詞是 number（數量），單數 → is。'},
+   {o:['has','have','is','was'], a:1, why:'A number of + 複數名詞＝「許多」，複數 → have asked。'},
+   {o:['is','are','be','being'], a:1, why:'Neither A nor B，動詞跟靠近的 B 一致：the dried fruits 是複數 → are。'},
+   {o:['say','says','have said','saying'], a:1, why:'Every company 是單數，動詞用 says；I work with 只是修飾 company 的子句。'}],
+  zh:`沃克女士週四下午到了。新供應商的樣品已經擺在桌上。
+
+「這裡每一項都做過品質檢驗，」何經理解釋。沃克女士仔細看了看。「選擇的數量很可觀，」她說，「不過我有不少客戶在問有機產品。」
+
+米亞看了看筆記。「綠茶和果乾目前都還不是有機的，」她說，「但供應商打算明年改。」
+
+沃克女士笑了。「跟我合作的每家公司都說自己有計畫。你們的聽起來倒是真的。」`},
+
+{ id:'g07', t:'颱風', topic:'介系詞 vs 連接詞',
+  lesson:[
+   '看空格<b>後面接什麼</b>：接名詞（片語）→ 介系詞；接完整句子（主詞 + 動詞）→ 連接詞。',
+   '原因：<b>because of / due to</b> + 名詞；<b>because / since</b> + 句子。',
+   '讓步：<b>despite / in spite of</b> + 名詞；<b>although / even though</b> + 句子。',
+   '時間：<b>during</b> + 名詞；<b>while</b> + 句子。<b>by</b> + 時間點；<b>until</b> 可接時間點也可接句子。'],
+  head:['From: Daniel Ho','To: All staff','Subject: Typhoon Aru — office closed tomorrow'],
+  text:`Dear all,
+
+{1} the strong winds [expected|預計的] tomorrow, the Keelung city government has closed all offices. Our office will also be closed.
+
+{2} the office is closed, our customers still need answers. Please check your email from home {3} the morning, and reply to anything [urgent|緊急的].
+
+{4} the storm, our warehouse team [secured|固定好] all outdoor [containers|貨櫃] this afternoon. Thank you, Mr. Lin!
+
+Please do not come in {5} you receive a message from me saying it is safe. {6} the office reopens, we will hold a short meeting to check for any [damage|損壞].
+
+Stay safe,
+Daniel`,
+  qs:[
+   {o:['Because','Because of','Although','Despite'], a:1, why:'後面 the strong winds expected tomorrow 是名詞片語，不是句子，用介系詞 Because of。'},
+   {o:['Despite','Even though','Due to','During'], a:1, why:'後面 the office is closed 是完整句子，語意是「雖然」，用連接詞 Even though。'},
+   {o:['while','during','since','until'], a:1, why:'the morning 是名詞，「在…期間」用介系詞 during。'},
+   {o:['Before','Although','Because','Unless'], a:0, why:'the storm 是名詞。四個選項只有 Before 能當介系詞，意思也對：在暴風雨來之前。'},
+   {o:['until','by','during','despite'], a:0, why:'後面是句子，意思是「直到收到訊息才來」，用 until。by 後面不能接句子。'},
+   {o:['As soon as','Due to','In spite of','Because of'], a:0, why:'後面是完整句子，要連接詞；As soon as（一…就）意思也對。'}],
+  zh:`各位好：
+
+由於明天預計有強風，基隆市政府已宣布停班，我們公司也會休息。
+
+雖然辦公室關閉，客戶還是需要回覆。上午請在家收信，緊急的事請回覆。
+
+暴風雨來之前，倉庫團隊今天下午已經把戶外貨櫃全部固定好了。謝謝林先生！
+
+在收到我通知安全之前，請不要進公司。辦公室一恢復上班，我們會開個短會檢查有沒有損壞。
+
+注意安全，
+丹尼`},
+
+{ id:'g08', t:'第一份報價單', topic:'代名詞',
+  lesson:[
+   '<b>主格</b> I / he / she / it / we / they：當主詞。<b>受格</b> me / him / her / us / them：放在動詞或介系詞後面。',
+   '<b>所有格</b> my / her / its / our / their：後面<b>一定接名詞</b>。',
+   '<b>所有格代名詞</b> mine / hers / ours / theirs：後面<b>不接名詞</b>，自己就代表「某人的東西」。',
+   '<b>反身代名詞</b> myself / herself / themselves：主詞和受詞是同一人，或 by herself（獨自）。',
+   'its 是所有格；it\'s ＝ it is。'],
+  text:`The next week, Mr. Ho asked Mia to prepare a [quotation|報價單] for Brightway Foods by {1}. Tina offered to help, but Mia wanted to try it on {2} own first.
+
+She looked at two old quotations from other [suppliers|供應商]. The first one was clear and simple, but the second one had far too many pages. "The first supplier did a better job — {3} is much easier to read," she thought.
+
+When she finished, she sent the file to Tina. Tina wrote back: "Good work! I made a few small changes to the prices, so please check {4} before you send it."
+
+Ms. Walker replied the same afternoon. "Thank you for your quotation," she wrote. "{5} team will [review|審閱] it this week and send {6} our answer by Friday."`,
+  qs:[
+   {o:['she','her','herself','hers'], a:2, why:'by herself＝獨自完成。要做報價單的是 Mia 自己，指回同一個人，用反身代名詞 herself。'},
+   {o:['she','her','hers','herself'], a:1, why:'on one\'s own（靠自己）：own 前面要所有格 her。'},
+   {o:['their','theirs','they','them'], a:1, why:'空格後面直接是動詞 is，沒有名詞，要用所有格代名詞 theirs（＝他們的報價單）。their 後面一定要接名詞。'},
+   {o:['it','they','them','their'], a:2, why:'指前面的 prices（複數），放在動詞 check 後面當受詞 → them。'},
+   {o:['We','Our','Ours','Us'], a:1, why:'後面有名詞 team，要用所有格 Our。'},
+   {o:['you','your','yours','yourself'], a:0, why:'send 人 + 東西：send you our answer，「人」放受格 you。'}],
+  zh:`隔週，何經理要米亞自己幫晴路食品準備一份報價單。蒂娜說要幫忙，但米亞想先靠自己試試看。
+
+她看了兩份其他供應商的舊報價單。第一份清楚簡單，第二份頁數多得誇張。「第一家做得比較好——他們的好讀多了。」她想。
+
+做完後她把檔案寄給蒂娜。蒂娜回信：「做得好！我改了幾個價格，寄出前請再檢查一下。」
+
+沃克女士當天下午就回覆了。「謝謝你們的報價，」她寫道，「我們團隊這週會審閱，週五前把答覆寄給你們。」`}
+
+];
+
+</script>
+<script>
+/* ───── data/grammar-2.js ───── */
+/* ═══════════════════════════════════════════════════════
+   grammar-2.js — 文法故事（第 9–16 集）
+   接在 grammar-1.js 後面載入，欄位說明見 grammar-1.js。
+   ═══════════════════════════════════════════════════════ */
+GRAMMAR.push(
+
+{ id:'g09', t:'比價', topic:'比較級與最高級',
+  lesson:[
+   '兩者比較用<b>比較級</b>：-er 或 more + 形容詞，後面常有 <b>than</b>。',
+   '三者以上用<b>最高級</b>：the -est 或 the most，常見線索 <b>the</b>、of the three、of all、in the city。',
+   '不規則：good – better – best、bad – worse – worst、little – less – least、many / much – more – most。',
+   '加強比較級用 <b>much / far / even</b>（much better），不能用 very。'],
+  text:`Mr. Ho asked Mia to [compare|比較] three shipping companies. She made a table and wrote a short report.
+
+"BlueWave is {1} than the other two, but its ships are often late. SeaLink costs a little more, and its service is {2} better — they have never missed a date. Pacific Star is the {3} of the three. It is also the {4} company, so it has less [experience|經驗]."
+
+She added a note at the end: "This year, our [shipments|貨運] to Japan are {5} than last year, so [reliability|可靠度] matters more than price. SeaLink is the {6} choice for us."`,
+  qs:[
+   {o:['cheap','cheaper','cheapest','more cheap'], a:1, why:'後面有 than，用比較級 cheaper。'},
+   {o:['very','much','most','more'], a:1, why:'加強比較級 better 要用 much（far、even 也行），不能用 very。'},
+   {o:['expensive','more expensive','most expensive','expensiver'], a:2, why:'the ___ of the three：三者比較，用最高級 the most expensive。長的形容詞用 most，不加 -est。'},
+   {o:['newest','newer','new','more new'], a:0, why:'前面有 the，而且是三家公司互相比較，用最高級 newest。'},
+   {o:['large','larger','largest','more large'], a:1, why:'後面有 than last year，用比較級 larger。'},
+   {o:['good','better','best','well'], a:2, why:'前面有 the，是在三家裡選一家，用最高級 best。'}],
+  zh:`何經理要米亞比較三家船運公司。她做了一張表，寫了簡短報告。
+
+「藍浪比另外兩家便宜，但船常常誤點。海連貴一點，服務卻好得多——從沒延誤過。太平洋之星是三家中最貴的，也是最新的公司，所以經驗比較少。」
+
+她在最後加了一段：「今年我們到日本的貨量比去年大，所以可靠度比價格重要。海連是對我們最好的選擇。」`},
+
+{ id:'g10', t:'尾牙', topic:'不定詞（to V）與動名詞（V-ing）',
+  lesson:[
+   '後面接 <b>to V</b> 的動詞：decide、plan、hope、want、agree、offer、refuse、need、expect、promise。',
+   '後面接 <b>V-ing</b> 的動詞：enjoy、finish、avoid、suggest、mind、consider、keep、practise。',
+   '<b>介系詞後面一定接 V-ing</b>：interested in joining、before leaving、thank you for coming。',
+   '最大陷阱：<b>look forward to + V-ing</b>——這裡的 to 是介系詞，不是不定詞。'],
+  head:['From: Tina Wu','To: All staff','Subject: Year-end party'],
+  text:`Hi everyone,
+
+Mr. Ho has decided {1} this year's [year-end party|尾牙] at a [seafood|海鮮] restaurant near the port. We are planning {2} there on Friday, January 17.
+
+I suggest {3} the train, because parking near the port is difficult. If you are interested in {4} a [performance|表演], please tell me by next Monday. Last year, Raj's magic show was the best part of the night — we all enjoyed {5} him make Mr. Ho's phone [disappear|消失]!
+
+We look forward to {6} everyone there.
+
+Tina`,
+  qs:[
+   {o:['hold','to hold','holding','held'], a:1, why:'decide 後面接 to V：decided to hold（決定舉辦）。'},
+   {o:['meet','to meet','meeting','met'], a:1, why:'plan 後面接 to V：planning to meet。'},
+   {o:['take','to take','taking','took'], a:2, why:'suggest 後面接 V-ing（或 that 子句），不能接 to V。'},
+   {o:['give','to give','giving','gave'], a:2, why:'interested in——介系詞 in 後面接 V-ing。'},
+   {o:['watch','to watch','watching','watched'], a:2, why:'enjoy 後面接 V-ing。'},
+   {o:['see','to see','seeing','seen'], a:2, why:'look forward to 的 to 是介系詞，後面接 V-ing。這是 Part 5 最愛考的陷阱。'}],
+  zh:`大家好：
+
+何經理決定今年尾牙辦在港口附近的一家海鮮餐廳。我們預計一月十七日週五在那裡見。
+
+港口附近很難停車，建議大家搭火車。有興趣表演的，請在下週一前告訴我。去年拉吉的魔術秀是整晚最精彩的部分——大家都很愛看他把何經理的手機變不見！
+
+期待在那裡見到大家。
+
+蒂娜`},
+
+{ id:'g11', t:'大阪出差', topic:'時間介系詞',
+  lesson:[
+   '<b>at</b> + 時刻（at 7:40）；<b>on</b> + 星期、日期（on Tuesday、on March 11）；<b>in</b> + 月、年、季節、早上下午（in March、in the morning）。',
+   '<b>by</b>：最晚在某時之前「完成」。<b>until</b>：一直「持續」到某時。',
+   '<b>for</b> + 一段時間（for three nights）；<b>during</b> + 事件或期間（during the fair）；<b>within</b>：在…之內。',
+   '<b>since</b> + 起點（since Monday），常配現在完成式。'],
+  text:`In March, Mia went on her first [business trip|出差], to a food [fair|展覽] in Osaka. Her flight left {1} 7:40 in the morning {2} Tuesday, March 11.
+
+The travel [agent|代辦人員]'s email was clear: "Please check in {3} 6:10 at the latest. Your hotel room is booked {4} three nights, and you can stay in the room {5} noon on Friday."
+
+{6} the fair, Mia met more than twenty [buyers|買家]. She sent Mr. Ho a short report every evening.`,
+  qs:[
+   {o:['in','on','at','by'], a:2, why:'精確的時刻用 at。'},
+   {o:['in','on','at','during'], a:1, why:'星期、日期用 on。'},
+   {o:['until','by','at','for'], a:1, why:'at the latest（最晚）表示「在那之前完成」，用 by。until 是一直持續到某時。'},
+   {o:['during','for','since','within'], a:1, why:'for + 一段時間（三晚）。'},
+   {o:['by','until','in','since'], a:1, why:'「可以一直待到週五中午」是持續狀態，用 until。'},
+   {o:['While','During','For','Since'], a:1, why:'the fair 是名詞（事件），用 During。While 後面要接句子。'}],
+  zh:`三月，米亞第一次出差，去大阪參加食品展。她的班機在三月十一日週二早上七點四十分起飛。
+
+旅行社的信寫得很清楚：「最晚請在六點十分前報到。飯店訂了三晚，房間可以住到週五中午。」
+
+展覽期間米亞見了二十多位買家，每天晚上都寄一份簡短報告給何經理。`},
+
+{ id:'g12', t:'面試', topic:'關係代名詞',
+  lesson:[
+   '<b>who</b>：指人，在子句裡當主詞。<b>which</b>：指事物。<b>that</b>：人事物都可以，但<b>逗號後面不能用 that</b>。',
+   '<b>whose</b> + 名詞：表示「…的」（所有）：a man <b>whose</b> English was excellent。',
+   '<b>whom</b>：指人，當受詞，最常出現在介系詞後面：to whom、with whom。',
+   '做法：先看先行詞是人還是事物，再看空格在子句裡缺主詞、缺受詞，還是後面直接接名詞。'],
+  text:`In April, the company needed a new [assistant|助理] {1} could speak Japanese. Mr. Ho asked Mia, {2} trip to Osaka had gone well, to help with the [interviews|面試].
+
+The first person was a young man {3} English was excellent but {4} spoke only basic Japanese. The second was Ms. Sato, a woman {5} had worked for a Japanese [trading company|貿易公司] for five years.
+
+After the interviews, Mr. Ho asked Mia which person she [preferred|比較喜歡]. "Ms. Sato," she said. "She's the person to {6} our Japanese customers will feel most [comfortable|自在的] talking."`,
+  qs:[
+   {o:['who','which','whose','whom'], a:0, why:'先行詞 assistant 是人，空格在子句裡當主詞（___ could speak），用 who。'},
+   {o:['who','which','whose','that'], a:2, why:'空格後面接名詞 trip（米亞的出差），表示所有，用 whose。而且逗號後面不能用 that。'},
+   {o:['who','whose','which','whom'], a:1, why:'後面直接接名詞 English（他的英文），用 whose。'},
+   {o:['who','whose','which','where'], a:0, why:'先行詞是人，子句缺主詞（___ spoke），用 who。'},
+   {o:['which','who','whose','where'], a:1, why:'先行詞 woman 是人，子句缺主詞，用 who。'},
+   {o:['who','whom','whose','which'], a:1, why:'介系詞 to 後面，指人要用受格 whom（talk to whom）。'}],
+  zh:`四月，公司需要一位會說日文的新助理。何經理請大阪出差很順利的米亞幫忙面試。
+
+第一位是個年輕男生，英文很好，日文只會基礎。第二位是佐藤小姐，在日本貿易公司做了五年。
+
+面試結束後，何經理問米亞比較喜歡誰。「佐藤小姐，」她說，「日本客戶跟她聊最自在。」`},
+
+{ id:'g13', t:'客訴', topic:'-ed / -ing 形容詞與使役動詞',
+  lesson:[
+   '<b>-ed</b>：描述「人的感受」——I am <b>bored</b> / <b>disappointed</b> / <b>interested</b>。',
+   '<b>-ing</b>：描述「讓人有這種感受的事物」——The movie is <b>boring</b>. It was a <b>disappointing</b> result.',
+   '<b>使役</b>：have / get + 東西 + <b>過去分詞</b>＝請別人把東西處理好。We <b>had</b> the machine <b>repaired</b>.（機器被修）',
+   '判斷：東西是「被」處理 → 過去分詞；人自己去做 → have + 人 + 原形（I had Tom check it）。'],
+  head:['From: Mia Chen','To: Mr. Kevin Lau','Subject: Re: Damaged order #4471'],
+  text:`Dear Mr. Lau,
+
+Thank you for your email. You wrote that you were very {1} with your last order, and that the delivery was a very {2} [experience|經驗]. I [completely|完全] understand.
+
+We were {3} to hear that half of the boxes arrived [damaged|損壞的]. We have already had new boxes {4} to you by [express|快遞], at no cost.
+
+Last month we also had our [delivery process|配送流程] {5} by an outside company, and their report was {6}. We are now making changes to how we pack and deliver every order.
+
+Kind regards,
+Mia Chen`,
+  qs:[
+   {o:['disappointing','disappointed','disappoint','disappointment'], a:1, why:'描述「人（you）的感受」用 -ed：disappointed（感到失望）。'},
+   {o:['frustrating','frustrated','frustrate','frustration'], a:0, why:'修飾 experience（讓人挫折的經驗），用 -ing。'},
+   {o:['shocking','shocked','shock','shocks'], a:1, why:'主詞 We 是人，描述我們的感受，用 -ed：shocked。'},
+   {o:['send','sent','sending','to send'], a:1, why:'have + 東西 + 過去分詞：箱子是「被寄出」，用 sent。'},
+   {o:['check','checked','checking','to check'], a:1, why:'同樣是使役：流程是「被外部公司檢查」，had our process checked。'},
+   {o:['surprising','surprised','surprise','surprisingly'], a:0, why:'修飾 report（讓人驚訝的報告），用 -ing。'}],
+  zh:`劉先生您好：
+
+謝謝您的來信。您提到對上一筆訂單非常失望，這次配送的經驗很令人挫折。我完全理解。
+
+得知有一半的箱子送到時已損壞，我們很震驚。新的箱子已經安排快遞寄給您，不收任何費用。
+
+上個月我們也請外部公司檢查配送流程，他們的報告很出人意料。我們正在改進每一筆訂單的包裝和配送方式。
+
+陳米亞 敬上`},
+
+{ id:'g14', t:'預算會議', topic:'數量詞',
+  lesson:[
+   '<b>可數複數</b>：many、(a) few、several、a number of。<b>不可數</b>：much、(a) little、an amount of。',
+   '<b>a few / a little</b>＝有一些；<b>few / little</b>＝幾乎沒有（語氣偏否定）。',
+   '<b>each / every</b> + 單數名詞；<b>all / most / many</b> + 複數名詞。',
+   '總共兩個：一個是 one，剩下那一個是 <b>the other</b>。<b>another</b>＝再一個（還有其他的）。'],
+  text:`In June, Mr. Ho called a [budget|預算] meeting. "We don't have {1} money left for the second half of the year," he said, "so we need to make {2} changes."
+
+Tina had a few ideas. "We use too {3} paper," she said. "If {4} department saves just a little, it adds up."
+
+Raj [suggested|建議] moving the office's files to the [cloud|雲端]. "We have two old [servers|伺服器]. One is already broken, and {5} one is ten years old."
+
+Mr. Ho agreed. "Very {6} companies still keep their own servers these days. Let's move ours."`,
+  qs:[
+   {o:['many','much','few','a number of'], a:1, why:'money 不可數，否定句用 much。'},
+   {o:['a little','much','a few','little'], a:2, why:'changes 是可數複數，要用 a few（一些）。a little、much、little 都接不可數。'},
+   {o:['many','much','few','each'], a:1, why:'paper（紙張）不可數，too much。'},
+   {o:['all','every','most','many'], a:1, why:'department 是單數，要用 every（each 也行）。all、most、many 後面要接複數。'},
+   {o:['another','the other','other','others'], a:1, why:'總共只有兩台，一台說過了，剩下的「那一台」用 the other。'},
+   {o:['few','little','much','a few'], a:0, why:'companies 可數，意思是「很少、幾乎沒有公司還…」，用 few。very a few 不合文法。'}],
+  zh:`六月，何經理召開預算會議。「下半年剩的錢不多，」他說，「所以得做一些調整。」
+
+蒂娜有幾個點子。「我們用的紙太多了，」她說，「如果每個部門都省一點，加起來就很可觀。」
+
+拉吉建議把公司的檔案搬到雲端。「我們有兩台舊伺服器，一台已經壞了，另一台也用了十年。」
+
+何經理同意。「現在很少公司還自己放伺服器了。我們也搬吧。」`},
+
+{ id:'g15', t:'簽約', topic:'配對連接詞與條件句',
+  lesson:[
+   '<b>配對連接詞</b>——看到前半，就去找後半：<b>both</b> A <b>and</b> B、<b>either</b> A <b>or</b> B、<b>neither</b> A <b>nor</b> B、<b>not only</b> A <b>but (also)</b> B。',
+   '<b>if</b>：如果。<b>unless</b>：除非（＝if not）。<b>as long as</b>：只要。',
+   '<b>whether</b>：是否，常配 or not、或 A or B：ask whether it starts in August or September。'],
+  text:`In July, Brightway Foods finally agreed to sign a one-year [contract|合約]. The contract [covers|涵蓋] both green tea {1} dried fruit.
+
+Ms. Walker added one [condition|條件]. "We will always pay on time, {2} your deliveries are late. If a delivery is more than three days late, we will pay {3} the full price nor the delivery fee."
+
+Mr. Ho asked {4} the contract could start in August or September. "Either month is fine," Ms. Walker said, "{5} you can start shipping [organic|有機的] tea by the end of the year."
+
+The contract was signed in August. It was not only the company's biggest deal of the year {6} Mia's first real success.`,
+  qs:[
+   {o:['or','and','nor','but'], a:1, why:'both A and B 是固定配對。'},
+   {o:['if','unless','whether','as long as'], a:1, why:'意思是「除非你們遲交，否則我們一定準時付」，用 unless（＝if not）。'},
+   {o:['either','neither','both','not only'], a:1, why:'後面有 nor，配對的是 neither。'},
+   {o:['that','whether','unless','either'], a:1, why:'「問是否在八月或九月開始」，用 whether…or。'},
+   {o:['unless','as long as','whether','neither'], a:1, why:'「只要你們年底前能出有機茶，哪個月都可以」，用 as long as。unless 意思剛好相反。'},
+   {o:['and','or','but also','nor'], a:2, why:'not only A but (also) B 是固定配對。'}],
+  zh:`七月，晴路食品終於同意簽一年的合約，綠茶和果乾都包含在內。
+
+沃克女士加了一個條件。「除非你們交貨延遲，否則我們一定準時付款。如果延遲超過三天，全額貨款和運費我們都不付。」
+
+何經理問合約能不能從八月或九月開始。「哪個月都可以，」沃克女士說，「只要年底前能開始出有機茶就好。」
+
+合約在八月簽定。這不只是公司今年最大的一筆生意，也是米亞第一次真正的成功。`},
+
+{ id:'g16', t:'一年後', topic:'綜合複習',
+  lesson:[
+   '最後一集把前面的重點混在一起。做題時照順序問自己：',
+   '1. 空格要什麼<b>詞性</b>？（修飾名詞、動詞，還是當主詞？）',
+   '2. 動詞的<b>時態</b>和<b>主動 / 被動</b>？（找時間線索；主詞能不能自己做？）',
+   '3. 空格後面是<b>名詞</b>還是<b>句子</b>？（介系詞 vs 連接詞）',
+   '4. 有沒有<b>配對字</b>？（than、nor、but also、the + 最高級）'],
+  text:`One year after her first nervous morning, Mia was called into Mr. Ho's office. "You {1} a lot since you joined us," he said. "The Brightway contract alone {2} our sales by fifteen per cent."
+
+He handed her a letter. "From next month, you will be the {3} of our new Japan team. {4} the team is small, it is very [important|重要的] to us."
+
+Mia read the letter {5}. She was so {6} that she forgot to say thank you. Mr. Ho laughed. "Go and tell Tina. She'll be even happier than you are."`,
+  qs:[
+   {o:['learn','learned','have learned','are learning'], a:2, why:'since you joined us（自從妳加入以來）→ 現在完成式 have learned。'},
+   {o:['increase','increased','was increased','increasing'], a:1, why:'是合約「讓」業績增加，主動；說的是已經發生的事 → 過去式 increased。was increased 是被動，意思不對。'},
+   {o:['lead','leader','leading','leadership'], a:1, why:'the 後面要名詞；指「人」用 leader。leadership 是「領導能力」。'},
+   {o:['Despite','Although','Because of','During'], a:1, why:'後面是完整句子，語意是「雖然」，用連接詞 Although。'},
+   {o:['careful','carefully','care','careless'], a:1, why:'修飾動詞 read，用副詞 carefully。'},
+   {o:['exciting','excited','excite','excitement'], a:1, why:'描述人（She）的感受，用 -ed：excited。'}],
+  zh:`距離那個緊張的第一個早上一年後，米亞被叫進何經理的辦公室。「妳進公司以來學了很多，」他說，「光是晴路那份合約，就讓我們業績成長了百分之十五。」
+
+他遞給她一封信。「從下個月起，妳是我們新日本小組的負責人。小組雖然小，對我們非常重要。」
+
+米亞仔細讀了那封信。她興奮到忘了說謝謝。何經理笑了。「去跟蒂娜說吧。她會比妳還開心。」`}
+
+);
+
+</script>
+<script>
+if(typeof GRAMMAR === 'undefined'){
+  document.body.innerHTML = '<div style="max-width:520px;margin:60px auto;padding:24px;background:#f7f2e6;border:3px solid #1b1826;color:#2a2438;font-size:15px;line-height:1.9"><b>找不到文法資料</b><br><br>需要同一個資料夾裡的 data/grammar-1.js、data/grammar-2.js。</div>';
+  throw new Error('GRAMMAR not loaded');
+}
+const $ = id => document.getElementById(id);
+const KEY = 'pxgrammar.v1';
+const REVIEW = -1;
+const esc = t => String(t).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
+const shuffle = a => { for(let i=a.length-1;i>0;i--){ const j=Math.floor(Math.random()*(i+1)); [a[i],a[j]]=[a[j],a[i]]; } return a; };
+
+function load(){ try{ const d = JSON.parse(localStorage.getItem(KEY)||'{}'); d.done=d.done||{}; d.wrong=d.wrong||{}; return d; }catch(e){ return {done:{},wrong:{}}; } }
+function store(d){ try{ localStorage.setItem(KEY, JSON.stringify(d)); }catch(e){} }
+
+/* ── 文字轉 HTML：[字|中文] 可點；{n} 是空格 ── */
+function inline(s, fill){
+  return esc(s)
+    .replace(/\[([^\]|]+)\|([^\]]+)\]/g, (m,w,z)=>`<span class="sw" data-z="${z}">${w}</span>`)
+    .replace(/\{(\d+)\}/g, (m,n)=> fill ? fill(+n) : `<span class="bl" data-n="${n}">(${n})</span>`);
+}
+function paras(text, fill){
+  return text.split(/\n\s*\n/).map(p=>`<p>${inline(p, fill).replace(/\n/g,'<br>')}</p>`).join('');
+}
+function bindGloss(root){
+  root.querySelectorAll('.sw').forEach(el=> el.onclick = ()=>{
+    root.querySelectorAll('.sw.on').forEach(x=>x.classList.remove('on'));
+    el.classList.add('on');
+    const tip = $('tip');
+    if(tip) tip.innerHTML = `${esc(el.textContent)}　${esc(el.dataset.z)}`;
+  });
+}
+
+/* ── 選單 ── */
+let cur = 0;
+function buildPicker(){
+  const d = load();
+  const opts = GRAMMAR.map((e,i)=>{
+    const r = d.done[e.id];
+    const flag = !r ? '　' : r.best === r.total ? '●' : '◐';
+    return `<option value="${i}"${i===cur?' selected':''}>${flag} 第 ${i+1} 集 · ${e.t}　〔${e.topic}〕</option>`;
+  });
+  const nw = Object.keys(d.wrong).length;
+  opts.push(`<option value="${REVIEW}"${cur===REVIEW?' selected':''}${nw?'':' disabled'}>★ 錯題重練（${nw} 題）</option>`);
+  $('ep').innerHTML = opts.join('');
+  const full = GRAMMAR.filter(e=>d.done[e.id] && d.done[e.id].best===d.done[e.id].total).length;
+  const total = GRAMMAR.reduce((a,e)=>a+e.qs.length,0);
+  $('stat').textContent = `${GRAMMAR.length} 集 · ${total} 題　全對 ${full} 集`;
+}
+
+/* ═══ 一集 ═══════════════════════════════════════ */
+let E, qi, right, picks;
+function episode(i){
+  cur = i; E = GRAMMAR[i]; qi = 0; right = 0; picks = [];
+  $('ep').value = String(i);
+  const seen = !!load().done[E.id];
+  $('view').innerHTML = `
+    <details class="lesson"${seen?'':' open'}>
+      <summary><span>文法重點</span><span class="tp">${esc(E.topic)}</span></summary>
+      <div class="lb">${E.lesson.map(p=>`<p>${p}</p>`).join('')}</div>
+    </details>
+    <div class="doc"><div>
+      ${E.head ? `<div class="head">${E.head.map(h=>`<div>${esc(h)}</div>`).join('')}</div>` : ''}
+      <div class="txt" id="txt">${paras(E.text)}</div>
+    </div></div>
+    <div id="after"></div>
+    <div id="panel"></div>`;
+  bindGloss($('txt'));
+  ask();
+}
+
+/* 選項每次都洗牌顯示：資料裡的正解位置不平均，不洗會被看出規律 */
+function optsHTML(q){
+  return shuffle([0,1,2,3]).map((m,k)=>`<button class="opt" data-m="${m}"><span class="k">${'ABCD'[k]}</span>${esc(q.o[m])}</button>`).join('');
+}
+function blankEl(n){ return $('txt').querySelector(`.bl[data-n="${n}"]`); }
+
+function ask(){
+  const q = E.qs[qi], n = qi + 1;
+  $('txt').querySelectorAll('.bl.cur').forEach(x=>x.classList.remove('cur'));
+  const bl = blankEl(n); bl.classList.add('cur');
+  $('panel').innerHTML = `
+    <div id="tip"><span class="d">灰底字點一下看中文</span></div>
+    <div class="qh"><span>第 ${n} 題 · 空格 (${n}) 填哪一個？</span><span class="sp"></span><span>${n} / ${E.qs.length}</span></div>
+    <div class="opts">${optsHTML(q)}</div>
+    <div class="why" id="why"></div>`;
+  bindGloss($('txt'));
+  const btns = [...$('panel').querySelectorAll('.opt')];
+  btns.forEach(b=> b.onclick = ()=>{
+    if(btns[0].disabled) return;
+    btns.forEach(x=> x.disabled = true);
+    const m = +b.dataset.m, ok = m === q.a;
+    btns.find(x=>+x.dataset.m===q.a).classList.add('right');
+    if(!ok) b.classList.add('wrong'); else right++;
+    picks.push(m);
+    bl.classList.remove('cur'); bl.classList.add(ok ? 'ok' : 'no');
+    bl.innerHTML = ok ? esc(q.o[q.a]) : `<s>${esc(q.o[m])}</s>${esc(q.o[q.a])}`;
+    const d = load(), key = `${E.id}-${n}`;
+    if(ok) delete d.wrong[key]; else d.wrong[key] = 1;
+    store(d);
+    const last = qi === E.qs.length - 1;
+    $('why').innerHTML = `${ok ? '<b>對了。</b>' : `<b class="x">正解是 ${esc(q.o[q.a])}。</b>`}${esc(q.why)}
+      <div class="nx"><button id="bNext" class="go">${last ? '看結果' : '下一題'}</button></div>`;
+    $('bNext').onclick = ()=>{ qi++; if(qi < E.qs.length){ ask(); focusBlank(); } else finish(); };
+    $('bNext').focus({preventScroll:true});
+  });
+}
+function focusBlank(){
+  const bl = blankEl(qi+1);
+  if(bl) bl.scrollIntoView({block:'center', behavior:'smooth'});
+}
+
+function finish(){
+  const d = load(), total = E.qs.length;
+  const r = d.done[E.id] || {best:0,total,tries:0};
+  r.best = Math.max(r.best, right); r.total = total; r.tries = (r.tries||0)+1;
+  d.done[E.id] = r; store(d); buildPicker();
+  const misses = E.qs.map((q,i)=>({q,i,m:picks[i]})).filter(x=>x.m!==x.q.a);
+  $('panel').remove();
+  $('after').innerHTML = `
+    <div class="res">
+      <h2>第 ${cur+1} 集 · ${esc(E.t)}</h2>
+      <div class="big" style="color:${right===total?'var(--ok)':right>=total-1?'var(--ink)':'var(--bad)'}">${right} / ${total}</div>
+      <div style="font-size:14px;line-height:23px;color:var(--dim)">${right===total ? '這集的重點抓到了。' : `錯的 ${misses.length} 題已經收進「錯題重練」。`}</div>
+      ${misses.map(x=>`<div class="li">(${x.i+1}) ${esc(x.q.o[x.q.a])}　<span class="w">你選 ${esc(x.q.o[x.m])}</span><br><span class="w">${esc(x.q.why)}</span></div>`).join('')}
+    </div>
+    <div class="bar">
+      <button id="bZh">看全文翻譯</button>
+      <button id="bAgain">重做這集</button>
+      <span class="sp"></span>
+      ${cur < GRAMMAR.length-1 ? '<button id="bNextEp" class="go">下一集</button>' : ''}
+    </div>
+    <div class="zh hidden" id="zh">${esc(E.zh)}</div>
+    <div style="height:16px"></div>`;
+  $('bZh').onclick = ()=>{ const z=$('zh'); z.classList.toggle('hidden'); $('bZh').textContent = z.classList.contains('hidden') ? '看全文翻譯' : '收起翻譯'; if(!z.classList.contains('hidden')) z.scrollIntoView({behavior:'smooth',block:'nearest'}); };
+  $('bAgain').onclick = ()=>{ episode(cur); window.scrollTo(0,0); };
+  if($('bNextEp')) $('bNextEp').onclick = ()=>{ cur++; buildPicker(); episode(cur); window.scrollTo(0,0); };
+  $('after').scrollIntoView({behavior:'smooth', block:'start'});
+}
+
+/* ═══ 錯題重練：把錯的空格抽成單句，像 Part 5 ═══════ */
+function sentenceFor(e, n){
+  const para = e.text.split(/\n\s*\n/).find(p=>p.includes(`{${n}}`));
+  const sents = para.replace(/\n/g,' ').split(/(?<=[.!?]["”]?)\s+(?=["“]?[A-Z{\[])/);
+  const s = sents.find(x=>x.includes(`{${n}}`)) || para;
+  // 同一句裡的其他空格直接填正解
+  return s.replace(/\{(\d+)\}/g, (m,k)=> +k===n ? m : e.qs[+k-1].o[e.qs[+k-1].a]);
+}
+let R, ri, rRight;
+function review(){
+  cur = REVIEW;
+  const d = load();
+  R = shuffle(Object.keys(d.wrong).map(k=>{
+    const [id, n] = k.split('-'); const e = GRAMMAR.find(x=>x.id===id);
+    return e && e.qs[+n-1] ? {e, n:+n, key:k} : null;
+  }).filter(Boolean)).slice(0, 12);
+  ri = 0; rRight = 0;
+  if(!R.length){ $('view').innerHTML = '<div class="res">沒有錯題了。</div>'; return; }
+  reviewAsk();
+}
+function reviewAsk(){
+  const {e, n, key} = R[ri], q = e.qs[n-1];
+  $('view').innerHTML = `
+    <div class="doc"><div>
+      <div class="head"><div>錯題重練　${ri+1} / ${R.length}</div><div>出自第 ${GRAMMAR.indexOf(e)+1} 集〈${esc(e.t)}〉· ${esc(e.topic)}</div></div>
+      <div class="txt" id="txt"><p>${inline(sentenceFor(e,n))}</p></div>
+    </div></div>
+    <div id="panel">
+      <div id="tip"><span class="d">灰底字點一下看中文</span></div>
+      <div class="opts">${optsHTML(q)}</div>
+      <div class="why" id="why"></div>
+    </div>`;
+  const bl = $('txt').querySelector('.bl'); bl.classList.add('cur');
+  bindGloss($('txt'));
+  const btns = [...$('panel').querySelectorAll('.opt')];
+  btns.forEach(b=> b.onclick = ()=>{
+    if(btns[0].disabled) return;
+    btns.forEach(x=> x.disabled = true);
+    const m = +b.dataset.m, ok = m === q.a;
+    btns.find(x=>+x.dataset.m===q.a).classList.add('right');
+    if(!ok) b.classList.add('wrong'); else rRight++;
+    bl.classList.remove('cur'); bl.classList.add(ok?'ok':'no');
+    bl.innerHTML = ok ? esc(q.o[q.a]) : `<s>${esc(q.o[m])}</s>${esc(q.o[q.a])}`;
+    const d = load(); if(ok) delete d.wrong[key]; store(d);
+    const last = ri === R.length-1;
+    $('why').innerHTML = `${ok ? '<b>對了，這題從錯題清單移除。</b>' : `<b class="x">正解是 ${esc(q.o[q.a])}。</b>`}${esc(q.why)}
+      <div class="nx"><button id="bNext" class="go">${last?'看結果':'下一題'}</button></div>`;
+    $('bNext').onclick = ()=>{ ri++; if(ri < R.length) reviewAsk(); else reviewDone(); };
+    $('bNext').focus({preventScroll:true});
+  });
+}
+function reviewDone(){
+  buildPicker();
+  const left = Object.keys(load().wrong).length;
+  $('view').innerHTML = `<div class="res"><h2>錯題重練</h2>
+    <div class="big">${rRight} / ${R.length}</div>
+    <div style="font-size:14px;line-height:23px;color:var(--dim)">${left ? `清單裡還有 ${left} 題。` : '錯題清空了。'}</div></div>
+    <div class="bar">${left ? '<button id="bMore" class="go">再練一輪</button>' : ''}</div>`;
+  if($('bMore')) $('bMore').onclick = review;
+}
+
+/* ── 綁定 ── */
+$('ep').onchange = e=>{ const v = +e.target.value; if(v === REVIEW) review(); else episode(v); window.scrollTo(0,0); };
+$('bReset').onclick = ()=>{ if(!confirm('清除所有文法紀錄和錯題？')) return; try{ localStorage.removeItem(KEY); }catch(e){} buildPicker(); episode(cur < 0 ? 0 : cur); };
+document.addEventListener('keydown', e=>{
+  if(/^[1-4]$/.test(e.key)){ const b = document.querySelectorAll('#panel .opt')[+e.key-1]; if(b && !b.disabled) b.click(); }
+  if(e.key === 'Enter' && $('bNext')){ e.preventDefault(); $('bNext').click(); }
+});
+
+/* 從第一集還沒全對的開始 */
+(function(){
+  const d = load();
+  const n = GRAMMAR.findIndex(e=>!d.done[e.id] || d.done[e.id].best < d.done[e.id].total);
+  cur = n < 0 ? 0 : n;
+})();
+buildPicker();
+episode(cur);
+</script>
+</body>
+</html>
