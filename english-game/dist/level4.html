@@ -5198,6 +5198,112 @@ const LEVEL4_GLOSSARY = {
   'donate':'捐贈', 'transport':'運輸', 'official':'官員；正式的',
   'committee':'委員會', 'historian':'歷史學者', 'archive':'檔案庫',
   'archives':'歷史檔案', 'century':'世紀', 'apologize':'道歉',
+
+  // Volume XV reading help: harder words that were not tappable before. Not counted toward Level 4 coverage.
+  "astronomical":"天文的",
+  "authenticity":"真實性；是否為真品",
+  "betrayal":"背叛",
+  "biologist":"生物學家",
+  "bound":"（書）被裝訂；bind 的過去分詞",
+  "catchy":"朗朗上口的；吸引人的",
+  "clinician":"臨床醫護人員",
+  "clung":"緊貼；附著（cling 的過去式）",
+  "coastal":"沿海的；海岸的",
+  "cyclist":"騎自行車的人",
+  "deepen":"加深",
+  "dependence":"依賴；（對酒精或藥物）成癮",
+  "descendant":"後代；後裔",
+  "disagreement":"意見不合；分歧",
+  "dissatisfied":"不滿意的",
+  "doorframe":"門框",
+  "earnings":"收入；所得",
+  "emptiness":"空白；空無一物",
+  "exhaustion":"精疲力竭",
+  "factual":"根據事實的",
+  "famine":"饑荒",
+  "faulty":"有缺陷的；故障的",
+  "flawless":"完美無瑕的",
+  "fled":"逃離（flee 的過去式）",
+  "forbidden":"禁止（forbid 的過去分詞）；被禁止的",
+  "glossy":"光鮮亮麗的；有光澤的",
+  "handmade":"手工製作的",
+  "handwritten":"手寫的",
+  "harmless":"無害的",
+  "hazardous":"危險的；有害的",
+  "imperfect":"不完美的",
+  "improvised":"即興表演（improvise 的過去式）",
+  "inaccurate":"不準確的",
+  "inconvenience":"不便；小麻煩",
+  "incorrectly":"錯誤地",
+  "inferred":"推論出的（infer 的過去式／過去分詞）",
+  "initially":"起初",
+  "interface":"介面；操作畫面",
+  "investor":"投資者",
+  "invoice":"發票；請款單",
+  "ions":"離子（ion 的複數）",
+  "ledge":"岩架；突出的平台",
+  "lent":"借出（lend 的過去式／過去分詞）",
+  "measurements":"測量數據；尺寸",
+  "medic":"醫護人員",
+  "merely":"只是；僅僅",
+  "migrate":"（把資料）轉移到新系統；遷徙",
+  "misunderstood":"誤解（misunderstand 的過去式）",
+  "modestly":"適度地；小幅地",
+  "newborn":"新生兒",
+  "nightfall":"天黑時分；黃昏",
+  "nuisance":"討厭鬼；麻煩事",
+  "omitting":"省略（omit 的 -ing 形）",
+  "onstage":"在舞台上",
+  "outdated":"過時的",
+  "paperwork":"文書作業；書面手續",
+  "plausible":"看似合理的；說得通的",
+  "precisely":"正是；精確地",
+  "processor":"處理器",
+  "programmer":"程式設計師",
+  "pulley":"滑輪",
+  "railing":"欄杆；扶手",
+  "rainwater":"雨水",
+  "ranger":"巡守員；保育巡查員",
+  "recognizable":"容易認出的；一看就懂的",
+  "reeds":"蘆葦",
+  "remarkably":"非常；出奇地",
+  "renamed":"重新命名（rename 的過去分詞）",
+  "reread":"重讀",
+  "rescuers":"救援人員",
+  "rooftop":"屋頂（上的）",
+  "searchlight":"探照燈",
+  "seaside":"海邊的",
+  "settlement":"聚落；村落",
+  "sewn":"縫（sew 的過去分詞）",
+  "shipments":"貨運；一批批出貨",
+  "solvable":"可以解決的",
+  "stairway":"樓梯",
+  "stung":"刺痛（sting 的過去式；這裡指話讓人難受）",
+  "supplier":"供應商",
+  "surprisingly":"出乎意料地",
+  "teamwork":"團隊合作",
+  "trustworthy":"值得信賴的",
+  "unanswered":"未解答的",
+  "uncertain":"不確定的",
+  "unconfirmed":"未經證實的",
+  "unexplained":"無法解釋的；尚未說明的",
+  "uninhabited":"無人居住的",
+  "unreasonable":"不合理的",
+  "unrelated":"無關的",
+  "unreliable":"不可靠的",
+  "unsafe":"不安全的",
+  "untouched":"原封不動的；沒被碰過的",
+  "unused":"未使用的",
+  "upstream":"上游",
+  "urgently":"緊急地",
+  "verified":"核實；確認（verify 的過去式）",
+  "verify":"核實；查證",
+  "wages":"工資；薪水",
+  "wand":"魔杖",
+  "withstand":"經得起；承受住",
+  "worsen":"使惡化；變得更糟",
+  "wrench":"扳手",
+  "effortless":"毫不費力的；輕鬆的",
 };
 /* Limit automatic highlighting to helpful unfamiliar words, not every simple function word. */
 const LEVEL4_FOCUS_EXTRA = [
@@ -16156,6 +16262,200 @@ const LEVEL4_STORIES = [
 
 </script>
 <script>
+/* ───── timed-mode.js ───── */
+/* ═══════════════════════════════════════════════════════
+   timed-mode.js — 限時模式（第三～五級故事、原本閱讀共用）
+
+   三段難度，時間越來越短：
+     普通：每分鐘 100 字，一頁 30～45 秒，每題 40 秒
+     中等：每分鐘 150 字，一頁 20～30 秒，每題 30 秒
+     困難：每分鐘 200 字，一頁 15～20 秒，每題 25 秒
+   每頁時間 = 本頁字數 ÷ 閱讀速度，再限制在該難度的秒數範圍內。
+
+   設定存在 localStorage 'pxtimed.v1'，所有頁面共用。
+   切到別的分頁時計時會暫停。
+   ═══════════════════════════════════════════════════════ */
+var TimedMode = (function(){
+  'use strict';
+  const PRESETS = {
+    easy: { label:'普通', wpm:100, min:30, max:45, perQ:40 },
+    mid:  { label:'中等', wpm:150, min:20, max:30, perQ:30 },
+    hard: { label:'困難', wpm:200, min:15, max:20, perQ:25 }
+  };
+  const ORDER = ['easy','mid','hard'];
+  const SKEY = 'pxtimed.v1', LKEY = 'pxtimed.v1.log';
+  let memSettings = { mode:'off', auto:false }, memLog = {};
+  let app = 'story', stripEl = null, controlsEl = null, onChange = null;
+  let run = null, cur = null, iv = null;
+
+  function load(){ try{ return Object.assign({mode:'off',auto:false}, JSON.parse(localStorage.getItem(SKEY)||'{}')); }catch(e){ return memSettings; } }
+  function store(s){ memSettings = s; try{ localStorage.setItem(SKEY, JSON.stringify(s)); }catch(e){} }
+  function loadLog(){ try{ return JSON.parse(localStorage.getItem(LKEY)||'{}'); }catch(e){ return memLog; } }
+  function storeLog(l){ memLog = l; try{ localStorage.setItem(LKEY, JSON.stringify(l)); }catch(e){} }
+
+  const settings = () => load();
+  const preset = () => PRESETS[settings().mode] || null;
+  const isOn = () => !!preset();
+  const now = () => Date.now();
+  const mmss = t => { t = Math.max(0, Math.round(t)); return `${Math.floor(t/60)}:${String(t%60).padStart(2,'0')}`; };
+  const countWords = text => String(text||'').split(/\s+/).filter(w=>/[A-Za-z]/.test(w)).length;
+  function pageLimit(words){ const p = preset(); if(!p) return 0; return Math.min(p.max, Math.max(p.min, Math.round(words/p.wpm*60))); }
+  function quizFactor(){ const p = preset(); return p ? p.perQ/30 : 1; }
+
+  /* ── 畫面 ── */
+  function injectStyle(){
+    if(document.getElementById('tmStyle')) return;
+    const st = document.createElement('style'); st.id = 'tmStyle';
+    st.textContent = `
+.tm-controls{display:flex;gap:8px 12px;align-items:center;flex-wrap:wrap;padding:0 13px 11px;font-size:12px;color:#c9c0d8}
+.tm-controls label{display:flex;align-items:center;gap:6px}
+.tm-controls select{font-family:inherit;font-size:12px;color:#f4eae0;background:#342d49;border:2px solid #58506e;padding:6px 8px;border-radius:0}
+.tm-controls input{width:16px;height:16px;accent-color:#84b8ab;margin:0}
+.tm-controls .tm-rule{flex-basis:100%;font-size:11px;color:#9b93ad;line-height:1.6}
+.tm-controls input:disabled+span{opacity:.45}
+.tm-strip{position:sticky;top:0;z-index:5;margin:0 12px 10px;padding:8px 10px 9px;background:#1d1a2b;border:3px solid #1b1826;outline:2px solid #3a3350;color:#e8e2d6}
+.tm-row{display:flex;align-items:baseline;gap:10px;flex-wrap:wrap}
+.tm-left{font-size:24px;line-height:28px;min-width:70px;font-variant-numeric:tabular-nums}
+.tm-info{font-size:11px;line-height:1.6;color:#a79fb9;flex:1;min-width:150px}
+.tm-gauge{height:8px;margin-top:7px;background:#2f2942;border:2px solid #3a3350}
+.tm-gauge i{display:block;height:100%;background:#84b8ab;width:100%}
+.tm-strip.warn .tm-left{color:#ffb46b}.tm-strip.warn .tm-gauge i{background:#ffb46b}
+.tm-strip.over{border-color:#5a2a26}.tm-strip.over .tm-left{color:#f08a7a}.tm-strip.over .tm-gauge i{background:#f08a7a}
+.tm-strip.paused .tm-left{color:#8f879e}
+.tm-report{display:block;margin-top:6px;color:#e6d9b8}`;
+    document.head.appendChild(st);
+  }
+
+  function renderControls(){
+    if(!controlsEl) return;
+    const s = settings(), p = preset();
+    controlsEl.innerHTML = `<label>限時模式
+        <select id="tmMode" aria-label="限時模式難度">
+          <option value="off">關閉</option>
+          ${ORDER.map(k=>`<option value="${k}">${PRESETS[k].label} · 每分鐘 ${PRESETS[k].wpm} 字</option>`).join('')}
+        </select></label>
+      <label><input type="checkbox" id="tmAuto"${s.auto?' checked':''}${p?'':' disabled'}><span>時間到自動翻頁</span></label>
+      <span class="tm-rule">${p ? `每頁 ${p.min}～${p.max} 秒（依字數）、作答每題 ${p.perQ} 秒，時間到自動交卷。查單字也會計時。` : '開啟後每頁和小考都會倒數，適合讀第二遍時練速度。'}</span>`;
+    const sel = controlsEl.querySelector('#tmMode'); sel.value = s.mode;
+    sel.onchange = ()=>{ store(Object.assign(settings(), {mode:sel.value})); resetRun(); renderControls(); if(onChange) onChange(); };
+    controlsEl.querySelector('#tmAuto').onchange = e=>{ store(Object.assign(settings(), {auto:e.target.checked})); };
+  }
+
+  function mount(opts){
+    injectStyle();
+    app = opts.app || app; onChange = opts.onChange || null;
+    controlsEl = document.createElement('div'); controlsEl.className = 'tm-controls';
+    opts.controlsAfter.after(controlsEl);
+    stripEl = document.createElement('div'); stripEl.className = 'tm-strip'; stripEl.hidden = true;
+    stripEl.setAttribute('role','timer');
+    opts.stripBefore.before(stripEl);
+    renderControls();
+    document.addEventListener('visibilitychange', ()=>{
+      if(!cur) return;
+      if(document.hidden){ commit(); cur.paused = true; draw(); }
+      else { cur.paused = false; cur.t0 = now(); }
+    });
+  }
+
+  /* ── 計時 ── */
+  function resetRun(){ stopTick(); run = null; cur = null; if(stripEl) stripEl.hidden = true; }
+  function chapter(id){ if(!run || run.id !== id || run.finished) run = { id, mode: settings().mode, pages:{}, quiz:null, finished:false }; }
+  function commit(){ if(cur && !cur.paused){ cur.rec.used += (now()-cur.t0)/1000; cur.t0 = now(); } }
+  function stopTick(){ commit(); if(iv){ clearInterval(iv); iv = null; } }
+  function used(){ return cur ? cur.rec.used + (cur.paused ? 0 : (now()-cur.t0)/1000) : 0; }
+
+  function draw(){
+    if(!cur || !stripEl) return;
+    const r = cur.rec, u = used(), left = r.limit - u;
+    stripEl.hidden = false;
+    stripEl.classList.toggle('over', left < 0);
+    stripEl.classList.toggle('warn', left >= 0 && left <= Math.max(5, r.limit*0.25));
+    stripEl.classList.toggle('paused', !!cur.paused);
+    const big = left >= 0 ? mmss(left) : '+' + mmss(-left);
+    const label = preset() ? preset().label : '';
+    let info;
+    if(cur.type === 'quiz') info = `${label} · 作答 ${r.n} 題 × ${Math.round(r.limit/r.n)} 秒` + (left < 0 ? ' · 時間到' : ' · 時間到自動交卷');
+    else if(left >= 0) info = `${label} · 本頁 ${r.words} 字 · 限時 ${r.limit} 秒`;
+    else info = settings().auto ? '時間到，翻到下一頁' : `超過本頁 ${r.limit} 秒；讀完就翻頁，超時會記在成績裡`;
+    if(cur.paused) info = '已暫停（離開了這個分頁）';
+    stripEl.innerHTML = `<div class="tm-row"><span class="tm-left">${big}</span><span class="tm-info">${info}</span></div>
+      <div class="tm-gauge"><i style="width:${Math.max(0, Math.min(1, left/r.limit))*100}%"></i></div>`;
+  }
+
+  function startTick(){
+    if(iv) clearInterval(iv);
+    iv = setInterval(()=>{
+      draw();
+      if(!cur || cur.paused || cur.fired) return;
+      if(used() >= cur.rec.limit){
+        if(cur.type === 'quiz'){ cur.fired = true; const cb = cur.onTimeout; cb && cb(); }
+        else if(settings().auto){ cur.fired = true; const cb = cur.onTimeout; cb && cb(); }
+      }
+    }, 250);
+  }
+
+  function page(key, words, onTimeout){
+    stopTick();
+    if(!isOn() || !run){ cur = null; if(stripEl) stripEl.hidden = true; return; }
+    if(run.quiz && !run.quiz.done){ cur = { type:'quiz', rec:run.quiz, t0:now(), onTimeout:run.quiz.onTimeout }; draw(); startTick(); return; }
+    const rec = run.pages[key] || (run.pages[key] = { words, limit:pageLimit(words), used:0 });
+    cur = { type:'page', rec, t0:now(), onTimeout, fired: rec.used >= rec.limit };
+    draw(); startTick();
+  }
+
+  function quiz(n, onTimeout){
+    stopTick();
+    if(!isOn() || !run){ cur = null; if(stripEl) stripEl.hidden = true; return; }
+    if(!run.quiz || run.quiz.done) run.quiz = { n, limit: n*preset().perQ, used:0, done:false, onTimeout };
+    cur = { type:'quiz', rec:run.quiz, t0:now(), onTimeout };
+    draw(); startTick();
+  }
+
+  function leave(){ stopTick(); cur = null; if(stripEl) stripEl.hidden = true; }
+
+  /* 結束一章：停止計時，回傳這章的限時結果（沒開限時則回傳 null） */
+  function finish(){
+    stopTick(); cur = null; if(stripEl) stripEl.hidden = true;
+    if(!run || !PRESETS[run.mode]) return null;
+    run.finished = true;
+    const pages = Object.values(run.pages);
+    const words = pages.reduce((a,p)=>a+p.words, 0), secs = pages.reduce((a,p)=>a+p.used, 0);
+    return {
+      id: run.id, mode: run.mode, pages: pages.length, words, secs,
+      wpm: secs > 0 ? Math.round(words/secs*60) : 0,
+      over: pages.filter(p=>p.used > p.limit + 0.5).length,
+      quiz: run.quiz ? { n:run.quiz.n, used:Math.min(run.quiz.used, run.quiz.limit), limit:run.quiz.limit, timedOut:run.quiz.used >= run.quiz.limit } : null
+    };
+  }
+
+  /* 把結果寫成一段話，並和上次同難度的紀錄比較 */
+  function report(sum, right, total){
+    if(!sum) return '';
+    const p = PRESETS[sum.mode], parts = [];
+    if(sum.pages){
+      parts.push(`限時閱讀（${p.label}）：${sum.pages} 頁共 ${sum.words} 字，用了 ${mmss(sum.secs)}，約每分鐘 ${sum.wpm} 字` + (sum.over ? `，${sum.over} 頁超時。` : '，每頁都在時間內。'));
+    }
+    if(sum.quiz){
+      parts.push(sum.quiz.timedOut ? `作答時間到（${mmss(sum.quiz.limit)}），沒作答的題目算錯。` : `作答用了 ${mmss(sum.quiz.used)}，限時 ${mmss(sum.quiz.limit)}。`);
+    }
+    const log = loadLog(), k = `${app}:${sum.id}:${sum.mode}`, prev = log[k];
+    if(prev && prev.wpm && sum.wpm) parts.push(`上次同難度每分鐘 ${prev.wpm} 字，這次 ${sum.wpm >= prev.wpm ? '進步' : '慢了'} ${Math.abs(sum.wpm - prev.wpm)} 字。`);
+    if(sum.pages){ log[k] = { wpm:sum.wpm, over:sum.over, right, total, at:new Date().toISOString().slice(0,10) }; storeLog(log); }
+    const idx = ORDER.indexOf(sum.mode);
+    const good = total ? right/total >= 0.8 : true;
+    if(sum.pages && !sum.over && good && !(sum.quiz && sum.quiz.timedOut)){
+      parts.push(idx < ORDER.length-1 ? `這個難度很穩，連續幾章都這樣就可以換「${PRESETS[ORDER[idx+1]].label}」。` : '已經是多益的閱讀速度，繼續保持答對率。');
+    } else if(sum.pages && total && !good){
+      parts.push('答對率偏低時，先維持這個難度，把速度放慢一點。');
+    }
+    return parts.join('');
+  }
+
+  return { PRESETS, mount, isOn, settings, countWords, pageLimit, quizFactor, chapter, page, quiz, leave, finish, report, mmss };
+})();
+
+</script>
+<script>
 'use strict';
 const $=id=>document.getElementById(id);
 const KEY='pxlevel4.story.v1';
@@ -16180,7 +16480,7 @@ function chapterWord(w){return c().words.includes(w)||LEVEL4_STORIES.slice(0,cha
 function glossKey(raw,dict){const w=raw.toLowerCase().replace(/['’]s$/,'');if(dict[w])return w;const cand=[];if(w.endsWith('ies'))cand.push(w.slice(0,-3)+'y');if(w.endsWith('ied'))cand.push(w.slice(0,-3)+'y');if(w.endsWith('ing'))cand.push(w.slice(0,-3),w.slice(0,-3)+'e');if(w.endsWith('ed'))cand.push(w.slice(0,-2),w.slice(0,-1));if(w.endsWith('es'))cand.push(w.slice(0,-2),w.slice(0,-1));if(w.endsWith('s'))cand.push(w.slice(0,-1));return cand.find(x=>dict[x])||null}
 function contextual(w,original){const txt=c().pages[page].en;const at=txt.toLowerCase().indexOf(original.toLowerCase());if(at<0)return '';const start=Math.max(0,txt.lastIndexOf('.',at-1)+1,txt.lastIndexOf('?',at-1)+1,txt.lastIndexOf('!',at-1)+1);let end=txt.slice(at).search(/[.!?]/);if(end<0)end=Math.min(txt.length-at,135);return txt.slice(start,at+end+1).trim().slice(0,170)}
 function showGloss(w,type,original){const def=type==='phrase'?LEVEL4_PHRASES[w]:((type==='core'||type==='preview')?bank[w]:extraBank[w]);const context=contextual(w,original);$('hint').innerHTML=`<span class="hint-title">${esc(original)}</span><span class="gloss-tag">${type==='core'?'四級目標詞':type==='preview'?'四級順帶字（未計覆蓋）':type==='phrase'?'補充片語':'閱讀輔助詞'}</span>${esc(def||'')}<br><span class="gloss-note">${esc(context)}</span><br><button id="hearWord" aria-label="朗讀英文">▶ 發音</button>`;$('hearWord').onclick=()=>speak(original)}
-function highlight(s){let safe=esc(s);const reserved=[];for(const phrase of phrases){const re=new RegExp('\\b'+phrase.replace(/[.*+?^${}()|[\]\\]/g,'\\$&')+'\\b','gi');safe=safe.replace(re,t=>{const mark='ZZPHRASE'+reserved.length+'ZZ';reserved.push(`<button class="word extra phrase" data-type="phrase" data-word="${esc(phrase)}" type="button">${t}</button>`);return mark})}safe=safe.replace(/\b[A-Za-z]+(?:['’][A-Za-z]+)?\b/g,t=>{if(/^ZZPHRASE\d+ZZ$/.test(t))return t;const word=lemma(t);if(word&&!chapterWord(word)){return `<button class="word preview" data-type="preview" data-word="${esc(word)}" type="button">${t}</button>`}if(word&&chapterWord(word)){const own=c().words.includes(word);return `<button class="word${own?'':' old'}" data-type="core" data-word="${esc(word)}" type="button">${t}</button>`}const extra=glossKey(t,extraBank);if(extra&& (LEVEL4_GLOSSARY[extra] || LEVEL4_FOCUS_EXTRA.includes(extra) || (extra.length>=8 && advancedBank.has(extra))))return `<button class="word extra" data-type="extra" data-word="${esc(extra)}" type="button">${t}</button>`;return t});return safe.replace(/ZZPHRASE(\d+)ZZ/g,(_,i)=>reserved[+i])}
+function highlight(s){let safe=esc(s);const reserved=[];for(const phrase of phrases){const re=new RegExp('\\b'+phrase.replace(/[.*+?^${}()|[\]\\]/g,'\\$&')+'\\b','gi');safe=safe.replace(re,t=>{const mark='ZZPHRASE'+reserved.length+'ZZ';reserved.push(`<button class="word extra phrase" data-type="phrase" data-word="${esc(phrase)}" type="button">${t}</button>`);return mark})}safe=safe.replace(/\b[A-Za-z]+(?:['’][A-Za-z]+)?\b/g,t=>{if(/^ZZPHRASE\d+ZZ$/.test(t))return t;const word=lemma(t);if(word&&!chapterWord(word)){return `<button class="word preview" data-type="preview" data-word="${esc(word)}" type="button">${t}</button>`}if(word&&chapterWord(word)){const own=c().words.includes(word);return `<button class="word${own?'':' old'}" data-type="core" data-word="${esc(word)}" type="button">${t}</button>`}const extra=glossKey(t,extraBank);if(extra&& (LEVEL4_GLOSSARY[extra] || LEVEL4_FOCUS_EXTRA.includes(extra) || advancedBank.has(extra)))return `<button class="word extra" data-type="extra" data-word="${esc(extra)}" type="button">${t}</button>`;return t});return safe.replace(/ZZPHRASE(\d+)ZZ/g,(_,i)=>reserved[+i])}
 function art(scene){const night=scene==='night';let sky=night?'#24354a':scene==='paper'?'#736b75':scene==='meeting'?'#657f8b':'#7796ae';let lit=night?'#f4d18c':'#f9dfa7';return `<svg viewBox="0 0 360 124" shape-rendering="crispEdges" xmlns="http://www.w3.org/2000/svg"><rect width="360" height="124" fill="${sky}"/><rect y="0" width="360" height="11" fill="#282437"/><rect x="222" y="17" width="111" height="66" fill="#27243b"/><rect x="227" y="22" width="101" height="56" fill="${night?'#192638':'#c2dbe2'}"/><rect x="277" y="22" width="5" height="56" fill="#282437"/><rect y="80" width="360" height="44" fill="#74573e"/><rect y="84" width="360" height="3" fill="#342836"/><rect x="28" y="41" width="84" height="41" fill="#2c2535"/><rect x="33" y="46" width="74" height="31" fill="#e7e0d0"/><rect x="40" y="52" width="54" height="3" fill="#8c8478"/><rect x="40" y="61" width="40" height="3" fill="#ab9c81"/><rect x="40" y="69" width="49" height="3" fill="#8c8478"/><rect x="150" y="60" width="67" height="42" fill="#3b344c"/><rect x="155" y="65" width="57" height="32" fill="${night?'#3b5e6c':'#a8d5df'}"/><rect x="161" y="72" width="43" height="5" fill="#7699a3"/><rect x="161" y="81" width="32" height="5" fill="#506e79"/><rect x="138" y="100" width="90" height="6" fill="#281e2c"/><rect x="70" y="92" width="65" height="21" fill="#b59168"/><rect x="75" y="95" width="55" height="3" fill="#e1c59c"/><rect x="267" y="96" width="44" height="18" fill="#3b344c"/><rect x="273" y="99" width="32" height="12" fill="#ead6ad"/><rect x="300" y="13" width="3" height="10" fill="${lit}"/><rect x="293" y="22" width="18" height="4" fill="${lit}"/></svg>`}
 function refreshTop(){stopVoice();$('count').textContent=`${c().series||"第一部 · 看不見的收藏品"} · 第 ${chapter+1} / ${LEVEL4_STORIES.length} 章`;$('title').textContent=c().title;$('blurb').textContent=c().zh+'｜'+c().blurb;$('art').innerHTML=art(c().scene);const saved=getSaved();$('pick').innerHTML=LEVEL4_STORIES.map((s,i)=>`${i===0||LEVEL4_STORIES[i-1]?.series!==s.series?`<optgroup label="${esc(s.series||'第一部 · 看不見的收藏品')}">`:''}<option value="${i}">${saved[s.id]?.score!==undefined?'✓ ':''}${String(i+1).padStart(2,'0')} · ${esc(s.title)}</option>${i===LEVEL4_STORIES.length-1||LEVEL4_STORIES[i+1]?.series!==s.series?'</optgroup>':''}`).join('');$('pick').value=chapter;let rec=saved[c().id];$('bReview').textContent=rec&&rec.next<=today()?'今日有複習':'隔日複習';$('bReview').disabled=!(rec&&rec.next<=today());}
 function stopVoice(){if('speechSynthesis' in window)speechSynthesis.cancel()}
@@ -16195,8 +16495,8 @@ function showReview(retest=false){view='review';stopVoice();$('reader').classLis
   $('bFullTranslation').textContent='收起翻譯 ↑';
   $('bFullTranslation').setAttribute('aria-expanded','true');
   $('vocab').innerHTML=`<div class="qcard"><div class="qtitle">閱讀理解解析</div>${c().quiz.map((q,i)=>`<div class="answerwhy"><b>${i+1}. ${esc(q.q)}</b><br>正確答案：${esc(q.opts[q.a])}<br>${esc(q.why)}</div>`).join('')}</div><div class="sectionhead">本章核心字彙 · ${c().words.length} 個</div>`+c().words.map((word)=>{const example=c().pages.map(p=>p.en.split(/[.!?]\s+/).find(t=>new RegExp('\\b'+word.replace(/e$/,'')+'[a-z]*\\b','i').test(t))).find(Boolean)||'';return `<div class="vcard"><span class="w">${esc(word)}</span><button type="button" data-say="${esc(word)}">▶ 發音</button><div class="z">${esc(bank[word])}</div><div class="example">${esc(example.trim())}</div></div>`}).join('');// 補充詞與本章四級核心字分開計數，交卷後集中整理較難詞彙。
-  const extras=new Map();for(const pg of c().pages){for(const m of pg.en.matchAll(/\b[A-Za-z]+(?:['’][A-Za-z]+)?\b/g)){const w=glossKey(m[0],extraBank);if(w&&!bank[w]&&(LEVEL4_GLOSSARY[w]||LEVEL4_FOCUS_EXTRA.includes(w)||(w.length>=7&&(advancedBank.has(w)||otherBank[w]))))extras.set(w,extraBank[w]);}}
-  const supplemental=[...extras].slice(0,16);
+  const extras=new Map();for(const pg of c().pages){for(const m of pg.en.matchAll(/\b[A-Za-z]+(?:['’][A-Za-z]+)?\b/g)){const w=glossKey(m[0],extraBank);if(w&&!bank[w]&&(LEVEL4_GLOSSARY[w]||LEVEL4_FOCUS_EXTRA.includes(w)||advancedBank.has(w)||(w.length>=7&&otherBank[w])))extras.set(w,extraBank[w]);}}
+  const extraRank=w=>(LEVEL4_GLOSSARY[w]||LEVEL4_FOCUS_EXTRA.includes(w)||advancedBank.has(w))?0:1;const supplemental=[...extras].sort((a,b)=>extraRank(a[0])-extraRank(b[0])).slice(0,16);
   if(supplemental.length)$('vocab').innerHTML+=`<div class="sectionhead">閱讀補充難字 · 不計入四級詞數</div>`+supplemental.map(([w,z])=>`<div class="vcard"><span class="w">${esc(w)}</span><button type="button" data-say="${esc(w)}">▶ 發音</button><div class="z">${esc(z)}</div></div>`).join('');
   $('vocab').querySelectorAll('[data-say]').forEach(b=>b.onclick=()=>speak(b.dataset.say));$('bContinue').textContent=chapter<LEVEL4_STORIES.length-1?'下一章 →':'回第一章 ↻'}
 $('bNext').onclick=()=>{if(page<c().pages.length-1){page++;showReader()}else{answers=Array(c().quiz.length).fill(null);renderQuiz()}};
@@ -16220,6 +16520,18 @@ $('translation').classList.add('hide');
 const translationButton=document.createElement('button');translationButton.id='bTranslate';translationButton.textContent='本段中文（小考後）';translationButton.onclick=()=>{if(!getSaved()[c().id])return;translationOn=!translationOn;showReader()};$('bSpeak').after(translationButton);
 const originalShowReader=showReader;showReader=function(){originalShowReader();translationButton.disabled=!getSaved()[c().id];$('translation').classList.toggle('hide',!translationOn)};
 $('coverageInfo').textContent=`四級故事（完整字庫）：${LEVEL4_STORIES.length} 章（${new Set(LEVEL4_STORIES.map(s=>s.series||"第一部")).size} 部） · 已故事化 ${introduced.size}／${Object.keys(bank).length} 個詞條；尚餘 ${Object.keys(bank).length-introduced.size} 個未故事化。已故事化不等於已熟記；請透過陌生題目與間隔複習檢查掌握程度。`;
+// ── 限時模式：每頁依字數倒數，小考依題數倒數；設定與其他頁共用 ──
+(function(){
+  const reportEl=()=>{let el=document.getElementById('tmReport');if(!el){el=document.createElement('span');el.id='tmReport';el.className='tm-report';$('reviewStat').appendChild(el)}return el};
+  const timeUp=()=>{if(view!=='quiz'&&view!=='reader')return;if(!answers.length)answers=Array(c().quiz.length).fill(null);answers=answers.map(x=>x===null?-1:x);saveQuiz();showReview();refreshTop()};
+  const baseReader=showReader;
+  showReader=function(){baseReader();TimedMode.chapter(c().id);TimedMode.page(chapter+':'+page,TimedMode.countWords(c().pages[page].en),()=>$('bNext').click())};
+  const baseQuiz=renderQuiz;
+  renderQuiz=function(){baseQuiz();TimedMode.chapter(c().id);TimedMode.quiz(c().quiz.length,timeUp)};
+  const baseReview=showReview;
+  showReview=function(...a){const sum=TimedMode.finish();baseReview(...a);if(sum){const rec=getSaved()[c().id];reportEl().textContent=TimedMode.report(sum,rec?rec.score:0,c().quiz.length)}};
+  TimedMode.mount({app:'level4',controlsAfter:document.querySelector('.toolbar'),stripBefore:$('progress'),onChange:()=>{if(view==='quiz')renderQuiz();else if(view==='reader')showReader()}});
+})();
 const data=getSaved();chapter=Math.max(0,LEVEL4_STORIES.findIndex(s=>data[s.id]?.score===undefined));page=0;showReader();
 </script>
 </body>
