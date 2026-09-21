@@ -1,0 +1,14134 @@
+/* Level 5 stories Volumes I–XV; original 198 chapters unchanged. */
+const LEVEL5_STORIES = [
+  {
+    "id": "lv5-001",
+    "series": "第一部 · The Ship That Arrived Twice｜抵達兩次的船",
+    "title": "The Impossible Arrival",
+    "zh": "不可能的抵達",
+    "blurb": "港口系統顯示一艘貨船在同一分鐘抵達兩次。唯一注意到的人，是剛到職的夜班資料員。",
+    "scene": "night",
+    "pages": [
+      {
+        "en": "At 2:14 a.m., the harbor database recorded an abnormal arrival. The cargo ship Lark appeared at two separate docks at exactly the same moment. Nia, a junior analyst, assumed it was an ordinary technical error. Then she noticed that both entries had valid signatures.",
+        "zh": "凌晨兩點十四分，港口資料庫記錄了一次不正常的抵達。貨船「雲雀號」在同一時刻出現在兩座不同碼頭。初級資料分析員 Nia 以為只是一般的技術錯誤，卻發現兩筆紀錄都有有效簽章。"
+      },
+      {
+        "en": "Her supervisor wanted the issue removed from the morning agenda. “A delay would be costly,” he said. But the evidence did not accord with the captain’s report. Nia asked for authorization to examine the original files before anyone altered the records.",
+        "zh": "主管希望把這件事從早會議程中拿掉。「延誤會造成很大的成本，」他說。但資料與船長的報告不一致。Nia 要求取得授權，在任何人更改紀錄之前先檢查原始檔案。"
+      },
+      {
+        "en": "Inside a confidential folder, she found a third arrival time. Someone had deleted it, yet the system retained a trace. The ship had not arrived twice. One version of its journey had been deliberately concealed.",
+        "zh": "在一個機密資料夾裡，她找到第三個抵達時間。有人刪掉了那筆資料，但系統仍留下痕跡。船不是抵達了兩次，而是有人刻意隱藏了其中一個航程版本。"
+      }
+    ],
+    "quiz": [
+      {
+        "q": "What first made Nia suspicious?",
+        "opts": [
+          "The ship had no name",
+          "Two signed arrivals shared the same time",
+          "The captain called her",
+          "The database stopped working"
+        ],
+        "a": 1,
+        "why": "兩筆都有簽章的抵達紀錄顯示相同時間。"
+      },
+      {
+        "q": "What did her supervisor prefer?",
+        "opts": [
+          "Delay the ship indefinitely",
+          "Publish all records",
+          "Keep the problem off the morning agenda",
+          "Call the police immediately"
+        ],
+        "a": 2,
+        "why": "主管不想讓問題進入早會議程。"
+      },
+      {
+        "q": "What was hidden in the folder?",
+        "opts": [
+          "A third arrival time",
+          "The captain’s address",
+          "A passenger list",
+          "A weather forecast"
+        ],
+        "a": 0,
+        "why": "被刪除但仍有痕跡的第三個抵達時間。"
+      }
+    ],
+    "words": [
+      "abnormal",
+      "analyst",
+      "valid",
+      "supervisor",
+      "agenda",
+      "accord",
+      "alter",
+      "confidential",
+      "version",
+      "conceal"
+    ]
+  },
+  {
+    "id": "lv5-002",
+    "series": "第一部 · The Ship That Arrived Twice｜抵達兩次的船",
+    "title": "A Route Through Empty Water",
+    "zh": "穿過空白海域的航線",
+    "blurb": "船長的航海日誌與資料不符；Nia 必須判斷哪一份才可信。",
+    "scene": "paper",
+    "pages": [
+      {
+        "en": "The captain insisted that the ship had followed its assigned route. Nia compared his account with a separate tracking file. A gap of forty minutes ran through an otherwise coherent journey. The missing section crossed a protected marine area.",
+        "zh": "船長堅稱船隻遵循指定航線。Nia 將他的說法與另一份追蹤檔比較，發現整段原本連貫的旅程中，有四十分鐘的空白，而缺失的航段正好穿過海洋保護區。"
+      },
+      {
+        "en": "The company’s administration called the discrepancy minor. An external assessment, however, warned that a large vessel might disrupt wildlife in the area. Nia refused to attribute the gap to bad weather without supporting evidence.",
+        "zh": "公司管理部門稱這個差異只是小問題。但外部評估警告，大型船舶可能干擾該海域的野生動物。在沒有證據支持前，Nia 不願把資料空白歸因於惡劣天氣。"
+      },
+      {
+        "en": "She spoke with the ship’s mechanic, who acknowledged an abrupt change of direction that night. “The bridge received an anonymous instruction,” he whispered. “I never saw who sent it.” Nia now had a witness, but not yet an answer.",
+        "zh": "她找上輪機員。對方承認當晚船隻突然轉向。「駕駛台收到一則匿名指示，」他低聲說，「我從沒看見是誰發的。」Nia 如今有了證人，卻仍沒有答案。"
+      }
+    ],
+    "quiz": [
+      {
+        "q": "Where did the missing tracking section lead?",
+        "opts": [
+          "An airport",
+          "A protected marine area",
+          "A city hospital",
+          "A different country"
+        ],
+        "a": 1,
+        "why": "缺失的追蹤區段穿過海洋保護區。"
+      },
+      {
+        "q": "Why did Nia reject the weather explanation?",
+        "opts": [
+          "She disliked the captain",
+          "There was no supporting evidence",
+          "The weather was too hot",
+          "The map was missing"
+        ],
+        "a": 1,
+        "why": "沒有足夠證據可以把差異歸因於天氣。"
+      },
+      {
+        "q": "What did the mechanic reveal?",
+        "opts": [
+          "A broken engine",
+          "An anonymous direction to change course",
+          "A missing passenger",
+          "A cancelled inspection"
+        ],
+        "a": 1,
+        "why": "輪機員證實有人匿名指示轉向。"
+      }
+    ],
+    "words": [
+      "coherent",
+      "marine",
+      "administration",
+      "external",
+      "assessment",
+      "disrupt",
+      "wildlife",
+      "attribute",
+      "acknowledge",
+      "abrupt",
+      "anonymous"
+    ]
+  },
+  {
+    "id": "lv5-003",
+    "series": "第一部 · The Ship That Arrived Twice｜抵達兩次的船",
+    "title": "The Contract on Deck",
+    "zh": "甲板上的合約",
+    "blurb": "一張未簽名的附約讓整件事變得更複雜：保護區裡究竟有什麼？",
+    "scene": "meeting",
+    "pages": [
+      {
+        "en": "A contractor met Nia at a quiet café. He offered a copy of an agreement the shipping corporation had never disclosed. Under one clause, the vessel would transport a secret batch of equipment for an offshore project. The contract was unsigned, but its dates matched the altered tracking file.",
+        "zh": "一名承包商在安靜的咖啡館與 Nia 見面，提供了一份航運公司從未公開的協議副本。其中一項條款規定，船隻要為離岸計畫運送一批秘密設備。合約沒有簽名，但日期與被修改的追蹤檔一致。"
+      },
+      {
+        "en": "The contractor said he had been compelled to stay silent. Nia could not verify that claim. She asked what the equipment was meant to do, but he answered only, “The shipment was a crucial component of a project nobody wanted to discuss.”",
+        "zh": "承包商說自己被迫保持沉默，但 Nia 無法證實這個說法。她問設備的用途，對方只回答：「這批貨是某個沒人願意討論的計畫中極為關鍵的一部分。」"
+      },
+      {
+        "en": "Before leaving, he placed a small metal tag on the table. It belonged to a container marked for conservation research. On its reverse side, someone had scratched the words: NOT FOR RESEARCH. Nia realized the documents might describe two different purposes for the same cargo.",
+        "zh": "離開之前，他把一塊小金屬標籤放上桌。它來自一個標記為保育研究用途的貨櫃。背面有人刻上「非研究用途」。Nia 意識到，文件可能替同一批貨物寫了兩種不同用途。"
+      }
+    ],
+    "quiz": [
+      {
+        "q": "Why was the agreement significant?",
+        "opts": [
+          "It proved who signed it",
+          "Its dates matched the altered file",
+          "It included Nia’s salary",
+          "It belonged to the captain"
+        ],
+        "a": 1,
+        "why": "協議日期與修改過的追蹤檔吻合。"
+      },
+      {
+        "q": "What could Nia NOT establish?",
+        "opts": [
+          "Whether the man claimed pressure to stay silent",
+          "Whether the claim was true",
+          "The time of the café meeting",
+          "The existence of the metal tag"
+        ],
+        "a": 1,
+        "why": "承包商宣稱受迫，但 Nia 仍無法核實。"
+      },
+      {
+        "q": "What made the container label suspicious?",
+        "opts": [
+          "It was very old",
+          "The reverse side contradicted its stated purpose",
+          "It was written in two languages",
+          "It had a strange color"
+        ],
+        "a": 1,
+        "why": "標籤正反兩面的用途互相矛盾。"
+      }
+    ],
+    "words": [
+      "contractor",
+      "corporation",
+      "disclose",
+      "clause",
+      "batch",
+      "crucial",
+      "component",
+      "conservation",
+      "reverse",
+      "document"
+    ]
+  },
+  {
+    "id": "lv5-004",
+    "series": "第一部 · The Ship That Arrived Twice｜抵達兩次的船",
+    "title": "An Agreement to Disagree",
+    "zh": "不必同意的協議",
+    "blurb": "調查面臨公開或保密的選擇；Nia 不想讓推測先於證據。",
+    "scene": "night",
+    "pages": [
+      {
+        "en": "At the next meeting, executives urged Nia to declare the tracking error resolved. She proposed a compromise: preserve the records, suspend only the disputed shipment, and allow an independent review. The director objected that this would damage the corporation’s credibility.",
+        "zh": "下次會議中，高階主管催促 Nia 宣布追蹤錯誤已解決。她提出折衷方案：保存紀錄、只暫停有爭議的貨物，並交由獨立單位審查。董事反對，說這會損害公司的可信度。"
+      },
+      {
+        "en": "“Credibility is not the same as silence,” Nia replied. She knew her own assumption might be wrong. That was precisely why she wanted a transparent procedure, with the captain and contractor given a chance to respond.",
+        "zh": "「可信度和保持沉默不是同一回事，」Nia 回答。她知道自己的假設可能錯誤，因此才更希望採取透明的程序，讓船長與承包商都有機會回應。"
+      },
+      {
+        "en": "The board agreed to the review, but one member privately warned her: “You may win the argument and lose your position.” Nia returned to the harbor before dawn. For the first time, she was more wary of the people on land than of the sea.",
+        "zh": "董事會同意進行審查，但其中一人私下警告她：「你可能贏了爭論，卻丟了職位。」天亮前，Nia 回到港邊。她第一次覺得，陸上的人比海更值得警惕。"
+      }
+    ],
+    "quiz": [
+      {
+        "q": "What compromise did Nia propose?",
+        "opts": [
+          "Cancel every shipment",
+          "Keep records and independently review disputed cargo",
+          "Delete the tracking file",
+          "Replace the captain"
+        ],
+        "a": 1,
+        "why": "她主張保存紀錄、暫停爭議貨物並接受獨立審查。"
+      },
+      {
+        "q": "Why did Nia want a transparent procedure?",
+        "opts": [
+          "She was sure she was right",
+          "She wanted to avoid hearing the captain",
+          "Her own assumption could be wrong",
+          "She had already resigned"
+        ],
+        "a": 2,
+        "why": "她承認自己的推測也可能有誤。"
+      },
+      {
+        "q": "What personal risk did a board member mention?",
+        "opts": [
+          "Missing the train",
+          "Losing her position",
+          "Sailing alone",
+          "Paying the contractor"
+        ],
+        "a": 1,
+        "why": "有人警告她可能失去工作。"
+      }
+    ],
+    "words": [
+      "executive",
+      "compromise",
+      "suspend",
+      "credibility",
+      "assumption",
+      "transparent",
+      "wary"
+    ]
+  },
+  {
+    "id": "lv5-005",
+    "series": "第一部 · The Ship That Arrived Twice｜抵達兩次的船",
+    "title": "The Third Arrival",
+    "zh": "第三次抵達",
+    "blurb": "最終報告揭開貨物的真相；最重要的卻不是抓到誰，而是如何讓紀錄重新可信。",
+    "scene": "paper",
+    "pages": [
+      {
+        "en": "The independent team traced the third arrival to a coastal warehouse. The cargo held sensors for an ecological survey, but the ship had taken an unauthorized shortcut through the protected area. The altered file had concealed the route, not the nature of the equipment.",
+        "zh": "獨立團隊追查出第三次抵達發生在海岸倉庫。貨物其實是生態調查用的感測器，但船隻未經許可抄近路穿過保護區。被修改的檔案隱藏的是航線，而不是設備本身的用途。"
+      },
+      {
+        "en": "The final assessment found that the captain had followed a manager’s verbal instruction. The corporation acknowledged its failure, amended its reporting policy, and compensated the research team for lost data. Nia’s original theory about secret equipment had been mistaken.",
+        "zh": "最終評估發現，船長遵從了經理的口頭指示。公司承認失職、修訂通報政策，並補償研究團隊損失的資料。Nia 原先猜測秘密設備的理論是錯的。"
+      },
+      {
+        "en": "A colleague asked if she regretted the investigation. “No,” Nia said. “We found something different from what I expected. That is what an investigation is for.” The Lark sailed again the following week, with one route and one arrival time that everyone could examine.",
+        "zh": "同事問她是否後悔調查。「不，」Nia 說，「我們找到的答案和我預期的不同，而這正是調查的目的。」隔週雲雀號再次啟航，留下所有人都可以查閱的一條航線與一次抵達紀錄。"
+      }
+    ],
+    "quiz": [
+      {
+        "q": "What did the altered file actually conceal?",
+        "opts": [
+          "The equipment’s identity",
+          "An unauthorized route",
+          "A passenger’s name",
+          "A new ship"
+        ],
+        "a": 1,
+        "why": "資料隱藏的是未經授權的航線。"
+      },
+      {
+        "q": "Which idea of Nia’s was incorrect?",
+        "opts": [
+          "That records had been altered",
+          "That the equipment itself had a secret purpose",
+          "That the ship existed",
+          "That a review was needed"
+        ],
+        "a": 1,
+        "why": "秘密設備用途的推測不正確。"
+      },
+      {
+        "q": "What does Nia conclude about investigations?",
+        "opts": [
+          "They must confirm the first theory",
+          "They are worthwhile even when the result surprises us",
+          "They should remain confidential forever",
+          "Only managers may conduct them"
+        ],
+        "a": 1,
+        "why": "調查是為了找到證據支持的答案，而非證明最初的推測。"
+      }
+    ],
+    "words": [
+      "warehouse",
+      "sensor",
+      "ecological",
+      "verbal",
+      "amend",
+      "compensate"
+    ]
+  },
+  {
+    "id": "lv5-006",
+    "series": "第二部 · The Borrowed Voice｜借來的聲音",
+    "title": "A Message in Her Own Voice",
+    "zh": "用她自己聲音傳來的訊息",
+    "blurb": "母親失聯多年後，女兒收到一則她從未錄製的語音。",
+    "scene": "night",
+    "pages": [
+      {
+        "en": "The message arrived on the evening of Mara’s debut as a radio presenter. “Don’t enter the attic,” said a voice identical to her mother’s. Her mother had died eight years earlier. Mara replayed the recording, searching for an obvious flaw. There was none.",
+        "zh": "Mara 即將首次擔任電台主持的晚上，收到一則訊息。「別進閣樓，」聲音和她母親完全相同。母親八年前已經過世。Mara 一再重播錄音，試圖找到明顯破綻，卻什麼也沒發現。"
+      },
+      {
+        "en": "A former colleague suggested that modern software could generate a virtual voice from old interviews. The theory seemed plausible, but why would anyone send such a warning? Mara examined the message’s source. It came from a number that had once belonged to the family home.",
+        "zh": "一位前同事說，現代軟體可以用舊訪談生成虛擬聲音。這個說法似乎合理，但為何有人要發出這樣的警告？Mara 檢查訊息來源，發現號碼曾屬於家裡的舊宅。"
+      },
+      {
+        "en": "In the attic, beneath a faded canvas, she found a locked briefcase. A handwritten label read: “For Mara, when you are willing to listen.” The warning had not kept her away; it had brought her to the one place she feared.",
+        "zh": "在閣樓一塊褪色的帆布下面，她發現一只上鎖的公事包。手寫標籤寫著：「給 Mara，當你願意聽的時候。」警告不但沒讓她遠離，反而把她帶到最害怕的地方。"
+      }
+    ],
+    "quiz": [
+      {
+        "q": "What made the message extraordinary?",
+        "opts": [
+          "It was sent at noon",
+          "It sounded exactly like Mara’s late mother",
+          "It contained a photograph",
+          "It came from her employer"
+        ],
+        "a": 1,
+        "why": "聲音與八年前過世的母親完全相同。"
+      },
+      {
+        "q": "What was the colleague’s theory?",
+        "opts": [
+          "A forgotten radio broadcast",
+          "A voice generated from old recordings",
+          "A new family member",
+          "An accidental phone call"
+        ],
+        "a": 1,
+        "why": "同事推測有人利用舊錄音生成虛擬聲音。"
+      },
+      {
+        "q": "What did Mara find in the attic?",
+        "opts": [
+          "A locked briefcase",
+          "A television",
+          "A broken clock",
+          "A passport"
+        ],
+        "a": 0,
+        "why": "她在帆布下找到上鎖公事包。"
+      }
+    ],
+    "words": [
+      "debut",
+      "attic",
+      "generate",
+      "virtual",
+      "canvas",
+      "briefcase"
+    ]
+  },
+  {
+    "id": "lv5-007",
+    "series": "第二部 · The Borrowed Voice｜借來的聲音",
+    "title": "The Interview That Never Aired",
+    "zh": "從未播出的訪談",
+    "blurb": "公事包裡的磁帶指向一段被取消的訪談，而錄音中的沉默比言語更重要。",
+    "scene": "paper",
+    "pages": [
+      {
+        "en": "Inside the briefcase was an antique recorder and a catalogue of interviews. Most had aired decades ago. One episode, however, was marked confidential. The guest was an adolescent singer whose career had ended after a public accusation.",
+        "zh": "公事包裡是一台老式錄音機和訪談目錄。多數節目在數十年前都播出過，但其中一集標記為機密。來賓是一位青春期歌手，她的職涯因一場公開指控而終止。"
+      },
+      {
+        "en": "The singer spoke with remarkable clarity about the way reporters had distorted her words. Then the tape stopped. Mara discovered that the remaining minutes had been deliberately erased. She felt anger, yet refused to invent what might have been said.",
+        "zh": "歌手清楚描述了記者如何扭曲她的話。接著錄音突然停止。Mara 發現剩下幾分鐘是被刻意抹除的。她感到憤怒，卻拒絕自行編造未被錄下的內容。"
+      },
+      {
+        "en": "A second note carried her mother’s handwriting: “I made a promise to protect her identity. I kept the tape, but not the right to publish it.” Mara realized that possessing a story was different from having consent to tell it.",
+        "zh": "另一張紙條是母親的字跡：「我承諾保護她的身分。我保留了錄音，但不代表我有權公開它。」Mara 意識到，擁有一段故事，和取得公開它的同意，是兩回事。"
+      }
+    ],
+    "quiz": [
+      {
+        "q": "Why had the singer’s career ended?",
+        "opts": [
+          "She moved abroad",
+          "After a public accusation",
+          "She became a presenter",
+          "She lost the recorder"
+        ],
+        "a": 1,
+        "why": "歌手的職涯因公開指控而中止。"
+      },
+      {
+        "q": "What did Mara refuse to do?",
+        "opts": [
+          "Listen to the tape",
+          "Look for her mother’s note",
+          "Invent the erased words",
+          "Read the catalogue"
+        ],
+        "a": 2,
+        "why": "她拒絕臆測已抹除的內容。"
+      },
+      {
+        "q": "What did the mother’s note emphasize?",
+        "opts": [
+          "Every story should be published",
+          "Ownership and consent are different",
+          "The singer had a new album",
+          "Old recordings have no value"
+        ],
+        "a": 1,
+        "why": "保有錄音不等於取得公開許可。"
+      }
+    ],
+    "words": [
+      "antique",
+      "episode",
+      "adolescent",
+      "clarity",
+      "consent"
+    ]
+  },
+  {
+    "id": "lv5-008",
+    "series": "第二部 · The Borrowed Voice｜借來的聲音",
+    "title": "A Person, Not a Recording",
+    "zh": "人不是一段錄音",
+    "blurb": "Mara 找到歌手本人，卻發現對方最不需要的就是另一個自以為替她發聲的人。",
+    "scene": "meeting",
+    "pages": [
+      {
+        "en": "The singer, now a vocal coach, agreed to meet only after Mara explained the situation. She had spent years recovering her autonomy. “People adored the image they had invented,” she said. “They never asked what I wanted.”",
+        "zh": "那位歌手如今是一名聲樂教練。在 Mara 說明情況後，她才同意見面。她花了多年重新拿回生活自主權。「大家愛的是自己想像中的我，」她說，「卻從來不問我想要什麼。」"
+      },
+      {
+        "en": "Mara asked whether the old interview could be released. The singer declined. She did, however, agree to a new interview—on the condition that she could review her own statements before broadcast. Mara considered this request reasonable, not an attempt to conceal the truth.",
+        "zh": "Mara 詢問能否公開舊訪談。歌手拒絕，但同意接受一場新的訪問，條件是在播出前先確認自己所說的內容。Mara 認為這是合理要求，而不是試圖隱瞞真相。"
+      },
+      {
+        "en": "As Mara left, the singer said, “Your mother was considerate. She understood that compassion is not the same as speaking on someone’s behalf.” At last Mara knew what her mother had been trying to protect.",
+        "zh": "Mara 離開時，歌手說：「你母親很體貼。她明白同情一個人，不代表可以替那個人發言。」Mara 終於理解母親一直想保護的是什麼。"
+      }
+    ],
+    "quiz": [
+      {
+        "q": "What had the singer spent years recovering?",
+        "opts": [
+          "Her old apartment",
+          "Her autonomy",
+          "A missing instrument",
+          "Her mother’s records"
+        ],
+        "a": 1,
+        "why": "她花了多年重新找回自主權。"
+      },
+      {
+        "q": "Under what condition would she do a new interview?",
+        "opts": [
+          "No questions about music",
+          "She could review her statements before broadcast",
+          "The original tape was destroyed first",
+          "Mara would never meet her"
+        ],
+        "a": 1,
+        "why": "她要求播出前能確認自己的陳述。"
+      },
+      {
+        "q": "What distinction did the singer make?",
+        "opts": [
+          "Music and radio are identical",
+          "Compassion does not grant the right to speak for others",
+          "Every interview must be anonymous",
+          "Silence proves guilt"
+        ],
+        "a": 1,
+        "why": "同情不等於代替別人發聲的權利。"
+      }
+    ],
+    "words": [
+      "vocal",
+      "autonomy",
+      "adore",
+      "decline",
+      "considerate",
+      "compassion",
+      "behalf"
+    ]
+  },
+  {
+    "id": "lv5-009",
+    "series": "第二部 · The Borrowed Voice｜借來的聲音",
+    "title": "Who Sent the Warning?",
+    "zh": "是誰寄來警告？",
+    "blurb": "語音的來源終於揭曉，Mara 卻必須先決定如何使用它。",
+    "scene": "night",
+    "pages": [
+      {
+        "en": "The mysterious message had been produced by Mara’s younger brother. He admitted that he had used their mother’s recordings without asking. He feared Mara would disclose the old interview in pursuit of a dramatic debut. “I wanted you to hesitate,” he said.",
+        "zh": "神祕訊息是 Mara 的弟弟製作的。他承認未經詢問就使用母親的錄音，因為害怕 Mara 為了讓首播轟動而公開舊訪談。「我只是希望妳猶豫一下，」他說。"
+      },
+      {
+        "en": "Mara confronted him about the deception. His intention did not erase the harm, but she could acknowledge the warning without approving the method. They agreed to delete the synthetic recording and preserve the original tapes privately.",
+        "zh": "Mara 當面質問弟弟的欺瞞。即使他出於好意，也不能抹去造成的傷害；但她可以接受警告，而不認同他的做法。兩人同意刪除合成語音，私人保存原始磁帶。"
+      },
+      {
+        "en": "On her debut program, Mara interviewed the singer about rebuilding a life after public judgment. She made no reference to the erased interview. At the end, she played several seconds of silence. For once, silence was not something missing from the story. It was a choice.",
+        "zh": "Mara 的首播節目訪問了那位歌手，談她如何在公眾評斷後重新生活。她沒有提及被抹除的舊訪談。節目最後，她播放了幾秒鐘的沉默。這一次，沉默不是故事缺少的一段，而是一個選擇。"
+      }
+    ],
+    "quiz": [
+      {
+        "q": "Who created the artificial voice?",
+        "opts": [
+          "The singer",
+          "Mara’s brother",
+          "A radio executive",
+          "The former colleague"
+        ],
+        "a": 1,
+        "why": "弟弟使用母親錄音合成語音。"
+      },
+      {
+        "q": "What did the siblings decide to do?",
+        "opts": [
+          "Release the old interview",
+          "Destroy every tape",
+          "Delete the synthetic voice and keep originals private",
+          "Publish the warning"
+        ],
+        "a": 2,
+        "why": "刪除合成語音，原始磁帶則私人保存。"
+      },
+      {
+        "q": "What does the final silence represent?",
+        "opts": [
+          "A broken microphone",
+          "A deliberate choice not to reveal everything",
+          "A missing sponsor",
+          "The end of radio"
+        ],
+        "a": 1,
+        "why": "沉默在結尾象徵尊重與選擇。"
+      }
+    ],
+    "words": [
+      "confront"
+    ]
+  },
+  {
+    "id": "lv5-010",
+    "series": "第三部 · The Greenhouse Below Zero｜零度以下的溫室",
+    "title": "The Garden That Stayed Warm",
+    "zh": "仍然溫暖的花園",
+    "blurb": "一場寒流過後，整座研究園區停電，唯獨廢棄溫室的植物仍在生長。",
+    "scene": "night",
+    "pages": [
+      {
+        "en": "During an abrupt cold spell, the entire research campus lost power. Yet one abandoned greenhouse stayed warm. Botanist Lena found an abundant cluster of green leaves beside a frozen corridor. The temperature readings looked absurd, but the plants were alive.",
+        "zh": "寒流突然來襲，整座研究園區停電，但一座廢棄溫室仍然溫暖。植物學家 Lena 在結冰的走廊旁發現一大叢繁茂的綠葉。溫度數據看起來荒謬，植物卻確實活著。"
+      },
+      {
+        "en": "An administrator ordered the building sealed until a safety assessment could be completed. Lena agreed. She did not want her curiosity to expose anyone to an unknown biological risk. Outside, a maintenance worker mentioned that the old heating circuit had supposedly been disconnected years ago.",
+        "zh": "管理員下令封閉建築，直到安全評估完成。Lena 同意，她不願因為好奇讓人暴露於未知的生物風險。外面一位維修人員提到，舊暖氣迴路據說早在多年前就切斷了。"
+      },
+      {
+        "en": "Lena drew a diagram of the greenhouse and noticed one narrow pipe leading beneath the ground. It ended at a locked door that did not appear on any recent plan. She wondered whether the warmth came from the soil—or from something people had chosen to forget.",
+        "zh": "Lena 畫出溫室平面圖，發現一根細管延伸到地下，終點是一扇近期圖面完全沒有記載的上鎖門。她不禁懷疑，熱究竟來自土壤，還是來自某件被人刻意遺忘的事。"
+      }
+    ],
+    "quiz": [
+      {
+        "q": "What was unusual about the abandoned greenhouse?",
+        "opts": [
+          "Its glass was missing",
+          "It remained warm during a power outage",
+          "Nobody could enter the campus",
+          "It had no plants"
+        ],
+        "a": 1,
+        "why": "停電與寒流中，溫室仍保持溫暖。"
+      },
+      {
+        "q": "Why did Lena accept the closure?",
+        "opts": [
+          "She had finished her work",
+          "She wanted to avoid an unknown risk",
+          "She disliked the administrator",
+          "She needed to travel"
+        ],
+        "a": 1,
+        "why": "她不想讓任何人冒未知生物風險。"
+      },
+      {
+        "q": "What was absent from recent plans?",
+        "opts": [
+          "A narrow path",
+          "A door below the greenhouse",
+          "The entire greenhouse",
+          "The main entrance"
+        ],
+        "a": 1,
+        "why": "新圖面沒有記載地下的門。"
+      }
+    ],
+    "words": [
+      "abundant",
+      "cluster",
+      "corridor",
+      "absurd",
+      "administrator",
+      "biological",
+      "maintenance",
+      "circuit",
+      "supposedly",
+      "disconnect"
+    ]
+  },
+  {
+    "id": "lv5-011",
+    "series": "第三部 · The Greenhouse Below Zero｜零度以下的溫室",
+    "title": "The Room Beneath the Soil",
+    "zh": "土壤下的房間",
+    "blurb": "地下室存著幾十年前的實驗資料；植物的奇蹟也許源於一次失敗的工程。",
+    "scene": "paper",
+    "pages": [
+      {
+        "en": "A technician opened the basement with permission from the university. Inside stood an array of old batteries and compact machines. The equipment had once supported an agricultural experiment meant to reduce energy consumption in winter.",
+        "zh": "技師得到大學許可後打開地下室。裡面排列著一排舊電池與小型機器。那些設備曾用於一項農業實驗，目的是降低冬天的能源消耗。"
+      },
+      {
+        "en": "The project’s lead researcher had proposed a novel compound that stored heat. Her colleagues called the concept a breakthrough, but the early tests were inconsistent. A brief report described an adverse reaction in one patch of soil. Funding ended, and the team abandoned the building.",
+        "zh": "當年的主持研究員提出一種能儲存熱量的新化合物。同事稱它是重大突破，但早期試驗結果不一致。一份簡短報告描述某塊土壤出現不良反應。經費結束後，團隊便廢棄了建築。"
+      },
+      {
+        "en": "Lena refused to touch the material before a new test. The living plants were promising, but they did not establish that the compound was safe. A discovery, she knew, could be beneficial in one circumstance and dangerous in another.",
+        "zh": "在新測試完成前，Lena 拒絕觸碰材料。存活的植物令人期待，卻不能證明化合物安全。她知道，一項發現在某種情況下可能有益，在另一種情況下卻可能危險。"
+      }
+    ],
+    "quiz": [
+      {
+        "q": "What was the old experiment designed to reduce?",
+        "opts": [
+          "Winter energy consumption",
+          "The number of researchers",
+          "Water in the harbor",
+          "Travel expenses"
+        ],
+        "a": 0,
+        "why": "舊實驗目標是減少冬季能源消耗。"
+      },
+      {
+        "q": "Why was the building abandoned?",
+        "opts": [
+          "It was sold",
+          "The early results were inconsistent and funding ended",
+          "The plants grew too quickly",
+          "Nobody understood electricity"
+        ],
+        "a": 1,
+        "why": "試驗結果不一致，而且經費終止。"
+      },
+      {
+        "q": "What did Lena refuse to assume?",
+        "opts": [
+          "The plants were alive",
+          "The compound was safe without testing",
+          "The basement existed",
+          "The technician had a key"
+        ],
+        "a": 1,
+        "why": "植物活著不能直接證明材料安全。"
+      }
+    ],
+    "words": [
+      "array",
+      "compact",
+      "agricultural",
+      "consumption",
+      "compound",
+      "breakthrough",
+      "adverse",
+      "patch",
+      "beneficial"
+    ]
+  },
+  {
+    "id": "lv5-012",
+    "series": "第三部 · The Greenhouse Below Zero｜零度以下的溫室",
+    "title": "The Price of a Breakthrough",
+    "zh": "突破的代價",
+    "blurb": "投資人帶著一份收購提案到來，研究卻還差最後一項關鍵測試。",
+    "scene": "meeting",
+    "pages": [
+      {
+        "en": "A private enterprise offered to finance a new laboratory if Lena would endorse the compound immediately. Its representative called the acquisition an opportunity for the whole region. He proposed a generous budget and promised a bonus for an early announcement.",
+        "zh": "一家私人企業提出，只要 Lena 立刻為化合物背書，就願意資助新實驗室。代表稱這次收購是整個地區的機會，提出充裕的預算，還承諾提早宣布會有獎金。"
+      },
+      {
+        "en": "Lena asked to examine the company’s ethical guidelines and safety obligations. The representative grew impatient. “You are letting a minor complication stop progress,” he argued. But Lena had already found evidence that the earlier soil damage was more widespread than the report suggested.",
+        "zh": "Lena 要求檢視企業的倫理準則與安全責任。代表開始不耐煩。「妳讓一個小問題阻礙了進步，」他說。但 Lena 已找到證據，顯示當年的土壤損害比報告所說更廣泛。"
+      },
+      {
+        "en": "She declined the immediate deal and offered a revised schedule with independent testing. The company withdrew its bonus but accepted the review. Lena went home disappointed by the lost money and relieved that she had not traded certainty for excitement.",
+        "zh": "她拒絕立即成交，提出加入獨立測試的修訂時程。企業撤回獎金，但接受審查。Lena 回家時雖因失去那筆錢而失望，也慶幸自己沒有用興奮感取代確定性。"
+      }
+    ],
+    "quiz": [
+      {
+        "q": "What did the enterprise want in exchange for funding?",
+        "opts": [
+          "A new greenhouse name",
+          "Immediate endorsement of the compound",
+          "All employees to resign",
+          "The technician’s password"
+        ],
+        "a": 1,
+        "why": "企業要求她立即背書。"
+      },
+      {
+        "q": "What made Lena more concerned?",
+        "opts": [
+          "Evidence of wider soil damage",
+          "The offer was in another language",
+          "The greenhouse looked old",
+          "A missing lunch"
+        ],
+        "a": 0,
+        "why": "她發現損害範圍可能更大。"
+      },
+      {
+        "q": "How did the negotiation end?",
+        "opts": [
+          "No research could continue",
+          "The company accepted independent testing but removed the bonus",
+          "Lena sold the university",
+          "The representative destroyed the samples"
+        ],
+        "a": 1,
+        "why": "公司同意獨立審查，但撤掉獎金。"
+      }
+    ],
+    "words": [
+      "enterprise",
+      "endorse",
+      "acquisition",
+      "bonus",
+      "ethical",
+      "guideline",
+      "obligation",
+      "complication",
+      "widespread",
+      "certainty"
+    ]
+  },
+  {
+    "id": "lv5-013",
+    "series": "第三部 · The Greenhouse Below Zero｜零度以下的溫室",
+    "title": "A Different Kind of Harvest",
+    "zh": "另一種收成",
+    "blurb": "最後的測試不是完美答案，卻給了 Lena 一個比奇蹟更可靠的結果。",
+    "scene": "paper",
+    "pages": [
+      {
+        "en": "The assessment revealed two distinct mechanisms. The compound stored heat efficiently, but one component could contaminate nearby water after heavy rain. By altering the mixture, the team could diminish the risk without abolishing the project entirely.",
+        "zh": "評估顯示有兩種不同機制。化合物有效儲存熱量，但其中一種成分可能在大雨後污染附近水源。透過調整配方，團隊能降低風險，不必完全廢止計畫。"
+      },
+      {
+        "en": "The revised design required a longer trial and a smaller greenhouse. It would never create the spectacular winter garden that investors had imagined. Instead, it could help ordinary farmers protect crops using less energy. Lena published both the advantages and the constraints.",
+        "zh": "修訂後的設計需要更長的試驗及更小的溫室。它永遠不會成為投資人想像中驚人的冬日花園，但能幫助一般農民用更少能源保護作物。Lena 同時公開優點與限制。"
+      },
+      {
+        "en": "On the day the campus reopened, she walked past the old door. The first leaves had withered during the tests, and the loss still hurt. Then she saw new seedlings beside them. The true breakthrough was not a garden that defied winter; it was a method people could trust.",
+        "zh": "園區重新開放那天，她走過那扇舊門。最初的葉片在測試期間枯萎了，失去它們仍令她難過；但旁邊已長出新苗。真正的突破不是一座違抗冬天的花園，而是一種值得信賴的方法。"
+      }
+    ],
+    "quiz": [
+      {
+        "q": "What safety problem did the assessment reveal?",
+        "opts": [
+          "A dangerous door",
+          "Possible water contamination",
+          "A missing report",
+          "Unreliable electricity bills"
+        ],
+        "a": 1,
+        "why": "一種成分在雨後可能污染水源。"
+      },
+      {
+        "q": "What was the practical benefit of the revised design?",
+        "opts": [
+          "Helping farmers use less energy",
+          "Growing plants without water",
+          "Making every winter warm",
+          "Avoiding all future tests"
+        ],
+        "a": 0,
+        "why": "新設計可幫農民以較少能源保護農作物。"
+      },
+      {
+        "q": "What does Lena view as the real breakthrough?",
+        "opts": [
+          "A spectacular appearance",
+          "A result that people can trust",
+          "An immediate bonus",
+          "Perfect weather"
+        ],
+        "a": 1,
+        "why": "真正的突破是可靠、可使用的方法。"
+      }
+    ],
+    "words": [
+      "mechanism",
+      "contaminate",
+      "diminish",
+      "abolish",
+      "spectacular",
+      "constraint",
+      "wither",
+      "defy"
+    ]
+  },
+  {
+    "id": "lv5-014",
+    "series": "第四部 · The Hotel of Unsent Letters｜沒有寄出的旅館信件",
+    "title": "A Room Without a Guest",
+    "zh": "沒有住客的房間",
+    "blurb": "旅館每年都為一位從未入住的客人保留房間，直到一封信突然送達。",
+    "scene": "night",
+    "pages": [
+      {
+        "en": "Every autumn, the small hotel reserved Room 18 for a guest who never arrived. The reservation was paid through an anonymous account, and nobody knew the guest’s whereabouts. When receptionist Eli asked the manager, she called it a private family arrangement.",
+        "zh": "每年秋天，小旅館都會替一位從未抵達的客人保留十八號房。訂房費來自匿名帳戶，沒人知道客人的下落。接待員 Eli 問經理時，她只說這是家族的私人安排。"
+      },
+      {
+        "en": "One evening, a courier delivered a worn envelope addressed to the absent guest. The return address belonged to a nearby cemetery. Eli felt uneasy. He placed the letter in the room rather than opening someone else’s belongings.",
+        "zh": "某天傍晚，快遞送來一封磨損的信，收件人就是那位缺席的客人。寄件地址竟是附近的墓園。Eli 感到不安，卻沒有擅自拆閱，而是把信放進房間。"
+      },
+      {
+        "en": "At midnight, a visitor appeared and requested the same room. She carried a small bronze key and said, “I have been waiting twenty years to find out whether she kept her promise.” Eli checked the register. Her name was not the one on the reservation.",
+        "zh": "午夜，一名訪客出現，指定要住同一間房。她帶著一把小小的銅鑰匙，說：「我等了二十年，就想知道她有沒有守約。」Eli 查了登記簿，她的名字卻不是預訂上的那一位。"
+      }
+    ],
+    "quiz": [
+      {
+        "q": "What was unusual about Room 18?",
+        "opts": [
+          "It had no windows",
+          "It was reserved annually for someone who never came",
+          "It was always free",
+          "The staff lived there"
+        ],
+        "a": 1,
+        "why": "每年都替未出現的人保留房間。"
+      },
+      {
+        "q": "Why did Eli not open the letter?",
+        "opts": [
+          "He was unable to read",
+          "It belonged to someone else",
+          "The manager ordered him to burn it",
+          "It was empty"
+        ],
+        "a": 1,
+        "why": "他尊重他人的信件與隨身物品。"
+      },
+      {
+        "q": "What was unusual about the visitor?",
+        "opts": [
+          "She used the manager’s name",
+          "Her name did not match the reservation",
+          "She carried a large suitcase",
+          "She knew no English"
+        ],
+        "a": 1,
+        "why": "她的名字和房間預訂者不同。"
+      }
+    ],
+    "words": [
+      "whereabouts",
+      "cemetery",
+      "belongings",
+      "bronze"
+    ]
+  },
+  {
+    "id": "lv5-015",
+    "series": "第四部 · The Hotel of Unsent Letters｜沒有寄出的旅館信件",
+    "title": "The Key and the Photograph",
+    "zh": "鑰匙與照片",
+    "blurb": "十八號房藏著兩位姊妹的約定，但真正被遺忘的，也許是留下來的那個人。",
+    "scene": "paper",
+    "pages": [
+      {
+        "en": "The visitor introduced herself as June, the younger of two sisters. Her sister had left the town after a bitter confrontation with their father. Before departing, she had vowed to return every autumn. But neither sister had found the courage to make contact.",
+        "zh": "訪客自我介紹叫 June，是兩姊妹中的妹妹。姊姊在與父親激烈爭執後離開小鎮，臨走前發誓每年秋天都會回來。但姊妹倆都一直沒有勇氣聯絡對方。"
+      },
+      {
+        "en": "The bronze key opened a drawer containing a photograph and a stack of unsent letters. The letters were not from the absent sister. They were from their father, who had written a new one every year and never mailed it.",
+        "zh": "銅鑰匙打開抽屜，裡面有一張照片和一疊未寄出的信。那些信不是缺席的姊姊寫的，而是她們父親每年寫好卻從未寄出的信。"
+      },
+      {
+        "en": "June was astonished. She had believed her father felt only contempt for his eldest daughter. But each letter contained an awkward attempt at affection, followed by another excuse for silence. Eli watched June hold the final letter without opening it. She had a choice that belonged to her alone.",
+        "zh": "June 非常驚訝。她一直以為父親只看不起大女兒，但每封信都是笨拙的關心，接著又以沉默收場。Eli 看著 June 握著最後一封信，卻沒有拆開。這個決定只屬於她自己。"
+      }
+    ],
+    "quiz": [
+      {
+        "q": "Who wrote the letters in the drawer?",
+        "opts": [
+          "The receptionist",
+          "The father",
+          "The absent sister",
+          "A courier"
+        ],
+        "a": 1,
+        "why": "那疊信是父親每年寫下、沒有寄出的。"
+      },
+      {
+        "q": "What had June believed about her father?",
+        "opts": [
+          "He wanted to travel",
+          "He felt contempt for her sister",
+          "He owned a new hotel",
+          "He had forgotten the room"
+        ],
+        "a": 1,
+        "why": "June 原以為父親只看不起姊姊。"
+      },
+      {
+        "q": "What choice is left to June?",
+        "opts": [
+          "Whether to open the final letter",
+          "Whether to sell the hotel",
+          "Whether to take a train",
+          "Whether to call the courier"
+        ],
+        "a": 0,
+        "why": "她可以自己決定是否拆最後一封信。"
+      }
+    ],
+    "words": [
+      "confrontation",
+      "vow",
+      "stack",
+      "astonish",
+      "contempt",
+      "affection"
+    ]
+  },
+  {
+    "id": "lv5-016",
+    "series": "第四部 · The Hotel of Unsent Letters｜沒有寄出的旅館信件",
+    "title": "The Letter She Wrote Herself",
+    "zh": "她親手寫的那封信",
+    "blurb": "房間的謎題解開了，但 June 決定不再替任何人承諾或道歉。",
+    "scene": "meeting",
+    "pages": [
+      {
+        "en": "The manager finally disclosed the arrangement: June’s father had paid for Room 18 until his death, hoping his daughter would have a place to return. The account continued through his estate. He had never asked anyone to pass the letters along.",
+        "zh": "經理終於說出安排：June 的父親生前一直替十八號房付費，希望大女兒總有一處能回來。父親過世後，由遺產繼續支付。他從未請任何人替他轉交那些信。"
+      },
+      {
+        "en": "June read the final letter. It contained no dramatic confession, only the sentence: “I should have called while I still could.” She did not forgive every hurt or condemn every memory. She decided to contact her sister and tell her what the room contained, without telling her what to feel.",
+        "zh": "June 讀了最後一封信。裡面沒有戲劇性的告白，只有一句：「我還能打電話時，就該打給妳。」她沒有原諒每一道傷，也沒有否定每一段回憶。她決定聯絡姊姊，告訴她房間裡有什麼，卻不替她決定該有什麼感受。"
+      },
+      {
+        "en": "Before checking out, June left a letter of her own on the desk. Eli asked whether it should be mailed. “Yes,” she said, handing him the address. “This one deserves to arrive.” The room was empty again that autumn, but for the first time, nobody had reserved it for a ghost.",
+        "zh": "退房前，June 在櫃檯留下一封自己寫的信。Eli 問要不要寄出。「要，」她遞上地址，「這封信值得抵達。」那年秋天，十八號房再次空下來，但第一次，沒有人再替一個幽靈保留它。"
+      }
+    ],
+    "quiz": [
+      {
+        "q": "Why had the father paid for Room 18?",
+        "opts": [
+          "To keep a place his daughter could return to",
+          "To help the manager retire",
+          "To store old furniture",
+          "To invite the courier"
+        ],
+        "a": 0,
+        "why": "父親希望女兒總有地方可回。"
+      },
+      {
+        "q": "What does June decide NOT to do?",
+        "opts": [
+          "Tell her sister about the room",
+          "Decide how her sister should feel",
+          "Send her own letter",
+          "Read the final letter"
+        ],
+        "a": 1,
+        "why": "她只告知事實，不替姊姊決定情緒。"
+      },
+      {
+        "q": "What changes at the end?",
+        "opts": [
+          "The hotel closes",
+          "A letter is finally sent and the room is no longer reserved",
+          "The courier returns",
+          "The bronze key is sold"
+        ],
+        "a": 1,
+        "why": "June 選擇寄出自己的信，房間也不再保留。"
+      }
+    ],
+    "words": [
+      "estate",
+      "confession",
+      "condemn"
+    ]
+  },
+  {
+    "id": "lv5-017",
+    "series": "第五部 · The Bell Beneath the Pier｜碼頭下面的鐘",
+    "title": "The Bell Without a Rope",
+    "zh": "沒有繩子的鐘",
+    "blurb": "海邊小鎮的舊碼頭半夜傳來鐘聲，但鐘早就被拆下。來修碼頭的 Iris 卻在聲音裡聽出一條時間規律。",
+    "scene": "night",
+    "pages": [
+      {
+        "en": "The bell under North Pier rang at midnight, although the town had removed it twenty years ago. Iris, an architect hired to assess the pier, heard three strikes through her hotel window. The next morning, a fisherman showed her a blurry photograph of the empty bell tower. “People say the sea remembers,” he said. Iris preferred a less poetic explanation.",
+        "zh": "北碼頭的鐘在午夜響起，儘管鎮上二十年前就把它拆除了。受聘評估碼頭的建築師 Iris 從旅館窗邊聽見三聲鐘響。隔天早晨，一位漁夫拿出鐘樓空空如也的模糊照片。「有人說海會記得，」他說。Iris 比較想找一個不那麼詩意的解釋。"
+      },
+      {
+        "en": "A municipal notice warned pedestrians to beware of loose boards. Yet a fresh bolt lay beside the tower, and the dust beneath it had been disturbed. Iris followed a narrow aisle between storage sheds to a locked doorway. There, beneath a faded banner for an old carnival, she found a wire running down through the floor.",
+        "zh": "市公所公告提醒行人小心鬆動的木板。然而鐘樓旁卻有一顆新的螺栓，下面的灰塵也被翻動過。Iris 沿著倉棚間狹窄的走道走到一道上鎖的門口。在一面舊嘉年華布條下面，她發現一條電線穿過地板往下延伸。"
+      },
+      {
+        "en": "She did not force the door. Instead, she marked the boundary of the unsafe section and called the pier supervisor. When she mentioned the midnight sound, he went pale. “The bell is gone,” he said, “but the room that made it ring is still there.”",
+        "zh": "她沒有強行開門，而是標出不安全區域的界線，並打電話給碼頭主管。當她提到午夜的聲音，主管的臉色變得蒼白。「鐘已經不在了，」他說，「但讓它響起的那間房還在。」"
+      }
+    ],
+    "quiz": [
+      {
+        "q": "What makes the bell sound unusual?",
+        "opts": [
+          "It rings at noon",
+          "The bell was removed years ago",
+          "The fisherman cannot hear it",
+          "The tower was recently painted"
+        ],
+        "a": 1,
+        "why": "鐘早在二十年前就被拆下，卻仍有鐘聲。"
+      },
+      {
+        "q": "What does Iris find under the old banner?",
+        "opts": [
+          "A hidden wire",
+          "A new bell",
+          "A boat ticket",
+          "An ancient coin"
+        ],
+        "a": 0,
+        "why": "她在布條下發現往地板下延伸的電線。"
+      },
+      {
+        "q": "Why does Iris call the supervisor?",
+        "opts": [
+          "She wants a festival permit",
+          "She needs to borrow a camera",
+          "She finds an unsafe area and a locked room",
+          "She has already opened the door"
+        ],
+        "a": 2,
+        "why": "她先標示危險區域，並未擅自破門。"
+      }
+    ],
+    "words": [
+      "pier",
+      "architect",
+      "assess",
+      "poetic",
+      "municipal",
+      "pedestrian",
+      "beware",
+      "bolt",
+      "aisle",
+      "storage",
+      "shed",
+      "doorway",
+      "banner",
+      "carnival",
+      "boundary"
+    ]
+  },
+  {
+    "id": "lv5-018",
+    "series": "第五部 · The Bell Beneath the Pier｜碼頭下面的鐘",
+    "title": "A Map of the Current",
+    "zh": "水流的地圖",
+    "blurb": "主管堅持只是老式警報裝置，但鐘聲發生的時間，卻和漁民記錄的水位吻合。",
+    "scene": "paper",
+    "pages": [
+      {
+        "en": "The supervisor unlocked the room. Inside was an obsolete generator connected to a metal plate beneath the pier. Strong waves could strike the plate, sending a low vibration through the tower. “A harmless coincidence,” he said. Iris was not convinced: the bell rang only on certain nights, even when the weather seemed calm.",
+        "zh": "主管打開房門。裡面是一台過時的發電機，連著碼頭下方的金屬板。強浪可能敲擊金屬板，讓低沉震動沿鐘樓傳上去。「只是無害的巧合，」他說。但 Iris 沒被說服：鐘聲只在某些夜晚出現，即使天氣看來平靜也是如此。"
+      },
+      {
+        "en": "At the harbor office, she browsed a directory of tidal records. A retired sailor had noted an unusual current that could steer small boats toward the pier during an otherwise safe passage. The records had been filed under the wrong date after a software conversion. That error made the pattern difficult to perceive.",
+        "zh": "在港務辦公室，她翻閱潮汐紀錄目錄。一位退休水手曾記下一股異常水流，可能在看似安全的航程中把小船帶向碼頭。軟體轉換後，這些紀錄被歸到錯誤日期，讓人難以察覺其中的規律。"
+      },
+      {
+        "en": "Iris used the original figures to draw a graphic of the current. The bell had not predicted danger; it had responded to it. She asked the town to restrict access to the pier until the structure could be examined. The supervisor agreed, then admitted that the last inspection had been postponed to save money.",
+        "zh": "Iris 用原始數據畫出水流圖。鐘聲不是預言危險，而是在危險發生時產生反應。她請鎮上先限制民眾進入碼頭，直到完成結構檢查。主管同意了，接著承認上次檢查為了省錢而延期。"
+      }
+    ],
+    "quiz": [
+      {
+        "q": "What caused the sound?",
+        "opts": [
+          "A new electronic clock",
+          "Waves moving a metal plate",
+          "A sailor ringing a bell",
+          "A festival recording"
+        ],
+        "a": 1,
+        "why": "波浪撞擊金屬板，讓震動傳上鐘樓。"
+      },
+      {
+        "q": "Why was the tidal pattern hard to notice?",
+        "opts": [
+          "The sea had dried up",
+          "A software conversion filed records under wrong dates",
+          "All records were destroyed",
+          "The sailor refused to share them"
+        ],
+        "a": 1,
+        "why": "日期在系統轉換後歸錯，遮住了原本的規律。"
+      },
+      {
+        "q": "What does Iris request?",
+        "opts": [
+          "An immediate festival",
+          "Temporary restriction and a structural inspection",
+          "A larger hotel",
+          "A new fishing permit"
+        ],
+        "a": 1,
+        "why": "她請鎮上先封閉危險區，再做結構檢查。"
+      }
+    ],
+    "words": [
+      "unlock",
+      "generator",
+      "coincidence",
+      "browse",
+      "directory",
+      "steer",
+      "conversion",
+      "perceive",
+      "graphic"
+    ]
+  },
+  {
+    "id": "lv5-019",
+    "series": "第五部 · The Bell Beneath the Pier｜碼頭下面的鐘",
+    "title": "The Room Behind the Wall",
+    "zh": "牆後的房間",
+    "blurb": "封閉碼頭後，工人找到第二道牆。裡頭的舊圖說明，為什麼有人一直不願讓工程重新開始。",
+    "scene": "meeting",
+    "pages": [
+      {
+        "en": "During the inspection, workers uncovered a second room behind a wooden wall. It held a model of the original pier and a report signed by the supervisor’s father. The report warned that heavy freight vehicles could put excessive strain on the foundations. Yet a later document described the same structure as safe for unlimited traffic.",
+        "zh": "檢查時，工人拆開木牆後發現第二間房。裡面放著舊碼頭模型，以及一份由主管父親簽名的報告。報告警告重型貨運車輛會讓地基承受過大壓力；但後來一份文件卻稱同一座碼頭能承受不限量的車流。"
+      },
+      {
+        "en": "The supervisor confessed that he had inherited the documents but never shown them to the council. He feared that closing the pier would ruin the local economy. Iris did not accuse him of causing the damage. She asked a specialist to compare both reports and assess the actual foundation, rather than decide from either document alone.",
+        "zh": "主管坦承自己繼承了這些文件，卻從沒交給議會。他害怕關閉碼頭會毀掉地方經濟。Iris 沒有指控他造成損壞，而是請專家比較兩份報告並實際評估地基，不只憑其中一份文件下結論。"
+      },
+      {
+        "en": "That evening, a storm intensified. From the hill above town, Iris watched the pier lights disappear behind the rain. Then the sound came again: not three strikes, but one long, terrible note. The old warning was becoming urgent.",
+        "zh": "當晚風暴加劇。Iris 從鎮上的山丘看著碼頭燈光消失在雨幕後。鐘聲再次傳來，這次不是三聲，而是一聲漫長而可怕的低鳴。舊警訊正變得急迫。"
+      }
+    ],
+    "quiz": [
+      {
+        "q": "What does the older report warn about?",
+        "opts": [
+          "Tourists taking photographs",
+          "Heavy freight putting strain on foundations",
+          "A shortage of boats",
+          "An abandoned hotel"
+        ],
+        "a": 1,
+        "why": "舊報告指出重型貨車可能讓地基負荷過重。"
+      },
+      {
+        "q": "Why had the supervisor hidden the report?",
+        "opts": [
+          "He could not read it",
+          "He feared economic harm if the pier closed",
+          "He wanted to become mayor",
+          "His father had asked him to burn it"
+        ],
+        "a": 1,
+        "why": "他擔心碼頭關閉會影響地方經濟。"
+      },
+      {
+        "q": "What changes at the end?",
+        "opts": [
+          "The storm weakens",
+          "The bell stops forever",
+          "The warning becomes a long, urgent sound",
+          "The town celebrates"
+        ],
+        "a": 2,
+        "why": "風暴中傳來一聲更長、更急迫的低鳴。"
+      }
+    ],
+    "words": [
+      "uncover",
+      "freight",
+      "excessive",
+      "strain",
+      "inherit",
+      "specialist",
+      "intensify"
+    ]
+  },
+  {
+    "id": "lv5-020",
+    "series": "第五部 · The Bell Beneath the Pier｜碼頭下面的鐘",
+    "title": "When the Bell Rang",
+    "zh": "鐘聲終於響起",
+    "blurb": "Iris 必須決定：讓大家先撤離，還是等待最終的工程報告？這一次鐘聲是給人的，不是給海的。",
+    "scene": "night",
+    "pages": [
+      {
+        "en": "Iris called the emergency team and recommended a precaution: keep everyone away from the pier before the next wave arrived. The mayor wanted certainty, but the engineer explained that waiting for certainty could make rescue impossible. The town sent a shuttle to the nearby market and guided workers along an alternate route.",
+        "zh": "Iris 通知緊急應變隊，建議採取預防措施：下一波浪到來前讓所有人遠離碼頭。鎮長想要確定的答案，但工程師解釋，若等到百分之百確定，救援可能就來不及了。鎮上派接駁車到附近市場，並引導工人走替代路線。"
+      },
+      {
+        "en": "A section of the pier collapsed before dawn. Nobody was hurt. The investigation later found corrosion beneath the boards and a damaged support hidden by repeated repairs. The bell had merely carried the vibration of waves through old metal; it was neither a myth nor a reliable alarm. Iris insisted the town should not depend on it again.",
+        "zh": "天亮前，一段碼頭坍塌了，無人受傷。後續調查發現木板下方的腐蝕，以及被反覆修補掩蓋的損壞支柱。鐘聲只是讓波浪震動穿過舊金屬；它既不是神話，也不是可靠的警報。Iris 堅持鎮上不能再靠它示警。"
+      },
+      {
+        "en": "The pier reopened months later with a smaller walkway, a clear inspection schedule, and a memorial made from the old bell plate. The fisherman asked whether Iris had solved the town’s mystery. “Partly,” she said. “The bigger question was why nobody wanted to hear what the records were saying.”",
+        "zh": "數月後，碼頭以較小的步道重新開放，並有清楚的檢查時程；舊鐘板也被做成紀念物。漁夫問 Iris 是否解開了鎮上的謎。「部分吧，」她說，「更大的問題是，為什麼沒有人想聽紀錄早就在說的事。」"
+      }
+    ],
+    "quiz": [
+      {
+        "q": "Why does Iris recommend evacuation before the final report?",
+        "opts": [
+          "She knows a myth is true",
+          "The risk is urgent and waiting could prevent rescue",
+          "She wants to close the market permanently",
+          "She distrusts all engineers"
+        ],
+        "a": 1,
+        "why": "風險迫近，等待完全確定可能錯失撤離機會。"
+      },
+      {
+        "q": "What was the bell in reality?",
+        "opts": [
+          "A dependable official alarm",
+          "A myth invented for tourists",
+          "A vibration transmitted through old metal",
+          "A secret radio station"
+        ],
+        "a": 2,
+        "why": "鐘聲是浪的震動沿著舊金屬傳上來。"
+      },
+      {
+        "q": "What is the story’s larger problem?",
+        "opts": [
+          "The town lacked tourists",
+          "People ignored inconvenient evidence",
+          "The bell was too small",
+          "The fisherman kept poor photographs"
+        ],
+        "a": 1,
+        "why": "真正的問題是長期不願正視危險紀錄。"
+      }
+    ],
+    "words": [
+      "recommend",
+      "precaution",
+      "shuttle",
+      "alternate",
+      "myth",
+      "partly"
+    ]
+  },
+  {
+    "id": "lv5-021",
+    "series": "第六部 · The Orchard on Paper｜紙上的果園",
+    "title": "A Tree Marked for Removal",
+    "zh": "被畫上叉號的樹",
+    "blurb": "一座社區果園即將被改建，學生 Sora 發現評估圖上的樹木數量和現場完全不同。",
+    "scene": "paper",
+    "pages": [
+      {
+        "en": "Sora discovered the notice while taking a shortcut to school: REMOVE ALL TREES BY MONDAY. The orchard had been her favorite place since childhood. A developer planned to build residential housing there, and the municipal map depicted the land as a barren lot with only six trees. Sora counted forty-three.",
+        "zh": "Sora 走捷徑上學時看到公告：「星期一前移除所有樹木。」那座果園是她從小最喜歡的地方。開發商打算蓋住宅，而市公所地圖卻把土地描繪成只有六棵樹的荒地。Sora 現場數到了四十三棵。"
+      },
+      {
+        "en": "Her teacher suggested a simple approach: cite the map, photograph the orchard, and ask which criterion had been used to describe it. Sora expected an easy correction. Instead, a clerk told her that only the official survey mattered, not the observations of an adolescent with a camera.",
+        "zh": "老師建議她採取簡單的方法：引用地圖、拍攝果園，並詢問用什麼標準描述它。Sora 原以為更正會很容易；一名承辦員卻告訴她，只能以官方調查為準，一個拿相機的青少年的觀察不算數。"
+      },
+      {
+        "en": "At home, she spread the photographs across her desk. She noticed a narrow canal missing from the plan. The water ran behind the trees toward the school. If the map had missed the canal as well, the mistake was larger than a few missing branches.",
+        "zh": "回家後，她把照片鋪滿桌面，發現計畫圖上也少了一條狹窄的水渠。水流沿樹木後方通往學校。若地圖連水渠都沒畫上，問題就不只是少畫幾根樹枝了。"
+      }
+    ],
+    "quiz": [
+      {
+        "q": "What discrepancy does Sora find?",
+        "opts": [
+          "The school has moved",
+          "The plan shows far fewer trees than she counts",
+          "The orchard is on an island",
+          "The canal has dried up"
+        ],
+        "a": 1,
+        "why": "圖上六棵樹，現場卻有四十三棵。"
+      },
+      {
+        "q": "How does the clerk respond?",
+        "opts": [
+          "He accepts the correction",
+          "He says only the official survey counts",
+          "He offers Sora a job",
+          "He asks her to cut the trees"
+        ],
+        "a": 1,
+        "why": "承辦員認為只能採用官方調查。"
+      },
+      {
+        "q": "What other feature is missing from the map?",
+        "opts": [
+          "A train station",
+          "A canal",
+          "A hospital",
+          "A playground"
+        ],
+        "a": 1,
+        "why": "還漏掉了流向學校的水渠。"
+      }
+    ],
+    "words": [
+      "orchard",
+      "residential",
+      "housing",
+      "depict",
+      "barren",
+      "cite",
+      "criterion",
+      "canal"
+    ]
+  },
+  {
+    "id": "lv5-022",
+    "series": "第六部 · The Orchard on Paper｜紙上的果園",
+    "title": "Counting the Rain",
+    "zh": "記錄雨水的人",
+    "blurb": "Sora 找到一群做雨量紀錄的長者；她以為自己找到證據，卻發現最老的數據也有缺口。",
+    "scene": "meeting",
+    "pages": [
+      {
+        "en": "The orchard committee had measured rainfall for decades. Their notebooks showed that the trees helped absorb runoff during heavy storms. A retired farmer explained that the soil was not simply an asset to be sold: it formed part of a wider ecosystem. “The orchard shelters insects, birds, and the people who walk home through it,” he said.",
+        "zh": "果園委員會量測雨量已有數十年。筆記顯示，大雨時樹木有助於吸收地表逕流。一位退休農夫解釋，這片土壤不只是可以出售的資產，也是更大生態系的一部分。「果園庇護昆蟲、鳥兒，也庇護穿過這裡回家的人。」"
+      },
+      {
+        "en": "Sora used the records to develop a hypothesis: without the orchard, water would flow faster toward the school. But one year’s data were missing, and the instruments had not always been installed in the same location. She could not claim a precise correlation without acknowledging those limits.",
+        "zh": "Sora 用紀錄提出假設：失去果園後，水可能更快流向學校。但其中一年的資料缺失，儀器也不總設在同一位置。她若不承認這些限制，就不能宣稱存在精確的相關性。"
+      },
+      {
+        "en": "At a public workshop, she presented the old notebooks alongside recent photographs. Some residents wanted to ban construction immediately. Sora resisted the easy answer. “I’m asking for a proper assessment,” she said, “not for anyone to believe me simply because I love these trees.”",
+        "zh": "在公開工作坊上，她展示舊筆記與近期照片。有些居民想立即禁止施工，但 Sora 不願接受這個過於簡單的答案。「我要求的是適當評估，」她說，「不是因為我愛這些樹，就要大家直接相信我。」"
+      }
+    ],
+    "quiz": [
+      {
+        "q": "What did the notebooks suggest about the orchard?",
+        "opts": [
+          "It made storms stronger",
+          "It helped absorb runoff",
+          "It caused insects to disappear",
+          "It was never visited"
+        ],
+        "a": 1,
+        "why": "舊紀錄指出果園有助於吸收大雨逕流。"
+      },
+      {
+        "q": "Why does Sora avoid claiming an exact correlation?",
+        "opts": [
+          "Some data and instrument positions are uncertain",
+          "She lost all her photographs",
+          "The farmer forbids it",
+          "The school no longer exists"
+        ],
+        "a": 0,
+        "why": "有資料缺口，儀器位置也曾改變。"
+      },
+      {
+        "q": "What does Sora ask for?",
+        "opts": [
+          "Blind trust in her opinion",
+          "A proper independent assessment",
+          "A permanent ban without review",
+          "A new camera"
+        ],
+        "a": 1,
+        "why": "她要求認真評估，而非盲目支持。"
+      }
+    ],
+    "words": [
+      "asset",
+      "ecosystem",
+      "hypothesis",
+      "correlation",
+      "workshop",
+      "alongside",
+      "resident",
+      "ban"
+    ]
+  },
+  {
+    "id": "lv5-023",
+    "series": "第六部 · The Orchard on Paper｜紙上的果園",
+    "title": "The Offer",
+    "zh": "交換條件",
+    "blurb": "開發商提出捐款保留最老的樹，條件卻是 Sora 必須停止公開質疑地圖。",
+    "scene": "meeting",
+    "pages": [
+      {
+        "en": "The developer invited Sora and her teacher to a consultation. He offered a donation to preserve the oldest tree and promised a new playground. In exchange, he wanted Sora to withdraw her complaint about the inaccurate map. “This is a reasonable compromise,” he said, sliding a contract across the table.",
+        "zh": "開發商邀請 Sora 和老師會談，提出捐款保留最老的樹，還承諾建新的遊樂場。交換條件是 Sora 必須撤回地圖不準確的申訴。「這是合理的折衷方案，」他說，將合約推到桌上。"
+      },
+      {
+        "en": "Sora was tempted. The orchard needed maintenance, and many families needed affordable homes. But the contract contained a clause preventing the committee from sharing its research. Her teacher told her to read every provision, especially the ones that sounded harmless.",
+        "zh": "Sora 有些心動。果園需要維護，許多家庭也需要負擔得起的住宅。但合約中有一條禁止委員會分享研究成果的條款。老師提醒她每項規定都要讀，尤其是那些看起來無害的。"
+      },
+      {
+        "en": "She declined the offer and proposed an alternate plan: conduct a new survey, keep the canal accessible, and consider a smaller building outside the flood route. The developer did not agree immediately. Yet for the first time, he asked his engineers to look at the map rather than at Sora.",
+        "zh": "她拒絕提議，改提出另一項計畫：重新調查、保留水渠通行空間，並考慮把較小的建築蓋在水流路徑之外。開發商沒有立刻同意，但他第一次叫工程師看地圖，而不是看 Sora。"
+      }
+    ],
+    "quiz": [
+      {
+        "q": "What condition comes with the donation?",
+        "opts": [
+          "Sora must stop challenging the map",
+          "Sora must plant a new orchard",
+          "The teacher must leave town",
+          "The school must move"
+        ],
+        "a": 0,
+        "why": "捐款交換的是撤回對錯誤地圖的質疑。"
+      },
+      {
+        "q": "What troubles Sora about the contract?",
+        "opts": [
+          "A clause blocks sharing the research",
+          "It mentions no playground",
+          "It lists too many trees",
+          "It arrives too late"
+        ],
+        "a": 0,
+        "why": "合約禁止委員會分享研究資料。"
+      },
+      {
+        "q": "What alternative does Sora propose?",
+        "opts": [
+          "No housing anywhere",
+          "A new survey and a smaller building outside the flood route",
+          "Selling the canal",
+          "Replacing the oldest tree"
+        ],
+        "a": 1,
+        "why": "她兼顧重新評估、水渠和住宅需求。"
+      }
+    ],
+    "words": [
+      "consultation",
+      "donation",
+      "tempt",
+      "provision",
+      "conduct",
+      "accessible"
+    ]
+  },
+  {
+    "id": "lv5-024",
+    "series": "第六部 · The Orchard on Paper｜紙上的果園",
+    "title": "What Took Root",
+    "zh": "真正生根的事",
+    "blurb": "最後的調查結果沒有讓任何一方完全如願，卻讓原本只會對立的人開始合作。",
+    "scene": "paper",
+    "pages": [
+      {
+        "en": "The new survey confirmed the missing canal and counted the orchard’s trees. It also found that the site could accommodate some housing if the buildings stayed clear of the water route. The council approved a revised plan with public access, fewer parking spaces, and a fund to sustain the remaining orchard.",
+        "zh": "新調查確認了漏畫的水渠，也清點果園樹木；結果還指出，只要建築避開水流路線，土地仍可容納部分住宅。議會通過修訂方案，保留公共通道、縮減停車位，並設立維持剩餘果園的基金。"
+      },
+      {
+        "en": "Not everyone celebrated. Some wanted every tree preserved; others thought the changes were too costly. Sora understood both concerns, but she was proud of the transparent process. The council now required environmental data to be attached to future proposals, where any resident could read it.",
+        "zh": "不是每個人都慶祝。有些人希望保留每棵樹，其他人覺得修改成本太高。Sora 理解兩邊的顧慮，但她為透明的程序感到驕傲。議會也要求未來提案都須附上公開可讀的環境資料。"
+      },
+      {
+        "en": "Months later, Sora stood beside a young tree planted near the school. The old farmer handed her a notebook and a pencil. “We still need someone to count the rain,” he said. She opened the first page, and this time the map began with what was actually there.",
+        "zh": "數月後，Sora 站在學校旁一棵新種的樹邊。老農夫遞給她筆記本和鉛筆。「我們還是需要有人記錄雨量，」他說。她翻開第一頁；這一次，地圖從真正存在的事物開始。"
+      }
+    ],
+    "quiz": [
+      {
+        "q": "What does the new survey establish?",
+        "opts": [
+          "No building can be built",
+          "Some housing is possible if the water route is protected",
+          "The canal never existed",
+          "Every resident agrees"
+        ],
+        "a": 1,
+        "why": "調查確認在保護水流路線的條件下仍可興建部分住宅。"
+      },
+      {
+        "q": "Why is Sora satisfied despite disagreement?",
+        "opts": [
+          "She gets a free house",
+          "The decision uses a more transparent process",
+          "The developer leaves town",
+          "All trees become monuments"
+        ],
+        "a": 1,
+        "why": "她重視能接受檢驗的透明程序。"
+      },
+      {
+        "q": "What does the farmer invite Sora to continue?",
+        "opts": [
+          "Counting rainfall",
+          "Selling apartments",
+          "Painting the canal",
+          "Driving trucks"
+        ],
+        "a": 0,
+        "why": "他把雨量筆記交給 Sora，邀請她繼續記錄。"
+      }
+    ],
+    "words": [
+      "accommodate",
+      "sustain"
+    ]
+  },
+  {
+    "id": "lv5-025",
+    "series": "第七部 · A Name in the Credits｜片尾的名字",
+    "title": "A Name Under the Paint",
+    "zh": "顏料下面的署名",
+    "blurb": "策展人整理一部老紀錄片時，發現畫作底下還藏著另一個人的名字。",
+    "scene": "paper",
+    "pages": [
+      {
+        "en": "The museum hired Lena to prepare a documentary about its most famous painter. In the opening scene, a camera moved across a masterpiece while a narrator praised the artist’s originality. Lena spotted a faint signature beneath the paint: a woman’s name, almost invisible beneath the varnish.",
+        "zh": "博物館聘 Lena 製作關於館藏名畫家的紀錄片。開場鏡頭掠過一件傑作，旁白讚美畫家的原創性。Lena 卻注意到顏料下有一道淡淡署名：一個女人的名字，幾乎被清漆蓋住。"
+      },
+      {
+        "en": "A collector claimed that the mark belonged to an assistant and had no relevance to authorship. But the museum’s archive contained a photographic fragment showing the woman working on the canvas. Lena wondered whether the familiar narrative had excluded someone who did not fit the image of a celebrated genius.",
+        "zh": "一位收藏家說，那只是助手留下的記號，和作品作者無關。但館方檔案有一張殘存照片，顯示那名女子正對著畫布工作。Lena 開始懷疑，人們熟悉的故事是否排除了一個不符合「天才畫家」形象的人。"
+      },
+      {
+        "en": "She paused the documentary and asked for permission to examine the records. The director feared the interruption would spoil the premiere. Lena answered, “A beautiful film is not worth much if we have to blur a person out of it.”",
+        "zh": "她暫停紀錄片，要求獲准檢查資料。館長擔心中斷製作會耽誤首映。Lena 回答：「若得把一個人抹掉，影片再美也沒有多大價值。」"
+      }
+    ],
+    "quiz": [
+      {
+        "q": "What first raises Lena’s suspicion?",
+        "opts": [
+          "A faint woman’s signature beneath the paint",
+          "A broken camera",
+          "An anonymous ticket",
+          "A newly painted wall"
+        ],
+        "a": 0,
+        "why": "她看到清漆下若隱若現的女性署名。"
+      },
+      {
+        "q": "What does the archive photograph show?",
+        "opts": [
+          "The painter alone in a gallery",
+          "A woman working on the canvas",
+          "A museum closing",
+          "An empty frame"
+        ],
+        "a": 1,
+        "why": "照片顯示那名女子在畫布上工作。"
+      },
+      {
+        "q": "Why does Lena pause the documentary?",
+        "opts": [
+          "To demand a larger budget",
+          "To check evidence about authorship",
+          "To replace the narrator",
+          "To cancel the museum"
+        ],
+        "a": 1,
+        "why": "她要釐清作品歸屬，而不是草率照舊拍攝。"
+      }
+    ],
+    "words": [
+      "documentary",
+      "masterpiece",
+      "originality",
+      "collector",
+      "photographic",
+      "fragment",
+      "narrative",
+      "exclude",
+      "blur"
+    ]
+  },
+  {
+    "id": "lv5-026",
+    "series": "第七部 · A Name in the Credits｜片尾的名字",
+    "title": "The Footage They Cut",
+    "zh": "被剪掉的畫面",
+    "blurb": "一段未用的訪談推翻了團隊最初的假設，但它也牽出當年被迫沉默的原因。",
+    "scene": "night",
+    "pages": [
+      {
+        "en": "Lena and her editor examined footage that had been excluded from a previous film. An elderly technician recalled two artists working side by side. He could not identify every brushstroke, but he remembered that the woman designed the central figures while the famous painter completed the landscape.",
+        "zh": "Lena 和剪輯師查看先前影片中被刪去的片段。一位年邁技師回憶兩名藝術家並肩工作。他無法辨認每一筆畫痕，卻記得女子設計了畫面中央的人物，知名畫家則完成風景。"
+      },
+      {
+        "en": "The technician then showed a letter describing how an exhibition committee had refused to credit a woman with no formal training. The letter did not prove a precise proportion of labor, but it contradicted the museum’s original description of a single creator. Lena could no longer defend the easy story.",
+        "zh": "技師接著拿出一封信，記載當年展覽委員會拒絕讓一位沒有正規訓練的女性署名。信件無法證明兩人各占多少工作比例，卻與館方「單一作者」的原說法矛盾。Lena 再也不能維護那個簡單版本。"
+      },
+      {
+        "en": "When she proposed a new script, the director asked her to keep the controversy subtle. “Visitors come here to admire paintings,” he said. Lena replied, “Then let us show them how this one was actually made.”",
+        "zh": "當她提出新腳本，館長要求把爭議處理得低調。「觀眾來這裡是欣賞畫的，」他說。Lena 回答：「那就讓我們展示這幅畫真正是如何完成的。」"
+      }
+    ],
+    "quiz": [
+      {
+        "q": "What does the technician remember?",
+        "opts": [
+          "Only one artist worked",
+          "The woman designed central figures",
+          "The famous painter did all the interviews",
+          "The exhibition never opened"
+        ],
+        "a": 1,
+        "why": "他記得女子設計中央人物，另一位畫家完成風景。"
+      },
+      {
+        "q": "What can the letter NOT prove?",
+        "opts": [
+          "That credit was refused",
+          "The exact share of work done by each artist",
+          "That the woman existed",
+          "That the original description is questionable"
+        ],
+        "a": 1,
+        "why": "信件無法精確計算每個人做了多少。"
+      },
+      {
+        "q": "What does Lena want the new film to do?",
+        "opts": [
+          "Hide the uncertainty",
+          "Present how the work was actually made",
+          "Remove all paintings",
+          "Praise the collector"
+        ],
+        "a": 1,
+        "why": "她希望觀眾了解創作過程與作者歸屬。"
+      }
+    ],
+    "words": [
+      "proportion",
+      "script",
+      "controversy",
+      "subtle"
+    ]
+  },
+  {
+    "id": "lv5-027",
+    "series": "第七部 · A Name in the Credits｜片尾的名字",
+    "title": "The Unwritten Contract",
+    "zh": "沒有寫下的約定",
+    "blurb": "合作的畫家後人提出要求：即使找到了真相，也不能把祖母的私人信件全部公開。",
+    "scene": "meeting",
+    "pages": [
+      {
+        "en": "The woman’s granddaughter arrived with a folder of private letters. She wanted the museum to correct the label, but she refused to donate the letters for public display. “My grandmother’s legacy is more than the pain people caused her,” she said. Lena realized that accurate attribution did not entitle her to every detail of someone’s life.",
+        "zh": "那名女子的孫女帶著私人書信到來。她希望館方更正標籤，卻拒絕捐出信件公開展示。「祖母留下的遺產不只有別人帶給她的痛苦，」她說。Lena 意識到，正確註明作者，不等於她有權公開一個人生活的每個細節。"
+      },
+      {
+        "en": "Together they negotiated a simple agreement: the museum could cite two letters with consent, while the rest remained with the family. The documentary would distinguish documented facts from interpretation. The collector objected, worried that the painting’s market value would decline.",
+        "zh": "她們一起協商一份簡單協議：館方經同意可以引用兩封信，其餘仍由家人保管。紀錄片會區分有文件證明的事實與解讀。收藏家反對，擔心畫作市場價值下滑。"
+      },
+      {
+        "en": "Lena told him the decision was not a verdict about the painter’s character. It was a correction to an incomplete record. The director finally approved the revised script, and the granddaughter agreed to attend the premiere—not as an exhibit, but as a guest.",
+        "zh": "Lena 告訴他，這不是對畫家人格下判決，而是在修正不完整的紀錄。館長終於批准修改後的腳本；孫女也同意出席首映，不是作為展品，而是作為賓客。"
+      }
+    ],
+    "quiz": [
+      {
+        "q": "What does the granddaughter refuse?",
+        "opts": [
+          "Any correction to the label",
+          "Public display of all private letters",
+          "Attending the premiere",
+          "Speaking with Lena"
+        ],
+        "a": 1,
+        "why": "她同意引用兩封信，但不公開全部私人書信。"
+      },
+      {
+        "q": "How does the agreement handle evidence?",
+        "opts": [
+          "It treats all interpretations as facts",
+          "It separates documented facts from interpretation",
+          "It destroys the letters",
+          "It lets the collector control the film"
+        ],
+        "a": 1,
+        "why": "協議明確區分文件證據與個人解讀。"
+      },
+      {
+        "q": "How does Lena describe the correction?",
+        "opts": [
+          "A judgment of the painter’s character",
+          "A repair to an incomplete record",
+          "A sales strategy",
+          "A reason to close the museum"
+        ],
+        "a": 1,
+        "why": "Lena 認為這是在修補不完整的紀錄。"
+      }
+    ],
+    "words": [
+      "donate",
+      "legacy",
+      "entitle",
+      "interpretation",
+      "verdict"
+    ]
+  },
+  {
+    "id": "lv5-028",
+    "series": "第七部 · A Name in the Credits｜片尾的名字",
+    "title": "A Different Premiere",
+    "zh": "另一種首映",
+    "blurb": "電影上線那晚，所有人都等著看爭議爆發，卻聽見一個比爭論更難回答的問題。",
+    "scene": "meeting",
+    "pages": [
+      {
+        "en": "At the premiere, the revised documentary introduced the painting as a collaboration. The new label named both artists and explained the limits of the evidence. Some viewers were astonished; others said the museum had spoiled a beloved legend. Lena listened without trying to win every argument.",
+        "zh": "首映時，修改後的紀錄片把畫作介紹為合作作品。新標籤列出兩位作者，並說明證據的限制。有些觀眾感到震驚，有些認為博物館毀了一段喜愛的傳奇。Lena 聽著，沒有試圖贏得每場爭論。"
+      },
+      {
+        "en": "During the questions, a teenager asked, “If you had never found that photograph, would her work still matter?” The room fell quiet. The granddaughter answered: “Yes. But without the record, fewer people would have known where to look.”",
+        "zh": "提問時，一名青少年問：「如果你們從未找到那張照片，她的作品還有價值嗎？」全場安靜下來。孫女回答：「有。但沒有紀錄，就更少人知道該往哪裡找。」"
+      },
+      {
+        "en": "Afterward, Lena received a message from a small regional museum. Its curator had noticed a similar hidden signature on another canvas and wanted help examining it. Lena closed her laptop, then opened a new notebook. One honest ending, she realized, could become someone else’s beginning.",
+        "zh": "散場後，Lena 收到一間地方小博物館的訊息。策展人發現另一幅畫布上也有類似的隱藏署名，想請她幫忙檢查。Lena 關上筆電，又打開新的筆記本。她明白，一個誠實的結局，也可能成為另一個人的開始。"
+      }
+    ],
+    "quiz": [
+      {
+        "q": "How is the painting introduced in the revised film?",
+        "opts": [
+          "As a collaboration",
+          "As a forgery",
+          "As unfinished rubbish",
+          "As a gift from the collector"
+        ],
+        "a": 0,
+        "why": "新片將畫作介紹為兩人合作完成。"
+      },
+      {
+        "q": "What does the granddaughter say about the missing record?",
+        "opts": [
+          "It made the work worthless",
+          "It made the work harder to find and recognize",
+          "It proved nobody painted it",
+          "It made the legend true"
+        ],
+        "a": 1,
+        "why": "沒有紀錄不會抹去作品價值，卻會減少人們發現它的機會。"
+      },
+      {
+        "q": "What suggests Lena may continue this kind of work?",
+        "opts": [
+          "She resigns from all museums",
+          "Another curator asks about a hidden signature",
+          "The premiere is cancelled",
+          "The collector buys the film"
+        ],
+        "a": 1,
+        "why": "另一間博物館來信，詢問類似的隱藏署名。"
+      }
+    ],
+    "words": [
+      "collaboration",
+      "viewer",
+      "beloved"
+    ]
+  },
+  {
+    "id": "lv5-029",
+    "series": "第八部 · The Museum of Small Things｜小東西博物館",
+    "title": "The Empty Display",
+    "zh": "空掉的展示櫃",
+    "blurb": "博物館最受歡迎的展品是一張空椅子。它被搬走後，館員收到三個互相矛盾的「失主」來信。",
+    "scene": "paper",
+    "pages": [
+      {
+        "en": "At the Museum of Small Things, visitors loved an ordinary wooden chair. A plaque said it had belonged to a legendary storyteller. When the chair vanished from its display, the museum received three letters from people who each claimed to be its legitimate heir. The curator asked intern Ben to sort the claims.",
+        "zh": "在「小東西博物館」，觀眾最愛的是一張普通木椅。標牌說它曾屬於傳奇說書人。椅子從展示櫃消失後，館方收到三封信，三人都聲稱自己是合法繼承人。策展人請實習生 Ben 整理主張。"
+      },
+      {
+        "en": "Ben found a receipt showing that the chair had been purchased at an auction. Another document called it a rental for a traveling exhibition. The third letter included a photograph of a child sitting on the chair, but the date had been trimmed off. Each record supported part of a story, never the whole.",
+        "zh": "Ben 找到一張收據，顯示椅子是拍賣買來的；另一份文件稱它是巡迴展覽的租借品。第三封信附有一張孩子坐在椅上的照片，但日期被裁掉了。每份紀錄都支持故事的一部分，卻沒有一份能證明全部。"
+      },
+      {
+        "en": "The curator wanted the chair returned before the weekend. Ben asked for one day to examine a tiny mark underneath its seat. The mark was not an artist’s signature. It looked like a storage number.",
+        "zh": "策展人希望週末前找回椅子。Ben 請求一天時間檢查椅座下的細小記號。那不是藝術家簽名，而像是儲藏編號。"
+      }
+    ],
+    "quiz": [
+      {
+        "q": "What is the missing exhibit?",
+        "opts": [
+          "A famous painting",
+          "An ordinary wooden chair",
+          "A golden clock",
+          "A glass bottle"
+        ],
+        "a": 1,
+        "why": "不見的是一張被稱為說書人舊物的木椅。"
+      },
+      {
+        "q": "Why can Ben not settle ownership immediately?",
+        "opts": [
+          "The museum is closed",
+          "The records support different incomplete stories",
+          "All letters are identical",
+          "The chair has no marks"
+        ],
+        "a": 1,
+        "why": "三方文件各自支持部分故事，卻互相矛盾。"
+      },
+      {
+        "q": "What clue does Ben notice?",
+        "opts": [
+          "A storage number under the seat",
+          "A new coat of paint",
+          "A broken window",
+          "A hidden microphone"
+        ],
+        "a": 0,
+        "why": "椅座下面有像儲藏編號的記號。"
+      }
+    ],
+    "words": [
+      "legendary",
+      "legitimate",
+      "heir",
+      "purchase",
+      "auction",
+      "rental"
+    ]
+  },
+  {
+    "id": "lv5-030",
+    "series": "第八部 · The Museum of Small Things｜小東西博物館",
+    "title": "The Collector’s Receipt",
+    "zh": "收藏家的收據",
+    "blurb": "Ben 循著編號找到一份老帳簿；看似簡單的所有權爭議，其實是兩件不同物品被當成同一件。",
+    "scene": "paper",
+    "pages": [
+      {
+        "en": "The number led Ben to a forgotten ledger. It recorded two chairs with an identical design: one had been donated to the museum, while the other was a substitute used during restoration. The photographed child sat on the original chair; the auction receipt described the substitute. A simple resemblance had confused everyone.",
+        "zh": "那組編號把 Ben 帶到一本被遺忘的帳簿。上面記錄兩張設計相同的椅子：一張捐給博物館，另一張是修復期間使用的替代品。照片裡的孩子坐的是原椅；拍賣收據描述的則是替代椅。只是長得相似，就讓所有人搞混了。"
+      },
+      {
+        "en": "The original chair had been moved to a climate-controlled room after a crack appeared. The substitute had been placed in the gallery without a clear label, and visitors gradually assumed it was the famous object. Staff had removed it that morning when the rental ended, explaining the empty display. Ben was relieved to solve the puzzle, then embarrassed that the museum itself had helped create it.",
+        "zh": "原椅出現裂痕後，被搬到恆溫室；替代椅則被放進展廳，卻沒有清楚標示。觀眾漸漸以為那就是著名的椅子。租期結束當天早晨，工作人員把替代椅搬走，這才解釋了空掉的展示櫃。Ben 為解開謎團鬆了一口氣，接著又為博物館自己促成了誤會而感到尷尬。"
+      },
+      {
+        "en": "He recommended an update to the display: show both chairs, explain the distinction, and let visitors examine copies of the records. The curator hesitated. “Will people still come to see an ordinary chair?” she asked. Ben looked at the crowded entrance. “Maybe they came for the stories we tell about it.”",
+        "zh": "他建議更新展覽：兩張椅子一起展示、解釋差別，並讓觀眾查看紀錄副本。策展人猶豫了。「人們還會來看一張普通椅子嗎？」她問。Ben 看向擠滿人的入口。「也許他們本來就是為了我們講的故事而來。」"
+      }
+    ],
+    "quiz": [
+      {
+        "q": "What does the ledger reveal?",
+        "opts": [
+          "The chair is made of gold",
+          "Two similar chairs were confused",
+          "All three claimants are relatives",
+          "The museum never owned a chair"
+        ],
+        "a": 1,
+        "why": "帳簿記載原椅與修復替代椅。"
+      },
+      {
+        "q": "Why did visitors misunderstand the exhibit?",
+        "opts": [
+          "The substitute had no clear label",
+          "The original was painted red",
+          "The museum refused entry",
+          "The ledger was on display"
+        ],
+        "a": 0,
+        "why": "替代椅缺乏清楚標示。"
+      },
+      {
+        "q": "What does Ben recommend?",
+        "opts": [
+          "Hide both chairs",
+          "Show both and explain their records",
+          "Sell the chairs immediately",
+          "Remove every label"
+        ],
+        "a": 1,
+        "why": "他希望將兩張椅子與紀錄一起展示。"
+      }
+    ],
+    "words": [
+      "substitute",
+      "resemblance",
+      "update",
+      "distinction"
+    ]
+  },
+  {
+    "id": "lv5-031",
+    "series": "第八部 · The Museum of Small Things｜小東西博物館",
+    "title": "The Object Returned",
+    "zh": "歸還的展品",
+    "blurb": "館方終於把椅子放回展廳，卻發現最受歡迎的不是原椅，而是一張寫著「我們曾經搞錯」的小卡。",
+    "scene": "meeting",
+    "pages": [
+      {
+        "en": "The museum reopened the gallery with both chairs and a clear explanation. The plaque acknowledged the error, including the museum’s responsibility for the confusion. After examining the receipt and rental agreement, the museum returned the substitute to its legitimate owner; the donated original remained in the collection. The subsequent exhibition showed how the mix-up had happened.",
+        "zh": "博物館重新開放展廳，把兩張椅子一起展示並附上清楚解說。標牌承認錯誤，也承認館方造成混淆的責任。館方查核收據及租借協議後，把替代椅歸還合法所有者；捐贈的原椅則留在館藏。後續展覽也展示這場混淆是如何發生的。"
+      },
+      {
+        "en": "Ben worried that confessing the mistake would damage the museum’s reputation. Instead, visitors spent more time reading the new display than they ever had admiring the old one. Several children wrote their own labels for everyday objects: a scratched lunchbox, a worn shoe, a grandmother’s spoon.",
+        "zh": "Ben 原本擔心承認錯誤會損害館方聲譽。沒想到，觀眾閱讀新展板的時間比以前欣賞舊椅還久。幾個孩子也替日常物品寫標籤：刮傷的便當盒、磨舊的鞋子、祖母的湯匙。"
+      },
+      {
+        "en": "On his last day, the curator offered Ben a permanent position. He declined; he was returning to school. She gave him a small card that read, “An object is rarely the whole story.” He put it in his pocket, where it sat beside an ordinary bus ticket he would never throw away.",
+        "zh": "實習最後一天，策展人提供 Ben 正職，他婉拒了，因為要回學校。她送他一張小卡：「一件物品，很少就是故事的全部。」Ben 把它放進口袋，旁邊是一張他永遠捨不得丟的普通公車票。"
+      }
+    ],
+    "quiz": [
+      {
+        "q": "How does the museum resolve the two-chair problem?",
+        "opts": [
+          "It destroys the substitute",
+          "It explains the error and follows the records",
+          "It pays all claimants",
+          "It closes the gallery"
+        ],
+        "a": 1,
+        "why": "館方公開更正，並依紀錄處理兩張椅子。"
+      },
+      {
+        "q": "How do visitors react to the correction?",
+        "opts": [
+          "They stop visiting",
+          "They engage more with the new display",
+          "They demand every object be sold",
+          "They ignore both chairs"
+        ],
+        "a": 1,
+        "why": "觀眾反而花更多時間閱讀新說明。"
+      },
+      {
+        "q": "Why does Ben refuse a permanent job?",
+        "opts": [
+          "He dislikes museums",
+          "He is returning to school",
+          "He has lost the bus ticket",
+          "He wants the chair"
+        ],
+        "a": 1,
+        "why": "他必須回校繼續學業。"
+      }
+    ],
+    "words": [
+      "subsequent"
+    ]
+  },
+  {
+    "id": "lv5-032",
+    "series": "第九部 · The City After Silence｜寂靜之後的城市",
+    "title": "Three Minutes of Silence",
+    "zh": "三分鐘的寂靜",
+    "blurb": "全城停電後，地方電台突然收到一段沒有姓名的求助訊息。最難的是分辨真正的危險與謠言。",
+    "scene": "night",
+    "pages": [
+      {
+        "en": "The blackout began during the evening commute. Traffic signals vanished, trains stopped, and the radio station’s backup generator lasted only twenty minutes. Reporter Theo moved his equipment to a community hall, where volunteers had set up a small emergency booth.",
+        "zh": "停電從晚間通勤時間開始。交通號誌熄滅、列車停駛，電台備援發電機只撐了二十分鐘。記者 Theo 將器材搬到社區活動中心，志工在那裡設置了一座小型緊急廣播站。"
+      },
+      {
+        "en": "Messages poured in: a bridge had collapsed, a hospital was closing, an entire neighborhood was under water. Theo knew that repetition did not make a rumor true. He asked each caller for a location, a time, and something another person could verify. He refused to broadcast dramatic claims without confirmation.",
+        "zh": "訊息不斷湧入：橋塌了、醫院要關了、整個社區都泡在水裡。Theo 知道，謠言重複再多次也不會變成事實。他請每位來電者提供地點、時間，以及別人能核實的資訊；未確認的聳動說法，他不願播出。"
+      },
+      {
+        "en": "Then one message arrived with no name, only a faint voice: “There are six of us near the eastern tunnel. We cannot reach the exit.” The line disconnected. Theo marked the location on a paper map and asked the rescue team to check it.",
+        "zh": "接著收到一則沒有姓名的訊息，只有微弱聲音：「我們六個人在東邊隧道附近，找不到出口。」通話斷了。Theo 在紙本地圖標記位置，請救援隊前去確認。"
+      }
+    ],
+    "quiz": [
+      {
+        "q": "What happens to the station’s normal operation?",
+        "opts": [
+          "It gains new equipment",
+          "Its backup generator lasts only twenty minutes",
+          "It moves into a tunnel",
+          "It closes permanently"
+        ],
+        "a": 1,
+        "why": "備援發電機只能維持二十分鐘。"
+      },
+      {
+        "q": "How does Theo treat dramatic reports?",
+        "opts": [
+          "He repeats them immediately",
+          "He asks for independently verifiable details",
+          "He ignores every caller",
+          "He publishes only anonymous rumors"
+        ],
+        "a": 1,
+        "why": "他要求地點、時間及可供核實的細節。"
+      },
+      {
+        "q": "What is the anonymous request about?",
+        "opts": [
+          "A missing broadcast",
+          "Six people near the eastern tunnel",
+          "A stolen generator",
+          "A closed museum"
+        ],
+        "a": 1,
+        "why": "求助者稱六人困在東邊隧道附近。"
+      }
+    ],
+    "words": [
+      "commute",
+      "booth"
+    ]
+  },
+  {
+    "id": "lv5-033",
+    "series": "第九部 · The City After Silence｜寂靜之後的城市",
+    "title": "On the Other Side of the Radio",
+    "zh": "無線電另一頭",
+    "blurb": "救援隊沒找到六個人，卻在第二條頻道聽到同一個聲音，說出的數字變了。",
+    "scene": "night",
+    "pages": [
+      {
+        "en": "The first rescue squad reached the eastern tunnel and found it empty. At the same time, an amateur radio operator heard the voice again: “We are at the western entrance. There are five of us now.” A volunteer accused the caller of deception. Theo urged caution; the different numbers might mean someone had already escaped.",
+        "zh": "第一支救援隊抵達東邊隧道，卻發現空無一人。同時，一名業餘無線電操作員再次聽到那個聲音：「我們在西邊入口，現在只剩五個人。」一名志工指責來電者欺騙。Theo 提醒大家別急著下定論；數字不同，也許代表有人已逃出。"
+      },
+      {
+        "en": "The operator tracked the transmission to a relay installed years earlier for a mountain event. Its position had never been updated in the directory. The signal was bouncing across the valley, making the caller’s location sound closer than it was. The rescue team changed course.",
+        "zh": "操作員追查訊號，發現它經過一座多年前為山區活動架設的中繼站，而目錄裡一直沒更新其位置。訊號跨山谷反射，使來電者的位置聽起來比實際更近。救援隊因此改變方向。"
+      },
+      {
+        "en": "Theo gave a short update: the tunnel report remained unconfirmed, and the team was searching another entrance. He avoided mentioning the caller’s age or guessing what had happened to the missing sixth person. The most useful information, he decided, was also the most limited.",
+        "zh": "Theo 發布簡短更新：隧道消息仍未確認，隊伍正搜索另一個入口。他沒有提來電者年齡，也沒有猜測第六個人發生什麼事。他認為，最有用的資訊，有時反而是最謹慎、最有限的資訊。"
+      }
+    ],
+    "quiz": [
+      {
+        "q": "Why does Theo not assume the caller is lying?",
+        "opts": [
+          "The changing number may mean someone escaped",
+          "He recognizes the voice",
+          "The operator refuses to help",
+          "The tunnel has six exits"
+        ],
+        "a": 0,
+        "why": "人數改變也可能是有人先脫困。"
+      },
+      {
+        "q": "What misleads the initial search?",
+        "opts": [
+          "An outdated relay location",
+          "A broken pencil",
+          "A false weather forecast",
+          "A missing train ticket"
+        ],
+        "a": 0,
+        "why": "中繼站資料過時，讓訊號位置判斷失準。"
+      },
+      {
+        "q": "What does Theo omit from his update?",
+        "opts": [
+          "The need for another search",
+          "Unsupported guesses about the caller and sixth person",
+          "The tunnel location",
+          "That the report is unconfirmed"
+        ],
+        "a": 1,
+        "why": "他避免播出尚無根據的身分及遭遇猜測。"
+      }
+    ],
+    "words": [
+      "squad",
+      "caution",
+      "transmission"
+    ]
+  },
+  {
+    "id": "lv5-034",
+    "series": "第九部 · The City After Silence｜寂靜之後的城市",
+    "title": "The Voice at the Tunnel",
+    "zh": "隧道口的聲音",
+    "blurb": "救援隊終於找到五個人；第六位卻是留下指引他們出去的人。",
+    "scene": "meeting",
+    "pages": [
+      {
+        "en": "Just before dawn, the team found five people sheltering beside a maintenance doorway. The sixth had gone ahead to seek help, carrying the only working flashlight. The group had entered the old tunnel to escape the storm after their shuttle broke down. A locked gate and the blackout had trapped them inside.",
+        "zh": "黎明前，救援隊在維修門旁找到五個避難的人。第六位帶著唯一可用的手電筒先出去求援。接駁車故障後，他們走進舊隧道躲風雨，卻因上鎖柵門與停電受困其中。"
+      },
+      {
+        "en": "One of the rescued passengers recognized Theo’s voice. “You did not say we were dead,” she told him. “We heard your updates through a pocket radio. When you said the team was still looking, we kept making noise.” Theo had feared that his cautious language sounded cold. Now he understood what it had offered them: time without false promises.",
+        "zh": "一名獲救乘客認出 Theo 的聲音。「你沒有說我們已經死了，」她告訴他，「我們用口袋收音機聽見你的更新。聽到隊伍還在找，我們就一直發出聲音。」Theo 原擔心謹慎措辭顯得冷漠，如今明白那給了他們什麼：沒有虛假承諾的時間。"
+      },
+      {
+        "en": "The sixth passenger arrived with a second rescue crew, exhausted but safe. Theo recorded the reunion, then lowered the microphone. Some moments did not need a commentator. They simply needed room to happen.",
+        "zh": "第六位乘客和另一隊救援人員趕到，筋疲力竭但平安無事。Theo 錄下重聚，接著放下麥克風。有些時刻不需要評論者，只需要留出空間讓它發生。"
+      }
+    ],
+    "quiz": [
+      {
+        "q": "Why did the passengers enter the tunnel?",
+        "opts": [
+          "To explore a legend",
+          "Their shuttle broke down during the storm",
+          "They were filming a documentary",
+          "They worked for the radio station"
+        ],
+        "a": 1,
+        "why": "接駁車故障，他們進隧道躲風雨。"
+      },
+      {
+        "q": "What helped the passengers keep signaling?",
+        "opts": [
+          "Theo’s updates said the search continued",
+          "A promise everyone was safe",
+          "The sound of a bell",
+          "A note from the museum"
+        ],
+        "a": 0,
+        "why": "廣播證實搜索仍在進行，促使他們持續發聲。"
+      },
+      {
+        "q": "What happens to the sixth passenger?",
+        "opts": [
+          "He returns safely with another crew",
+          "He was never on the shuttle",
+          "He becomes the host",
+          "He leaves the city"
+        ],
+        "a": 0,
+        "why": "第六人帶另一隊救援人員平安回來。"
+      }
+    ],
+    "words": [
+      "cautious",
+      "commentator"
+    ]
+  },
+  {
+    "id": "lv5-035",
+    "series": "第九部 · The City After Silence｜寂靜之後的城市",
+    "title": "The Night We Kept",
+    "zh": "我們守住的夜晚",
+    "blurb": "燈亮起後，電台主持人以為任務結束，卻收到一份沒有任何煽情字眼的感謝信。",
+    "scene": "paper",
+    "pages": [
+      {
+        "en": "When electricity returned, the station invited Theo to produce a special episode about the blackout. Sponsors wanted a dramatic headline and footage of frightened passengers. Theo proposed something less exciting: a timeline showing which reports were verified, corrected, or left unresolved.",
+        "zh": "復電後，電台邀請 Theo 製作停電特輯。贊助商想要聳動標題和受驚乘客的畫面；Theo 提出比較不刺激的做法：整理時間軸，列出哪些消息已核實、更正或仍未解決。"
+      },
+      {
+        "en": "His editor worried the format would disappoint viewers. Theo included the volunteer who checked addresses, the operator who traced the relay, and the passengers who kept each other awake. The episode did not turn a difficult night into a triumph. It showed how ordinary people coordinated under uncertainty.",
+        "zh": "編輯擔心這種形式會讓觀眾失望。Theo 把核對地址的志工、追查中繼站的操作員，以及彼此撐著不睡的乘客都放進節目。特輯沒有把艱難的一晚包裝成勝利，而是呈現一般人如何在不確定中合作。"
+      },
+      {
+        "en": "A week later, a short letter arrived: “Thank you for saying what you knew, and for telling us when you did not know.” Theo pinned it beside the radio. He had once thought a good reporter needed the perfect words. That night had taught him the value of leaving space for the truth to unfold.",
+        "zh": "一週後，一封短信送到：「謝謝你說出你知道的，也謝謝你在不知道時坦白說不知道。」Theo 把信釘在收音機旁。他曾以為好記者必須找到完美的字句；那一晚教會他，要為真相逐漸展開留下空間。"
+      }
+    ],
+    "quiz": [
+      {
+        "q": "What format does Theo suggest for the special episode?",
+        "opts": [
+          "An invented rescue drama",
+          "A timeline of verified, corrected, and unresolved reports",
+          "A contest for callers",
+          "Only sponsor advertisements"
+        ],
+        "a": 1,
+        "why": "他提議依核實狀態整理消息時間軸。"
+      },
+      {
+        "q": "Whose work does the episode include?",
+        "opts": [
+          "Only Theo’s",
+          "Volunteers, an operator, and passengers",
+          "Only the station director’s",
+          "Only the sponsors’"
+        ],
+        "a": 1,
+        "why": "節目呈現各方在不確定中合作的過程。"
+      },
+      {
+        "q": "What does the thank-you letter appreciate?",
+        "opts": [
+          "Always sounding certain",
+          "Admitting what was known and unknown",
+          "Reporting only good news",
+          "Using dramatic language"
+        ],
+        "a": 1,
+        "why": "感謝他清楚區分已知與未知。"
+      }
+    ],
+    "words": [
+      "sponsor",
+      "format",
+      "coordinate",
+      "unfold"
+    ]
+  },
+  {
+    "id": "lv5-036",
+    "series": "第十部 · The House on the Moving Road｜會移動的房子",
+    "title": "A House on the Map",
+    "zh": "地圖上的房子",
+    "blurb": "公路改建前夕，測量員收到一張地圖：某間祖屋竟每年向東移動幾公尺。是儀器錯了，還是有人改了資料？",
+    "scene": "paper",
+    "pages": [
+      {
+        "en": "A highway extension was supposed to shorten the commute from Bellford to the metropolitan area. Nora, a young surveyor, had one week to submit the final map. But an elderly resident insisted that his house had moved six meters on every new version of the plan. “I have not moved a single brick,” he said. Nora thought he was exaggerating until she compared the coordinates.",
+        "zh": "公路延伸工程原本要縮短貝爾福德通往都會區的通勤時間。年輕測量員 Nora 只有一週時間提交最終地圖。但一位老住戶堅稱，他的房子在每個新版計畫上都往東移動了六公尺。「我連一塊磚都沒搬過，」他說。Nora 原以為他誇大其詞，直到她比對座標。"
+      },
+      {
+        "en": "The older maps showed a narrow creek beside the backyard. The latest one showed an empty strip of land, with the creek outside the construction boundary. The correction looked minor, yet it changed which homes were eligible for compensation. Nora requested the original survey rather than assuming the newest drawing was accurate.",
+        "zh": "舊地圖顯示後院旁有一條狹窄的溪流；最新版本則畫成一塊空地，把溪流移到施工界線外。這項修正看似微小，卻改變了哪些住家有資格獲得補償。Nora 沒有直接相信最新圖面，而是要求查看原始測量資料。"
+      },
+      {
+        "en": "Her supervisor advised her not to delay the project over one residence. Nora understood the pressure: the budget had already exceeded its limit. Still, if a house could move on paper, she wondered, how many people might vanish from the plan without ever leaving home?",
+        "zh": "主管勸她別為了一處住宅延誤工程。Nora 理解壓力：預算早已超支。但她心想，如果房子能在紙上移動，有多少人會在從未搬家的情況下，就從計畫裡消失？"
+      }
+    ],
+    "quiz": [
+      {
+        "q": "What does the old resident claim?",
+        "opts": [
+          "The road is too long",
+          "His house moves on each revised map",
+          "He owns the creek",
+          "His family is leaving"
+        ],
+        "a": 1,
+        "why": "他指出各版地圖都把房屋位置往東移。"
+      },
+      {
+        "q": "Why does the map change matter?",
+        "opts": [
+          "It changes eligibility for compensation",
+          "It moves the entire town",
+          "It closes the school",
+          "It raises the highway toll"
+        ],
+        "a": 0,
+        "why": "地圖位置會影響住戶能否得到補償。"
+      },
+      {
+        "q": "What does Nora request?",
+        "opts": [
+          "A new job",
+          "The original survey",
+          "An immediate demolition",
+          "A larger budget"
+        ],
+        "a": 1,
+        "why": "她要對照原始測量資料，不只相信最新版。"
+      }
+    ],
+    "words": [
+      "extension",
+      "metropolitan",
+      "submit",
+      "creek",
+      "backyard",
+      "eligible",
+      "compensation",
+      "residence",
+      "exceed"
+    ]
+  },
+  {
+    "id": "lv5-037",
+    "series": "第十部 · The House on the Moving Road｜會移動的房子",
+    "title": "The Missing Creek",
+    "zh": "消失的溪流",
+    "blurb": "一條從圖上消失的溪流，讓 Nora 找到計畫中被忽略的住戶；同事卻認為她是在小題大作。",
+    "scene": "paper",
+    "pages": [
+      {
+        "en": "At the municipal bureau, Nora examined the scan of an older map. A clerk had entered the creek as a straight line to simplify a database conversion. The software then treated it as a road boundary. No one had deliberately moved the houses, but the error had spread through consecutive versions of the design.",
+        "zh": "在市政局，Nora 檢查舊地圖的掃描檔。承辦員為了簡化資料庫轉換，把溪流輸入成一條直線；系統又把它當作道路界線。沒有人故意移動房子，但錯誤已傳到接連幾版設計。"
+      },
+      {
+        "en": "Nora walked the route in person. A grandmother showed her a porch that flooded every spring, while two siblings described how water had once reached their driveway. Their accounts did not replace measurement, but they gave Nora a clue about where to look. Beneath a layer of fresh soil, she found the buried creek.",
+        "zh": "Nora 親自走訪路線。一位祖母指著每年春天都會淹水的門廊，兩名手足則描述溪水曾流到他們家車道的情形。這些敘述不能取代測量，卻讓 Nora 知道該往哪裡找。新覆上的一層土下面，她找到了被埋住的溪道。"
+      },
+      {
+        "en": "A colleague called the discovery trivial. “We can modify the drawings later,” he said. Nora disagreed. Once the contract was signed, correcting the route would become a lawsuit instead of a simple revision. She prepared a detailed report and attached photographs, dates, and measurements.",
+        "zh": "同事認為發現微不足道。「圖可以以後再改，」他說。Nora 不同意。合約一旦簽署，修正路線就可能從簡單改圖變成訴訟。她整理詳盡報告，附上照片、日期與測量數據。"
+      }
+    ],
+    "quiz": [
+      {
+        "q": "What caused the error to spread?",
+        "opts": [
+          "A map conversion simplified the creek",
+          "A flood destroyed the road",
+          "The grandmother changed the boundary",
+          "Nora entered false coordinates"
+        ],
+        "a": 0,
+        "why": "資料轉換把溪流簡化，後續版本沿用了錯誤。"
+      },
+      {
+        "q": "What helps Nora locate the creek?",
+        "opts": [
+          "Accounts from nearby residents",
+          "A TV advertisement",
+          "A train schedule",
+          "A theater ticket"
+        ],
+        "a": 0,
+        "why": "居民對淹水的記憶引導她找到溪道。"
+      },
+      {
+        "q": "Why does Nora want to fix the map now?",
+        "opts": [
+          "The contract could make revisions legally difficult",
+          "She needs to finish a class",
+          "She dislikes her colleague",
+          "She wants to close the bureau"
+        ],
+        "a": 0,
+        "why": "她擔心簽約後修正會牽涉訴訟。"
+      }
+    ],
+    "words": [
+      "bureau",
+      "scan",
+      "consecutive",
+      "porch",
+      "sibling",
+      "driveway",
+      "layer",
+      "trivial",
+      "modify",
+      "lawsuit"
+    ]
+  },
+  {
+    "id": "lv5-038",
+    "series": "第十部 · The House on the Moving Road｜會移動的房子",
+    "title": "The Cost of a Straight Line",
+    "zh": "直線的代價",
+    "blurb": "新版路線安全卻更貴；開會當天，Nora 得在預算與住戶安全之間提出真正可行的方案。",
+    "scene": "meeting",
+    "pages": [
+      {
+        "en": "At the public forum, the road contractor argued that the original route was the most efficient. Every bend meant more fuel, labor, and concrete. Nora acknowledged the fiscal problem. She showed the audience two alternatives: a short bridge that protected the creek, and a cheaper detour that avoided the vulnerable homes.",
+        "zh": "在公開論壇上，道路承包商主張原路線效率最高；每一道彎都代表更多燃料、人工與混凝土。Nora 承認財務問題，向聽眾提出兩種方案：一座保護溪流的短橋，或成本較低、能避開脆弱住家的繞道。"
+      },
+      {
+        "en": "The mayor asked whether she could guarantee either option. “No engineer can promise zero risk,” Nora replied. “But we can state the likely hazards and specify which assumptions our figures depend on.” She refused to let the committee describe uncertain projections as established facts.",
+        "zh": "市長問她能否保證其中一項方案。Nora 回答：「沒有工程師能保證零風險，但我們可以說明可能的危害，以及數據仰賴哪些前提。」她不願讓委員會把有不確定性的預測說成既定事實。"
+      },
+      {
+        "en": "When the residents were invited to speak, the grandfather did not demand a perfect road. He asked that his home be visible on every version of the plan. The room became quiet. Nora realized that the smallest symbol on a map could carry an immense human consequence.",
+        "zh": "輪到居民發言時，老先生沒有要求一條完美的道路。他只希望每一版計畫都看得見他的家。全場安靜下來。Nora 明白，地圖上最小的一個符號，也可能承載極大的生活影響。"
+      }
+    ],
+    "quiz": [
+      {
+        "q": "Why does the contractor oppose route changes?",
+        "opts": [
+          "They add construction costs",
+          "They prevent all traffic",
+          "They require closing the town",
+          "They make maps illegal"
+        ],
+        "a": 0,
+        "why": "彎道與替代路線可能增加工程支出。"
+      },
+      {
+        "q": "What does Nora refuse to do?",
+        "opts": [
+          "Explain hazards",
+          "Present two alternatives",
+          "Treat projections as certain facts",
+          "Invite residents to speak"
+        ],
+        "a": 2,
+        "why": "她不願把有不確定性的預測說成事實。"
+      },
+      {
+        "q": "What does the resident mainly want?",
+        "opts": [
+          "A perfect highway",
+          "His home represented accurately",
+          "A new office",
+          "Free fuel"
+        ],
+        "a": 1,
+        "why": "他希望每份規劃都如實標示自己的家。"
+      }
+    ],
+    "words": [
+      "forum",
+      "fiscal",
+      "vulnerable",
+      "hazard",
+      "specify",
+      "projection",
+      "immense"
+    ]
+  },
+  {
+    "id": "lv5-039",
+    "series": "第十部 · The House on the Moving Road｜會移動的房子",
+    "title": "A Road That Stayed Put",
+    "zh": "不再移動的路",
+    "blurb": "公路終於動工。Nora 得知，最重要的修正不是一條新線，而是一套不再讓住戶從地圖消失的流程。",
+    "scene": "meeting",
+    "pages": [
+      {
+        "en": "The council approved the detour and allocated funds for a separate drainage survey. It was not the cheapest decision, but it kept the creek accessible for inspection and reduced the likelihood of flooding. The contractor revised the schedule instead of abandoning the project.",
+        "zh": "議會通過繞道方案，並撥款另做排水測量。這不是最便宜的決定，但能保留溪流供日後檢查，並降低淹水的可能性。承包商修改工程時程，而非放棄計畫。"
+      },
+      {
+        "en": "Nora proposed a straightforward rule: every future map had to show the original coordinates alongside revisions and the name of the person who authorized them. Her supervisor first feared extra paperwork. Then he admitted that the new procedure might prevent costly disputes.",
+        "zh": "Nora 提出直接明確的規則：未來每張地圖都必須同時顯示原始座標、修正內容，以及授權修正者姓名。主管起初擔心增加文書工作，後來也承認新流程或許能避免代價高昂的爭議。"
+      },
+      {
+        "en": "Months later, Nora passed the old man’s house on her way to work. The backyard was wet after a storm, but the porch was dry. The man waved from his doorway. “My house finally stopped moving,” he called. Nora smiled. On the ground, of course, it never had.",
+        "zh": "幾個月後，Nora 上班途中經過老先生的房子。暴雨過後後院仍濕，門廊卻是乾的。老先生從門口揮手：「我的房子終於不會動了！」Nora 笑了。當然，在真正的土地上，它從來沒移動過。"
+      }
+    ],
+    "quiz": [
+      {
+        "q": "Which solution does the council approve?",
+        "opts": [
+          "A detour and drainage survey",
+          "The original route without changes",
+          "Removing the creek from records",
+          "Moving every house"
+        ],
+        "a": 0,
+        "why": "議會決定繞道並補做排水調查。"
+      },
+      {
+        "q": "What new rule does Nora suggest?",
+        "opts": [
+          "Delete all old maps",
+          "Preserve original coordinates and authorized revisions",
+          "Stop publishing maps",
+          "Allow only contractors to read plans"
+        ],
+        "a": 1,
+        "why": "原始座標與修正歷程都必須保留。"
+      },
+      {
+        "q": "What does the final joke mean?",
+        "opts": [
+          "The house really travels at night",
+          "The home was mapped incorrectly, not physically moved",
+          "The road has disappeared",
+          "The grandfather sold his home"
+        ],
+        "a": 1,
+        "why": "從頭到尾是地圖在移動房子，不是真實房子移動。"
+      }
+    ],
+    "words": [
+      "allocate",
+      "likelihood",
+      "straightforward",
+      "authorize"
+    ]
+  },
+  {
+    "id": "lv5-040",
+    "series": "第十一部 · The River Without Fish｜沒有魚的河",
+    "title": "The Empty Net",
+    "zh": "空網",
+    "blurb": "小鎮一年一度的鮭魚季開始了，漁民卻只撈起空網。河水清澈，生態學家卻發現真正的危險看不見。",
+    "scene": "forest",
+    "pages": [
+      {
+        "en": "Every autumn, salmon returned to Willow River. This year the nets were empty. Lina, an ecologist, expected to find an obvious cause: a factory spill, a broken barrier, or a drought. Instead, the water looked clear, and there was no unusual scent. The disappearance was more disturbing because everything seemed normal.",
+        "zh": "每年秋天，鮭魚都會回到柳河。今年漁網卻一片空白。生態學家 Lina 原本預期會發現明顯原因：工廠排放、障礙物毀損，或乾旱。但河水看起來清澈，也沒有異常氣味。正因一切看似正常，消失才更令人不安。"
+      },
+      {
+        "en": "A fisherman blamed a new reservoir upstream. A farmer insisted that changing weather was responsible. Lina gathered water specimens at several locations rather than accepting either explanation. She compared temperature, oxygen, and the density of tiny organisms living in the river.",
+        "zh": "漁夫怪罪上游的新水庫；農夫則堅稱氣候變化才是原因。Lina 沒有接受任何一方說法，而是在多個地點採集水樣，分析溫度、含氧量與微小生物的密度。"
+      },
+      {
+        "en": "At dusk, she found a few young fish near a shallow creek. They were alive, but their movement was slow. Her assistant wanted to announce an epidemic. Lina shook her head. “A symptom is a clue, not a diagnosis,” she said. “We need to know what changed in their habitat.”",
+        "zh": "黃昏時，她在淺溪附近發現幾尾幼魚。牠們還活著，活動卻很遲緩。助理想宣布河裡爆發疫病，Lina 搖頭說：「症狀只是線索，不是診斷。我們得知道牠們的棲地發生了什麼變化。」"
+      }
+    ],
+    "quiz": [
+      {
+        "q": "What is unusual about Willow River?",
+        "opts": [
+          "The fish have not returned",
+          "The water has turned black",
+          "The nets are full",
+          "A new bridge collapsed"
+        ],
+        "a": 0,
+        "why": "平常秋天回游的鮭魚沒有出現。"
+      },
+      {
+        "q": "How does Lina investigate?",
+        "opts": [
+          "She accepts the first explanation",
+          "She collects samples from several places",
+          "She closes the reservoir",
+          "She follows only the fishermen"
+        ],
+        "a": 1,
+        "why": "她在多個地點取樣比較。"
+      },
+      {
+        "q": "Why does Lina reject an immediate epidemic announcement?",
+        "opts": [
+          "She has a complete diagnosis",
+          "Slow movement alone does not establish a cause",
+          "All the fish are healthy",
+          "She dislikes her assistant"
+        ],
+        "a": 1,
+        "why": "活動遲緩只代表有症狀，尚不能證明原因。"
+      }
+    ],
+    "words": [
+      "salmon",
+      "drought",
+      "scent",
+      "reservoir",
+      "specimen",
+      "density",
+      "organism",
+      "epidemic",
+      "symptom",
+      "diagnosis",
+      "habitat"
+    ]
+  },
+  {
+    "id": "lv5-041",
+    "series": "第十一部 · The River Without Fish｜沒有魚的河",
+    "title": "A Trace Beneath the Surface",
+    "zh": "水面下的痕跡",
+    "blurb": "化驗顯示河水裡不缺氧，魚卻仍游不動。真正缺少的，可能是沒有人在意的微小生物。",
+    "scene": "forest",
+    "pages": [
+      {
+        "en": "The laboratory found no evidence of a contagious disease. However, the samples contained far fewer insects than those collected in prior years. Fish had not simply lost their appetite; much of their food had vanished. Lina traced the change to a pipeline that carried warm water from a nearby installation.",
+        "zh": "實驗室沒有找到傳染病的證據，但樣本裡的昆蟲遠少於往年。魚不是單純沒胃口，而是食物大量消失了。Lina 追查到附近設施的一條管線，它把溫水帶進河裡。"
+      },
+      {
+        "en": "The company complied with existing temperature limits at its outlet. Yet a narrow section of the river had become warmer than the rest. In that small space, insect eggs could not develop normally. Lina realized the official average had hidden a local effect: one number had described the whole river, while a critical part of it was changing.",
+        "zh": "公司排水口的溫度符合現行上限，但河流有一小段比其他地方更暖。在那狹窄區域，昆蟲卵無法正常發育。Lina 明白，官方平均值遮蔽了局部影響：一個數字描述整條河，卻掩蓋最關鍵的一小段變化。"
+      },
+      {
+        "en": "She asked the plant manager for operational records and a temporary reduction in output. He worried about revenue and the factory personnel. Lina did not dismiss those concerns. “Let us measure the impact together,” she said, “before deciding what action is justified.”",
+        "zh": "她向廠長索取運作紀錄，並請工廠暫時降低產量。廠長擔心營收與員工生計，Lina 沒有輕忽。「先一起量測影響，」她說，「再決定哪些行動有根據。」"
+      }
+    ],
+    "quiz": [
+      {
+        "q": "What has decreased sharply?",
+        "opts": [
+          "River insects",
+          "The number of factory workers",
+          "Rainfall in the town",
+          "The river’s length"
+        ],
+        "a": 0,
+        "why": "樣本顯示水中昆蟲大幅減少。"
+      },
+      {
+        "q": "Why do official averages miss the problem?",
+        "opts": [
+          "The warming affects a narrow stretch",
+          "The laboratory loses the samples",
+          "The water is frozen",
+          "Fish are counted twice"
+        ],
+        "a": 0,
+        "why": "局部高溫被全河平均值掩蓋。"
+      },
+      {
+        "q": "How does Lina approach the manager?",
+        "opts": [
+          "She ignores workers",
+          "She proposes measuring the impact together",
+          "She declares guilt without evidence",
+          "She demands the plant close forever"
+        ],
+        "a": 1,
+        "why": "她同意先共同確認影響。"
+      }
+    ],
+    "words": [
+      "contagious",
+      "prior",
+      "pipeline",
+      "installation",
+      "comply",
+      "outlet",
+      "operational",
+      "output",
+      "revenue",
+      "personnel",
+      "justify"
+    ]
+  },
+  {
+    "id": "lv5-042",
+    "series": "第十一部 · The River Without Fish｜沒有魚的河",
+    "title": "The Cost of Cool Water",
+    "zh": "冷水的代價",
+    "blurb": "解方有三種，每一種都有人付出代價；Lina 必須說清楚哪些結果已確定，哪些還只是推測。",
+    "scene": "meeting",
+    "pages": [
+      {
+        "en": "The company offered three options: install a new cooling system, move the outlet, or reduce production during the salmon migration. The first required a substantial investment; the second could disturb a different habitat; the third might cut wages for seasonal staff. The choice was more complex than a simple fight between nature and industry.",
+        "zh": "公司提出三種方案：安裝新冷卻系統、移動排水口，或在鮭魚洄游季減產。第一種需要大筆投資，第二種可能擾動另一處棲地，第三種可能減少季節員工薪資。選擇遠比「自然對抗工業」複雜。"
+      },
+      {
+        "en": "At the community meeting, a reporter asked whether the plant had killed the salmon. Lina resisted the temptation to deliver a dramatic headline. “We have evidence of local warming and food loss,” she said. “We do not yet know how much each factor contributed to the decline.”",
+        "zh": "在社區會議上，記者問工廠是否害死鮭魚。Lina 克制給出聳動標題的誘惑。「我們有局部升溫與食物減少的證據，」她說，「但還不清楚各因素分別造成多少影響。」"
+      },
+      {
+        "en": "An employee challenged her: “If you are not certain, why change anything?” Lina showed photographs of the shallow creek and the young fish. “Because uncertainty is not the same as no risk,” she replied. “A limited trial can protect the river while we gather better evidence.”",
+        "zh": "一名員工反問：「既然你不確定，何必改變？」Lina 展示淺溪與幼魚照片。「因為不確定，不等於沒有風險，」她回答，「有限度試行措施，可以一邊保護河流，一邊蒐集更好的證據。」"
+      }
+    ],
+    "quiz": [
+      {
+        "q": "Which option could affect seasonal wages?",
+        "opts": [
+          "Reducing production during migration",
+          "Installing a bridge",
+          "Publishing a newspaper",
+          "Moving the fishing nets"
+        ],
+        "a": 0,
+        "why": "洄游季減產可能影響季節員工薪水。"
+      },
+      {
+        "q": "What does Lina say is still unknown?",
+        "opts": [
+          "Whether fish exist",
+          "The exact contribution of each factor",
+          "Where the factory stands",
+          "Whether the creek is wet"
+        ],
+        "a": 1,
+        "why": "她承認尚無法量化各因素的影響大小。"
+      },
+      {
+        "q": "Why does she favor a limited trial?",
+        "opts": [
+          "It replaces all evidence",
+          "It reduces risk while collecting evidence",
+          "It guarantees zero loss",
+          "It avoids further measurement"
+        ],
+        "a": 1,
+        "why": "有限試行能同時降低風險與繼續研究。"
+      }
+    ],
+    "words": [
+      "migration",
+      "substantial",
+      "temptation"
+    ]
+  },
+  {
+    "id": "lv5-043",
+    "series": "第十一部 · The River Without Fish｜沒有魚的河",
+    "title": "The First Fish Back",
+    "zh": "回來的第一尾魚",
+    "blurb": "河水降溫後，第一尾鮭魚終於回來了；但 Lina 不願把一個好消息寫成已經結案的證明。",
+    "scene": "forest",
+    "pages": [
+      {
+        "en": "For six weeks, the company lowered the water temperature at night and funded a more extensive monitoring program. Insects returned first. Then a handful of salmon appeared beside the creek. A local newspaper wanted to proclaim that the problem was solved, but Lina asked the editor to wait for another season of data.",
+        "zh": "六週裡，公司降低夜間排水溫度，並資助更廣泛的監測。昆蟲先回來，接著幾尾鮭魚出現在溪邊。地方報紙想宣布問題解決，Lina 卻請編輯等待下一季數據。"
+      },
+      {
+        "en": "The plant invested in a cooling system and arranged training for staff whose work would change. Fishermen agreed to record catches without exaggeration, while students learned to count insects in a safe section of the river. The project belonged to more people than Lina had first imagined.",
+        "zh": "工廠投資冷卻系統，也安排受影響員工轉職培訓。漁民同意如實記錄漁獲，不誇大數字；學生則學會在安全河段記錄昆蟲。這個計畫參與的人，比 Lina 起初想像的還多。"
+      },
+      {
+        "en": "At the end of autumn, Lina saw a silver shape break the surface. She did not know whether the population would fully recover. She wrote down the time, the location, and the water temperature. For now, the river had offered a reason for cautious optimism—and another question worth answering.",
+        "zh": "秋末，Lina 看見一道銀色身影躍出水面。她不知道魚群能否完全恢復，只記下時間、地點與水溫。目前，河流帶來了謹慎樂觀的理由，也留下另一個值得回答的問題。"
+      }
+    ],
+    "quiz": [
+      {
+        "q": "What returns before the salmon?",
+        "opts": [
+          "Insects",
+          "A bridge",
+          "The old pipeline",
+          "The newspaper editor"
+        ],
+        "a": 0,
+        "why": "昆蟲先回來，鮭魚才逐漸出現。"
+      },
+      {
+        "q": "What does Lina refuse to claim?",
+        "opts": [
+          "That one fish was seen",
+          "That the river is fully recovered",
+          "That temperature was recorded",
+          "That students helped"
+        ],
+        "a": 1,
+        "why": "她沒有把少量魚群回歸當成完全復原。"
+      },
+      {
+        "q": "How do local people contribute?",
+        "opts": [
+          "Only Lina takes part",
+          "Workers, fishermen and students participate",
+          "Students stop all monitoring",
+          "The plant abandons the project"
+        ],
+        "a": 1,
+        "why": "工廠、漁民與學生各自參與復原與監測。"
+      }
+    ],
+    "words": [
+      "extensive",
+      "proclaim",
+      "exaggeration",
+      "optimism"
+    ]
+  },
+  {
+    "id": "lv5-044",
+    "series": "第十二部 · The Last Board｜最後一張棋盤",
+    "title": "A Seat in the Final",
+    "zh": "決賽裡的空位",
+    "blurb": "青年棋賽的決賽名單突然多了一個名字。沒有人作弊，卻有人因為系統設定失去參賽資格。",
+    "scene": "meeting",
+    "pages": [
+      {
+        "en": "The regional chess tournament was about to begin. Ada, a volunteer responsible for attendance, noticed a vacant seat in the final round. A sophomore named Jun had earned enough points to qualify, yet the official list marked him ineligible. His opponent had already been given a free victory.",
+        "zh": "區域棋賽就要開始。負責出席紀錄的志工 Ada 注意到決賽有個空位。大二生 Jun 的積分足以晉級，正式名單卻把他標為不符合資格；他的對手甚至已被判定不戰而勝。"
+      },
+      {
+        "en": "The organizers blamed an administrative rule: players had to submit a certificate before midnight. Jun had uploaded it at 11:58, but the server recorded the time in a different zone. An official shrugged. “A rule is a rule.” Ada thought the principle mattered, yet so did the facts used to apply it.",
+        "zh": "主辦方怪罪行政規定：選手必須在午夜前提交證明。Jun 在 11 點 58 分上傳，但伺服器用另一個時區記錄時間。官員聳肩：「規定就是規定。」Ada 認為規則重要，但用來套用規則的事實同樣重要。"
+      },
+      {
+        "en": "Jun did not shout. He asked for an explanation and showed his confirmation email. When Ada checked its original timestamp, she saw that he had complied. She now had to choose whether to speak up and delay the match or let a preventable error decide a final.",
+        "zh": "Jun 沒有吼叫，只要求解釋，並出示確認郵件。Ada 查到原始時間戳記，發現他確實遵守規定。她得決定：說出來、讓比賽延遲，還是讓一個可避免的錯誤決定決賽結果。"
+      }
+    ],
+    "quiz": [
+      {
+        "q": "Why is Jun marked ineligible?",
+        "opts": [
+          "He did not win enough points",
+          "The server uses another time zone",
+          "He forgot his chessboard",
+          "His opponent complained"
+        ],
+        "a": 1,
+        "why": "上傳時間被另一時區的系統誤判。"
+      },
+      {
+        "q": "What evidence does Jun provide?",
+        "opts": [
+          "A confirmation email",
+          "A new trophy",
+          "A coach’s diary",
+          "An advertisement"
+        ],
+        "a": 0,
+        "why": "他出示上傳成功的確認郵件。"
+      },
+      {
+        "q": "What dilemma does Ada face?",
+        "opts": [
+          "Whether to change sports",
+          "Whether to correct an error despite delay",
+          "Whether to sell tickets",
+          "Whether to leave the city"
+        ],
+        "a": 1,
+        "why": "糾正錯誤可能延誤決賽。"
+      }
+    ],
+    "words": [
+      "tournament",
+      "attendance",
+      "sophomore",
+      "qualify",
+      "opponent",
+      "administrative",
+      "certificate",
+      "server"
+    ]
+  },
+  {
+    "id": "lv5-045",
+    "series": "第十二部 · The Last Board｜最後一張棋盤",
+    "title": "A Rule Applied Twice",
+    "zh": "被套用兩次的規則",
+    "blurb": "主辦方同意重新審查，卻發現問題不只有 Jun 一人。另有六名選手可能因此失去機會。",
+    "scene": "meeting",
+    "pages": [
+      {
+        "en": "Ada submitted the evidence to the tournament committee. A senior official insisted that reopening the list would undermine the schedule. Another argued that fair competition required accurate records. The committee called a short session and invited each affected participant to respond.",
+        "zh": "Ada 把證據送交賽事委員會。資深官員堅持重開名單會破壞賽程；另一人則認為公平競爭必須建立在正確紀錄上。委員會召開短會，邀請受影響的參賽者各自回應。"
+      },
+      {
+        "en": "The inquiry revealed six comparable cases. Some players had submitted documents late; others, like Jun, had met the deadline but were recorded incorrectly. Ada resisted treating every case as equivalent. A consistent rule, she explained, also required a consistent way to measure compliance.",
+        "zh": "調查發現另有六個類似案例。有些選手確實遲交，有些像 Jun 一樣準時卻被錯誤記錄。Ada 不願把所有案例視為相同。她解釋，規則要一致，也必須用一致的方法判定是否遵守。"
+      },
+      {
+        "en": "Jun’s rival surprised everyone. “I want to win a game,” he said, “not a spreadsheet error.” He offered to wait. For the first time that day, Ada saw an opponent become an ally without surrendering the wish to compete.",
+        "zh": "Jun 的對手讓大家意外。「我想贏的是棋局，」他說，「不是試算表錯誤。」他願意等待。Ada 第一次看見，對手不必放棄競爭，也能成為彼此的盟友。"
+      }
+    ],
+    "quiz": [
+      {
+        "q": "What does the inquiry uncover?",
+        "opts": [
+          "Every player cheated",
+          "Six additional cases with different causes",
+          "The chessboards are missing",
+          "The organizer canceled the event"
+        ],
+        "a": 1,
+        "why": "又找到六件成因不完全相同的案例。"
+      },
+      {
+        "q": "What does Ada insist on?",
+        "opts": [
+          "All cases must have identical outcomes",
+          "Compliance must be measured consistently",
+          "The committee should ignore evidence",
+          "The final should begin at once"
+        ],
+        "a": 1,
+        "why": "她強調應一致地核對事實與遵規情形。"
+      },
+      {
+        "q": "What does Jun’s rival say?",
+        "opts": [
+          "He wants a real game",
+          "He will never play again",
+          "He wants a higher fee",
+          "He lost his certificate"
+        ],
+        "a": 0,
+        "why": "對手希望勝負由棋局決定。"
+      }
+    ],
+    "words": [
+      "undermine",
+      "session",
+      "participant",
+      "inquiry",
+      "comparable",
+      "equivalent",
+      "compliance",
+      "rival",
+      "ally"
+    ]
+  },
+  {
+    "id": "lv5-046",
+    "series": "第十二部 · The Last Board｜最後一張棋盤",
+    "title": "An Unexpected Opening",
+    "zh": "意想不到的開局",
+    "blurb": "重新排好的決賽終於開始，但 Jun 的第一步就下錯了。修正名單，並不能替他贏得比賽。",
+    "scene": "meeting",
+    "pages": [
+      {
+        "en": "The committee corrected the records, published the reason for its decision, and delayed the final by forty minutes. Jun sat down, took a breath, and made an awkward opening move. Spectators gasped. After all the debate, he might still lose on the board.",
+        "zh": "委員會修正紀錄、公布理由，並讓決賽延後四十分鐘。Jun 坐下、深呼吸，卻走出一個尷尬的開局。觀眾倒抽一口氣。爭論了那麼久，他仍可能在棋盤上輸掉。"
+      },
+      {
+        "en": "Ada watched the two opponents analyze each other’s tactics. Jun made a risky sacrifice, while his rival chose a patient defense. Their different styles produced a fascinating match. The winner would not be decided by sympathy, a computer, or a judge’s personal preference.",
+        "zh": "Ada 看著兩名對手分析彼此戰術。Jun 冒險棄子，對手則採用耐心防守。不同風格形成精彩對局。勝者不會由同情、電腦或裁判個人偏好決定。"
+      },
+      {
+        "en": "Near the end, Jun looked at the clock and realized that his remaining time was minimal. He could force a draw or attempt one final attack. He smiled across the board. “Whatever happens,” he said, “thank you for waiting.”",
+        "zh": "接近尾聲時，Jun 看了時鐘，剩下的時間極少。他可以強迫和棋，也可以做最後一次進攻。他隔著棋盤微笑：「不論結果如何，謝謝你願意等。」"
+      }
+    ],
+    "quiz": [
+      {
+        "q": "What happens at the start of the final?",
+        "opts": [
+          "Jun makes an awkward opening move",
+          "The match is canceled",
+          "The lights go out",
+          "Ada becomes a player"
+        ],
+        "a": 0,
+        "why": "Jun 開局就下出不理想的一步。"
+      },
+      {
+        "q": "What decides the match?",
+        "opts": [
+          "The players’ choices on the board",
+          "Sympathy from the crowd",
+          "The old server record",
+          "A sponsor’s preference"
+        ],
+        "a": 0,
+        "why": "勝負回到棋盤上的選擇。"
+      },
+      {
+        "q": "What are Jun’s two final options?",
+        "opts": [
+          "Leave or protest",
+          "Force a draw or attack",
+          "Change clocks or seats",
+          "Call the committee or retire"
+        ],
+        "a": 1,
+        "why": "他能求和棋，或冒險進攻。"
+      }
+    ],
+    "words": [
+      "spectator",
+      "gasp",
+      "tactics",
+      "risky",
+      "fascinate",
+      "preference",
+      "minimal"
+    ]
+  },
+  {
+    "id": "lv5-047",
+    "series": "第十二部 · The Last Board｜最後一張棋盤",
+    "title": "The Name on the Board",
+    "zh": "棋盤上的名字",
+    "blurb": "比賽結束，Ada 才發現自己真正想守住的，不是某個人的勝利，而是每個人的參賽機會。",
+    "scene": "meeting",
+    "pages": [
+      {
+        "en": "Jun chose the attack. His rival defended accurately, and the game ended in a draw. A second short game determined the trophy: Jun lost. He accepted the result, exhausted but relieved. “At least I was there,” he said. Ada understood that being allowed to compete had never been the same as being promised a win.",
+        "zh": "Jun 選擇進攻。對手精準防守，棋局以和棋收場；加賽決定獎盃，Jun 輸了。他筋疲力竭卻鬆了一口氣，接受結果。「至少我有在場，」他說。Ada 明白，得到參賽機會，從來不等於被保證獲勝。"
+      },
+      {
+        "en": "The organizers upgraded their registration system and added a visible time-zone label beside every deadline. They also introduced an appeal procedure so that a participant could question a record without publicly accusing anyone of fraud.",
+        "zh": "主辦方升級報名系統，在每個截止時間旁清楚標示時區，也增設申訴流程，讓參賽者能質疑紀錄，而不必公開指控任何人詐欺。"
+      },
+      {
+        "en": "Before leaving, Ada found Jun’s name on the printed final board. There was no crown, no dramatic tribute, only the correct letters in the correct place. For her, that was a worthwhile result. Jun folded the sheet and put it in his bag.",
+        "zh": "離開前，Ada 在印出的決賽棋譜上看到 Jun 的名字。沒有王冠，沒有戲劇性的致敬，只是正確的字母放在正確的位置。對她而言，這個結果值得。Jun 把紙折好，放進背包。"
+      }
+    ],
+    "quiz": [
+      {
+        "q": "Who wins the final trophy?",
+        "opts": [
+          "Jun",
+          "Jun’s rival",
+          "Ada",
+          "The committee"
+        ],
+        "a": 1,
+        "why": "和棋後的加賽由 Jun 的對手獲勝。"
+      },
+      {
+        "q": "What does the organizer change?",
+        "opts": [
+          "Time-zone labels and an appeal procedure",
+          "The number of chess pieces",
+          "All players’ names",
+          "The prize money only"
+        ],
+        "a": 0,
+        "why": "新增時區標示與申訴流程。"
+      },
+      {
+        "q": "What is Ada most satisfied with?",
+        "opts": [
+          "A guaranteed win for Jun",
+          "An accurate chance to compete",
+          "A shorter tournament",
+          "A bigger trophy"
+        ],
+        "a": 1,
+        "why": "她守住的是公平且可核對的參賽機會。"
+      }
+    ],
+    "words": [
+      "trophy",
+      "upgrade",
+      "fraud",
+      "tribute",
+      "worthwhile"
+    ]
+  },
+  {
+    "id": "lv5-048",
+    "series": "第十三部 · The Frozen Photograph｜冰封的照片",
+    "title": "The Photograph with Two Winters",
+    "zh": "兩個冬天的照片",
+    "blurb": "登山攝影展中，一張標著「冬天」的照片竟有夏天才會出現的植物。攝影師的女兒決定重走父親的山路。",
+    "scene": "forest",
+    "pages": [
+      {
+        "en": "At a mountain museum, Eva noticed a bizarre detail in a famous photograph. Its caption described a winter expedition, yet a small flower in the corner normally appeared in summer. The image had belonged to her late father, a photographer whose work she adored but whose last journey remained obscure.",
+        "zh": "在山區博物館，Eva 注意到一張名作裡有個怪異細節：說明寫著冬季探險，角落卻有一朵通常夏天才開的花。照片出自她已故的父親；她深愛他的作品，但他最後一次旅程仍是個謎。"
+      },
+      {
+        "en": "The museum director dismissed the flower as an illusion created by light. Eva asked to examine the original negative. The glass plate was intact, but someone had scratched a date into its edge. It was three months earlier than the printed caption.",
+        "zh": "館長認為那朵花只是光線形成的錯覺。Eva 要求查看原始底片。玻璃片完好，但有人在邊緣刻了日期，比展覽說明早了三個月。"
+      },
+      {
+        "en": "Her father’s field journal mentioned a ridge, an abandoned cabin, and a second observer who had never appeared in any exhibition. Eva had thought she was searching for a mistake. Now she suspected that someone had deliberately left part of the story outside the frame.",
+        "zh": "父親的野外日誌提到一條山脊、一間廢棄小屋，以及一名從未出現在任何展覽中的第二觀察者。Eva 原本在找錯誤，現在卻懷疑，有人故意把部分故事留在畫框之外。"
+      }
+    ],
+    "quiz": [
+      {
+        "q": "What makes the caption suspicious?",
+        "opts": [
+          "A summer flower appears in a winter image",
+          "The camera is new",
+          "The museum closes early",
+          "The photograph has no mountain"
+        ],
+        "a": 0,
+        "why": "標註冬景卻出現夏季才有的植物。"
+      },
+      {
+        "q": "What does Eva find on the negative?",
+        "opts": [
+          "A scratched earlier date",
+          "A secret bank account",
+          "A missing signature",
+          "A chess score"
+        ],
+        "a": 0,
+        "why": "玻璃底片邊緣有較早的日期。"
+      },
+      {
+        "q": "What mystery appears in the journal?",
+        "opts": [
+          "An unnamed second observer",
+          "A lost cookbook",
+          "A damaged road",
+          "An empty tournament seat"
+        ],
+        "a": 0,
+        "why": "日誌提到未出現在展覽中的另一名觀察者。"
+      }
+    ],
+    "words": [
+      "bizarre",
+      "expedition",
+      "obscure",
+      "illusion",
+      "intact",
+      "ridge",
+      "observer"
+    ]
+  },
+  {
+    "id": "lv5-049",
+    "series": "第十三部 · The Frozen Photograph｜冰封的照片",
+    "title": "A Trail Beyond the Ridge",
+    "zh": "山脊那一邊",
+    "blurb": "Eva 和嚮導沿著舊日誌走進山區，卻發現父親所謂的「最後一張照片」不是最後拍下的影像。",
+    "scene": "forest",
+    "pages": [
+      {
+        "en": "Eva joined a small expedition led by a veteran guide. The weather forecast promised clear skies, but the guide insisted they carry extra layers and a torch. Above the tree line, the wind could change abruptly, and the nearest refuge was several hours away.",
+        "zh": "Eva 參加由資深嚮導帶領的小型探勘。天氣預報說會晴朗，嚮導仍堅持帶保暖衣物與手電筒。越過林線後，風向可能突然改變，最近的避難所也在數小時之外。"
+      },
+      {
+        "en": "Near the ridge they found a ruined cabin. Inside, a rusted tin box protected a roll of film and a letter addressed to Eva’s mother. The letter described a second photographer, an indigenous woman named Mei, who had shown Eva’s father a safe route through the wilderness.",
+        "zh": "靠近山脊時，他們找到一間破敗小屋。屋內一只生鏽鐵盒保護著一卷底片和一封寫給 Eva 母親的信。信裡提到第二名攝影師 Mei，一位在地原住民女性，曾帶 Eva 的父親走過荒野中的安全路線。"
+      },
+      {
+        "en": "Eva hesitated before opening the film canister. The guide reminded her that freezing temperatures could make old material fragile. They carried the box down intact. Some discoveries, she realized, had to be preserved before they could be understood.",
+        "zh": "Eva 打開底片罐前猶豫了。嚮導提醒，低溫可能讓老舊材料脆弱。他們把盒子完整帶下山。Eva 明白，有些發現必須先保存，才能真正理解。"
+      }
+    ],
+    "quiz": [
+      {
+        "q": "Why does the guide carry extra equipment?",
+        "opts": [
+          "Mountain weather can change suddenly",
+          "He wants to sell it",
+          "The cabin has a theater",
+          "They plan to stay for a year"
+        ],
+        "a": 0,
+        "why": "高山天候可能快速惡化。"
+      },
+      {
+        "q": "Who is Mei?",
+        "opts": [
+          "A second photographer and local guide",
+          "The museum director",
+          "Eva’s sister",
+          "A chess champion"
+        ],
+        "a": 0,
+        "why": "Mei 是協助探路的第二名攝影師。"
+      },
+      {
+        "q": "Why does Eva avoid opening the film immediately?",
+        "opts": [
+          "Old material may be fragile in cold conditions",
+          "She cannot read letters",
+          "The box is empty",
+          "The guide forbids photographs"
+        ],
+        "a": 0,
+        "why": "寒冷可能讓底片受損，先完整帶下山。"
+      }
+    ],
+    "words": [
+      "veteran",
+      "torch",
+      "refuge",
+      "tin",
+      "indigenous",
+      "wilderness"
+    ]
+  },
+  {
+    "id": "lv5-050",
+    "series": "第十三部 · The Frozen Photograph｜冰封的照片",
+    "title": "The Image Outside the Frame",
+    "zh": "畫框以外的影像",
+    "blurb": "底片洗出後，Eva 終於知道父親為何換掉日期；但 Mei 的家人要求她暫時不要公開全部照片。",
+    "scene": "paper",
+    "pages": [
+      {
+        "en": "The restored negatives revealed two separate trips. In the first, Mei had photographed a glacier from a cliff. In the second, Eva’s father returned alone and tried to recreate the scene. He later merged their work into a single exhibition, using the wrong date and giving Mei no credit.",
+        "zh": "修復的底片揭露兩次不同旅程。第一次，Mei 在峭壁拍下冰川；第二次，Eva 的父親獨自返回，試圖重現那個景象。他後來把兩人的作品合併成同一場展覽，使用錯誤日期，也沒有替 Mei 署名。"
+      },
+      {
+        "en": "Eva felt anger and affection at once. Her father had taught her to notice small things, yet he had ignored a person who made his famous image possible. She contacted Mei’s family rather than deciding alone how to publish the material.",
+        "zh": "Eva 同時感到憤怒與眷戀。父親教她注意微小事物，卻忽略了讓名作成為可能的人。她聯絡 Mei 的家人，而不是獨自決定怎麼公開資料。"
+      },
+      {
+        "en": "Mei’s granddaughter asked Eva to withhold a few photographs of a sacred gathering. “The landscape may be public,” she said, “but our family’s memories are not yours to distribute.” Eva agreed. Correcting a false record did not require exposing every private moment.",
+        "zh": "Mei 的孫女請 Eva 暫不公開幾張神聖聚會的照片。「風景或許是公開的，」她說，「但我們家族的回憶不是你能任意散布的。」Eva 同意。修正錯誤紀錄，不代表必須揭露所有私人時刻。"
+      }
+    ],
+    "quiz": [
+      {
+        "q": "What do the negatives reveal?",
+        "opts": [
+          "Two trips were combined into one exhibition",
+          "The glacier never existed",
+          "Mei took no photographs",
+          "Eva’s father had no camera"
+        ],
+        "a": 0,
+        "why": "兩次不同旅程被合併成一個展覽敘事。"
+      },
+      {
+        "q": "What does Eva do before publishing?",
+        "opts": [
+          "Contact Mei’s family",
+          "Destroy every negative",
+          "Sell the museum",
+          "Change the weather record"
+        ],
+        "a": 0,
+        "why": "她先聯絡 Mei 的家人。"
+      },
+      {
+        "q": "Why are some photographs withheld?",
+        "opts": [
+          "They show a private sacred gathering",
+          "They are all blurry",
+          "They were taken on a train",
+          "The museum cannot print them"
+        ],
+        "a": 0,
+        "why": "部分影像涉及家族私密的神聖聚會。"
+      }
+    ],
+    "words": [
+      "merge",
+      "sacred",
+      "gathering"
+    ]
+  },
+  {
+    "id": "lv5-051",
+    "series": "第十三部 · The Frozen Photograph｜冰封的照片",
+    "title": "Two Names Beneath the Mountain",
+    "zh": "山下的兩個名字",
+    "blurb": "展覽重新開幕，照片旁出現兩個名字。Eva 接受父親作品的不完美，也讓被遺忘的人走回畫面。",
+    "scene": "paper",
+    "pages": [
+      {
+        "en": "The museum reopened the exhibition with accurate dates, two names, and an explanation of how the original caption had been created. The director feared a scandal, but visitors spent more time looking at the photographs after learning the complete history.",
+        "zh": "博物館重新開展，標上正確日期、兩個名字，並解釋原先說明的由來。館長擔心醜聞，訪客卻在理解完整歷史後，花更多時間觀看照片。"
+      },
+      {
+        "en": "Eva placed her father’s letter beside a new portrait of Mei, with her family’s permission. She did not present Mei as a silent helper or her father as a simple villain. They were photographers who made different choices, and the record now showed what each had contributed.",
+        "zh": "在家族同意下，Eva 把父親的信放在 Mei 的新肖像旁。她沒有把 Mei 描述成沉默助手，也沒有把父親簡化成純粹壞人。他們都是做過不同選擇的攝影師，現在紀錄呈現兩人各自的貢獻。"
+      },
+      {
+        "en": "On opening day, Eva saw the little summer flower in the corner of the first photograph. It no longer looked like a flaw. It looked like a witness: small, persistent, and impossible to erase once someone finally knew where to look.",
+        "zh": "開幕當天，Eva 看見第一張照片角落裡那朵小小的夏花。它不再像瑕疵，反而像一名證人：微小、堅持存在，一旦有人知道往哪裡看，就再也無法抹去。"
+      }
+    ],
+    "quiz": [
+      {
+        "q": "How is the exhibition corrected?",
+        "opts": [
+          "With accurate dates and two names",
+          "By deleting all the photos",
+          "With only Eva’s name",
+          "By hiding the original caption forever"
+        ],
+        "a": 0,
+        "why": "展覽補上真實日期與兩位攝影師姓名。"
+      },
+      {
+        "q": "How does Eva portray the photographers?",
+        "opts": [
+          "As people who made different choices",
+          "As identical people",
+          "As characters in a fantasy game",
+          "As enemies who never met"
+        ],
+        "a": 0,
+        "why": "她不把任何一人簡化成刻板的好人或壞人。"
+      },
+      {
+        "q": "What does the summer flower symbolize at the end?",
+        "opts": [
+          "A clue that could not stay hidden",
+          "An expensive souvenir",
+          "A warning of winter storms",
+          "A lost chess piece"
+        ],
+        "a": 0,
+        "why": "小花成了曾被忽略、終被看見的線索。"
+      }
+    ],
+    "words": [
+      "scandal"
+    ]
+  },
+  {
+    "id": "lv5-052",
+    "series": "第十四部 · The Train with No Menu｜沒有菜單的列車",
+    "title": "A Dinner Above the Valley",
+    "zh": "山谷上方的晚餐",
+    "blurb": "山線餐車重新營運，主廚收到一筆奇怪的訂位：備註裡提到一個出現在二十年前菜單上的名字。",
+    "scene": "meeting",
+    "pages": [
+      {
+        "en": "The mountain railway reopened its dining car after a long renovation. Ren, a young chef, was hired to design a menu that would attract visitors without losing the region’s cuisine. His first challenge seemed ordinary: limited storage, a changing schedule, and an old kitchen with a single working oven.",
+        "zh": "山線鐵路長期整修後重新開放餐車。年輕主廚 Ren 受聘設計菜單，希望吸引旅客又不失去地方料理特色。他的第一個挑戰看似平常：有限儲藏空間、經常變動的時刻表，以及只剩一台烤箱可用的舊廚房。"
+      },
+      {
+        "en": "An unexpected reservation arrived for seven passengers. Its note named a woman whose signature appeared on a menu from twenty years earlier. The note requested a particular pastry made with an herb that no longer grew near the station. Ren suspected a sentimental reunion, but the booking offered no contact number.",
+        "zh": "一筆意外訂位來了，訂位備註提到一位女人，她的署名竟出現在二十年前的舊菜單上。備註要求一道特殊香草酥皮點心，但那種香草已不在車站附近生長。Ren 猜想是感傷的重聚，訂位卻沒有聯絡電話。"
+      },
+      {
+        "en": "The train manager advised him to ignore the request. Ren could have prepared a fashionable substitute and called it authentic. Instead, he took the old menu to the retired cook whose signature appeared at the bottom.",
+        "zh": "列車經理勸他忽略要求。Ren 大可做一道流行的替代品，宣稱它很道地；他卻把舊菜單帶去找署名在最下方的退休廚師。"
+      }
+    ],
+    "quiz": [
+      {
+        "q": "What does Ren need to design?",
+        "opts": [
+          "A dining-car menu",
+          "A railway map",
+          "A chess tournament",
+          "A museum exhibition"
+        ],
+        "a": 0,
+        "why": "Ren 受聘設計山線餐車菜單。"
+      },
+      {
+        "q": "What is unusual about the reservation?",
+        "opts": [
+          "The note names someone from an old menu",
+          "All guests are chefs",
+          "It requests no food",
+          "It is for a hundred people"
+        ],
+        "a": 0,
+        "why": "備註提到二十年前菜單上的一個名字。"
+      },
+      {
+        "q": "What does Ren do instead of using a substitute?",
+        "opts": [
+          "Consult the retired cook",
+          "Cancel every reservation",
+          "Close the kitchen",
+          "Invent a new train route"
+        ],
+        "a": 0,
+        "why": "他帶舊菜單去找退休廚師。"
+      }
+    ],
+    "words": [
+      "chef",
+      "cuisine",
+      "pastry",
+      "herb",
+      "sentimental"
+    ]
+  },
+  {
+    "id": "lv5-053",
+    "series": "第十四部 · The Train with No Menu｜沒有菜單的列車",
+    "title": "The Recipe That Changed",
+    "zh": "改了三次的食譜",
+    "blurb": "退休廚師說那道點心從未有固定配方；Ren 必須知道，為什麼一份舊菜單比一份新食譜更重要。",
+    "scene": "meeting",
+    "pages": [
+      {
+        "en": "The retired cook, Mrs. Wu, laughed at the request. “That pastry had three recipes,” she said. During a drought they had used a different grain; during a shortage they had replaced butter with oil. The flavor people remembered was not a fixed formula but the meal they had shared.",
+        "zh": "退休廚師吳女士聽見要求笑了。「那道點心有三種配方，」她說。乾旱時改用另一種穀物，缺貨時則以油取代奶油。人們記得的味道並非固定公式，而是當年一起吃的那頓飯。"
+      },
+      {
+        "en": "Mrs. Wu explained that the woman on the menu had once organized free dinners for commuters stranded by a landslide. Passengers brought whatever ingredients they could spare, and the kitchen turned them into stew and pastry. The recipe was a record of cooperation, not an exclusive family secret.",
+        "zh": "吳女士說，舊菜單上的女人曾為土石滑落而受困的通勤旅客安排免費晚餐。大家帶來手邊能分出的食材，廚房就把它們做成燉菜與點心。食譜記錄的是合作，不是某家獨有的祕方。"
+      },
+      {
+        "en": "Ren began to understand the reservation. He planned a simple meal with seasonal vegetables and asked suppliers to identify possible allergens. A remembered dish mattered, but so did the safety and preference of the people who would eat it now.",
+        "zh": "Ren 開始理解訂位背後的意義。他規劃用當季蔬菜做簡單餐點，並請供應商標示可能的過敏原。值得紀念的料理重要，現在要吃的人是否安全、喜歡，也同樣重要。"
+      }
+    ],
+    "quiz": [
+      {
+        "q": "Why were there three pastry recipes?",
+        "opts": [
+          "Ingredients changed during hardship",
+          "The cook forgot how to bake",
+          "The kitchen had three ovens",
+          "The menu was forged"
+        ],
+        "a": 0,
+        "why": "缺糧、缺貨時曾改變食材。"
+      },
+      {
+        "q": "Who received free dinners in the past?",
+        "opts": [
+          "Stranded commuters",
+          "Only museum staff",
+          "Chess players",
+          "Factory owners"
+        ],
+        "a": 0,
+        "why": "當年土石滑落困住的通勤旅客。"
+      },
+      {
+        "q": "What does Ren check for the new meal?",
+        "opts": [
+          "Potential allergens",
+          "Ticket prices only",
+          "The old woman’s age",
+          "A hidden railway tunnel"
+        ],
+        "a": 0,
+        "why": "Ren 留意現代乘客的飲食安全與偏好。"
+      }
+    ],
+    "words": [
+      "shortage",
+      "commuter",
+      "strand",
+      "stew",
+      "exclusive"
+    ]
+  },
+  {
+    "id": "lv5-054",
+    "series": "第十四部 · The Train with No Menu｜沒有菜單的列車",
+    "title": "Seven Passengers, Eight Plates",
+    "zh": "七名乘客，八個盤子",
+    "blurb": "列車上桌的餐點多了一份。Ren 以為自己算錯數量，直到一名年長旅客拿出二十年前的車票。",
+    "scene": "meeting",
+    "pages": [
+      {
+        "en": "On the reopening trip, seven guests sat down as the train climbed above the valley. Ren prepared eight plates by mistake. He was about to remove one when an elderly passenger asked him to leave it. “That seat belonged to the cook who fed us when the mountain road disappeared,” she said.",
+        "zh": "重新營運的首班列車爬上山谷時，七名客人入座。Ren 不小心準備了八個盤子，正要收走一個，年長旅客請他留下。「那個座位屬於當年山路中斷時替我們做飯的廚師，」她說。"
+      },
+      {
+        "en": "She showed Ren a worn ticket, an unused meal voucher, and a photograph of seven muddy travelers beside a woman in an apron. The woman was Mrs. Wu. The passengers had returned to thank her, but she had refused the invitation, insisting she was merely doing her job.",
+        "zh": "她拿出磨舊車票、一張沒用過的餐券，還有七名滿身泥濘旅客和一名穿圍裙女人的合照。那女人就是吳女士。乘客們此行想感謝她，卻遭她婉拒；她堅稱自己只是做分內的事。"
+      },
+      {
+        "en": "Ren called the station office. Mrs. Wu was waiting there, too shy to board. The train had a brief scheduled stop ahead. He asked the manager for permission to invite one more passenger aboard. This time, the empty plate was not a mistake.",
+        "zh": "Ren 打電話到車站辦公室。吳女士在那裡等著，害羞得不敢上車。前方有一處短暫停靠站，他請經理同意再讓一名旅客上車。這一次，多出來的盤子不再是錯誤。"
+      }
+    ],
+    "quiz": [
+      {
+        "q": "Why is there an eighth plate?",
+        "opts": [
+          "It becomes a place for Mrs. Wu",
+          "The staff cannot count",
+          "Ren expects a critic",
+          "A passenger ordered twice"
+        ],
+        "a": 0,
+        "why": "多出的盤子最後是留給吳女士的。"
+      },
+      {
+        "q": "Why did Mrs. Wu refuse the original invitation?",
+        "opts": [
+          "She thought she had only done her job",
+          "She disliked the passengers",
+          "She had lost her ticket",
+          "She was abroad"
+        ],
+        "a": 0,
+        "why": "她認為當年的付出只是分內事。"
+      },
+      {
+        "q": "What allows Mrs. Wu to join?",
+        "opts": [
+          "A brief scheduled stop",
+          "A helicopter",
+          "An unscheduled evacuation",
+          "A second train"
+        ],
+        "a": 0,
+        "why": "列車前方有短暫的例行停靠。"
+      }
+    ],
+    "words": [
+      "voucher"
+    ]
+  },
+  {
+    "id": "lv5-055",
+    "series": "第十四部 · The Train with No Menu｜沒有菜單的列車",
+    "title": "A Menu Worth Keeping",
+    "zh": "值得留下的菜單",
+    "blurb": "八個人終於坐在同一桌，Ren 發現好餐點不只有味道，也能讓一段歷史被重新記得。",
+    "scene": "meeting",
+    "pages": [
+      {
+        "en": "Mrs. Wu boarded at the next station. The passengers rose to greet her, and she blushed when she saw the extra plate. Ren served the pastry with its modern ingredients, explaining what had changed and why. The guests said it tasted different. Nobody complained.",
+        "zh": "吳女士在下一站上車。乘客起身迎接，她看到多出來的盤子，臉一下紅了。Ren 端上使用現代食材的點心，說明改了什麼、為什麼改。客人說味道不同，卻沒有人抱怨。"
+      },
+      {
+        "en": "The railway offered to make the old pastry a permanent premium item. Ren declined the exclusive label. He preferred a changing regional menu that included a short story about the landslide dinners and a place for passengers to contribute memories of their own.",
+        "zh": "鐵路公司提議把舊點心做成固定的高價特色餐。Ren 拒絕貼上「獨家」標籤。他寧可設計會變動的地方菜單，附上當年土石滑落時的晚餐故事，也讓乘客留下自己的記憶。"
+      },
+      {
+        "en": "As the train entered the terminal, Mrs. Wu handed him the worn ticket. “Keep it,” she said. Ren placed it in the kitchen beside a new menu. He had set out to reproduce a dish. Instead, he had helped people find the way back to one another.",
+        "zh": "列車駛入終點站時，吳女士把磨舊的車票交給他。「留著吧，」她說。Ren 把它放在廚房的新菜單旁。他原本想重現一道料理，最後卻幫人們找到回到彼此身邊的路。"
+      }
+    ],
+    "quiz": [
+      {
+        "q": "How do the passengers react to the altered flavor?",
+        "opts": [
+          "They accept it without complaint",
+          "They demand a refund",
+          "They leave the train",
+          "They ask to remove Mrs. Wu"
+        ],
+        "a": 0,
+        "why": "味道雖不同，客人並未抱怨。"
+      },
+      {
+        "q": "What kind of menu does Ren choose?",
+        "opts": [
+          "A changing regional menu with memories",
+          "Only the old pastry at premium price",
+          "No menu at all",
+          "A menu with no explanations"
+        ],
+        "a": 0,
+        "why": "他選擇會更新的地方菜單與故事。"
+      },
+      {
+        "q": "What is the main outcome of the meal?",
+        "opts": [
+          "People reconnect across time",
+          "The restaurant closes",
+          "The train changes routes",
+          "A secret recipe is sold"
+        ],
+        "a": 0,
+        "why": "這頓飯讓人們重新連結。"
+      }
+    ],
+    "words": [
+      "blush",
+      "premium",
+      "terminal"
+    ]
+  },
+  {
+    "id": "lv5-056",
+    "series": "第十五部 · The Last Shuttle｜最後一班接駁車",
+    "title": "The Route Nobody Uses",
+    "zh": "沒人搭的路線",
+    "blurb": "市府決定停駛一條「沒人搭」的接駁線，司機卻知道每晚都有人站在那個沒有站牌的路口。",
+    "scene": "night",
+    "pages": [
+      {
+        "en": "The transit company planned to abolish its late shuttle because the passenger count was low. According to the monthly report, the route carried almost nobody after nine. Driver Sam knew the report was incomplete: the final stop had been moved during roadwork, and the temporary pickup point had never been entered into the system.",
+        "zh": "運輸公司因載客量低，計畫取消夜間接駁車。月報指出九點後幾乎沒人搭車。司機 Sam 知道報表不完整：施工時末站被移動，臨時上車點卻從未輸入系統。"
+      },
+      {
+        "en": "At the unofficial stop, he picked up cleaners, students, and hospital staff. One passenger used a wheelchair and needed an accessible vehicle; another had to reach a suburban residence before midnight. Their journeys were invisible to the software, not to Sam.",
+        "zh": "在非正式停靠點，他接送清潔員、學生與醫院員工。一名乘客坐輪椅，需要無障礙車輛；另一人必須在午夜前回到郊區住處。系統看不見這些旅程，Sam 卻看得見。"
+      },
+      {
+        "en": "When his supervisor announced the final day, Sam asked for one week to gather accurate numbers. “A bus that looks empty on paper,” he said, “may be the only way home for the people waiting beside it.”",
+        "zh": "主管宣布最後營運日，Sam 請求一週蒐集正確數字。「紙上看來沒人的公車，」他說，「可能是站在旁邊那些人唯一回家的路。」"
+      }
+    ],
+    "quiz": [
+      {
+        "q": "Why does the report show too few riders?",
+        "opts": [
+          "A temporary stop is missing from the system",
+          "The driver skips every stop",
+          "All passengers own cars",
+          "The road has no residents"
+        ],
+        "a": 0,
+        "why": "臨時站點未納入系統紀錄。"
+      },
+      {
+        "q": "Who uses the late shuttle?",
+        "opts": [
+          "Cleaners, students and hospital staff",
+          "Only tourists",
+          "Only transit managers",
+          "No one"
+        ],
+        "a": 0,
+        "why": "夜間工作者、學生等仍在搭車。"
+      },
+      {
+        "q": "What does Sam request?",
+        "opts": [
+          "A week to collect accurate numbers",
+          "A new car for himself",
+          "An immediate route closure",
+          "A larger uniform"
+        ],
+        "a": 0,
+        "why": "他請求時間重新統計。"
+      }
+    ],
+    "words": [
+      "transit",
+      "pickup",
+      "wheelchair",
+      "suburban"
+    ]
+  },
+  {
+    "id": "lv5-057",
+    "series": "第十五部 · The Last Shuttle｜最後一班接駁車",
+    "title": "Numbers After Nine",
+    "zh": "九點之後的數字",
+    "blurb": "Sam 拿到新的乘車紀錄，卻發現新增的收入仍不足以支付營運成本。他得提出不只「不要停駛」的方案。",
+    "scene": "meeting",
+    "pages": [
+      {
+        "en": "Sam persuaded the company to run a short trial. Volunteers counted passengers at the temporary stop, and the operator compared the figures with the official output. The corrected total was triple the old estimate, but the route still ran at a financial deficit.",
+        "zh": "Sam 說服公司進行短期試行。志工在臨時站點計數，營運者將數據與官方報表比對。更正後的乘客總數是原估計的三倍，但路線仍有財務赤字。"
+      },
+      {
+        "en": "At a planning session, Sam presented three options: shorten the route, use a smaller accessible shuttle, or offer a transfer at the terminal. Each would save money, but the last option meant a long wait for people finishing work at night. He asked the committee to include travel time, not just ticket revenue, in its assessment.",
+        "zh": "在規劃會議上，Sam 提出三種選項：縮短路線、改用較小的無障礙接駁車，或在終點站安排轉乘。每種都能省錢，但最後一種會讓深夜下班的人久等。他請委員會評估時把旅行時間算進去，而不只看票收。"
+      },
+      {
+        "en": "A young planner proposed a limited subsidy for a smaller vehicle. Sam did not claim it was the ultimate solution. He was simply relieved that the people who rode after nine had finally become part of the calculation.",
+        "zh": "一位年輕規劃員提議補助較小的車輛。Sam 沒有宣稱這是終極解方。他只是鬆了一口氣：九點之後搭車的人，終於也被算進去了。"
+      }
+    ],
+    "quiz": [
+      {
+        "q": "How much higher is the corrected rider count?",
+        "opts": [
+          "Three times the old estimate",
+          "Half the old estimate",
+          "Exactly the same",
+          "One hundred times higher"
+        ],
+        "a": 0,
+        "why": "更正數據是原估計三倍。"
+      },
+      {
+        "q": "What problem remains?",
+        "opts": [
+          "The service still has a financial deficit",
+          "No vehicles exist",
+          "All roads are closed",
+          "The terminal is gone"
+        ],
+        "a": 0,
+        "why": "客量更正後，路線仍需補足營運成本。"
+      },
+      {
+        "q": "What does Sam want the assessment to include?",
+        "opts": [
+          "Travel time for riders",
+          "Only ticket revenue",
+          "The driver’s favorite route",
+          "Advertising colors"
+        ],
+        "a": 0,
+        "why": "除了收入，也要把乘客通勤時間算進去。"
+      }
+    ],
+    "words": [
+      "triple",
+      "deficit",
+      "subsidy",
+      "ultimate"
+    ]
+  },
+  {
+    "id": "lv5-058",
+    "series": "第十五部 · The Last Shuttle｜最後一班接駁車",
+    "title": "The Stop with a Name",
+    "zh": "有名字的站牌",
+    "blurb": "正式站牌立起來的那天，Sam 沒有得到表揚。他只是照常開車，載著那些終於出現在報表裡的人。",
+    "scene": "night",
+    "pages": [
+      {
+        "en": "The company implemented a revised evening service and installed a sign at the former temporary stop. A smaller accessible shuttle operated on a regular schedule, with funding reviewed every six months. Riders could now see accurate arrival times on their phones.",
+        "zh": "公司實施調整後的夜間班次，在原本的臨時站點設置正式站牌。較小的無障礙接駁車依固定時刻行駛，每半年檢討經費。乘客終於能在手機上看到正確到站時間。"
+      },
+      {
+        "en": "On the first evening, Sam watched the wheelchair user board without help. The hospital cleaner showed him a message: she could now arrive home before her child went to sleep. Neither story appeared in the original report, though both had been true all along.",
+        "zh": "首晚，Sam 看著輪椅乘客不需他人協助就上車。醫院清潔員給他看一則訊息：她現在能在孩子睡前回到家。這兩件事都沒出現在原始報告裡，卻一直都是真實的。"
+      },
+      {
+        "en": "Sam drove past the new sign. For the first time, it displayed a route name instead of a handwritten note. The numbers still mattered. They simply had to count the people who were actually there.",
+        "zh": "Sam 開車經過新站牌。它第一次顯示正式路線名稱，而非手寫便條。數字仍然重要；重要的是，要把真正出現在那裡的人算進去。"
+      }
+    ],
+    "quiz": [
+      {
+        "q": "What changes at the old temporary stop?",
+        "opts": [
+          "It receives an official sign",
+          "It becomes a museum",
+          "It is removed permanently",
+          "Only tourists may board"
+        ],
+        "a": 0,
+        "why": "臨時站點獲得正式站牌。"
+      },
+      {
+        "q": "Why is the hospital cleaner pleased?",
+        "opts": [
+          "She can get home before her child sleeps",
+          "She received a free car",
+          "She no longer works",
+          "The bus is painted red"
+        ],
+        "a": 0,
+        "why": "班次改善讓她能早點陪孩子。"
+      },
+      {
+        "q": "What lesson does the story emphasize?",
+        "opts": [
+          "Count the people who are actually using a service",
+          "All routes must be free",
+          "Numbers are never useful",
+          "Drivers should write reports alone"
+        ],
+        "a": 0,
+        "why": "數據必須能反映真實乘客。"
+      }
+    ],
+    "words": [
+      "implement"
+    ]
+  },
+  {
+    "id": "lv5-059",
+    "series": "第十六部 · The Violin Without a Case｜沒有琴盒的小提琴",
+    "title": "A Sound in the Stairwell",
+    "zh": "樓梯間的聲音",
+    "blurb": "演奏廳清場後，警衛聽到一段熟悉的小提琴旋律。失蹤的不是琴，而是一位不敢回到舞台上的演奏者。",
+    "scene": "night",
+    "pages": [
+      {
+        "en": "After the concert hall closed, guard Milo heard a solo violin from the stairwell. He followed the sound and found a young performer practicing beside an emergency exit. She wore an ordinary outfit and had no instrument case. When Milo asked for her name, she hesitated.",
+        "zh": "演奏廳關閉後，警衛 Milo 聽見樓梯間傳來小提琴獨奏。他循聲找到一名年輕演奏者，在緊急出口旁練習。她穿著普通衣服，沒有琴盒。Milo 問她名字時，她猶豫了。"
+      },
+      {
+        "en": "Her name was Lea. She had withdrawn from the evening competition after a critic mocked her unusual interpretation of a famous piece. She feared another review more than a wrong note. Milo did not tell her to be brave; he asked whether she wanted the door left open or closed.",
+        "zh": "她叫 Lea。她因評論家嘲笑自己對名曲的不同詮釋，退出當晚比賽。比起拉錯音，她更怕再被評論。Milo 沒叫她勇敢，只問她想把門開著還是關上。"
+      },
+      {
+        "en": "“Open,” she said. The sound entered the empty hall. Without spectators or applause, she finally played the passage all the way through.",
+        "zh": "「開著，」她說。琴聲傳進空蕩演奏廳。沒有觀眾，也沒有掌聲，她終於把那段旋律完整拉完。"
+      }
+    ],
+    "quiz": [
+      {
+        "q": "Where does Milo find Lea?",
+        "opts": [
+          "Practicing in a stairwell",
+          "Selling tickets outside",
+          "Sleeping on the stage",
+          "At a railway terminal"
+        ],
+        "a": 0,
+        "why": "她在樓梯間練琴。"
+      },
+      {
+        "q": "Why did Lea withdraw?",
+        "opts": [
+          "A critic mocked her interpretation",
+          "She lost the violin",
+          "The concert hall flooded",
+          "Her family moved"
+        ],
+        "a": 0,
+        "why": "評論家嘲笑她的詮釋方式。"
+      },
+      {
+        "q": "What does Lea ask Milo to do?",
+        "opts": [
+          "Leave the door open",
+          "Call the critic",
+          "Lock the hall",
+          "Hide the violin"
+        ],
+        "a": 0,
+        "why": "她希望門保持開著，讓琴聲傳入大廳。"
+      }
+    ],
+    "words": [
+      "solo",
+      "performer",
+      "outfit",
+      "mock",
+      "applause"
+    ]
+  },
+  {
+    "id": "lv5-060",
+    "series": "第十六部 · The Violin Without a Case｜沒有琴盒的小提琴",
+    "title": "The Unwritten Encore",
+    "zh": "沒有寫下的安可曲",
+    "blurb": "第二天，Lea 收到一張沒有署名的邀請卡。演奏會不在主舞台，而在她昨晚獨自練琴的樓梯口。",
+    "scene": "meeting",
+    "pages": [
+      {
+        "en": "The next morning, Lea found a handwritten card inviting her to perform at a small community gathering. Milo had organized it with the hall manager, but he had not promised her a prize or a perfect audience. Her participation was optional; Lea could decline without any penalty.",
+        "zh": "隔天早上，Lea 收到一張手寫邀請卡，請她在小型社區聚會演奏。Milo 與場館經理安排了活動，沒有保證獎項，也沒有保證完美觀眾。參加是自願選項；Lea 可以拒絕，不會有任何處罰。"
+      },
+      {
+        "en": "She arrived carrying a borrowed case. Before playing, she told the audience why she had stopped. A child asked whether a performer was allowed to change the melody. Lea smiled. “A composer writes the notes,” she said, “but every musician still has to decide how to breathe between them.”",
+        "zh": "她提著借來的琴盒到場。開演前，她說出自己曾停下的原因。一個孩子問演奏者能不能改變旋律。Lea 笑了：「作曲家寫下音符，但每個音樂家仍得決定，音符之間該怎麼呼吸。」"
+      },
+      {
+        "en": "The concert ended without a score or a ranking. A few listeners asked for an encore. Lea played the same passage from the stairwell, this time without trying to imitate anyone else. Milo listened beside the open door, where the story had begun.",
+        "zh": "演奏會沒有分數，也沒有排名。幾名聽眾請她安可。Lea 再次拉起樓梯間那段旋律，這回不再試著模仿任何人。Milo 靠在敞開的門旁聽著，一切從那裡開始。"
+      }
+    ],
+    "quiz": [
+      {
+        "q": "Who organized the small performance?",
+        "opts": [
+          "Milo and the hall manager",
+          "The hostile critic",
+          "The railway company",
+          "A tournament referee"
+        ],
+        "a": 0,
+        "why": "Milo 與場館經理安排社區演奏。"
+      },
+      {
+        "q": "What does Lea tell the child?",
+        "opts": [
+          "Musicians make choices in how they play",
+          "Every melody is illegal to change",
+          "Only critics may perform",
+          "Breathing does not matter"
+        ],
+        "a": 0,
+        "why": "樂譜之外，演奏者仍有自己的表達選擇。"
+      },
+      {
+        "q": "How does the story end?",
+        "opts": [
+          "Lea performs in her own style",
+          "Lea sells her violin",
+          "The hall remains closed",
+          "Milo wins a trophy"
+        ],
+        "a": 0,
+        "why": "Lea 不再刻意模仿別人，完成表演。"
+      }
+    ],
+    "words": [
+      "optional"
+    ]
+  },
+  {
+    "id": "lv5-061",
+    "series": "第十七部 · The Cinema at Low Tide｜退潮時的電影院",
+    "title": "The Notice on the Door",
+    "zh": "門上的公告",
+    "blurb": "城裡最後一間老電影院即將關閉，管理員卻在售票窗口發現一張日期在三十年前的未兌現票券。",
+    "scene": "night",
+    "pages": [
+      {
+        "en": "The cinema on Harbor Street was an old-fashioned building with a narrow aisle and a faded dome above its entrance. When the owner announced its closure, caretaker Iris expected an ordinary week of packing. Then she found a ticket dated thirty years earlier, hidden behind an appliance in the ticket booth. On its back, someone had written, “Do not let them erase the second screening.”",
+        "zh": "港街的電影院是一棟老式建築，入口上方有褪色的圓頂，走道也很狹窄。老闆宣布歇業後，管理員 Iris 原以為這週只需要打包整理。她卻在售票亭一台電器後面找到一張三十年前的票，背面寫著：「別讓他們抹去第二場放映。」"
+      },
+      {
+        "en": "The owner said the cinema was bound to close: the roof needed repairs, and the accounting showed a chronic loss. Iris did not challenge those figures. She was curious about the ticket because its seat number did not match the surviving floor plan. An elderly projectionist named Ben recognized the handwriting, but refused to explain it in the crowded lobby.",
+        "zh": "老闆說戲院注定要關閉：屋頂需要修理，帳目也顯示長期虧損。Iris 沒有質疑那些數字，但票上的座位號碼與留下的平面圖不符，令她好奇。年長放映師 Ben 認出了字跡，卻不願在擁擠的大廳解釋。"
+      },
+      {
+        "en": "“Come back at low tide,” Ben said. “The basement door will open without water pushing against it.” Iris could not tell whether he was joking. She photographed the ticket and left it on her desk rather than taking it home. For the first time, closing the cinema felt less like the end of a business and more like the beginning of someone else’s unfinished story.",
+        "zh": "「退潮時再來，」Ben 說，「地下室的門才不會被水壓住。」Iris 不確定他是不是開玩笑。她拍下票券，把票留在桌上，沒有帶回家。第一次，關閉戲院不再只是生意結束，而像是別人尚未寫完的故事開始。"
+      }
+    ],
+    "quiz": [
+      {
+        "q": "Where does Iris find the old ticket?",
+        "opts": [
+          "Behind an appliance in the booth",
+          "Inside a coat pocket",
+          "On the roof",
+          "Under a bus seat"
+        ],
+        "a": 0,
+        "why": "票券藏在售票亭的電器後面。"
+      },
+      {
+        "q": "Why does the owner plan to close the cinema?",
+        "opts": [
+          "Repairs and lasting financial losses",
+          "The ticket is illegal",
+          "Ben wants to retire",
+          "No one can find the door"
+        ],
+        "a": 0,
+        "why": "屋頂修繕成本與長期虧損是關閉原因。"
+      },
+      {
+        "q": "When does Ben ask Iris to return?",
+        "opts": [
+          "At low tide",
+          "At sunrise next month",
+          "During the next premiere",
+          "After the building is sold"
+        ],
+        "a": 0,
+        "why": "Ben 要 Iris 在退潮時回來。"
+      }
+    ],
+    "words": [
+      "dome",
+      "appliance",
+      "bound",
+      "accounting",
+      "chronic"
+    ]
+  },
+  {
+    "id": "lv5-062",
+    "series": "第十七部 · The Cinema at Low Tide｜退潮時的電影院",
+    "title": "The Second Screening",
+    "zh": "第二場放映",
+    "blurb": "地下室的門打開了，Iris 發現被刪掉的不是一場電影，而是當年替戲院工作的那群人。",
+    "scene": "night",
+    "pages": [
+      {
+        "en": "At low tide, the passage beneath the cinema was dry enough to enter. Ben led Iris to a small projection room, where a wooden box held film reels and a handwritten attendance list. The second screening had never been advertised to the public. It was arranged for cleaning staff and dock workers who could not leave their shifts for the regular show.",
+        "zh": "退潮時，戲院下方的通道乾得足以通行。Ben 帶 Iris 走進小放映室，木箱裡放著膠卷和手寫出席名單。第二場放映從未對外宣傳，它是替無法離開班次的清潔工與碼頭工人安排的。"
+      },
+      {
+        "en": "After a labor dispute, management had removed the event from its official history. Ben admitted he had helped confine the records to the basement. His fear had been practical: he needed the job, and he had children to feed. Iris was angry, but she did not mistake his silence for proof that everyone else had agreed.",
+        "zh": "勞資爭議後，管理階層把這場活動從官方歷史移除。Ben 承認當年協助把紀錄封存在地下室。他的恐懼很現實：他需要工作，也要養孩子。Iris 很生氣，但沒有把他的沉默誤認為其他人都同意。"
+      },
+      {
+        "en": "A newspaper columnist had once described the cinema as a place built solely for wealthy tourists. The attendance list offered a different account. Iris wanted to publish it, but several names belonged to people who might still be alive. She contacted a local archivist and asked how to protect their privacy before sharing the documents.",
+        "zh": "某位報紙專欄作家曾把戲院描述成只為富裕觀光客而建的地方。出席名單卻呈現不同的故事。Iris 想公開它，但名單中有些人可能還活著。她聯絡地方檔案員，詢問公開文件前如何保護當事人隱私。"
+      }
+    ],
+    "quiz": [
+      {
+        "q": "Who attended the hidden screening?",
+        "opts": [
+          "Workers unable to attend the regular show",
+          "Only foreign tourists",
+          "The cinema owners alone",
+          "A school choir"
+        ],
+        "a": 0,
+        "why": "清潔工與碼頭工人無法參加正常場次。"
+      },
+      {
+        "q": "Why did Ben help hide the records?",
+        "opts": [
+          "He feared losing work needed to support his family",
+          "He disliked all films",
+          "He wanted to sell the reels",
+          "He had forgotten the room"
+        ],
+        "a": 0,
+        "why": "Ben 擔心失業，因而配合封存紀錄。"
+      },
+      {
+        "q": "Why does Iris consult an archivist?",
+        "opts": [
+          "To protect people’s privacy before publication",
+          "To change the film ending",
+          "To repair the roof",
+          "To sell the ticket"
+        ],
+        "a": 0,
+        "why": "名單裡的人可能仍在世，公開前應考量隱私。"
+      }
+    ],
+    "words": [
+      "confine",
+      "columnist"
+    ]
+  },
+  {
+    "id": "lv5-063",
+    "series": "第十七部 · The Cinema at Low Tide｜退潮時的電影院",
+    "title": "A Room for Everyone",
+    "zh": "給所有人的一個房間",
+    "blurb": "老戲院仍會關閉，但隱藏的第二場放映讓城市決定留下真正值得保存的東西。",
+    "scene": "meeting",
+    "pages": [
+      {
+        "en": "The archivist arranged a small gathering for former staff. Some wanted their names displayed; others preferred an anonymous account. Iris respected both choices. An attorney helped the group agree on which material could be donated to the city archive, while Ben supplied a detailed description of the projection equipment and the old schedule.",
+        "zh": "檔案員為前員工安排小型聚會。有人願意展示姓名，也有人希望匿名。Iris 尊重兩種選擇。律師協助他們決定哪些資料可以捐給市立檔案館，Ben 則詳述放映設備與舊時刻表。"
+      },
+      {
+        "en": "The building could not be saved at a reasonable cost. Rather than making an impossible promise, the council allocated a room in the new community center for the reels, photographs, and oral histories. An activist asked for an elaborate opening ceremony. One former cleaner replied that a comfortable chair and a working projector would be a better tribute.",
+        "zh": "這棟建築無法用合理成本保存。議會沒有許下不可能的承諾，而是在新社區中心分配一間房，安置膠卷、照片與口述歷史。一位倡議者希望辦盛大的開幕典禮；一名前清潔工卻說，一張舒服的椅子和能運作的放映機才是更好的紀念。"
+      },
+      {
+        "en": "On the last evening, Iris screened the recovered film for a small audience. Ben sat by the exit, where he could leave if the memory became too painful. No one forced him to speak. At the end, Iris placed the old ticket in a glass case. The cinema closed the next morning, but the second screening finally had a place on the record.",
+        "zh": "最後一晚，Iris 向少數觀眾放映找回的影片。Ben 坐在出口旁，若回憶太痛苦就能離開；沒人強迫他發言。結束時，Iris 把舊票券放進玻璃展示櫃。電影院隔天關閉，但第二場放映終於正式留在紀錄裡。"
+      }
+    ],
+    "quiz": [
+      {
+        "q": "What happens to the cinema building?",
+        "opts": [
+          "It closes, while the records are preserved elsewhere",
+          "It becomes a luxury hotel",
+          "It is moved inland",
+          "It stays open without repairs"
+        ],
+        "a": 0,
+        "why": "建築關閉，史料移往社區中心保存。"
+      },
+      {
+        "q": "How does Iris treat the former workers’ names?",
+        "opts": [
+          "She respects each person’s preference",
+          "She prints every name without asking",
+          "She destroys the list",
+          "She lets only Ben decide"
+        ],
+        "a": 0,
+        "why": "有人願具名、有人希望匿名，Iris 尊重意願。"
+      },
+      {
+        "q": "What does the old ticket symbolize at the end?",
+        "opts": [
+          "An overlooked event finally remembered",
+          "A promise to reopen the cinema",
+          "A winning lottery number",
+          "An unpaid building bill"
+        ],
+        "a": 0,
+        "why": "票券代表一段被忽略的歷史終於得到記錄。"
+      }
+    ],
+    "words": [
+      "attorney",
+      "activist",
+      "elaborate",
+      "ceremony"
+    ]
+  },
+  {
+    "id": "lv5-064",
+    "series": "第十八部 · The Depth That Would Not Agree｜深度不一致的海",
+    "title": "Two Numbers, One Ocean",
+    "zh": "同一片海的兩個數字",
+    "blurb": "海底地形測量得到兩種深度；研究團隊若選錯一個，下一艘船可能會撞上看不見的礁石。",
+    "scene": "paper",
+    "pages": [
+      {
+        "en": "Oceanographer Nia received two surveys of the same coastal passage. One chart placed a submerged ridge twelve meters below the surface; the other showed a depth of only nine. The contradiction was too large to dismiss as ordinary noise. A cruise ship was due to use the passage in three days, and the harbor wanted an immediate answer.",
+        "zh": "海洋研究員 Nia 收到同一條海岸航道的兩份測量資料。一張海圖標示水下山脊深十二公尺，另一張卻只有九公尺。這個矛盾太大，不能當作一般雜訊。一艘郵輪三天後預計通過，港方要求立刻給答案。"
+      },
+      {
+        "en": "Her supervisor urged her to accelerate the review by selecting the newer data set. Nia disagreed. Newer did not necessarily mean more accurate. The vessel had used a different instrument, and its operator recorded a sudden change in current near the ridge. She requested raw measurements rather than the colored map alone.",
+        "zh": "主管催促她直接選較新的資料，加速審查。Nia 不同意：較新不一定較準。測量船使用不同儀器，操作員還記錄到山脊附近水流突然改變。她要求查看原始測量，而不是只看彩色地圖。"
+      },
+      {
+        "en": "The shipping agent complained that a delay could cost a substantial amount in fuel and docking fees. Nia acknowledged the expense and sent a short notice describing the uncertainty. She refused to invent a safe depth simply because the schedule needed one. At the bottom of her message she wrote, “Unknown is not the same as deep enough.”",
+        "zh": "航運代理抱怨，延誤可能造成可觀的燃料與靠港費用。Nia 承認成本，發出簡短通知，說明深度仍有不確定性。她拒絕只因時程需要，就捏造安全水深。訊息最後寫著：「未知，不等於深度足夠。」"
+      }
+    ],
+    "quiz": [
+      {
+        "q": "Why are the two surveys concerning?",
+        "opts": [
+          "They report different depths for the same ridge",
+          "Both are written in pencil",
+          "The cruise ship is missing",
+          "The harbor has no maps"
+        ],
+        "a": 0,
+        "why": "相同山脊卻出現十二與九公尺的不同水深。"
+      },
+      {
+        "q": "Why does Nia reject the newest survey as automatically correct?",
+        "opts": [
+          "Its equipment and conditions differ",
+          "She dislikes new devices",
+          "It has no colors",
+          "The ship is too large"
+        ],
+        "a": 0,
+        "why": "新資料使用的設備與環境條件不同，不能只按日期決定。"
+      },
+      {
+        "q": "What does Nia write in her notice?",
+        "opts": [
+          "The safe depth is still uncertain",
+          "The ship has already passed",
+          "There is no ridge",
+          "All surveys are useless"
+        ],
+        "a": 0,
+        "why": "她保留未知，沒有虛構安全水深。"
+      }
+    ],
+    "words": [
+      "contradiction",
+      "cruise",
+      "accelerate"
+    ]
+  },
+  {
+    "id": "lv5-065",
+    "series": "第十八部 · The Depth That Would Not Agree｜深度不一致的海",
+    "title": "The Hidden Offset",
+    "zh": "被藏起來的偏移量",
+    "blurb": "重新檢查原始資料後，Nia 發現真正的錯誤不是海底突然升高，而是兩支測量隊根本沒有用同一個基準。",
+    "scene": "paper",
+    "pages": [
+      {
+        "en": "Nia assembled a small team to examine the instruments, tide records, and the equation used in the processing software. A technician found that one crew had applied a tide correction twice. The mistake was not obvious in the final image because a smooth color gradient concealed the offset.",
+        "zh": "Nia 組成小隊，檢查儀器、潮位紀錄及處理軟體採用的方程式。技術員發現，其中一隊把潮位改正套用了兩次。最終圖像的平滑漸層掩蓋了偏移，所以錯誤並不明顯。"
+      },
+      {
+        "en": "The discovery did not make the passage safe. After correcting the calculation, the depth near one side of the ridge remained uncertain. Nia recommended a temporary restriction and a new survey of the narrowest section. A deputy at the port called the plan overly cautious, but she explained how the revised numbers had been derived.",
+        "zh": "這項發現並不代表航道安全。修正計算後，山脊一側的深度仍有不確定性。Nia 建議暫時限制通行，並重新測量最狹窄的區段。港務副主管覺得過度謹慎，但她解釋修正後數值如何推導而來。"
+      },
+      {
+        "en": "For the repeat survey, the crews agreed on a common reference and exchanged their raw files before producing separate results. Nia insisted that the discrepancy be recorded in the final report rather than quietly erased. “We need a chart that can be trusted,” she told the team, “not a chart that merely looks confident.”",
+        "zh": "重測時，兩隊同意採用共同基準，並在各自產生成果前交換原始檔案。Nia 堅持將差異記入最終報告，而不是悄悄刪除。她對團隊說：「我們需要值得信任的海圖，不是看起來很有自信的海圖。」"
+      }
+    ],
+    "quiz": [
+      {
+        "q": "What caused much of the disagreement?",
+        "opts": [
+          "A tide correction was applied twice",
+          "A fish covered the sensor",
+          "The ship had no engine",
+          "The coastline had moved overnight"
+        ],
+        "a": 0,
+        "why": "一份資料重複套用潮位改正。"
+      },
+      {
+        "q": "Why is a new survey still needed?",
+        "opts": [
+          "One section remains uncertain",
+          "All previous ships sank",
+          "No one knows how to draw maps",
+          "The cruise ship changed its name"
+        ],
+        "a": 0,
+        "why": "修正後仍有一側深度不確定。"
+      },
+      {
+        "q": "What does Nia want included in the final report?",
+        "opts": [
+          "The discrepancy and its explanation",
+          "Only the prettiest chart",
+          "A personal ranking of the crews",
+          "No original measurements"
+        ],
+        "a": 0,
+        "why": "她主張留下誤差與原因的紀錄。"
+      }
+    ],
+    "words": [
+      "equation",
+      "deputy",
+      "derive"
+    ]
+  },
+  {
+    "id": "lv5-066",
+    "series": "第十八部 · The Depth That Would Not Agree｜深度不一致的海",
+    "title": "A Passage with a Warning",
+    "zh": "帶著警告的航道",
+    "blurb": "郵輪終於出航；Nia 沒有得到英雄式的掌聲，卻替每一艘後來的船留下一個更可靠的答案。",
+    "scene": "meeting",
+    "pages": [
+      {
+        "en": "The new survey confirmed a shallow section near the ridge. The harbor authority issued a temporary route change and published the corrected measurements with an explicit warning. The cruise operator selected an alternate passage. It took longer, but no one had to guess whether the keel would clear the seabed.",
+        "zh": "新測量確認山脊附近有淺水區。港務單位發布臨時改道，公開修正數值並附上明確警告。郵輪業者選擇替代航道，雖然花更多時間，卻不需要猜船底是否能安全越過海床。"
+      },
+      {
+        "en": "At the review meeting, an administrator praised Nia for discovering the calculation error. She pointed to the technicians, the vessel crews, and the person who had preserved the original logs. Their combined expertise mattered more than any single clever decision. The updated procedure required independent checks whenever two surveys contradicted each other.",
+        "zh": "檢討會議上，管理人員稱讚 Nia 發現計算錯誤。她則指出技術員、測量船團隊，以及保存原始紀錄的人。眾人的專業合作，比任何一個聰明決策都重要。更新後的流程要求：兩次測量若互相矛盾，就必須進行獨立核對。"
+      },
+      {
+        "en": "Weeks later, Nia saw the revised chart on a bridge display. A small note marked the once-disputed ridge. The warning was hardly dramatic, and most people would never notice it. That was fine with her. Good information did not need to tell a thrilling story; it needed to help the next person arrive safely.",
+        "zh": "數週後，Nia 在船橋顯示器上看到修正海圖。一則小註記標出曾有爭議的山脊。警告一點也不戲劇化，多數人甚至不會注意；她並不介意。好的資訊不必說一個刺激的故事，它需要幫下一個人平安抵達。"
+      }
+    ],
+    "quiz": [
+      {
+        "q": "What does the cruise ship do?",
+        "opts": [
+          "Uses an alternate passage",
+          "Crosses the ridge without checking",
+          "Cancels all future voyages",
+          "Waits for a new cinema"
+        ],
+        "a": 0,
+        "why": "郵輪改走其他航道。"
+      },
+      {
+        "q": "Whom does Nia credit for the correction?",
+        "opts": [
+          "The entire team and preserved records",
+          "Only herself",
+          "Only the harbor director",
+          "The ticket seller"
+        ],
+        "a": 0,
+        "why": "她重視技術員、船隊與原始紀錄保存者的貢獻。"
+      },
+      {
+        "q": "What is the story’s main point?",
+        "opts": [
+          "Reliable information helps future travelers stay safe",
+          "Every new chart is perfect",
+          "Warnings must be dramatic",
+          "Fast schedules matter more than depth"
+        ],
+        "a": 0,
+        "why": "準確且透明的資料能幫助後來的航行者。"
+      }
+    ],
+    "words": [
+      "explicit",
+      "expertise",
+      "thrill"
+    ]
+  },
+  {
+    "id": "lv5-067",
+    "series": "第十九部 · The Memory Auction｜記憶拍賣會",
+    "title": "A Childhood for Sale",
+    "zh": "出售的童年",
+    "blurb": "一間科技公司聲稱能重建人們遺失的童年記憶；試用者 Iris 卻在展場看到一段不可能屬於自己的往事。",
+    "scene": "night",
+    "pages": [
+      {
+        "en": "The company promised a breakthrough in cognitive technology. Its new headset could turn fragments of memory into vivid scenes. Iris, a museum guide, came to the exhibition hoping to recall her grandmother’s voice. The assistant warned that perception was not proof, but the crowd was too enthusiastic to listen.",
+        "zh": "公司宣稱認知科技有了重大突破：新型頭戴裝置能把零碎記憶重建成鮮明畫面。博物館導覽員 Iris 來到展場，希望重新想起祖母的聲音。助理提醒大家，感知並不等於證據，但群眾太興奮，沒有仔細聽。"
+      },
+      {
+        "en": "After the demonstration, Iris saw herself in a bright kitchen, holding a small red umbrella. Yet her family had never owned that house. The scene felt genuine, which made the contradiction more dreadful. When she asked for an explanation, the presenter offered a complimentary second session instead of an answer.",
+        "zh": "示範結束後，Iris 看見自己站在明亮廚房裡，手上握著紅色小雨傘。但她的家人從未住過那間房子。畫面感覺真實，矛盾卻因此更加可怕。她要求解釋，主持人沒有回答，只提供免費的第二次體驗。"
+      },
+      {
+        "en": "A quiet technician gave her an unusual recommendation: “Write down what you knew before wearing the headset. Do not let the image become your only account.” Iris recorded the kitchen, the umbrella, and the warning. For the first time, she wondered who had supplied the missing details.",
+        "zh": "一名安靜的技術員給她一個不尋常的建議：「記下戴上裝置之前你確定知道的事，不要讓影像變成唯一版本。」Iris 記下廚房、雨傘與警告，第一次開始懷疑那些缺失細節究竟由誰提供。"
+      }
+    ],
+    "quiz": [
+      {
+        "q": "Why does Iris try the headset?",
+        "opts": [
+          "To remember her grandmother’s voice",
+          "To buy a kitchen",
+          "To test a new umbrella",
+          "To meet the company owner"
+        ],
+        "a": 0,
+        "why": "Iris 希望想起祖母的聲音。"
+      },
+      {
+        "q": "What makes the kitchen scene troubling?",
+        "opts": [
+          "It contradicts Iris’s family history",
+          "It has no windows",
+          "It is in the museum",
+          "It cannot be replayed"
+        ],
+        "a": 0,
+        "why": "她的家人從未住過那間屋子。"
+      },
+      {
+        "q": "What does the technician advise Iris to do?",
+        "opts": [
+          "Record what she knew before the session",
+          "Attend another session immediately",
+          "Trust the presenter",
+          "Delete her own notes"
+        ],
+        "a": 0,
+        "why": "技術員要她先記錄體驗前確知的事情。"
+      }
+    ],
+    "words": [
+      "cognitive",
+      "perception",
+      "enthusiastic",
+      "dreadful",
+      "recommendation"
+    ]
+  },
+  {
+    "id": "lv5-068",
+    "series": "第十九部 · The Memory Auction｜記憶拍賣會",
+    "title": "The Pattern in the Pictures",
+    "zh": "畫面中的規律",
+    "blurb": "Iris 發現一個陌生人的記憶裡也有同一把紅傘；這是巧合，還是系統正在偷換人們的過去？",
+    "scene": "paper",
+    "pages": [
+      {
+        "en": "Iris met three other participants online. Their memories were different, but the same red umbrella appeared in every account. One participant had grown up in another country, making a shared childhood unlikely. They compared details carefully, resisting the impulse to declare a conspiracy before checking the evidence.",
+        "zh": "Iris 在線上找到另外三名體驗者。每人的記憶都不同，但畫面裡都有同一把紅傘。其中一人從小在另一個國家長大，共同童年的可能性很低。他們仔細比對細節，克制還沒查證就認定陰謀的衝動。"
+      },
+      {
+        "en": "A former developer explained that the software relied on a statistical framework. When personal details were vague, it inserted familiar objects from a training collection. The umbrella belonged to a popular demonstration video. “The program does not necessarily deceive you on purpose,” she said, “but its output can still be misleading.”",
+        "zh": "一名前開發者解釋，軟體依賴統計架構。當個人細節模糊時，系統會從訓練資料中補入熟悉物件。紅傘來自一段熱門示範影片。「程式不一定故意欺騙你，」她說，「但輸出仍然可能誤導。」"
+      },
+      {
+        "en": "Iris now understood the bias in the system. It favored attractive scenes even when evidence was weak. The company had described the images as restored memories, not uncertain guesses. She decided to challenge that claim, but she wanted a fair review rather than an angry online campaign.",
+        "zh": "Iris 這才看出系統偏誤：即使證據薄弱，它仍偏向產出吸引人的畫面。公司把影像描述成「還原的記憶」，卻沒有說明它可能只是猜測。她決定挑戰這項說法，但想要公平審查，而不是憤怒的網路攻擊。"
+      }
+    ],
+    "quiz": [
+      {
+        "q": "What connects the participants’ memories?",
+        "opts": [
+          "The same red umbrella",
+          "A shared address",
+          "The same grandmother",
+          "A ticket number"
+        ],
+        "a": 0,
+        "why": "不同人的畫面都出現紅傘。"
+      },
+      {
+        "q": "Where did the umbrella come from?",
+        "opts": [
+          "A demonstration video in the training collection",
+          "Iris’s family album",
+          "A museum gift shop",
+          "A forgotten newspaper"
+        ],
+        "a": 0,
+        "why": "雨傘出自訓練資料裡的示範影片。"
+      },
+      {
+        "q": "What is Iris concerned about?",
+        "opts": [
+          "Uncertain guesses are presented as restored memories",
+          "The headset is too heavy",
+          "The website uses bright colors",
+          "The exhibition closes too early"
+        ],
+        "a": 0,
+        "why": "公司沒有明確區分推測與真正還原的記憶。"
+      }
+    ],
+    "words": [
+      "impulse",
+      "statistical",
+      "framework",
+      "vague",
+      "deceive",
+      "bias"
+    ]
+  },
+  {
+    "id": "lv5-069",
+    "series": "第十九部 · The Memory Auction｜記憶拍賣會",
+    "title": "The Terms Nobody Read",
+    "zh": "沒人讀完的條款",
+    "blurb": "公司的答覆把問題推給使用條款，Iris 卻在同意書裡發現更值得追查的細節。",
+    "scene": "meeting",
+    "pages": [
+      {
+        "en": "The company’s representative asserted that every customer had accepted the terms. A paragraph allowed the company to retain session images for research. Iris had agreed to basic testing, but she had not understood that her private stories might enter future demonstrations. The legal language was technically precise and practically incomprehensible.",
+        "zh": "公司代表堅稱所有客戶都接受了條款。其中一段允許公司保留體驗影像供研究使用。Iris 同意的是基本測試，卻沒理解私人故事可能變成日後的示範素材。法律用語在技術上精確，實際上卻難以理解。"
+      },
+      {
+        "en": "A nonprofit counselor helped the participants prepare a collective request. They asked which data had been retained, who could access it, and whether a person could withdraw permission. The group included a young adult, an elderly teacher, and an adolescent whose parent had signed the form. Their circumstances were not identical.",
+        "zh": "一位非營利組織的諮詢員協助體驗者提出聯合請求。他們詢問保留了哪些資料、誰能存取，以及使用者能否撤回授權。團體裡有年輕成年人、年長教師，也有家長代簽表單的青少年；各人的情況並不相同。"
+      },
+      {
+        "en": "The counselor reminded Iris that privacy and innovation need not be enemies. A useful tool still needs clear limits. Iris wrote a statement that did not demand the technology be abolished. It demanded a truthful description of what the device could—and could not—remember.",
+        "zh": "諮詢員提醒 Iris，隱私與創新不必互為敵人。即使工具有用，也需要清楚界線。Iris 的聲明並未要求廢除技術，而是要求公司誠實說明裝置能記得什麼、不能記得什麼。"
+      }
+    ],
+    "quiz": [
+      {
+        "q": "What does the disputed paragraph allow?",
+        "opts": [
+          "Retention of session images for research",
+          "Free tickets for everyone",
+          "Sale of the museum",
+          "Automatic deletion of every record"
+        ],
+        "a": 0,
+        "why": "爭議條款允許公司保留影像供研究使用。"
+      },
+      {
+        "q": "What do participants ask the company to clarify?",
+        "opts": [
+          "Data access, retention and withdrawal",
+          "The color of the headset",
+          "The building’s opening hours",
+          "The price of umbrellas"
+        ],
+        "a": 0,
+        "why": "他們要求說明資料保留、存取與撤回授權。"
+      },
+      {
+        "q": "What does Iris actually demand?",
+        "opts": [
+          "An accurate explanation and clear limits",
+          "A ban on every new technology",
+          "A second free demonstration",
+          "A new childhood memory"
+        ],
+        "a": 0,
+        "why": "她要求誠實描述技術能力與限制。"
+      }
+    ],
+    "words": [
+      "assert",
+      "nonprofit",
+      "counselor",
+      "collective",
+      "innovation"
+    ]
+  },
+  {
+    "id": "lv5-070",
+    "series": "第十九部 · The Memory Auction｜記憶拍賣會",
+    "title": "A Memory That Belonged to No One",
+    "zh": "不屬於任何人的記憶",
+    "blurb": "展場最後一次公開展示時，Iris 帶來一把真的紅傘，讓觀眾看見記憶和故事之間的差別。",
+    "scene": "meeting",
+    "pages": [
+      {
+        "en": "At the public hearing, the company conceded that several scenes were generated from common training examples. Its revised interface would label inferred details and offer a clear removal option. An independent team would evaluate whether the new safeguards worked. Iris welcomed the commitment but asked for published results, not another confident advertisement.",
+        "zh": "在公開說明會上，公司承認部分畫面來自常見訓練範例。新版介面將標示推測細節，並提供清楚的資料移除選項。獨立團隊會評估新保護措施是否有效。Iris 接受承諾，但要求公開結果，而不是再聽一次自信的廣告。"
+      },
+      {
+        "en": "She placed a real red umbrella beside the headset. “You could all recognize this object,” she told the room, “but recognition is not the same as remembering.” The demonstration was simple, almost awkward. It made the difference between a plausible image and a personal memory visible.",
+        "zh": "她把一把真正的紅傘放在頭戴裝置旁。「大家都認得這個東西，」她對會場說，「但認得，不等於記得。」示範很簡單，甚至有些笨拙，卻讓看似合理的影像與個人記憶之間的差別變得清楚。"
+      },
+      {
+        "en": "Later, Iris listened to an old recording of her grandmother. The sound was uneven and full of background noise. It could not provide a perfect scene, yet it belonged to their family. Iris kept it without asking the headset to complete what time had left unfinished.",
+        "zh": "後來，Iris 聽了一段祖母的舊錄音。聲音忽大忽小，背景充滿雜音，無法提供完美畫面，卻是真正屬於家人的東西。Iris 收好錄音，不再要求裝置補完時間留下的空白。"
+      }
+    ],
+    "quiz": [
+      {
+        "q": "What change does the company promise?",
+        "opts": [
+          "Labels for inferred details and a removal option",
+          "A headset with a red umbrella",
+          "A free museum ticket",
+          "A ban on recordings"
+        ],
+        "a": 0,
+        "why": "公司承諾標示推測內容，並提供移除功能。"
+      },
+      {
+        "q": "What does the umbrella demonstration show?",
+        "opts": [
+          "Recognition differs from personal memory",
+          "Every participant owns an umbrella",
+          "Old recordings are always false",
+          "The device is waterproof"
+        ],
+        "a": 0,
+        "why": "認得物件不等於真的記得自己的過去。"
+      },
+      {
+        "q": "What does Iris keep at the end?",
+        "opts": [
+          "An imperfect family recording",
+          "A perfect reconstructed kitchen",
+          "The company’s projector",
+          "The exhibition contract"
+        ],
+        "a": 0,
+        "why": "她保留祖母不完美但真實的聲音。"
+      }
+    ],
+    "words": [
+      "concede",
+      "removal",
+      "commitment"
+    ]
+  },
+  {
+    "id": "lv5-071",
+    "series": "第二十部 · The Empty Courtroom｜沒有證人的法庭",
+    "title": "The Signature on the Receipt",
+    "zh": "收據上的簽名",
+    "blurb": "一張收據能證明一個人偷了畫嗎？實習律師發現真正重要的是沒出現在影像裡的那十分鐘。",
+    "scene": "paper",
+    "pages": [
+      {
+        "en": "A gallery accused a courier of theft after a rare painting disappeared. The defendant, Leo, had signed a delivery receipt, and a security camera showed him entering the storage room. The prosecution treated the sequence as obvious proof. Law student Anya, assisting the defense, noticed that the camera stopped recording before Leo left.",
+        "zh": "一間畫廊在珍稀畫作失蹤後指控送貨員偷竊。被告 Leo 簽過送貨收據，監視器也拍到他進入儲藏室。檢方把這一連串紀錄視為明顯證據。協助辯護的法學生 Anya 卻注意到，攝影機在 Leo 離開前就停止錄影。"
+      },
+      {
+        "en": "The jury would eventually decide the case, but Anya needed to identify what the evidence actually showed. The receipt confirmed delivery, not the contents of the locked cabinet. A witness said Leo had looked nervous; Anya knew that nervousness could have many explanations. She wrote a careful account instead of calling either side a liar.",
+        "zh": "案件最後將由陪審團裁決，但 Anya 必須先釐清證據真正證明什麼。收據只能確認送達，不能證明上鎖櫃子裡的內容。一名證人說 Leo 看起來緊張；Anya 知道緊張有很多原因。她謹慎整理事實，沒有隨意指責任何一方說謊。"
+      },
+      {
+        "en": "Anya found a second receipt for a repair crew that arrived during the missing ten minutes. The gallery had filed it under an unrelated transaction. She asked the court for the complete visitor log. A small piece of paper had opened a much larger question.",
+        "zh": "Anya 找到第二張收據：維修人員剛好在失去影像的十分鐘內到場。畫廊把收據歸到另一筆交易裡。她向法庭要求完整的訪客紀錄。一小張紙，揭開了更大的疑問。"
+      }
+    ],
+    "quiz": [
+      {
+        "q": "What does the first receipt establish?",
+        "opts": [
+          "Delivery, not what was in the cabinet",
+          "That Leo owned the painting",
+          "The repair crew’s guilt",
+          "The painting’s value"
+        ],
+        "a": 0,
+        "why": "收據證明送達，不能證明櫃內內容。"
+      },
+      {
+        "q": "What is missing from the camera footage?",
+        "opts": [
+          "Ten minutes before Leo left",
+          "The entire morning",
+          "The gallery entrance",
+          "The painting’s frame"
+        ],
+        "a": 0,
+        "why": "Leo 離開前的十分鐘沒有錄到。"
+      },
+      {
+        "q": "Why does Anya request the visitor log?",
+        "opts": [
+          "A repair crew arrived in the missing period",
+          "She wants to find a restaurant",
+          "Leo lost his phone",
+          "The jury asks for a map"
+        ],
+        "a": 0,
+        "why": "第二張收據顯示維修人員在錄影中斷時抵達。"
+      }
+    ],
+    "words": [
+      "theft",
+      "defendant",
+      "prosecution",
+      "sequence",
+      "jury",
+      "transaction"
+    ]
+  },
+  {
+    "id": "lv5-072",
+    "series": "第二十部 · The Empty Courtroom｜沒有證人的法庭",
+    "title": "The Witness Who Said Nothing",
+    "zh": "沉默的證人",
+    "blurb": "Anya 終於找到維修工人，卻發現讓他不願作證的不是罪惡感，而是另一種風險。",
+    "scene": "night",
+    "pages": [
+      {
+        "en": "The repair worker, Sami, initially refused to testify. He faced a dilemma: speak up and risk his residency application, or stay silent while Leo remained accused. A gallery manager had implied that speaking publicly could hurt his case. Anya could not promise an outcome, but a qualified attorney could help Sami understand his options.",
+        "zh": "維修工人 Sami 起初拒絕作證。他面臨兩難：開口可能危及居留申請；保持沉默則讓 Leo 繼續受到指控。畫廊經理暗示公開發言可能影響他的案件。Anya 不能保證結果，但合格律師可以幫 Sami 了解選項。"
+      },
+      {
+        "en": "When Sami finally spoke, he described a broken lock and a hurried supervisor carrying a long package. He had not seen the painting itself. Anya resisted the temptation to turn his limited observation into a dramatic confession. The distinction mattered because the court was evaluating a person, not a thrilling story.",
+        "zh": "Sami 終於開口，描述損壞的門鎖，以及一名主管匆忙搬走長型包裹的情景。他沒有親眼看到畫作。Anya 克制把有限目擊說成戲劇性坦白的誘惑，因為法庭評估的是人的責任，不是刺激故事。"
+      },
+      {
+        "en": "The gallery’s owner dismissed Sami as unreliable. Anya asked the judge to separate prejudice from evidence and consider the camera log, the repair invoice, and Sami’s account together. No single detail was decisive; the pattern challenged the earlier assumption that Leo had been alone.",
+        "zh": "畫廊主人認為 Sami 不可信。Anya 請法官把偏見與證據分開，並一併考量監視紀錄、維修發票與 Sami 的說法。沒有任何單一細節足以定案，但整體情況動搖了原先認定 Leo 獨自在場的假設。"
+      }
+    ],
+    "quiz": [
+      {
+        "q": "Why was Sami afraid to testify?",
+        "opts": [
+          "He feared consequences for his residency application",
+          "He had forgotten the gallery address",
+          "He disliked paintings",
+          "He wanted a reward"
+        ],
+        "a": 0,
+        "why": "他擔心居留申請受到影響。"
+      },
+      {
+        "q": "What did Sami actually see?",
+        "opts": [
+          "A supervisor carrying a long package",
+          "Leo painting a picture",
+          "A judge in the gallery",
+          "The painting being destroyed"
+        ],
+        "a": 0,
+        "why": "他只看見主管搬走長型包裹，沒看到畫本身。"
+      },
+      {
+        "q": "Why does Anya combine several records?",
+        "opts": [
+          "Together they challenge the assumption Leo was alone",
+          "To make the trial longer",
+          "To avoid talking to Sami",
+          "To change the painting’s price"
+        ],
+        "a": 0,
+        "why": "多份紀錄相互印證，顯示當時還有其他人。"
+      }
+    ],
+    "words": [
+      "testify",
+      "dilemma",
+      "prejudice"
+    ]
+  },
+  {
+    "id": "lv5-073",
+    "series": "第二十部 · The Empty Courtroom｜沒有證人的法庭",
+    "title": "A Verdict with a Gap",
+    "zh": "帶著空白的判決",
+    "blurb": "畫作找到了，但 Anya 最後學到的不是如何贏得辯論，而是如何承認自己仍然不知道的事。",
+    "scene": "meeting",
+    "pages": [
+      {
+        "en": "The missing painting was recovered from an off-site storage unit rented by the gallery manager. The manager claimed he had moved it to prevent damage, but he had never updated the official inventory. An investigator found messages instructing staff to alter the date on a transfer form.",
+        "zh": "失蹤的畫作在畫廊經理租用的外部儲藏室被找到。經理聲稱自己是為了防止損壞才搬走畫，但從未更新正式庫存。調查員找到要求員工修改移轉表日期的訊息。"
+      },
+      {
+        "en": "The prosecution withdrew the charge against Leo. The judge explained that a mistaken accusation could not be repaired merely by finding the artwork. Leo had lost work and endured weeks of suspicion. Anya helped him contact a counselor and obtain the documents needed to correct his employment record.",
+        "zh": "檢方撤回對 Leo 的指控。法官指出，即使找到畫作，也不代表錯誤指控就自動修復。Leo 失去工作，也承受數週懷疑。Anya 協助他聯絡諮詢人員，取得更正工作紀錄所需文件。"
+      },
+      {
+        "en": "In her final report, Anya left one question open: why had the gallery manager hidden the painting? The evidence did not establish his motive. Her mentor praised the restraint. “A complete report,” he said, “does not pretend every empty space has been filled.”",
+        "zh": "Anya 在最後報告裡留下一個未解問題：經理為何藏起畫作？現有證據無法確定動機。導師肯定她的克制：「完整的報告，不是裝作每個空白都填好了。」"
+      }
+    ],
+    "quiz": [
+      {
+        "q": "Where is the painting found?",
+        "opts": [
+          "In storage rented by the gallery manager",
+          "At Leo’s home",
+          "In the courthouse",
+          "Under the delivery truck"
+        ],
+        "a": 0,
+        "why": "畫作在經理租用的儲藏室找到。"
+      },
+      {
+        "q": "What happens to the accusation against Leo?",
+        "opts": [
+          "It is withdrawn",
+          "It becomes more serious",
+          "It is transferred to Sami",
+          "It is delayed forever"
+        ],
+        "a": 0,
+        "why": "檢方撤回對 Leo 的指控。"
+      },
+      {
+        "q": "What does Anya leave unresolved?",
+        "opts": [
+          "The manager’s motive",
+          "The painting’s location",
+          "Whether Leo signed the receipt",
+          "The identity of her mentor"
+        ],
+        "a": 0,
+        "why": "證據不能確定經理藏畫的動機。"
+      }
+    ],
+    "words": [
+      "investigator",
+      "motive",
+      "mentor"
+    ]
+  },
+  {
+    "id": "lv5-074",
+    "series": "第二十一部 · The Garden on the Volcano｜火山上的花園",
+    "title": "Flowers in the Ash",
+    "zh": "灰燼裡的花",
+    "blurb": "一座火山島突然長出異常鮮豔的花；遊客以為是奇景，研究員卻在土壤裡測出危險訊號。",
+    "scene": "forest",
+    "pages": [
+      {
+        "en": "After the volcano had been quiet for decades, a band of gorgeous flowers appeared near its crater. Tourists called the valley a miracle. Botanist Ren noticed something else: the flowers grew in a perfect circle around a vent where warm gas escaped. He collected a sample and asked visitors to stay behind the safety barrier.",
+        "zh": "火山沉寂數十年後，火山口附近出現一圈美麗的花。遊客把山谷稱為奇蹟。植物學家 Ren 卻注意到，花朵沿著溫暖氣體逸出的噴氣孔形成完美圓圈。他採集樣本，並請遊客留在安全界線外。"
+      },
+      {
+        "en": "A local vendor insisted that the ground had always been warm. Ren did not disapprove of the man’s memory; he wanted measurements across a longer interval. The island’s monitoring instrument had failed after a storm, leaving a gap in the temperature record. Another pleasant-looking mystery had an uncertain explanation.",
+        "zh": "一名當地攤販堅稱地面一直都很溫暖。Ren 沒有否定他的記憶，但希望取得更長時間的測量。島上的監測儀器在暴風雨後故障，溫度紀錄留下空白。眼前看似美好的謎團仍沒有可靠解釋。"
+      },
+      {
+        "en": "That evening, a mild smell spread through the village. Several residents complained of headaches. Ren contacted the health office rather than issuing a dramatic warning online. He knew that a useful alert needed clear evidence, a practical action, and a way for people to ask questions.",
+        "zh": "當晚，一股淡淡氣味飄進村子，幾位居民抱怨頭痛。Ren 聯絡衛生單位，而不是在網路上發布聳動警告。他知道有用的警報需要清楚證據、可採取的行動，也要讓居民知道去哪裡詢問。"
+      }
+    ],
+    "quiz": [
+      {
+        "q": "What concerns Ren about the flowers?",
+        "opts": [
+          "Their circular growth near a gas vent",
+          "Their price at the market",
+          "Their lack of color",
+          "Their position in a greenhouse"
+        ],
+        "a": 0,
+        "why": "花在噴氣孔周圍形成圓圈。"
+      },
+      {
+        "q": "Why is the temperature history incomplete?",
+        "opts": [
+          "A monitoring instrument failed after a storm",
+          "The vendor stole it",
+          "No one has ever visited the island",
+          "The crater moved overnight"
+        ],
+        "a": 0,
+        "why": "暴風雨後監測儀器故障。"
+      },
+      {
+        "q": "What does Ren do when residents report headaches?",
+        "opts": [
+          "Contact the health office",
+          "Ask tourists to take photos",
+          "Ignore the reports",
+          "Close every shop himself"
+        ],
+        "a": 0,
+        "why": "他聯絡衛生單位尋求查證與協助。"
+      }
+    ],
+    "words": [
+      "volcano",
+      "gorgeous",
+      "vendor",
+      "disapprove",
+      "interval"
+    ]
+  },
+  {
+    "id": "lv5-075",
+    "series": "第二十一部 · The Garden on the Volcano｜火山上的花園",
+    "title": "The Map Beneath the Soil",
+    "zh": "土壤下的地圖",
+    "blurb": "村子該不該撤離？一張舊火山圖與新測量資料不一致，而居民最怕的是被迫離開後再也回不了家。",
+    "scene": "paper",
+    "pages": [
+      {
+        "en": "The regional institute sent a team to measure gas emissions and ground movement. Their preliminary findings showed an increase in activity, but not an inevitable eruption. Ren asked the team to explain the distinction in plain language. “Uncertain” was neither the same as “safe” nor the same as “disaster tomorrow.”",
+        "zh": "區域研究機構派團隊測量氣體排放與地表移動。初步發現顯示活動增加，但並非一定會噴發。Ren 請團隊用白話說清楚差別：「不確定」既不等於「安全」，也不等於「明天就有災難」。"
+      },
+      {
+        "en": "The mayor proposed an evacuation plan. Some residents feared a permanent removal, while others argued that waiting would expose children to unnecessary risk. A council meeting became hostile until Ren showed a map with two zones: one closed immediately, the other monitored while families prepared essential belongings.",
+        "zh": "鎮長提出撤離計畫。部分居民擔心一離開就永遠回不來；其他人認為等待會讓孩子承受不必要的風險。議會會議越來越激烈，直到 Ren 展示分區地圖：一區立即封閉，另一區持續監測，居民先準備必要物品。"
+      },
+      {
+        "en": "A teacher asked whether the plan would accommodate older residents without cars. The mayor admitted that it would not. They added a shuttle service and a list of people needing assistance. The map had helped them see the danger; the conversation helped them see the people.",
+        "zh": "一名教師詢問計畫是否照顧沒有車的長者。鎮長承認還沒有安排。大家便增設接駁服務，列出需要協助的人。地圖讓他們看見危險；對話則讓他們看見人的需要。"
+      }
+    ],
+    "quiz": [
+      {
+        "q": "What does the preliminary report say?",
+        "opts": [
+          "Activity increased, but eruption is not certain",
+          "The volcano has disappeared",
+          "Every flower is poisonous",
+          "The island must close forever"
+        ],
+        "a": 0,
+        "why": "活動增加，但不能直接斷言一定噴發。"
+      },
+      {
+        "q": "What changes after Ren shows the map?",
+        "opts": [
+          "The village uses two different safety zones",
+          "Everyone leaves permanently",
+          "The council cancels monitoring",
+          "Only tourists receive warnings"
+        ],
+        "a": 0,
+        "why": "依風險分區，採取不同措施。"
+      },
+      {
+        "q": "What omission does the teacher identify?",
+        "opts": [
+          "Transport for older residents without cars",
+          "A new flower shop",
+          "Extra museum tickets",
+          "The price of umbrellas"
+        ],
+        "a": 0,
+        "why": "原方案忽略無車長者的交通。"
+      }
+    ],
+    "words": [
+      "institute",
+      "emission",
+      "preliminary",
+      "inevitable",
+      "hostile"
+    ]
+  },
+  {
+    "id": "lv5-076",
+    "series": "第二十一部 · The Garden on the Volcano｜火山上的花園",
+    "title": "The Morning the Mountain Spoke",
+    "zh": "山說話的清晨",
+    "blurb": "地震真的發生了；Ren 無法控制火山，卻必須決定要怎麼讓撤離的人知道何時能安全返回。",
+    "scene": "forest",
+    "pages": [
+      {
+        "en": "Before sunrise, a sharp tremor shook the village. Loose tiles fell from a roof, and the road near the crater cracked. The emergency team activated the evacuation plan. Ren felt his pulse accelerate, but he followed the agreed sequence: report the change, confirm the road conditions, and keep the message short.",
+        "zh": "日出前，一次強烈震動搖動村莊。屋頂瓦片掉落，火山口附近的道路出現裂痕。緊急應變團隊啟動撤離計畫。Ren 感覺心跳加快，仍依照約定順序：報告變化、確認道路情況、讓訊息簡短清楚。"
+      },
+      {
+        "en": "A small eruption sent ash into the air. Most residents reached shelters safely, though several needed medical attention. The flowers near the vent were buried. The island did not become a cinematic wasteland; it became a place where families waited for ordinary news about roads, water, and their homes.",
+        "zh": "一場小規模噴發把火山灰送上天空。多數居民安全抵達避難所，少數需要醫療照護。噴氣孔附近的花被掩埋。島沒有變成電影般的荒原，而是家家戶戶等待道路、用水與住家消息的地方。"
+      },
+      {
+        "en": "Weeks later, the institute published clear thresholds for returning to different areas. The village revised its plan with residents rather than speaking on their behalf. Ren kept one dried flower in his notebook, not as a trophy of prediction, but as a reminder that beauty and risk can share the same ground.",
+        "zh": "幾週後，研究機構公布不同區域恢復進入的明確門檻。村莊與居民共同修訂計畫，而不是替他們單方面決定。Ren 在筆記本裡留下一朵乾花，不是預測成功的戰利品，而是提醒自己美麗與風險可以存在同一片土地。"
+      }
+    ],
+    "quiz": [
+      {
+        "q": "What triggers the evacuation?",
+        "opts": [
+          "A tremor and new damage near the crater",
+          "A tourist taking photos",
+          "The flower market opening",
+          "A shortage of maps"
+        ],
+        "a": 0,
+        "why": "清晨震動與新出現的道路損壞觸發撤離。"
+      },
+      {
+        "q": "What happened to the flowers?",
+        "opts": [
+          "They were buried by ash",
+          "They were sold abroad",
+          "They became blue",
+          "They were moved to the museum"
+        ],
+        "a": 0,
+        "why": "花被火山灰掩埋。"
+      },
+      {
+        "q": "How is return to the island handled?",
+        "opts": [
+          "With published area-specific thresholds",
+          "With one unknown date for everyone",
+          "By Ren alone",
+          "Without checking roads or water"
+        ],
+        "a": 0,
+        "why": "按不同區域與明確門檻安排返回。"
+      }
+    ],
+    "words": [
+      "tile",
+      "pulse",
+      "threshold",
+      "reminder"
+    ]
+  },
+  {
+    "id": "lv5-077",
+    "series": "第二十二部 · The Unpriced Menu｜沒有標價的菜單",
+    "title": "A Table for Two Strangers",
+    "zh": "兩個陌生人的桌子",
+    "blurb": "一間面臨歇業的小餐館推出沒有價格的菜單；第一晚來的兩名客人，卻認識同一位早已不在的廚師。",
+    "scene": "meeting",
+    "pages": [
+      {
+        "en": "A young entrepreneur named Noa inherited a tiny restaurant and a substantial debt. Her uncle had promised that the place would thrive if she raised prices. Noa found his figures optimistic. She could not repay the loan by wishing customers into the dining room, so she designed a trial menu and recorded every expense.",
+        "zh": "年輕創業者 Noa 繼承了一間小餐館，也背負可觀債務。叔叔保證只要漲價就能興盛，Noa 卻認為他的數字太樂觀。光希望客人上門還不了貸款，於是她設計試行菜單，逐筆記下成本。"
+      },
+      {
+        "en": "On opening night, two strangers requested the same dish: a spicy stew absent from the current menu. Each carried a handwritten note from Noa’s late aunt, who had run the kitchen years earlier. One note described a family celebration; the other mentioned a night when the restaurant quietly fed people who could not pay.",
+        "zh": "開幕夜，兩名陌生客人都點了菜單上沒有的辣燉菜。兩人各帶一張 Noa 已故姑姑的手寫紙條；姑姑多年以前掌廚。一張紙條記錄家庭慶祝，另一張則提到餐館曾悄悄供餐給付不起錢的人。"
+      },
+      {
+        "en": "Noa had wanted a clever marketing scheme. Now she faced a different question: how could the restaurant honor its history without hiding costs from the staff who worked there? She invited both guests to return after closing, when the kitchen would be quiet enough for their stories.",
+        "zh": "Noa 原本想找聰明的行銷辦法，現在卻面對不同問題：餐館如何延續歷史，又不隱瞞員工勞動的成本？她邀請兩位客人在打烊後回來，等廚房安靜下來再聽他們說故事。"
+      }
+    ],
+    "quiz": [
+      {
+        "q": "What financial problem does Noa face?",
+        "opts": [
+          "A restaurant debt",
+          "An unpaid travel visa",
+          "A missing painting",
+          "A broken telescope"
+        ],
+        "a": 0,
+        "why": "Noa 繼承餐館，也背負債務。"
+      },
+      {
+        "q": "What connects the two guests?",
+        "opts": [
+          "Notes from the late cook and a forgotten dish",
+          "They are siblings",
+          "They own the restaurant",
+          "They ordered the cheapest soup"
+        ],
+        "a": 0,
+        "why": "兩人都帶來姑姑的紙條並點同一道菜。"
+      },
+      {
+        "q": "Why does Noa invite them after closing?",
+        "opts": [
+          "To hear their stories in a quiet kitchen",
+          "To ask them to wash dishes",
+          "To sell the building",
+          "To announce a new tax"
+        ],
+        "a": 0,
+        "why": "她想在安靜的廚房聽兩人的故事。"
+      }
+    ],
+    "words": [
+      "entrepreneur",
+      "thrive",
+      "repay",
+      "spicy",
+      "scheme"
+    ]
+  },
+  {
+    "id": "lv5-078",
+    "series": "第二十二部 · The Unpriced Menu｜沒有標價的菜單",
+    "title": "The Cost of Kindness",
+    "zh": "善意的成本",
+    "blurb": "Noa 發現姑姑的無價菜單其實不是「隨便付」，而是一個必須讓員工與客人都受到尊重的承諾。",
+    "scene": "paper",
+    "pages": [
+      {
+        "en": "The guests explained that Noa’s aunt had kept a separate ledger. Patrons with ample means could sponsor a meal, while customers facing unemployment paid only what they could. The restaurant never required anyone to explain personal hardship in public. The old system relied on trust, but it also needed transparent accounting.",
+        "zh": "客人說，Noa 的姑姑保留一本獨立帳冊。手頭寬裕的顧客可以贊助一餐，失業的人則量力支付。餐館從不要求任何人公開說明困境。舊制度依靠信任，也需要透明帳務。"
+      },
+      {
+        "en": "Noa tested the idea with her staff. One cook feared that a generous promise would become a burden on employees. A server suggested setting a daily quota for sponsored meals and posting the remaining number without identifying recipients. Their proposal protected dignity while keeping the business viable.",
+        "zh": "Noa 和員工討論。一位廚師擔心慷慨承諾最後變成員工負擔；一名服務生建議每天設定受贊助餐點的額度，只公布剩餘名額，不公布領餐者姓名。他們的方案兼顧尊嚴與經營可行性。"
+      },
+      {
+        "en": "The team also discovered an unexpected allergy risk in the old stew. Noa replaced one ingredient and listed the change clearly. Remembering the past did not mean repeating every old practice. Some traditions deserved to evolve so that more people could safely sit at the same table.",
+        "zh": "團隊還發現舊燉菜可能引發意料之外的過敏。Noa 換掉一項食材，明確標示更動。記住過去，不代表重複所有舊做法。有些傳統值得演變，才能讓更多人安全地同桌吃飯。"
+      }
+    ],
+    "quiz": [
+      {
+        "q": "How did the old meal system work?",
+        "opts": [
+          "Some patrons sponsored meals for others",
+          "Every meal was always free",
+          "Staff paid for everything",
+          "Only the owner could eat"
+        ],
+        "a": 0,
+        "why": "有能力的客人贊助其他人的餐點。"
+      },
+      {
+        "q": "Why does the team set a daily quota?",
+        "opts": [
+          "To protect both dignity and business sustainability",
+          "To avoid serving children",
+          "To increase the soup’s spice",
+          "To remove all accounting"
+        ],
+        "a": 0,
+        "why": "每日額度讓善意與營運都可持續。"
+      },
+      {
+        "q": "Why is the old stew changed?",
+        "opts": [
+          "To address an allergy risk",
+          "To make it more expensive",
+          "Because no one likes soup",
+          "Because the notes are missing"
+        ],
+        "a": 0,
+        "why": "舊配方存在過敏風險。"
+      }
+    ],
+    "words": [
+      "patron",
+      "ample",
+      "unemployment",
+      "setting",
+      "quota",
+      "recipient",
+      "viable",
+      "allergy",
+      "evolve"
+    ]
+  },
+  {
+    "id": "lv5-079",
+    "series": "第二十二部 · The Unpriced Menu｜沒有標價的菜單",
+    "title": "The Price Was Never Missing",
+    "zh": "價格從未消失",
+    "blurb": "餐館重新開門；Noa 終於理解，菜單上沒寫價格，不代表有人不必付出。",
+    "scene": "meeting",
+    "pages": [
+      {
+        "en": "The restaurant reopened with two menus: ordinary dishes had clear prices, while a limited number of sponsored meals were available each day. A small sign explained how patrons could contribute. Noa made sure customers did not have to stand in a separate line to receive help.",
+        "zh": "餐館重新開業，提供兩份菜單：一般餐點清楚標價，每天另有有限的贊助餐點。一塊小牌子說明客人如何捐助。Noa 確保需要幫助的人不必排另一條隊伍。"
+      },
+      {
+        "en": "The first month was difficult. Revenue varied, and Noa sometimes wanted to abandon the experiment. Her mentor reviewed wages, rent, wasted ingredients, and the small surplus on good days. They adjusted the quota rather than expecting workers to absorb losses. Compassion alone was not a substitute for a sustainable plan.",
+        "zh": "第一個月很辛苦。收入波動，Noa 有時想放棄。導師與她檢查薪資、租金、浪費食材，以及生意好時僅有的一點盈餘。他們調整贊助額度，而不是讓員工吞下損失。光靠同情心不能取代可持續的計畫。"
+      },
+      {
+        "en": "One night, the two strangers returned and ordered the stew. Noa handed them an ordinary bill rather than making a show of their generosity. They paid, then added enough to sponsor two more meals. The menu had never claimed food had no cost; it had offered an incentive to share that cost without judging who needed help.",
+        "zh": "某晚，兩名陌生客人回來點了燉菜。Noa 遞上一般帳單，沒有刻意公開展示他們的慷慨。兩人付錢，還加上足夠贊助另外兩餐的金額。菜單從未說食物沒有成本，而是提供一種分享成本的誘因，不去評判誰需要幫助。"
+      }
+    ],
+    "quiz": [
+      {
+        "q": "What does the restaurant offer after reopening?",
+        "opts": [
+          "Regular priced food and limited sponsored meals",
+          "Only completely free food",
+          "Food without allergen labels",
+          "Meals only for staff"
+        ],
+        "a": 0,
+        "why": "重新開業後，同時供應一般與限量贊助餐點。"
+      },
+      {
+        "q": "How does Noa handle financial losses?",
+        "opts": [
+          "Adjust the quota after reviewing costs",
+          "Stop paying workers",
+          "Pretend costs do not exist",
+          "Ask guests to work for free"
+        ],
+        "a": 0,
+        "why": "她檢查成本後調整額度。"
+      },
+      {
+        "q": "What do the two guests do at the end?",
+        "opts": [
+          "Pay and sponsor two additional meals",
+          "Demand free food",
+          "Buy the entire restaurant",
+          "Take the recipe away"
+        ],
+        "a": 0,
+        "why": "他們付餐費，也贊助另外兩餐。"
+      }
+    ],
+    "words": [
+      "surplus",
+      "sustainable",
+      "incentive"
+    ]
+  },
+  {
+    "id": "lv5-080",
+    "series": "第二十三部 · The Ferry of Empty Seats｜空座位的渡輪",
+    "title": "The Passenger Who Never Boarded",
+    "zh": "從未登船的乘客",
+    "blurb": "渡輪只剩一張沒有主人簽名的船票。船長說那是系統錯誤；售票員卻記得曾有人哭著要求保留那個座位。",
+    "scene": "night",
+    "pages": [
+      {
+        "en": "The ferry was ready to depart when its booking system showed one passenger missing. Every seat was occupied except number seventeen. The ticket clerk, Mara, had anticipated a quiet shift, but a notice on the empty seat instructed the crew not to sell it. Nobody could explain who had issued the instruction.",
+        "zh": "渡輪準備離港時，訂位系統顯示有一名乘客尚未登船。除了十七號座位之外，其他座位都有人。售票員 Mara 原本預期今晚會很平靜，卻發現空位上有張通知，要求船員不得售出。沒有人說得清是誰下的指示。"
+      },
+      {
+        "en": "The captain wanted to remove the notice and avoid a further delay. Mara found a small suitcase in the lounge, with a child’s drawing tied to its handle. A patrol officer said he had seen a woman searching the pier, but the report was vague. Mara persuaded the captain to wait five minutes and give a courteous explanation to other passengers.",
+        "zh": "船長想移除通知，避免進一步延誤。Mara 在休息區找到一只小行李箱，提把上綁著一張孩子的畫。一名巡邏員說曾看見有位女人在碼頭尋找什麼，但報告相當模糊。Mara 說服船長再等五分鐘，並有禮貌地向其他乘客解釋。"
+      },
+      {
+        "en": "The woman returned without a child. She explained that her son had boarded an earlier ferry with his grandfather and left his bag behind. Number seventeen had been reserved so she could sit beside him on the return trip. Mara could not reunite them immediately, but she found the correct destination and called the other ferry.",
+        "zh": "女人回來時身邊沒有孩子。她解釋，兒子先跟祖父搭了上一班渡輪，卻把包包留下。十七號座位原本為她保留，好讓她在回程能坐在兒子旁邊。Mara 無法立刻讓母子團聚，但她查出正確目的地，聯繫了另一艘渡輪。"
+      }
+    ],
+    "quiz": [
+      {
+        "q": "Why is seat seventeen empty?",
+        "opts": [
+          "It is broken",
+          "A passenger has not boarded",
+          "It belongs to the captain",
+          "The ferry is nearly empty"
+        ],
+        "a": 1,
+        "why": "系統顯示一位乘客未登船，十七號座位因此空著。"
+      },
+      {
+        "q": "What does Mara find in the lounge?",
+        "opts": [
+          "A box of tickets",
+          "A suitcase with a drawing",
+          "A bicycle",
+          "A broken clock"
+        ],
+        "a": 1,
+        "why": "她找到提把綁著孩子畫作的行李箱。"
+      },
+      {
+        "q": "What happened to the child?",
+        "opts": [
+          "He missed both ferries",
+          "He was hiding in the lounge",
+          "He boarded an earlier ferry with his grandfather",
+          "He stayed home"
+        ],
+        "a": 2,
+        "why": "孩子先跟祖父搭了上一班渡輪。"
+      }
+    ],
+    "words": [
+      "anticipate",
+      "lounge",
+      "patrol",
+      "courteous",
+      "destination"
+    ]
+  },
+  {
+    "id": "lv5-081",
+    "series": "第二十三部 · The Ferry of Empty Seats｜空座位的渡輪",
+    "title": "A Seat on the Return Journey",
+    "zh": "回程的那個座位",
+    "blurb": "Mara 想把事情好好做完，卻發現比找回包包更難的，是讓兩艘船上不同的資訊對得起來。",
+    "scene": "meeting",
+    "pages": [
+      {
+        "en": "A second vessel confirmed that the boy was safe, although its passenger list used a different surname. The grandfather had booked the tickets before the family changed their name. Mara compared the two records and refused to publish the child’s details over the public speaker.",
+        "zh": "另一艘船確認男孩平安，但乘客名單上的姓氏不同。原來祖父是在家人改姓之前訂的票。Mara 比對兩筆紀錄，並拒絕透過廣播公開孩子的個人資料。"
+      },
+      {
+        "en": "The captain authorized a direct call between the two crews. Instead of demanding private documents from everyone on board, Mara asked the woman to describe the drawing on the suitcase. Her answer matched its distinctive blue bird. The crew arranged a safe transfer at the terminal, offered temporary accommodation if needed, and notified the family.",
+        "zh": "船長授權兩組船員直接通話。Mara 沒有要求船上所有人出示私人文件，而是請女人描述行李箱上的畫。答案與那隻獨特的藍色小鳥吻合。船員安排在航廈安全會合，也在必要時提供臨時住宿，並通知家人。"
+      },
+      {
+        "en": "When the ferries met, the boy ran to his mother. The captain complimented Mara for her patience, then changed the booking procedure: unclaimed seats would prompt a private check, not an automatic cancellation. A small choice had prevented a frightened family from becoming another unexplained line in a database.",
+        "zh": "兩艘渡輪抵達會合後，男孩奔向母親。船長稱讚 Mara 的耐心，並修改訂位流程：無人認領的座位應啟動私下確認，而不是自動取消。一個小小的決定，讓害怕的一家人不會成為資料庫裡另一筆無人解釋的紀錄。"
+      }
+    ],
+    "quiz": [
+      {
+        "q": "Why do the family names differ?",
+        "opts": [
+          "There are two grandfathers",
+          "The tickets were booked before a name change",
+          "The boy gave a false name",
+          "The captain made up a list"
+        ],
+        "a": 1,
+        "why": "票是在家人改姓前訂的。"
+      },
+      {
+        "q": "How does Mara check the woman’s story?",
+        "opts": [
+          "She cancels every ticket",
+          "She guesses a surname",
+          "She asks about the drawing",
+          "She posts the boy’s details online"
+        ],
+        "a": 2,
+        "why": "她請女人描述行李箱上的畫。"
+      },
+      {
+        "q": "What changes after the reunion?",
+        "opts": [
+          "All seats are sold twice",
+          "Ferries stop taking children",
+          "Public announcements include private records",
+          "Private checking replaces automatic cancellation"
+        ],
+        "a": 3,
+        "why": "新流程改成先私下核對未認領座位。"
+      }
+    ],
+    "words": [
+      "distinctive",
+      "accommodation",
+      "notify",
+      "compliment"
+    ]
+  },
+  {
+    "id": "lv5-082",
+    "series": "第二十四部 · The Bell Beneath the City｜城底的古鐘",
+    "title": "A Sound Below the Tracks",
+    "zh": "軌道下方的聲音",
+    "blurb": "地鐵施工深處傳來一聲古鐘。工程師相信那只是金屬震動，地方史老師卻拿出一張從未公開的城市地圖。",
+    "scene": "night",
+    "pages": [
+      {
+        "en": "During construction of a new underground station, engineer Leo heard a bell beneath the tracks. The noise returned every hour, even after the machines stopped. His supervisor called it an ordinary vibration, but Leo noticed that the pattern was too regular to dismiss.",
+        "zh": "新地下車站施工期間，工程師 Leo 聽見軌道下方傳來鐘聲。即使機器停下來，聲音仍每小時出現一次。主管認為那只是普通震動，但 Leo 注意到節奏過於規律，不能輕易忽略。"
+      },
+      {
+        "en": "A retired teacher showed him an old map. A chapel with unusual architecture had occupied the site long before the railway existed, and its bell was buried after a fire. The map was descriptive rather than precise; the street names had changed and one passage was missing. Leo requested permission to examine the site before drilling deeper.",
+        "zh": "一位退休教師拿出舊地圖。鐵路興建以前，那裡曾有座建築風格特別的小禮拜堂，火災後鐘被埋在地下。地圖偏重描述而非精確測量；街道名稱已更改，還少畫了一條通道。Leo 在繼續鑽探之前，申請查看現場的許可。"
+      },
+      {
+        "en": "The crew found no bell, only a narrow chamber and a metal rod touching a modern pipe. Every passing train made the rod strike the pipe. The old map had not solved the mystery, but it had revealed the overlooked space. Leo marked the chamber for a structural inspection.",
+        "zh": "工班沒有找到鐘，只找到狹窄的地下室，以及一根碰著現代管線的金屬桿。每班列車經過，金屬桿就會敲擊管線。舊地圖沒有直接解開謎團，卻揭示了一處被忽略的空間。Leo 將地下室標記為需要結構檢查。"
+      }
+    ],
+    "quiz": [
+      {
+        "q": "When can Leo hear the sound?",
+        "opts": [
+          "Only in heavy rain",
+          "Whenever a teacher visits",
+          "Every hour",
+          "Only at noon"
+        ],
+        "a": 2,
+        "why": "即使停工，聲音仍每小時出現。"
+      },
+      {
+        "q": "What once stood at the site?",
+        "opts": [
+          "A cinema",
+          "A harbor",
+          "A hospital",
+          "A chapel"
+        ],
+        "a": 3,
+        "why": "舊地圖標示那裡曾有小禮拜堂。"
+      },
+      {
+        "q": "What actually makes the bell-like noise?",
+        "opts": [
+          "A rod striking a pipe",
+          "A hidden musician",
+          "A functioning old bell",
+          "A ringing phone"
+        ],
+        "a": 0,
+        "why": "金屬桿被列車震動帶動，敲擊管線。"
+      }
+    ],
+    "words": [
+      "chapel",
+      "architecture",
+      "descriptive",
+      "rod",
+      "structural"
+    ]
+  },
+  {
+    "id": "lv5-083",
+    "series": "第二十四部 · The Bell Beneath the City｜城底的古鐘",
+    "title": "The Wall That Was Not on the Plan",
+    "zh": "圖上沒有的牆",
+    "blurb": "找到空間卻沒找到鐘。Leo 發現新站圖紙裡少了一面牆，而那面牆正支撐著他們打算拆掉的東西。",
+    "scene": "paper",
+    "pages": [
+      {
+        "en": "A structural survey revealed a second wall behind the chamber. Its material did not match the surrounding concrete, and the original plan contained no reference to it. One contractor proposed removing it quickly to preserve the schedule. Leo refused until they understood what the wall supported and could work under proper supervision.",
+        "zh": "結構調查發現地下室後方還有第二面牆。牆面材質和周圍混凝土不同，原圖也完全沒有標示。一名承包商提議趕快拆除以維持進度。Leo 拒絕在弄清楚牆的支撐作用、並能在適當監督下施工之前動工。"
+      },
+      {
+        "en": "The teacher located a faded photograph of the chapel’s interior. A row of pillars appeared directly above the hidden wall. Leo realized that the old foundation had been incorporated into later buildings. Removing one section could transfer pressure to a weaker part of the station.",
+        "zh": "老師找到一張褪色的禮拜堂內部照片。一排柱子正好位於暗牆上方。Leo 意識到舊地基被納入後來的建築。拆掉其中一段，可能把壓力轉移到車站較脆弱的部分。"
+      },
+      {
+        "en": "He outlined the risk in a report and asked for an independent assessment. The project team disliked the extra cost, but accepted a temporary stop. Beneath the city, the ancient and modern structures had become one system. The question was no longer whether to save the old wall, but how to keep passengers safe.",
+        "zh": "Leo 在報告中說明風險，要求獨立評估。計畫團隊不喜歡增加成本，但同意暫停施工。在城市地下，古代與現代結構早已成為同一個系統。問題不再只是要不要保留舊牆，而是如何維護乘客安全。"
+      }
+    ],
+    "quiz": [
+      {
+        "q": "Why does Leo refuse to remove the wall immediately?",
+        "opts": [
+          "He wants to delay his holiday",
+          "He dislikes old photographs",
+          "It is painted blue",
+          "Its supporting role is unknown"
+        ],
+        "a": 3,
+        "why": "牆的支撐作用不明，不能直接拆除。"
+      },
+      {
+        "q": "What shows that the wall belongs to an older structure?",
+        "opts": [
+          "A photograph of pillars above it",
+          "A modern train ticket",
+          "A weather report",
+          "A new restaurant menu"
+        ],
+        "a": 0,
+        "why": "舊照片顯示柱子位於牆的上方。"
+      },
+      {
+        "q": "What does the team agree to do?",
+        "opts": [
+          "Destroy the photographs",
+          "Pause for an independent assessment",
+          "Open the station at once",
+          "Hide the wall from the report"
+        ],
+        "a": 1,
+        "why": "團隊同意暫停，等待獨立評估。"
+      }
+    ],
+    "words": [
+      "supervision",
+      "interior",
+      "pillar",
+      "incorporate"
+    ]
+  },
+  {
+    "id": "lv5-084",
+    "series": "第二十四部 · The Bell Beneath the City｜城底的古鐘",
+    "title": "The Bell in the Basement",
+    "zh": "地下室裡的鐘",
+    "blurb": "古鐘終於出現了。可是發現寶物並不等於可以把它立刻運走；一個錯誤決定可能讓車站和古鐘一起受損。",
+    "scene": "paper",
+    "pages": [
+      {
+        "en": "Workers entered the chamber from a safer direction and discovered the old bell inside a wooden frame. Its surface was covered with dust and a distinctive pattern of cracks. The museum offered to haul it away, but the preservation specialist warned that a sudden change in temperature could damage the metal.",
+        "zh": "工人從較安全的方向進入地下室，在木框裡找到古鐘。鐘面覆滿灰塵，還有獨特的裂紋。博物館提議直接把它運走，但保存專家警告，突然的溫度變化可能損害金屬。"
+      },
+      {
+        "en": "Leo compared the museum’s proposal with the engineering schedule. Neither side could act alone: the bell’s frame rested against a supporting pillar. A hurried removal would create a new danger. They designed a temporary shield and let the conservator document each stage before the frame was moved.",
+        "zh": "Leo 比較博物館提案與工程進度。兩邊都不能單獨行動，因為鐘的木框靠著承重柱。倉促移走反而會造成新危險。他們設計臨時保護架，讓文物修復人員逐步記錄，再移動木框。"
+      },
+      {
+        "en": "The bell was not valuable because of gold or jewels. It had once warned residents of floods, and several families remembered its sound through stories. Leo began to comprehend why the teacher had insisted on looking beneath the tracks: the place preserved a shared heritage and information no new map could replace.",
+        "zh": "古鐘的價值不在黃金或寶石。它以前曾用來警告居民洪水來襲，幾個家庭仍透過故事記得它的聲音。Leo 開始理解老師為何堅持查看軌道下方：那個地方保存了共同的文化遺產，以及新地圖無法取代的資訊。"
+      }
+    ],
+    "quiz": [
+      {
+        "q": "Why can’t the museum remove the bell immediately?",
+        "opts": [
+          "The frame touches a supporting pillar",
+          "There is no door to the station",
+          "The bell is made of paper",
+          "The teacher refuses to open the map"
+        ],
+        "a": 0,
+        "why": "鐘的木框靠著承重柱，不能貿然搬走。"
+      },
+      {
+        "q": "What earlier purpose did the bell serve?",
+        "opts": [
+          "Calling restaurant staff",
+          "Warning people about floods",
+          "Announcing football scores",
+          "Selling train tickets"
+        ],
+        "a": 1,
+        "why": "古鐘曾警告居民洪水來襲。"
+      },
+      {
+        "q": "What does Leo come to understand?",
+        "opts": [
+          "Only gold can be valuable",
+          "Construction has no risks",
+          "The site preserves information beyond modern maps",
+          "The map is always perfectly accurate"
+        ],
+        "a": 2,
+        "why": "古老場所保存了現代地圖不一定有的訊息。"
+      }
+    ],
+    "words": [
+      "haul",
+      "shield",
+      "comprehend",
+      "heritage"
+    ]
+  },
+  {
+    "id": "lv5-085",
+    "series": "第二十四部 · The Bell Beneath the City｜城底的古鐘",
+    "title": "The Opening Without a Bell",
+    "zh": "沒有鐘聲的開幕",
+    "blurb": "車站終於開放，但開幕典禮不再敲響古鐘。Leo 與老師為它選了另一種重新被聽見的方式。",
+    "scene": "meeting",
+    "pages": [
+      {
+        "en": "The revised design reinforced the station without sacrificing the chamber. A small grant funded an exhibition showing the bell through a protected window, while an audio recording played its original tone. Leo insisted that the display explain the modern construction as carefully as the old history.",
+        "zh": "修訂後的設計加固了車站，也保留了地下室。一筆小額補助支持展區，透過受保護的窗戶展示古鐘，並播放原始鐘聲錄音。Leo 堅持展覽除了舊歷史，也要仔細解釋現代工程。"
+      },
+      {
+        "en": "At the opening, a journalist asked whether the delay had been a failure. Leo answered that the additional inspection had revealed a real structural risk. The teacher smiled when schoolchildren listened to the bell. They were not asked to admire a mystery; they were invited to examine how people had solved one.",
+        "zh": "開幕時，一位記者問施工延誤是否算失敗。Leo 回答，額外檢查確實發現了真實的結構風險。老師看著學童聽鐘聲，露出笑容。孩子們不是被要求崇拜一個謎團，而是受邀理解人們如何解開它。"
+      },
+      {
+        "en": "On his next shift, Leo heard an ordinary train pass above the chamber. No metal rod struck a pipe. The old bell was silent, but its story had become part of the city’s future. That was a better ending than letting it ring because nobody knew what was underneath.",
+        "zh": "下次輪班時，Leo 聽見普通列車從地下室上方通過。金屬桿沒有再敲擊管線。古鐘安靜了，但它的故事已成為城市未來的一部分。這比因為沒有人知道地下有什麼、任由它發出聲音，是更好的結局。"
+      }
+    ],
+    "quiz": [
+      {
+        "q": "How is the bell displayed?",
+        "opts": [
+          "In Leo’s home",
+          "Behind a protected window with an audio recording",
+          "On an open platform for passengers to ring",
+          "Inside a train carriage"
+        ],
+        "a": 1,
+        "why": "古鐘透過保護窗展示，旁邊播放錄音。"
+      },
+      {
+        "q": "What did the extra inspection reveal?",
+        "opts": [
+          "An empty museum",
+          "A new train timetable",
+          "A genuine structural risk",
+          "A hidden gold mine"
+        ],
+        "a": 2,
+        "why": "檢查發現真實的結構風險。"
+      },
+      {
+        "q": "Why is the bell now silent?",
+        "opts": [
+          "The city has no trains",
+          "The teacher took the bell away",
+          "All electricity was removed",
+          "The rod no longer strikes the pipe"
+        ],
+        "a": 3,
+        "why": "金屬桿不再敲擊管線。"
+      }
+    ],
+    "words": [
+      "reinforce",
+      "grant",
+      "journalist"
+    ]
+  },
+  {
+    "id": "lv5-086",
+    "series": "第二十五部 · The Borrowed Planet｜借來的星球",
+    "title": "A Star Out of Place",
+    "zh": "錯位的星星",
+    "blurb": "天文館裡有顆行星總在正確時間出現在錯誤位置；實習生以為投影機壞了，卻發現一張手寫筆記。",
+    "scene": "night",
+    "pages": [
+      {
+        "en": "The planetarium prepared a new show about the galaxy. An undergraduate named June checked the projected sky and noticed one planet in the wrong position. The technician blamed a minor software variable on the color spectrum, but June found that the projection disagreed with the printed chart in every rehearsal.",
+        "zh": "天文館準備一場介紹銀河的新表演。大學生實習生 June 檢查投影星空，注意到一顆行星位置錯了。技師怪罪色譜上的一個小小軟體變數，但 June 發現每次彩排時投影都和印製星圖不一致。"
+      },
+      {
+        "en": "A handwritten note was hidden inside the projector case. It described a miniature model built by the museum’s former director, who had died years earlier. June assumed that the note held the answer, yet its coordinates belonged to a different hemisphere. Someone had mixed two night skies together.",
+        "zh": "投影機箱裡藏著一張手寫便條，描述前館長多年前製作的微型模型。June 原以為便條會提供答案，卻發現其中的座標屬於另一個半球。有人把兩片不同的夜空混在一起。"
+      },
+      {
+        "en": "The director’s daughter arrived that evening. She said her father had wanted children to compare viewpoints rather than memorize a single picture. The current show, however, never explained the change of viewpoint. June proposed adding a visible horizon line and a simple note about where each sky was observed.",
+        "zh": "前館長的女兒當晚來到現場。她說父親希望孩子比較不同視角，而不是死記一張圖。然而目前的演出從沒說明視角改變。June 提議加入明顯的地平線，並用簡短文字標示每片天空的觀測位置。"
+      }
+    ],
+    "quiz": [
+      {
+        "q": "What is wrong with the show?",
+        "opts": [
+          "There is no music",
+          "The printed tickets are wet",
+          "A planet appears in the wrong place",
+          "The seats have vanished"
+        ],
+        "a": 2,
+        "why": "某顆行星出現在錯誤的位置。"
+      },
+      {
+        "q": "Why are the coordinates confusing?",
+        "opts": [
+          "They are prices for admission",
+          "They belong to a ship",
+          "They describe the museum floor",
+          "They refer to a different hemisphere"
+        ],
+        "a": 3,
+        "why": "便條裡的座標屬於另一個半球。"
+      },
+      {
+        "q": "What does June propose?",
+        "opts": [
+          "Explain the viewpoint and horizon",
+          "Hide the printed chart",
+          "Cancel the entire show",
+          "Use only one giant star"
+        ],
+        "a": 0,
+        "why": "她建議標示視角及地平線。"
+      }
+    ],
+    "words": [
+      "galaxy",
+      "undergraduate",
+      "variable",
+      "spectrum",
+      "rehearsal",
+      "miniature",
+      "viewpoint"
+    ]
+  },
+  {
+    "id": "lv5-087",
+    "series": "第二十五部 · The Borrowed Planet｜借來的星球",
+    "title": "The Question in the Dark",
+    "zh": "黑暗裡的問題",
+    "blurb": "第一場觀眾裡有個男孩問了誰也沒準備的問題：為什麼天空明明不同，說明牌卻說它們完全一樣？",
+    "scene": "meeting",
+    "pages": [
+      {
+        "en": "During the premiere, a boy asked why the skies looked different if the planets followed predictable paths. The presenter offered a complicated theoretical explanation, and the boy stopped listening. June questioned the premise that the problem was the boy’s comprehension; the explanation lacked an ordinary example.",
+        "zh": "首演時，一個男孩問：如果行星運行路徑可以預測，為什麼兩片天空看起來不同？主持人給了複雜的理論解釋，男孩聽不下去。June 質疑「問題在於孩子理解力」這個前提；真正缺少的是日常例子。"
+      },
+      {
+        "en": "She asked the audience to imagine two people standing on opposite sides of a sphere. Each would see a different part of the same sky. The boy pointed to the horizon and exclaimed that it worked like looking out of two windows. The room grew bright with questions instead of embarrassment.",
+        "zh": "她請觀眾想像兩人站在球體兩側，每人看見同一片天空的不同部分。男孩指向地平線，驚呼這就像從兩扇窗戶往外看。場內開始充滿提問，而不是尷尬。"
+      },
+      {
+        "en": "Afterward, the staff suggested editing the show so every visitor could rotate the model. June insisted that the printed chart remain on display, with an explanation of its limits. A good illustration did not erase complexity; it gave people a way to approach it without fear.",
+        "zh": "之後，工作人員建議修改演出，讓每位參觀者都能旋轉模型。June 堅持仍保留印製星圖，同時說明它的限制。好的圖解不是消除複雜性，而是讓人有方法、不害怕地接近它。"
+      }
+    ],
+    "quiz": [
+      {
+        "q": "Why does the boy stop listening?",
+        "opts": [
+          "He has to catch a train",
+          "He dislikes the stars",
+          "The projector is silent",
+          "The explanation is too abstract"
+        ],
+        "a": 3,
+        "why": "原本的解釋過於抽象，沒有好懂的例子。"
+      },
+      {
+        "q": "What example does June give?",
+        "opts": [
+          "People on opposite sides of a sphere",
+          "Two buses arriving late",
+          "A broken kitchen window",
+          "A bell under the city"
+        ],
+        "a": 0,
+        "why": "她用球體兩側的人解釋不同視角。"
+      },
+      {
+        "q": "Why keep the printed chart?",
+        "opts": [
+          "To replace the new model",
+          "To show both its use and its limits",
+          "To cover the projector",
+          "To sell souvenirs"
+        ],
+        "a": 1,
+        "why": "保留星圖並解釋使用限制。"
+      }
+    ],
+    "words": [
+      "theoretical",
+      "premise",
+      "comprehension",
+      "sphere",
+      "exclaim",
+      "complexity"
+    ]
+  },
+  {
+    "id": "lv5-088",
+    "series": "第二十五部 · The Borrowed Planet｜借來的星球",
+    "title": "A Planet That Belongs to Everyone",
+    "zh": "屬於每個人的星球",
+    "blurb": "June 終於明白，前館長借來的不是一顆星球，而是讓觀眾交換位置、重新看世界的方法。",
+    "scene": "meeting",
+    "pages": [
+      {
+        "en": "June rebuilt the final scene as an exploration. Visitors could change location, time, and viewing angle, then compare each variation with the same basic model. The program now added a time dimension and made its assumptions visible. Children stopped asking which picture was the only correct one and began asking what had changed.",
+        "zh": "June 把結尾改成探索活動。觀眾可以改變位置、時間與視角，再將每一種變化和同一個基本模型比較。程式如今增加時間維度，也會清楚顯示假設。孩子們不再只問哪張圖才唯一正確，而開始問究竟什麼改變了。"
+      },
+      {
+        "en": "The museum’s board offered June a permanent position. She hesitated, worried that accepting it would interrupt her thesis research. Her mentor reassured her that the institution could arrange flexible hours, but only if she described what support she actually needed.",
+        "zh": "博物館董事會提供 June 正職。她猶豫了，擔心接受工作會打斷論文研究。導師安慰她，館方可以安排彈性工時，但前提是她清楚說明自己真正需要的支援。"
+      },
+      {
+        "en": "On the last evening of the exhibition, the director’s daughter left the old note beside the new model. June added one sentence beneath it: “The sky does not belong to the first person who draws it.” Her project would continue, with room for the next visitor’s question.",
+        "zh": "展覽最後一晚，前館長的女兒把舊便條放在新模型旁。June 在下面加了一句：「天空不屬於第一個畫下它的人。」她的計畫會繼續，也會替下一位參觀者的問題保留空間。"
+      }
+    ],
+    "quiz": [
+      {
+        "q": "What can visitors change in the new show?",
+        "opts": [
+          "Location, time, and viewing angle",
+          "The museum’s address",
+          "The building height",
+          "The ticket price only"
+        ],
+        "a": 0,
+        "why": "新版可調整位置、時間與觀看角度。"
+      },
+      {
+        "q": "Why does June hesitate over the job?",
+        "opts": [
+          "She has moved overseas",
+          "She worries about her studies",
+          "She dislikes the museum",
+          "She cannot read charts"
+        ],
+        "a": 1,
+        "why": "她擔心工作影響學業。"
+      },
+      {
+        "q": "What does the final note emphasize?",
+        "opts": [
+          "One chart is perfect for everyone",
+          "The planet belongs to June",
+          "Knowledge can be shared and questioned",
+          "Only directors may ask questions"
+        ],
+        "a": 2,
+        "why": "最後的句子強調知識可分享、可再提問。"
+      }
+    ],
+    "words": [
+      "exploration",
+      "variation",
+      "dimension",
+      "thesis",
+      "reassure",
+      "institution"
+    ]
+  },
+  {
+    "id": "lv5-089",
+    "series": "第二十六部 · The Museum of Lost Smells｜失去氣味的博物館",
+    "title": "The Room That Smelled of Rain",
+    "zh": "聞起來像雨的房間",
+    "blurb": "一間展廳重現了不存在的雨天味道；調香師收到投訴後發現，展場唯一錯的可能不是配方。",
+    "scene": "paper",
+    "pages": [
+      {
+        "en": "A small museum opened an exhibition about the scents of a vanished neighborhood. Visitors could smell old bread, wet stone, and fresh fabric. Perfumer Hana had recreated the formulas from interviews, but one room made people complain of a harsh, unfamiliar odor.",
+        "zh": "小博物館開設一場展覽，重現已消失街區的氣味。觀眾可以聞到老麵包、濕石頭與新布料。調香師 Hana 依照訪談重建配方，但有間展室讓人抱怨氣味刺鼻而陌生。"
+      },
+      {
+        "en": "The staff assumed that a chemical ingredient had decayed. Hana tested the bottles one by one and found their contents stable. The odor was stronger near the ceiling than by the floor. A maintenance worker then mentioned that a filter had been replaced during the night.",
+        "zh": "工作人員以為某種化學原料變質。Hana 逐瓶檢查，發現瓶中內容穩定。氣味在天花板附近比地板旁更重。維修員這才提起，夜裡有人換過一個濾網。"
+      },
+      {
+        "en": "Hana opened the ventilation cabinet and found a piece of protective fabric blocking the air. The core fragrance had not changed; the room had. She closed the exhibit until the airflow was restored, and wrote a notice explaining the interruption instead of quietly hiding it.",
+        "zh": "Hana 打開通風櫃，發現一片保護布料擋住氣流。核心香氣沒有變，改變的是房間本身。她先關閉展室，直到通風恢復，再寫公告說明中斷原因，而不是悄悄掩蓋。"
+      }
+    ],
+    "quiz": [
+      {
+        "q": "What is the exhibition about?",
+        "opts": [
+          "A forest of glass",
+          "Scents from a vanished neighborhood",
+          "A new train station",
+          "Old cinema tickets"
+        ],
+        "a": 1,
+        "why": "展覽重現消失街區的氣味。"
+      },
+      {
+        "q": "What does Hana find about the bottles?",
+        "opts": [
+          "They contain water only",
+          "They were stolen",
+          "Their contents are stable",
+          "All of them are empty"
+        ],
+        "a": 2,
+        "why": "她逐瓶檢查，內容沒有變質。"
+      },
+      {
+        "q": "What caused the odor problem?",
+        "opts": [
+          "A different bread recipe",
+          "Broken ticket scanners",
+          "A lost visitor",
+          "Blocked ventilation"
+        ],
+        "a": 3,
+        "why": "保護布料擋住了通風。"
+      }
+    ],
+    "words": [
+      "fabric",
+      "decay",
+      "filter",
+      "core"
+    ]
+  },
+  {
+    "id": "lv5-090",
+    "series": "第二十六部 · The Museum of Lost Smells｜失去氣味的博物館",
+    "title": "The Woman Who Remembered Smoke",
+    "zh": "記得煙味的女人",
+    "blurb": "一位老太太說展覽裡缺少最重要的氣味：火災後的煙。Hana 要決定，是不是每段回憶都適合讓別人親身體驗。",
+    "scene": "night",
+    "pages": [
+      {
+        "en": "An elderly visitor told Hana that the neighborhood had once suffered a deadly fire. The museum’s cheerful reconstruction did not mention it. She remembered the smoke more clearly than the bread. Hana listened with sensitivity, but worried that reproducing the odor might overwhelm visitors who carried their own painful memories.",
+        "zh": "一位年長訪客告訴 Hana，街區曾發生致命火災。博物館歡樂的重建內容完全沒提。她對煙味的記憶比麵包更清楚。Hana 敏銳而體貼地聽，卻擔心重現煙味可能讓帶有傷痛記憶的觀眾難以承受。"
+      },
+      {
+        "en": "The curator proposed a dramatic room filled with smoke effects. Hana disagreed. The woman had asked for honest history, not a frightening performance. They invited former residents to contribute written accounts and offered visitors a choice: read the memories or enter a quiet room with no scent at all.",
+        "zh": "策展人提議設置充滿煙霧效果的戲劇性展室，Hana 不同意。老太太要的是誠實的歷史，不是嚇人的表演。他們邀請老居民提供文字記錄，也讓參觀者選擇閱讀記憶，或進入完全沒有氣味的安靜房間。"
+      },
+      {
+        "en": "The woman returned with a photograph of her family outside a bakery. She thanked Hana for letting the story exist without forcing everyone to smell it. The museum had begun as a collection of formulas. It was becoming a place where different memories could remain distinct.",
+        "zh": "老太太帶著一張家人在麵包店外的照片回來。她感謝 Hana 讓往事存在，又不強迫每個人聞那股氣味。博物館原本只是配方的集合，如今逐漸成為讓不同記憶保有各自樣貌的地方。"
+      }
+    ],
+    "quiz": [
+      {
+        "q": "What does the older visitor say is missing?",
+        "opts": [
+          "A birthday song",
+          "The price of bread",
+          "The history of a fire",
+          "A model train"
+        ],
+        "a": 2,
+        "why": "她指出展覽漏掉火災歷史。"
+      },
+      {
+        "q": "Why does Hana reject the smoke effects?",
+        "opts": [
+          "They are too quiet",
+          "They look like snow",
+          "They would replace the bakery",
+          "They could overwhelm visitors"
+        ],
+        "a": 3,
+        "why": "她不希望為了效果而讓觀眾承受不必要的壓力。"
+      },
+      {
+        "q": "What choice do visitors receive?",
+        "opts": [
+          "Read memories or enter a scent-free room",
+          "Buy a bottle or leave",
+          "Watch a fire or ring a bell",
+          "Speak only to the curator"
+        ],
+        "a": 0,
+        "why": "參觀者可以讀記錄，或進入無氣味空間。"
+      }
+    ],
+    "words": [
+      "deadly",
+      "sensitivity",
+      "overwhelm"
+    ]
+  },
+  {
+    "id": "lv5-091",
+    "series": "第二十六部 · The Museum of Lost Smells｜失去氣味的博物館",
+    "title": "What the Air Could Hold",
+    "zh": "空氣能保存什麼",
+    "blurb": "展覽重開，Hana 發現真正留下的不是某一種「正確氣味」，而是居民不必彼此否認的記憶。",
+    "scene": "meeting",
+    "pages": [
+      {
+        "en": "The revised exhibition followed clear ethics: it paired each scent with a story and explained how the formulas had been reconstructed. One label admitted that no chemical mixture could reproduce an entire childhood. Visitors could see the methods, disagree with a memory, and offer another perspective.",
+        "zh": "修訂後的展覽遵循清楚的倫理原則：每種氣味搭配一段故事，並說明配方如何重建。某張說明牌坦承，再好的化學混合物也無法還原整個童年。觀眾可以了解方法、不同意某段回憶，或提出其他視角。"
+      },
+      {
+        "en": "On opening day, Hana noticed a child standing beside the quiet room. He said his grandmother had told him about the fire, but he preferred the bakery story. Hana replied that both belonged to the neighborhood. Remembering one did not erase the other.",
+        "zh": "重新開幕那天，Hana 看見一個孩子站在安靜展室旁。他說奶奶講過火災，但自己比較喜歡麵包店的故事。Hana 回答，兩者都屬於這個街區。記得其中一個，不會抹掉另一個。"
+      },
+      {
+        "en": "At closing time, the curator asked Hana what fragrance should become the museum’s symbol. She chose none. Instead, she selected the old photograph, because the people in it mattered more than any formula. The room smelled faintly of rain, and for once that was enough.",
+        "zh": "閉館時，策展人問 Hana 要選哪種香氣當博物館象徵。她一種也沒選，而選了那張舊照片；照片裡的人，比任何配方都重要。房間淡淡聞起來像雨，而這一次，這樣就夠了。"
+      }
+    ],
+    "quiz": [
+      {
+        "q": "What does the new label admit?",
+        "opts": [
+          "All memories are identical",
+          "Every scent is dangerous",
+          "Photographs are forbidden",
+          "No formula can recreate an entire childhood"
+        ],
+        "a": 3,
+        "why": "標示承認配方無法重建整個童年。"
+      },
+      {
+        "q": "What does Hana tell the child?",
+        "opts": [
+          "Different neighborhood memories can coexist",
+          "The bakery never existed",
+          "The fire was invented",
+          "He must choose the fire story"
+        ],
+        "a": 0,
+        "why": "兩段不同回憶可以同時存在。"
+      },
+      {
+        "q": "What becomes the museum’s symbol?",
+        "opts": [
+          "A ticket scanner",
+          "An old photograph",
+          "A bottle of perfume",
+          "A ventilation filter"
+        ],
+        "a": 1,
+        "why": "Hana 選擇舊照片而非香氣。"
+      }
+    ],
+    "words": [
+      "ethics",
+      "perspective"
+    ]
+  },
+  {
+    "id": "lv5-092",
+    "series": "第二十七部 · The Clinic at the Last Stop｜末站診所",
+    "title": "A Queue After Closing",
+    "zh": "打烊後的隊伍",
+    "blurb": "小鎮末班公車停駛，診所外卻仍有人排隊。櫃檯新人發現真正堵住病人的不是醫生，而是一張表格。",
+    "scene": "paper",
+    "pages": [
+      {
+        "en": "A community clinic was supposed to close at six, yet a queue remained outside. Receptionist Eli noticed that several patients had traveled from distant villages. The new questionnaire required an online account, which many visitors could not create. The clinic had competent practitioners, but its registration system kept people waiting.",
+        "zh": "社區診所應在六點打烊，外面卻還有人排隊。櫃檯新人 Eli 注意到幾位病患從偏遠村莊來。新的問卷規定要先有線上帳號，但很多訪客根本無法建立。診所有能力足夠的醫療人員，讓人久等的卻是掛號系統。"
+      },
+      {
+        "en": "An administrator argued that digital forms increased productivity. Eli showed her a record of missed appointments and asked whether the figures included patients who had never completed registration. The answer was no. They had measured the speed of successful entries, not the people excluded before reaching the desk.",
+        "zh": "行政人員說數位表單提高生產力。Eli 拿出錯過預約的紀錄，問那些根本沒完成掛號的人有沒有算進去。答案是沒有。他們只測量成功登記的速度，沒有測到抵達櫃檯前就被排除的人。"
+      },
+      {
+        "en": "With the manager’s approval, Eli offered a paper form alongside the online version and arranged a private desk for visitors who needed help. The queue shortened. More importantly, the clinic could finally see the problem it had been counting around.",
+        "zh": "得到主管同意後，Eli 除了線上版，也提供紙本表單，並安排私密的協助櫃檯。隊伍縮短了。更重要的是，診所終於能看見原本被統計方式繞過的問題。"
+      }
+    ],
+    "quiz": [
+      {
+        "q": "What prevents some visitors from registering?",
+        "opts": [
+          "A required online account",
+          "The absence of doctors",
+          "A missing clinic building",
+          "A shortage of buses inside the clinic"
+        ],
+        "a": 0,
+        "why": "部分訪客無法建立必要的線上帳號。"
+      },
+      {
+        "q": "What do the original figures fail to include?",
+        "opts": [
+          "Staff lunch breaks",
+          "People who never finish registration",
+          "The number of chairs",
+          "The color of paper"
+        ],
+        "a": 1,
+        "why": "原本統計只看成功登記的人。"
+      },
+      {
+        "q": "What does Eli add to the process?",
+        "opts": [
+          "More signs without instructions",
+          "A rule banning visitors",
+          "Paper forms and private assistance",
+          "Another online password"
+        ],
+        "a": 2,
+        "why": "增加紙本與私密協助管道。"
+      }
+    ],
+    "words": [
+      "questionnaire",
+      "competent",
+      "practitioner",
+      "productivity"
+    ]
+  },
+  {
+    "id": "lv5-093",
+    "series": "第二十七部 · The Clinic at the Last Stop｜末站診所",
+    "title": "A Name on Two Forms",
+    "zh": "兩張表上的名字",
+    "blurb": "新流程剛上線，同一個病人的姓名卻出現在兩張不相容的表格上。Eli 必須分清楚：哪些資訊可以合併，哪些不能憑猜測決定。",
+    "scene": "meeting",
+    "pages": [
+      {
+        "en": "A patient’s name appeared on two forms, but the records listed different allergies. A nurse asked Eli to merge them quickly. He hesitated because one form belonged to a different person with the same name. Guessing would create a clinical risk, so he requested a private identity check instead.",
+        "zh": "一位病人的姓名出現在兩張表上，過敏紀錄卻不同。護理師請 Eli 快速合併，他猶豫了，因為另一張其實屬於同名的不同人。猜測可能造成醫療風險，因此他改為要求私下核對身分。"
+      },
+      {
+        "en": "The nurse confirmed that the two visitors had separate appointments. Eli corrected the index and notified the staff without repeating medical information in the waiting room. He learned that efficiency did not mean deleting distinctions just because they looked inconvenient.",
+        "zh": "護理師確認兩位訪客有不同的預約。Eli 修正索引，通知人員時沒有在候診區重述醫療資訊。他學到效率不是因為區別看起來麻煩，就把它們刪掉。"
+      },
+      {
+        "en": "Later, the administrator asked for a brief report. Eli described the change in process rather than the patients’ conditions. They added a warning whenever similar names appeared and trained the reception staff to ask for confirmation. The improvement was small, but it belonged to a system that could learn.",
+        "zh": "之後，行政人員要求一份簡短報告。Eli 描述流程調整，而不是病患病情。他們替相似姓名增加警示，也訓練櫃檯人員進行確認。改進不大，但它屬於一套願意學習的系統。"
+      }
+    ],
+    "quiz": [
+      {
+        "q": "Why shouldn’t Eli merge the forms?",
+        "opts": [
+          "Both forms are blank",
+          "They belong to different people with the same name",
+          "The printer has no ink",
+          "The nurse lost her key"
+        ],
+        "a": 1,
+        "why": "同名資料其實屬於不同的人。"
+      },
+      {
+        "q": "What information does Eli avoid announcing?",
+        "opts": [
+          "A bus timetable",
+          "The name of the city",
+          "Private medical information",
+          "The clinic closing hour"
+        ],
+        "a": 2,
+        "why": "他避免公開醫療隱私。"
+      },
+      {
+        "q": "What change follows the mistake?",
+        "opts": [
+          "Removal of all identity checks",
+          "One shared record for everyone",
+          "Cancellation of paper forms",
+          "A warning for similar names"
+        ],
+        "a": 3,
+        "why": "流程增加同名警示與核對。"
+      }
+    ],
+    "words": [
+      "clinical",
+      "index"
+    ]
+  },
+  {
+    "id": "lv5-094",
+    "series": "第二十七部 · The Clinic at the Last Stop｜末站診所",
+    "title": "The Bus at Six Fifteen",
+    "zh": "六點十五分的公車",
+    "blurb": "診所終於找到系統漏洞，卻不能讓偏遠居民每次都為了看診錯過回家的末班車。",
+    "scene": "meeting",
+    "pages": [
+      {
+        "en": "Eli reviewed a week of records and noticed that most late visitors depended on the same bus. The clinic could not guarantee every appointment would finish early, but the transit company was willing to discuss a revised timetable. The two organizations had never compared their schedules before.",
+        "zh": "Eli 檢查一週紀錄，發現多數晚到訪客都依賴同一班公車。診所不能保證每個預約都提前結束，但客運公司願意討論調整時刻表。兩個機構以前從沒把時間表放在一起比較。"
+      },
+      {
+        "en": "At a small meeting, patients described the cost of a missed bus: another night away from home or an expensive ride. Staff proposed an earlier registration window and a simple notice about the last departure. No one promised a perfect solution. They agreed on a trial and a date to evaluate whether it improved equity in access.",
+        "zh": "在小型會議上，病患描述錯過公車的代價：多在外住一晚，或支付昂貴車資。員工提議提前開放掛號，並提供清楚的末班車提醒。沒有人保證完美解決，他們同意先試行，再訂日期評估是否改善就醫機會的公平性。"
+      },
+      {
+        "en": "On the first trial day, Eli watched several visitors reach the bus with minutes to spare. The receptionist who had once been praised for processing forms quickly now measured something else: whether people could complete the visit and get home. That was the outcome his old dashboard had missed.",
+        "zh": "試行第一天，Eli 看著好幾位訪客提前幾分鐘趕上公車。這個曾因快速處理表單而被稱讚的櫃檯新人，現在測量另一件事：大家能否完成看診並回家。這才是舊儀表板漏掉的結果。"
+      }
+    ],
+    "quiz": [
+      {
+        "q": "What transport do most late visitors rely on?",
+        "opts": [
+          "A private boat",
+          "A subway under the clinic",
+          "The same bus",
+          "An airport shuttle"
+        ],
+        "a": 2,
+        "why": "多數晚到訪客搭同一班公車。"
+      },
+      {
+        "q": "What do the organizations agree to?",
+        "opts": [
+          "A permanent change without evidence",
+          "Closing the clinic at noon",
+          "Removing all schedules",
+          "A trial and later evaluation"
+        ],
+        "a": 3,
+        "why": "雙方同意試行並評估。"
+      },
+      {
+        "q": "What does Eli now measure?",
+        "opts": [
+          "Whether visitors can finish and get home",
+          "How quickly the computer starts",
+          "How many chairs fit in a room",
+          "How long a printer lasts"
+        ],
+        "a": 0,
+        "why": "他關心看診後是否能順利回家。"
+      }
+    ],
+    "words": [
+      "equity"
+    ]
+  },
+  {
+    "id": "lv5-095",
+    "series": "第二十八部 · The Rainmaker’s Debt｜造雨人的債",
+    "title": "The Hill That Held the Water",
+    "zh": "把水留住的山坡",
+    "blurb": "工程公司把一座山坡改造成蓄水計畫。第一次暴雨後，山腳下的村莊卻變得更容易淹水。",
+    "scene": "night",
+    "pages": [
+      {
+        "en": "After months of drought, a hillside reservoir promised relief to the town. Then a sudden storm scattered debris across the road. Engineer During the first phase of construction, Sol inspected the drainage system and discovered that a concrete barrier redirected water toward a village that was not shown in the project’s summary map.",
+        "zh": "乾旱數月後，山坡蓄水計畫承諾替小鎮解困。突然的暴雨卻讓碎片散落道路。在施工第一階段，工程師 Sol 檢查排水系統，發現混凝土屏障把水導向一座沒有標在計畫摘要地圖上的村莊。"
+      },
+      {
+        "en": "The contractor insisted that the barrier was temporary. Sol compared its location with the original design and saw that the two were not compatible. A construction shortcut had changed the flow of water. He marked the affected homes and asked the crew to stop adding material until the risk was reviewed.",
+        "zh": "承包商堅稱屏障只是臨時設置。Sol 將位置和原設計比較，發現兩者不相容。施工捷徑改變了水流方向。他標記受影響住家，要求工班在重新檢討風險前，不要再增加材料。"
+      },
+      {
+        "en": "Residents did not ask for a grand speech about innovation. They wanted someone to tell them where the water would go when the next storm arrived. Sol gave them the maps he had and openly identified the missing measurements. He could not undo the rain, but he could stop treating uncertainty as an answer.",
+        "zh": "居民不需要一場關於創新的宏大演說。他們想知道下次暴雨來時水會往哪裡流。Sol 提供手中地圖，公開指出缺少哪些測量。他不能讓雨倒流，但可以不再把不確定當成答案。"
+      }
+    ],
+    "quiz": [
+      {
+        "q": "What redirects water toward the village?",
+        "opts": [
+          "A passenger train",
+          "A broken telescope",
+          "A bakery oven",
+          "A concrete barrier"
+        ],
+        "a": 3,
+        "why": "混凝土屏障改變水流方向。"
+      },
+      {
+        "q": "Why does Sol stop further construction?",
+        "opts": [
+          "The shortcut may increase flooding risk",
+          "The project has no maps at all",
+          "The town dislikes rain",
+          "The workers forgot lunch"
+        ],
+        "a": 0,
+        "why": "捷徑造成潛在淹水風險。"
+      },
+      {
+        "q": "What do residents most want to know?",
+        "opts": [
+          "How tickets are printed",
+          "Where water will go in the next storm",
+          "Who owns the oldest bell",
+          "Why the sky is blue"
+        ],
+        "a": 1,
+        "why": "居民關心下次暴雨的水流路徑。"
+      }
+    ],
+    "words": [
+      "debris",
+      "phase",
+      "compatible",
+      "undo"
+    ]
+  },
+  {
+    "id": "lv5-096",
+    "series": "第二十八部 · The Rainmaker’s Debt｜造雨人的債",
+    "title": "A River Made of Numbers",
+    "zh": "用數字畫出的河",
+    "blurb": "新的模型顯示小鎮「平均」安全，但山腳村民並不住在平均值裡。Sol 必須找出誰被漂亮的統計圖抹掉。",
+    "scene": "paper",
+    "pages": [
+      {
+        "en": "The new model estimated an overall reduction in flooding, but its average concealed serious local variation. The river’s narrowest segment had become a bottleneck. Sol checked the ratio of flooded homes in each district, divided the study into smaller areas, and asked the field team to check each one instead of relying on a single figure.",
+        "zh": "新模型估計整體淹水減少，但平均值掩蓋了嚴重的地方差異。河道最窄的區段成了瓶頸。Sol 比較各區淹水住家的比例，把研究分成較小區域，要求現場團隊逐一檢查，而不是只依賴單一數字。"
+      },
+      {
+        "en": "A technician measured sediment near an old bridge and found that its foundation had already weakened. The bridge looked sturdy from above, yet the material beneath it had begun to decay. Sol presented both the numerical model and the physical evidence at the next review.",
+        "zh": "技師測量舊橋附近的沉積物，發現橋的地基已經變弱。從上方看，橋似乎很堅固，但下面的材料已開始劣化。Sol 在下次審查中同時提出數值模型與實體證據。"
+      },
+      {
+        "en": "The project board approved a temporary route for villagers and a revised drainage plan. Sol did not call the outcome a victory; the residents had spent a week carrying sandbags because the first plan missed their homes. He recorded that cost in the final report, where it could no longer vanish into an average.",
+        "zh": "計畫委員會批准村民的臨時通行路線與修訂排水方案。Sol 不稱它為勝利；居民已經因為第一版計畫漏掉住家而搬了一週沙包。他把這項代價寫進最終報告，使它不會再消失在平均值裡。"
+      }
+    ],
+    "quiz": [
+      {
+        "q": "What does the overall average hide?",
+        "opts": [
+          "Serious local variation",
+          "A new museum exhibition",
+          "The number of train tickets",
+          "A lost family photograph"
+        ],
+        "a": 0,
+        "why": "平均值掩蓋了局部嚴重差異。"
+      },
+      {
+        "q": "What is wrong with the old bridge?",
+        "opts": [
+          "It was built yesterday",
+          "Its foundation has weakened",
+          "It has no name",
+          "It is in another country"
+        ],
+        "a": 1,
+        "why": "橋的地基已經變弱。"
+      },
+      {
+        "q": "What does Sol include in the final report?",
+        "opts": [
+          "A new ferry ticket",
+          "His favorite photograph",
+          "The residents’ costs and difficulties",
+          "Only a single average"
+        ],
+        "a": 2,
+        "why": "他記錄居民因錯誤方案付出的代價。"
+      }
+    ],
+    "words": [
+      "overall",
+      "segment",
+      "ratio",
+      "sturdy"
+    ]
+  },
+  {
+    "id": "lv5-097",
+    "series": "第二十八部 · The Rainmaker’s Debt｜造雨人的債",
+    "title": "The Rain Nobody Could Own",
+    "zh": "沒有人能擁有的雨",
+    "blurb": "新排水方案完成後，承包商想用「問題已解決」結案。Sol 卻要求留下每個人的聲音，包括曾經反對他的居民。",
+    "scene": "meeting",
+    "pages": [
+      {
+        "en": "The revised infrastructure survived the next storm. Water reached the reservoir without flooding the village road. The contractor wanted to remove the temporary barriers and close the file immediately. Sol asked for one more review of the utilities and the bridge before declaring the project complete.",
+        "zh": "修訂後的基礎設施挺過下一場暴雨。水順利進入蓄水區，沒有淹沒村路。承包商想立刻拆掉臨時屏障並結案。Sol 要求宣告完工前，再檢查一次公用設施和橋梁。"
+      },
+      {
+        "en": "At a public meeting, one resident accused the team of listening too late. Sol did not argue with her. He added her comment to the report beside the new measurements, along with a timetable for future inspections. The records now reflected both technical stability and the people living with its consequences.",
+        "zh": "公開會議中，一位居民指責團隊太晚才傾聽。Sol 沒有和她爭辯，而是把她的意見和新測量資料一同寫進報告，並附上未來檢查時程。紀錄現在同時呈現技術上的穩定與生活在其後果中的人們。"
+      },
+      {
+        "en": "Months later, children crossed the bridge on their way to school. Sol stood beside the reservoir, aware that the rain would return in forms nobody could predict exactly. His job had never been to control every storm. It was to build a system that could respond when its first answer was wrong.",
+        "zh": "數月後，孩子們走過橋去上學。Sol 站在蓄水區旁，知道雨總會以無法完全預測的形式回來。他的工作從來不是控制每一場暴雨，而是打造一套第一次判斷錯誤時仍能修正的系統。"
+      }
+    ],
+    "quiz": [
+      {
+        "q": "What happens during the next storm?",
+        "opts": [
+          "The reservoir turns to ice",
+          "The new drainage works without flooding the road",
+          "The bridge disappears",
+          "The village is evacuated forever"
+        ],
+        "a": 1,
+        "why": "新排水系統讓水進入蓄水區，村路沒有淹水。"
+      },
+      {
+        "q": "How does Sol respond to criticism?",
+        "opts": [
+          "He blames the weather alone",
+          "He cancels inspections",
+          "He records it with the evidence",
+          "He deletes the meeting notes"
+        ],
+        "a": 2,
+        "why": "他將居民意見與測量紀錄並列。"
+      },
+      {
+        "q": "What does Sol see as his real job?",
+        "opts": [
+          "Predicting every storm perfectly",
+          "Owning the rain",
+          "Making maps without visiting places",
+          "Building a system that can correct mistakes"
+        ],
+        "a": 3,
+        "why": "建立會修正錯誤的系統。"
+      }
+    ],
+    "words": [
+      "infrastructure",
+      "utility",
+      "stability"
+    ]
+  },
+  {
+    "id": "lv5-098",
+    "series": "第二十九部 · The Language Shop｜語言小店",
+    "title": "The Word No One Could Translate",
+    "zh": "誰都翻不出的字",
+    "blurb": "小書店最後一天營業，店主收到一本沒有作者的雙語字典；其中一個詞，在兩種語言裡都找不到真正對應的意思。",
+    "scene": "paper",
+    "pages": [
+      {
+        "en": "A language shop announced its final week. Owner Lin had collected dictionaries, audio recordings, and handwritten letters for decades, yet the rent was now beyond her means. A visitor brought a notebook containing a rare dialect and asked her to translate one unfamiliar word before the shop closed.",
+        "zh": "語言小店宣布最後一週營業。店主 Lin 幾十年來蒐集字典、錄音與手寫信件，但如今已無力負擔租金。一名訪客帶來記錄罕見方言的筆記，請她在關店前翻出其中一個陌生詞。"
+      },
+      {
+        "en": "The word appeared beside a drawing of a family carrying bowls between houses. Lin searched every reference she owned. One entry suggested generosity; another implied obligation. Neither captured the scene exactly. She asked the visitor where the notebook had come from, but he knew only that it belonged to his grandmother.",
+        "zh": "那個詞旁畫著一家人端著碗在房屋之間走動。Lin 查遍所有參考資料。有個詞條接近慷慨，另一個接近義務，卻都無法精確表達畫面。她問訪客筆記從何而來，他只知道那是祖母的東西。"
+      },
+      {
+        "en": "Lin could have written the closest translation and sold him the answer. Instead, she asked to hear the grandmother’s voice, if a recording existed. Understanding a word might require knowing who said it, to whom, and why. The visitor promised to return with an old cassette.",
+        "zh": "Lin 大可以寫上最接近的翻譯，把答案賣給他。但她反而請他帶來祖母的聲音，如果還有錄音的話。理解一個詞，或許需要知道是誰、對誰、為什麼說的。訪客答應帶一卷舊錄音帶回來。"
+      }
+    ],
+    "quiz": [
+      {
+        "q": "What does the visitor bring?",
+        "opts": [
+          "A ferry ticket",
+          "A medical prescription",
+          "A notebook in a rare dialect",
+          "A broken clock"
+        ],
+        "a": 2,
+        "why": "訪客帶來記有罕見方言的筆記。"
+      },
+      {
+        "q": "Why is the word difficult to translate?",
+        "opts": [
+          "All dictionaries are empty",
+          "The handwriting is only numbers",
+          "The language has no speakers",
+          "Close meanings miss its context"
+        ],
+        "a": 3,
+        "why": "近似的詞義無法完整表達情境。"
+      },
+      {
+        "q": "What does Lin request?",
+        "opts": [
+          "A recording of the grandmother",
+          "Payment before reading",
+          "A photograph of a bridge",
+          "A new bookcase"
+        ],
+        "a": 0,
+        "why": "她希望聽到祖母的錄音。"
+      }
+    ],
+    "words": [
+      "dialect"
+    ]
+  },
+  {
+    "id": "lv5-099",
+    "series": "第二十九部 · The Language Shop｜語言小店",
+    "title": "A Voice Between Two Houses",
+    "zh": "兩棟房子之間的聲音",
+    "blurb": "錄音帶播放出一位祖母的笑聲，也揭露字典不會教人的事：有些詞描述的不是東西，而是一種關係。",
+    "scene": "night",
+    "pages": [
+      {
+        "en": "The cassette began with a joke, then a conversation between two neighbors. The mysterious word was spoken when one family brought dinner to another after a difficult day. It did not name a dish. It described the act of arriving before anyone had to ask for help.",
+        "zh": "錄音帶先傳出一個笑話，接著是兩位鄰居對話。神祕的詞出現在某家人於困難的一天後替另一家送晚餐的時刻。它不是菜名，而是描述別人尚未開口求助之前，就先帶著食物出現的行為。"
+      },
+      {
+        "en": "Lin tried several metaphors, but none sounded natural in a dictionary. The visitor suggested inventing a polished English phrase. She resisted and asked him to articulate the meaning in his own words. Fluency was useful, yet a confident sentence could still distort what the speaker meant. Together they wrote a short explanation and kept the original word beside it.",
+        "zh": "Lin 試了幾個比喻，但沒有一個放進字典裡自然。訪客提議創造漂亮的英文片語，她沒有採納，而是請他用自己的話清楚表達意思。流利很有用，但自信的句子仍可能扭曲說話者原意。兩人一起寫下簡短說明，並保留原詞。"
+      },
+      {
+        "en": "The recording also contained the grandmother telling her grandson not to be ashamed of his accent. Lin added that passage to the translation with the family’s consent. The notebook was no longer just a puzzle. It had become a small part of a voice the grandson thought he had lost.",
+        "zh": "錄音還有祖母告訴孫子，不必為自己的口音感到羞愧的一段話。在家人同意下，Lin 把那段也加進翻譯。筆記不再只是謎題，而成了孫子以為已失去的聲音的一小部分。"
+      }
+    ],
+    "quiz": [
+      {
+        "q": "When is the mysterious word spoken?",
+        "opts": [
+          "When a clock is repaired",
+          "When a train departs",
+          "When someone buys a dictionary",
+          "When food arrives before help is requested"
+        ],
+        "a": 3,
+        "why": "詞語描述別人還未求助、有人就先送餐上門。"
+      },
+      {
+        "q": "Why does Lin keep the original word?",
+        "opts": [
+          "A polished phrase might distort its meaning",
+          "She cannot write English",
+          "The visitor dislikes recordings",
+          "The book has no space"
+        ],
+        "a": 0,
+        "why": "漂亮的譯法也可能扭曲原意。"
+      },
+      {
+        "q": "What else is on the tape?",
+        "opts": [
+          "A museum ticket",
+          "Advice not to feel ashamed of an accent",
+          "A weather forecast",
+          "A court decision"
+        ],
+        "a": 1,
+        "why": "祖母勸孫子不要為口音羞愧。"
+      }
+    ],
+    "words": [
+      "metaphor",
+      "articulate",
+      "fluency"
+    ]
+  },
+  {
+    "id": "lv5-100",
+    "series": "第二十九部 · The Language Shop｜語言小店",
+    "title": "A Shop That Stayed Open",
+    "zh": "沒有打烊的小店",
+    "blurb": "最後一天到了。Lin 沒能保住原來的店面，卻發現自己一直想保存的，本來就不只是那些書。",
+    "scene": "meeting",
+    "pages": [
+      {
+        "en": "On the final day, Lin held a small seminar about the notebook. Students asked questions, and neighbors brought recordings from their own families. She explained that no single curriculum could contain every way people used language. A dictionary was a guide, not a border around what could be understood.",
+        "zh": "最後一天，Lin 辦了一場關於筆記的小型講座。學生提問，鄰居帶來自家錄音。她解釋，沒有任何一套課程能包含人們使用語言的所有方式。字典是指南，而不是理解世界的邊界。"
+      },
+      {
+        "en": "A nearby library offered a space for the collection and agreed to preserve the recordings with permission from their owners. The shop’s sign would come down, but the work could continue. Lin began training volunteers to label each story carefully and note when a translation remained uncertain.",
+        "zh": "附近圖書館提供空間收藏資料，並同意在取得所有者許可後保存錄音。店招牌會拆下來，但工作可以繼續。Lin 開始訓練志工仔細標註每段故事，也記錄翻譯仍有不確定之處。"
+      },
+      {
+        "en": "As she locked the door, the visitor thanked her. He had arrived wanting one answer; he left with a way to ask better questions. Lin put the grandmother’s word on the first page of the new catalog. Beneath it she wrote: “Meaning is something we learn together.”",
+        "zh": "鎖門時，訪客向她道謝。他原本只想要一個答案，離開時卻學會了如何提出更好的問題。Lin 把祖母的詞放在新目錄第一頁，在下面寫道：「意義是我們一起學會的事。」"
+      }
+    ],
+    "quiz": [
+      {
+        "q": "What happens on the shop’s last day?",
+        "opts": [
+          "Lin hosts a small seminar",
+          "She sells the notebook in secret",
+          "The museum buys a ferry",
+          "The city stops using language"
+        ],
+        "a": 0,
+        "why": "Lin 辦了一場小型講座。"
+      },
+      {
+        "q": "Where will the collection continue?",
+        "opts": [
+          "At the observatory roof",
+          "At a nearby library",
+          "Inside the empty ferry",
+          "In the underground chapel"
+        ],
+        "a": 1,
+        "why": "附近圖書館提供保存空間。"
+      },
+      {
+        "q": "What does the visitor gain besides a translation?",
+        "opts": [
+          "A railway ticket",
+          "A new family name",
+          "A way to ask better questions",
+          "A free apartment"
+        ],
+        "a": 2,
+        "why": "他學會了更有方法地提問。"
+      }
+    ],
+    "words": [
+      "seminar",
+      "curriculum"
+    ]
+  },
+  {
+    "id": "lv5-101",
+    "series": "第三十部 · The Lighthouse That Lied｜說謊的燈塔",
+    "title": "A Light in the Wrong Direction",
+    "zh": "照錯方向的光",
+    "blurb": "暴風雨夜裡，廢棄燈塔突然亮起。海上船隻跟著光走，卻朝礁石靠近。",
+    "scene": "night",
+    "pages": [
+      {
+        "en": "When the coastal fog grew thick, a beam appeared from the abandoned lighthouse. Nessa, a trainee at the rescue station, watched its glare sweep across the harbor. Ships had been told to use a newer signal, yet one fishing vessel began to turn toward the old tower. The captain sounded confident; the chart showed open water, not the hidden reef.",
+        "zh": "濃霧籠罩海岸時，廢棄燈塔突然射出一道光。救援站實習生 Nessa 看著刺眼的光掃過港口。船隻早已被告知應使用新訊號，卻有一艘漁船開始轉向舊塔。船長聽起來很有把握；海圖上畫的是開闊水面，而不是暗藏的礁石。"
+      },
+      {
+        "en": "Nessa sent a warning over the radio, but interference broke her words into pieces. She could hear the crew argue while waves struck the hull. The vessel had only a narrow passage to safety. Her supervisor proposed waiting for a clearer signal; Nessa insisted that the immediate risk outweighed the danger of a false alarm.",
+        "zh": "Nessa 用無線電發出警告，但干擾把她的話切得斷斷續續。她聽見船員爭論，海浪正拍打船身。船隻只有一條狹窄水道能安全通過。主管提議等訊號清楚一點，Nessa 卻堅持眼前風險遠大於誤報的危險。"
+      },
+      {
+        "en": "A patrol boat reached the vessel before it struck the reef. Under its searchlight, the captain saw that the old beam pointed almost parallel to the shore, not toward the safe channel. Nessa felt relief, then a new question arose: who had restored power to a tower that had been empty for fifteen years?",
+        "zh": "巡邏艇在漁船撞上礁石前趕到。搜尋燈照射下，船長發現舊燈光幾乎與海岸平行，並沒有指向安全航道。Nessa 鬆了口氣，接著又冒出新疑問：是誰替一座已經空了十五年的塔恢復了電力？"
+      }
+    ],
+    "quiz": [
+      {
+        "q": "What makes the fishing vessel turn toward danger?",
+        "opts": [
+          "A beam from an abandoned lighthouse",
+          "A new weather report",
+          "A message from a nearby yacht",
+          "A broken engine"
+        ],
+        "a": 0,
+        "why": "漁船跟著廢棄燈塔的光轉向。"
+      },
+      {
+        "q": "Why does Nessa warn the vessel immediately?",
+        "opts": [
+          "The tower owner asks her to",
+          "She believes the immediate risk is too great",
+          "She wants to win a prize",
+          "She knows the captain personally"
+        ],
+        "a": 1,
+        "why": "她認為迫切危險不能等待。"
+      },
+      {
+        "q": "What mystery remains after the rescue?",
+        "opts": [
+          "Where the patrol boat will dock",
+          "Whether the harbor is crowded",
+          "Who powered the abandoned tower",
+          "Who owns the fishing boat"
+        ],
+        "a": 2,
+        "why": "沒有人知道誰讓廢棄燈塔重新亮起。"
+      }
+    ],
+    "words": [
+      "glare",
+      "interference",
+      "parallel"
+    ]
+  },
+  {
+    "id": "lv5-102",
+    "series": "第三十部 · The Lighthouse That Lied｜說謊的燈塔",
+    "title": "The Keeper Who Was Not There",
+    "zh": "不在場的守塔人",
+    "blurb": "塔門上鎖，屋內卻有新鮮腳印；舊守塔員早已去世，留下的卻是一份新日期的值班表。",
+    "scene": "paper",
+    "pages": [
+      {
+        "en": "The next morning, Nessa climbed the tower with a safety officer. Dust covered the staircase, but wet footprints marked a route to the control room. A rigid metal handle had been pulled down, reconnecting the power. The old keeper was gone, and the landlord who now held the property claimed nobody had entered.",
+        "zh": "隔天早上，Nessa 與安全員登塔。樓梯布滿灰塵，但濕腳印一路通往控制室。一支僵硬的金屬把手被扳下，重新接通電力。舊守塔人早已不在，現在持有建物的地主則聲稱無人進入。"
+      },
+      {
+        "en": "On a desk they found a notebook. Its pages comprised tides, dates, and notes about ships descending through the fog. Someone had underlined the phrase “a false horizon.” The notes were written in two different styles, as though one person had copied an older record and another had added a recent warning.",
+        "zh": "桌上有本筆記，記錄潮汐、日期與船隻在霧中航行的情況。有人畫線強調「錯誤的地平線」一詞。筆記有兩種不同的書寫方式，彷彿一個人抄錄舊紀錄，另一個人補上近期警告。"
+      },
+      {
+        "en": "The safety officer wanted to seal the room and call the event an act of vandalism. Nessa was not ready to make that declaration. A deliberate warning and a reckless attempt to attract ships could leave similar footprints. She photographed the notebook and requested the station’s old maintenance files.",
+        "zh": "安全員想封鎖房間，把事件定調為破壞行為。Nessa 還不願做出這項宣告。刻意警告與魯莽引船靠近，都可能留下相似腳印。她拍下筆記，要求調閱救援站舊維修檔案。"
+      }
+    ],
+    "quiz": [
+      {
+        "q": "What shows someone recently entered the tower?",
+        "opts": [
+          "A clean kitchen table",
+          "Wet footprints on the stairs",
+          "A new painting on the wall",
+          "A ringing telephone"
+        ],
+        "a": 1,
+        "why": "樓梯上的濕腳印顯示近期有人進入。"
+      },
+      {
+        "q": "What do the notes mention?",
+        "opts": [
+          "An unpaid hotel bill",
+          "A missing violin",
+          "A false horizon",
+          "A hidden train"
+        ],
+        "a": 2,
+        "why": "筆記特別標出「錯誤的地平線」。"
+      },
+      {
+        "q": "Why does Nessa avoid calling it vandalism?",
+        "opts": [
+          "She wants to destroy the notes",
+          "She has already caught the visitor",
+          "The tower has no doors",
+          "The same clues could support different motives"
+        ],
+        "a": 3,
+        "why": "相同線索可能對應不同動機，尚不能定論。"
+      }
+    ],
+    "words": [
+      "rigid",
+      "landlord",
+      "comprise",
+      "descend",
+      "underline",
+      "declaration",
+      "deliberate"
+    ]
+  },
+  {
+    "id": "lv5-103",
+    "series": "第三十部 · The Lighthouse That Lied｜說謊的燈塔",
+    "title": "The Old Map and the New Reef",
+    "zh": "舊圖與新礁石",
+    "blurb": "一份沒有正式發行的測量圖，讓 Nessa 明白塔光不是唯一的錯。",
+    "scene": "meeting",
+    "pages": [
+      {
+        "en": "At the archives, Nessa met Omar, a retired surveyor who had helped update the harbor chart. He spread two maps across the table. In the older version, the reef lay farther offshore. A later survey showed that a storm had moved large rocks, reducing the safe passage. The corrected map was never distributed to the small fishing fleet.",
+        "zh": "在檔案室，Nessa 見到協助更新港圖的退休測量員 Omar。他攤開兩張圖。舊版裡礁石更靠外海；後來的測量顯示暴風雨移動了巨石，縮小安全水道。但修正圖從未發送到小型漁船隊。"
+      },
+      {
+        "en": "Omar had advocated a temporary notice until the chart was revised. He was told that the report required another assessment and several signatures. The bureaucracy had prolonged the delay. He had returned to the lighthouse to draw attention to the hazard, but he had pointed its lamp the wrong way.",
+        "zh": "Omar 曾主張在海圖修訂前先發布臨時通知，卻被告知報告還需要另一輪評估和好幾個簽名。繁複行政程序拖長了延誤。他重返燈塔，想讓人注意危險，卻把燈照錯了方向。"
+      },
+      {
+        "en": "Nessa did not excuse his choice. A dangerous signal could not become acceptable simply because its intent was good. She persuaded Omar to share the raw survey data with the harbor team. Together they drafted a short warning that every captain could understand, including those without access to the newest digital maps.",
+        "zh": "Nessa 沒有替他的做法開脫。再好的用意，也不能讓危險訊號變得可以接受。她說服 Omar 與港務團隊分享原始測量資料。眾人共同擬出每位船長都看得懂的簡短警告，包括無法取得最新電子海圖的人。"
+      }
+    ],
+    "quiz": [
+      {
+        "q": "What changed the safe passage?",
+        "opts": [
+          "The lighthouse was repainted",
+          "The fishing fleet expanded",
+          "Rocks moved during a storm",
+          "A railway crossed the harbor"
+        ],
+        "a": 2,
+        "why": "風暴移動了岩石，縮小可安全通行的水道。"
+      },
+      {
+        "q": "Why did Omar return to the tower?",
+        "opts": [
+          "To sell the building",
+          "To film a concert",
+          "To steal a ship",
+          "To draw attention to an overlooked hazard"
+        ],
+        "a": 3,
+        "why": "他想讓大家正視未被處理的危險。"
+      },
+      {
+        "q": "What does Nessa ask Omar to provide?",
+        "opts": [
+          "The original survey data",
+          "A private family album",
+          "His old fishing license",
+          "The tower furniture"
+        ],
+        "a": 0,
+        "why": "她要求 Omar 分享原始測量資料。"
+      }
+    ],
+    "words": [
+      "fleet",
+      "advocate",
+      "bureaucracy",
+      "prolong",
+      "intent"
+    ]
+  },
+  {
+    "id": "lv5-104",
+    "series": "第三十部 · The Lighthouse That Lied｜說謊的燈塔",
+    "title": "A Warning That Reached Everyone",
+    "zh": "所有人都收到的警告",
+    "blurb": "港口終於改正資訊；Nessa 卻發現，真正需要修復的是發布警告的流程。",
+    "scene": "night",
+    "pages": [
+      {
+        "en": "The harbor authority issued a notice through radio, printed signs, and a simple phone service. The team checked each mode of delivery instead of presuming that one message would reach everyone. Nessa helped small-boat owners compare the revised chart with the older one; the new risk was noticeable even without technical training.",
+        "zh": "港務單位透過無線電、紙本告示與簡易電話服務發布通知。團隊逐一檢查傳遞方式，不再假設一則訊息人人都收得到。Nessa 協助小船船主比較新舊海圖，即使沒有技術訓練，也看得出新風險。"
+      },
+      {
+        "en": "Omar agreed to face the consequences of restoring the lamp. In exchange, the authority acknowledged that the earlier report had been delayed and created an accessible way to raise urgent safety concerns. The tower would remain dark, while its notebook became part of the public record.",
+        "zh": "Omar 同意承擔恢復燈光的後果。另一方面，港務單位也承認先前報告被延誤，並建立更容易使用的緊急安全通報方式。燈塔將維持熄燈，筆記則成為公開紀錄的一部分。"
+      },
+      {
+        "en": "One evening the rescued captain brought Nessa a photograph of his crew. She pinned it beside the maps. The picture was not a medal; it reminded her that a chart, a warning, and a single voice over the radio mattered only when they helped real people return home.",
+        "zh": "某晚，獲救的船長帶來船員合照。Nessa 把它釘在海圖旁。那不是獎章，而是提醒她：海圖、警告，以及無線電裡的一道聲音，只有能幫助真正的人平安回家，才有意義。"
+      }
+    ],
+    "quiz": [
+      {
+        "q": "How does the authority share its new warning?",
+        "opts": [
+          "Only through a private email",
+          "Only by replacing the lighthouse lamp",
+          "Through the old keeper’s notebook alone",
+          "Through several channels, not just one"
+        ],
+        "a": 3,
+        "why": "港務單位使用無線電、紙本與電話等管道。"
+      },
+      {
+        "q": "What does Omar agree to do?",
+        "opts": [
+          "Accept responsibility for using the lamp",
+          "Become the ferry captain",
+          "Hide the old survey",
+          "Sell the lighthouse"
+        ],
+        "a": 0,
+        "why": "Omar 同意承擔擅自恢復燈光的後果。"
+      },
+      {
+        "q": "Why does Nessa keep the photograph?",
+        "opts": [
+          "To decorate an empty hotel",
+          "To remember the people the warnings protect",
+          "To prove she owns the harbor",
+          "To advertise the new map"
+        ],
+        "a": 1,
+        "why": "照片提醒她安全資訊背後是真正的人。"
+      }
+    ],
+    "words": [
+      "mode",
+      "presume",
+      "noticeable"
+    ]
+  },
+  {
+    "id": "lv5-105",
+    "series": "第三十一部 · The Painting with Two Names｜兩個名字的畫",
+    "title": "The Signature Beneath the Signature",
+    "zh": "簽名底下的簽名",
+    "blurb": "修復師在畫作角落發現第二個簽名；拍賣會卻已經準備開始。",
+    "scene": "paper",
+    "pages": [
+      {
+        "en": "The museum received a contemporary painting for a charity auction. Its owner called it the final work of a famous artist. While checking a stain near the frame, restorer June noticed a thin line beneath the visible signature. Under a special light, another name appeared, written before the top layer had dried.",
+        "zh": "博物館收到一幅當代畫作，準備用於慈善拍賣。持有人聲稱那是某位知名畫家的遺作。修復師 June 檢查畫框附近的污漬時，發現可見簽名底下還有一條細線。特殊光線下，另一個名字浮現，而且是在表層顏料乾燥前寫下的。"
+      },
+      {
+        "en": "The auction house expected a large bid from a corporate collector. Its director asked June not to create a sensation from one uncertain mark. He offered a commission for her future work if the painting sold. June knew that an attractive offer could interfere with an independent judgment.",
+        "zh": "拍賣公司預期一家企業收藏家會出高價。主管要 June 別因一處不確定的痕跡製造轟動，還表示只要畫賣出去，就給她未來的工作抽成。June 明白，誘人的提議可能干擾獨立判斷。"
+      },
+      {
+        "en": "Instead of accusing anyone, she requested the artist’s old portfolio. One sketch showed the same strange curve found under the signature. The mystery was no longer whether the visible name was famous; it was why somebody had put it over another person’s work.",
+        "zh": "她沒有立刻指控任何人，而是索取畫家的舊作品集。其中一幅草圖帶有和底層簽名相同的奇怪曲線。謎團已不再是表層簽名的人有多出名，而是為何有人把它覆在另一人的作品上。"
+      }
+    ],
+    "quiz": [
+      {
+        "q": "What does June discover beneath the visible signature?",
+        "opts": [
+          "Another name",
+          "A bank account",
+          "A map of a harbor",
+          "A note about a hotel"
+        ],
+        "a": 0,
+        "why": "她在表層簽名下發現另一個名字。"
+      },
+      {
+        "q": "What does the auction director offer June?",
+        "opts": [
+          "A teaching certificate",
+          "A future commission",
+          "A train ticket",
+          "A new apartment"
+        ],
+        "a": 1,
+        "why": "主管以未來工作抽成利誘她。"
+      },
+      {
+        "q": "What helps June connect the hidden name to another artist?",
+        "opts": [
+          "A newspaper horoscope",
+          "A restaurant menu",
+          "A sketch in an old portfolio",
+          "A sound from the lighthouse"
+        ],
+        "a": 2,
+        "why": "舊作品集的草圖具有相同的特徵。"
+      }
+    ],
+    "words": [
+      "contemporary",
+      "stain",
+      "bid",
+      "corporate",
+      "sensation",
+      "commission",
+      "portfolio"
+    ]
+  },
+  {
+    "id": "lv5-106",
+    "series": "第三十一部 · The Painting with Two Names｜兩個名字的畫",
+    "title": "A Name Written in the Margin",
+    "zh": "寫在頁邊的名字",
+    "blurb": "被掩蓋的畫家仍在人世；她卻不肯讓 June 公開第二個簽名。",
+    "scene": "meeting",
+    "pages": [
+      {
+        "en": "June traced the hidden signature to Hana, a painter who had once assisted the famous artist. Hana now lived above a quiet salon and had avoided galleries for decades. When June showed her the photograph, Hana recognized the work at once. She did not seem surprised; she seemed exhausted.",
+        "zh": "June 查到隱藏簽名屬於 Hana，她曾是知名畫家的助理，如今住在一間安靜美容院樓上，多年未進畫廊。June 出示照片時，Hana 一眼就認出作品。她沒有顯得驚訝，反而一臉疲憊。"
+      },
+      {
+        "en": "Hana explained that the studio had been a place of fierce competition. She had painted the central figure, but the director claimed the style belonged to the famous artist. Hana was young and naive; she signed a document without understanding its implication for copyright. The paper gave the studio control over how the painting would be credited.",
+        "zh": "Hana 說工作室競爭激烈。畫面中央人物是她畫的，但主管聲稱那是知名畫家的風格。年輕又天真的 Hana 在沒弄懂著作權影響時簽下文件，讓工作室得以控制作品署名方式。"
+      },
+      {
+        "en": "June urged her to reveal the truth. Hana asked for time. “You see a stolen name,” she said. “I remember a job, a friend, and years I cannot get back.” June finally understood that restoring the painting and restoring the painter’s life were not the same task.",
+        "zh": "June 勸她說出真相，Hana 卻要求時間。「你看見的是被偷走的名字，」她說，「我想起的是工作、朋友，還有再也回不來的歲月。」June 終於理解，修復畫作與修復畫家人生不是同一回事。"
+      }
+    ],
+    "quiz": [
+      {
+        "q": "Who is Hana?",
+        "opts": [
+          "The newest collector",
+          "The painter behind the hidden signature",
+          "The auction house owner",
+          "The museum security guard"
+        ],
+        "a": 1,
+        "why": "Hana 是底層簽名的畫家。"
+      },
+      {
+        "q": "Why was the old document important?",
+        "opts": [
+          "It set the ticket price for the auction",
+          "It showed the painting was unfinished",
+          "It affected control of the painting’s credit",
+          "It recorded the salon’s opening hours"
+        ],
+        "a": 2,
+        "why": "文件影響了作品署名的控制權。"
+      },
+      {
+        "q": "Why does Hana hesitate to make the truth public?",
+        "opts": [
+          "She dislikes all paintings",
+          "She wants the auction to finish first",
+          "She cannot recognize the painting",
+          "The event is tied to painful personal history"
+        ],
+        "a": 3,
+        "why": "這件事牽涉她難以割捨的個人經歷。"
+      }
+    ],
+    "words": [
+      "salon",
+      "naive",
+      "implication",
+      "copyright"
+    ]
+  },
+  {
+    "id": "lv5-107",
+    "series": "第三十一部 · The Painting with Two Names｜兩個名字的畫",
+    "title": "The Price of an Explanation",
+    "zh": "一個解釋的代價",
+    "blurb": "拍賣倒數開始。June 必須在誠實與尊重當事人的意願之間找出方法。",
+    "scene": "paper",
+    "pages": [
+      {
+        "en": "The museum held a private meeting instead of announcing an accusation. Its legal adviser said that ownership, authorship, and permission were separate questions. A famous signature could raise the price, but it could not settle what the evidence meant. The charity trustees postponed the auction until the facts could be checked. The decision was controversial; some feared breaking a pledge to donors.",
+        "zh": "博物館召開私人會議，而非直接公開指控。法律顧問說明，所有權、作者身分與授權是不同問題。名人簽名也許能拉高價格，卻不能替證據下結論。慈善受託人決定延後拍賣，等事實釐清。這項決定引起爭議，有人擔心因此違背對捐款人的承諾。"
+      },
+      {
+        "en": "Hana agreed to let June examine the original studio records. Among them was a letter in which the famous artist acknowledged Hana’s contribution and asked the director to correct the label. The letter had never been sent. It did not erase every uncertainty, but it changed the balance of the evidence.",
+        "zh": "Hana 同意讓 June 查看工作室原始紀錄。其中一封信裡，知名畫家承認 Hana 的貢獻，並請主管更正標籤。那封信從未寄出。它沒有消除所有疑點，卻改變了證據的分量。"
+      },
+      {
+        "en": "The director called the delay a disaster and warned that the collector might withdraw the bid. June replied that a rational response required evidence, and the museum could not advertise a doubtful attribution as a certainty. If the institution wanted public trust, it had to make room for an inconvenient explanation.",
+        "zh": "主管稱延期是災難，警告收藏家可能撤回出價。June 回答，理性的回應必須依據證據，博物館不能把存疑的作者歸屬當成確定事實宣傳。若機構想得到大眾信任，就必須容得下不方便的解釋。"
+      }
+    ],
+    "quiz": [
+      {
+        "q": "Why is the auction postponed?",
+        "opts": [
+          "The museum closes for winter",
+          "The collector already owns it",
+          "The evidence needs to be checked",
+          "The painting has been destroyed"
+        ],
+        "a": 2,
+        "why": "博物館決定先釐清證據。"
+      },
+      {
+        "q": "What does the unsent letter acknowledge?",
+        "opts": [
+          "An overdue restaurant bill",
+          "A hidden lighthouse key",
+          "A new exhibition date",
+          "Hana’s contribution to the painting"
+        ],
+        "a": 3,
+        "why": "信件承認 Hana 對畫作的貢獻。"
+      },
+      {
+        "q": "What principle does June defend?",
+        "opts": [
+          "The museum must not present uncertainty as certainty",
+          "Every famous signature should be removed",
+          "Collectors should never buy art",
+          "Only the director may speak"
+        ],
+        "a": 0,
+        "why": "博物館不能把有疑問的歸屬說成確定。"
+      }
+    ],
+    "words": [
+      "controversial",
+      "pledge",
+      "donor",
+      "rational"
+    ]
+  },
+  {
+    "id": "lv5-108",
+    "series": "第三十一部 · The Painting with Two Names｜兩個名字的畫",
+    "title": "The Artist Who Could Say No",
+    "zh": "有權拒絕的畫家",
+    "blurb": "June 以為找到了正確標籤，就能讓 Hana 回來；Hana 卻提出一個更重要的條件。",
+    "scene": "night",
+    "pages": [
+      {
+        "en": "Hana wanted the museum to make a clear distinction between the old contract and her current choices. A lawyer could counsel her about the records, but no document could compel her to attend the opening. June agreed that the painter had the sole right to decide how much of her private history would be shared.",
+        "zh": "Hana 希望博物館清楚區分舊合約與她現在的選擇。律師可以就紀錄提供建議，卻沒有文件能強迫她出席開幕。June 同意，畫家有唯一的決定權，選擇要分享多少私人歷史。"
+      },
+      {
+        "en": "The curator proposed a short recording instead of a public interview. Hana chose to recite a few lines from her old sketchbook, then describe how she mixed the blue pigment. The recording would be available to visitors, but its remaining personal passages would stay in her custody.",
+        "zh": "策展人提議以短錄音取代公開訪談。Hana 選擇朗讀舊速寫本中的幾句文字，再說明自己如何調出藍色顏料。錄音可供參觀者聆聽，其餘私人段落則由她自行保管。"
+      },
+      {
+        "en": "June thought of the first hidden signature. She had begun with a quest for a correct name, but the painter needed more than a corrected label. She needed control of her own story. On opening day, June left an empty chair in the gallery, in case Hana wished to come.",
+        "zh": "June 想起最早發現的隱藏簽名。她原本只想找出正確的名字，畫家需要的卻不只是一張更正的標籤，而是能掌握自己的故事。開幕那天，June 在畫廊留了一張空椅子，讓 Hana 想來時可以坐。"
+      }
+    ],
+    "quiz": [
+      {
+        "q": "What does Hana insist on controlling?",
+        "opts": [
+          "Who owns the auction building",
+          "When the lighthouse is lit",
+          "The museum’s restaurant menu",
+          "How much of her private history is shared"
+        ],
+        "a": 3,
+        "why": "Hana 希望保有公開自己私人故事的選擇權。"
+      },
+      {
+        "q": "What does Hana record for the exhibition?",
+        "opts": [
+          "A few sketchbook lines and an explanation of her blue pigment",
+          "The auction director’s phone number",
+          "A list of shipping delays",
+          "A recipe for bread"
+        ],
+        "a": 0,
+        "why": "她錄下速寫本片段與藍色顏料的說明。"
+      },
+      {
+        "q": "Why does June leave an empty chair?",
+        "opts": [
+          "She expects a surprise collector",
+          "Hana can decide whether to attend",
+          "No one is allowed to sit",
+          "The painting requires repairs"
+        ],
+        "a": 1,
+        "why": "空椅子代表 Hana 可以自己決定是否出席。"
+      }
+    ],
+    "words": [
+      "counsel",
+      "compel",
+      "sole",
+      "recite",
+      "custody",
+      "quest"
+    ]
+  },
+  {
+    "id": "lv5-109",
+    "series": "第三十一部 · The Painting with Two Names｜兩個名字的畫",
+    "title": "The Auction That Did Not Happen",
+    "zh": "沒有舉行的拍賣",
+    "blurb": "畫沒有賣成，真正的故事卻終於能被看見。",
+    "scene": "meeting",
+    "pages": [
+      {
+        "en": "A revised exhibition label listed both artists and explained which parts of the painting remained disputed. Hana chose the wording herself, with assistance from an independent curator. The museum offered to display her contemporary work beside the old painting. She accepted only after confirming that she could withdraw her newer pieces later.",
+        "zh": "更新後的展覽標籤列出兩位畫家，並說明畫作仍有哪些爭議。Hana 在獨立策展人協助下自行決定用詞。博物館提議把她的近作放在舊畫旁展示；她先確認日後能撤下新作，才答應。"
+      },
+      {
+        "en": "The charity found another source of support and did not sell the disputed work. A visitor asked June whether the mystery had been solved. She said, “We know more, but the important question was never just which name was worth more.” The visible painting had not changed. The way people looked at it had.",
+        "zh": "慈善機構找到了其他支持來源，沒有賣掉這幅有爭議的畫。參觀者問 June 謎題是否解開，她說：「我們知道得更多了，但真正重要的問題從來不只是誰的名字比較值錢。」畫面沒有改變，人們看它的方式卻改變了。"
+      },
+      {
+        "en": "Hana returned on opening night and stood at the rear of the gallery. No one recognized her at first. Then a young student asked why she had chosen that particular shade of blue. Hana smiled and began to explain. For the first time in years, she was speaking about her art instead of defending her name.",
+        "zh": "開幕夜，Hana 站在畫廊後方，一開始沒有人認出她。後來一位學生問她為什麼選那種藍色，她笑了，開始解釋。多年來第一次，她談的是自己的藝術，而不是替自己的名字辯護。"
+      }
+    ],
+    "quiz": [
+      {
+        "q": "How does the revised exhibition label present the painting?",
+        "opts": [
+          "It lists both artists and unresolved questions",
+          "It removes every artist’s name",
+          "It claims the work was made yesterday",
+          "It gives the auction director all credit"
+        ],
+        "a": 0,
+        "why": "新標籤列出兩人並說明仍有疑點。"
+      },
+      {
+        "q": "What happens to the disputed painting?",
+        "opts": [
+          "It becomes a theater curtain",
+          "It remains unsold and is exhibited",
+          "It is secretly destroyed",
+          "It is shipped to the lighthouse"
+        ],
+        "a": 1,
+        "why": "畫作沒有出售，而是繼續展出。"
+      },
+      {
+        "q": "What changes for Hana at the end?",
+        "opts": [
+          "She refuses to enter any museum",
+          "She decides to stop painting forever",
+          "She can talk about her artistic choices",
+          "She leaves the country at once"
+        ],
+        "a": 2,
+        "why": "她終於能談作品本身，不再只為署名辯護。"
+      }
+    ],
+    "words": [
+      "rear"
+    ]
+  },
+  {
+    "id": "lv5-110",
+    "series": "第三十二部 · The Kitchen with No Clock｜沒有時鐘的廚房",
+    "title": "The Dinner Nobody Ordered",
+    "zh": "沒有人點的晚餐",
+    "blurb": "社區廚房收到一大箱食材，卻沒有訂單；隔天，它就要被迫關門。",
+    "scene": "meeting",
+    "pages": [
+      {
+        "en": "The community kitchen was about to close when a truck delivered a massive box of vegetables. Its label carried no sender, only the words “for the table at six.” Mina, the young cook, had no budget for extra meals and no idea who would arrive. The landlord wanted the building empty by morning.",
+        "zh": "社區廚房快打烊時，一輛卡車送來一大箱蔬菜。標籤沒有寄件人，只寫著「給六點鐘那桌」。年輕廚師 Mina 沒有多餘餐費預算，也不知道誰會來。房東則要求隔天早上清空建物。"
+      },
+      {
+        "en": "Mina found a handwritten note tucked between two bags of flour. It described a ritual: once a month, neighbors cooked together and left food for anyone who could not pay. The tradition had been neglected since the old manager retired. Now a donor was offering enough supplies for one final evening, but there was no promise of another.",
+        "zh": "Mina 在兩袋麵粉間找到手寫便條，上面描述一項傳統：每個月鄰居一起煮飯，留餐給付不起錢的人。自從前任經理退休，這項傳統就被忽略。如今有捐贈者提供最後一晚的食材，卻沒有下一次的承諾。"
+      },
+      {
+        "en": "Her colleague suggested selling the vegetables in bulk to cover the rent. Mina considered the idea. Then a child came to the door and asked whether the table at six still existed. He held two plates and would not say whom the second one was for. Mina opened the kitchen.",
+        "zh": "同事提議整批賣掉蔬菜支付房租。Mina 正在考慮，門口卻來了一個孩子，問六點鐘那桌還在不在。他拿著兩只盤子，卻不願說另一只要給誰。Mina 打開了廚房。"
+      }
+    ],
+    "quiz": [
+      {
+        "q": "What arrives without a clear sender?",
+        "opts": [
+          "A lighthouse map",
+          "A large box of vegetables",
+          "A painting for auction",
+          "A broken radio"
+        ],
+        "a": 1,
+        "why": "一大箱蔬菜送來，卻沒有清楚寄件人。"
+      },
+      {
+        "q": "What was the table at six used for?",
+        "opts": [
+          "Storing museum objects",
+          "Repairing bicycles",
+          "Sharing food with people who could not pay",
+          "Holding a monthly election"
+        ],
+        "a": 2,
+        "why": "那張桌子原是讓付不起錢的人也能吃飯。"
+      },
+      {
+        "q": "What causes Mina to open the kitchen?",
+        "opts": [
+          "The landlord changes his mind",
+          "The donor phones with a contract",
+          "A reporter arrives with a camera",
+          "A child asks if the table still exists"
+        ],
+        "a": 3,
+        "why": "孩子的問題讓 Mina 決定開門。"
+      }
+    ],
+    "words": [
+      "massive",
+      "ritual",
+      "offering",
+      "bulk"
+    ]
+  },
+  {
+    "id": "lv5-111",
+    "series": "第三十二部 · The Kitchen with No Clock｜沒有時鐘的廚房",
+    "title": "One Pot, Many Stories",
+    "zh": "一鍋與許多故事",
+    "blurb": "六點鐘的桌子逐漸坐滿。Mina 發現，每個人對「幫忙」都有不同的理解。",
+    "scene": "paper",
+    "pages": [
+      {
+        "en": "A retired nurse brought a jug of soup, and an amateur baker brought dough. An older man asked for food that would not upset his digestion. Mina checked each ingredient rather than presume that one meal worked for everybody. A visitor with an allergy needed a separate dish; another could not eat the spicy sauce.",
+        "zh": "退休護理師帶來一壺湯，業餘麵包師帶來麵糰。一位老人想吃不會造成消化不適的食物。Mina 仔細核對食材，沒有假設一餐適合所有人。一名過敏的訪客需要另外準備餐點，另一人則不能吃辣醬。"
+      },
+      {
+        "en": "The room grew noisy. One volunteer complained that those receiving dinner should perform a chore before eating. A second volunteer said compassion was not a wage. Mina did not treat the disagreement as proof that either person was selfish. She asked who had the capability to help without making a meal conditional on work.",
+        "zh": "房間漸漸吵起來。一位志工抱怨領餐的人應先做家事，另一位則說同情心不是工資。Mina 沒有把爭論當成誰自私的證據，而是問：誰有能力自願幫忙，且不把吃飯當成勞動的交換條件？"
+      },
+      {
+        "en": "By the time the first bowls were served, the child had brought his grandmother. She placed a small photograph on the table. It showed the kitchen decades ago, with the same worn chairs and a sign that read, “There is room for one more.” Mina recognized the former manager standing at the rear.",
+        "zh": "第一碗飯上桌時，孩子帶著祖母回來。她把一張小照片放在桌上，畫面是幾十年前的廚房，椅子一樣磨損，牆上寫著「還容得下一個人」。Mina 認出站在後面的前任經理。"
+      }
+    ],
+    "quiz": [
+      {
+        "q": "Why does Mina check the ingredients?",
+        "opts": [
+          "The vegetables are missing",
+          "The baker demands a prize",
+          "Different visitors have different dietary needs",
+          "She wants to judge the guests"
+        ],
+        "a": 2,
+        "why": "有過敏與飲食需求的客人，因此要核對食材。"
+      },
+      {
+        "q": "What are the volunteers arguing about?",
+        "opts": [
+          "Who owns the photograph",
+          "Which train to take home",
+          "Whether the kitchen needs new curtains",
+          "Whether people must work before receiving food"
+        ],
+        "a": 3,
+        "why": "他們爭論是否必須先勞動才能領餐。"
+      },
+      {
+        "q": "What does the photograph show?",
+        "opts": [
+          "The same kitchen many years earlier",
+          "The painting at the auction",
+          "An empty ferry",
+          "A mountain observatory"
+        ],
+        "a": 0,
+        "why": "照片拍的是多年前的同一間廚房。"
+      }
+    ],
+    "words": [
+      "jug",
+      "dough",
+      "digestion",
+      "chore",
+      "capability"
+    ]
+  },
+  {
+    "id": "lv5-112",
+    "series": "第三十二部 · The Kitchen with No Clock｜沒有時鐘的廚房",
+    "title": "The Cost of an Open Door",
+    "zh": "開著門的代價",
+    "blurb": "一次晚餐救不了明天；Mina 用兩週建立可行的計畫，讓六點鐘的桌子繼續有人坐下。",
+    "scene": "meeting",
+    "pages": [
+      {
+        "en": "The next day, the landlord presented the final bill. The kitchen’s finances had deteriorated, and sentiment alone could not pay the mortgage on the building. Mina did not ask for an impossible favor. She asked for two weeks to prepare a practical proposal and invited local businesses to inspect the kitchen.",
+        "zh": "隔天，房東拿出最後帳單。廚房財務惡化，光靠情感付不了建物的貸款。Mina 沒有要求不可能的恩惠，而是爭取兩週提出可行方案，並邀請在地商家實地查看。"
+      },
+      {
+        "en": "An accountant helped calculate a modest fee for a weekday lunch service, with donated meals set aside for the evening table. A nearby farmer offered vegetables at a lower price, while the baker agreed to oversee a small training program. Their first proposal was not sophisticated, but it matched their actual resources.",
+        "zh": "會計師協助計算平日午餐服務的合理收費，並保留捐贈餐點給晚間餐桌。附近農夫以較低價格供應蔬菜，麵包師同意負責小型培訓計畫。第一版提案並不精巧，卻符合他們真正擁有的資源。"
+      },
+      {
+        "en": "Some volunteers feared the fee would betray the original promise. Mina listened, then underlined a sentence in the old manager’s notebook: “Keep the door open tomorrow.” She said the kitchen had to survive as well as serve. The group agreed to publish clear accounts so everyone could see which meals were paid for and which were shared.",
+        "zh": "有些志工擔心收費背離初衷。Mina 聽完，在前經理筆記裡畫出一句：「讓明天的門也能開著。」她說廚房必須能存續，才能繼續服務。大家同意公開清楚帳目，讓每個人知道哪些餐點付費、哪些用來分享。"
+      },
+      {
+        "en": "At the end of two weeks, the proposal was accepted for a trial period. It was not a permanent rescue. Mina would need to review the accounts each month and adjust the menu when supplies changed. The landlord agreed to postpone the closure while the team met its agreed milestones.",
+        "zh": "兩週後，提案獲准進行試營運。這不是永久解套；Mina 每月都要檢查帳目，食材改變時也要調整菜單。只要團隊達成議定的階段目標，房東同意延後關閉。"
+      },
+      {
+        "en": "On the first paid lunch day, the child returned with his grandmother. They helped wash dishes, not because anybody compelled them, but because they wanted to. The grandmother pointed to the old photograph and laughed: the chairs had been repaired so many times that their legs were no longer the same color.",
+        "zh": "第一個收費午餐日，孩子與祖母又回來了。他們幫忙洗盤子，不是被強迫，而是自己願意。祖母指著舊照片笑了：椅子修了太多次，椅腳早已不是同一種顏色。"
+      },
+      {
+        "en": "At six, Mina turned on the light above the shared table. Someone had added a new line under the old sign: “And room for one more tomorrow.” She looked around at the people eating, talking, and listening to one another. The kitchen had not solved every problem. It had made another evening possible.",
+        "zh": "六點時，Mina 點亮共享餐桌上方的燈。有人在舊告示下加上一行：「明天也還容得下一個人。」她環顧那些吃飯、交談、互相傾聽的人。廚房並沒有解決所有問題，卻讓下一個夜晚成為可能。"
+      }
+    ],
+    "quiz": [
+      {
+        "q": "What does Mina ask the landlord for?",
+        "opts": [
+          "Free rent forever",
+          "A new restaurant in another town",
+          "Permission to sell the building",
+          "Two weeks to prepare a practical proposal"
+        ],
+        "a": 3,
+        "why": "她要求兩週準備可行方案。"
+      },
+      {
+        "q": "How does the new plan support the evening table?",
+        "opts": [
+          "Paid lunches help support donated meals",
+          "All donated meals are canceled",
+          "Only volunteers are allowed to eat",
+          "The kitchen becomes a gallery"
+        ],
+        "a": 0,
+        "why": "付費午餐與捐贈可協助維持晚間餐桌。"
+      },
+      {
+        "q": "Why does Mina quote the old notebook?",
+        "opts": [
+          "To argue against training",
+          "To emphasize keeping the kitchen sustainable",
+          "To claim the manager was dishonest",
+          "To hide the accountant’s figures"
+        ],
+        "a": 1,
+        "why": "她想強調廚房要能持續經營。"
+      },
+      {
+        "q": "What is approved after two weeks?",
+        "opts": [
+          "An auction of the kitchen",
+          "A move to the lighthouse",
+          "A trial period for the new plan",
+          "A permanent promise of free rent"
+        ],
+        "a": 2,
+        "why": "新提案獲准試行一段時間。"
+      },
+      {
+        "q": "Why do the child and grandmother help wash dishes?",
+        "opts": [
+          "They must work to receive food",
+          "The landlord orders them to",
+          "The baker will not let them leave",
+          "They choose to volunteer"
+        ],
+        "a": 3,
+        "why": "他們出於自願幫忙洗盤子。"
+      },
+      {
+        "q": "What is the final message of the story?",
+        "opts": [
+          "A workable plan can keep the table open tomorrow",
+          "Every meal should be expensive",
+          "A single dinner fixes every problem",
+          "The kitchen no longer needs anyone"
+        ],
+        "a": 0,
+        "why": "故事強調可持續的安排，讓分享能延續。"
+      }
+    ],
+    "words": [
+      "sentiment",
+      "mortgage",
+      "oversee",
+      "sophisticated",
+      "betray",
+      "milestone"
+    ]
+  },
+  {
+    "id": "lv5-113",
+    "series": "第三十三部 · The Cathedral Without an Echo｜沒有回音的教堂",
+    "title": "The Note Nobody Heard",
+    "zh": "沒有人聽見的音符",
+    "blurb": "古老教堂準備迎接最後一場音樂會，合唱團卻發現：某些音符會在空氣中消失。",
+    "scene": "paper",
+    "pages": [
+      {
+        "en": "The cathedral was famous for its choir. Visitors said every chord floated under the high ceiling for several seconds. On the evening before the annual concert, however, one note seemed to disappear. Lea, a young singer, watched the conductor stop the rehearsal. He asked everyone to repeat the passage, but the same note vanished again.",
+        "zh": "這座大教堂以合唱團聞名。訪客說，每個和弦都能在高聳的天花板下迴盪好幾秒。然而，在年度音樂會前一晚，一個音符彷彿消失了。年輕歌手 Lea 看見指揮停下排練。他請大家重唱那段旋律，同一個音符卻再度消失。"
+      },
+      {
+        "en": "The conductor blamed fatigue. A visiting musician disagreed: the singers were on pitch, and the strange silence appeared only near the eastern wall. Lea walked there and noticed a narrow crack beside a painted icon. A cold draft touched her face. The old building suddenly seemed less eternal than the stories people told about it.",
+        "zh": "指揮認為是疲勞造成的。來訪的音樂家卻不同意：歌手沒有走音，奇怪的寂靜也只出現在東牆附近。Lea 走過去，發現一幅聖像畫旁有條細縫。一陣冷風掠過她的臉。這座老建築忽然不像人們傳說中那麼永恆。"
+      },
+      {
+        "en": "When Lea pressed her palm against the wall, a quiet vibration reached her hand. There was no magic in it, but there was a mystery. The concert was scheduled for tomorrow, and the audience expected a fabulous performance. Lea wondered whether telling the manager about the crack would mean canceling the event.",
+        "zh": "Lea 把手掌貼上牆時，感受到細微的震動。那不是魔法，卻是一個謎。音樂會訂在明天，觀眾期待一場精彩演出。Lea 猶豫著：如果她把裂縫告訴管理員，是不是就得取消活動？"
+      }
+    ],
+    "quiz": [
+      {
+        "q": "What changes during the rehearsal?",
+        "opts": [
+          "The church loses electricity",
+          "One note repeatedly disappears near the eastern wall",
+          "The singers forget all the lyrics",
+          "The conductor cancels every concert"
+        ],
+        "a": 1,
+        "why": "問題是東牆附近某個音符反覆消失。"
+      },
+      {
+        "q": "What does Lea find beside the icon?",
+        "opts": [
+          "A missing ticket",
+          "A sleeping visitor",
+          "A crack and a cold draft",
+          "A new microphone"
+        ],
+        "a": 2,
+        "why": "她在聖像畫旁發現裂縫與冷風。"
+      },
+      {
+        "q": "Why is Lea uncertain about reporting the problem?",
+        "opts": [
+          "She wants to become conductor",
+          "She has lost the music",
+          "Nobody else heard the choir",
+          "The concert may be canceled"
+        ],
+        "a": 3,
+        "why": "她擔心通報會導致明天的演出取消。"
+      }
+    ],
+    "words": [
+      "cathedral",
+      "choir",
+      "chord",
+      "fatigue",
+      "icon",
+      "eternal",
+      "fabulous"
+    ]
+  },
+  {
+    "id": "lv5-114",
+    "series": "第三十三部 · The Cathedral Without an Echo｜沒有回音的教堂",
+    "title": "The Room Beyond the Icon",
+    "zh": "聖像畫後面的房間",
+    "blurb": "裂縫後方不是空洞，而是一間被木板封住的房間；真正危險的可能不是聲音。",
+    "scene": "night",
+    "pages": [
+      {
+        "en": "Lea called a building specialist instead of hiding the crack. He inspected the exterior first, then asked to see the space behind the icon. An old plan showed a small room that had been sealed after a fire. The manager feared the discovery would arouse unnecessary alarm, but the specialist refused to assume that the wall was safe.",
+        "zh": "Lea 沒有隱瞞裂縫，而是打電話請建築專家來。他先檢查外牆，再要求看看聖像畫後方的空間。舊圖顯示，那裡有間火災後被封起來的小房間。管理員擔心這項發現引發不必要的恐慌，但專家拒絕在沒有確認前就假定牆壁安全。"
+      },
+      {
+        "en": "With permission, they removed one loose board. Beyond it lay a narrow passage full of dust. The wall had been weakened by water, and part of the ceiling needed support. Lea felt awe at the hidden architecture, yet she remembered the people who would sit below it tomorrow. Admiration could not replace a proper inspection.",
+        "zh": "得到許可後，他們拆下一塊鬆動的木板。後方是一條積滿灰塵的狹窄通道。牆面長期受潮變弱，部分天花板需要支撐。Lea 為隱藏的建築構造感到驚嘆，但也想起明天會坐在下方的觀眾。欣賞之情不能取代正式檢查。"
+      },
+      {
+        "en": "They postponed the concert and moved rehearsal to a nearby hall. Some people complained, but the choir stayed together. The specialist explained that the lost sound had been a clue: the new opening changed how certain notes traveled. The empty room had been speaking in the only way it could.",
+        "zh": "他們將音樂會延期，並把排練搬到附近的禮堂。有些人抱怨，但合唱團沒有散。專家解釋，那個消失的音符其實是線索：新的開口改變了某些聲音的傳播方式。空房間只是用它唯一能做到的方式發出提醒。"
+      }
+    ],
+    "quiz": [
+      {
+        "q": "Why was the hidden room sealed?",
+        "opts": [
+          "It had been rented to tourists",
+          "The manager was storing tickets",
+          "A fire had occurred there years before",
+          "The choir needed a quiet studio"
+        ],
+        "a": 2,
+        "why": "舊圖顯示房間在火災後被封起來。"
+      },
+      {
+        "q": "What causes the structural concern?",
+        "opts": [
+          "The audience is too loud",
+          "The instruments are too heavy",
+          "The lighting is too bright",
+          "Water has weakened the wall and ceiling"
+        ],
+        "a": 3,
+        "why": "牆壁受潮，天花板需要支撐。"
+      },
+      {
+        "q": "What does the choir do after the inspection?",
+        "opts": [
+          "Postpones the concert and rehearses elsewhere",
+          "Performs despite the warning",
+          "Destroys the old music",
+          "Stops singing permanently"
+        ],
+        "a": 0,
+        "why": "合唱團延期演出並移往附近禮堂排練。"
+      }
+    ],
+    "words": [
+      "exterior",
+      "arouse",
+      "awe"
+    ]
+  },
+  {
+    "id": "lv5-115",
+    "series": "第三十三部 · The Cathedral Without an Echo｜沒有回音的教堂",
+    "title": "The Song After the Silence",
+    "zh": "寂靜之後的歌",
+    "blurb": "工程完成後，Lea 發現真正值得保留的不是建築的神祕感，而是大家願意把事說清楚。",
+    "scene": "meeting",
+    "pages": [
+      {
+        "en": "A month later, the choir returned. The repaired wall no longer swallowed the chord. Lea expected the manager to present her as a hero, but she asked him to highlight the specialist and the workers instead. They had dedicated long evenings to making the hall safe, even though no audience had applauded their work.",
+        "zh": "一個月後，合唱團回來了。修好的牆不再吞掉那個和弦。Lea 原以為管理員會把她當成英雄介紹，但她請他特別感謝專家和工人。他們為了安全投入許多夜晚，雖然工作時沒有觀眾鼓掌。"
+      },
+      {
+        "en": "Before the first song, Lea addressed the crowd. She said devotion to an old place did not mean pretending it could never change. The cathedral could survive because people were willing to examine what frightened them. From the back row, a child asked whether the room was still there. Lea smiled and said it was, but now everybody knew about it.",
+        "zh": "第一首歌開始前，Lea 向觀眾說話。她說，熱愛一個古老的地方，不代表假裝它永遠不會改變。這座教堂能繼續存在，是因為有人願意檢查令人不安的事情。後排一個孩子問那間房間還在不在。Lea 笑著說還在，只是現在每個人都知道它了。"
+      },
+      {
+        "en": "The choir began with the troublesome chord. It rose, filled the building, and faded naturally. Lea listened until the last sound was gone. This time the silence did not terrify her. It meant the song had finished, and the building was ready for another one.",
+        "zh": "合唱團以那個曾出問題的和弦開場。聲音升起、充滿整座建築，再自然消散。Lea 一直聽到最後一點聲音消失。這次寂靜沒有讓她害怕。它只代表歌曲唱完，而建築已經準備好迎接下一首。"
+      }
+    ],
+    "quiz": [
+      {
+        "q": "Whom does Lea ask the manager to thank?",
+        "opts": [
+          "Only the ticket sellers",
+          "The anonymous caller",
+          "The visiting tourists",
+          "The specialist and workers who made the building safe"
+        ],
+        "a": 3,
+        "why": "她希望表揚實際完成安全工作的專家與工人。"
+      },
+      {
+        "q": "What does Lea say about caring for an old place?",
+        "opts": [
+          "It includes examining problems rather than denying them",
+          "It means refusing every repair",
+          "It requires hiding dangerous rooms",
+          "It depends on the ticket price"
+        ],
+        "a": 0,
+        "why": "她認為珍惜老地方也包括正視問題。"
+      },
+      {
+        "q": "Why is the final silence different for Lea?",
+        "opts": [
+          "The eastern wall collapses again",
+          "It follows a song in a now-safe building",
+          "The choir has forgotten how to sing",
+          "The audience has left forever"
+        ],
+        "a": 1,
+        "why": "寂靜不再表示危險，而是樂曲自然結束。"
+      }
+    ],
+    "words": [
+      "highlight",
+      "dedicate",
+      "devotion",
+      "terrify"
+    ]
+  },
+  {
+    "id": "lv5-116",
+    "series": "第三十四部 · The Orchard Under Glass｜玻璃下的果園",
+    "title": "Fruit Without Seeds",
+    "zh": "沒有種子的果實",
+    "blurb": "溫室長出幾乎完美的果實，實習研究員卻發現傳粉昆蟲正在一隻隻消失。",
+    "scene": "paper",
+    "pages": [
+      {
+        "en": "The orchard under glass produced extraordinary fruit. Every apple had a smooth surface, and every tree seemed healthy. Yet biologist Noor noticed a pattern the promotional photographs did not show: the visiting insects had become rare. The garden director said the new nutrient mixture was simply boosting growth, but Noor asked to examine the full ecology of the greenhouse.",
+        "zh": "玻璃溫室裡的果園結出不尋常的漂亮水果。每顆蘋果表皮都很光滑，每棵樹看起來都健康。然而，生物學家 Noor 注意到宣傳照片沒有呈現的規律：來訪昆蟲越來越少。園長說新的營養配方只是促進生長，但 Noor 要求檢查整座溫室的生態。"
+      },
+      {
+        "en": "At the base of one tree she found a dead moth. Another lay beneath a lamp. The staff had introduced a spray to discourage a predator that ate young leaves. Noor wondered whether the spray also harmed harmless insects. If the pollinators disappeared, the orchard might produce beautiful fruit today but fail to sow a new generation tomorrow.",
+        "zh": "她在一棵樹下發現一隻死蛾，另一隻躺在燈下。員工曾引入一種噴劑來驅趕吃嫩葉的掠食者。Noor 懷疑噴劑是否也傷害無害昆蟲。如果傳粉昆蟲消失，果園今天也許結得出漂亮果實，明天卻可能無法孕育新一代。"
+      },
+      {
+        "en": "The director dismissed the concern as pessimism. Noor collected samples instead of arguing. A small test suggested the spray left a toxic residue on flowers. She had no final conclusion yet, but she knew that an attractive surface could conceal a serious problem.",
+        "zh": "園長把她的擔心當成悲觀想法。Noor 沒有爭辯，而是採集樣本。初步檢驗顯示噴劑可能在花朵上留下有毒殘留。她還沒有最終結論，但明白漂亮的外表可能掩蓋嚴重問題。"
+      }
+    ],
+    "quiz": [
+      {
+        "q": "What worries Noor despite the healthy-looking trees?",
+        "opts": [
+          "The disappearance of visiting insects",
+          "A shortage of glass panels",
+          "An increase in tourist tickets",
+          "The director leaving the orchard"
+        ],
+        "a": 0,
+        "why": "她擔心來訪昆蟲正在消失。"
+      },
+      {
+        "q": "Why was the spray introduced?",
+        "opts": [
+          "To make fruit grow blue",
+          "To discourage a leaf-eating predator",
+          "To improve the flavor of apples",
+          "To clean the floor"
+        ],
+        "a": 1,
+        "why": "噴劑原本用來驅趕吃嫩葉的掠食者。"
+      },
+      {
+        "q": "What does the preliminary test suggest?",
+        "opts": [
+          "The lamps are completely safe",
+          "There are no insects in the region",
+          "A toxic residue may remain on flowers",
+          "Every apple contains a new seed"
+        ],
+        "a": 2,
+        "why": "初步檢驗指向花朵上可能殘留有毒物質。"
+      }
+    ],
+    "words": [
+      "extraordinary",
+      "nutrient",
+      "boost",
+      "ecology",
+      "predator",
+      "sow",
+      "pessimism",
+      "toxic"
+    ]
+  },
+  {
+    "id": "lv5-117",
+    "series": "第三十四部 · The Orchard Under Glass｜玻璃下的果園",
+    "title": "The Smallest Workers",
+    "zh": "最小的工作者",
+    "blurb": "修復生態不是把壞掉的部分換掉就好：花、昆蟲、土壤和人都牽連在一起。",
+    "scene": "meeting",
+    "pages": [
+      {
+        "en": "Noor brought the findings to the agricultural team. A genetic specialist explained that the orchard grew several varieties, and each depended on pollination in a different way. Calcium and other minerals mattered, but nutrition alone could not replace insects. A flower was not a machine that turned fertilizer directly into fruit.",
+        "zh": "Noor 把發現交給農業團隊。一位遺傳學專家解釋，果園種了好幾個品種，各自依賴不同方式的授粉。鈣和其他礦物質固然重要，但營養無法取代昆蟲。花不是一台只要把肥料放進去就會直接製造果實的機器。"
+      },
+      {
+        "en": "The director proposed buying insects from another region. Noor warned that such an intervention might introduce disease or disturb local species. She suggested stopping the spray, checking the soil, and allowing time to see whether the native pollinators returned. The proposal was slower than a dramatic rescue, but it could reveal what had actually gone wrong.",
+        "zh": "園長提議從別的地區買昆蟲。Noor 警告，這種干預可能帶進疾病，或干擾當地物種。她建議先停用噴劑、檢查土壤，再花時間觀察原生傳粉昆蟲是否回來。這個提案不像戲劇化救援那麼快，卻有機會找出真正出錯的地方。"
+      },
+      {
+        "en": "They placed small monitoring cards near the trees and recorded the insects they saw each morning. Some days the numbers stayed low. On others, a few bees returned. Noor asked the team not to celebrate a single good day as proof of recovery. The orchard needed a trend, not a photograph.",
+        "zh": "他們在樹旁放監測卡，每天早上記錄看見的昆蟲。有些日子數量仍然很低，有些日子則有幾隻蜜蜂回來。Noor 請團隊不要把單日的好消息當成復原證據。果園需要看見長期趨勢，而不是一張照片。"
+      }
+    ],
+    "quiz": [
+      {
+        "q": "Why is extra nutrition not enough?",
+        "opts": [
+          "The soil must be removed entirely",
+          "The trees also depend on pollination",
+          "Minerals make every bee extinct",
+          "All fruit should be seedless"
+        ],
+        "a": 1,
+        "why": "花朵仍需要傳粉，光靠營養不夠。"
+      },
+      {
+        "q": "What risk does Noor see in importing insects?",
+        "opts": [
+          "They would eat the glass walls",
+          "They would stop every tree growing",
+          "They could bring disease or disrupt local species",
+          "They would increase ticket prices"
+        ],
+        "a": 2,
+        "why": "外來昆蟲可能帶入疾病或破壞當地生態。"
+      },
+      {
+        "q": "Why does Noor avoid celebrating one good day?",
+        "opts": [
+          "She dislikes bees",
+          "The cards are expensive",
+          "The director refuses to count",
+          "Recovery needs a pattern over time"
+        ],
+        "a": 3,
+        "why": "她要看長期趨勢，不是單一天的結果。"
+      }
+    ],
+    "words": [
+      "genetic",
+      "calcium",
+      "nutrition",
+      "intervention"
+    ]
+  },
+  {
+    "id": "lv5-118",
+    "series": "第三十四部 · The Orchard Under Glass｜玻璃下的果園",
+    "title": "A Less Perfect Apple",
+    "zh": "不那麼完美的蘋果",
+    "blurb": "果皮不再完美，果園卻恢復活力。Noor 必須說服園長接受一種不適合廣告拍攝的成功。",
+    "scene": "paper",
+    "pages": [
+      {
+        "en": "Three months later, the first new fruit was smaller and less uniform. Some apples had scars left by harmless insects. The marketing team called the change a failure. Noor showed them a more significant number: native pollinators were returning, and seeds were forming inside the fruit. The orchard looked less perfect but had become more capable of renewing itself.",
+        "zh": "三個月後，新果實比較小，大小也不一致。有些蘋果留下無害昆蟲造成的小痕跡。行銷團隊說這是失敗。Noor 給他們看另一個更重要的數字：原生傳粉昆蟲正在回來，果實裡也開始形成種子。果園看起來沒那麼完美，卻更有能力自我延續。"
+      },
+      {
+        "en": "A child on a school visit pointed to an apple with a crooked shape and asked whether it was sick. Noor cut it open and showed the seeds. She said a fruit did not need to satisfy a photograph to be healthy. The child took a bite and declared it superb. The director laughed for the first time in weeks.",
+        "zh": "一個校外教學的孩子指著形狀彎曲的蘋果，問它是不是生病了。Noor 切開蘋果，讓他看裡面的種子。她說，水果不需要符合照片的標準才算健康。孩子咬了一口，說好吃極了。園長幾個星期來第一次笑出來。"
+      },
+      {
+        "en": "The orchard changed its advertisement. Instead of promising flawless fruit, it invited visitors to learn how the trees, soil, insects, and people depended on one another. Noor kept the first imperfect apple on her desk until it softened. Then she saved its seeds for the next season.",
+        "zh": "果園修改了廣告，不再承諾毫無瑕疵的水果，而是邀請訪客了解樹木、土壤、昆蟲與人如何互相依存。Noor 把第一顆不完美的蘋果放在桌上，直到它逐漸變軟。接著，她留下種子，準備下一季播種。"
+      }
+    ],
+    "quiz": [
+      {
+        "q": "What is the stronger sign of recovery?",
+        "opts": [
+          "The orchard has fewer visitors",
+          "The glass has been replaced",
+          "Pollinators are returning and seeds are forming",
+          "Every apple has become larger"
+        ],
+        "a": 2,
+        "why": "昆蟲回來與種子形成更能說明生態恢復。"
+      },
+      {
+        "q": "What does Noor show the child?",
+        "opts": [
+          "A photograph of a perfect apple",
+          "A new ticket office",
+          "A forbidden storage room",
+          "Seeds inside the oddly shaped apple"
+        ],
+        "a": 3,
+        "why": "她切開歪斜的蘋果，展示裡面的種子。"
+      },
+      {
+        "q": "How does the orchard change its message?",
+        "opts": [
+          "It explains relationships in the ecosystem",
+          "It promises all fruit will be identical",
+          "It hides the insects from visitors",
+          "It stops all school visits"
+        ],
+        "a": 0,
+        "why": "廣告改為介紹生態系中彼此依存的關係。"
+      }
+    ],
+    "words": [
+      "scar",
+      "superb",
+      "soften"
+    ]
+  },
+  {
+    "id": "lv5-119",
+    "series": "第三十五部 · The Patent With Two Names｜有兩個名字的專利",
+    "title": "An Invention on the Shelf",
+    "zh": "架上的發明",
+    "blurb": "新創公司的產品即將上市，實習生卻在舊資料夾中發現兩個名字寫在同一張設計圖上。",
+    "scene": "paper",
+    "pages": [
+      {
+        "en": "A small technology venture was preparing to sell an innovative water filter. Its founder, Theo, had secured a patent and promised investors a new retail product. During an inventory check, intern June found an early drawing behind a broken shelf. Two names appeared on it: Theo and a technician called Sal. The public announcement mentioned only Theo.",
+        "zh": "一家小型科技新創準備販售創新的濾水器。創辦人 Theo 已取得專利，並向投資人承諾將推出新的零售商品。盤點時，實習生 June 在壞掉的架子後找到早期設計圖。上面有兩個名字：Theo 和技術員 Sal。公開公告卻只提到 Theo。"
+      },
+      {
+        "en": "The shareholders wanted the launch to proceed. A delay could cost the company its first major contract. Theo told June that Sal had performed ordinary work and therefore did not belong in the invention story. June did not know whether the explanation was accurate. She asked for dated notebooks and the original design files before making a judgment.",
+        "zh": "股東希望產品照常上市。任何延誤都可能讓公司失去第一份大合約。Theo 告訴 June，Sal 只是做一般工作，所以不該出現在發明故事裡。June 不確定這種說法是否正確，因此要求先看有日期的筆記和原始設計檔，再做判斷。"
+      },
+      {
+        "en": "One page described the filter part that made the device different from its rivals. Sal had written the first version, but Theo had later improved it. June realized that the argument was not simply about praise. It might affect who could legally claim credit for the invention.",
+        "zh": "其中一頁描述了讓濾水器有別於競爭產品的關鍵零件。Sal 寫下最初版本，Theo 後來又做了改良。June 意識到，爭議不只是誰值得稱讚，也可能影響誰在法律上能主張對發明的貢獻。"
+      }
+    ],
+    "quiz": [
+      {
+        "q": "What does June discover?",
+        "opts": [
+          "A missing box of filters",
+          "A receipt for an airplane",
+          "A broken laboratory window",
+          "An early drawing with Theo and Sal named"
+        ],
+        "a": 3,
+        "why": "June 找到一張同時有兩個名字的早期設計圖。"
+      },
+      {
+        "q": "Why do shareholders want to avoid delay?",
+        "opts": [
+          "A major contract could be lost",
+          "They want to close the company",
+          "They dislike the filter color",
+          "They cannot find any customers"
+        ],
+        "a": 0,
+        "why": "延誤可能讓公司失去重要合約。"
+      },
+      {
+        "q": "What does June request before judging the claim?",
+        "opts": [
+          "A new advertising slogan",
+          "Dated notebooks and original design files",
+          "A celebrity endorsement",
+          "A larger office"
+        ],
+        "a": 1,
+        "why": "她先要求查核原始與具日期的紀錄。"
+      }
+    ],
+    "words": [
+      "venture",
+      "innovative",
+      "patent",
+      "retail",
+      "shareholder"
+    ]
+  },
+  {
+    "id": "lv5-120",
+    "series": "第三十五部 · The Patent With Two Names｜有兩個名字的專利",
+    "title": "The Price of a Signature",
+    "zh": "一個簽名的代價",
+    "blurb": "董事會要 June 簽字證明一切無誤；她得在保住工作與保住紀錄之間作選擇。",
+    "scene": "meeting",
+    "pages": [
+      {
+        "en": "The legal adviser said the question required a careful review of the patent claims, not a public argument in the hallway. June was asked to sign a statement saying that she had found no conflicting evidence. She refused, explaining that the documents raised questions she could not honestly ignore. Her manager warned that this stance might end her placement at the company.",
+        "zh": "法律顧問說，問題需要仔細審查專利主張，而不是在走廊公開爭論。有人要 June 簽下聲明，表示她沒有發現任何矛盾證據。她拒絕了，解釋這些文件提出了不能誠實忽略的問題。主管警告，這個立場可能讓她失去在公司的實習機會。"
+      },
+      {
+        "en": "Sal arrived that afternoon. He had never asked for a monopoly over the filter, he said, but he wanted his work acknowledged. Theo admitted that Sal had proposed the first key design while both had tested several alternatives. Their disagreement became easier to discuss once neither person pretended that the other had contributed nothing.",
+        "zh": "當天下午，Sal 到了。他說自己從未要求獨占濾水器，只希望自己的工作被承認。Theo 承認，Sal 最先提出關鍵設計，兩人之後又測試了幾種替代方案。當雙方不再假裝對方毫無貢獻時，爭議變得比較容易討論。"
+      },
+      {
+        "en": "The board postponed the launch for an independent review. June went home expecting to lose her internship. Instead, the legal adviser thanked her for keeping the record intact. An uncomfortable delay was cheaper than building a business on a false statement.",
+        "zh": "董事會決定延期上市，交由獨立人員審查。June 回家時以為自己會失去實習機會；沒想到法律顧問感謝她保住完整紀錄。一次不愉快的延期，仍比讓企業建立在不實聲明上代價更低。"
+      }
+    ],
+    "quiz": [
+      {
+        "q": "Why does June refuse to sign the statement?",
+        "opts": [
+          "The evidence raises unresolved questions",
+          "She has already sold the filter",
+          "She wants to become a celebrity",
+          "She believes all patents are invalid"
+        ],
+        "a": 0,
+        "why": "證據仍有疑點，她不能簽下沒有矛盾的聲明。"
+      },
+      {
+        "q": "What does Sal want?",
+        "opts": [
+          "The end of all research",
+          "Acknowledgment of his contribution",
+          "Sole control of every water filter",
+          "The company building"
+        ],
+        "a": 1,
+        "why": "Sal 希望自己的貢獻被承認。"
+      },
+      {
+        "q": "What does the board decide?",
+        "opts": [
+          "Fire every technician immediately",
+          "Give the prototype away without review",
+          "Delay the launch for an independent review",
+          "Delete the original files"
+        ],
+        "a": 2,
+        "why": "董事會延期並安排獨立審查。"
+      }
+    ],
+    "words": [
+      "stance",
+      "placement",
+      "monopoly"
+    ]
+  },
+  {
+    "id": "lv5-121",
+    "series": "第三十五部 · The Patent With Two Names｜有兩個名字的專利",
+    "title": "The Filter in the River",
+    "zh": "河裡的濾水器",
+    "blurb": "上市被延後，但真正需要乾淨水的人不能等；公司找到一種不靠隱瞞也能前進的方法。",
+    "scene": "meeting",
+    "pages": [
+      {
+        "en": "The review concluded that both inventors deserved to be named in the relevant documents. The company amended its records and revised the patent paperwork with professional help. It could no longer boast that one brilliant founder had done everything alone. Yet the correction strengthened trust among several partners who had been waiting for a clear answer.",
+        "zh": "審查認為兩位發明人都應在相關文件中列名。公司在專業協助下修正紀錄與專利文件。它不能再宣稱一位天才創辦人獨力完成一切；不過，這次修正讓幾個等待明確答案的合作夥伴更加信任公司。"
+      },
+      {
+        "en": "Meanwhile, a riverside school needed clean water. The team offered a supervised trial of the filter, with clear limits on what the prototype could do. Sal helped train the teachers, and Theo handled the manufacturing schedule. June recorded every problem the school reported instead of hiding complaints from future customers.",
+        "zh": "同時，一所河邊學校需要乾淨用水。團隊提供一場有人監督的濾水器試用，清楚說明原型能做到與做不到的事。Sal 幫忙訓練老師，Theo 管理生產時程。June 詳實記錄學校回報的每個問題，而不是把投訴藏起來。"
+      },
+      {
+        "en": "At the public launch, the screen showed the names of the entire team. June stood near the back, holding the first old drawing. She understood that an invention could have a future without erasing its past. The filter was useful, but so was an honest account of how it had been made.",
+        "zh": "正式上市時，螢幕列出整個團隊的名字。June 站在後排，手裡拿著最初的舊設計圖。她明白，發明可以有未來，而不必抹去過去。濾水器本身很有用，誠實記錄它如何被製造出來，同樣有價值。"
+      }
+    ],
+    "quiz": [
+      {
+        "q": "What does the review conclude?",
+        "opts": [
+          "The patent requires no documents",
+          "Both inventors should be named in the records",
+          "Neither inventor worked on the device",
+          "The school designed the filter"
+        ],
+        "a": 1,
+        "why": "審查認為相關文件應列出兩名發明人。"
+      },
+      {
+        "q": "Why does June record problems from the school trial?",
+        "opts": [
+          "To stop the product being tested",
+          "To replace the engineering team",
+          "To keep an honest record for improvements",
+          "To make the teachers feel guilty"
+        ],
+        "a": 2,
+        "why": "她記錄問題是為了誠實改進產品。"
+      },
+      {
+        "q": "What does June understand at the launch?",
+        "opts": [
+          "A patent guarantees perfect products",
+          "One person must receive all credit",
+          "Every delay means failure",
+          "A future need not erase the invention’s past"
+        ],
+        "a": 3,
+        "why": "未來不必建立在抹去過去的基礎上。"
+      }
+    ],
+    "words": [
+      "supervise"
+    ]
+  },
+  {
+    "id": "lv5-122",
+    "series": "第三十六部 · The Ticket to Nowhere｜通往無名之地的票",
+    "title": "No Country on the Form",
+    "zh": "表格上不存在的國家",
+    "blurb": "火車站裡，一位旅客的護照與車票完全有效，目的地卻在電子系統中消失了。",
+    "scene": "night",
+    "pages": [
+      {
+        "en": "Lina worked at an international rail terminal where travelers changed trains across the frontier. Late one evening, a passenger presented a valid passport, a visa, and a ticket to a border town. The customs computer rejected the destination. Its database showed an empty field where the town name should have been. The passenger had traveled this route every month for years.",
+        "zh": "Lina 在國際鐵路轉運站工作，旅客會在此換車跨越邊境。某天深夜，一位乘客出示有效護照、簽證與前往邊境小鎮的車票。海關電腦卻拒絕目的地，資料庫裡本應顯示鎮名的欄位竟然是空白。這名乘客多年來每個月都走這條路線。"
+      },
+      {
+        "en": "A clerk suggested changing the ticket to a nearby city. The passenger shook his head: his mother lived beyond that station and could not travel far. Lina checked the printed timetable, then called the railway office in the neighboring province. They confirmed the service was running. The problem belonged to the booking system, not to the traveler.",
+        "zh": "一位職員建議把車票改到附近城市。乘客搖頭：母親住在那座車站更遠的地方，不能走太遠。Lina 查過印製時刻表，再打電話給鄰近省分的鐵路辦公室。他們確認班車照常行駛。問題出在訂票系統，不是旅客。"
+      },
+      {
+        "en": "When she requested manual assistance, a supervisor warned that the train would soon depart. Lina chose to document the error and keep the passenger informed instead of inventing an answer. The train doors were closing, and nobody could yet explain why a real town had vanished from a digital form.",
+        "zh": "當她要求人工協助時，主管警告火車很快就要開了。Lina 選擇記錄錯誤並持續告知乘客情況，而不是編造答案。列車車門正在關上，卻沒有人能解釋為什麼一座真實城鎮會從電子表格裡消失。"
+      }
+    ],
+    "quiz": [
+      {
+        "q": "What problem does the passenger face?",
+        "opts": [
+          "The railway is closed for years",
+          "He has no ticket at all",
+          "The destination is missing from the computer",
+          "His passport has expired"
+        ],
+        "a": 2,
+        "why": "目的地在電腦中消失，而不是證件失效。"
+      },
+      {
+        "q": "Why does he reject a ticket to the nearby city?",
+        "opts": [
+          "He dislikes the currency there",
+          "The train lacks a dining car",
+          "He plans to visit a museum",
+          "His mother cannot travel far from her town"
+        ],
+        "a": 3,
+        "why": "他母親住得更遠，而且不方便移動。"
+      },
+      {
+        "q": "What does Lina confirm with the railway office?",
+        "opts": [
+          "The service is still running",
+          "The passenger has canceled his ticket",
+          "The town never existed",
+          "All trains require new visas"
+        ],
+        "a": 0,
+        "why": "鐵路辦公室確認班車照常運行。"
+      }
+    ],
+    "words": [
+      "rail",
+      "frontier",
+      "visa",
+      "customs",
+      "province"
+    ]
+  },
+  {
+    "id": "lv5-123",
+    "series": "第三十六部 · The Ticket to Nowhere｜通往無名之地的票",
+    "title": "The Station Between Names",
+    "zh": "兩個名字之間的車站",
+    "blurb": "Lina 找到更名公告與舊車站代碼，卻必須確認人工更正會不會造成真正的通關問題。",
+    "scene": "paper",
+    "pages": [
+      {
+        "en": "The railway office sent an old document. The border town had adopted a new official name, but one software system still used the former code. Another system had deleted it entirely. A diplomatic agreement had not caused the error; a careless data update had. Lina asked the customs officer to verify whether the passenger could cross under the current rules.",
+        "zh": "鐵路辦公室寄來一份舊文件。邊境小鎮已採用新的正式名稱，但一套軟體仍使用舊代碼，另一套則把它完全刪除。錯誤不是外交協議造成的，而是草率的資料更新。Lina 請海關人員確認，旅客是否符合現行通關規定。"
+      },
+      {
+        "en": "The officer checked the passenger’s citizenship and travel documents. They were valid. A local employee helped translate the town’s new name, and the railway accepted a corrected ticket. The passenger offered Lina a souvenir from his bag, but she declined; the best reward was seeing him reach the right platform before departure.",
+        "zh": "海關人員查核旅客的國籍與旅行文件，確認都有效。一位當地員工協助翻譯小鎮的新名稱，鐵路公司也接受更正後的車票。乘客想從背包拿紀念品送給 Lina，但她婉拒了；對她而言，最好的回報是看著他在發車前抵達正確月台。"
+      },
+      {
+        "en": "The next morning, Lina wrote a report. She recommended keeping historical place names linked to current ones and making human review accessible when a system returned an impossible result. A digital form could simplify travel, but it should not turn a familiar route into nowhere.",
+        "zh": "隔天早上，Lina 寫下報告。她建議保留舊地名與現行名稱的對應關係，並讓系統出現不合理結果時能方便進行人工覆核。電子表格可以簡化旅行，但不該把一條熟悉的路變成無名之地。"
+      }
+    ],
+    "quiz": [
+      {
+        "q": "What caused the missing destination?",
+        "opts": [
+          "A new border war",
+          "The passenger changing citizenship",
+          "An unpaid currency exchange",
+          "Inconsistent software updates after a town was renamed"
+        ],
+        "a": 3,
+        "why": "小鎮更名後，各系統更新不一致。"
+      },
+      {
+        "q": "What allows the passenger to continue?",
+        "opts": [
+          "Valid documents and a corrected ticket",
+          "A souvenir offered to the officer",
+          "A fake passport",
+          "A new railway through the mountains"
+        ],
+        "a": 0,
+        "why": "有效證件及更正後的車票讓他能繼續旅程。"
+      },
+      {
+        "q": "What improvement does Lina recommend?",
+        "opts": [
+          "Remove all station signs",
+          "Link old and new place names and allow human review",
+          "Delete all historical place names",
+          "Replace passports with tickets"
+        ],
+        "a": 1,
+        "why": "她建議新舊地名對照並提供人工覆核。"
+      }
+    ],
+    "words": [
+      "diplomatic",
+      "citizenship",
+      "souvenir",
+      "nowhere"
+    ]
+  },
+  {
+    "id": "lv5-124",
+    "series": "第三十七部 · The Sky Beneath the Floor｜地板下的星空",
+    "title": "The Stars That Fell Sideways",
+    "zh": "向側邊墜落的星星",
+    "blurb": "天文館即將重新開幕，星圖卻突然轉了九十度。最先發現原因的人，是整理舊座椅的工讀生。",
+    "scene": "night",
+    "pages": [
+      {
+        "en": "On the eve of reopening, the planetarium projected an astonishing sky. Every star appeared to slide sideways across the dome. The director blamed the laser, but Aya, a part-time assistant, noticed that the horizontal line marking the horizon had turned vertical. The audience would arrive tomorrow. She was told to conceal the failure until the equipment supplier came.",
+        "zh": "重新開幕前夕，天文館投射出令人驚訝的星空。所有星星彷彿沿著穹頂向側邊滑去。館長怪罪雷射設備，但兼職助理 Aya 發現，原本標示地平線的水平線竟變成垂直線。觀眾明天就會抵達，有人要她先掩蓋故障，等供應商前來。"
+      },
+      {
+        "en": "Aya found an antique star chart beneath a seat. Its paper was fragile, yet a penciled circle gave her insight: the projector was using the diameter of an old dome rather than the current one. It was an absurd explanation at first. Why would a new machine inherit numbers from a building that no longer existed?",
+        "zh": "Aya 在座椅下找到一張古老星圖。紙張脆弱，但一個鉛筆畫的圓讓她有了線索：投影機使用的是舊穹頂的直徑，而非現有建築的尺寸。這個解釋一開始荒謬得很。新機器為什麼會沿用已不存在的建築數據？"
+      },
+      {
+        "en": "She compared the chart with an archived file and found a clue in the metadata: the two locations had been swapped during an earlier transition. The sky was not moving strangely; the machine was drawing the right image on the wrong surface. Aya chose to tell the director before the first visitors entered.",
+        "zh": "她把星圖和封存檔案相比，在中繼資料裡找到線索：早前系統轉換時，兩個場館的位置被交換了。星星並沒有奇怪地移動；機器只是把正確影像畫在錯誤的表面上。Aya 決定在第一批觀眾入場前告訴館長。"
+      }
+    ],
+    "quiz": [
+      {
+        "q": "What is wrong with the star projection?",
+        "opts": [
+          "The building loses its roof",
+          "The audience changes the equipment",
+          "The horizon line is turned vertical",
+          "All the stars disappear permanently"
+        ],
+        "a": 2,
+        "why": "地平線方向錯誤，導致星圖看起來向側邊移動。"
+      },
+      {
+        "q": "What does the old chart suggest?",
+        "opts": [
+          "A planet has left the solar system",
+          "The concert has been canceled",
+          "The roof contains hidden water",
+          "A dimension from the former dome was reused"
+        ],
+        "a": 3,
+        "why": "舊星圖讓 Aya 懷疑系統沿用了舊穹頂的尺寸。"
+      },
+      {
+        "q": "What does Aya decide to do?",
+        "opts": [
+          "Tell the director before visitors arrive",
+          "Destroy the old chart",
+          "Keep the error secret forever",
+          "Ask the visitors to fix it"
+        ],
+        "a": 0,
+        "why": "Aya 決定入場前說出發現。"
+      }
+    ],
+    "words": [
+      "laser",
+      "horizontal",
+      "vertical",
+      "insight",
+      "diameter",
+      "transition"
+    ]
+  },
+  {
+    "id": "lv5-125",
+    "series": "第三十七部 · The Sky Beneath the Floor｜地板下的星空",
+    "title": "The Room with No Gravity",
+    "zh": "沒有重力的房間",
+    "blurb": "Aya 打開模擬器，發現星球的軌道不是故障，而是有人把教學資料和正式展覽混在一起。",
+    "scene": "paper",
+    "pages": [
+      {
+        "en": "The technician corrected the dome setting, but a second error appeared. A planet floated upward instead of following its orbit. Aya opened the teaching program and found an experimental model that had deliberately removed gravity. In that imaginary realm, particles drifted in an infinite loop. It was useful for explaining a scientific idea, but not for a realistic night sky.",
+        "zh": "技師改正穹頂設定後，又出現第二個錯誤。一顆行星向上漂浮，而不是沿軌道運行。Aya 打開教學程式，發現一個刻意移除重力的實驗模型。在那個想像領域裡，粒子會在無限循環中漂流。它適合解釋科學概念，卻不適合呈現真實夜空。"
+      },
+      {
+        "en": "The director wanted to delete the model immediately. Aya argued that deleting it would erase the lesson hidden in the mistake. She proposed separate labels and a clear transition between the scientific demonstration and the regular show. The technician agreed to integrate the two programs without pretending that their rules were identical.",
+        "zh": "館長想立刻刪掉模型。Aya 認為刪除會連同錯誤背後的教學價值一起抹掉。她提議分別標示，並在科學示範與一般展演之間設計清楚的轉換。技師同意整合兩套程式，但不會假裝它們遵循相同規則。"
+      },
+      {
+        "en": "During the rehearsal, a student asked whether light itself was a particle or a wave. Aya did not invent an easy answer. She directed him to a display that compared several ways scientists describe light. The student smiled: the room had become more interesting once the staff stopped acting as if every question were simple.",
+        "zh": "排練時，一位學生問光本身究竟是粒子還是波。Aya 沒有編造簡單答案，而是帶他看一個比較科學家如何描述光的展示。學生笑了：當工作人員不再假裝每個問題都很簡單時，這個房間反而更有趣。"
+      }
+    ],
+    "quiz": [
+      {
+        "q": "Why does a planet float upward?",
+        "opts": [
+          "A visitor presses the emergency button",
+          "The telescope points at the ocean",
+          "The sky chart is made of paper",
+          "An experimental model has no gravity"
+        ],
+        "a": 3,
+        "why": "實驗教學模型刻意移除了重力。"
+      },
+      {
+        "q": "What does Aya suggest?",
+        "opts": [
+          "Separate and clearly label the two programs",
+          "Delete all scientific explanations",
+          "Close the planetarium for a year",
+          "Replace the projector with paintings"
+        ],
+        "a": 0,
+        "why": "Aya 提議把教學模型與一般展演清楚區分。"
+      },
+      {
+        "q": "How does Aya answer the student?",
+        "opts": [
+          "She asks him to leave the room",
+          "She points him to a comparison display",
+          "She insists there are no difficult questions",
+          "She changes the subject to tickets"
+        ],
+        "a": 1,
+        "why": "她沒有假裝問題簡單，而是引導學生了解不同描述方式。"
+      }
+    ],
+    "words": [
+      "gravity",
+      "realm",
+      "particle",
+      "infinite",
+      "loop",
+      "integrate"
+    ]
+  },
+  {
+    "id": "lv5-126",
+    "series": "第三十七部 · The Sky Beneath the Floor｜地板下的星空",
+    "title": "An Honest Opening Night",
+    "zh": "誠實的開幕夜",
+    "blurb": "觀眾坐滿時，Aya 得決定要遮住那段不完美的示範，還是把它變成整場展覽的亮點。",
+    "scene": "meeting",
+    "pages": [
+      {
+        "en": "Opening night was crowded. The director introduced the new dome, then unexpectedly invited Aya to explain the earlier failure. She had to undertake a task she had never envisioned: describe the transformation of a believable sky into a strange one. The audience did not laugh at the staff. They leaned forward, curious about how an incorrect number could change an entire world.",
+        "zh": "開幕夜觀眾擠滿座位。館長介紹新穹頂後，意外邀請 Aya 解釋先前的失誤。她得承擔一項從未想過的任務：說明可信的星空如何變成奇異景象。觀眾沒有嘲笑工作人員，反而向前傾身，好奇一個錯誤數字怎麼改變整個世界。"
+      },
+      {
+        "en": "The technician displayed the two simulations side by side. On one side, familiar orbits followed the model with gravity; on the other, luminous particles wandered through an invented universe. Aya called the comparison a way to think, not a photograph of nature. She had learned that being articulate mattered more than sounding certain.",
+        "zh": "技師把兩種模擬並排顯示。一邊是依照重力模型運行的熟悉軌道；另一邊則是發光粒子在虛構宇宙中漫遊。Aya 說，這個比較是思考工具，不是自然界的照片。她明白，能清楚表達比裝得很有把握更重要。"
+      },
+      {
+        "en": "After the visitors left, the director offered Aya a permanent role helping design exhibits. She accepted, provided that the team would document future changes and invite questions. The stars above them had finally returned to their places. Yet the most important discovery was down on the floor: a better way to teach people who wanted to understand.",
+        "zh": "訪客離開後，館長邀請 Aya 正式參與展覽設計。她答應了，但希望團隊記錄日後修改，並鼓勵提問。頭頂星星終於回到應有位置；最重要的發現卻在地面上：他們找到更適合教導真正想理解的人們的方法。"
+      }
+    ],
+    "quiz": [
+      {
+        "q": "How does the audience react to the explanation?",
+        "opts": [
+          "They become curious about the error",
+          "They leave without listening",
+          "They demand a refund for the music",
+          "They insist that gravity is imaginary"
+        ],
+        "a": 0,
+        "why": "觀眾對錯誤的原因感到好奇。"
+      },
+      {
+        "q": "What does Aya say about the second simulation?",
+        "opts": [
+          "It was created by a visitor that morning",
+          "It is a thinking tool, not a photograph of nature",
+          "It proves real planets have no gravity",
+          "It must replace every astronomy lesson"
+        ],
+        "a": 1,
+        "why": "她清楚區分模型用途與自然界實況。"
+      },
+      {
+        "q": "What condition does Aya attach to her new role?",
+        "opts": [
+          "Keep the old building closed",
+          "Charge visitors for every question",
+          "Document changes and welcome questions",
+          "Never explain another mistake"
+        ],
+        "a": 2,
+        "why": "她希望記錄修改並鼓勵提問。"
+      }
+    ],
+    "words": [
+      "undertake",
+      "envision",
+      "transformation"
+    ]
+  },
+  {
+    "id": "lv5-127",
+    "series": "第三十八部 · The River That Looked Clean｜看起來乾淨的河",
+    "title": "The Fish That Would Not Return",
+    "zh": "不再回來的魚",
+    "blurb": "河水恢復清澈，魚卻不再洄游；一位野生動物研究員開始懷疑「乾淨」只是表面。",
+    "scene": "river",
+    "pages": [
+      {
+        "en": "Every spring, a rare mammal followed the fish upstream. This year the animals waited on the bank, but their prey never came. The river looked remarkably clear. Ravi, a young researcher, collected samples and noticed a thin film near a drainage pipe. The factory upstream reported normal operations, while villagers feared that the species might eventually become extinct.",
+        "zh": "每年春天，一種稀有哺乳動物會跟著魚群往上游移動。今年動物們在岸邊等待，獵物卻沒有出現。河水看起來格外清澈。年輕研究員 Ravi 採樣時，發現排水管附近有一層薄膜。上游工廠表示運作正常，村民卻擔心這種動物終將滅絕。"
+      },
+      {
+        "en": "One sample contained tiny particles suspended in a fluid. Ravi could not diagnose the whole river from a single bottle, so he asked another laboratory to review the evidence. A colleague suggested that a crude chemical mixture might dissolve in the water without changing its color. The idea was plausible, but they still needed a reliable comparison.",
+        "zh": "其中一份樣本有細小粒子懸浮在液體裡。Ravi 知道不能靠一瓶水就判定整條河的情況，因此請另一間實驗室覆核證據。同事提出，一種未精製的化學混合物可能溶於水中，卻不改變水色。這個想法有可能，但他們仍需要可靠的對照。"
+      },
+      {
+        "en": "Ravi returned to the old footbridge and found a faded sign about an abandoned channel. It might explain why the fish had changed direction. He mapped both routes instead of accusing anyone. The question was no longer simply whether the water was clear; it was whether the animals could still reach the places they needed.",
+        "zh": "Ravi 回到舊步橋，找到一塊褪色告示，提到一條廢棄水道。這或許能解釋魚群為何改道。他先畫出兩條路線，而不是直接指控任何人。問題不再只是河水清不清澈，而是動物是否還能抵達牠們需要的地方。"
+      }
+    ],
+    "quiz": [
+      {
+        "q": "What first makes Ravi suspicious?",
+        "opts": [
+          "The museum requests more visitors",
+          "The fish do not return despite clear water",
+          "The water turns bright red overnight",
+          "The bridge has been painted"
+        ],
+        "a": 1,
+        "why": "魚沒有回來，即使河看起來清澈。"
+      },
+      {
+        "q": "Why does Ravi request a second laboratory?",
+        "opts": [
+          "The first laboratory has closed forever",
+          "He is studying a different city",
+          "One bottle cannot establish the condition of the entire river",
+          "He wants to hide the film"
+        ],
+        "a": 2,
+        "why": "單一樣本不足以判斷整條河。"
+      },
+      {
+        "q": "What new clue does Ravi find?",
+        "opts": [
+          "A winning lottery ticket",
+          "A new railway timetable",
+          "A missing theater costume",
+          "An old sign about an abandoned channel"
+        ],
+        "a": 3,
+        "why": "舊告示指向可能改變魚群路徑的水道。"
+      }
+    ],
+    "words": [
+      "mammal",
+      "prey",
+      "extinct",
+      "fluid",
+      "diagnose",
+      "crude",
+      "dissolve"
+    ]
+  },
+  {
+    "id": "lv5-128",
+    "series": "第三十八部 · The River That Looked Clean｜看起來乾淨的河",
+    "title": "The Channel Behind the Wall",
+    "zh": "牆後面的水道",
+    "blurb": "數據把 Ravi 帶到一座水壩。他原以為是污染，卻發現問題比單一原因複雜得多。",
+    "scene": "paper",
+    "pages": [
+      {
+        "en": "Historical maps revealed that a low barrier had changed the river decades ago. The channel did not vanish; it was blocked during construction. The factory discharge was one concern, but the barrier could independently prevent fish from reaching their breeding grounds. Ravi refused to convert two separate clues into one convenient story.",
+        "zh": "歷史地圖顯示，數十年前一座低矮障礙物改變了河道。水道沒有消失，而是在施工時被堵住。工廠排水是一個疑慮，但障礙物本身也可能阻止魚到達繁殖地。Ravi 不願把兩條不同線索硬湊成一個方便的故事。"
+      },
+      {
+        "en": "At a public meeting, a fishery worker described lost income while an engineer explained the cost of changing the barrier. They disagreed about the immediate priority, yet reached a consensus on the first step: independent testing and a temporary passage for the migrating fish. Each group had a stake in the outcome.",
+        "zh": "公開會議上，漁業工作者談到收入損失，工程師則解釋修改障礙物的成本。雙方對優先事項意見不同，但對第一步達成共識：進行獨立檢測，並先設置供洄游魚群通過的臨時通道。每一方都與結果有切身關係。"
+      },
+      {
+        "en": "Ravi formed an alliance with the local school to count fish upstream. The students used photographs rather than assumptions. Their small initiative could not repair the entire river, but it would show whether the new passage worked. The river needed evidence, not a perfect-looking story about a single villain.",
+        "zh": "Ravi 和當地學校合作，統計上游魚量。學生使用照片，而不是憑猜測判斷。這個小小倡議無法修復整條河，卻能顯示新通道是否有效。河流需要的是證據，而非一個只有單一壞人的漂亮故事。"
+      }
+    ],
+    "quiz": [
+      {
+        "q": "What other problem is found besides possible discharge?",
+        "opts": [
+          "The bridge has collapsed",
+          "The rainfall has stopped forever",
+          "A barrier blocks fish migration",
+          "All the animals have moved to a museum"
+        ],
+        "a": 2,
+        "why": "另一個問題是障礙物阻止魚群洄游。"
+      },
+      {
+        "q": "What first step do the groups agree on?",
+        "opts": [
+          "Closing all schools",
+          "Replacing the river with a road",
+          "Publishing a single unsupported accusation",
+          "Independent testing and a temporary fish passage"
+        ],
+        "a": 3,
+        "why": "他們同意獨立檢測並先開放臨時通道。"
+      },
+      {
+        "q": "How will students help?",
+        "opts": [
+          "Count fish using photographs",
+          "Decide guilt without evidence",
+          "Build a new factory",
+          "Sell tickets to the fishery"
+        ],
+        "a": 0,
+        "why": "學生以照片記錄魚量。"
+      }
+    ],
+    "words": [
+      "convert",
+      "consensus",
+      "stake",
+      "alliance",
+      "initiative"
+    ]
+  },
+  {
+    "id": "lv5-129",
+    "series": "第三十八部 · The River That Looked Clean｜看起來乾淨的河",
+    "title": "The First Fish Upstream",
+    "zh": "第一條回到上游的魚",
+    "blurb": "臨時通道啟用後，所有人都期待一個好消息；Ravi 卻提醒他們，真正的證明需要時間。",
+    "scene": "river",
+    "pages": [
+      {
+        "en": "A week later, cameras recorded one fish passing the new channel. The students cheered, but Ravi cautioned that a single success did not prove a full recovery. The prospect of change was real, yet the problem could persist. The laboratory also reported a substance that required closer investigation. The team would continue monitoring the river while the relevant authorities reviewed the findings.",
+        "zh": "一週後，攝影機拍到一條魚通過新水道。學生們歡呼，但 Ravi 提醒，一次成功不代表整體已復原。改善的希望確實存在，但問題也可能持續。實驗室也報告一種需要進一步調查的物質。團隊會持續監測河川，相關主管機關則審查檢測結果。"
+      },
+      {
+        "en": "The fishery worker thanked the engineer for listening, and the engineer acknowledged that the original drawings had overlooked migration. They drafted a longer-term plan with measurable goals. It was neither a dramatic victory nor a neat ending: the prey had begun to return, while the mammal still waited downstream.",
+        "zh": "漁業工作者感謝工程師願意聆聽，工程師也承認舊設計忽略了洄游需求。他們擬定一份有可衡量目標的長期計畫。這不是戲劇性的勝利，也不是整齊的結局：獵物開始回來，但哺乳動物仍在下游等待。"
+      },
+      {
+        "en": "Ravi wrote the final line of his field journal: “Clear water was never the whole answer.” The students visited the bridge the following spring and saw more fish than before. They could not guarantee the future of every creature, but they had learned to look beyond the surface and ask what the river needed to remain alive.",
+        "zh": "Ravi 在野外日誌最後寫下：「清澈的水從來就不是完整答案。」隔年春天，學生回到橋上，看見比之前更多的魚。他們無法保證每種生物的未來，但學會了看穿表面，思考河流要如何才能持續有生命。"
+      }
+    ],
+    "quiz": [
+      {
+        "q": "What does the first fish passing through prove?",
+        "opts": [
+          "That all problems in the river are solved",
+          "That laboratory testing is unnecessary",
+          "That every mammal has returned",
+          "That the passage can work at least once"
+        ],
+        "a": 3,
+        "why": "一條魚通過只能證明通道至少成功運作一次。"
+      },
+      {
+        "q": "What does the engineer acknowledge?",
+        "opts": [
+          "Old plans overlooked migration",
+          "The camera footage was invented",
+          "The river contains no fish at all",
+          "The villagers wanted a new theater"
+        ],
+        "a": 0,
+        "why": "工程師承認舊設計忽略洄游。"
+      },
+      {
+        "q": "What lesson does Ravi record?",
+        "opts": [
+          "Every project needs a single villain",
+          "Clear-looking water is not the whole answer",
+          "Photographs always show every problem",
+          "A river can be repaired in one day"
+        ],
+        "a": 1,
+        "why": "表面清澈並不能說明河流整體健康。"
+      }
+    ],
+    "words": [
+      "prospect",
+      "persist"
+    ]
+  },
+  {
+    "id": "lv5-130",
+    "series": "第三十九部 · The Clinic After the Last Bus｜末班車後的診所",
+    "title": "The Appointment Nobody Could Keep",
+    "zh": "沒有人能準時的預約",
+    "blurb": "山區診所的預約紀錄完美，病人卻總是遲到。一名新來的助理發現，問題不在病人。",
+    "scene": "meeting",
+    "pages": [
+      {
+        "en": "At the mountain clinic, appointment records looked exceptional. Almost every patient had confirmed a time. Yet many arrived late or did not arrive at all. Noor, a new administrative assistant, learned that the last bus left before the evening appointments ended. The schedule assumed that every family owned a car.",
+        "zh": "山區診所的預約紀錄看起來非常出色，幾乎每位病人都確認了時間。然而，許多人遲到或根本沒到。新來的行政助理 Noor 發現，末班公車在晚間門診結束前就開走了。排班表假設每個家庭都有車。"
+      },
+      {
+        "en": "An older patient needed a therapist but could not travel twice in one week. A parent of a premature baby had to carry a bag of medication and a heavy stroller up the hill. Noor felt compassion, but she knew that good intentions could not replace safe clinical decisions. She asked the medical staff which appointments truly required in-person care.",
+        "zh": "一位年長病人需要心理或復健等治療師的服務，卻無法一週往返兩次。一位早產兒的家長得提著藥袋，還要推著沉重嬰兒車上坡。Noor 很同情他們，但知道善意不能取代安全的醫療判斷。她詢問醫療團隊，哪些預約確實需要親自到診。"
+      },
+      {
+        "en": "The manager called the problem a matter of discipline. Noor showed her a bus timetable and asked one question: “How can people conform to a schedule that does not leave them a way home?” The manager studied the page. For the first time, the clinic could see the gap between its excellent records and the lives outside its doors.",
+        "zh": "主管說問題出在病人不守紀律。Noor 拿出公車時刻表，問了一個問題：「如果排班表讓人無法回家，病人要怎麼遵守？」主管盯著那張紙。診所第一次看見漂亮紀錄與門外真實生活之間的落差。"
+      }
+    ],
+    "quiz": [
+      {
+        "q": "Why do many patients miss or arrive late to appointments?",
+        "opts": [
+          "The bus timetable conflicts with clinic hours",
+          "The clinic has moved to another country",
+          "No patients have confirmed times",
+          "The receptionist has lost the schedule"
+        ],
+        "a": 0,
+        "why": "公車時間與診所門診不相容。"
+      },
+      {
+        "q": "What does Noor ask the medical team?",
+        "opts": [
+          "How to close the bus station",
+          "Which visits must be in person",
+          "Which patient should be blamed",
+          "Whether all medication can be discarded"
+        ],
+        "a": 1,
+        "why": "她先請醫療團隊判斷哪些服務需要現場進行。"
+      },
+      {
+        "q": "What does the bus timetable reveal?",
+        "opts": [
+          "Every family owns a car",
+          "All patients live on the same street",
+          "The schedule ignores how patients travel home",
+          "The clinic needs more decorations"
+        ],
+        "a": 2,
+        "why": "時刻表暴露排班忽略交通現實。"
+      }
+    ],
+    "words": [
+      "exceptional",
+      "therapist",
+      "premature",
+      "medication",
+      "conform"
+    ]
+  },
+  {
+    "id": "lv5-131",
+    "series": "第三十九部 · The Clinic After the Last Bus｜末班車後的診所",
+    "title": "The List Written in Pencil",
+    "zh": "鉛筆寫的名單",
+    "blurb": "Noor 想改善排班，卻發現有些名字不能隨便移動：診斷、用藥與安全都有真正的界線。",
+    "scene": "paper",
+    "pages": [
+      {
+        "en": "The nurses reviewed the appointments with care. Some people needed an injection or another procedure at the clinic; others could discuss questions by phone if their clinician agreed. A patient with an allergic reaction required individual attention, not an automatic message. Noor made a pencil list so that no software rule would silently make a medical decision.",
+        "zh": "護理師仔細檢查預約。有些人需要到診所接受注射或其他處置；另一些人在醫療人員同意下，可以透過電話討論問題。對過敏反應的病人，則需要個別注意，而不是自動訊息。Noor 用鉛筆列出名單，避免讓軟體規則悄悄替醫療人員做決定。"
+      },
+      {
+        "en": "The doctor explained that a diagnosis and a prescription belonged to qualified clinicians. Noor could facilitate communication, but she could not prescribe medication or promise that a treatment would work. The boundary disappointed her for a moment, then reassured her: a useful system should make the right expert easier to reach, not pretend to be that expert.",
+        "zh": "醫師解釋，診斷和處方應由合格醫療人員負責。Noor 可以協助溝通，卻不能自行開藥或承諾治療效果。這個界線讓她一瞬間有些失落，隨即又感到安心：好的系統應讓人更容易找到正確專家，而不是假裝自己就是專家。"
+      },
+      {
+        "en": "Together they arranged earlier visits where appropriate, grouped some services on the same day, and offered a callback for people who missed the bus. The changes were modest, but the first week showed fewer missed appointments. Noor had not cured anyone. She had made it easier for patients and clinicians to meet.",
+        "zh": "大家合作，在適當情況下安排較早門診、把部分服務集中在同一天，並為錯過公車的人提供回電。改變不大，但第一週爽約次數減少了。Noor 沒有治好任何人；她只是讓病人和醫療人員更容易見面。"
+      }
+    ],
+    "quiz": [
+      {
+        "q": "Why does Noor keep a pencil list?",
+        "opts": [
+          "To stop patients using phones",
+          "To avoid software making hidden clinical decisions",
+          "To replace every doctor",
+          "To sell medical records"
+        ],
+        "a": 1,
+        "why": "她不希望軟體規則偷偷決定醫療事項。"
+      },
+      {
+        "q": "Who is responsible for diagnoses and prescriptions?",
+        "opts": [
+          "The bus driver",
+          "The patient’s neighbor",
+          "Qualified clinicians",
+          "The appointment software"
+        ],
+        "a": 2,
+        "why": "診斷及處方屬於合格醫療人員的專業工作。"
+      },
+      {
+        "q": "What change is seen in the first week?",
+        "opts": [
+          "All patients stop needing care",
+          "The clinic closes permanently",
+          "Every person buys a car",
+          "Fewer missed appointments"
+        ],
+        "a": 3,
+        "why": "更合適的安排減少爽約。"
+      }
+    ],
+    "words": [
+      "injection",
+      "allergic",
+      "prescription",
+      "facilitate",
+      "prescribe"
+    ]
+  },
+  {
+    "id": "lv5-132",
+    "series": "第三十九部 · The Clinic After the Last Bus｜末班車後的診所",
+    "title": "The Ride Home",
+    "zh": "回家的那班車",
+    "blurb": "第一位能準時搭回家的病人替 Noor 留了一張紙條，提醒她系統真正該衡量的不是表格。",
+    "scene": "night",
+    "pages": [
+      {
+        "en": "One evening, the older patient finished therapy with enough time to catch the bus. Before leaving, she handed Noor a short note. It said, “Today I did not have to choose between my appointment and getting home.” Noor kept it beside the computer rather than entering it as a new performance score.",
+        "zh": "某個傍晚，那位年長病人完成治療，還來得及搭公車。離開前，她交給 Noor 一張短紙條，上面寫著：「今天我不必在看診與回家之間二選一。」Noor 把紙條放在電腦旁，而不是把它變成新的績效分數。"
+      },
+      {
+        "en": "The manager invited patients to describe difficulties that the scheduling data could not show. Some needed a different language; others needed time to care for a spouse. The clinic could not remove every obstacle, but it stopped treating every missed visit as proof of indifference. It measured access alongside attendance.",
+        "zh": "主管開始邀請病人說出排班資料看不到的困難。有些人需要不同語言的協助，有些人得照顧配偶。診所無法排除每一個障礙，但不再把每次爽約都當成病人不在乎的證據。它開始同時衡量能否就醫與實際出席。"
+      },
+      {
+        "en": "Noor left after the last appointment and saw the bus waiting in the dusk. The driver recognized several patients from the clinic and waved. A good timetable was not a miracle, and it could not replace medical care. But for the people on that bus, it had made proper care possible in an ordinary, important way.",
+        "zh": "最後一個門診結束後，Noor 走出診所，看見公車在暮色中等候。司機認出好幾位診所病人，向他們揮手。好的時刻表不是奇蹟，也不能取代醫療；但對車上的人而言，它以平凡而重要的方式，讓適當照護變得可行。"
+      }
+    ],
+    "quiz": [
+      {
+        "q": "What does the patient’s note express?",
+        "opts": [
+          "The clinic must stop using computers",
+          "The doctor has given her a new car",
+          "She no longer has to choose between care and getting home",
+          "She wants every appointment canceled"
+        ],
+        "a": 2,
+        "why": "紙條表達她終於能兼顧看診與回家。"
+      },
+      {
+        "q": "What does the clinic begin to measure?",
+        "opts": [
+          "Only the number of late buses",
+          "The price of every nearby house",
+          "Only staff uniforms",
+          "Access as well as attendance"
+        ],
+        "a": 3,
+        "why": "診所開始同時衡量可近性與出席。"
+      },
+      {
+        "q": "What is the story’s central change?",
+        "opts": [
+          "The system begins reflecting patients’ real lives",
+          "Every medical problem is solved",
+          "The clinic replaces its clinicians",
+          "The bus disappears from the mountain"
+        ],
+        "a": 0,
+        "why": "排班開始考慮病人的實際生活。"
+      }
+    ],
+    "words": [
+      "therapy",
+      "spouse"
+    ]
+  },
+  {
+    "id": "lv5-133",
+    "series": "第四十部 · The Costume with Two Names｜兩個名字的戲服",
+    "title": "The Wig in the Locked Drawer",
+    "zh": "上鎖抽屜裡的假髮",
+    "blurb": "劇院準備重演經典作品，新人卻在舊戲服中找到另一位演員的名字。",
+    "scene": "paper",
+    "pages": [
+      {
+        "en": "The theater announced a revival of its most celebrated thriller. Everyone remembered the celebrity who had played the lead role. Mina, an apprentice costume maker, opened a locked drawer and found an elaborate wig beneath an old ticket. Two names were stitched inside: the famous actor’s and a woman whom the program had never mentioned.",
+        "zh": "劇院宣布重演最知名的驚悚劇。大家都記得當年的明星主角。見習服裝師 Mina 打開上鎖抽屜，找到一頂精緻假髮，下面壓著舊票根。內側縫著兩個名字：知名演員，以及節目單從未提過的一名女子。"
+      },
+      {
+        "en": "The director laughed and called it a trivial detail. He said audiences wanted glamour, not a lesson about the past. Mina studied the costume’s texture and found several repairs in different threads. The woman’s name appeared near every repair. Mina wondered whether the forgotten worker had created more of the character than anyone admitted.",
+        "zh": "導演笑稱那只是無關緊要的細節。他說觀眾想看華麗表演，不是來上歷史課。Mina 仔細摸著戲服的質地，發現不同線材修補的痕跡。每次修補旁都出現那名女子的名字。她懷疑，這位被忘記的工作者可能比大家承認的更深刻地塑造了角色。"
+      },
+      {
+        "en": "Mina asked the archive team for permission to inspect the rehearsal photographs. In one image, the unnamed woman wore the wig and stood at center stage. The caption described her only as a substitute. The picture raised a question no one at the theater was eager to answer: whose work had made the famous performance possible?",
+        "zh": "Mina 取得檔案團隊許可，查看排練照片。其中一張，那位沒有署名的女人戴著假髮站在舞台正中央。照片說明只稱她為替補。照片提出了劇院裡沒有人急著回答的問題：究竟是誰的工作成就了那場知名演出？"
+      }
+    ],
+    "quiz": [
+      {
+        "q": "What does Mina find inside the wig?",
+        "opts": [
+          "A train ticket to a mountain clinic",
+          "A new patent number",
+          "A broken telescope lens",
+          "Two stitched names"
+        ],
+        "a": 3,
+        "why": "假髮內側縫有兩個名字。"
+      },
+      {
+        "q": "What detail links the unknown woman to the costume?",
+        "opts": [
+          "Her name appears beside the repairs",
+          "She owns the current theater",
+          "She sold the entire script",
+          "She designed the building"
+        ],
+        "a": 0,
+        "why": "每次修補附近都有她的名字。"
+      },
+      {
+        "q": "How is the woman described in the archive caption?",
+        "opts": [
+          "As an astronomer",
+          "As a substitute",
+          "As the theater owner",
+          "As a reporter"
+        ],
+        "a": 1,
+        "why": "照片說明只稱她為替補。"
+      }
+    ],
+    "words": [
+      "thriller",
+      "celebrity",
+      "wig",
+      "texture"
+    ]
+  },
+  {
+    "id": "lv5-134",
+    "series": "第四十部 · The Costume with Two Names｜兩個名字的戲服",
+    "title": "A Different Kind of Applause",
+    "zh": "不一樣的掌聲",
+    "blurb": "Mina 找到被遺忘的舞台工作者，卻發現她不想替明星搶回掌聲，只希望工作被正確記錄。",
+    "scene": "meeting",
+    "pages": [
+      {
+        "en": "The woman, now retired, met Mina in a quiet café. She explained that she had rehearsed the role and adjusted the costume so that its movements looked natural. When the star became ill, she performed the opening night; later publicity used the star’s portrait and never corrected the record. She was not asking for revenge. She wanted an accurate account.",
+        "zh": "那名已退休的女子在安靜咖啡館與 Mina 見面。她說自己排練過角色，也調整戲服，讓動作看起來自然。明星生病時，她代演了首演之夜；後來宣傳卻使用明星肖像，從未更正紀錄。她不是要復仇，只希望留下準確的記載。"
+      },
+      {
+        "en": "Mina showed the director the ticket, photographs, and costume. A witty line about “two leading ladies for one ticket” briefly eased the tension, but the evidence deserved more than a joke. The theater agreed to amend the exhibition label and invite the retired performer to approve a short account of her contribution.",
+        "zh": "Mina 向導演展示票根、照片與戲服。一句「一張票看兩位女主角」的俏皮話短暫緩和了氣氛，但證據值得比笑話更認真的對待。劇院同意修改展覽標籤，並邀請那位退休演員確認一段簡短的貢獻說明。"
+      },
+      {
+        "en": "At the new opening, the audience read both names before the lights dimmed. Mina watched from backstage, still holding a needle and thread. She had entered the theater hoping to make beautiful clothes; she would stay to help tell the truth about the people who made them. This time, applause belonged to more than one visible face.",
+        "zh": "新的開幕夜，觀眾在燈光暗下前讀到了兩個名字。Mina 站在後台，手裡仍拿著針線。她原本進劇院是想做漂亮衣服，現在則願意留下，說出製作它們的人真正的故事。這次掌聲不只屬於那張被看見的臉。"
+      }
+    ],
+    "quiz": [
+      {
+        "q": "What does the retired performer want?",
+        "opts": [
+          "An accurate record of her contribution",
+          "To destroy the current theater",
+          "To prevent anyone from acting again",
+          "A new ticket office"
+        ],
+        "a": 0,
+        "why": "她要的是準確紀錄，不是復仇。"
+      },
+      {
+        "q": "What does the theater agree to do?",
+        "opts": [
+          "Hide the costume permanently",
+          "Correct the label with her input",
+          "Erase every production photograph",
+          "Cancel the entire genre of theater"
+        ],
+        "a": 1,
+        "why": "劇院同意更正標籤並請當事人確認說明。"
+      },
+      {
+        "q": "How does Mina’s purpose change?",
+        "opts": [
+          "She becomes a railway engineer",
+          "She refuses to speak with performers",
+          "She also wants to honor the makers behind the costumes",
+          "She decides to abandon every costume"
+        ],
+        "a": 2,
+        "why": "Mina 開始重視被忽略的幕後製作者。"
+      }
+    ],
+    "words": [
+      "witty"
+    ]
+  },
+  {
+    "id": "lv5-135",
+    "series": "第四十一部 · The Match Nobody Won｜沒有人贏的決賽",
+    "title": "The Arena with No Team",
+    "zh": "沒有球隊的競技場",
+    "blurb": "決賽前一天，曲棍球隊被告知主場將被出售；維修員卻發現，最重要的東西並不在球場上。",
+    "scene": "meeting",
+    "pages": [
+      {
+        "en": "The old hockey arena was crowded with volunteers preparing for the league final. Mina, the youngest equipment assistant, polished the benches while the players practiced. Then a letter arrived: the local franchise would move to another city after the match. The sponsor wanted a larger venue, and the owners believed the odds of saving this building were almost zero. Mina watched a boy press his face against the glass. He had come to see his sister play for the first time.",
+        "zh": "老曲棍球競技場擠滿準備聯盟決賽的志工。最年輕的裝備助理 Mina 擦亮長椅，球員則在練習。這時一封信送來：當地加盟球隊打完比賽就要搬到另一座城市。贊助商希望有更大的場地，經營者認為保住舊場館的機率幾乎是零。Mina 看著一個男孩把臉貼在玻璃上；他第一次來看姊姊比賽。"
+      },
+      {
+        "en": "The owners had calculated ticket sales but had never asked why the neighborhood came every weekend. The arena hosted free lessons for children, stored borrowed skates, and opened its warm hall when the buses stopped in winter. Mina found a ragged notebook in the equipment room. Each page recorded a person who had learned to skate here. The notebook was worth less than a new scoreboard, yet she could not imagine throwing it away.",
+        "zh": "經營者算過門票收入，卻從未問過鄰里為何每週都來。競技場為孩子提供免費課程、存放借用的冰鞋，冬天公車停駛時還會開放溫暖的大廳。Mina 在裝備室找到一本破舊筆記本，每一頁都記錄一位曾在這裡學滑冰的人。它的價值遠低於新計分板，但她無法想像把它丟掉。"
+      },
+      {
+        "en": "Her coach told her that the team could not simply ignore its contract. Mina agreed. She did not want a dramatic protest that would cancel the final and disappoint the players. Instead, she asked the volunteers to collect the stories behind the notebook before the last match began. If the building had a future, they would need to explain what it offered beyond the score.",
+        "zh": "教練告訴她，球隊不能直接無視合約。Mina 同意；她不想用激烈抗議取消決賽、讓球員失望。於是她請志工在最後一場比賽開始前，蒐集筆記本背後的故事。如果場館還有未來，他們就必須說明它提供的不只是比分。"
+      }
+    ],
+    "quiz": [
+      {
+        "q": "Why is the team planning to move?",
+        "opts": [
+          "The city has banned all hockey",
+          "The sponsor wants a larger venue",
+          "The ice has melted permanently",
+          "The players have refused to practice"
+        ],
+        "a": 1,
+        "why": "贊助商希望搬到較大的場館。"
+      },
+      {
+        "q": "What does Mina find in the equipment room?",
+        "opts": [
+          "An unopened letter from the referee",
+          "A box full of train tickets",
+          "A notebook about people who learned to skate",
+          "A secret second scoreboard"
+        ],
+        "a": 2,
+        "why": "筆記本記錄了在這裡學滑冰的人們。"
+      },
+      {
+        "q": "Why does Mina avoid calling for the final to be canceled?",
+        "opts": [
+          "She wants to sell the notebook",
+          "She has already bought another arena",
+          "She thinks the stories are unimportant",
+          "She does not want to disappoint the players"
+        ],
+        "a": 3,
+        "why": "她希望保留決賽，同時尋找其他解決辦法。"
+      }
+    ],
+    "words": [
+      "hockey",
+      "arena",
+      "league",
+      "franchise",
+      "venue",
+      "odds",
+      "ragged"
+    ]
+  },
+  {
+    "id": "lv5-136",
+    "series": "第四十一部 · The Match Nobody Won｜沒有人贏的決賽",
+    "title": "The Sponsor in the Back Row",
+    "zh": "最後一排的贊助商",
+    "blurb": "Mina 打算讓贊助商看看球場的另一種價值，但第一位發言的人卻不照她寫好的稿子說話。",
+    "scene": "meeting",
+    "pages": [
+      {
+        "en": "Before the match, Mina arranged a short meeting with the sponsor. She expected a polished speech, but the first speaker was the bus driver. He explained how the arena had kept children safe during a snowstorm. A former player spoke about returning after a long injury. The sponsor listened from the back row, uncomfortable with the attention. She had supported professional athletics for years, but had never visited this particular hall.",
+        "zh": "比賽前，Mina 安排了一場與贊助商的短會。她原本期待一篇漂亮演說，第一位上台的卻是公車司機。他說明暴風雪時競技場如何讓孩子安全等候。一位前球員則談到長期受傷後如何回到冰場。贊助商坐在最後一排聆聽，顯得有些不自在。她多年來支持職業運動，卻從未造訪這座大廳。"
+      },
+      {
+        "en": "One volunteer accused her of caring only about profits. Mina interrupted gently. A sponsorship agreement involved costs, and anger would not pay the electricity bill. She asked a different question: could the team relocate while the building remained a community venue? The sponsor requested a detailed proposal, including maintenance expenses and a plan for the children’s lessons. The idea was neither a promise nor a victory, but it gave the volunteers something practical to tackle.",
+        "zh": "一位志工指責贊助商只在意利潤。Mina 溫和地打斷他：贊助協議牽涉成本，生氣不會替大家付電費。她提出另一個問題：球隊搬走後，建築能不能繼續作為社區場地？贊助商要求詳細提案，包括維護支出與兒童課程計畫。這不是承諾，更不是勝利，但讓志工有了一件可以實際處理的事。"
+      },
+      {
+        "en": "That evening, the players came to the benches and added their own names to the notebook. They were sad about leaving, but several offered to return as volunteer coaches. Mina understood that keeping a place alive did not always mean keeping everything unchanged. The crowd was arriving. For the first time, she looked forward to the final without pretending she knew how it would end.",
+        "zh": "當晚球員走向長椅，在筆記本上留下自己的名字。他們對搬離感到難過，但幾人願意日後回來當志工教練。Mina 明白，讓一個地方延續，不一定等於讓所有東西永遠不變。觀眾正陸續入場；她第一次期待決賽，同時不假裝自己知道結局。"
+      }
+    ],
+    "quiz": [
+      {
+        "q": "Who speaks first at Mina’s meeting?",
+        "opts": [
+          "A television host",
+          "An opposing coach",
+          "A bus driver",
+          "A referee"
+        ],
+        "a": 2,
+        "why": "首先發言的是曾目睹場館作用的公車司機。"
+      },
+      {
+        "q": "What does the sponsor ask the volunteers to prepare?",
+        "opts": [
+          "A list of players to dismiss",
+          "A new professional team name",
+          "A demand to close every other arena",
+          "A plan with maintenance costs and lessons"
+        ],
+        "a": 3,
+        "why": "贊助商要求有支出與課程安排的具體提案。"
+      },
+      {
+        "q": "What do some players offer to do later?",
+        "opts": [
+          "Return as volunteer coaches",
+          "Cancel the final permanently",
+          "Take the notebook to another country",
+          "Replace every bus in the city"
+        ],
+        "a": 0,
+        "why": "部分球員願意日後回來教孩子。"
+      }
+    ],
+    "words": [
+      "athletics",
+      "sponsorship",
+      "tackle"
+    ]
+  },
+  {
+    "id": "lv5-137",
+    "series": "第四十一部 · The Match Nobody Won｜沒有人贏的決賽",
+    "title": "After the Last Goal",
+    "zh": "最後一球之後",
+    "blurb": "比賽終場，比分已經有了答案；Mina 最在意的另一場比賽，卻直到觀眾離場才開始。",
+    "scene": "meeting",
+    "pages": [
+      {
+        "en": "The final ended with a narrow loss. No trophy stood in the team’s dressing room. Mina expected the crowd to leave in silence, but people remained in the arena and passed the old notebook from row to row. An elderly woman recognized her father’s name beside a drawing of a pair of skates. The sponsor watched the pages fill, then spoke privately with the city staff about a smaller community lease.",
+        "zh": "決賽以些微差距落敗。球隊更衣室裡沒有獎盃。Mina 以為觀眾會沉默離去，人們卻留在競技場，一排排傳遞舊筆記本。一位老婦人認出父親的名字，旁邊還畫著一雙冰鞋。贊助商看著頁面逐漸寫滿，接著私下與市府人員商談較小規模的社區租約。"
+      },
+      {
+        "en": "The first proposal could not cover all the overhead costs. Rather than claim that affection would solve every problem, Mina joined the volunteers to redesign the timetable. Professional matches were leaving; beginner lessons, school events, and winter shelter could remain. The new arrangement required work and might still fail, but the door would not be locked the next morning.",
+        "zh": "第一份提案還不足以負擔所有經常性支出。Mina 沒有宣稱感情能解決一切，而是與志工重新設計使用時段。職業比賽即將離開，但初學者課程、學校活動與冬季避寒空間可以留下。新安排仍需要努力，也可能失敗，但隔天早上大門不會上鎖。"
+      },
+      {
+        "en": "The boy from the first day waited at the entrance with his sister. He asked whether this meant the team had won. Mina shook her head. “Not that match,” she said. “But you can still learn to skate here.” The boy smiled and stepped onto the ice, holding the rail with both hands. It was a modest ending, and to Mina it was worthy of a new page.",
+        "zh": "第一天那個男孩與姊姊一起等在入口。他問這是否代表球隊贏了。Mina 搖頭說：「那場沒有。但是你仍然可以在這裡學滑冰。」男孩笑著踏上冰面，雙手緊抓欄杆。這是個不轟烈的結局，對 Mina 而言卻值得翻開新的一頁。"
+      }
+    ],
+    "quiz": [
+      {
+        "q": "What is the result of the final?",
+        "opts": [
+          "The game is never played",
+          "The sponsor joins the team",
+          "The match ends without a score",
+          "The team loses by a small margin"
+        ],
+        "a": 3,
+        "why": "球隊以些微差距落敗。"
+      },
+      {
+        "q": "What is difficult about the first plan?",
+        "opts": [
+          "It cannot cover all the operating costs",
+          "No one wants to use the building",
+          "There are no volunteers",
+          "The notebook has vanished"
+        ],
+        "a": 0,
+        "why": "第一份計畫還無法支付全部經常性支出。"
+      },
+      {
+        "q": "What does the boy learn at the end?",
+        "opts": [
+          "He has won the trophy",
+          "He can still take skating lessons there",
+          "His sister has bought the team",
+          "The arena will become an airport"
+        ],
+        "a": 1,
+        "why": "即使職業球隊離開，孩子仍能在場館學滑冰。"
+      }
+    ],
+    "words": [
+      "overhead",
+      "worthy"
+    ]
+  },
+  {
+    "id": "lv5-138",
+    "series": "第四十二部 · Nine Clocks in One House｜一屋九鐘",
+    "title": "The Room No One Rented",
+    "zh": "沒人租過的房間",
+    "blurb": "一位旅館經理受託清點舊豪宅，卻發現九間套房裡，有一間從來不存在於住客名冊。",
+    "scene": "paper",
+    "pages": [
+      {
+        "en": "When her aunt died, Leila inherited a mansion that had once served as a small hotel. Every guest suite contained a clock, but all nine showed a different time. A caretaker said the clocks had stopped when the house closed. Leila planned to sell the furniture and keep a decent amount of money for repairs. While carrying a mattress downstairs, she found a narrow envelope sewn into its lining.",
+        "zh": "姑姑去世後，Leila 繼承了一棟曾經當過小旅館的豪宅。每間套房都有一座鐘，九座卻停在不同時間。管理員說旅館關閉後它們就停了。Leila 原本打算賣掉家具，留下足夠修繕的錢。她搬床墊下樓時，卻在內襯裡發現一封狹窄的信封。"
+      },
+      {
+        "en": "Inside was a guest list with eight names, although the booking ledger recorded nine rooms. The final entry had been crossed out with such force that the paper was almost torn. Leila first assumed someone had tried to forge a signature. Then she saw her aunt’s handwriting beneath the damage: “Ask why the ninth guest never left.” The words made the quiet house feel crowded.",
+        "zh": "信封裡是一張只有八個名字的住客名單，訂房帳本卻記錄九間房。最後一筆被用力劃去，紙幾乎破了。Leila 起初以為有人企圖偽造簽名，接著看見姑姑在破損處下方寫的字：「問問為什麼第九位客人從未離開。」這句話讓安靜的屋子彷彿擠滿了人。"
+      },
+      {
+        "en": "The caretaker warned her not to disturb the past. Leila did not believe the house was haunted, but she was not ready to dismiss the note. She carried the ledger to the kitchen, where sunlight made the fading ink easier to see. For the first time, she noticed that each stopped clock matched a date beside one of the names.",
+        "zh": "管理員警告她不要打擾過去。Leila 不相信房子鬧鬼，卻也不準備忽視紙條。她把帳本搬到廚房，陽光讓褪色墨跡更清楚。她第一次注意到，每座停擺的鐘，都對應一個名字旁的日期。"
+      }
+    ],
+    "quiz": [
+      {
+        "q": "What does Leila discover inside the mattress?",
+        "opts": [
+          "An envelope containing a guest list",
+          "A box of new hotel keys",
+          "A letter from the current mayor",
+          "A broken hockey stick"
+        ],
+        "a": 0,
+        "why": "床墊內襯藏有住客名單。"
+      },
+      {
+        "q": "Why is the list unusual?",
+        "opts": [
+          "It was written entirely in code",
+          "It has eight names despite nine rooms",
+          "It contains only addresses",
+          "Every guest has the same surname"
+        ],
+        "a": 1,
+        "why": "九間房卻只有八個名字。"
+      },
+      {
+        "q": "What is unusual about the clocks?",
+        "opts": [
+          "They have no hands",
+          "They were installed yesterday",
+          "Their stopped times correspond to dates",
+          "They all ring every morning"
+        ],
+        "a": 2,
+        "why": "停擺時間與帳本上的日期相呼應。"
+      }
+    ],
+    "words": [
+      "mansion",
+      "suite",
+      "decent",
+      "mattress",
+      "forge"
+    ]
+  },
+  {
+    "id": "lv5-139",
+    "series": "第四十二部 · Nine Clocks in One House｜一屋九鐘",
+    "title": "The Caretaker’s Errand",
+    "zh": "管理員的差事",
+    "blurb": "Leila 想查第九位住客，管理員卻要求她先替自己送一封信；收件地址竟是一間退休員工宿舍。",
+    "scene": "paper",
+    "pages": [
+      {
+        "en": "The caretaker asked Leila to run one errand before opening the locked suite: deliver a letter to a former employee. “She will know how to read the clocks,” he said. At the address, Leila met Mrs. Chen, an old woman who lived on a modest pension. She stared at the envelope but refused to take it until Leila explained why she had come.",
+        "zh": "管理員請 Leila 在打開上鎖套房前先跑一趟差事：替他送信給一位前員工。「她知道怎麼讀這些鐘。」他說。Leila 依地址找到陳女士，一位靠有限退休金生活的老婦人。她盯著信封，卻要求 Leila 先說明來意才肯收下。"
+      },
+      {
+        "en": "Mrs. Chen said the nine clocks were not a mystery game. The hotel had sheltered families after a flood, and each clock recorded the hour a room became safe again. The ninth suite had remained occupied long after the others emptied. Leila looked at the list, ashamed that she had treated every object as an item for sale. Yet Mrs. Chen hesitated when asked to name the final guest.",
+        "zh": "陳女士說，九座鐘不是解謎遊戲。洪災後旅館曾收容家庭，每座鐘記錄一間房恢復安全的時刻。第九間套房在其他人離開後仍有人居住。Leila 看著名單，為自己把一切都當成待售物品而羞愧。但問到最後一位客人的名字時，陳女士卻猶豫了。"
+      },
+      {
+        "en": "“Some people needed privacy more than a memorial,” she finally said. She agreed to return to the mansion, but only if Leila would hear the complete story before publishing anything. Leila promised. Back at the house, the caretaker handed her the ninth key without another warning.",
+        "zh": "「有些人需要的是隱私，不是紀念碑。」她終於說。她同意回豪宅，但條件是 Leila 在公開任何事情前，得先聽完整個故事。Leila 答應了。回到房子，管理員不再警告，直接交給她第九把鑰匙。"
+      }
+    ],
+    "quiz": [
+      {
+        "q": "Where does the caretaker send Leila?",
+        "opts": [
+          "To the sponsor’s office",
+          "To a former employee",
+          "To the city hockey arena",
+          "To a distant observatory"
+        ],
+        "a": 1,
+        "why": "管理員請她把信送給前員工。"
+      },
+      {
+        "q": "What did the clocks originally record?",
+        "opts": [
+          "The arrival of foreign tourists",
+          "The times of nine weddings",
+          "When each room became safe after a flood",
+          "When guests had to pay extra fees"
+        ],
+        "a": 2,
+        "why": "每座鐘記錄洪災後房間重新安全的時刻。"
+      },
+      {
+        "q": "What condition does Mrs. Chen set?",
+        "opts": [
+          "Sell every clock immediately",
+          "Never return to the mansion",
+          "Change the hotel name to hers",
+          "Hear the whole story before publishing it"
+        ],
+        "a": 3,
+        "why": "她要求先了解全部事實再公開。"
+      }
+    ],
+    "words": [
+      "errand",
+      "pension"
+    ]
+  },
+  {
+    "id": "lv5-140",
+    "series": "第四十二部 · Nine Clocks in One House｜一屋九鐘",
+    "title": "The Ninth Clock",
+    "zh": "第九座鐘",
+    "blurb": "第九間套房沒有鬼影，只有一把椅子和未寄出的信。真正被藏起來的不是人，而是他曾付出的代價。",
+    "scene": "night",
+    "pages": [
+      {
+        "en": "The locked suite contained a chair, a small suitcase, and a clock stopped at dawn. Mrs. Chen explained that the last guest was her brother. During the flood, he had stayed behind to help families climb from the flooded ground floor. He later developed a serious illness and could not work. The family had asked the hotel to keep his name private while they sought assistance.",
+        "zh": "上鎖套房裡有一把椅子、一只小行李箱，以及一座停在黎明的鐘。陳女士解釋，最後一位客人是她哥哥。洪災時，他留在一樓協助家庭從積水中往上爬。後來他得了重病，無法工作。家人尋求協助時，要求旅館替他保密姓名。"
+      },
+      {
+        "en": "Leila’s aunt had paid part of his medical bills but had never told the story publicly. He had died years ago. Mrs. Chen still grieved, yet she did not want him turned into a legend with invented heroic details. She showed Leila a plain letter: “I was frightened, too. I stayed because someone had to hold the door.” It was the only account he had chosen to leave.",
+        "zh": "Leila 的姑姑曾支付部分醫療費，卻從不公開說這段事。哥哥多年前已過世。陳女士仍然悲傷，但不希望別人替他杜撰英雄事蹟、把他變成傳奇。她拿出一封樸素的信：「我也很害怕。我留下，是因為總要有人把門撐住。」這是他唯一選擇留下的說法。"
+      },
+      {
+        "en": "Leila asked whether she could display the nine clocks without identifying the family. Mrs. Chen considered it and nodded. The ninth clock would mark an ordinary person’s courage, not a sensational mystery. Leila did not solve every part of the house, but she finally understood why her aunt had stopped time in each room.",
+        "zh": "Leila 詢問能否展示九座鐘、但不揭露家人身分。陳女士想了想，點頭同意。第九座鐘會紀念一個平凡人的勇氣，而不是製造聳動謎團。Leila 沒有解開房子的所有細節，卻終於明白姑姑為什麼讓每間房的時間停下。"
+      }
+    ],
+    "quiz": [
+      {
+        "q": "Who was the ninth guest?",
+        "opts": [
+          "A missing professional athlete",
+          "The hotel’s first architect",
+          "Mrs. Chen’s brother",
+          "The current sponsor"
+        ],
+        "a": 2,
+        "why": "第九位住客是陳女士的哥哥。"
+      },
+      {
+        "q": "What does Mrs. Chen wish to avoid?",
+        "opts": [
+          "Preserving the clocks",
+          "Discussing the flood at all",
+          "Keeping her own home",
+          "An invented heroic legend about him"
+        ],
+        "a": 3,
+        "why": "她希望尊重哥哥留下的真實說法。"
+      },
+      {
+        "q": "What is Leila allowed to display?",
+        "opts": [
+          "The clocks without identifying the family",
+          "Every private medical letter",
+          "A fictional confession",
+          "A list of all the survivors’ debts"
+        ],
+        "a": 0,
+        "why": "陳女士同意展示時鐘，但不公開家人身分。"
+      }
+    ],
+    "words": [
+      "grieve"
+    ]
+  },
+  {
+    "id": "lv5-141",
+    "series": "第四十二部 · Nine Clocks in One House｜一屋九鐘",
+    "title": "An Honest Inheritance",
+    "zh": "誠實的遺產",
+    "blurb": "Leila 必須決定怎麼使用豪宅：出售全部回憶，還是讓九座鐘留下可以被人理解的意義。",
+    "scene": "meeting",
+    "pages": [
+      {
+        "en": "The city offered to rent the ground floor for a small community exhibition. Leila examined the financial liability carefully: the roof still needed repairs, and visitors would require safe access. She refused to promise a grand museum that the building could not support. Instead, she proposed opening two rooms and restoring the others gradually.",
+        "zh": "市府提議租下一樓，設置小型社區展覽。Leila 仔細檢查財務責任：屋頂仍需修理，訪客也需要安全通道。她拒絕承諾一座建築負擔不起的宏偉博物館，而是提議先開放兩間房，其餘逐步修復。"
+      },
+      {
+        "en": "Mrs. Chen approved a short account of the flood. The caretaker offered to guide visitors but asked not to be described as a witness to events he had never seen. Leila realized that integrity was not a dramatic speech; sometimes it meant leaving a blank space where the evidence ended. She framed the brother’s letter exactly as he had written it.",
+        "zh": "陳女士同意一段簡短的洪災說明。管理員願意導覽，但要求不要把他說成目擊過自己沒看過的事件。Leila 明白，正直不是戲劇化演說；有時是證據到此為止時，願意留下空白。她把哥哥的信照原文裱框。"
+      },
+      {
+        "en": "On the opening morning, Mrs. Chen stood before the ninth clock and gently embraced Leila. Neither tried to turn grief into a happy ending. The clock still did not move. But a visitor read the letter, then asked whether a place could remember people without claiming to know everything about them. Leila smiled: “That is what we are trying to learn.”",
+        "zh": "開幕早晨，陳女士站在第九座鐘前，輕輕擁抱 Leila。兩人都沒有勉強把悲傷說成美好結局。鐘仍未走動，但一位訪客讀完信後問：一個地方能否記住人，卻不自稱知道他們的一切？Leila 微笑說：「這就是我們正在學的事。」"
+      }
+    ],
+    "quiz": [
+      {
+        "q": "Why does Leila open only two rooms at first?",
+        "opts": [
+          "The other rooms have disappeared",
+          "No one is interested in visiting",
+          "The city forbids clocks",
+          "The building needs repairs and safe access"
+        ],
+        "a": 3,
+        "why": "她考量修繕與訪客安全，不作超出能力的承諾。"
+      },
+      {
+        "q": "What does the caretaker ask?",
+        "opts": [
+          "Not to be called a witness to unseen events",
+          "To receive all the clocks",
+          "To close the exhibition after one day",
+          "To remove every written account"
+        ],
+        "a": 0,
+        "why": "他要求不要被說成未目睹事件的證人。"
+      },
+      {
+        "q": "What does Leila learn about integrity?",
+        "opts": [
+          "Large buildings do not need repairs",
+          "Do not claim facts beyond the evidence",
+          "Every story needs a happy ending",
+          "A museum should never display letters"
+        ],
+        "a": 1,
+        "why": "正直包含承認證據界線。"
+      }
+    ],
+    "words": [
+      "liability",
+      "integrity",
+      "embrace"
+    ]
+  },
+  {
+    "id": "lv5-142",
+    "series": "第四十三部 · The Mountain of Blue Glass｜藍玻璃之山",
+    "title": "The Light Beneath the Snow",
+    "zh": "雪下的光",
+    "blurb": "山區嚮導接到一名攝影師的求援：雪地竟透出藍光。照片很美，真正的危險卻不在鏡頭裡。",
+    "scene": "mountain",
+    "pages": [
+      {
+        "en": "Before dawn, a photographer reported blue light under the mountain snow. The rescue guide, Taro, warned his group that the cliff was sheer and the path narrow. A small crystal in the photographer’s bag glittered even in the dim light. His companions wanted to climb higher for a better picture, but Taro saw a fresh crack across the slope. He tightened his grip on the rope and ordered everyone to move back.",
+        "zh": "天亮前，一名攝影師通報山上雪地底下有藍光。救援嚮導 Taro 警告隊員，峭壁陡直、道路狹窄。攝影師背包裡的一顆小水晶，在微光中仍閃爍。同行者想爬高拍得更好，Taro 卻看見坡面出現一道新裂縫。他緊握繩索，命令所有人後退。"
+      },
+      {
+        "en": "The photographer was shivering, not from excitement but from cold. He had waited too long near a hollow beneath the ice. Taro checked that the group could still reach the safe ridge without crossing the crack. Below them, the blue light quivered as the wind blew snow across it. The photographer insisted that he had discovered an exotic treasure. Taro replied that no treasure was worth losing a person on this slope.",
+        "zh": "攝影師正在發抖，不是興奮，而是寒冷。他在冰下空洞附近等得太久。Taro 確認隊員不需跨越裂縫就能到達安全山脊。下方藍光隨風吹雪而微微顫動。攝影師堅稱自己發現異國寶藏，Taro 回答說，任何寶藏都不值得讓人在這片坡地喪命。"
+      },
+      {
+        "en": "They returned to the shelter and examined the photograph on a large screen. One image showed a dark band beneath the glowing layer. Taro contacted a mountain scientist instead of guessing what it was. The scientist asked them to leave the site untouched until a trained team could inspect the structure safely. The beautiful light could wait.",
+        "zh": "他們回到避難所，用大螢幕檢查照片。其中一張顯示發光層底下有一道暗帶。Taro 聯絡山區研究人員，而不是自行猜測。研究者請大家不要碰現場，等受過訓練的團隊安全檢查結構。美麗的藍光可以等。"
+      }
+    ],
+    "quiz": [
+      {
+        "q": "Why does Taro order the group back?",
+        "opts": [
+          "He notices a new crack on the slope",
+          "The camera runs out of battery",
+          "The shelter has been sold",
+          "The crystal has disappeared"
+        ],
+        "a": 0,
+        "why": "Taro 發現雪坡新裂縫，擔心安全。"
+      },
+      {
+        "q": "Why is the photographer shivering?",
+        "opts": [
+          "The rope is too heavy",
+          "He has been in the cold too long",
+          "He is laughing at a joke",
+          "He is practicing a speech"
+        ],
+        "a": 1,
+        "why": "攝影師在寒冷環境停留過久。"
+      },
+      {
+        "q": "What does Taro do after seeing the dark band?",
+        "opts": [
+          "He sells the photograph",
+          "He leads tourists across the crack",
+          "He contacts a trained scientist",
+          "He starts digging by himself"
+        ],
+        "a": 2,
+        "why": "Taro 請專家評估，而不是逕行挖掘。"
+      }
+    ],
+    "words": [
+      "sheer",
+      "crystal",
+      "grip",
+      "shiver",
+      "quiver",
+      "exotic"
+    ]
+  },
+  {
+    "id": "lv5-143",
+    "series": "第四十三部 · The Mountain of Blue Glass｜藍玻璃之山",
+    "title": "The Map with No Shortcut",
+    "zh": "沒有捷徑的地圖",
+    "blurb": "研究團隊抵達山區，但一條看似省時的路，竟把所有人帶回最危險的裂縫。",
+    "scene": "mountain",
+    "pages": [
+      {
+        "en": "The next morning, geologist Hana arrived with a small survey team. Their map showed a shortcut across the ridge, but Taro recognized the same unstable slope. He refused to lead anyone across it. Hana did not treat his caution as a challenge to her expertise. She checked the old map and found that the route had been drawn before a major winter storm altered the terrain.",
+        "zh": "隔天早晨，地質學家 Hana 帶著小型調查隊抵達。地圖顯示山脊有捷徑，但 Taro 認出那正是昨日不穩定的雪坡。他拒絕帶人跨越。Hana 沒把他的警覺視為挑戰專業，而是檢查舊地圖，發現那條路是在大型冬季風暴改變地形之前畫的。"
+      },
+      {
+        "en": "The group chose a longer route. The scientist explained that bright crystals could reflect light in unusual ways, but that one photograph was not enough to identify the material. When they reached a safe viewpoint, Hana measured the slope and saw small pieces of rock sliding toward the hollow. The path had become prone to collapse. A few seconds later, snow plunged through the gap where the shortcut would have taken them.",
+        "zh": "隊伍選擇比較長的路。研究者說，明亮晶體可能以特殊方式反光，但單靠照片不足以確定材料。到達安全觀測點後，Hana 測量坡度，看見細小岩塊正向空洞滑落；這條路容易崩塌。幾秒後，雪塊從捷徑原本會經過的裂口驟然落下。"
+      },
+      {
+        "en": "Nobody celebrated being right. Taro looked at the gap and felt a cold line along his spine. Hana marked the unsafe route on the revised map and asked him to review the other paths. The team had not discovered a new treasure, but it had prevented the next visitor from trusting an old line on paper.",
+        "zh": "沒有人因為自己判斷正確而歡呼。Taro 看著裂口，感覺脊背一陣發冷。Hana 在修訂地圖上標出危險路線，並請他再檢查其他山徑。團隊沒有發現新寶藏，卻避免下一位遊客再次相信紙上過時的線條。"
+      }
+    ],
+    "quiz": [
+      {
+        "q": "Why is the shortcut unsafe?",
+        "opts": [
+          "The scientist forgot her camera",
+          "The terrain changed after the map was made",
+          "The map was printed in another language",
+          "A bus blocks the ridge"
+        ],
+        "a": 1,
+        "why": "舊地圖無法反映風暴後改變的地形。"
+      },
+      {
+        "q": "What does Hana say about the crystal?",
+        "opts": [
+          "It was made in a theater",
+          "It can stop the snowfall",
+          "A photograph alone cannot identify it",
+          "It is certainly a priceless diamond"
+        ],
+        "a": 2,
+        "why": "單靠照片無法確認晶體材料。"
+      },
+      {
+        "q": "What happens near the shortcut?",
+        "opts": [
+          "A train enters a tunnel",
+          "The rescue rope turns blue",
+          "The team finds an old clock",
+          "Snow falls through an unstable gap"
+        ],
+        "a": 3,
+        "why": "雪從不穩定的裂口落下。"
+      }
+    ],
+    "words": [
+      "prone",
+      "plunge",
+      "spine"
+    ]
+  },
+  {
+    "id": "lv5-144",
+    "series": "第四十三部 · The Mountain of Blue Glass｜藍玻璃之山",
+    "title": "What the Mountain Kept",
+    "zh": "山留下的東西",
+    "blurb": "藍光的來源終於查明；攝影師卻必須選擇要發布驚人的照片，還是公開真正能保護人的地圖。",
+    "scene": "mountain",
+    "pages": [
+      {
+        "en": "After laboratory tests, Hana reported that the unusual glow came from light passing through layers of ice and mineral fragments. The explanation was less dramatic than the photographer’s original headline. He was disappointed, but he had watched snow fall where he might have stood. When an editor requested the most sensational version of the story, he offered the photographs together with the corrected route map.",
+        "zh": "實驗室檢測後，Hana 報告異常光芒來自光線穿過冰層與礦物碎片。解釋不像攝影師原先的標題那樣戲劇化。他感到失望，卻也親眼看見雪落在自己原本可能站立的地方。編輯要求最聳動的版本時，他提供照片，並附上修正過的路線圖。"
+      },
+      {
+        "en": "The mountain office closed the damaged route until it could be assessed again. Taro helped place warning signs where visitors could actually see them. His job was not to remove wonder from the mountains. It was to make sure people had a chance to return from them. Hana left the crystal in the laboratory, where it would be studied rather than sold as a miracle.",
+        "zh": "山區管理單位封閉受損路線，等待重新評估。Taro 協助把警告標誌放在遊客確實能看見的位置。他的工作不是抹去山的奇妙，而是讓人有機會平安回來。Hana 把水晶留在實驗室研究，而不是當成奇蹟出售。"
+      },
+      {
+        "en": "Months later, the photographer’s exhibition opened. The brightest picture hung beside a plain image of the cracked slope. The pairing was symbolic of a choice. Underneath, a caption read: “The most important thing we brought home was not the light. It was the reason we turned back.” Taro visited on a quiet afternoon. For once, he did not need to explain the photograph to anyone.",
+        "zh": "幾個月後，攝影師的展覽開幕。最明亮的照片旁掛著一張樸素的裂坡照片。並列的照片象徵著一個選擇。下方說明寫著：「我們帶回來最重要的不是光，而是我們為什麼轉身折返。」Taro 在安靜的午後來看展。這一次，他不必向任何人解釋照片。"
+      }
+    ],
+    "quiz": [
+      {
+        "q": "What caused the unusual glow?",
+        "opts": [
+          "A burning theater beneath the snow",
+          "A train shining through a window",
+          "Light passing through ice and mineral fragments",
+          "A hidden electric billboard"
+        ],
+        "a": 2,
+        "why": "光穿過冰層與礦物碎片產生特殊光線。"
+      },
+      {
+        "q": "What does the photographer give the editor?",
+        "opts": [
+          "Only the most dramatic invented story",
+          "The original unsafe route as a recommendation",
+          "A forged laboratory report",
+          "Photographs along with the corrected map"
+        ],
+        "a": 3,
+        "why": "他把照片和修訂路線圖一起提供。"
+      },
+      {
+        "q": "What does the exhibition emphasize?",
+        "opts": [
+          "The importance of turning back from danger",
+          "That every beautiful light is a treasure",
+          "That old maps never need updating",
+          "That experts should never ask questions"
+        ],
+        "a": 0,
+        "why": "展覽強調避開危險的重要。"
+      }
+    ],
+    "words": [
+      "symbolic"
+    ]
+  },
+  {
+    "id": "lv5-145",
+    "series": "第四十四部 · The Price of Clear Air｜清新空氣的價錢",
+    "title": "The City That Sold Fresh Air",
+    "zh": "出售新鮮空氣的城市",
+    "blurb": "城市推出一款能過濾霧霾的新裝置，但設計者發現：最需要它的人，根本買不起。",
+    "scene": "meeting",
+    "pages": [
+      {
+        "en": "After weeks of smog, a company introduced a portable air filter. Its new fiber material trapped particles, and investors predicted a boom in sales. Mei, an engineer on the project, was proud of the design until she visited the neighborhood beside the freight depot. Residents there faced the worst air but could not afford the device. The company treated clean air like an expensive commodity. Mei began to question whom the invention actually served.",
+        "zh": "連續數週霧霾後，一家公司推出攜帶式空氣過濾器。新纖維材料能捕捉粒子，投資人預估銷售將大幅成長。工程師 Mei 原本為設計自豪，直到她走訪貨運場旁的社區。那裡的居民面對最糟空氣，卻買不起裝置。公司把乾淨空氣當昂貴商品，Mei 開始質疑發明真正服務了誰。"
+      },
+      {
+        "en": "The manager told her that the manufacturing sector had high costs. Mei understood the problem: factories paid wages, rent, and other overhead expenses. But she asked to compare two scenarios, one selling only premium filters and another using a simpler design in community spaces. The second plan would yield less profit per unit, yet might reach far more people.",
+        "zh": "主管說製造業成本很高。Mei 理解其中困難：工廠得付薪資、租金及其他經常性費用。但她要求比較兩種方案：一種只賣高價濾網，另一種在社區空間使用較簡單的設計。後者每個單位的利潤較少，卻可能觸及更多人。"
+      },
+      {
+        "en": "Her colleague warned that a good intention was not a budget. Mei agreed to test the numbers rather than argue about motives. She collected measurements from schools and bus stops, then returned to the office with data instead of a slogan. The question was no longer whether the filter looked impressive. It was whether its benefits could be shared.",
+        "zh": "同事提醒，善意不等於預算。Mei 同意檢驗數字，而不是爭論動機。她從學校與公車站蒐集測量資料，帶著數據而非口號回到辦公室。問題不再是濾網看起來多厲害，而是效益能否被更多人分享。"
+      }
+    ],
+    "quiz": [
+      {
+        "q": "Why does Mei question the product?",
+        "opts": [
+          "The filter does not contain any fiber",
+          "No investors are interested",
+          "The freight depot has already closed",
+          "Residents with the worst air cannot afford it"
+        ],
+        "a": 3,
+        "why": "最需要的居民卻買不起裝置。"
+      },
+      {
+        "q": "What two plans does Mei compare?",
+        "opts": [
+          "Premium sales and a simpler community design",
+          "Two different restaurant menus",
+          "Closing schools and opening an arena",
+          "Replacing buses with bicycles overnight"
+        ],
+        "a": 0,
+        "why": "她比較高價販售與社區簡化設計。"
+      },
+      {
+        "q": "What does Mei bring to the office?",
+        "opts": [
+          "A mountain crystal",
+          "Measurements and data",
+          "A victory trophy",
+          "A ninth clock"
+        ],
+        "a": 1,
+        "why": "她帶回測量資料而不是空泛口號。"
+      }
+    ],
+    "words": [
+      "smog",
+      "fiber",
+      "boom",
+      "commodity",
+      "sector",
+      "scenario",
+      "yield"
+    ]
+  },
+  {
+    "id": "lv5-146",
+    "series": "第四十四部 · The Price of Clear Air｜清新空氣的價錢",
+    "title": "The Filter without a Price Tag",
+    "zh": "沒有標價的濾網",
+    "blurb": "公司願意試行社區方案，卻發現「免費」也有成本；Mei 必須讓實驗既負擔得起又能維持。",
+    "scene": "meeting",
+    "pages": [
+      {
+        "en": "The pilot project began in two libraries. The team aimed to minimize waste by making replacement parts that could be repaired rather than discarded. A partner offered financial support, but the contract covered only the first three months. Mei refused to call the project permanent. She wanted families to know exactly what had been promised and what remained uncertain.",
+        "zh": "試辦計畫先在兩間圖書館開始。團隊希望把廢棄物降到最低，設計可修理而非直接丟棄的替換零件。合作夥伴願意出資，但合約只涵蓋前三個月。Mei 不願稱計畫會永久維持，她希望家庭知道哪些事情已被承諾、哪些仍不確定。"
+      },
+      {
+        "en": "A recession made the next meeting difficult. Sales slowed, and managers debated cutting the community program. Mei presented the results without hiding the weak points. Filters improved indoor measurements, yet the devices could not remove pollution from streets or replace broader environmental work. She proposed a strategic partnership with local repair shops so that maintenance would cost less.",
+        "zh": "經濟衰退讓下一場會議變得困難。銷售放緩，主管討論是否刪除社區計畫。Mei 呈現結果時沒有隱藏弱點。濾網改善了室內測量數值，卻無法清除街上的污染，更不能取代更廣泛的環境工作。她提議與當地維修店建立策略合作，降低後續維護成本。"
+      },
+      {
+        "en": "One manager accused her of caring more about reputation than revenue. Mei did not try to win the argument with a speech. She asked the team to calculate what the company could responsibly support and publish the limits clearly. By evening, they agreed to continue a smaller trial with a review date. It was less glamorous than the launch, and far more useful.",
+        "zh": "一位主管指責她重名聲甚於營收。Mei 沒有用演說試圖贏得爭論，而是請團隊計算公司能負責承擔多少，並清楚公布限制。到傍晚，大家同意延續縮小規模的試辦，並訂下檢討日期。它不如新品發布時光鮮，卻有用得多。"
+      }
+    ],
+    "quiz": [
+      {
+        "q": "What limits the first partnership?",
+        "opts": [
+          "Funding lasts only three months",
+          "Libraries refuse all visitors",
+          "Every filter is made of paper",
+          "All employees leave the city"
+        ],
+        "a": 0,
+        "why": "合作資金只保障前三個月。"
+      },
+      {
+        "q": "What can the filters NOT do?",
+        "opts": [
+          "Operate in community spaces",
+          "Remove all pollution from streets",
+          "Improve some indoor measurements",
+          "Use repairable parts"
+        ],
+        "a": 1,
+        "why": "裝置不能取代整體環境治理。"
+      },
+      {
+        "q": "What does the team finally approve?",
+        "opts": [
+          "Immediate destruction of all prototypes",
+          "An end to public reporting",
+          "A smaller trial with a review date",
+          "An unlimited permanent guarantee"
+        ],
+        "a": 2,
+        "why": "團隊同意較小型、可檢討的試辦。"
+      }
+    ],
+    "words": [
+      "minimize",
+      "recession",
+      "strategic"
+    ]
+  },
+  {
+    "id": "lv5-147",
+    "series": "第四十四部 · The Price of Clear Air｜清新空氣的價錢",
+    "title": "A Window Left Open",
+    "zh": "還能打開的窗",
+    "blurb": "試辦結束後，最重要的改變不是公司賣出多少濾網，而是社區第一次知道該問什麼問題。",
+    "scene": "meeting",
+    "pages": [
+      {
+        "en": "At the final review, residents described how the library had become a more comfortable place to study during bad-air days. The data also showed that some rooms improved less than others. Mei invited an independent technician to review the measurements. A good result in one room did not prove every product worked everywhere. The company published the full report, including uncertainty.",
+        "zh": "最終檢討時，居民談到空氣不佳的日子，圖書館成了比較舒適的讀書地點。數據也顯示，有些房間改善較少。Mei 邀請獨立技師檢查測量。某間房結果良好，不代表每個產品在所有地方都有效。公司公開完整報告，也包含不確定性。"
+      },
+      {
+        "en": "The library director asked whether the project could stimulate a longer discussion about traffic and cleaner streets. Mei replied that filters were only one small tool. Any larger plan would need a broader scope, reliable evidence, and people from many fields. She offered the repair manual freely, so other communities could decide whether the design suited them.",
+        "zh": "圖書館館長問，計畫能否促成更長期的交通與街道空氣討論。Mei 回答，濾網只是小工具。更大的計畫需要更廣的範圍、可靠證據與不同領域的人。她免費公開維修手冊，讓其他社區自己判斷設計是否適合。"
+      },
+      {
+        "en": "On a clear morning, a child opened the library window and asked if the air was safe today. Mei did not answer from the color of the sky. She checked the public readings with him and explained what they could and could not tell them. The window stayed open for a while. Clean air had never belonged to a single machine, and that was the lesson Mei wanted to keep.",
+        "zh": "一個晴朗的早晨，孩子打開圖書館窗戶，問今天空氣是否安全。Mei 沒有只憑天空顏色回答，而是和他一起查看公開讀數，說明數字能與不能告訴他們什麼。窗戶開了一會兒。乾淨空氣從來不屬於某一台機器，這是 Mei 最想留下的教訓。"
+      }
+    ],
+    "quiz": [
+      {
+        "q": "Why does Mei invite an independent technician?",
+        "opts": [
+          "To judge the mountain photograph",
+          "To review the measurements",
+          "To replace the library books",
+          "To build a hockey arena"
+        ],
+        "a": 1,
+        "why": "她請外部技師審視測量結果。"
+      },
+      {
+        "q": "What does Mei make freely available?",
+        "opts": [
+          "All customer payment details",
+          "A promise of perfect air",
+          "The repair manual",
+          "Every company building"
+        ],
+        "a": 2,
+        "why": "她公開維修手冊供社區自行評估。"
+      },
+      {
+        "q": "How does Mei answer the child?",
+        "opts": [
+          "She says a blue sky always means safe air",
+          "She forbids the window from being opened",
+          "She recommends every family buy the premium filter",
+          "She checks public readings and explains their limits"
+        ],
+        "a": 3,
+        "why": "她和孩子一起看可靠讀數與限制。"
+      }
+    ],
+    "words": [
+      "stimulate",
+      "scope"
+    ]
+  },
+  {
+    "id": "lv5-148",
+    "series": "第四十五部 · The Balloon That Returned Empty｜空手回來的氣球",
+    "title": "A Signal Above the Clouds",
+    "zh": "雲層上的訊號",
+    "blurb": "一只氣象氣球回來時，裡面的感測器卻像從來沒有離開地面。",
+    "scene": "night",
+    "pages": [
+      {
+        "en": "At dawn, a weather balloon descended behind the laboratory. Its outer shell was soaked, but the recorder inside showed a perfectly smooth line. Yuna had expected a change in temperature and radiation as the balloon climbed. Instead, every reading remained identical. Her colleague called it a minor equipment failure. Then a second balloon returned with the same impossible graph.",
+        "zh": "天亮時，一只氣象氣球落在實驗室後方。外殼濕透，裡面的紀錄器卻顯示一條完美平滑的線。Yuna 原本預期氣球升高時，溫度與輻射讀數會改變，結果每筆資料都一模一樣。同事認為只是小故障，但第二只氣球竟帶回同樣不可能的圖表。"
+      },
+      {
+        "en": "The technician wanted to launch a third balloon immediately. Yuna asked him to pause. A sudden blast of wind had damaged the roof the previous night, and loose glass still lay near the launch platform. They cleared the area before touching the equipment. Safety was not a distraction from science; it was what allowed the experiment to continue.",
+        "zh": "技師想立刻放出第三只氣球，Yuna 請他先暫停。前一晚突如其來的強風吹壞屋頂，發射平台附近還散落玻璃。大家先清理現場才碰設備。安全不是科學的干擾，而是讓實驗能夠繼續的條件。"
+      },
+      {
+        "en": "When Yuna opened the recorder, a tiny strip of paper fell out. Someone had placed it beside the battery: “Look for the fraction that never changes.” She stared at the neat handwriting. The message did not explain the false readings, but it suggested that somebody else had noticed them first.",
+        "zh": "Yuna 打開紀錄器時，一小條紙掉了出來。有人把它放在電池旁，上面寫著：「找出永遠不變的那個比例。」她盯著整齊的字跡。紙條沒有解釋假讀數，卻暗示早就有人發現異常。"
+      }
+    ],
+    "quiz": [
+      {
+        "q": "What makes the balloon data suspicious?",
+        "opts": [
+          "The battery is painted blue",
+          "All readings stay identical",
+          "The balloon lands in another country",
+          "The sky is cloudless"
+        ],
+        "a": 1,
+        "why": "兩次飛行的讀數都不合理地維持相同。"
+      },
+      {
+        "q": "Why does Yuna delay another launch?",
+        "opts": [
+          "The technician is leaving town",
+          "The recorder has no buttons",
+          "Broken glass makes the platform unsafe",
+          "She has lost the weather forecast"
+        ],
+        "a": 2,
+        "why": "平台還有暴風造成的碎玻璃，必須先處理安全。"
+      },
+      {
+        "q": "What is written on the note?",
+        "opts": [
+          "Never launch another balloon",
+          "Meet me beside the station",
+          "The storm will last a month",
+          "Look for the fraction that never changes"
+        ],
+        "a": 3,
+        "why": "紙條指向一個不變的比例。"
+      }
+    ],
+    "words": [
+      "soak",
+      "radiation",
+      "blast",
+      "fraction"
+    ]
+  },
+  {
+    "id": "lv5-149",
+    "series": "第四十五部 · The Balloon That Returned Empty｜空手回來的氣球",
+    "title": "The Number in the Margin",
+    "zh": "頁邊的數字",
+    "blurb": "Yuna 發現兩次飛行不只是數值一樣：它們竟共用了同一筆時間戳記。",
+    "scene": "paper",
+    "pages": [
+      {
+        "en": "The next morning, Yuna compared the raw files rather than their colorful graphs. A fraction of the measurements had been copied with the same timestamp, down to the final digit. The recorder was not reporting the atmosphere; it was repeating an older file. She checked the software and found a hidden demonstration mode.",
+        "zh": "隔天早晨，Yuna 比較原始檔，而不是漂亮的圖表。部分測量值連時間戳記的最後一位都完全相同。紀錄器根本沒有呈現大氣狀況，只是在重播舊檔。她檢查軟體，找到一個隱藏的展示模式。"
+      },
+      {
+        "en": "An intern admitted that he had used the mode during a school tour. He had meant to show visitors how a molecule moves in a simple model, not to manipulate research results. Afterward, he forgot to restore the normal settings. Yuna was relieved to find an explanation, but she still asked whether anyone had used the false data in an official report.",
+        "zh": "一位實習生承認，學校參訪時他曾開啟展示模式。他只是想示範分子在簡單模型裡如何移動，並非想操弄研究成果，之後卻忘記切回正常設定。Yuna 終於找到原因，但仍追問是否有人把錯誤資料放進正式報告。"
+      },
+      {
+        "en": "The director pointed to a draft sent to three partner schools. Its conclusion relied on the repeated measurements. Yuna felt a brief sting of embarrassment: she had nearly accepted the graph herself. She did not blame the intern alone. The team had lacked a procedure for checking what the machine actually recorded.",
+        "zh": "主管指著一份已寄給三所合作學校的報告草稿，結論正是建立在那些重複數值上。Yuna 一瞬間很尷尬：她自己也差點相信圖表。她沒有把錯全推給實習生，因為團隊本來就缺少核實機器原始紀錄的程序。"
+      }
+    ],
+    "quiz": [
+      {
+        "q": "What do the matching timestamps reveal?",
+        "opts": [
+          "A new planet was discovered",
+          "The school tour was canceled",
+          "The recorder replayed an old file",
+          "The balloons flew along identical routes"
+        ],
+        "a": 2,
+        "why": "相同時間戳記顯示資料被重播。"
+      },
+      {
+        "q": "Why did the intern activate the mode?",
+        "opts": [
+          "To hide a storm",
+          "To sell the recorder",
+          "To break the roof",
+          "To demonstrate a simple model to visitors"
+        ],
+        "a": 3,
+        "why": "實習生為了參訪展示開啟模式。"
+      },
+      {
+        "q": "Why does Yuna not blame only the intern?",
+        "opts": [
+          "The team lacked a proper checking procedure",
+          "The intern did not work there",
+          "The report was never shared",
+          "All machines are always wrong"
+        ],
+        "a": 0,
+        "why": "團隊也缺少核實原始資料的程序。"
+      }
+    ],
+    "words": [
+      "molecule",
+      "manipulate"
+    ]
+  },
+  {
+    "id": "lv5-150",
+    "series": "第四十五部 · The Balloon That Returned Empty｜空手回來的氣球",
+    "title": "The Third Balloon",
+    "zh": "第三只氣球",
+    "blurb": "第三次飛行終於開始；這次最重要的不是漂亮圖表，而是每個人都能追溯資料從哪裡來。",
+    "scene": "night",
+    "pages": [
+      {
+        "en": "The team repaired the roof and reset the recorder. They kept one device on the ground as a comparison while a new balloon soared into the clear morning sky. This time the measurements changed as expected. Yuna attached the original files to a revised report and clearly marked the earlier graphs as invalid.",
+        "zh": "團隊修好屋頂、重新設定紀錄器，並把一台設備留在地面作比較。新氣球升向晴朗早空，這次數值終於如預期改變。Yuna 將原始檔附在修訂報告上，明確標示先前圖表無效。"
+      },
+      {
+        "en": "The intern feared that the mistake would ruin his future. Yuna told him that the error mattered, but hiding it would have been worse. Together they wrote a short checklist: confirm the operating mode, record the launch time, and compare the data with an independent source. The director sent the correction to every school that had received the draft.",
+        "zh": "實習生擔心錯誤毀掉前途。Yuna 告訴他錯誤確實重要，但隱瞞只會更糟。兩人一起寫了短檢查表：確認模式、記錄發射時間、與獨立來源比較資料。主管也將更正通知寄給每所收到草稿的學校。"
+      },
+      {
+        "en": "At sunset the balloon returned, carrying a recorder full of imperfect numbers. Some values were missing, and a few required further study. Yuna smiled anyway. A trustworthy result did not have to look smooth. It only had to describe what had actually happened above the clouds.",
+        "zh": "日落時氣球回來了，紀錄器裡充滿不完美的數字。有些數值缺失，有些還需進一步研究，Yuna 卻笑了。可信的結果不必看起來平滑漂亮，只需要忠實記錄雲層上方真正發生的事。"
+      }
+    ],
+    "quiz": [
+      {
+        "q": "How does the team check the third flight?",
+        "opts": [
+          "It reuses the earlier graph",
+          "It hides the launch time",
+          "It changes every number to zero",
+          "It compares airborne data with a ground device"
+        ],
+        "a": 3,
+        "why": "團隊用地面設備做獨立對照。"
+      },
+      {
+        "q": "What does Yuna do about the earlier report?",
+        "opts": [
+          "She marks the old graphs invalid and issues a correction",
+          "She destroys the school records",
+          "She publishes only the smooth line",
+          "She denies the intern existed"
+        ],
+        "a": 0,
+        "why": "她標示舊圖表無效並向學校更正。"
+      },
+      {
+        "q": "What does the ending suggest about reliable data?",
+        "opts": [
+          "It is only useful when colorful",
+          "It should reflect reality even when imperfect",
+          "It must always form a straight line",
+          "It never requires checking"
+        ],
+        "a": 1,
+        "why": "可靠資料不必完美，必須真實且可查證。"
+      }
+    ],
+    "words": [
+      "soar"
+    ]
+  },
+  {
+    "id": "lv5-151",
+    "series": "第四十六部 · The Horse That Knew the Way｜認得回家路的馬",
+    "title": "The Empty Saddle",
+    "zh": "空著的馬鞍",
+    "blurb": "牧場的老馬獨自返回，馬鞍上卻還繫著一條孩子的圍巾。",
+    "scene": "mountain",
+    "pages": [
+      {
+        "en": "The ranch was quiet until an old horse appeared at the gate without its rider. Its saddle hung sideways, and a red scarf was caught beneath the strap. Mara, who helped care for foster children at the ranch, recognized the scarf. It belonged to Leo, a boy who had left for the hill trail an hour earlier.",
+        "zh": "牧場原本很安靜，直到一匹老馬沒有騎士、獨自出現在大門。馬鞍歪向一邊，一條紅圍巾卡在固定帶下。協助照顧寄養孩子的 Mara 認出了圍巾，那是男孩 Leo 的；他一小時前才騎馬往山坡小徑去。"
+      },
+      {
+        "en": "A neighbor said Leo was probably hiding after breaking a rule. Mara refused to speculate about his motives. She checked the animal first. A fresh bruise marked its thigh, and it flinched when someone tried to tighten the saddle. The horse had returned through the thorny part of the trail, not the safe route Leo normally used.",
+        "zh": "鄰居說 Leo 可能違規後躲起來。Mara 不願猜測他的動機，先檢查動物。馬的大腿有新瘀傷，有人想拉緊馬鞍時牠會閃躲。牠是從有荊棘的山路回來，而不是 Leo 平常走的安全道路。"
+      },
+      {
+        "en": "Mara called the local rescue team and described the route. When the youngest volunteer offered to race up the hill alone, she stopped him. The light was fading, and another injury would not help Leo. They packed water, a first-aid kit, and two lamps before leaving together.",
+        "zh": "Mara 打電話給當地救援隊，描述馬返回的路線。最年輕的志工想獨自衝上山，她攔住他。天光漸暗，再多一個傷者不會幫到 Leo。大家帶了水、急救包和兩盞燈，才結伴出發。"
+      }
+    ],
+    "quiz": [
+      {
+        "q": "What alerts Mara that Leo may be missing?",
+        "opts": [
+          "His horse returns carrying his scarf",
+          "The ranch receives an empty letter",
+          "The neighbor hears a concert",
+          "The saddle is brand new"
+        ],
+        "a": 0,
+        "why": "Leo 的馬獨自回來，身上有他的圍巾。"
+      },
+      {
+        "q": "Why does Mara avoid judging Leo?",
+        "opts": [
+          "The horse has no name",
+          "She does not know why he is absent",
+          "He has already explained everything",
+          "The trail is closed to everyone"
+        ],
+        "a": 1,
+        "why": "她尚不知道 Leo 為何失蹤。"
+      },
+      {
+        "q": "Why does Mara stop a volunteer from going alone?",
+        "opts": [
+          "She plans to sell the horse",
+          "The boy has already returned",
+          "She wants the search to remain safe",
+          "She wants to hide the scarf"
+        ],
+        "a": 2,
+        "why": "她不希望救援者也受傷。"
+      }
+    ],
+    "words": [
+      "ranch",
+      "saddle",
+      "strap",
+      "foster",
+      "speculate",
+      "bruise",
+      "thigh"
+    ]
+  },
+  {
+    "id": "lv5-152",
+    "series": "第四十六部 · The Horse That Knew the Way｜認得回家路的馬",
+    "title": "The Voice Beyond the Fence",
+    "zh": "籬笆外的聲音",
+    "blurb": "山坡傳來微弱呼喊，但被找到的不是一個，而是兩個孩子。",
+    "scene": "mountain",
+    "pages": [
+      {
+        "en": "The team followed hoofprints past the fence. In the distance, a dog began to howl. Mara heard a faint sob from a narrow ditch and raised her lamp. Leo was there, clinging to a branch. Beside him sat a younger girl whose ankle was swollen. Leo had stopped to help her after she stumbled near the stream.",
+        "zh": "隊伍沿著蹄印走過籬笆，遠處一隻狗開始長嚎。Mara 聽見狹窄溝渠裡傳來微弱啜泣，舉起燈。Leo 正抓緊樹枝，旁邊還坐著一位腳踝腫脹的小女孩。她在溪邊絆倒時，Leo 停下來幫她，才一起受困。"
+      },
+      {
+        "en": "Leo tried to stand, but pain shot through his rib. Mara asked him not to move until trained rescuers could assess him. The girl was shivering, so a volunteer wrapped her in a dry blanket. The old horse waited above the ditch, turning its ears toward every sound. Mara spoke calmly even though she felt frightened.",
+        "zh": "Leo 想站起來，肋骨卻一陣刺痛。Mara 請他先不要移動，等受過訓練的救援人員評估。女孩冷得發抖，志工用乾毯子包住她。老馬停在溝渠上方，耳朵朝每個聲響轉動。Mara 雖然害怕，說話仍保持平穩。"
+      },
+      {
+        "en": "A rescuer secured a rope and helped the children out one at a time. Leo apologized for leaving the marked trail. Mara told him they would discuss that later. For now, she was grateful that he had stayed with the girl and sent the horse home. The animal had carried the only clue they needed.",
+        "zh": "一名救援員固定繩索，讓兩個孩子依序脫困。Leo 為偏離有標記的小徑道歉，Mara 說可以之後再談。此刻她慶幸他陪著女孩，還讓馬回家求援。這匹動物帶回了他們最需要的線索。"
+      }
+    ],
+    "quiz": [
+      {
+        "q": "Why did Leo stop near the stream?",
+        "opts": [
+          "He was collecting rare stones",
+          "He was helping a younger girl",
+          "He wanted to race the horse",
+          "He was hiding a gift"
+        ],
+        "a": 1,
+        "why": "Leo 是為了幫助跌倒的女孩才停下。"
+      },
+      {
+        "q": "Why does Mara ask Leo not to stand?",
+        "opts": [
+          "The trail is too wide",
+          "The girl needs a new saddle",
+          "His rib hurts and rescuers must assess him",
+          "The horse refuses to move"
+        ],
+        "a": 2,
+        "why": "Leo 肋骨疼痛，應等待專業人員評估。"
+      },
+      {
+        "q": "What clue helped the team find the children?",
+        "opts": [
+          "A map was sent by mail",
+          "The girl called from a hotel",
+          "The fence was painted yellow",
+          "The horse returned with the scarf"
+        ],
+        "a": 3,
+        "why": "馬帶著圍巾返家，指出搜尋線索。"
+      }
+    ],
+    "words": [
+      "howl",
+      "sob",
+      "cling",
+      "stumble",
+      "rib"
+    ]
+  },
+  {
+    "id": "lv5-153",
+    "series": "第四十六部 · The Horse That Knew the Way｜認得回家路的馬",
+    "title": "The Road Home",
+    "zh": "回家的路",
+    "blurb": "孩子回來後，Mara 必須回答更困難的問題：守規矩和願意幫人，能不能同時被看見？",
+    "scene": "meeting",
+    "pages": [
+      {
+        "en": "The children were examined and sent home with advice from the medical team. At the ranch, Leo sat quietly while Mara repaired the saddle strap. He expected a lecture. Instead, she asked him to describe each decision he had made. He admitted leaving the trail but explained why he could not abandon someone who was hurt.",
+        "zh": "兩個孩子接受檢查，依照醫療團隊建議回家。牧場裡，Mara 修理馬鞍固定帶，Leo 安靜坐著，等著被訓話。她卻先請他描述自己做過的每個決定。他承認離開小徑，但解釋自己無法丟下受傷的人。"
+      },
+      {
+        "en": "Mara praised his compassionate choice and explained that help should still be requested early. The ranch changed its safety routine: children carried a whistle, followed marked paths, and told an adult before changing plans. A foster parent offered to teach the younger girl how to care for horses when she recovered.",
+        "zh": "Mara 肯定他願意照顧別人的選擇，也說明求援應該更早進行。牧場調整安全流程：孩子帶哨子、走有標記的小路、改變計畫前先告知大人。一位寄養家長也答應，等女孩康復後教她照顧馬匹。"
+      },
+      {
+        "en": "On the next clear day, Leo brushed the old horse. He noticed the bruise had begun to fade and took extra care near its leg. “You knew the way,” he whispered. The horse sniffed his sleeve, searching for a treat. Their next ride would be shorter, safer, and no less worth remembering.",
+        "zh": "下一個晴天，Leo 替老馬刷毛。他發現瘀傷開始消退，特別小心牠的腿。「你知道回家的路。」他低聲說。馬聞了聞他的袖子，像在找點心。下次旅程會更短、更安全，卻一樣值得記住。"
+      }
+    ],
+    "quiz": [
+      {
+        "q": "What does Mara ask Leo to explain?",
+        "opts": [
+          "How to repair a radio",
+          "Why the horse is expensive",
+          "The decisions he made on the trail",
+          "His favorite school subject"
+        ],
+        "a": 2,
+        "why": "她希望了解 Leo 當時如何做決定。"
+      },
+      {
+        "q": "What new safety practice does the ranch adopt?",
+        "opts": [
+          "Children must never help anyone",
+          "All rides end permanently",
+          "Every horse is sold",
+          "Children carry whistles and stay on marked routes"
+        ],
+        "a": 3,
+        "why": "牧場加入哨子、標記路線與事先告知。"
+      },
+      {
+        "q": "What does the ending show about the horse?",
+        "opts": [
+          "Its injury is healing and Leo cares for it",
+          "It has forgotten Leo",
+          "It is sent to another country",
+          "It refuses every treat"
+        ],
+        "a": 0,
+        "why": "老馬傷勢改善，Leo 也更加細心照顧牠。"
+      }
+    ],
+    "words": [
+      "compassionate",
+      "sniff"
+    ]
+  },
+  {
+    "id": "lv5-154",
+    "series": "第四十七部 · The Joke That Changed Its Meaning｜變了意思的笑話",
+    "title": "A Laugh in the Wrong Place",
+    "zh": "不該出現的笑聲",
+    "blurb": "喜劇節開幕夜，觀眾在一句嚴肅台詞後大笑；台上的演員卻知道那不是笑點。",
+    "scene": "paper",
+    "pages": [
+      {
+        "en": "The city theater invited a young comedian to perform before the main play. Kai enjoyed the challenge of a new genre, but the director handed him an old script filled with jokes about people from a nearby village. Kai found the stereotype lazy and the ending ridiculous. “Make it funny without making our neighbors the joke,” he asked.",
+        "zh": "市立劇院邀請年輕喜劇演員 Kai 在正戲前演出。他喜歡嘗試新類型，但導演給他的舊劇本滿是拿鄰村居民開玩笑的橋段。Kai 覺得刻板印象很偷懶，結尾也很荒謬。「能不能讓它好笑，而不是把鄰居當笑柄？」他問。"
+      },
+      {
+        "en": "The director shrugged. “Audiences want something familiar,” she said. Kai rewrote the opening around a clerk who spent all day explaining a broken ticket machine. During rehearsal, the other actors laughed for the first time. The humor came from a recognizable situation, not from calling an entire group foolish.",
+        "zh": "導演聳聳肩：「觀眾就是喜歡熟悉的東西。」Kai 把開場改寫成一名整天向客人解釋壞掉售票機的職員。排練時，其他演員第一次真的笑了。幽默來自人人能理解的情境，而不是把整個群體說成笨蛋。"
+      },
+      {
+        "en": "But on opening night, a sound cue played at the wrong moment. A burst of recorded laughter followed a serious line about a missing child. The room went still. Kai understood the irony: he had worked so hard to change the words that nobody had checked the sound file.",
+        "zh": "然而首演夜，音效在錯誤的時刻播放。一句談到失蹤孩子的嚴肅台詞後，竟突然響起罐頭笑聲。全場安靜下來。Kai 感到諷刺：他努力修改文字，卻沒有人檢查音效檔。"
+      }
+    ],
+    "quiz": [
+      {
+        "q": "Why does Kai reject the old jokes?",
+        "opts": [
+          "They are written in another language",
+          "The theater is too cold",
+          "The ticket machine works perfectly",
+          "They depend on stereotypes about a village"
+        ],
+        "a": 3,
+        "why": "他不想靠嘲笑整個村莊來製造笑點。"
+      },
+      {
+        "q": "What does Kai write about instead?",
+        "opts": [
+          "A clerk dealing with a broken ticket machine",
+          "A racing horse",
+          "An ancient radio tower",
+          "A missing weather balloon"
+        ],
+        "a": 0,
+        "why": "他改寫成售票機壞掉的日常情境。"
+      },
+      {
+        "q": "What goes wrong on opening night?",
+        "opts": [
+          "The actor forgets the theater address",
+          "Recorded laughter plays after a serious line",
+          "The director never arrives",
+          "The stage disappears"
+        ],
+        "a": 1,
+        "why": "嚴肅台詞後誤播罐頭笑聲。"
+      }
+    ],
+    "words": [
+      "comedian",
+      "genre",
+      "stereotype",
+      "ridiculous",
+      "irony"
+    ]
+  },
+  {
+    "id": "lv5-155",
+    "series": "第四十七部 · The Joke That Changed Its Meaning｜變了意思的笑話",
+    "title": "The Review Nobody Expected",
+    "zh": "沒人預料的評論",
+    "blurb": "一篇評論讚美演出，卻錯把失誤當成刻意的藝術設計。",
+    "scene": "paper",
+    "pages": [
+      {
+        "en": "The next morning, a theater correspondent published an enthusiastic commentary. She described the misplaced laughter as a profound statement about modern life. Kai stared at the article. He appreciated the praise, yet he knew the sound had been an error. The review was eloquent, but it characterized the accident as a deliberate choice.",
+        "zh": "隔天早晨，一位劇場記者發表熱烈評論，把錯置的笑聲描述成對現代生活的深刻宣言。Kai 盯著文章。他感謝讚美，卻清楚知道那只是失誤。文章寫得雄辯動人，卻把意外形容成刻意安排。"
+      },
+      {
+        "en": "The producer urged him to accept the interpretation. “It might make the show mainstream,” she said. Kai could feel his ego enjoying the attention. But he worried that a false origin story would trap the cast into repeating a mistake every night. He asked the journalist for a conversation instead of demanding that she erase the review.",
+        "zh": "製作人要他接受這種詮釋。「說不定能讓表演進入主流。」她說。Kai 感到自尊心因關注而膨脹，卻擔心假的創作故事會迫使全劇組每晚重演失誤。他請記者談談，而不是要求她刪掉評論。"
+      },
+      {
+        "en": "The journalist listened, then smiled. “I still think the moment mattered, even if you did not plan it.” Kai agreed that audiences might find meaning beyond an artist’s intention. They added a note explaining the technical error. The conversation did not make one of them the winner; it made their accounts more accurate.",
+        "zh": "記者聽完後笑了：「即使你沒計畫，那一刻對觀眾仍可能有意義。」Kai 同意觀眾可能讀出超越創作者意圖的含義。他們加註說明技術失誤。談話沒有讓誰成為贏家，卻使兩人的敘述都更準確。"
+      }
+    ],
+    "quiz": [
+      {
+        "q": "How does the journalist interpret the mistake?",
+        "opts": [
+          "As a deliberate artistic statement",
+          "As a canceled rehearsal",
+          "As a missing actor",
+          "As a ticket refund policy"
+        ],
+        "a": 0,
+        "why": "評論把音效失誤當成刻意創作。"
+      },
+      {
+        "q": "Why does Kai hesitate to accept the praise?",
+        "opts": [
+          "The script was written by a horse",
+          "It would misrepresent how the moment happened",
+          "The journalist disliked the play",
+          "The theater had closed"
+        ],
+        "a": 1,
+        "why": "他不想讓失誤被誤寫成刻意設計。"
+      },
+      {
+        "q": "What do Kai and the journalist decide?",
+        "opts": [
+          "Repeat the wrong sound forever",
+          "Cancel all future performances",
+          "Keep the interpretation but clarify the technical error",
+          "Destroy the article"
+        ],
+        "a": 2,
+        "why": "保留評論觀點，同時說明實際失誤。"
+      }
+    ],
+    "words": [
+      "correspondent",
+      "commentary",
+      "profound",
+      "eloquent",
+      "characterize",
+      "mainstream",
+      "ego"
+    ]
+  },
+  {
+    "id": "lv5-156",
+    "series": "第四十七部 · The Joke That Changed Its Meaning｜變了意思的笑話",
+    "title": "The Last Line",
+    "zh": "最後一句台詞",
+    "blurb": "喜劇節閉幕夜，Kai 不再追求每一秒都有笑聲，而是讓觀眾自己決定何時笑。",
+    "scene": "meeting",
+    "pages": [
+      {
+        "en": "For the final performance, Kai asked the cast to leave one quiet moment untouched. The director worried that silence would invite boredom. Kai disagreed. Comedy needed rhythm, and an audience sometimes needed a pause to understand what had changed. The corrected sound cue stayed in place; nobody wanted another accidental laugh.",
+        "zh": "閉幕演出時，Kai 請劇組保留一小段完全安靜的時刻。導演擔心沉默會讓人無聊，Kai 卻認為喜劇需要節奏，觀眾有時需要停頓才能理解轉折。音效已修正，沒有人想再出現意外笑聲。"
+      },
+      {
+        "en": "When the clerk finally repaired the machine, he found a single ticket that had never printed. On it was the name of the child mentioned earlier in the play. The audience understood the connection before he spoke. No recorded laughter filled the room. A few people smiled; others simply waited.",
+        "zh": "當那位職員終於修好機器時，發現一張從未印出的票，上面正是戲中先前提到的孩子名字。觀眾在他開口前便理解了關聯。現場沒有罐頭笑聲，有些人微笑，有些人只是安靜等待。"
+      },
+      {
+        "en": "After the curtain fell, Kai found a note from the director: “You were right about the pause.” He folded it into his script. The festival had not taught him the perfect formula for humor. It had taught him that a joke could change its meaning when a person finally listened.",
+        "zh": "謝幕後，Kai 收到導演的一張字條：「關於停頓，你是對的。」他把紙條摺進劇本。這次影展沒有教他幽默的完美公式，而是讓他明白：當人真正願意聆聽，笑話的意思也可能改變。"
+      }
+    ],
+    "quiz": [
+      {
+        "q": "Why does Kai request a quiet moment?",
+        "opts": [
+          "To shorten the ticket line",
+          "To give the audience time to understand",
+          "To conceal a power failure",
+          "To punish the director"
+        ],
+        "a": 1,
+        "why": "他希望觀眾有時間理解劇情轉折。"
+      },
+      {
+        "q": "What links the final ticket to the earlier story?",
+        "opts": [
+          "It comes from another theater",
+          "It contains a weather chart",
+          "It carries the missing child’s name",
+          "It is made of gold"
+        ],
+        "a": 2,
+        "why": "票上出現戲裡先前提到的孩子名字。"
+      },
+      {
+        "q": "What has Kai learned by the end?",
+        "opts": [
+          "Every show must contain recorded laughter",
+          "Reviews are always false",
+          "Silence is never useful",
+          "Humor can change when people listen"
+        ],
+        "a": 3,
+        "why": "他理解聆聽如何改變笑話的意義。"
+      }
+    ],
+    "words": [
+      "boredom"
+    ]
+  },
+  {
+    "id": "lv5-157",
+    "series": "第四十八部 · The Island without a Flag｜沒有旗幟的島",
+    "title": "A Map in the Yacht",
+    "zh": "遊艇上的地圖",
+    "blurb": "一艘遊艇帶回一張失去島名的地圖，船主卻堅稱那座島根本不存在。",
+    "scene": "night",
+    "pages": [
+      {
+        "en": "Nico was repairing a yacht when he found a rolled map inside a damaged seat. It showed a tiny island beyond the usual shipping route. Across its border someone had written PIRATE in red ink. The owner dismissed it as a sailor’s superstition, but Nico noticed a modern lighthouse symbol at the edge of the paper.",
+        "zh": "Nico 修理一艘遊艇時，在破損座椅裡找到一張捲起的地圖。圖上有座位於慣常航線之外的小島，邊界上有人用紅墨水寫著「海盜」。船主說那只是水手的迷信，Nico 卻注意到紙張邊緣有現代燈塔符號。"
+      },
+      {
+        "en": "The marina office had no record of the island. A retired captain studied the map and pointed to a note in the margin: “Do not trust the visible shore.” Nico first imagined a buried chest or a skeleton under the sand. Then he saw a faded line marking a channel that appeared only at low tide.",
+        "zh": "遊艇碼頭辦公室沒有這座島的紀錄。一位退休船長研究地圖，指出頁邊寫著：「別相信看得見的海岸。」Nico 起初想像沙灘下埋著箱子或骷髏，接著才看到一條褪色的線，標示只在低潮時露出的水道。"
+      },
+      {
+        "en": "The captain refused to take a boat there without checking current charts and weather. “A story is not permission to take risks,” he said. Nico agreed to search the maritime archive first. The strange map had given them a question, not a safe route.",
+        "zh": "船長拒絕在未查核現行海圖與天氣前開船前往。「故事不是冒險的許可。」他說。Nico 同意先查航海檔案。這張怪地圖給了他們一個問題，並沒有給出安全航路。"
+      }
+    ],
+    "quiz": [
+      {
+        "q": "Where does Nico find the map?",
+        "opts": [
+          "Beside a mountain clinic",
+          "Inside a weather balloon",
+          "Inside a damaged yacht seat",
+          "In a restaurant kitchen"
+        ],
+        "a": 2,
+        "why": "地圖藏在遊艇受損的座椅裡。"
+      },
+      {
+        "q": "What is the captain’s first safety decision?",
+        "opts": [
+          "Sail immediately at night",
+          "Trust the pirate label",
+          "Follow the faded line without checking",
+          "Check current charts and weather before sailing"
+        ],
+        "a": 3,
+        "why": "船長堅持先查現行海圖和天氣。"
+      },
+      {
+        "q": "What unusual feature does Nico notice?",
+        "opts": [
+          "A channel that appears at low tide",
+          "A mountain made of glass",
+          "A train tunnel",
+          "A second moon"
+        ],
+        "a": 0,
+        "why": "地圖標示低潮時才顯露的水道。"
+      }
+    ],
+    "words": [
+      "yacht",
+      "pirate",
+      "superstition",
+      "skeleton"
+    ]
+  },
+  {
+    "id": "lv5-158",
+    "series": "第四十八部 · The Island without a Flag｜沒有旗幟的島",
+    "title": "The Shore That Was Not There",
+    "zh": "不存在的岸",
+    "blurb": "檔案裡的島有兩個名字，但其中一個不是地名，而是一場事故的警告。",
+    "scene": "paper",
+    "pages": [
+      {
+        "en": "At the archive, Nico found a photograph of the island from fifty years earlier. It had once served as a quarantine station. A wooden sign used the word “pirate” to warn people about stolen equipment, not an actual pirate crew. Later storms had torn down the buildings, leaving only a rocky rim above the sea.",
+        "zh": "在檔案室，Nico 找到五十年前的小島照片。它曾作為隔離站，木牌上的「海盜」是警告有人偷走器材，並非真的有海盜船員。後來風暴拆毀建築，海面上只剩一圈岩石邊緣。"
+      },
+      {
+        "en": "A note described a burial ground moved to the mainland before the station closed. Nico felt embarrassed by his earlier fantasy of a coffin full of gold. These records concerned real families, not a treasure hunt. He contacted the local heritage office before sharing the map online, so descendants would not learn the story from a sensational rumor.",
+        "zh": "一份附註記載，隔離站關閉前，墓地已移往本島。Nico 想起自己先前幻想金幣棺材，感到不好意思。這些是與真實家庭有關的紀錄，不是尋寶遊戲。他在上網分享前先聯絡地方文化單位，避免後代從聳動傳聞得知家族往事。"
+      },
+      {
+        "en": "The archivist showed him one final document: an old survey had used a temporary name for the island, and later maps omitted it when the station was abandoned. The place had never vanished physically. It had vanished from the records most travelers knew how to read.",
+        "zh": "檔案員最後拿出一份文件：舊測量曾使用小島的臨時名稱，隔離站廢棄後，後來的地圖便省略它。島在物理上從未消失；它只是從多數旅客會看的紀錄裡消失了。"
+      }
+    ],
+    "quiz": [
+      {
+        "q": "What did “pirate” refer to in the old sign?",
+        "opts": [
+          "A famous pirate captain",
+          "A new passenger service",
+          "A weather instrument",
+          "The theft of equipment"
+        ],
+        "a": 3,
+        "why": "舊標示提醒設備曾遭竊。"
+      },
+      {
+        "q": "Why does Nico contact the heritage office?",
+        "opts": [
+          "The records concern real families and descendants",
+          "He wants to buy the island",
+          "He needs a faster yacht",
+          "He wants to cancel the tide"
+        ],
+        "a": 0,
+        "why": "紀錄關係到真實家庭，應審慎公開。"
+      },
+      {
+        "q": "Why did the island seem to disappear?",
+        "opts": [
+          "The photograph was upside down",
+          "Later records omitted its temporary name",
+          "The sea swallowed the whole island overnight",
+          "The captain erased it by hand"
+        ],
+        "a": 1,
+        "why": "後續紀錄省略了舊臨時地名。"
+      }
+    ],
+    "words": [
+      "rim",
+      "burial",
+      "coffin"
+    ]
+  },
+  {
+    "id": "lv5-159",
+    "series": "第四十八部 · The Island without a Flag｜沒有旗幟的島",
+    "title": "The Name Returned",
+    "zh": "名字回來了",
+    "blurb": "Nico 終於知道地圖的真正用途，卻決定不公布那條最容易抵達的舊水道。",
+    "scene": "meeting",
+    "pages": [
+      {
+        "en": "Nico and the archivist prepared a small exhibition with the families’ consent. It showed the island’s ordinary history: workers, supplies, bad storms, and people who had cared for patients far from home. The old map appeared beside an updated chart. Their exhibition would overturn the belief that nobody had lived there, but it warned that the old channel was not suitable for navigation.",
+        "zh": "Nico 和檔案員在家屬同意下準備小型展覽，呈現島上平凡的歷史：工作者、補給、壞天氣，以及遠離家鄉照顧病人的人。舊地圖旁放上更新海圖。展覽將推翻「沒有人在此居住」的舊印象，同時清楚警告舊水道不適合航行。"
+      },
+      {
+        "en": "The yacht owner came to see the display. He confessed that his father had hidden the map after a dangerous visit, ashamed that he had ignored local advice. The red word was his warning to himself. Nico did not need to expose every private detail to make the record useful. He kept the account precise and the route out of reach.",
+        "zh": "遊艇船主來看展，承認父親曾在一次危險造訪後藏起地圖，因為他無視地方建議而感到羞愧。紅字是父親寫給自己的警告。Nico 不需要公開每件私事才能讓紀錄有用；他留下準確敘述，卻不鼓勵人去走那條舊航路。"
+      },
+      {
+        "en": "At the closing event, one descendant read a name that had not appeared in public for decades. The room fell quiet. Nico realized the best part of the mystery was not proving that a forgotten island existed. It was giving the people who had lived there a place in the story again.",
+        "zh": "閉幕活動上，一位後代念出數十年不曾公開的名字。房間安靜下來。Nico 明白，這場謎團最珍貴的不是證明被忘記的島真的存在，而是讓曾在那裡生活的人，重新在故事裡有了位置。"
+      }
+    ],
+    "quiz": [
+      {
+        "q": "How does the exhibition present the old channel?",
+        "opts": [
+          "As unsafe for present navigation",
+          "As a recommended tourist shortcut",
+          "As a modern ferry route",
+          "As a place to race yachts"
+        ],
+        "a": 0,
+        "why": "展覽明確提醒舊水道不適用現行航行。"
+      },
+      {
+        "q": "Why was the map hidden by the owner’s father?",
+        "opts": [
+          "He disliked the museum color",
+          "He regretted a dangerous visit",
+          "He wanted a larger sail",
+          "He believed it was a recipe"
+        ],
+        "a": 1,
+        "why": "父親曾無視在地建議而遭遇危險。"
+      },
+      {
+        "q": "What matters most to Nico by the end?",
+        "opts": [
+          "Buying a pirate flag",
+          "Keeping every document secret",
+          "Restoring the islanders’ place in the record",
+          "Winning a treasure competition"
+        ],
+        "a": 2,
+        "why": "他希望島上人們的歷史重新被看見。"
+      }
+    ],
+    "words": [
+      "overturn"
+    ]
+  },
+  {
+    "id": "lv5-160",
+    "series": "第四十九部 · The Game That Rewarded Waiting｜獎勵等待的遊戲",
+    "title": "A Perfect Score for Guessing",
+    "zh": "猜也能滿分",
+    "blurb": "遊戲開發者以為自己做出了最有效的字彙關卡，直到一個孩子連續滿分卻讀不懂故事。",
+    "scene": "meeting",
+    "pages": [
+      {
+        "en": "Jin had built a vocabulary game that rewarded fast answers. Players could flip a card, collect points, and unlock the next slot in seconds. The studio celebrated when completion rates soared. But a teacher showed him a troubling result: one student earned a perfect score and could not explain a single sentence from the story.",
+        "zh": "Jin 做了一款獎勵快速作答的單字遊戲，玩家翻牌、拿分數、解鎖下一格，幾秒就能完成。完關率飆升時工作室很高興，但一位老師展示令人不安的結果：有名學生拿滿分，卻說不出故事裡任何一句話的意思。"
+      },
+      {
+        "en": "At first Jin blamed boredom. Perhaps the child simply did not care about reading. Then he watched the game recordings. The correct answer appeared in the same position so often that players could exploit the pattern without recognizing the word. His system had trained speed and guessing, not understanding.",
+        "zh": "Jin 起初怪罪無聊感，以為孩子只是懶得閱讀。接著他看了遊戲紀錄：正確答案太常出現在同一個位置，玩家能利用規律，不認識單字也能答對。系統訓練出的是速度和猜測，而非理解。"
+      },
+      {
+        "en": "His partner proposed hiding the problem until the next release. Jin refused. If a game claimed to teach, its score should represent something meaningful. He made a backup, documented the flaw, and invited the teacher to help design a fairer test.",
+        "zh": "夥伴提議等下個版本再處理，Jin 拒絕了。既然遊戲聲稱能教學，分數就應反映有意義的能力。他先備份，記錄問題，邀請老師一起設計更公平的測驗。"
+      }
+    ],
+    "quiz": [
+      {
+        "q": "What exposes the problem with the game?",
+        "opts": [
+          "The teacher dislikes all games",
+          "A top-scoring student cannot explain the story",
+          "The studio loses its electricity",
+          "Every card is blank"
+        ],
+        "a": 1,
+        "why": "學生滿分卻無法解釋故事。"
+      },
+      {
+        "q": "What pattern can players exploit?",
+        "opts": [
+          "The game always uses the same voice",
+          "Every chapter contains one word",
+          "The correct answer often stays in the same position",
+          "All stories have the same title"
+        ],
+        "a": 2,
+        "why": "玩家可利用答案位置規律猜對。"
+      },
+      {
+        "q": "What does Jin do first?",
+        "opts": [
+          "He deletes every student record",
+          "He raises the price of the game",
+          "He ends all reading tasks",
+          "He documents the flaw and seeks a better test"
+        ],
+        "a": 3,
+        "why": "他記錄缺陷並邀請老師改善測試。"
+      }
+    ],
+    "words": [
+      "flip",
+      "slot",
+      "exploit"
+    ]
+  },
+  {
+    "id": "lv5-161",
+    "series": "第四十九部 · The Game That Rewarded Waiting｜獎勵等待的遊戲",
+    "title": "The Level Nobody Could Rush",
+    "zh": "不能衝速度的關卡",
+    "blurb": "Jin 把新關卡做成一則短篇故事，結果測試者第一次不得不停下來想。",
+    "scene": "paper",
+    "pages": [
+      {
+        "en": "The new version began with a short story, not a timer. Players could tap difficult words, then answer questions about why a character made a choice. The answer positions changed at random, but Jin did not stop there. He separated familiar questions from unseen ones so the score could not be inflated by memorizing an old screen.",
+        "zh": "新版從短篇故事開始，不再倒數計時。玩家可以點擊難字，接著回答角色為何做出某個選擇。答案位置隨機改變，但 Jin 沒有停在這裡。他把熟悉題和未見過的題分開，避免只記住舊畫面就讓分數膨脹。"
+      },
+      {
+        "en": "One tester became frustrated and called the revision a punishment. Another said the first story felt challenging but finally made sense. Jin resisted the urge to manipulate the results by removing every hard word. A game could offer support without pretending that learning required no effort.",
+        "zh": "一位測試者挫折得說新版像在受罰；另一位則說，第一篇故事有挑戰性，最後卻真的讀懂了。Jin 忍住把每個難字都刪掉的衝動。遊戲可以提供協助，不必假裝學習完全不用努力。"
+      },
+      {
+        "en": "They added a review session on the following day. Words missed twice returned sooner, while familiar ones waited longer. Jin called it flexibility, not failure. The player could pause or resume, but the app no longer awarded a victory simply for tapping the fastest button.",
+        "zh": "團隊加入隔天複習。連續答錯的字提早再出現，熟悉的字則拉長間隔。Jin 稱這是彈性，而不是失敗。玩家可以暫停或繼續，但程式不再只因按鈕按得最快就給予勝利。"
+      }
+    ],
+    "quiz": [
+      {
+        "q": "Why does Jin use unseen questions?",
+        "opts": [
+          "To remove the need for stories",
+          "To award points for fast tapping",
+          "To distinguish understanding from memorized answers",
+          "To make every question impossible"
+        ],
+        "a": 2,
+        "why": "新題能減少只記得舊答案的影響。"
+      },
+      {
+        "q": "Why does Jin keep some difficult words?",
+        "opts": [
+          "The teacher refuses to translate",
+          "The studio needs a longer title",
+          "The game has no dictionary",
+          "Support should not eliminate all challenge"
+        ],
+        "a": 3,
+        "why": "支援理解不代表要刪除所有挑戰。"
+      },
+      {
+        "q": "How does the review schedule change?",
+        "opts": [
+          "Frequently missed words return sooner",
+          "Every word disappears after one attempt",
+          "All players get one identical schedule forever",
+          "The timer doubles after every answer"
+        ],
+        "a": 0,
+        "why": "較不熟的字會更快重現。"
+      }
+    ],
+    "words": [
+      "random",
+      "flexibility",
+      "resume"
+    ]
+  },
+  {
+    "id": "lv5-162",
+    "series": "第四十九部 · The Game That Rewarded Waiting｜獎勵等待的遊戲",
+    "title": "A Score Worth Keeping",
+    "zh": "值得留下的分數",
+    "blurb": "上線一個月後，新版的分數反而下降；Jin 卻第一次知道玩家究竟學會了什麼。",
+    "scene": "meeting",
+    "pages": [
+      {
+        "en": "A month after release, the average game score fell. A manager called it a disaster until Jin showed the delayed tests. Players now remembered more words a week later and could explain unfamiliar paragraphs with fewer hints. The old score had measured a trick. The new measurements reflected skills that could travel beyond one screen.",
+        "zh": "新版上線一個月後，平均遊戲分數反而下降。主管直呼災難，直到 Jin 展示延遲測試：玩家一週後記得更多單字，也能用更少提示理解陌生段落。舊分數衡量的是取巧，新數據則更接近可帶到其他情境的能力。"
+      },
+      {
+        "en": "The team published the limitations alongside the improvement. They had tested only a small group, and future learners might respond differently. Jin refused to promise that an app alone could guarantee an exam result. A useful tool, he said, should make practice easier to sustain and learning easier to verify.",
+        "zh": "團隊公布進步，也同時公布限制：測試人數還少，未來學習者可能有不同反應。Jin 不願承諾只靠一個 App 就保證考試成績。他認為有用的工具應讓練習更容易持續，也讓成果更容易驗證。"
+      },
+      {
+        "en": "That evening, a player left a message: “I got a question wrong, reread the chapter, and finally understood why.” Jin saved it beside the old perfect-score screenshot. One showed how quickly someone could win. The difference was striking: the other showed why he wanted to build the game in the first place.",
+        "zh": "當晚，一位玩家留言：「我答錯一題，回去重讀，最後終於懂了為什麼。」Jin 把留言存到舊版滿分截圖旁。一張顯示人可以多快獲勝，差別非常鮮明；另一張則提醒他，自己當初為什麼想做這個遊戲。"
+      }
+    ],
+    "quiz": [
+      {
+        "q": "Why does the manager initially worry?",
+        "opts": [
+          "All stories have been deleted",
+          "The game cannot open",
+          "The teacher stops reading",
+          "Average game scores fall"
+        ],
+        "a": 3,
+        "why": "新版平均遊戲分數下降讓主管擔心。"
+      },
+      {
+        "q": "What provides better evidence of learning?",
+        "opts": [
+          "Delayed recall and unfamiliar reading tests",
+          "A faster tap on the same screen",
+          "A larger number of decorative badges",
+          "A longer loading animation"
+        ],
+        "a": 0,
+        "why": "延遲回想與陌生閱讀比較能反映學習。"
+      },
+      {
+        "q": "Why does Jin save the player’s message?",
+        "opts": [
+          "It asks him to remove the stories",
+          "It expresses the kind of understanding he wanted to support",
+          "It promises a perfect exam result",
+          "It includes a new password"
+        ],
+        "a": 1,
+        "why": "留言說明玩家透過重讀真正理解了故事。"
+      }
+    ],
+    "words": [
+      "striking"
+    ]
+  },
+  {
+    "id": "lv5-163",
+    "series": "第五十部 · The Floor That Was Missing｜消失的樓層",
+    "title": "The Escalator to Nowhere",
+    "zh": "通往空白處的電扶梯",
+    "blurb": "新開幕商場的電扶梯通往一層「不存在的樓」，而一名清潔員早就警告過設計師。",
+    "scene": "night",
+    "pages": [
+      {
+        "en": "At midnight, an escalator kept running after the shopping center had closed. Ren, a junior architect, watched it carry an empty trolley toward a dark landing. The building profile showed no public floor above the shops. Yet a faint tick came from behind the wall, followed by a metallic rattle.",
+        "zh": "午夜，購物中心打烊後，一座電扶梯仍在運轉。初級建築師 Ren 看著空推車被送往黑暗平台。建築剖面圖沒有顯示商店上方有公共樓層，但牆後傳來微弱的滴答聲，接著是金屬顫響。"
+      },
+      {
+        "en": "A guard wanted to slam the emergency switch and leave. Ren stopped him long enough to check whether anyone remained upstairs. A cleaner had filed a report that morning, but the manager dismissed her as an outsider who did not understand the design. Her warning mentioned a narrow corridor and a door without a label.",
+        "zh": "警衛想猛按緊急開關後離開。Ren 請他先確認樓上是否還有人。一名清潔員早上曾提交報告，經理卻說她是外人、不懂設計而忽略警告。她提到了狹窄走廊，以及一扇沒有標籤的門。"
+      },
+      {
+        "en": "Ren used the surveillance screen to follow the moving trolley. It disappeared for three seconds and returned without its plastic cover. “That is not a trick of the camera,” the cleaner said from the doorway. Ren asked her to show him the report again before anyone entered the unknown space.",
+        "zh": "Ren 用監視螢幕追蹤推車。它消失了三秒，再出現時塑膠蓋卻不見了。「那不是攝影機的把戲，」清潔員從門邊說。Ren 請她重新拿出報告，在任何人進入未知區域前先讀清楚。"
+      }
+    ],
+    "quiz": [
+      {
+        "q": "Why is Ren suspicious of the escalator?",
+        "opts": [
+          "It is filled with customers",
+          "It plays loud music",
+          "It leads toward a level absent from the building profile",
+          "It has been replaced with stairs"
+        ],
+        "a": 2,
+        "why": "電扶梯通往圖面上沒有的樓層。"
+      },
+      {
+        "q": "Whose warning was ignored?",
+        "opts": [
+          "The owner’s lunch order",
+          "A tourist brochure",
+          "A radio announcement",
+          "The cleaner’s report"
+        ],
+        "a": 3,
+        "why": "清潔員早已提交警告報告。"
+      },
+      {
+        "q": "What happens to the trolley?",
+        "opts": [
+          "It returns without its plastic cover",
+          "It turns into a bicycle",
+          "It stops at a supermarket",
+          "It falls through the ground"
+        ],
+        "a": 0,
+        "why": "推車短暫消失後，塑膠蓋不見了。"
+      }
+    ],
+    "words": [
+      "escalator",
+      "profile",
+      "tick",
+      "rattle",
+      "slam",
+      "outsider",
+      "surveillance"
+    ]
+  },
+  {
+    "id": "lv5-164",
+    "series": "第五十部 · The Floor That Was Missing｜消失的樓層",
+    "title": "The Door behind the Wall",
+    "zh": "牆後的門",
+    "blurb": "清潔員的報告沒有寫錯；真正遺失的是某個版本的建築圖。",
+    "scene": "paper",
+    "pages": [
+      {
+        "en": "The cleaner, Ada, explained that the passage was once used by maintenance workers. After a renovation, a new wall concealed its entrance. Contractors had mounted a heavy rack against it, while the old ventilation system still operated behind the panels. The trolley had struck a scrap of loose metal.",
+        "zh": "清潔員 Ada 解釋，那條通道過去供維修人員使用。改建後，新牆遮住入口，承包商在牆邊裝了沉重的架子，而舊通風系統仍在板後運作。推車撞到一塊鬆動廢鐵，塑膠蓋因此被扯下。"
+      },
+      {
+        "en": "Ren contacted the facilities department and compared two sets of plans. One diagram had been trimmed before approval, leaving out a small service floor. The gap was not merely embarrassing; a blocked route could trap workers if smoke filled the corridor. Ren refused to let anyone climb the escalator until the area was secured.",
+        "zh": "Ren 聯絡設施部門，比較兩套圖紙。其中一張在核准前被裁去一角，遺漏小型設備樓層。這不只是丟臉的錯誤：一旦走廊充煙，被堵住的通道可能困住工人。Ren 在區域安全確認前不准任何人搭乘電扶梯。"
+      },
+      {
+        "en": "A supervisor argued that the renovation had already cost too much. Ada showed the photographs she had taken on behalf of the night staff. Ren entered them into the record and initiated an independent inspection. For the first time, someone treated a cleaner’s observation as evidence rather than an inconvenience.",
+        "zh": "主管抱怨裝修已經花了太多錢。Ada 拿出她代表夜班人員拍攝的照片。Ren 將照片納入紀錄，啟動獨立檢查。第一次，有人把清潔員的觀察當成證據，而不是麻煩。"
+      }
+    ],
+    "quiz": [
+      {
+        "q": "What caused the trolley’s strange movement?",
+        "opts": [
+          "A ghost controlling the camera",
+          "A broken elevator motor",
+          "A magnetic ticket",
+          "A hidden maintenance passage and loose sheet"
+        ],
+        "a": 3,
+        "why": "原因是隱藏的維修通道與鬆動鐵片。"
+      },
+      {
+        "q": "Why does the missing plan matter?",
+        "opts": [
+          "It conceals a possible emergency-route hazard",
+          "It changes the shop prices",
+          "It adds a garden to the roof",
+          "It shortens the mall name"
+        ],
+        "a": 0,
+        "why": "遭遺漏的圖面隱藏了逃生安全問題。"
+      },
+      {
+        "q": "How does Ren respond to Ada?",
+        "opts": [
+          "He takes the trolley home",
+          "He records her evidence and requests inspection",
+          "He deletes her photographs",
+          "He orders her to keep silent"
+        ],
+        "a": 1,
+        "why": "Ren 留存 Ada 的證據並要求檢查。"
+      }
+    ],
+    "words": [
+      "mount",
+      "rack",
+      "scrap",
+      "initiate"
+    ]
+  },
+  {
+    "id": "lv5-165",
+    "series": "第五十部 · The Floor That Was Missing｜消失的樓層",
+    "title": "A Petition for the Night Shift",
+    "zh": "夜班的請求",
+    "blurb": "商場恢復營業前，真正必須改正的不是一座電扶梯，而是誰的話能被聽見。",
+    "scene": "meeting",
+    "pages": [
+      {
+        "en": "The inspection confirmed the blocked exit. Repairs were compulsory before the center could reopen that section. Management held a negotiation with the contractors about the budget, but the night staff asked for something else: a direct way to report danger without waiting for a supervisor to approve every message.",
+        "zh": "檢查證實出口遭堵塞。該區重新開放前，修繕是必要條件。管理層與承包商協商預算，但夜班人員另有要求：應有直接通報危險的管道，不必每次等主管核准訊息。"
+      },
+      {
+        "en": "Ada brought a petition signed by cleaners, guards, and delivery workers. Each respondent described one occasion when a concern had been ignored. Ren resisted the temptation to promise that a new rule would solve every problem. He offered a clear reporting channel, a review deadline, and a public record of completed repairs.",
+        "zh": "Ada 帶來清潔員、警衛與送貨員簽署的請願書。每名回覆者都描述一次警告遭忽略的經驗。Ren 沒有隨口保證新規則能解決所有問題，而是提出清楚的通報管道、審查期限，以及公開的修繕完成紀錄。"
+      },
+      {
+        "en": "On reopening day, the escalator stopped at its proper landing. No mysterious floor remained. Ada placed her old report beside the corrected plan. “I did not need a title,” she told Ren. “I needed someone to read the page.” Ren left the report there, where visitors could see it.",
+        "zh": "重新開放那天，電扶梯停在正確的平台，不再有神祕樓層。Ada 把舊報告放在更正圖面旁。「我不需要頭銜，」她告訴 Ren，「我只需要有人把那頁讀完。」Ren 把報告留在原處，讓訪客也能看見。"
+      }
+    ],
+    "quiz": [
+      {
+        "q": "What must happen before the area reopens?",
+        "opts": [
+          "The blocked exit must be repaired",
+          "The trolley must be painted gold",
+          "All shops must change names",
+          "The cleaner must resign"
+        ],
+        "a": 0,
+        "why": "必須先修復堵塞的出口。"
+      },
+      {
+        "q": "What does the staff petition request?",
+        "opts": [
+          "More promotional posters",
+          "A direct and accountable hazard-reporting process",
+          "A faster escalator",
+          "A secret shopping floor"
+        ],
+        "a": 1,
+        "why": "員工要求可靠且可追蹤的危險通報流程。"
+      },
+      {
+        "q": "What does Ada’s final remark emphasize?",
+        "opts": [
+          "She disliked the corrected plan",
+          "She had never seen the escalator",
+          "Her report needed to be taken seriously",
+          "She wanted to become a tourist"
+        ],
+        "a": 2,
+        "why": "Ada 想要的是她的報告被認真閱讀。"
+      }
+    ],
+    "words": [
+      "compulsory",
+      "negotiation",
+      "petition",
+      "respondent"
+    ]
+  },
+  {
+    "id": "lv5-166",
+    "series": "第五十一部 · The Paper Crown｜紙做的王冠",
+    "title": "The Crown on the Wrong Head",
+    "zh": "戴錯人的王冠",
+    "blurb": "歷史展開幕前，修復師發現王冠的主人，可能不是博物館一直宣稱的那個人。",
+    "scene": "paper",
+    "pages": [
+      {
+        "en": "A crown made of painted paper arrived at the museum for a new exhibition. The label called it a symbol of a mighty throne, yet its delicate surface contained ordinary glue and scraps of a school textbook. Curator Mina suspected that the crown had belonged to a theater, not a royal court.",
+        "zh": "一頂彩繪紙王冠送進博物館的新展覽。標籤稱它象徵強大王權，然而脆弱表面卻有普通膠水及教科書紙屑。策展人 Mina 懷疑這頂王冠屬於劇院，不是王宮。"
+      },
+      {
+        "en": "The director wanted a dramatic opening: a warrior, a kingdom, and a crown taken during a siege. Mina asked him to distinguish a legend from a document. She found a faded signature on the inner band, followed by three lines in a language nobody on staff recognized.",
+        "zh": "館長希望有戲劇性的開場：戰士、王國，還有圍城時奪來的王冠。Mina 請他區分傳說與文件。她在內圈找到褪色簽名，後面還有三行館員沒人認得的語言。"
+      },
+      {
+        "en": "A visiting translator read the first line and grew silent. It was not the name of a king. It said, “The child who played the king was never paid.” Mina looked again at the grand exhibition banner. The paper crown had become a clue to a very different story.",
+        "zh": "一位來訪的翻譯員讀完第一行，突然沉默。那不是國王的名字，而是：「扮演國王的孩子從未領到報酬。」Mina 重新看向宏偉的展覽布條。紙王冠成了另一段故事的線索。"
+      }
+    ],
+    "quiz": [
+      {
+        "q": "Why does Mina question the museum label?",
+        "opts": [
+          "The king owned no books",
+          "The crown contains ordinary theatrical materials",
+          "The crown weighs too much",
+          "The label is written in red"
+        ],
+        "a": 1,
+        "why": "王冠材料更像劇院道具。"
+      },
+      {
+        "q": "What does the director initially want?",
+        "opts": [
+          "An exhibition about satellites",
+          "A cooking demonstration",
+          "A dramatic story about royalty and a siege",
+          "A new ticket machine"
+        ],
+        "a": 2,
+        "why": "館長想呈現王國與圍城的戲劇故事。"
+      },
+      {
+        "q": "What does the translated line reveal?",
+        "opts": [
+          "A king lost his passport",
+          "A museum closed for repairs",
+          "A crown was made of silver",
+          "A child actor was never paid"
+        ],
+        "a": 3,
+        "why": "文字揭露扮演國王的孩子沒有領到報酬。"
+      }
+    ],
+    "words": [
+      "throne",
+      "warrior",
+      "siege"
+    ]
+  },
+  {
+    "id": "lv5-167",
+    "series": "第五十一部 · The Paper Crown｜紙做的王冠",
+    "title": "The Actors without Names",
+    "zh": "沒有名字的演員",
+    "blurb": "一份演出名單與殖民時期的宣傳海報，為什麼給出截然不同的故事？",
+    "scene": "paper",
+    "pages": [
+      {
+        "en": "The translator located an old program from a colonial exhibition. Its poster praised a distant empire and described local performers as colorful decoration. The actual cast list told another story: children and adults had worked through long rehearsals, then been denied their wages. Some had signed a petition for better treatment.",
+        "zh": "翻譯員找到一份殖民時期展演的舊節目單。海報歌頌遠方帝國，把當地表演者形容成彩色裝飾，但正式演員表卻說出另一段歷史：大人與孩子長時間排練，最後仍領不到薪水，有人還簽了改善待遇的請願書。"
+      },
+      {
+        "en": "Mina examined the language of the poster. Its confident rhetoric concealed a simple fact: the people onstage had names, families, and contracts. One boy had drawn the crown himself. His sister kept a copy of the agreement and later wrote that the show had been advertised as an honor, not paid work.",
+        "zh": "Mina 檢視海報措辭。自信的修辭掩蓋了一個簡單事實：台上的人有名字、家庭與契約。一名男孩親手畫了王冠，他的姊姊保留協議副本，後來寫道那場演出被宣傳成榮譽，而非有酬工作。"
+      },
+      {
+        "en": "The director feared that changing the exhibit would ruin the opening. Mina proposed showing both the poster and the cast list, with their different purposes explained. She did not want to replace one oversimplified account with another. Visitors deserved to see how the evidence changed the picture.",
+        "zh": "館長擔心更改展覽會毀掉開幕。Mina 提議同時展示海報與演員表，說明兩者目的不同。她不想用另一個過度簡化的說法取代原本版本。參觀者值得看到證據如何改變整體認識。"
+      }
+    ],
+    "quiz": [
+      {
+        "q": "What is misleading about the old poster?",
+        "opts": [
+          "It contains a weather warning",
+          "It describes a missing train",
+          "It treats local performers as decoration",
+          "It lists all workers and wages"
+        ],
+        "a": 2,
+        "why": "海報將當地表演者當作裝飾而忽視其勞動。"
+      },
+      {
+        "q": "What does the boy’s sister preserve?",
+        "opts": [
+          "A stolen passport",
+          "An old radio",
+          "A recipe for glue",
+          "A copy of the work agreement"
+        ],
+        "a": 3,
+        "why": "姊姊留下了工作協議的副本。"
+      },
+      {
+        "q": "What exhibit does Mina propose?",
+        "opts": [
+          "Show both the poster and cast list with context",
+          "Display only the dramatic poster",
+          "Destroy all evidence",
+          "Replace the crown with a sword"
+        ],
+        "a": 0,
+        "why": "她希望並列不同史料並解釋脈絡。"
+      }
+    ],
+    "words": [
+      "colonial",
+      "rhetoric"
+    ]
+  },
+  {
+    "id": "lv5-168",
+    "series": "第五十一部 · The Paper Crown｜紙做的王冠",
+    "title": "The Keeper of the Original",
+    "zh": "留下原件的人",
+    "blurb": "王冠的主人後代現身，卻不願讓博物館拿家族記憶當成另一場表演。",
+    "scene": "meeting",
+    "pages": [
+      {
+        "en": "A descendant of the child actor visited after hearing about the changes. Her grandmother had kept the original contract in a wooden box. She agreed to lend a copy, but not to surrender the fragile paper. “I am not an obstacle to your exhibition,” she said. “I am the person whose family preserved the evidence.”",
+        "zh": "童星的後代聽聞展覽修改後來訪。她的祖母一直把原始契約保存在木盒裡。她同意借出副本，卻不願交出脆弱原件。「我不是你們展覽的障礙，」她說，「我們家才是保存證據的人。」"
+      },
+      {
+        "en": "Mina offered a clear loan agreement and invited her to review the captions. The museum could acknowledge its earlier error without claiming ownership over every family memory. A conservation specialist examined the crown and found a second signature beneath the paint, presumably the name of the person who had repaired it after the show.",
+        "zh": "Mina 提出清楚的借展協議，邀請她共同檢視說明文字。博物館可以承認先前錯誤，不必宣稱所有家族記憶都屬於館方。修復師檢查王冠，發現彩繪底下還有第二個簽名，推測是演出後修理道具的人。"
+      },
+      {
+        "en": "At the opening, Mina stood beside the descendant rather than speaking on her behalf. The crown still looked magnificent beneath the lights, but its label no longer mentioned a stolen throne. It named the people who made it and the people who had kept their story alive.",
+        "zh": "開幕時，Mina 站在後代身邊，而不是替她發言。燈光下的王冠仍然華麗，但說明牌不再提起被奪走的王位，而是寫上製作者，以及守住這段故事的人們的名字。"
+      }
+    ],
+    "quiz": [
+      {
+        "q": "Why does the descendant refuse to surrender the contract?",
+        "opts": [
+          "The museum has no lights",
+          "The crown is made of steel",
+          "She wants to cancel the show",
+          "The fragile original is a family-held document"
+        ],
+        "a": 3,
+        "why": "原件脆弱，也是家族保存的文件。"
+      },
+      {
+        "q": "What is discovered beneath the paint?",
+        "opts": [
+          "Another signature",
+          "A hidden motor",
+          "A modern passport",
+          "A train ticket"
+        ],
+        "a": 0,
+        "why": "彩繪底下有第二個簽名。"
+      },
+      {
+        "q": "How does the exhibit change?",
+        "opts": [
+          "It removes all historical notes",
+          "It credits the people behind the crown",
+          "It calls the crown a royal weapon",
+          "It hides the cast list"
+        ],
+        "a": 1,
+        "why": "最終展覽說明王冠背後的人，而非虛構王權。"
+      }
+    ],
+    "words": [
+      "presumably"
+    ]
+  },
+  {
+    "id": "lv5-169",
+    "series": "第五十一部 · The Paper Crown｜紙做的王冠",
+    "title": "The Crown Returned to the Stage",
+    "zh": "回到舞台的王冠",
+    "blurb": "一群學生重演舊劇，但這次沒有人必須為別人的榮耀隱去自己的名字。",
+    "scene": "theater",
+    "pages": [
+      {
+        "en": "A student theater asked permission to recreate the old show. Mina hesitated, remembering how the original performers had been treated. The director explained that each student would receive credit, and everyone could opt out of a role. The museum supplied photographs, not the fragile crown itself.",
+        "zh": "學生劇團希望重演舊戲。Mina 想到原本表演者的待遇，猶豫了一下。導演說每名學生都會被署名，任何人都可退出角色。博物館提供照片，不會把脆弱的原冠拿去演出。"
+      },
+      {
+        "en": "On opening night, the student playing the king removed the paper crown before the final scene. Instead of declaring victory, he read the names from the forgotten cast list. A hush filled the room. No one needed to pretend that the play had erased the earlier unfairness.",
+        "zh": "首演夜，扮演國王的學生在最後一幕前取下紙王冠。他沒有宣告勝利，而是讀出遭遺忘的演員姓名。全場安靜。沒有人假裝這場重演能抹去過去的不公平。"
+      },
+      {
+        "en": "The descendant watched from the front row. Afterward, she placed a small photograph beside the exhibit: her grandmother smiling with the crown in her hands. “She did not think of herself as a symbol,” she told Mina. “She was a person who loved the theater.” The story finally belonged to its people.",
+        "zh": "那位後代坐在第一排觀看。演出後，她在展覽旁放上一張小照片：祖母拿著王冠微笑。「她從不把自己當成象徵，」她告訴 Mina，「她只是喜愛劇場的人。」這段故事終於回到人物本身。"
+      }
+    ],
+    "quiz": [
+      {
+        "q": "What protects the original crown?",
+        "opts": [
+          "The students use photographs to recreate it",
+          "They paint it with metal",
+          "They take it abroad",
+          "They store it in water"
+        ],
+        "a": 0,
+        "why": "學生依照片重做道具，不使用脆弱原件。"
+      },
+      {
+        "q": "What does the student king read aloud?",
+        "opts": [
+          "A list of train stations",
+          "The forgotten performers’ names",
+          "The museum ticket prices",
+          "A weather report"
+        ],
+        "a": 1,
+        "why": "學生念出原本被忽略的演員姓名。"
+      },
+      {
+        "q": "What does the descendant want visitors to remember?",
+        "opts": [
+          "Every show was perfect",
+          "The original crown was made of gold",
+          "Her grandmother was a person who loved theater",
+          "Her grandmother ruled a kingdom"
+        ],
+        "a": 2,
+        "why": "她希望祖母被記得為真實的人，而非空洞符號。"
+      }
+    ],
+    "words": [
+      "opt"
+    ]
+  },
+  {
+    "id": "lv5-170",
+    "series": "第五十二部 · Nine Innings, One Call｜九局與一次判決",
+    "title": "The Pitch before the Storm",
+    "zh": "暴風前的一球",
+    "blurb": "決賽第九局，投手被要求帶傷上場，卻只有場邊的孩子看見他握不住球。",
+    "scene": "stadium",
+    "pages": [
+      {
+        "en": "In the final inning, the crowd began to rally behind the home team. The pitcher, Noel, had thrown more balls than anyone expected. When he tried to straighten his fingers, pain crossed his face. The coach called for one last pitch, but a young volunteer noticed Noel could barely grip the ball.",
+        "zh": "決賽第九局，觀眾開始為地主隊加油。投手 Noel 投了遠超預期的球。他試著伸直手指時，臉上閃過痛楚。教練要求再投最後一球，但年輕志工看出 Noel 幾乎握不住球。"
+      },
+      {
+        "en": "A foul ball struck the fence as the sky turned gloomy. Noel shrugged and said he was fine, yet the volunteer had seen his hand shake. She asked the medical staff to examine him. The coach complained that a substitute would ruin their chance of winning, and the opposing team waited at the plate.",
+        "zh": "一顆界外球打到圍欄，天空逐漸陰沉。Noel 聳肩說沒事，志工卻看過他的手發抖。她請醫護檢查。教練抱怨換人會毀掉勝機，對手則在打擊區等待。"
+      },
+      {
+        "en": "Noel stared at the scoreboard: their team versus the visitors, one run apart. He had trained for this night, but he finally handed the ball to another player. The crowd was quiet for a moment. Then someone began clapping, not for a victory, but for a choice that had cost Noel something.",
+        "zh": "Noel 盯著記分板：地主隊對客隊，只差一分。他為此夜訓練多年，最後仍把球交給另一位球員。觀眾短暫安靜，接著有人鼓掌，不是為勝利，而是因為 Noel 做了有代價的選擇。"
+      }
+    ],
+    "quiz": [
+      {
+        "q": "Why does the volunteer seek medical help?",
+        "opts": [
+          "The crowd is leaving",
+          "Noel has trouble gripping the ball",
+          "The scoreboard is broken",
+          "The storm has ended"
+        ],
+        "a": 1,
+        "why": "她發現投手難以握球。"
+      },
+      {
+        "q": "When does the story take place?",
+        "opts": [
+          "At a swimming race",
+          "During halftime of a football match",
+          "During the final inning",
+          "Before the season starts"
+        ],
+        "a": 2,
+        "why": "故事發生在比賽的最後一局。"
+      },
+      {
+        "q": "What does Noel ultimately do?",
+        "opts": [
+          "He refuses all medical advice and pitches",
+          "He leaves the country",
+          "He changes teams during the game",
+          "He gives the ball to another player"
+        ],
+        "a": 3,
+        "why": "他選擇將球交給其他球員。"
+      }
+    ],
+    "words": [
+      "inning",
+      "rally",
+      "pitcher",
+      "straighten",
+      "foul",
+      "gloomy",
+      "versus"
+    ]
+  },
+  {
+    "id": "lv5-171",
+    "series": "第五十二部 · Nine Innings, One Call｜九局與一次判決",
+    "title": "The Name beside the Score",
+    "zh": "分數旁的名字",
+    "blurb": "球賽結束後，Noel 發現真正需要勇氣的，不是比賽當下，而是隔天說出原因。",
+    "scene": "stadium",
+    "pages": [
+      {
+        "en": "The substitute pitcher finished the game, and the home team lost by one run. A nasty headline called Noel weak, while another claimed he had betrayed his teammates. Neither writer had seen the examination. Noel was angry but refused to reveal his private medical details merely to silence strangers.",
+        "zh": "替補投手完成比賽，地主隊以一分之差落敗。某篇惡意標題說 Noel 軟弱，另一篇指他背叛隊友，但兩位作者都沒看過檢查結果。Noel 很生氣，卻不願為了讓陌生人閉嘴而公開私人醫療細節。"
+      },
+      {
+        "en": "At the team meeting, the coach admitted he had pressured Noel. The volunteer spoke about what she observed, without pretending to diagnose the injury. Noel said that a team had to protect its players as well as its score. His teammates listened. One of them had concealed pain the previous month, afraid of losing his place.",
+        "zh": "球隊會議上，教練承認自己曾施壓。志工說出親眼所見，但沒有假裝自己能診斷傷勢。Noel 表示，球隊要保護的不只是分數，也包括球員。隊友們聽著，其中一人上個月也因怕失去位置而隱瞞疼痛。"
+      },
+      {
+        "en": "The club introduced a rule allowing any player to request a check without punishment. Noel returned weeks later, after being cleared to play. He never changed the final score of that rainy night. But the next time someone put down the ball, the team knew how to respond.",
+        "zh": "球團引入規定，讓球員能要求檢查而不受懲罰。數週後，Noel 獲准重返球場。那個雨夜的最終比分不曾改變，但下次有人放下球時，隊友已經知道該如何回應。"
+      }
+    ],
+    "quiz": [
+      {
+        "q": "How did the home team finish?",
+        "opts": [
+          "The game was canceled",
+          "The final score was a tie",
+          "It lost by one run",
+          "It won by ten runs"
+        ],
+        "a": 2,
+        "why": "地主隊最後輸了一分。"
+      },
+      {
+        "q": "Why does Noel avoid giving medical details publicly?",
+        "opts": [
+          "He has forgotten the match",
+          "He does not know the coach",
+          "He is trying to change the score",
+          "He wants to keep private information private"
+        ],
+        "a": 3,
+        "why": "他不想為反駁評論而公開私人資料。"
+      },
+      {
+        "q": "What change does the club make?",
+        "opts": [
+          "Players may request checks without punishment",
+          "All pitchers must play every inning",
+          "Volunteers must leave the stadium",
+          "Fans decide medical questions"
+        ],
+        "a": 0,
+        "why": "球團提供不受懲罰的檢查申請管道。"
+      }
+    ],
+    "words": [
+      "nasty"
+    ]
+  },
+  {
+    "id": "lv5-172",
+    "series": "第五十三部 · The Seeds That Would Not Sleep｜不肯沉睡的種子",
+    "title": "The Drawer of Sleeping Seeds",
+    "zh": "沉睡種子的抽屜",
+    "blurb": "封存種子提前發芽，研究員卻發現最奇怪的不是植物，而是保管紀錄的日期。",
+    "scene": "paper",
+    "pages": [
+      {
+        "en": "At a botanical laboratory, Bea found tiny roots pushing through a sealed packet. The seeds had been stored in a cool, dry cabinet, yet several had begun to grow. Her colleague called it a miracle of evolution. Bea preferred a simpler question: who had opened the drawer, and when?",
+        "zh": "植物實驗室裡，Bea 發現細根竟穿破密封袋。種子一直存放在陰涼乾燥的櫃子裡，卻有幾顆開始發芽。同事稱這是演化奇蹟，Bea 卻想先問更簡單的事：誰曾打開抽屜、在什麼時間？"
+      },
+      {
+        "en": "The storage log listed a recent inspection, but the initials belonged to a researcher who had left months before. Bea examined the genetic labels and noticed that two batches had been swapped. The seeds were not from the rare mountain plant. They came from a common crop that required different conditions.",
+        "zh": "保存紀錄列出最近一次檢查，但簽名縮寫屬於數月前離職的研究員。Bea 檢查基因標籤，發現兩批種子被交換了。發芽種子不是稀有山區植物，而是需要不同保存環境的常見作物。"
+      },
+      {
+        "en": "A technician confessed that he had moved the packets during a flood warning, then forgotten to update the database. Bea was relieved the mystery had an explanation, but she worried about the rare seeds now stored in the wrong cabinet. She initiated a careful inventory before attempting any new experiment.",
+        "zh": "技師坦承洪水警報時他搬動過種子袋，卻忘了更新資料庫。Bea 慶幸謎團有了解釋，但也擔心稀有種子可能存放在錯誤櫃子。她在進行新實驗前先啟動仔細盤點。"
+      }
+    ],
+    "quiz": [
+      {
+        "q": "What seems unusual in the laboratory?",
+        "opts": [
+          "A telescope has broken",
+          "A boat arrives twice",
+          "A theater loses its costumes",
+          "Sealed seeds have begun to sprout"
+        ],
+        "a": 3,
+        "why": "密封種子竟提前發芽。"
+      },
+      {
+        "q": "What reveals a labeling problem?",
+        "opts": [
+          "Two batches have been swapped",
+          "The cabinet has no door",
+          "All crops have died",
+          "The rain has stopped"
+        ],
+        "a": 0,
+        "why": "兩批種子被交換。"
+      },
+      {
+        "q": "Why did the technician move the packets?",
+        "opts": [
+          "To train for a race",
+          "Because of a flood warning",
+          "To prepare a school play",
+          "To sell the cabinets"
+        ],
+        "a": 1,
+        "why": "技師因洪水警報搬動種子。"
+      }
+    ],
+    "words": [
+      "evolution"
+    ]
+  },
+  {
+    "id": "lv5-173",
+    "series": "第五十三部 · The Seeds That Would Not Sleep｜不肯沉睡的種子",
+    "title": "The Label That Mattered",
+    "zh": "重要的標籤",
+    "blurb": "真正珍貴的種子不會發光；Bea 必須讓團隊相信，耐心核對比奇蹟更值得報導。",
+    "scene": "paper",
+    "pages": [
+      {
+        "en": "The inventory uncovered another problem. One packet contained a rare plant with a natural resistance to a local disease, but its label had been placed on an ordinary crop. Bea explained that a useful trait was not proof of an instant cure. Genetics offered questions to investigate, not permission to make promises.",
+        "zh": "盤點揭露另一個問題：某袋稀有植物對當地某種病害有天然抵抗力，標籤卻貼在普通作物上。Bea 解釋，有用的性狀並不等於立刻能治病。遺傳學帶來值得研究的問題，不是隨口承諾的理由。"
+      },
+      {
+        "en": "A journalist requested a dramatic headline about immune plants that could save every farm. Bea showed her the corrected records and the limits of the evidence. They could test whether the trait survived different growing conditions, but the laboratory had not yet completed those trials. A careless article could mislead growers into risking an entire harvest.",
+        "zh": "記者希望用「免疫植物拯救所有農場」當醒目標題。Bea 拿出更正紀錄與證據限制。團隊可以測試該性狀是否在不同生長條件下仍存在，但試驗還沒完成。粗心報導可能讓農民拿整季收成冒險。"
+      },
+      {
+        "en": "The journalist changed the story: “How a Wrong Label Led to a Better Question.” Bea smiled at the modest title. The seeds were back in their proper drawers, the research could continue, and nobody needed to invent a miracle for an ordinary mistake to matter.",
+        "zh": "記者改成「錯誤標籤如何帶出更好的問題」。Bea 看著樸素的標題笑了。種子回到正確抽屜，研究可以繼續，而一般的錯誤本身就值得重視，不必虛構奇蹟。"
+      }
+    ],
+    "quiz": [
+      {
+        "q": "What is special about the rare plant?",
+        "opts": [
+          "It has resistance to a local disease",
+          "It grows without any water",
+          "It can cure every illness",
+          "It comes from another planet"
+        ],
+        "a": 0,
+        "why": "稀有植物對當地病害有某種抵抗力。"
+      },
+      {
+        "q": "Why does Bea reject the dramatic claim?",
+        "opts": [
+          "The crop is sold out",
+          "The evidence is preliminary and requires further trials",
+          "The reporter dislikes plants",
+          "The cabinet is too small"
+        ],
+        "a": 1,
+        "why": "現有證據有限，仍需進一步試驗。"
+      },
+      {
+        "q": "What headline is finally used?",
+        "opts": [
+          "The cabinet contains gold",
+          "A miracle needs no evidence",
+          "A wrong label led to a better question",
+          "Every farm is saved overnight"
+        ],
+        "a": 2,
+        "why": "報導改用更符合調查內容的標題。"
+      }
+    ],
+    "words": [
+      "trait",
+      "genetics",
+      "immune"
+    ]
+  },
+  {
+    "id": "lv5-174",
+    "series": "第五十三部 · The Seeds That Would Not Sleep｜不肯沉睡的種子",
+    "title": "The Garden after the Flood",
+    "zh": "洪水後的花園",
+    "blurb": "實驗室重新開放時，Bea 才知道那批不起眼的普通種子，為何有人不願讓它們被丟掉。",
+    "scene": "mountain",
+    "pages": [
+      {
+        "en": "Weeks later, the floodwater had receded. A local farmer visited the laboratory carrying a muddy notebook. His mother had supplied the ordinary crop seeds years earlier and recorded how they survived a harsh season. He did not demand a miracle or a famous discovery; he asked that the family’s observations remain attached to the samples.",
+        "zh": "數週後，洪水退去。一名當地農民帶著沾泥的筆記本來訪。多年前，他母親提供普通作物種子，並記下它們如何熬過艱難季節。他沒有要求奇蹟或著名發現，只希望家族觀察能和樣本留在一起。"
+      },
+      {
+        "en": "Bea found the original paperwork and restored the missing source information. The team would compare the common crop with the rare one, using careful trials rather than assumptions. She invited the farmer to discuss the results once they were ready, without treating his memories as laboratory measurements. His mother’s notes were indispensable to reconstructing the sample history.",
+        "zh": "Bea 找出原始文件，補回缺失的來源資訊。團隊會透過謹慎試驗比較普通作物與稀有植物，而不是靠假設。她邀請農民等結果完成後一起討論，也不把他的記憶直接當成實驗測量值。母親的筆記是重建樣本歷史不可或缺的線索。"
+      },
+      {
+        "en": "When the garden reopened, two trays stood side by side. One held a rare mountain plant; the other held seeds from a family farm. Visitors wanted to know which was more valuable. Bea replied that the question was too early. First they had to learn what each plant could actually do.",
+        "zh": "花園重新開放時，兩盤植物並排放著：一盤是稀有山區植物，另一盤是家族農場的種子。訪客想知道哪種更有價值。Bea 回答現在下結論還太早，必須先了解每種植物實際能做什麼。"
+      }
+    ],
+    "quiz": [
+      {
+        "q": "What does the farmer bring?",
+        "opts": [
+          "A new shopping escalator",
+          "A notebook of family observations",
+          "A missing theater crown",
+          "A baseball trophy"
+        ],
+        "a": 1,
+        "why": "農民帶來家族長期記錄的筆記。"
+      },
+      {
+        "q": "What does Bea restore?",
+        "opts": [
+          "A stadium scoreboard",
+          "A visitor’s passport",
+          "The samples’ source information",
+          "An old railway route"
+        ],
+        "a": 2,
+        "why": "她補回種子的來源資訊。"
+      },
+      {
+        "q": "What is the closing lesson?",
+        "opts": [
+          "Every rare plant is superior",
+          "Memories replace all experiments",
+          "The wrong label was useful enough",
+          "Investigate each plant before claiming its value"
+        ],
+        "a": 3,
+        "why": "結尾強調先調查植物特性，再談價值。"
+      }
+    ],
+    "words": [
+      "indispensable"
+    ]
+  },
+  {
+    "id": "lv5-175",
+    "series": "第五十四部 · The Ink beneath the Mountain｜山底下的墨跡",
+    "title": "The Line That Crossed the Map",
+    "zh": "穿過地圖的線",
+    "blurb": "一張原本用來介紹洞穴的觀光圖，突然多出一道不可能存在的黑線。",
+    "scene": "mountain",
+    "pages": [
+      {
+        "en": "The new visitor map showed a thin black line crossing an entire mountain. Geologist Lena first thought a printer had made a mistake. The line passed beneath a continental fault and ended at a chamber marked with a tiny pyramid. The chamber did not appear on any official survey. Her guide called the drawing weird, but he knew the handwriting in the margin.",
+        "zh": "新版遊客地圖上，一條細黑線穿過整座山。地質學家 Lena 起初以為是印刷錯誤。那條線越過一處大陸斷層，終點是一個畫了小金字塔的洞室。官方測量圖上根本沒有那間洞室。嚮導覺得圖很奇怪，卻認得頁邊的筆跡。"
+      },
+      {
+        "en": "The note belonged to the guide’s mother, who had mapped the cave before the visitor center existed. She had written, “The wall is not the end.” Lena felt the urge to penetrate the narrow passage at once. Instead she checked the air and asked for a second map. In a place full of loose rock, curiosity did not remove the need for care.",
+        "zh": "字條出自嚮導的母親；她在遊客中心興建前就曾繪製洞穴地圖。上面寫著：「牆壁不是終點。」Lena 很想立刻深入狹窄通道，卻先檢查空氣並請人拿來第二張圖。在鬆動岩塊遍布的地方，好奇心不能取代安全準備。"
+      },
+      {
+        "en": "The two maps agreed on every turn except the last one. The old line went through a stone door; the new plan stopped just before it. Lena wondered whether someone had erased a discovery, or whether a dangerous passage had been closed for a reason. The guide unfolded one more page. It was dated the day before his mother disappeared from the survey team.",
+        "zh": "兩張圖除了最後一個轉彎外完全吻合。舊線穿過一道石門，新圖卻在門前停止。Lena 不知道是有人抹去發現，還是通道因危險而被關閉。嚮導再攤開一頁，日期正好是母親從測量隊失聯的前一天。"
+      }
+    ],
+    "quiz": [
+      {
+        "q": "What first draws Lena’s attention?",
+        "opts": [
+          "A line ending at an unlisted chamber",
+          "A missing restaurant menu",
+          "An empty sports field",
+          "A broken ticket machine"
+        ],
+        "a": 0,
+        "why": "地圖上的黑線通往官方圖上不存在的洞室。"
+      },
+      {
+        "q": "Why does Lena pause before entering?",
+        "opts": [
+          "The guide dislikes history",
+          "She wants to check the conditions and maps",
+          "She has forgotten her camera",
+          "The visitor center is closed for lunch"
+        ],
+        "a": 1,
+        "why": "她先確認環境與測量資料，不貿然進入。"
+      },
+      {
+        "q": "What is unusual about the final page?",
+        "opts": [
+          "It shows an airport runway",
+          "It contains a recipe for soup",
+          "Its date is just before the guide’s mother disappeared",
+          "It gives a price for every rock"
+        ],
+        "a": 2,
+        "why": "末頁日期是嚮導母親失聯前一天。"
+      }
+    ],
+    "words": [
+      "continental",
+      "pyramid",
+      "weird",
+      "penetrate"
+    ]
+  },
+  {
+    "id": "lv5-176",
+    "series": "第五十四部 · The Ink beneath the Mountain｜山底下的墨跡",
+    "title": "A Mark Made of Carbon",
+    "zh": "碳留下的記號",
+    "blurb": "石門上不是神祕咒語，而是一份被迫中斷的測量紀錄。",
+    "scene": "paper",
+    "pages": [
+      {
+        "en": "At dawn, Lena returned with a trained cave team. Behind the door they found drawings made with carbon pigment. A broken lamp lay in the midst of the chamber, but there were no signs of a hidden treasure. Lines on the wall marked water levels from several seasons. The pyramid symbol represented a survey point, not an ancient kingdom.",
+        "zh": "黎明時，Lena 與受過訓練的洞穴隊返回。門後有用碳黑顏料畫成的圖。洞室中央躺著一盞破燈，沒有任何寶藏跡象。牆上線條標示幾個季節的水位；小金字塔符號代表測量點，而非古代王國。"
+      },
+      {
+        "en": "The guide’s mother had tried to render a changing stream visible on paper. One spring, pressure had caused part of the wall to shatter. She led the team out via a side passage and later sent a warning to the visitor center. The warning never reached the final public map. It had been filed under the wrong project number.",
+        "zh": "嚮導的母親想把變動的地下水流畫成能看懂的圖。有一年春天，水壓使部分洞壁碎裂。她帶隊經由側道撤離，之後向遊客中心發出警告，但警告未進入最終公開地圖，而是被歸在錯誤的工程編號下。"
+      },
+      {
+        "en": "Lena compared the marks with recent rainfall. Their pattern made one fact manifest: the tourist path crossed a flood channel. She could not prove that the old team had concealed anything. She could prove that the new route needed review. The guide stared at the wall. “She wasn’t chasing a mystery,” he said. “She was trying to leave us a map.”",
+        "zh": "Lena 將牆上的記號與近期雨量比較，圖樣清楚顯示觀光步道穿過洪水通道。她無法證明舊隊伍曾隱瞞什麼，但能證明新路線必須重新審查。嚮導望著牆說：「她不是在追尋謎團；她是在想辦法留給我們一張地圖。」"
+      }
+    ],
+    "quiz": [
+      {
+        "q": "What does the pyramid symbol mean?",
+        "opts": [
+          "A music award",
+          "A survey point",
+          "A royal burial chamber",
+          "A food stall"
+        ],
+        "a": 1,
+        "why": "小金字塔是測量點的符號。"
+      },
+      {
+        "q": "Why was the warning missing from the visitor map?",
+        "opts": [
+          "A visitor took the only copy",
+          "It was about a different mountain",
+          "It was filed under a wrong project number",
+          "The mother never wrote it"
+        ],
+        "a": 2,
+        "why": "警告被歸到錯誤的工程編號。"
+      },
+      {
+        "q": "What danger does Lena identify?",
+        "opts": [
+          "The cave has no entrance",
+          "The guide is afraid of maps",
+          "The wall contains a strange animal",
+          "The visitor path crosses a flood channel"
+        ],
+        "a": 3,
+        "why": "步道穿過地下洪水通道。"
+      }
+    ],
+    "words": [
+      "carbon",
+      "midst",
+      "render",
+      "shatter",
+      "via",
+      "manifest"
+    ]
+  },
+  {
+    "id": "lv5-177",
+    "series": "第五十四部 · The Ink beneath the Mountain｜山底下的墨跡",
+    "title": "What the Mountain Remembered",
+    "zh": "山還記得什麼",
+    "blurb": "Lena 找到的不是失蹤者的下落，而是改寫山區旅遊安全的一份證據。",
+    "scene": "mountain",
+    "pages": [
+      {
+        "en": "The visitor center closed the risky route while engineers checked the channel. Some local businesses protested the loss of customers. Lena presented the measurements without claiming certainty where none existed. A map was not a promise that a mountain would remain still; it was a record of what people had been able to observe.",
+        "zh": "遊客中心暫停開放危險路線，讓工程師檢查水道。部分在地商家抗議客流減少。Lena 提出測量結果，對尚無法確定的事不做保證。地圖不是山會永遠不變的承諾，而是人們目前能觀察到的紀錄。"
+      },
+      {
+        "en": "In the old archive, the guide found a postcard from his mother. She had joined a new survey after the flood and had sent it home, but it arrived after the family had moved. The disappearance had been a gap in their knowledge, not proof of a terrible destiny. He read it twice and asked Lena to keep a copy with the maps.",
+        "zh": "嚮導在舊檔案中找到母親寄的明信片。洪水後她加入另一支測量隊，也曾寄信回家，但信在家人搬走後才抵達。她的失聯是家人資訊的空白，不是什麼可怕命運的證據。他讀了兩遍，請 Lena 把副本與地圖一起保存。"
+      },
+      {
+        "en": "At the reopening, the center displayed both versions of the cave map. The updated route avoided the channel, whereas the older line remained visible as part of the history. Beneath them hung a simple sentence from the postcard: “If the mountain changes, change the map.” The guide smiled. He no longer needed the black line to be a secret.",
+        "zh": "重新開放時，中心同時展示兩版洞穴圖。新路線避開水道，而舊線保留作為歷史的一部分。圖下掛著明信片上的一句話：「山若變了，就改地圖。」嚮導微笑了；他不再需要把那條黑線當成秘密。"
+      }
+    ],
+    "quiz": [
+      {
+        "q": "Why does the center close one route?",
+        "opts": [
+          "To hide a crown",
+          "To paint the wall blue",
+          "To investigate the identified flood hazard",
+          "To turn the cave into a restaurant"
+        ],
+        "a": 2,
+        "why": "中心暫停危險路線以調查洪水風險。"
+      },
+      {
+        "q": "What explains the mother’s missing contact?",
+        "opts": [
+          "She never existed",
+          "The cave was a different mountain",
+          "The new guide deleted her work",
+          "A postcard reached the family after they moved"
+        ],
+        "a": 3,
+        "why": "明信片在家人搬家後才抵達。"
+      },
+      {
+        "q": "What is displayed at the reopening?",
+        "opts": [
+          "Both the old and revised cave maps",
+          "Only a photograph of a lamp",
+          "A list of tourist complaints",
+          "An empty frame"
+        ],
+        "a": 0,
+        "why": "中心並列新舊地圖，說明路線如何修正。"
+      }
+    ],
+    "words": [
+      "destiny",
+      "whereas"
+    ]
+  },
+  {
+    "id": "lv5-178",
+    "series": "第五十五部 · The Market of Borrowed Flavors｜借來味道的市場",
+    "title": "The Soup Nobody Ordered",
+    "zh": "沒人點的湯",
+    "blurb": "夜市比賽前，五家攤商收到同一箱錯誤食材；只有一個孩子注意到標籤全被調換。",
+    "scene": "market",
+    "pages": [
+      {
+        "en": "On the morning of the neighborhood food festival, every stall received the wrong stock. The butcher found tuna in a chilled box, the fish seller found squash, and a baker received jars of olive paste. Chef Mei discovered vinegar where her usual broth should have been. Each label displayed the correct stall name, so the deliveries looked intentional.",
+        "zh": "社區美食節當天早上，每個攤位都收到錯誤存貨。肉販收到冷藏鮪魚、魚販收到南瓜，麵包師收到一罐罐橄欖醬。廚師 Mei 原本該收到高湯的地方卻放著醋。每張標籤都寫著正確攤名，看起來像有人刻意安排。"
+      },
+      {
+        "en": "A boy named Jun volunteered to sort the boxes. He poked a finger through a torn label and saw another name underneath. Several labels had been swapped, but the seals were still intact. “We should not grill anything until we know where it came from,” Mei said. A good festival was no excuse for guessing about food safety.",
+        "zh": "男孩 Jun 自願幫忙分類箱子。他戳開破損標籤，發現下面還有另一個名字。幾張標籤被調換，封條卻仍完整。「查清來源之前，不能拿任何東西去烤，」Mei 說。再好的節慶也不能成為猜測食物安全的理由。"
+      },
+      {
+        "en": "The festival organizer urged them to open on time. Mei looked at the crowd and felt the pressure. Then Jun found a small piece of mint stuck to the delivery list. It was the same mint used by the tea seller who had closed her stall the night before. Why would a sealed delivery list smell like tea?",
+        "zh": "主辦人催促攤商準時開張。Mei 望著人群感到壓力。Jun 隨後在送貨清單上找到一小片薄荷，正是昨晚提早收攤的茶商所用的品種。為什麼一張密封送貨清單會有茶味？"
+      }
+    ],
+    "quiz": [
+      {
+        "q": "What is wrong with the food delivery?",
+        "opts": [
+          "Every box is empty",
+          "No delivery truck arrived",
+          "All food was already cooked",
+          "Stalls receive boxes intended for others"
+        ],
+        "a": 3,
+        "why": "各攤位收到其他人的食材。"
+      },
+      {
+        "q": "Why does Mei delay cooking?",
+        "opts": [
+          "The ingredients’ origins need checking",
+          "She has forgotten the recipes",
+          "The festival has ended",
+          "The grill belongs to Jun"
+        ],
+        "a": 0,
+        "why": "Mei 要先確認食材來源與安全。"
+      },
+      {
+        "q": "What clue does Jun find on the list?",
+        "opts": [
+          "A hidden photograph",
+          "A piece of mint",
+          "A train ticket",
+          "A broken key"
+        ],
+        "a": 1,
+        "why": "清單沾著一片薄荷。"
+      }
+    ],
+    "words": [
+      "stall",
+      "stock",
+      "butcher",
+      "tuna",
+      "squash",
+      "olive",
+      "vinegar",
+      "poke",
+      "grill",
+      "mint"
+    ]
+  },
+  {
+    "id": "lv5-179",
+    "series": "第五十五部 · The Market of Borrowed Flavors｜借來味道的市場",
+    "title": "The Price of a Label",
+    "zh": "標籤的價錢",
+    "blurb": "所謂惡作劇牽出供應商的存貨問題；Mei 必須決定要取消節慶，還是一起改菜單。",
+    "scene": "market",
+    "pages": [
+      {
+        "en": "They found the tea seller, An, behind the market with a stack of unused boxes. She admitted that she had helped the driver move the orders after a refrigeration unit failed. The driver had wanted to hide the delay and asked her to replace the labels. An refused to lie about the contents, but she had not known whom to contact.",
+        "zh": "他們在市場後方找到茶商 An，身旁堆著未使用的箱子。她承認冷藏設備故障後曾幫司機移動訂單。司機想掩蓋延誤，要求她換標籤；An 拒絕對內容物說謊，卻不知道該向誰反映。"
+      },
+      {
+        "en": "Mei checked temperatures and called the suppliers. Some ingredients had to be discarded; others were safe but belonged to different stalls. The gross cost of the waste shocked the organizer. An suggested a new menu: squash soup, bread with olive spread, and tea with mint. Mei added a little mustard to the soup and tasted it before making any promises.",
+        "zh": "Mei 檢查溫度並聯絡供應商。部分食材必須丟棄，另一些雖然安全，卻送錯攤位。浪費的總成本令主辦人震驚。An 建議新菜單：南瓜湯、橄欖抹醬麵包，還有薄荷茶。Mei 在湯裡加了一點芥末，先試味道才答應。"
+      },
+      {
+        "en": "A reporter asked whether greed had caused the confusion. Mei declined to guess at anyone’s motive. “The facts are enough,” she said. “The unit failed, the labels were changed, and the warning never reached us.” The organizer agreed to tell visitors why the menu was smaller. For the first time all morning, Jun saw the adults stop arguing and begin working together.",
+        "zh": "記者問是否因貪婪才造成混亂。Mei 不願猜測任何人的動機。「事實已經夠清楚：設備故障、標籤遭更換，警告也沒傳到我們手上。」主辦人同意向訪客說明菜單為何縮減。那天早上，Jun 第一次看見大人停止爭吵、開始合作。"
+      }
+    ],
+    "quiz": [
+      {
+        "q": "Why were the labels changed?",
+        "opts": [
+          "To conceal delays after refrigeration failed",
+          "To promote the tea stall",
+          "To create a new cookbook",
+          "To find a lost map"
+        ],
+        "a": 0,
+        "why": "司機試圖掩蓋冷藏設備故障造成的延誤。"
+      },
+      {
+        "q": "What does Mei do before using food?",
+        "opts": [
+          "Throws away all bread",
+          "Checks temperatures and contacts suppliers",
+          "Uses every box at once",
+          "Asks Jun to guess its contents"
+        ],
+        "a": 1,
+        "why": "她檢查溫度並聯絡供應商。"
+      },
+      {
+        "q": "How does the festival adapt?",
+        "opts": [
+          "It closes the market permanently",
+          "It changes every stall into a bank",
+          "It offers a smaller, accurately explained menu",
+          "It advertises food that does not exist"
+        ],
+        "a": 2,
+        "why": "節慶改成縮減且如實說明的菜單。"
+      }
+    ],
+    "words": [
+      "gross",
+      "mustard",
+      "greed"
+    ]
+  },
+  {
+    "id": "lv5-180",
+    "series": "第五十五部 · The Market of Borrowed Flavors｜借來味道的市場",
+    "title": "The Table without a Winner",
+    "zh": "沒有贏家的餐桌",
+    "blurb": "原本的料理比賽取消了，卻出現一張比冠軍獎牌更重要的桌子。",
+    "scene": "market",
+    "pages": [
+      {
+        "en": "By afternoon, the market smelled of grilled bread and warm squash. The competition was canceled, but the stalls served a shared meal. Jun trimmed herbs, wiped a spill with a sponge, and arranged chunks of bread beside bowls of soup. An taught him how a single drop of vinegar could change the balance of a dish.",
+        "zh": "下午，市場飄著烤麵包與熱南瓜的香味。料理比賽取消了，攤商改成供應共享餐點。Jun 修剪香草、用海綿擦掉潑出的湯，將麵包塊排在湯碗旁。An 教他一滴醋就可能改變一道菜的味道平衡。"
+      },
+      {
+        "en": "The butcher offered his table to the fish seller, who had nothing safe to sell that day. Mei wrote every ingredient on a large board so visitors with different needs could make their own choices. Nobody pretended the shortage was a clever marketing trick. A few customers complained, but most stayed to eat and listen to the explanation.",
+        "zh": "肉販把桌子讓給當天沒有安全食材可賣的魚販。Mei 把每項食材寫在大板上，讓有不同飲食需求的訪客自行選擇。沒有人把缺貨假裝成聰明的行銷手法。有些客人抱怨，但大多數人留下來用餐並聽說明。"
+      },
+      {
+        "en": "After sunset, Jun found the original delivery list in a drawer. He pinned it beside the corrected one. “Will we still have a contest next year?” he asked. Mei shrugged. “Maybe. But first we will learn how to read a label.” The last customer left with a recipe, not a prize.",
+        "zh": "日落後，Jun 在抽屜裡找到原始送貨清單，將它與更正後的版本並排釘起。「明年還會辦比賽嗎？」他問。Mei 聳聳肩：「也許，但首先要學會讀標籤。」最後一位客人帶走的是食譜，不是獎牌。"
+      }
+    ],
+    "quiz": [
+      {
+        "q": "Why is the competition canceled?",
+        "opts": [
+          "The chef loses her notebook",
+          "The stalls choose a shared meal after the delivery problem",
+          "No visitors come",
+          "The market moves to another city"
+        ],
+        "a": 1,
+        "why": "食材問題後，攤商改辦共享餐點。"
+      },
+      {
+        "q": "Why does Mei list every ingredient?",
+        "opts": [
+          "To advertise a contest winner",
+          "To make the board heavier",
+          "To let visitors make informed food choices",
+          "To hide the shortage"
+        ],
+        "a": 2,
+        "why": "她讓訪客能清楚了解食材並自行決定。"
+      },
+      {
+        "q": "What does Jun display at the end?",
+        "opts": [
+          "The chef’s prize money",
+          "A map of the cave",
+          "A photograph of the moon",
+          "The original and corrected delivery lists"
+        ],
+        "a": 3,
+        "why": "他把原始與更正後的清單並列。"
+      }
+    ],
+    "words": [
+      "sponge",
+      "chunk"
+    ]
+  },
+  {
+    "id": "lv5-181",
+    "series": "第五十六部 · Two Shadows on One Road｜路上的兩道影子",
+    "title": "The Second Shadow",
+    "zh": "第二道影子",
+    "blurb": "單車接力賽的道路上出現兩道不合理的影子，一位年輕選手發現比終點線更重要的事。",
+    "scene": "night",
+    "pages": [
+      {
+        "en": "During the final practice for a bicycle relay, Taro noticed that every rider cast two shadows at a sharp turn. One came from the streetlamp; the other seemed to move whenever a bus passed. His teammate called it a weird trick of light and told him to pedal faster. Taro stopped to look at the road surface instead.",
+        "zh": "單車接力賽最後一次練習時，Taro 注意到急彎處每位騎士都有兩道影子。一道來自路燈，另一道在公車經過時似乎會移動。隊友說那只是奇怪的光影，要他踩快點。Taro 卻停下來查看路面。"
+      },
+      {
+        "en": "A metal plate had begun to rise beside the curb. When a heavy vehicle went by, the plate shifted and its polished edge caught the light. Taro crouched to examine it without touching the gap. His muscular teammate Bo wanted to shove the plate back into place, but Taro asked him to stay clear. They photographed the movement and reported it to the race marshal.",
+        "zh": "路緣旁一塊金屬板開始翹起。重車經過時，板子移動，拋光邊緣反射出亮光。Taro 蹲下觀察，沒有碰裂縫。健壯的隊友 Bo 想把板子推回原位，Taro 卻請他保持距離。他們拍下板子的移動情形，通報賽事裁判。"
+      },
+      {
+        "en": "The marshal promised an inspection, but the race was due to begin in an hour. Bo feared that a delay would cost their team its chance to win. Taro could not stop thinking about a rider hitting the plate at full speed. Two shadows on a road were no longer a curious image; they were a warning.",
+        "zh": "裁判答應派人檢查，但一小時後比賽就要開始。Bo 擔心延誤會讓隊伍失去獲勝機會。Taro 卻不斷想到騎士高速撞上金屬板的情況。路上的兩道影子已不再只是有趣畫面，而是一項警告。"
+      }
+    ],
+    "quiz": [
+      {
+        "q": "What causes the moving second shadow?",
+        "opts": [
+          "A helicopter above the road",
+          "An advertisement screen in a shop",
+          "A shifting metal plate reflecting passing lights",
+          "A second cyclist behind Taro"
+        ],
+        "a": 2,
+        "why": "移動的金屬板反射光線。"
+      },
+      {
+        "q": "Why does Taro stop practicing?",
+        "opts": [
+          "He wants to buy a new bicycle",
+          "The race is already over",
+          "He has lost the team uniform",
+          "He notices a potential road hazard"
+        ],
+        "a": 3,
+        "why": "他發現路面可能有危險。"
+      },
+      {
+        "q": "What concerns Bo most?",
+        "opts": [
+          "A delay may affect the team’s chance to win",
+          "The road has no name",
+          "The photographer is late",
+          "The route goes near a market"
+        ],
+        "a": 0,
+        "why": "Bo 擔心延誤影響比賽。"
+      }
+    ],
+    "words": [
+      "pedal",
+      "muscular",
+      "shove"
+    ]
+  },
+  {
+    "id": "lv5-182",
+    "series": "第五十六部 · Two Shadows on One Road｜路上的兩道影子",
+    "title": "The Turn before the Finish",
+    "zh": "終點前的彎道",
+    "blurb": "檢查結果尚未出來，主辦人想照原路開賽；Taro 必須決定是否接受隊友的責怪。",
+    "scene": "meeting",
+    "pages": [
+      {
+        "en": "The inspector found that a mounting bolt had failed. The plate could not be repaired in minutes, so the marshal proposed moving the course. Several riders protested because the replacement route was longer. Bo muttered that Taro had become a traitor to their team. The word stung more than Taro expected.",
+        "zh": "檢查員發現固定螺栓已損壞，金屬板無法幾分鐘內修好，裁判於是建議改道。幾位選手抗議替代路線較長。Bo 嘟囔說 Taro 成了隊伍的叛徒，這句話比 Taro 預期的還傷人。"
+      },
+      {
+        "en": "Taro was tempted to answer with anger. Instead he showed Bo the video, frame by frame. A wheel struck the raised edge in the footage and nearly lost control. Bo watched in grim silence. “I thought you were afraid to race,” he admitted. Taro replied, “I was afraid somebody would get hurt.”",
+        "zh": "Taro 很想生氣反駁，最後卻把影片逐格給 Bo 看。畫面裡一只車輪撞上翹起邊緣，差點失控。Bo 神情嚴肅地看完。「我以為你不敢比賽，」他承認。Taro 回答：「我怕的是有人受傷。」"
+      },
+      {
+        "en": "The course changed. Taro knew the longer climb might exhaust him, but he felt sober about the choice: finishing safely mattered more than proving he had been right. Before the new start, Bo rolled his bicycle beside Taro’s and quietly checked both sets of brakes. He did not offer an apology in front of the crowd. He did not need to; the gesture was clear.",
+        "zh": "路線改了。Taro 知道更長的上坡可能耗盡體力，卻清楚意識到：安全完賽比證明自己正確重要。重新起跑前，Bo 把單車牽到 Taro 旁邊，默默檢查兩人的煞車。他沒有在人前道歉，但動作已說明一切。"
+      }
+    ],
+    "quiz": [
+      {
+        "q": "What does the inspection find?",
+        "opts": [
+          "A stolen bicycle",
+          "A missing streetlamp bulb",
+          "An incorrect team name",
+          "A failed mounting bolt beneath the plate"
+        ],
+        "a": 3,
+        "why": "檢查發現金屬板固定螺栓損壞。"
+      },
+      {
+        "q": "Why does Bo call Taro a traitor?",
+        "opts": [
+          "He thinks Taro has harmed the team’s chance",
+          "Taro joined another team",
+          "Taro hid the new route",
+          "Taro stole the race video"
+        ],
+        "a": 0,
+        "why": "Bo 誤以為 Taro 害隊伍失去機會。"
+      },
+      {
+        "q": "How does Bo show he understands?",
+        "opts": [
+          "He changes the team name",
+          "He checks both bicycles before the restart",
+          "He tears up the route map",
+          "He refuses to join the race"
+        ],
+        "a": 1,
+        "why": "他主動檢查兩人的單車。"
+      }
+    ],
+    "words": [
+      "traitor",
+      "grim",
+      "sober"
+    ]
+  },
+  {
+    "id": "lv5-183",
+    "series": "第五十六部 · Two Shadows on One Road｜路上的兩道影子",
+    "title": "The Road after the Race",
+    "zh": "賽後的路",
+    "blurb": "沒有任何獎牌能解釋那道影子，Taro 卻得到一件比成績更具體的回報。",
+    "scene": "night",
+    "pages": [
+      {
+        "en": "Their team finished well behind the leaders. Taro was exhausted, but nobody fell at the repaired section. After the event, the city replaced the failed plate and installed a warning sign. A young rider approached Taro with a photograph of the strange double shadow. “I thought it looked beautiful,” she said, “until I learned what made it.”",
+        "zh": "他們的隊伍遠遠落後領先者才完賽。Taro 筋疲力盡，但沒有人在那段路上摔倒。賽後市府更換故障金屬板並裝設警示牌。一名年輕騎士帶著雙影照片靠近 Taro：「以前我覺得很美，直到知道它怎麼來的。」"
+      },
+      {
+        "en": "Bo studied the race results and laughed at his own earlier confidence. He had imagined that a victory would settle everything. Instead the day had forced him to rethink his notion of a useful teammate. Taro did not call their slower finish a triumph; it was simply the result of the route they had ridden.",
+        "zh": "Bo 看著比賽成績，笑自己先前太有把握。他曾想像獲勝就能解決一切；這一天卻迫使他重新思考什麼才是有用的隊友。Taro 沒把較慢的完賽稱作勝利，那只是他們所騎路線的結果。"
+      },
+      {
+        "en": "The next morning, Taro pedaled past the turn on his way to school. There was only one shadow now. He stopped long enough to take a second photograph, then rode on. The old image went into the team’s safety folder, where every new rider would be asked to look twice before following the road.",
+        "zh": "隔天早上，Taro 騎車上學經過那個彎道。現在只剩一道影子。他停下來拍了第二張照片，然後繼續前進。舊照片被放進隊伍的安全資料夾；往後每位新騎士都會被要求在上路前多看一眼。"
+      }
+    ],
+    "quiz": [
+      {
+        "q": "How does the team finish?",
+        "opts": [
+          "Behind the leading teams",
+          "Without starting",
+          "As the only team in the race",
+          "With a record-breaking win"
+        ],
+        "a": 0,
+        "why": "隊伍落後領先集團完賽。"
+      },
+      {
+        "q": "What changes in Bo’s thinking?",
+        "opts": [
+          "He believes shadows cause injuries",
+          "He reconsiders what makes a useful teammate",
+          "He decides maps are unnecessary",
+          "He quits riding permanently"
+        ],
+        "a": 1,
+        "why": "Bo 重新思考隊友的價值。"
+      },
+      {
+        "q": "Where does the old photograph go?",
+        "opts": [
+          "On a restaurant menu",
+          "Under a market stall",
+          "Into the team’s safety folder",
+          "Inside a museum crown"
+        ],
+        "a": 2,
+        "why": "舊照片被收進隊伍安全資料夾。"
+      }
+    ],
+    "words": [
+      "notion"
+    ]
+  },
+  {
+    "id": "lv5-184",
+    "series": "第五十七部 · The Book without I｜沒有「我」的書",
+    "title": "A Sentence with No Speaker",
+    "zh": "沒有人說的句子",
+    "blurb": "翻譯員收到一本沒有「我」的日記：每句話都被改成第三人稱，卻留下了無法解釋的三個名字。",
+    "scene": "paper",
+    "pages": [
+      {
+        "en": "Translator Noa was hired to restore a damaged diary for a small literary exhibition. Its pages described a long journey, but the word “I” appeared nowhere. Every sentence referred to “the traveler,” even when it described private thoughts. Noa found the style strange. The manuscript seemed intimate, whereas its narrator spoke as if watching someone else.",
+        "zh": "翻譯員 Noa 受聘修復一本受損日記，準備供小型文學展使用。書頁記錄一段長途旅行，卻完全沒有「我」；即使描寫私密心情，也一律稱「那位旅人」。Noa 覺得這種文風奇怪：手稿明明親密，敘事者卻像在旁觀別人。"
+      },
+      {
+        "en": "The curator proposed a simple solution: replace every “the traveler” with “I.” That would render the text smoother, he argued. Noa wanted to acquaint herself with the writer’s habits before making such a change. At the back of the diary she discovered three names connected by a plural verb. One journey, perhaps, had belonged to more than one person.",
+        "zh": "策展人提出簡單辦法：把每個「那位旅人」換成「我」，他認為這會讓文字更流暢。Noa 卻想先熟悉作者的語言習慣，再做這種改動。她在日記末頁找到三個名字，後面接著一個複數動詞。也許一段旅程根本不只屬於一個人。"
+      },
+      {
+        "en": "She was apt to trust clean sentences, but this time neat grammar might erase the point. Noa wrote two versions of the opening paragraph and placed them side by side. The words were understandable either way. The question was not whether she could produce a fluent translation; it was whether she had the right to choose the speaker.",
+        "zh": "她向來偏好乾淨俐落的句子，但這一次，整齊的文法可能抹掉重點。Noa 寫出兩版開頭並排比較，兩版都能讀懂。問題不在於她能否譯得流暢，而在於她是否有權替作者決定誰在說話。"
+      }
+    ],
+    "quiz": [
+      {
+        "q": "What is unusual about the diary?",
+        "opts": [
+          "It describes a bicycle race",
+          "It avoids the word “I”",
+          "It contains no dates whatsoever",
+          "It is written only in numbers"
+        ],
+        "a": 1,
+        "why": "日記從不使用第一人稱「我」。"
+      },
+      {
+        "q": "What does the curator suggest?",
+        "opts": [
+          "Adding pictures of stars",
+          "Selling the book at a market",
+          "Replacing “the traveler” with “I”",
+          "Destroying the diary"
+        ],
+        "a": 2,
+        "why": "策展人建議把「旅人」改成「我」。"
+      },
+      {
+        "q": "Why does Noa hesitate?",
+        "opts": [
+          "She cannot read any language",
+          "The pages are blank",
+          "The exhibition is about food",
+          "The grammar may hide multiple speakers"
+        ],
+        "a": 3,
+        "why": "她發現可能有多位敘事者。"
+      }
+    ],
+    "words": [
+      "acquaint",
+      "plural",
+      "apt"
+    ]
+  },
+  {
+    "id": "lv5-185",
+    "series": "第五十七部 · The Book without I｜沒有「我」的書",
+    "title": "The Names in the Margin",
+    "zh": "頁邊的名字",
+    "blurb": "三個名字是作者、譯者與旅伴，還是同一個人？一封舊信揭開日記使用第三人稱的原因。",
+    "scene": "paper",
+    "pages": [
+      {
+        "en": "Noa found a letter from the author’s sister. It explained that the diary had been written by three friends on alternating nights. None wanted one person’s account to become the only story. They agreed on the phrase “the traveler,” so any of them could write without changing the voice. The choice was deliberate, not an error in the original language.",
+        "zh": "Noa 找到作者姊姊的信。信裡說日記由三位朋友輪流在夜晚撰寫，沒有人希望某個人的版本成為唯一故事。他們約好統一用「那位旅人」，因此無論誰寫都不必改變聲音。這是刻意選擇，而非原文語言出錯。"
+      },
+      {
+        "en": "The curator worried that visitors would find the notion too abstract. Noa proposed a short introduction and three pages of handwriting samples. Their different strokes made each person visible without pretending that every paragraph could be assigned to a specific writer. The essence of the diary lay in its shared voice, not in an individual name.",
+        "zh": "策展人擔心訪客覺得這個概念太抽象。Noa 提議加上一段短前言，以及三張筆跡樣本。不同筆畫能讓三個人被看見，也不必假裝每一段都能確定由誰書寫。這本日記的本質，在於共享的聲音，而不是某一個人的名字。"
+      },
+      {
+        "en": "She began to contemplate the final page. It described a farewell, but it never said who had left. Noa resisted the temptation to invent an answer. The translation would preserve the ambiguity and explain it in a note. “A question can be part of the work,” she told the curator. “We do not have to settle it for every reader.”",
+        "zh": "她開始思考最後一頁。它描寫一場告別，卻始終沒說是誰離開。Noa 抵抗了自行編造答案的誘惑；譯文將保留模糊處，並在註解說明。「問題本身也可能是作品的一部分，」她對策展人說，「不必替每位讀者定論。」"
+      }
+    ],
+    "quiz": [
+      {
+        "q": "Who wrote the diary?",
+        "opts": [
+          "A single anonymous judge",
+          "A visitor from the exhibition",
+          "Three friends taking turns",
+          "Only the curator"
+        ],
+        "a": 2,
+        "why": "日記由三位朋友輪流寫成。"
+      },
+      {
+        "q": "Why do they use “the traveler”?",
+        "opts": [
+          "To hide the location of the town",
+          "To satisfy a legal form",
+          "To shorten every page",
+          "To maintain a shared narrative voice"
+        ],
+        "a": 3,
+        "why": "三人想保留共同的敘述聲音。"
+      },
+      {
+        "q": "How does Noa handle the farewell?",
+        "opts": [
+          "She preserves its ambiguity",
+          "She invents a missing name",
+          "She removes the final page",
+          "She translates it as a joke"
+        ],
+        "a": 0,
+        "why": "Noa 保留告別對象不明的原樣。"
+      }
+    ],
+    "words": [
+      "essence",
+      "contemplate"
+    ]
+  },
+  {
+    "id": "lv5-186",
+    "series": "第五十七部 · The Book without I｜沒有「我」的書",
+    "title": "Three Hands, One Journey",
+    "zh": "三隻手，一段旅程",
+    "blurb": "展覽開幕那天，讀者發現一本書不一定只要一個主角；Noa 也終於決定如何保留原作的沉默。",
+    "scene": "paper",
+    "pages": [
+      {
+        "en": "At the exhibition, visitors compared the three writing styles. One described a mountain with careful distances, another remembered the smell of wet clothing, and a third recorded arguments during the trip. A student asked which version was true. Noa replied that their differences were not proof that one friend had lied; memories could emphasize different parts of the same day.",
+        "zh": "展覽中，訪客比較三種文風。有人仔細記錄山路距離，有人記得濕衣服的味道，也有人寫下旅途中發生的爭執。一名學生問哪個版本才是真的。Noa 回答，差異不能證明某位朋友說謊；記憶本來就可能強調同一天的不同部分。"
+      },
+      {
+        "en": "The curator admitted that his first translation would have made the diary easier to sell. It would also have changed its meaning. Noa did not turn that mistake into a doctrine about all translation. Sometimes a singular “I” was exactly right. In this case, the plural history was inherent in the work, even when the English looked less natural at first glance.",
+        "zh": "策展人承認，自己第一版譯法會讓日記更容易販售，卻也改變了意思。Noa 沒把這次教訓變成所有翻譯都適用的教條。有時單數的「我」就是正確選擇；但在這部作品中，多人的歷史原本就是它不可分割的一部分，即使英文乍看不夠自然。"
+      },
+      {
+        "en": "The final display kept the same quiet phrase at the beginning and the end: “The traveler returned.” Beside it stood the three names from the margin. Noa watched people read, pause, and read again. The book no longer needed a single “I” to make a reader feel that someone had been there.",
+        "zh": "最終展示在開頭與結尾保留相同的安靜句子：「那位旅人回來了。」旁邊列著頁邊的三個名字。Noa 看著人們閱讀、停頓、再次閱讀。這本書不需要單一的「我」，也能讓讀者感受到曾有人真正在那裡。"
+      }
+    ],
+    "quiz": [
+      {
+        "q": "How do the three authors’ accounts differ?",
+        "opts": [
+          "They all copy the same paragraph",
+          "They describe three separate planets",
+          "They never mention a journey",
+          "They remember different aspects of the same trip"
+        ],
+        "a": 3,
+        "why": "三人記住同一趟旅程的不同面向。"
+      },
+      {
+        "q": "What does the curator acknowledge?",
+        "opts": [
+          "His easier translation would change the meaning",
+          "The diary is impossible to display",
+          "Every translation needs a singular narrator",
+          "The book contains no names"
+        ],
+        "a": 0,
+        "why": "他承認順暢譯法也會改變原意。"
+      },
+      {
+        "q": "How does the final display honor the writers?",
+        "opts": [
+          "It attributes everything to Noa",
+          "It keeps the shared phrase and shows all three names",
+          "It removes every page",
+          "It replaces the book with photographs"
+        ],
+        "a": 1,
+        "why": "展覽保留共同敘述，也列出三位寫作者。"
+      }
+    ],
+    "words": [
+      "doctrine",
+      "inherent"
+    ]
+  },
+  {
+    "id": "lv5-187",
+    "series": "第五十八部 · The Observatory That Lost the Sky｜失去天空的天文台",
+    "title": "A Star in the Wrong Dome",
+    "zh": "出現在錯誤穹頂的星",
+    "blurb": "天文台換上新穹頂後，竟出現不屬於任何星圖的亮點；唯一看見它的人是夜班清潔員。",
+    "scene": "night",
+    "pages": [
+      {
+        "en": "The observatory opened a new dome after months of repairs. At midnight, cleaner Ivo noticed a sparkle above the eastern wall, although the telescope pointed west. The astronomers called it a harmless reflection. Ivo felt foolish until the strange light appeared again, this time in a photograph taken while the telescope was covered.",
+        "zh": "天文台經過數月整修，終於開放新穹頂。午夜，清潔員 Ivo 注意到東牆上方有一道閃光，儘管望遠鏡正指向西方。天文學家稱它只是無害的反射。Ivo 原本覺得自己大驚小怪，直到那道光再度出現，這次甚至出現在望遠鏡蓋住時拍下的照片裡。"
+      },
+      {
+        "en": "The director suspected an alien signal, but engineer Salma urged everyone to remain neutral. A light was evidence of light, not proof of an unknown visitor. She treated the dome as a separate domain and checked every cable, display, and sensor. The same small dot appeared in a series of archived images.",
+        "zh": "主任懷疑這是外星訊號，工程師 Salma 卻要求大家保持中立。看到光，只能證明有光，不能證明有未知訪客。她把穹頂視為獨立系統，逐一檢查電纜、顯示器與感測器。結果她在一連串舊影像中，也找到那個小亮點。"
+      },
+      {
+        "en": "Ivo pointed at the dates. The dot always appeared after the cleaning crew swapped the old filters for new ones. Salma shrugged at first, then remembered that the replacement filters contained a thin metallic layer. They had found a pattern, not yet its cause. She asked Ivo to help her test it before sunrise.",
+        "zh": "Ivo 指著日期說，小點總是在清潔團隊把舊濾片換成新濾片後出現。Salma 起先聳聳肩，接著想到替換濾片含有一層薄金屬。他們找到了規律，卻還沒確認原因。她請 Ivo 在日出前一起測試。"
+      }
+    ],
+    "quiz": [
+      {
+        "q": "What makes Ivo doubt the reflection explanation?",
+        "opts": [
+          "The dome has no roof",
+          "A visitor brings a map",
+          "The telescope breaks permanently",
+          "The dot appears with the lens covered"
+        ],
+        "a": 3,
+        "why": "鏡頭蓋住時，照片裡仍出現亮點。"
+      },
+      {
+        "q": "Why does Salma remain neutral?",
+        "opts": [
+          "One strange light cannot prove an alien visitor",
+          "She wants to close the observatory",
+          "She dislikes the cleaner",
+          "She already knows the answer"
+        ],
+        "a": 0,
+        "why": "一道奇怪的光，不能直接證明有外星訪客。"
+      },
+      {
+        "q": "What clue does Ivo discover?",
+        "opts": [
+          "The director changed the schedule",
+          "The dot follows filter replacements",
+          "The light appears only at noon",
+          "The dome faces a river"
+        ],
+        "a": 1,
+        "why": "亮點的出現時間與更換濾片有關。"
+      }
+    ],
+    "words": [
+      "sparkle",
+      "alien",
+      "neutral",
+      "domain",
+      "series"
+    ]
+  },
+  {
+    "id": "lv5-188",
+    "series": "第五十八部 · The Observatory That Lost the Sky｜失去天空的天文台",
+    "title": "The Room without Air",
+    "zh": "沒有空氣的房間",
+    "blurb": "為了找出閃光來源，Salma 設計實驗，卻發現測試室裡有另一個更急迫的問題。",
+    "scene": "paper",
+    "pages": [
+      {
+        "en": "The team placed one filter in a vacuum chamber, where air could not carry dust across the glass. They planned to apply a brief stimulus to the material and record the result. Before they began, an alarm startled everyone. Pressure was falling in a nearby equipment room, and a technician was still inside.",
+        "zh": "團隊把一片濾片放入真空測試室，讓空氣無法把灰塵吹過玻璃。他們打算對材料施加短暫刺激並記錄結果。實驗開始前，警報卻嚇了所有人一跳：隔壁設備間的壓力正在下降，裡面還有一名技術員。"
+      },
+      {
+        "en": "The room’s door was difficult to move, and the control panel showed an acute drop in pressure. Salma did not let the group scramble blindly. She deployed the emergency procedure and asked Ivo to read each step aloud. The technician left safely through the side exit. Only then did Salma return to the mysterious filter.",
+        "zh": "設備間的門很難移動，控制面板顯示壓力急遽下降。Salma 沒讓大家在慌亂中盲目行動，而是啟動緊急程序，請 Ivo 大聲讀出每一步。技術員安全地從側門離開。直到這時，Salma 才回頭處理神祕濾片。"
+      },
+      {
+        "en": "Under the test lamp, a narrow vein of metal across the filter began to shine. It was not a message from another entity; a scratch had altered the way the layer reflected light. Ivo smiled, but Salma stopped him from declaring victory. They still needed to learn why the scratch kept returning.",
+        "zh": "測試燈下，濾片上一道狹窄的金屬紋路開始發亮。那不是另一個未知存在傳來的訊息，而是一道刮痕改變了金屬層反射光線的方式。Ivo 笑了，Salma 卻阻止他立刻宣布成功：他們還得知道刮痕為什麼一再出現。"
+      }
+    ],
+    "quiz": [
+      {
+        "q": "Why is the filter placed in a vacuum chamber?",
+        "opts": [
+          "To test it without airborne dust",
+          "To invite visitors inside",
+          "To store old newspapers",
+          "To cool a meal"
+        ],
+        "a": 0,
+        "why": "真空室能避免空氣帶動灰塵干擾測試。"
+      },
+      {
+        "q": "What does Salma do when the alarm sounds?",
+        "opts": [
+          "She asks Ivo to leave the building alone",
+          "She follows the emergency procedure",
+          "She ignores the technician",
+          "She turns off every light"
+        ],
+        "a": 1,
+        "why": "Salma 先依緊急程序讓技術員安全離開。"
+      },
+      {
+        "q": "What produces the strange shine?",
+        "opts": [
+          "A hidden aquarium",
+          "A new star outside the window",
+          "A scratch in the metallic layer",
+          "A coded message from space"
+        ],
+        "a": 2,
+        "why": "金屬層刮痕造成異常反光。"
+      }
+    ],
+    "words": [
+      "vacuum",
+      "stimulus",
+      "startle",
+      "acute",
+      "scramble",
+      "deploy",
+      "vein",
+      "entity"
+    ]
+  },
+  {
+    "id": "lv5-189",
+    "series": "第五十八部 · The Observatory That Lost the Sky｜失去天空的天文台",
+    "title": "The Night Shift Report",
+    "zh": "夜班報告",
+    "blurb": "真正讓天文台出錯的不是星星，而是每個人都認為不值得記錄的一項小工作。",
+    "scene": "night",
+    "pages": [
+      {
+        "en": "The new filters rested in open trays beside a narrow shelf. Each time the cleaning cart passed, its handle brushed the exposed glass. The scratch was created before anyone installed a filter. Salma could now explain the repeated pattern without inventing an extraordinary cause. The director listened in silence.",
+        "zh": "新濾片放在狹窄層架旁的開放托盤裡；每次清潔推車經過，把手都會擦到露出的玻璃。刮痕在濾片安裝前就已形成。Salma 終於能解釋重複出現的規律，不必編造驚人的原因。主任沉默地聽著。"
+      },
+      {
+        "en": "He admitted that the cleaning crew had never been invited to report technical concerns. “We assumed their job began after ours ended,” he said. Ivo replied that the building did not divide itself into important and unimportant hours. Regardless of who found a problem, the team needed a way to record it.",
+        "zh": "他承認清潔團隊從來沒有被邀請通報技術疑慮。「我們以為自己的工作結束後，他們的工作才開始，」主任說。Ivo 回答，這棟建築不會自己分出重要和不重要的時段。無論誰發現問題，團隊都需要一個能留下紀錄的方法。"
+      },
+      {
+        "en": "At the next opening, a new report form stood beside the filters. Salma had also moved the shelf. The stars above the dome looked ordinary again, yet Ivo kept the first photograph. It reminded him that a strange observation deserved investigation, not instant belief or instant dismissal.",
+        "zh": "下次開館時，濾片旁多了一張新的通報表，Salma 也移動了層架。穹頂上的星星恢復平常模樣，Ivo 卻留著第一張照片。它提醒他：奇怪的觀察值得調查，不該立刻相信，也不該立刻否定。"
+      }
+    ],
+    "quiz": [
+      {
+        "q": "Where did the scratches originate?",
+        "opts": [
+          "Visitors touched the lens",
+          "The cleaning cart brushed the filter boxes",
+          "A star struck the dome",
+          "The telescope fell into the sea"
+        ],
+        "a": 1,
+        "why": "推車把手反覆擦到濾片箱。"
+      },
+      {
+        "q": "What workplace issue does the director admit?",
+        "opts": [
+          "Every scientist worked outside",
+          "The filters were never ordered",
+          "Cleaners lacked a route to report concerns",
+          "The building had no night staff"
+        ],
+        "a": 2,
+        "why": "清潔團隊沒有通報技術問題的管道。"
+      },
+      {
+        "q": "What does Ivo keep?",
+        "opts": [
+          "A broken control panel",
+          "A box of visitor tickets",
+          "The old telescope",
+          "The first photograph of the dot"
+        ],
+        "a": 3,
+        "why": "Ivo 留下最初拍到亮點的照片。"
+      }
+    ],
+    "words": [
+      "regardless"
+    ]
+  },
+  {
+    "series": "第五十八部 · The Observatory That Lost the Sky｜失去天空的天文台",
+    "title": "The Second Dot",
+    "zh": "第二個亮點",
+    "blurb": "三個月後，學生在穹頂拍到同樣的小亮點；Ivo 得決定是否直接套用上一次的答案。",
+    "scene": "night",
+    "pages": [
+      {
+        "en": "Three months later, a school group visited the observatory and photographed another tiny dot. A teacher asked Ivo whether the filters had failed again. The new report form made it easy to compare dates, but the replacement schedule showed no recent change. Ivo felt an urge to repeat the old explanation. Instead, he invited the students to investigate alongside him.",
+        "zh": "三個月後，一群學生參觀天文台，拍下另一個小亮點。老師問 Ivo 是否濾片又壞了。新的通報表讓大家能輕易比較日期，但更換紀錄顯示最近沒有異動。Ivo 很想沿用上一次的解釋，卻改為邀請學生一起調查。"
+      },
+      {
+        "en": "One student noticed that the dot moved whenever the emergency-exit sign turned on. Another used her phone to record the timing. The sign was reflected in a polished railing, then in the dome glass. They could utilize the same careful method as before, but they could not assume the cause would likewise be the same. Their second mystery had a different answer.",
+        "zh": "一名學生發現，每當緊急出口標誌亮起，小點就會移動。另一名學生用手機記錄時間。標誌先反射在磨亮的扶手上，再映到穹頂玻璃。他們可以利用上次那套仔細的查證方法，卻不能假設原因也完全相同。第二個謎題有不同答案。"
+      },
+      {
+        "en": "At the end of the tour, the teacher asked what the students had learned about astronomy. Ivo pointed to their two photographs. “A good observation begins a question; it does not end one,” he said. The children left arguing happily about what to photograph next. Salma pinned both reports side by side, keeping the first mistake visible beside the second discovery.",
+        "zh": "導覽結束時，老師問學生學到什麼天文知識。Ivo 指著兩張照片說：「好的觀察是問題的起點，不是終點。」孩子們一邊開心討論下一次要拍什麼，一邊離開。Salma 把兩份報告並排釘好，讓第一次的錯誤與第二次的發現一起被看見。"
+      }
+    ],
+    "quiz": [
+      {
+        "q": "Why does Ivo avoid his earlier explanation?",
+        "opts": [
+          "No filter was recently replaced",
+          "The teacher refuses to speak",
+          "The telescope has been sold",
+          "All the photographs are blank"
+        ],
+        "a": 0,
+        "why": "新的更換紀錄不支持「濾片再度損壞」的解釋。"
+      },
+      {
+        "q": "What causes the second dot?",
+        "opts": [
+          "A hidden visitor",
+          "A reflection of the exit sign",
+          "Another scratched filter",
+          "Dust inside a sealed lens"
+        ],
+        "a": 1,
+        "why": "緊急出口標誌經扶手與玻璃反射形成亮點。"
+      },
+      {
+        "q": "What lesson does Ivo emphasize?",
+        "opts": [
+          "The same effect always has the same cause",
+          "Only astronomers may report problems",
+          "Observation begins a question",
+          "Old reports should be deleted"
+        ],
+        "a": 2,
+        "why": "Ivo 強調觀察只是查證的起點。"
+      }
+    ],
+    "id": "lv5-190",
+    "words": [
+      "utilize",
+      "likewise"
+    ]
+  },
+  {
+    "id": "lv5-191",
+    "series": "第五十九部 · The Scholarship with No Winner｜沒有人拿走的獎學金",
+    "title": "An Empty Name on the List",
+    "zh": "名單上的空白",
+    "blurb": "大學公布獎學金名單，最優秀的學生卻發現自己的名字不見了，原因不是考試成績。",
+    "scene": "school",
+    "pages": [
+      {
+        "en": "The university posted its scholarship list outside the faculty office. Lena, who worked evenings to pay tuition, could not find her name. A classmate called her arrogant for expecting an award. Another student, secretly envious of Lena’s grades, said she must lack competence in the interview. Lena did not respond. She asked to see the written criteria.",
+        "zh": "大學把獎學金名單貼在系辦外。晚上打工支付學費的 Lena 找不到自己的名字。同學說她自以為是，竟然以為能得獎；另一位暗自嫉妒她成績的學生說，她面試一定能力不足。Lena 沒有回嘴，只要求查看書面評選標準。"
+      },
+      {
+        "en": "The office gave her a short denial: she had missed a required meeting. Lena opened her email and found a message marked “delivered,” but its date was two days after the meeting. She asked a professor whether it was reasonable to punish a student for a notice received too late.",
+        "zh": "系辦給了她簡短的拒絕理由：她錯過一場必要會議。Lena 打開電子郵件，找到一封標記為「已送達」的通知，但日期竟是會議後兩天。她問教授，學生太晚收到通知，還因此被處罰，是否合理。"
+      },
+      {
+        "en": "The professor told her that the decision was not final. She could make a formal plea, but she would need evidence rather than a passionate speech. Lena printed the message headers and brought her work schedule. She was not asking for special treatment. She wanted the same procedure everyone had been promised.",
+        "zh": "教授告訴她，決定還未定案；她可以正式申訴，但需要證據，而不是一篇充滿激情的演說。Lena 印出郵件標頭並帶上工作班表。她要的不是特殊待遇，而是每個人都被承諾過的同一套程序。"
+      }
+    ],
+    "quiz": [
+      {
+        "q": "Why does Lena request the criteria?",
+        "opts": [
+          "Her class has been canceled",
+          "She needs a library card",
+          "Her name is missing from the scholarship list",
+          "She wants to change majors"
+        ],
+        "a": 2,
+        "why": "她的名字不在獎學金名單上。"
+      },
+      {
+        "q": "What is wrong with the meeting notice?",
+        "opts": [
+          "It contains the wrong professor’s photo",
+          "It asks for a passport",
+          "It describes a summer concert",
+          "It arrives after the meeting"
+        ],
+        "a": 3,
+        "why": "通知在會議結束後才送達。"
+      },
+      {
+        "q": "What does the professor advise?",
+        "opts": [
+          "Submit evidence for a formal appeal",
+          "Ignore the entire process",
+          "Ask a friend to take the award",
+          "Write an anonymous insult"
+        ],
+        "a": 0,
+        "why": "教授建議她用證據正式申訴。"
+      }
+    ],
+    "words": [
+      "faculty",
+      "tuition",
+      "arrogant",
+      "envious",
+      "competence",
+      "denial",
+      "plea",
+      "passionate"
+    ]
+  },
+  {
+    "id": "lv5-192",
+    "series": "第五十九部 · The Scholarship with No Winner｜沒有人拿走的獎學金",
+    "title": "The Interview That Was Never Held",
+    "zh": "從未舉行的面試",
+    "blurb": "Lena 發現另外兩名同學也收到過期通知；三人的申訴揭開資料搬移時的小錯誤。",
+    "scene": "paper",
+    "pages": [
+      {
+        "en": "Meantime, Lena spoke with two other applicants. One had missed the same meeting; the other had attended but was marked absent. Their accounts did not match the office’s confident explanation. Lena refused to bully the clerk who had sent the messages. She knew the clerk might also have been working with inaccurate information.",
+        "zh": "與此同時，Lena 找到另外兩名申請者：一人也錯過同一場會議，另一人明明出席卻被標成缺席。三人的經歷與系辦自信的說法不符。Lena 不願霸凌寄送通知的職員，因為對方可能也拿到了錯誤資訊。"
+      },
+      {
+        "en": "At the review, the applicants had to contend with a confusing record of dates. The committee had swapped two columns during a software update. Hence the notices appeared to have been sent earlier than they were. The mistake did not prove bad intentions, but it did make the original selection unreliable.",
+        "zh": "審查時，申請者必須釐清混亂的日期紀錄。委員會在軟體更新時把兩欄交換了，因此通知看起來比實際寄出時間更早。錯誤不代表有人故意做壞事，卻讓原本的評選結果失去可靠性。"
+      },
+      {
+        "en": "A panel member asked Lena if she wanted the scholarship given to her immediately. She shook her head. “Please review everyone under the same rules,” she said. The faculty agreed to repeat the interview for all affected students. For the first time that week, Lena felt the weight leave her shoulders.",
+        "zh": "一名委員問 Lena 是否希望立刻把獎學金給她。她搖頭說：「請用同一套規則重新審查所有人。」系方同意讓受影響的學生重新面試。那一週，她第一次感覺肩上的重擔稍稍放下。"
+      }
+    ],
+    "quiz": [
+      {
+        "q": "What connects the three applicants?",
+        "opts": [
+          "They all refuse to study",
+          "They work in the same café",
+          "They share one email address",
+          "Their attendance records are inconsistent"
+        ],
+        "a": 3,
+        "why": "三名學生的出席或通知紀錄都有問題。"
+      },
+      {
+        "q": "What caused the false dates?",
+        "opts": [
+          "Two software columns were swapped",
+          "Someone removed a classroom door",
+          "The university changed its name",
+          "The professor lost his phone"
+        ],
+        "a": 0,
+        "why": "更新時交換兩欄造成日期錯誤。"
+      },
+      {
+        "q": "What does Lena ask the panel to do?",
+        "opts": [
+          "Punish a single clerk immediately",
+          "Review all affected students fairly",
+          "Award her the money without review",
+          "Cancel every scholarship forever"
+        ],
+        "a": 1,
+        "why": "Lena 要求公平重新審查所有受影響者。"
+      }
+    ],
+    "words": [
+      "meantime",
+      "bully",
+      "contend",
+      "hence"
+    ]
+  },
+  {
+    "id": "lv5-193",
+    "series": "第五十九部 · The Scholarship with No Winner｜沒有人拿走的獎學金",
+    "title": "A Different Kind of Prize",
+    "zh": "另一種得獎方式",
+    "blurb": "重新面試後，獎學金只有一個名額；Lena 必須面對她原本沒想到的結果。",
+    "scene": "school",
+    "pages": [
+      {
+        "en": "The repeated interviews were difficult. Lena answered questions about her research, while another candidate described a project helping children with homework. The committee could not fund both. When the results appeared, Lena had not received the scholarship. This time, however, she understood how the choice had been made.",
+        "zh": "重新面試並不容易。Lena 回答自己的研究問題，另一名候選人則介紹協助孩童寫作業的計畫。委員會無法同時資助兩人。結果公布時，Lena 仍沒拿到獎學金；但這一次，她知道選擇是如何做出的。"
+      },
+      {
+        "en": "Her friend expected despair. Lena admitted she was disappointed, yet she did not regret asking for a fair review. A professor offered her a paid position in a lab that specialized in language technology. It would not solve every problem, but it would cover part of her tuition and let her keep studying.",
+        "zh": "朋友原以為她會陷入絕望。Lena 承認失望，但不後悔要求公平重審。一位教授提供她語言科技專業實驗室的有薪工作；那不能解決所有問題，卻能負擔部分學費，也讓她繼續求學。"
+      },
+      {
+        "en": "At the end of term, the office changed its notification system. Lena showed the updated instructions to a new student. “Read the rules,” she advised, “and keep your records. But if the answer is still no, it does not decide everything about you.” Then she went to work, with a notebook full of questions she finally had time to explore.",
+        "zh": "學期末，系辦更改通知系統。Lena 把新版說明給一位新生看，說：「讀清楚規則，保存紀錄。但即使答案仍然是否定，也不代表你的一切就此定案。」接著她帶著寫滿問題的筆記本去工作，終於有時間探索自己想研究的事。"
+      }
+    ],
+    "quiz": [
+      {
+        "q": "Does Lena win the scholarship after review?",
+        "opts": [
+          "No, but the process becomes fair",
+          "Yes, without another interview",
+          "Yes, because the clerk resigns",
+          "No, because she misses another email"
+        ],
+        "a": 0,
+        "why": "她仍未得獎，但審查程序變得公平。"
+      },
+      {
+        "q": "What opportunity does she receive?",
+        "opts": [
+          "A new restaurant to manage",
+          "A paid role in a language-technology lab",
+          "A permanent seat on the committee",
+          "A free apartment abroad"
+        ],
+        "a": 1,
+        "why": "她得到語言科技實驗室的有薪工作。"
+      },
+      {
+        "q": "What advice does she give the new student?",
+        "opts": [
+          "Ignore official messages",
+          "Always trust rumors",
+          "Know the rules and keep records",
+          "Never ask questions"
+        ],
+        "a": 2,
+        "why": "她提醒新生理解規則、保存紀錄。"
+      }
+    ],
+    "words": [
+      "despair",
+      "specialize"
+    ]
+  },
+  {
+    "id": "lv5-194",
+    "series": "第六十部 · The Bus beyond the Storm｜風暴另一邊的末班車",
+    "title": "The Road That Vanished",
+    "zh": "突然消失的道路",
+    "blurb": "暴雨夜裡，末班巴士正要過橋；駕駛看見遠方的車燈，卻發現路面不見了。",
+    "scene": "mountain",
+    "pages": [
+      {
+        "en": "Rain struck the windshield as driver Bo approached the mountain bridge. A truck tried to overtake the bus on the narrow road, then stopped abruptly. Beyond its headlights, part of the bridge had vanished into the river. Passengers began to mumble in confusion. Bo reversed slowly and asked everyone to stay seated.",
+        "zh": "暴雨敲打著擋風玻璃，司機 Bo 正接近山區橋梁。一輛貨車試圖在狹窄道路上超越巴士，接著突然停下。車燈前方，部分橋面已消失在河中。乘客困惑地低聲議論。Bo 緩慢倒車，請所有人留在座位上。"
+      },
+      {
+        "en": "The truck driver ran toward them, warning of a vicious current below the broken span. Bo used the radio to contact the rescue center. His first message was brief: the route was blocked, the bus had twenty passengers, and a second vehicle stood nearby. He did not guess how many people were on the far bank.",
+        "zh": "貨車司機跑過來，警告斷橋下的水流十分猛烈。Bo 用無線電聯絡救援中心。他的第一則訊息很簡短：道路阻斷，巴士上有二十名乘客，附近還有另一輛車。他沒有猜測對岸有多少人。"
+      },
+      {
+        "en": "An older passenger pointed to a farmhouse across the valley. A light blinked three times, paused, then blinked again. Perhaps it was only a faulty lamp. Perhaps someone needed help. Bo reported the observation without turning it into a certainty. The dispatcher told him to wait for trained rescuers.",
+        "zh": "一名年長乘客指向山谷對面的農舍。一盞燈閃了三下，停頓後再度閃爍。也許只是燈壞了，也許有人求救。Bo 如實通報觀察，沒有把猜測當成事實。調度員要他等待受過訓練的救援隊。"
+      }
+    ],
+    "quiz": [
+      {
+        "q": "What stops the bus?",
+        "opts": [
+          "A festival blocks the road",
+          "Part of the bridge has collapsed",
+          "The driver loses his ticket",
+          "The bus runs out of fuel"
+        ],
+        "a": 1,
+        "why": "部分橋面坍塌，巴士無法繼續前進。"
+      },
+      {
+        "q": "What does Bo tell the rescue center?",
+        "opts": [
+          "A story about a hidden treasure",
+          "The truck driver’s favorite meal",
+          "Verified facts about the bus and road",
+          "An exact number of people across the river"
+        ],
+        "a": 2,
+        "why": "Bo 通報道路、乘客與附近車輛等已確認資訊。"
+      },
+      {
+        "q": "What is uncertain about the farmhouse light?",
+        "opts": [
+          "Whether the house is painted blue",
+          "Whether the bus has a radio",
+          "Whether the passengers can read",
+          "Whether someone is signaling for help"
+        ],
+        "a": 3,
+        "why": "農舍燈光是否代表求救還不確定。"
+      }
+    ],
+    "words": [
+      "windshield",
+      "overtake",
+      "mumble",
+      "vicious"
+    ]
+  },
+  {
+    "id": "lv5-195",
+    "series": "第六十部 · The Bus beyond the Storm｜風暴另一邊的末班車",
+    "title": "One Seat in the Dark",
+    "zh": "黑暗裡的一個座位",
+    "blurb": "撤離開始後，一名乘客不願上車；她說自己不能把山谷另一側的人留在原地。",
+    "scene": "night",
+    "pages": [
+      {
+        "en": "Rescuers arrived and deployed a smaller vehicle to move passengers away from the damaged bridge. The bus was spacious enough for everyone, but the exit was narrow, and people began to scramble toward it. Bo asked them to form a line. In the meantime, a woman named Hana counted the empty seats twice.",
+        "zh": "救援隊抵達，派出小型車輛把乘客帶離受損橋梁。巴士空間足夠，但出口狹窄，大家開始爭先往外跑。Bo 請眾人排隊。與此同時，名叫 Hana 的女子把空座位數了兩遍。"
+      },
+      {
+        "en": "Hana explained that her younger brother was staying at the farmhouse. Her plea was simple: someone had to check the far bank. One frustrated passenger called her selfish for delaying the departure. Bo would not let the argument turn into hostility. He gave the rescue leader the address and asked Hana to stay where she was safe.",
+        "zh": "Hana 解釋，她弟弟住在那間農舍。她的請求很簡單：必須有人確認對岸情況。一位焦急乘客罵她自私，因為她耽誤出發。Bo 不讓爭執演變成敵意；他把地址交給救援隊長，請 Hana 留在安全位置。"
+      },
+      {
+        "en": "Across the river, the rescue boat found two adults and a child. The blinking light had been intentional, but the child had not made it; a neighbor had. Hana began to cry with relief. The rescue leader returned to the bus, noting that the original report had helped them locate the house without taking unnecessary risks.",
+        "zh": "救援艇在河對岸找到兩名成人和一名孩子。閃光確實是求救訊號，但不是孩子發出的，而是鄰居。Hana 如釋重負地哭了。救援隊長回到巴士旁，指出最初的通報讓他們找到房子，無須冒不必要的風險。"
+      }
+    ],
+    "quiz": [
+      {
+        "q": "Why does Hana hesitate to leave?",
+        "opts": [
+          "She cannot find her suitcase",
+          "She wants to drive the truck",
+          "Her brother is across the river",
+          "She is waiting for a concert"
+        ],
+        "a": 2,
+        "why": "Hana 的弟弟在河對岸。"
+      },
+      {
+        "q": "How does Bo respond?",
+        "opts": [
+          "He sends passengers to swim across",
+          "He ignores the address",
+          "He orders Hana to cross alone",
+          "He passes the location to the rescue leader"
+        ],
+        "a": 3,
+        "why": "Bo 把地點交給有能力救援的隊伍。"
+      },
+      {
+        "q": "Who makes the blinking signal?",
+        "opts": [
+          "A neighbor at the farmhouse",
+          "The child on the bus",
+          "The truck driver",
+          "A television reporter"
+        ],
+        "a": 0,
+        "why": "農舍的鄰居發出求救燈光。"
+      }
+    ],
+    "words": [
+      "spacious",
+      "hostility"
+    ]
+  },
+  {
+    "id": "lv5-196",
+    "series": "第六十部 · The Bus beyond the Storm｜風暴另一邊的末班車",
+    "title": "A Bridge on Paper",
+    "zh": "紙上的橋",
+    "blurb": "天亮後，司機和居民才發現那座橋早已被列為待修，卻沒有清楚通知大家。",
+    "scene": "paper",
+    "pages": [
+      {
+        "en": "By morning, the river had begun to fall, but the bridge remained unsafe. Engineers examined its damaged supports. A previous inspection had noted a widening crack; the notice was filed, yet no warning sign had reached the bus route. Bo showed the team his driving log, which recorded the time he had turned back.",
+        "zh": "到了早上，河水開始下降，橋梁卻仍不安全。工程師檢查受損支柱。先前的檢查曾記錄裂縫擴大，通知也已歸檔，卻沒有警示標誌送達巴士路線。Bo 提供行車紀錄，裡面有他折返的時間。"
+      },
+      {
+        "en": "Some passengers demanded that one person be blamed immediately. Hana asked instead when the road would reopen and how residents would receive updates. The engineers could not promise a date, but they agreed to publish a clear route notice. The disaster had taken a toll on the valley; uncertainty should not add to it.",
+        "zh": "有些乘客要求立刻究責。Hana 則問道路何時能重開，以及居民如何收到最新資訊。工程師無法保證日期，但同意公布清楚的路線通知。災害已讓山谷付出沉重代價，不確定的資訊不該再加重負擔。"
+      },
+      {
+        "en": "Weeks later, Bo drove the temporary route past a newly painted sign. The repaired bridge was still closed. He did not tell passengers that everything was back to normal. He pointed out the longer trip and the reason for it. Through the windshield, Hana saw the valley lights, ordinary again and no longer impossible to reach.",
+        "zh": "幾週後，Bo 沿臨時路線駛過新漆好的告示牌，修復中的橋仍關閉。他沒有對乘客說一切恢復正常，而是說明繞遠路的時間與原因。Hana 從擋風玻璃望向山谷燈火；那些燈再次成為日常，也不再遙不可及。"
+      }
+    ],
+    "quiz": [
+      {
+        "q": "What did the previous inspection record?",
+        "opts": [
+          "A missing school uniform",
+          "A new train schedule",
+          "A broken telescope",
+          "A widening crack in the bridge"
+        ],
+        "a": 3,
+        "why": "之前的檢查曾記錄橋梁裂縫擴大。"
+      },
+      {
+        "q": "What does Hana request after the storm?",
+        "opts": [
+          "Clear updates for residents",
+          "An immediate celebration",
+          "A new name for the river",
+          "A refund for a museum ticket"
+        ],
+        "a": 0,
+        "why": "Hana 希望居民得到清楚的道路資訊。"
+      },
+      {
+        "q": "How does Bo describe the temporary route?",
+        "opts": [
+          "He says the river has disappeared",
+          "He explains its extra distance and purpose",
+          "He claims every road is open",
+          "He refuses to speak to passengers"
+        ],
+        "a": 1,
+        "why": "Bo 清楚說明繞路距離與原因。"
+      }
+    ],
+    "words": [
+      "toll"
+    ]
+  },
+  {
+    "id": "lv5-197",
+    "series": "第六十一部 · The Costume That Would Not Fit｜穿不下的戲服",
+    "title": "The Wrong Size",
+    "zh": "不對的尺寸",
+    "blurb": "首演前三天，舞台上最受歡迎的角色突然被換角；新演員不想再被當成笑話。",
+    "scene": "theater",
+    "pages": [
+      {
+        "en": "The costume shop was full of bright cloth and half-finished masks. Actor Milo arrived to replace an injured boxer in a stage comedy. The producer handed him a coat made for someone much broader. “You can play the chubby fool,” he said, laughing. Milo did not laugh. He had accepted the role to act, not to become the joke.",
+        "zh": "戲服工作室擺滿亮色布料與未完成的面具。演員 Milo 前來接替一位受傷的拳擊手，在舞台喜劇中演出。製作人遞給他一件做給更壯碩身材的外套，笑著說：「你可以演那個胖胖的傻瓜。」Milo 沒笑；他接下角色是為了演戲，不是為了自己成為笑話。"
+      },
+      {
+        "en": "Costume designer Rina watched the fitting. She had spent years designing masculine armor, delicate dresses, and everything between. Clothing could tell a story, she said, but it should not bully the person wearing it. Milo wanted the character to be clumsy because he rushed, not because of his body.",
+        "zh": "戲服設計師 Rina 看著試穿。多年來她設計過陽剛盔甲、精緻禮服，以及介於兩者之間的各種造型。她說衣服可以敘事，卻不該霸凌穿衣的人。Milo 希望角色笨拙是因為做事太急，不是因為身材。"
+      },
+      {
+        "en": "The producer argued that the audience expected the old jokes. Rina proposed one rehearsal with a different costume before making any decision. She trimmed the coat, removed the oversized padding, and gave Milo room to move. The next afternoon, the entire cast would see whether a new version of the character could work.",
+        "zh": "製作人說觀眾就是期待那些舊笑點。Rina 提議在決定前先試排一場不同戲服的版本。她修短外套，拿掉過大的襯墊，讓 Milo 有足夠活動空間。隔天下午，整個劇組就會知道新版角色是否行得通。"
+      }
+    ],
+    "quiz": [
+      {
+        "q": "Why is Milo uncomfortable with the original costume?",
+        "opts": [
+          "It turns his body into a joke",
+          "It is too expensive to clean",
+          "It belongs to a magician",
+          "It is missing a button only"
+        ],
+        "a": 0,
+        "why": "原設計把演員身材當成笑點。"
+      },
+      {
+        "q": "What does Rina believe costumes should do?",
+        "opts": [
+          "Prevent performers from moving",
+          "Support a story without humiliating actors",
+          "Always copy last year’s version",
+          "Hide all actors from view"
+        ],
+        "a": 1,
+        "why": "Rina 認為戲服可以敘事，但不該羞辱演員。"
+      },
+      {
+        "q": "What does Rina propose?",
+        "opts": [
+          "Replace all dialogue with music",
+          "Sell the theater immediately",
+          "Try a revised costume in rehearsal",
+          "Cancel every performance"
+        ],
+        "a": 2,
+        "why": "她提議先穿新版戲服試排。"
+      }
+    ],
+    "words": [
+      "boxer",
+      "chubby",
+      "masculine"
+    ]
+  },
+  {
+    "id": "lv5-198",
+    "series": "第六十一部 · The Costume That Would Not Fit｜穿不下的戲服",
+    "title": "The Laugh That Changed Places",
+    "zh": "轉移位置的笑聲",
+    "blurb": "排練重新找到笑點，Milo 也要在首演之夜證明：真正有趣的可以是角色，而非演員的身材。",
+    "scene": "theater",
+    "pages": [
+      {
+        "en": "During rehearsal, Milo played a bodyguard who tried to snatch an important letter before the king could read it. Instead he grabbed a shopping list and proudly announced a royal order for six onions. The cast laughed. The scene worked because the character was confident and mistaken, not because Milo looked a certain way.",
+        "zh": "試排時，Milo 演一名保鑣，想在國王讀信前搶走重要信件，卻抓錯成購物清單，還得意宣布國王下令買六顆洋蔥。全體演員都笑了；笑點成立，是因為角色自信滿滿卻搞錯，不是 Milo 的身材長什麼樣。"
+      },
+      {
+        "en": "The producer insisted on one more physical joke. He wanted Milo to squat under a table and smash a wooden box. Rina checked the stage space, then asked why the box needed to break. No one had an answer. Milo suggested that his character hide the letter inside it and forget which box he had chosen.",
+        "zh": "製作人堅持再加一個肢體笑點：讓 Milo 蹲到桌下，砸碎木箱。Rina 檢查舞台空間後問，箱子為什麼一定要打破？沒人答得出來。Milo 提議讓角色把信藏進箱子，接著忘記自己選了哪個箱子。"
+      },
+      {
+        "en": "At the next rehearsal, the letter was safe, the box remained whole, and the audience of stage workers laughed even harder. The director did not call the change a moral lesson. He simply wrote in his notes that the second version had clearer timing and gave every actor more to do.",
+        "zh": "下次排練時，信件完好，箱子沒壞，充當觀眾的舞台工作人員卻笑得更大聲。導演沒有把改動稱作道德教訓，只在筆記裡寫下：第二版節奏更清楚，每位演員也都有更多可做的事。"
+      },
+      {
+        "en": "Opening night arrived. The hall was spacious, but Milo felt trapped behind the curtain, still afraid of another petty joke. Rina handed him the altered coat. “It fits the character you built,” she said. Onstage, a small mistake with the shopping list led to the biggest laugh of the evening. This time Milo smiled along with the audience.",
+        "zh": "首演之夜到來。劇院很寬敞，Milo 卻覺得自己困在幕後，仍擔心又要面對那種小家子氣的笑話。Rina 把修改過的外套交給他，說：「這件適合你塑造的角色。」台上，購物清單的一個小失誤帶來當晚最大笑聲。這次 Milo 和觀眾一起笑了。"
+      },
+      {
+        "en": "Afterward, a young performer told him she had been worried about joining the cast because she never seemed to fit the usual roles. Milo did not promise that every audition would be kind. He told her that a good role could be revised, and that she could ask what a joke was actually about.",
+        "zh": "演出後，一名年輕演員告訴 Milo，她一直擔心參演，因為自己好像從不符合典型角色。Milo 沒保證每場試鏡都會友善，只說好的角色可以修改，也可以問清楚笑點究竟在笑什麼。"
+      },
+      {
+        "en": "The producer ordered the revised costume kept for the next season. Rina hung it on a hook beside the old oversized one, with both labels visible. They did not erase the first design. They kept it as a record of how the company learned to write a better scene.",
+        "zh": "製作人下令把新版戲服留到下一季。Rina 把它掛在舊的過大戲服旁，兩張標籤都清楚可見。他們沒有抹去第一版，而是把它當成劇團學會寫出更好戲碼的紀錄。"
+      }
+    ],
+    "quiz": [
+      {
+        "q": "Why is the shopping list funny?",
+        "opts": [
+          "It names the wrong theater",
+          "The bodyguard mistakes it for a royal letter",
+          "It is written in an alien language",
+          "The king refuses to eat"
+        ],
+        "a": 1,
+        "why": "保鑣把購物清單誤認為重要信件。"
+      },
+      {
+        "q": "Why does Rina question the broken box?",
+        "opts": [
+          "The audience cannot see wood",
+          "She is afraid of onions",
+          "The story gives no reason for breaking it",
+          "The box belongs to her family"
+        ],
+        "a": 2,
+        "why": "情節沒有交代木箱一定要打破的理由。"
+      },
+      {
+        "q": "What does the director prefer after rehearsal?",
+        "opts": [
+          "The version that mocks Milo’s appearance",
+          "A performance with no actors",
+          "A scene where all props are destroyed",
+          "The version with clearer timing and roles"
+        ],
+        "a": 3,
+        "why": "新版節奏清楚，也讓各角色更有發揮。"
+      },
+      {
+        "q": "What brings the biggest laugh on opening night?",
+        "opts": [
+          "A falling ceiling",
+          "A broken ticket printer",
+          "A mistake involving the shopping list",
+          "The size of Milo’s body"
+        ],
+        "a": 2,
+        "why": "最大的笑聲來自購物清單的失誤。"
+      },
+      {
+        "q": "What advice does Milo give the young performer?",
+        "opts": [
+          "Every audition will be fair",
+          "She should avoid the theater forever",
+          "Only old roles are worth playing",
+          "Roles can be revised and jokes can be questioned"
+        ],
+        "a": 3,
+        "why": "他說角色可以修改，也可以追問笑點的意義。"
+      },
+      {
+        "q": "Why do they keep the old costume?",
+        "opts": [
+          "To document how the scene changed",
+          "To sell it to the king",
+          "Because the new one disappeared",
+          "To require Milo to wear it again"
+        ],
+        "a": 0,
+        "why": "舊戲服成為劇團改寫角色的紀錄。"
+      }
+    ],
+    "words": [
+      "bodyguard",
+      "snatch",
+      "squat",
+      "smash",
+      "petty"
+    ]
+  },
+{
+  "series": "第六十二部 · The Archive Before Dawn｜黎明前的檔案",
+  "title": "The Ballot in the Wall",
+  "zh": "牆裡的選票",
+  "blurb": "城鎮檔案館要拆牆，一張舊選票卻使翻譯員停下手中的筆。",
+  "scene": "paper",
+  "pages": [
+    {
+      "en": "When the civic archive closed for repairs, translator June found a ballot behind a wall. It carried the names of two nominees, but the date was missing. A senator had written a short note on the back: “Ask the witnesses before you decide what this proves.”",
+      "zh": "城鎮檔案館因修繕關閉時，翻譯員 June 在牆後找到一張選票。上面有兩位候選人的名字，卻沒有日期。一名參議員在背面寫著：「在決定這能證明什麼之前，先問目擊者。」"
+    },
+    {
+      "en": "A young journalist called it evidence of corruption. June thought that was an assumption, not a fact. The official coverage of the election mentioned neither a missing ballot nor a disputed count. She asked the archivist to keep both versions of the record.",
+      "zh": "一名年輕記者稱它是貪腐證據。June 認為那只是推測，還不是事實。當年的選舉報導沒有提到遺失的選票，也沒有提到計票爭議。她請檔案員保留兩種版本的紀錄。"
+    },
+    {
+      "en": "By evening, the archivist located a photograph: the ballot had belonged to a classroom exercise. June crossed out the journalist’s dramatic headline, but did not throw away the ballot. “A good archive,” she said, “shows how a mistake was corrected.”",
+      "zh": "到了傍晚，檔案員找到一張照片：這張選票原來屬於一堂課的練習。June 劃掉記者戲劇化的標題，但沒有丟棄選票。「好的檔案館，」她說，「會呈現錯誤是怎麼被修正的。」"
+    }
+  ],
+  "quiz": [
+    {
+      "q": "Why does June question the journalist’s claim?",
+      "opts": [
+        "The ballot has no names",
+        "The evidence does not yet establish corruption",
+        "The archive is open all night",
+        "The photograph shows a new election"
+      ],
+      "a": 1,
+      "why": "選票的來歷尚未查明，不能把推測當成事實。"
+    },
+    {
+      "q": "What does the photograph reveal?",
+      "opts": [
+        "It was used in a classroom",
+        "The senator owned the building",
+        "June had taken it herself",
+        "The names were invented yesterday"
+      ],
+      "a": 0,
+      "why": "照片顯示選票來自課堂練習。"
+    },
+    {
+      "q": "Why does June keep the ballot?",
+      "opts": [
+        "To sell it",
+        "To hide it",
+        "To record how the error was resolved",
+        "To nominate a new senator"
+      ],
+      "a": 2,
+      "why": "保存它能記錄錯誤如何被修正。"
+    }
+  ],
+  "id": "lv5-199",
+  "words": [
+    "ballot",
+    "civic",
+    "corruption",
+    "coverage",
+    "senator"
+  ]
+},
+{
+  "series": "第六十二部 · The Archive Before Dawn｜黎明前的檔案",
+  "title": "The Two Speeches",
+  "zh": "兩份演說",
+  "blurb": "兩份說法都自稱完整；June 必須找出被剪掉的問答。",
+  "scene": "paper",
+  "pages": [
+    {
+      "en": "The archive received a second box, this time from a delegate who had attended an old constitutional convention. Inside were two versions of the same speech. One praised a federal proposal; the other questioned what it would mean for local sovereignty.",
+      "zh": "檔案館收到第二個箱子，來自一名曾參加舊制憲會議的代表。裡面有同一篇演說的兩個版本。一份稱讚聯邦提案，另一份則質疑它對地方主權的意義。"
+    },
+    {
+      "en": "The delegation had recorded the speaker’s question and answer together. A later editor removed the question, thereby changing the tone. June compared the legislative notes with the recording. The missing sentence had been spoken by a member of the opposition, not the speaker at the podium.",
+      "zh": "代表團當時把發言者的提問和回答一起錄下來。後來的編輯刪掉提問，因此改變了語氣。June 對照立法筆記與錄音，發現消失的句子來自在野成員，而不是台上的演講者。"
+    },
+    {
+      "en": "June restored the exchange in its original order. She labeled each speaker without calling either an idiot or a hero. Visitors could now hear the disagreement and understand why both records had survived.",
+      "zh": "June 按原本順序還原問答。她為每位發言者標上身分，不把任何一方叫做笨蛋或英雄。參觀者現在能聽見分歧，也能理解兩份紀錄為何都留存下來。"
+    }
+  ],
+  "quiz": [
+    {
+      "q": "What changes the tone of the speech?",
+      "opts": [
+        "A question was removed",
+        "The recording was made underwater",
+        "The speaker changed countries",
+        "The visitors stopped listening"
+      ],
+      "a": 0,
+      "why": "編輯刪掉提問，讓演說的語氣被改變。"
+    },
+    {
+      "q": "Whose sentence had gone missing?",
+      "opts": [
+        "The archivist’s",
+        "The editor’s",
+        "A member of the opposition",
+        "A museum visitor’s"
+      ],
+      "a": 2,
+      "why": "遺失句子來自在野成員。"
+    },
+    {
+      "q": "How does June present the exchange?",
+      "opts": [
+        "By choosing a hero",
+        "In its original speaking order",
+        "As a single speaker’s words",
+        "Without any labels"
+      ],
+      "a": 1,
+      "why": "她依原始順序還原不同發言者的問答。"
+    }
+  ],
+  "id": "lv5-200",
+  "words": [
+    "constitutional",
+    "delegate",
+    "delegation",
+    "federal",
+    "idiot",
+    "legislative",
+    "opposition",
+    "sovereignty",
+    "thereby"
+  ]
+},
+{
+  "series": "第六十二部 · The Archive Before Dawn｜黎明前的檔案",
+  "title": "A Name on the Margin",
+  "zh": "頁邊的名字",
+  "blurb": "選舉文件裡的一個名字，為什麼在後來的書裡換了身分？",
+  "scene": "meeting",
+  "pages": [
+    {
+      "en": "An index listed a democrat, a republican, and a communist as three guests at a public debate. June knew those labels could describe different political positions and contexts; the archive could not assume that a label carried the same meaning in every decade.",
+      "zh": "索引列出一位民主主義者、一位共和派人士及一位共產主義者，說三人曾參加公開辯論。June 知道，這些標籤在不同政治背景中可能代表不同立場；檔案館不能假設它們在每個年代都具有完全相同的意思。"
+    },
+    {
+      "en": "A textbook on communism had quoted only the first guest. A later edition used the quote as propaganda for a position the guest had not expressed. June found the complete discourse in a box marked “unverified.” Its final page showed that all three had challenged the same rumor. June asked whether the editor’s ideology had shaped which sentence was kept.",
+      "zh": "一本談論共產主義的教科書只引用第一位來賓。後來的版本拿那段引言當作某種立場的宣傳，但來賓原本並未表達那個意思。June 在標示「未查證」的箱子裡找到完整論述；最後一頁顯示三人當時都質疑同一則傳言。 June 問編輯本身的意識形態是否影響了他保留哪一句話。"
+    },
+    {
+      "en": "The exhibition displayed the full transcript, with each label explained as it appeared in the source. Visitors were invited to read the text rather than infer a person’s beliefs from one word. June finally understood why the archivist had preserved the messy boxes.",
+      "zh": "展覽呈現完整逐字稿，並解釋每個標籤在原始資料中的用法。參觀者可以閱讀內容，而非從單一字詞推斷一個人的信念。June 終於理解檔案員為何保留這些雜亂箱子。"
+    }
+  ],
+  "quiz": [
+    {
+      "q": "What does June warn against?",
+      "opts": [
+        "Reading the complete transcript",
+        "Assuming a political label always has one meaning",
+        "Preserving old boxes",
+        "Comparing different editions"
+      ],
+      "a": 1,
+      "why": "政治標籤需放回年代與原文脈絡。"
+    },
+    {
+      "q": "What was missing from the textbook?",
+      "opts": [
+        "The complete debate",
+        "The building address",
+        "The printer’s name",
+        "The archive opening hours"
+      ],
+      "a": 0,
+      "why": "教科書只引用了完整辯論的一小部分。"
+    },
+    {
+      "q": "What do visitors see at the end?",
+      "opts": [
+        "A single slogan",
+        "A destroyed recording",
+        "An unlabeled photograph",
+        "The full transcript with contextual labels"
+      ],
+      "a": 3,
+      "why": "展覽呈現完整逐字稿與標籤背景。"
+    }
+  ],
+  "id": "lv5-201",
+  "words": [
+    "communism",
+    "communist",
+    "democrat",
+    "discourse",
+    "ideology",
+    "propaganda",
+    "republican"
+  ]
+},
+{
+  "series": "第六十二部 · The Archive Before Dawn｜黎明前的檔案",
+  "title": "The Empty Chair",
+  "zh": "空著的椅子",
+  "blurb": "一位被刪掉的見證人，留下的不是投票紀錄，而是一份遷徙日記。",
+  "scene": "paper",
+  "pages": [
+    {
+      "en": "The last box held a diary written during a rebellion. A family had gone into exile after a new regime took control of their village. The writer, once a peasant, described slavery as a system that had shaped the lives of people around him, not as an abstract slogan.",
+      "zh": "最後一箱是叛亂時期寫成的日記。一個家庭在新政權控制村莊後流亡。作者原是農民，他把奴隸制度描述成深刻影響周圍人生活的制度，而不是抽象口號。"
+    },
+    {
+      "en": "The diary also recorded a treaty discussed by neighboring communities. One translator had replaced the word “proposal” with “mandate,” making a request sound like an order. June checked the handwriting, marked the uncertain passages, and refused to erase the writer’s doubts.",
+      "zh": "日記也記錄鄰近社群討論的一份條約。有位翻譯者把「提案」換成「命令」，讓請求聽起來像指示。June 檢查筆跡、標出不確定段落，沒有抹去作者的疑問。"
+    },
+    {
+      "en": "On opening day, visitors found one chair beside the diary. The sign explained that the chair represented people whose names had not entered official records. June placed the classroom ballot nearby: two small objects, both reminders to examine a source before judging it.",
+      "zh": "開幕當天，參觀者看到日記旁的一張椅子。牌子說明，椅子象徵那些名字沒有進入官方紀錄的人。June 把那張課堂選票放在附近：兩件小物品，都提醒人們判斷前先查證來源。"
+    }
+  ],
+  "quiz": [
+    {
+      "q": "Why did the family leave the village?",
+      "opts": [
+        "They won a lottery",
+        "A new regime took control",
+        "The museum hired them",
+        "The crops were exported"
+      ],
+      "a": 1,
+      "why": "日記說家庭在新政權控制村莊後流亡。"
+    },
+    {
+      "q": "What translation error does June discover?",
+      "opts": [
+        "A request became an order",
+        "The diary became a novel",
+        "A treaty became a map",
+        "A name became a date"
+      ],
+      "a": 0,
+      "why": "proposal 被譯成 mandate，改變語氣。"
+    },
+    {
+      "q": "What does the empty chair stand for?",
+      "opts": [
+        "A missing museum guard",
+        "A new candidate",
+        "People absent from official records",
+        "An auction item"
+      ],
+      "a": 2,
+      "why": "空椅象徵未被官方紀錄留下姓名的人。"
+    }
+  ],
+  "id": "lv5-202",
+  "words": [
+    "exile",
+    "mandate",
+    "peasant",
+    "rebellion",
+    "regime",
+    "slavery",
+    "treaty"
+  ]
+},
+{
+  "series": "第六十三部 · The Room of Unsent Letters｜沒有寄出的信",
+  "title": "The File with No Answer",
+  "zh": "沒有答案的病歷",
+  "blurb": "一位醫療翻譯員收到兩份內容不一致的同意書。",
+  "scene": "paper",
+  "pages": [
+    {
+      "en": "Mina translated forms at a community clinic. One patient was scheduled to undergo a procedure after doctors discovered a tumor. A hormone test had also been ordered, but the file described the results in language the patient could not understand.",
+      "zh": "Mina 在社區診所翻譯表單。一位病人在醫師發現腫瘤後，預定接受一項處置。醫師也安排了荷爾蒙檢測，但檔案中的結果寫得讓病人難以理解。"
+    },
+    {
+      "en": "The patient had a lump near her neck and feared that every new term meant disaster. Mina did not pretend to know the diagnosis. Instead, she asked the doctor to explain each word directly, while she translated the explanation without adding guesses.",
+      "zh": "病人脖子附近有腫塊，害怕每個新名詞都意味著災難。Mina 沒有假裝自己知道診斷，而是請醫師親自解釋各個詞，再忠實翻譯，不加上自己的猜測。"
+    },
+    {
+      "en": "By the end of the appointment, the patient still had questions. Yet she now understood what the test could and could not tell her. Mina wrote the unanswered questions on a separate sheet so they would not disappear under a pile of forms.",
+      "zh": "看診結束時，病人還有問題。但她已理解這項檢測能告訴她什麼、又不能告訴她什麼。Mina 把尚未回答的問題另外寫在紙上，避免它們淹沒在表單裡。"
+    }
+  ],
+  "quiz": [
+    {
+      "q": "Why does Mina ask the doctor to speak?",
+      "opts": [
+        "She wants a new job",
+        "She cannot read Chinese",
+        "Only the doctor should explain the clinical meaning",
+        "The test has been canceled"
+      ],
+      "a": 2,
+      "why": "Mina 讓醫師解釋醫療意義，自己忠實翻譯。"
+    },
+    {
+      "q": "What does the patient fear?",
+      "opts": [
+        "Every unfamiliar term signals disaster",
+        "The clinic will close",
+        "The doctor lost the forms",
+        "Mina has no pen"
+      ],
+      "a": 0,
+      "why": "她害怕每個新術語都代表嚴重問題。"
+    },
+    {
+      "q": "What does Mina keep separately?",
+      "opts": [
+        "A museum ticket",
+        "The patient’s unanswered questions",
+        "The doctor’s lunch",
+        "A train map"
+      ],
+      "a": 1,
+      "why": "她另外保存尚未回答的問題。"
+    }
+  ],
+  "id": "lv5-203",
+  "words": [
+    "hormone",
+    "lump",
+    "tumor",
+    "undergo"
+  ]
+},
+{
+  "series": "第六十三部 · The Room of Unsent Letters｜沒有寄出的信",
+  "title": "The Word She Chose",
+  "zh": "她選擇說出的詞",
+  "blurb": "翻譯能不能為了讓一段經歷容易聽懂，就刪掉當事人的意思？",
+  "scene": "meeting",
+  "pages": [
+    {
+      "en": "A second patient arrived to discuss records from an earlier abortion. Mina noticed that one form confused conception with consent. The patient asked for the words to remain separate: the start of a pregnancy and a person’s permission were not the same thing.",
+      "zh": "第二位病人前來討論先前墮胎的紀錄。Mina 發現一張表單把「受孕」和「同意」混成一回事。病人要求把兩者分開：懷孕的開始和一個人的允許，並不是同一件事。"
+    },
+    {
+      "en": "Another section described medical mortality data, while a note about emotional trauma had been reduced to a single number. Mina explained what the words meant in ordinary language but left medical interpretation to the clinician. She checked that the patient understood what would be included in the translated copy.",
+      "zh": "另一段描述醫療死亡率資料，但一則關於心理創傷的註記卻被縮成單一數字。Mina 用日常語言解釋詞義，但把醫療解讀交給臨床人員。她確認病人理解翻譯副本將包含哪些內容。"
+    },
+    {
+      "en": "The patient signed only after reading the revised form. Mina left the clinic thinking about the difference between a neat translation and a faithful one. Sometimes the most honorable choice was to keep an uncomfortable sentence intact. She did not turn the patient’s choices into an abstract debate about morality.",
+      "zh": "病人讀完修訂表單後才簽名。Mina 離開診所時，想著整齊的譯文與忠實譯文有何不同。有時最值得尊重的選擇，是保留令人不舒服的句子原貌。 她沒有把病人的選擇變成抽象的道德辯論。"
+    }
+  ],
+  "quiz": [
+    {
+      "q": "Which words were wrongly mixed together?",
+      "opts": [
+        "Consent and conception",
+        "Surgery and architecture",
+        "A name and an address",
+        "A title and a date"
+      ],
+      "a": 0,
+      "why": "表單混淆了受孕與同意。"
+    },
+    {
+      "q": "Who interprets medical significance?",
+      "opts": [
+        "The archivist",
+        "The clinician",
+        "The taxi driver",
+        "The newspaper editor"
+      ],
+      "a": 1,
+      "why": "Mina 解釋詞義，臨床人員負責醫療解讀。"
+    },
+    {
+      "q": "When does the patient sign?",
+      "opts": [
+        "Before entering the clinic",
+        "Without reading",
+        "After reading the revised form",
+        "After Mina leaves"
+      ],
+      "a": 2,
+      "why": "病人讀完修訂版才簽署。"
+    }
+  ],
+  "id": "lv5-204",
+  "words": [
+    "abortion",
+    "conception",
+    "honorable",
+    "morality",
+    "mortality",
+    "trauma"
+  ]
+},
+{
+  "series": "第六十三部 · The Room of Unsent Letters｜沒有寄出的信",
+  "title": "A Page for the Night Shift",
+  "zh": "給夜班的一頁",
+  "blurb": "診所的「數字看起來很好」；夜班人員卻留下另一種紀錄。",
+  "scene": "night",
+  "pages": [
+    {
+      "en": "During the night shift, a nurse changed a diaper for an infant while another patient began to vomit. A man in agony moaned behind a curtain. Mina saw the staff move between rooms without a pause, yet the weekly report contained only numbers.",
+      "zh": "夜班期間，一位護理師替嬰兒換尿布，另一位病人開始嘔吐。布簾後有個疼痛難耐的人低聲呻吟。Mina 看見員工不停穿梭各房間，但週報上只有數字。"
+    },
+    {
+      "en": "The clinic manager asked her to trim a paragraph about waiting times. Mina proposed a different solution: keep the figures and add brief accounts of what patients had experienced. A report could be accurate without being indifferent to the people inside it.",
+      "zh": "診所主管請她刪短一段候診時間說明。Mina 提議換個方法：保留數據，同時加入病人經歷的簡短紀錄。報告可以精確，也不必對其中的人無動於衷。"
+    },
+    {
+      "en": "At sunrise, she pinned a new page beside the schedule. It listed no names, only recurring concerns the staff wanted to address. The doctor who had explained the first patient’s test added a line: “Ask what the numbers leave out.”",
+      "zh": "日出時，她在排班表旁貼上一頁新文件。上面沒有名字，只有員工希望處理的反覆問題。曾解釋第一位病人檢測的醫師又加了一行：「問問看數字漏掉了什麼。」"
+    }
+  ],
+  "quiz": [
+    {
+      "q": "What is absent from the original weekly report?",
+      "opts": [
+        "Patient experiences",
+        "The number of rooms",
+        "The date",
+        "The clinic address"
+      ],
+      "a": 0,
+      "why": "原週報只有數字，缺乏病人經歷。"
+    },
+    {
+      "q": "What does Mina recommend?",
+      "opts": [
+        "Remove all figures",
+        "Publish patient names",
+        "Keep figures and add brief accounts",
+        "Close the clinic"
+      ],
+      "a": 2,
+      "why": "她建議保留數據並加入簡短經歷。"
+    },
+    {
+      "q": "What is written on the new page?",
+      "opts": [
+        "Private patient names",
+        "Recurring concerns",
+        "A fictional bill",
+        "A list of awards"
+      ],
+      "a": 1,
+      "why": "新頁記錄反覆出現的問題，不含姓名。"
+    }
+  ],
+  "id": "lv5-205",
+  "words": [
+    "agony",
+    "diaper",
+    "indifferent",
+    "trim",
+    "vomit"
+  ]
+},
+{
+  "series": "第六十四部 · The Pier Without a Map｜沒有地圖的碼頭",
+  "title": "The Locked Cabin",
+  "zh": "上鎖的船艙",
+  "blurb": "一次失蹤通報，從標錯位置的船艙開始。",
+  "scene": "night",
+  "pages": [
+    {
+      "en": "The sheriff arrived at the pier after a passenger reported a kidnap. A ferry cabin was locked, and someone claimed a hostage was inside. The officer would not rush into a raid without checking where the passengers had last been seen.",
+      "zh": "警長接獲乘客通報綁架後來到碼頭。渡輪一間船艙上鎖，有人聲稱裡面有人質。警長沒有在確認乘客最後出現的位置前就匆忙突襲。"
+    },
+    {
+      "en": "Security footage showed a man carrying a rifle case toward the ship, but it did not show a weapon. Two witnesses described an assault; a third said the sound had come from a suitcase falling. The sheriff recorded the different accounts without treating them as interchangeable.",
+      "zh": "監視影像顯示一名男子提著步槍箱走向船，但沒有拍到武器。兩名目擊者描述有人遭到攻擊；第三人說聲音是行李箱掉落造成。警長記下不同說法，沒有把它們當成完全相同。"
+    },
+    {
+      "en": "The cabin was empty. Behind its door hung a paper map with the wrong deck number. The missing passenger had followed that map and gone to another deck. An emergency that began with fear was now a problem of finding the person quickly.",
+      "zh": "船艙是空的。門後掛著一張甲板號碼錯誤的紙地圖。失蹤乘客照著地圖走去了另一層甲板。這場因恐懼而起的緊急事件，現在成了盡快找到人的問題。"
+    }
+  ],
+  "quiz": [
+    {
+      "q": "Why does the sheriff delay a raid?",
+      "opts": [
+        "He has no radio",
+        "He wants to check locations first",
+        "The ferry has already left",
+        "He knows the passenger is home"
+      ],
+      "a": 1,
+      "why": "警長先確認乘客最後出現的位置。"
+    },
+    {
+      "q": "What does the footage NOT prove?",
+      "opts": [
+        "Someone carried a case",
+        "A man walked toward the ship",
+        "There was a weapon inside the case",
+        "There was a ferry"
+      ],
+      "a": 2,
+      "why": "影片只拍到箱子，沒證明箱內有武器。"
+    },
+    {
+      "q": "What is wrong with the cabin map?",
+      "opts": [
+        "Its deck number is incorrect",
+        "Its ink has vanished",
+        "It shows another country",
+        "It is written in code"
+      ],
+      "a": 0,
+      "why": "紙地圖標錯甲板號碼。"
+    }
+  ],
+  "id": "lv5-206",
+  "words": [
+    "assault",
+    "hostage",
+    "kidnap",
+    "raid",
+    "rifle",
+    "sheriff"
+  ]
+},
+{
+  "series": "第六十四部 · The Pier Without a Map｜沒有地圖的碼頭",
+  "title": "A Report That Traveled",
+  "zh": "被轉傳的報告",
+  "blurb": "錯誤的傳聞先抵達城裡，當事人卻還在等待找到回家的路。",
+  "scene": "paper",
+  "pages": [
+    {
+      "en": "By morning, a video described the ferry incident as combat between two groups. Another post alleged cocaine was found in a bag, although no official report mentioned it. A rumor about an alcoholic crew member spread just as fast.",
+      "zh": "隔天早上，一段影片把渡輪事件形容成兩群人交戰。另一篇貼文指稱袋子裡找到古柯鹼，但官方報告完全沒提這件事。關於一名船員酗酒的傳聞也迅速流傳。"
+    },
+    {
+      "en": "At the dock, angry visitors began to shout. One careless message threatened to trigger a riot. The sheriff asked people to stop blocking the rescue path and said only what the team could verify. He did not claim that a person was a convict merely because a name had appeared online.",
+      "zh": "碼頭上，憤怒的訪客開始叫喊。一則不負責任的訊息幾乎引發暴動。警長請眾人別擋住救援通道，只說明團隊已查證的內容。他沒有因為網路上出現某個名字，就把那人說成罪犯。"
+    },
+    {
+      "en": "The passenger was found in a storage room with a broken radio. The ferry company corrected the map and published a timeline of verified events. The sheriff reminded reporters that a conviction was a legal outcome, not a label created by a video.",
+      "zh": "失蹤乘客在無線電壞掉的儲藏室裡被找到。渡輪公司修正地圖，公布經查證事件的時間線。警長提醒記者，定罪是法律程序的結果，不是影片貼上的標籤。"
+    }
+  ],
+  "quiz": [
+    {
+      "q": "Which allegation is unsupported by the official report?",
+      "opts": [
+        "The map had a wrong number",
+        "Cocaine was found in a bag",
+        "A passenger was located",
+        "The radio was broken"
+      ],
+      "a": 1,
+      "why": "官方報告沒有提到古柯鹼。"
+    },
+    {
+      "q": "What does the sheriff ask visitors to do?",
+      "opts": [
+        "Block the exit",
+        "Leave the ship unsearched",
+        "Stop blocking the rescue path",
+        "Delete all photographs"
+      ],
+      "a": 2,
+      "why": "警長請眾人不要擋住救援通道。"
+    },
+    {
+      "q": "Where is the passenger found?",
+      "opts": [
+        "In a storage room",
+        "At a casino",
+        "In the city archive",
+        "At the hospital"
+      ],
+      "a": 0,
+      "why": "失蹤乘客在儲藏室被找到。"
+    }
+  ],
+  "id": "lv5-207",
+  "words": [
+    "alcoholic",
+    "cocaine",
+    "combat",
+    "convict",
+    "conviction",
+    "riot",
+    "trigger"
+  ]
+},
+{
+  "series": "第六十四部 · The Pier Without a Map｜沒有地圖的碼頭",
+  "title": "The Map Under the Floor",
+  "zh": "地板下的地圖",
+  "blurb": "找到人不等於結案；需要修正的是讓所有人走錯的資訊。",
+  "scene": "paper",
+  "pages": [
+    {
+      "en": "A maintenance worker had tried to sneak a replacement map into the cabin before departure. The paper ripped as he reached beneath a loose panel. A tangle of old wires made the entrance difficult to see. He had shrugged and left the damaged map in place.",
+      "zh": "一名維修工人在出航前試圖悄悄放入替換地圖。當他伸手到鬆動面板下方時，紙張被扯破。一團舊電線讓入口難以看清，他聳聳肩，最後留下了損壞的地圖。"
+    },
+    {
+      "en": "The team did not execute the first response plan blindly. Instead, it examined how the replacement process had failed. A checklist had been marked complete even though the map had not been swapped. The error could have had destructive consequences, but it was not evidence of every rumor online.",
+      "zh": "團隊沒有盲目執行最初的應變計畫，而是檢視更換流程如何失效。檢查表被標記完成，地圖卻根本沒有換好。這個錯誤可能造成破壞性的後果，但不能證明網路上所有傳聞都是真的。"
+    },
+    {
+      "en": "The final report separated the accident, the unverified accusations, and the execution of the new safety plan. The worker admitted his mistake. The company changed its process so another employee had to confirm each replacement before the ferry sailed.",
+      "zh": "最終報告把意外、未查證指控，以及新安全計畫的執行情況分開呈現。工人承認錯誤。公司修改流程，要求渡輪出航前由另一位員工確認每次更換。"
+    }
+  ],
+  "quiz": [
+    {
+      "q": "Why was the map not replaced?",
+      "opts": [
+        "The captain hid it",
+        "The worker left it damaged after difficulty reaching the panel",
+        "The ship had no maps",
+        "The sheriff took it away"
+      ],
+      "a": 1,
+      "why": "工人遇到面板和電線問題後，沒有完成更換。"
+    },
+    {
+      "q": "What did the checklist incorrectly say?",
+      "opts": [
+        "The passenger was convicted",
+        "The weather was sunny",
+        "The replacement was complete",
+        "The ferry was canceled"
+      ],
+      "a": 2,
+      "why": "清單標示更換完成，但實際沒有。"
+    },
+    {
+      "q": "What changes in the new process?",
+      "opts": [
+        "A second employee confirms replacement",
+        "Maps are banned",
+        "Passengers carry rifles",
+        "No records are kept"
+      ],
+      "a": 0,
+      "why": "新的流程要求另一位員工確認。"
+    }
+  ],
+  "id": "lv5-208",
+  "words": [
+    "destructive",
+    "execute",
+    "execution",
+    "sneak",
+    "tangle"
+  ]
+},
+{
+  "series": "第六十五部 · A Stage for Everyone｜為每個人留下舞台",
+  "title": "The Statue That Could Speak",
+  "zh": "會說話的雕像",
+  "blurb": "一場小鎮慶典，因一座舊雕像的文字而分成兩種解讀。",
+  "scene": "theater",
+  "pages": [
+    {
+      "en": "For the town festival, the theater planned a play about a saint and a traveling missionary. One character called himself a prophet; another studied theology and questioned whether the old stories had been translated correctly. The director wanted the play to show different voices without telling the audience what to worship.",
+      "zh": "為了小鎮慶典，劇院打算演出關於一位聖者和巡迴傳教士的戲。一名角色自稱先知；另一名研究神學，質疑古老故事是否被正確翻譯。導演希望戲裡呈現不同聲音，但不替觀眾決定該崇拜什麼。"
+    },
+    {
+      "en": "The original script made a juvenile performer kneel throughout an entire scene. Her sandals cut into her feet, and she asked to stand. The director adjusted the movement; the scene’s meaning did not depend on anyone being in pain.",
+      "zh": "原本的劇本要求一名青少年演員在整場戲裡跪著。涼鞋磨痛她的腳，她要求站起來。導演調整了動作；這段戲的意義不需要靠任何人受痛苦來成立。"
+    },
+    {
+      "en": "At rehearsal, an actor proposed a simpler ending: the characters could read the disputed lines together, then leave the audience free to think. The director kept the proposal, though he knew a quiet ending might surprise people expecting a grand miracle.",
+      "zh": "排練時，一名演員提出更簡潔的結尾：角色們一起朗讀有爭議的段落，然後讓觀眾自行思考。導演保留了這個提案，雖然他知道期待壯觀奇蹟的觀眾可能會驚訝。"
+    }
+  ],
+  "quiz": [
+    {
+      "q": "What does the director avoid doing?",
+      "opts": [
+        "Presenting several voices",
+        "Telling the audience what to worship",
+        "Letting characters read together",
+        "Changing the movement"
+      ],
+      "a": 1,
+      "why": "導演希望呈現不同聲音，但不替觀眾決定信仰。"
+    },
+    {
+      "q": "Why does the performer ask to stand?",
+      "opts": [
+        "Her sandals hurt her feet",
+        "The theater is closed",
+        "She forgot her lines",
+        "The statue moved"
+      ],
+      "a": 0,
+      "why": "她的涼鞋磨痛了腳。"
+    },
+    {
+      "q": "How does the revised ending work?",
+      "opts": [
+        "A battle ends the play",
+        "The stage goes dark immediately",
+        "Characters read disputed lines together",
+        "Every performer leaves the town"
+      ],
+      "a": 2,
+      "why": "角色共同朗讀有爭議的段落。"
+    }
+  ],
+  "id": "lv5-209",
+  "words": [
+    "juvenile",
+    "missionary",
+    "prophet",
+    "saint",
+    "theology",
+    "worship"
+  ]
+},
+{
+  "series": "第六十五部 · A Stage for Everyone｜為每個人留下舞台",
+  "title": "The Festival of Small Things",
+  "zh": "小事物的慶典",
+  "blurb": "道具失蹤、鐘聲混亂，真正的壓軸節目反而誕生在錯誤之中。",
+  "scene": "theater",
+  "pages": [
+    {
+      "en": "The crew began to erect a temporary arch outside the theater. Behind it, food stalls offered every specialty the town could imagine. Then a pipe burst. The street began to stink, and the festival manager feared the crowd would turn away.",
+      "zh": "工作人員開始在劇院外搭起臨時拱門。後方攤販賣著小鎮能想到的各種特色料理。接著一根水管爆裂，街道開始發臭，慶典經理擔心人潮轉身離開。"
+    },
+    {
+      "en": "A boy whined that the event was ruined. His sister called the complaint pathetic, then regretted the insult. The crew moved the stalls while the town repaired the pipe. Instead of allowing panic to erupt, the manager announced a shorter opening and asked the cast to perform indoors first.",
+      "zh": "一名男孩抱怨慶典全毀了。姊姊說這種抱怨很可悲，隨後後悔說出傷人的話。修管線的同時，工作人員移動攤位。經理沒有讓恐慌爆發，而是宣布縮短開幕式，請演員先在室內演出。"
+    },
+    {
+      "en": "The first performance drew a smaller audience than planned, but the performers could hear every laugh. When the street reopened, the festival continued outdoors. The boy helped carry chairs and discovered he had enjoyed the quieter beginning.",
+      "zh": "第一場演出的觀眾比預期少，但演員能清楚聽到每一聲笑。街道重新開放後，慶典回到戶外。男孩幫忙搬椅子，發現自己其實喜歡這個較安靜的開場。"
+    }
+  ],
+  "quiz": [
+    {
+      "q": "What disrupts the festival?",
+      "opts": [
+        "A pipe bursts",
+        "The audience demands a vote",
+        "The statue disappears",
+        "The actors miss a train"
+      ],
+      "a": 0,
+      "why": "水管爆裂打亂慶典。"
+    },
+    {
+      "q": "What does the manager arrange first?",
+      "opts": [
+        "Cancel every event",
+        "Move the crowd to another city",
+        "Begin with an indoor performance",
+        "Close all food stalls forever"
+      ],
+      "a": 2,
+      "why": "經理先安排室內演出。"
+    },
+    {
+      "q": "What does the boy discover?",
+      "opts": [
+        "He hates theater",
+        "He likes the quieter start",
+        "He wrote the original play",
+        "He owns the pipe"
+      ],
+      "a": 1,
+      "why": "男孩發現自己喜歡安靜的開場。"
+    }
+  ],
+  "id": "lv5-210",
+  "words": [
+    "erect",
+    "erupt",
+    "pathetic",
+    "specialty",
+    "stink"
+  ]
+},
+{
+  "series": "第六十五部 · A Stage for Everyone｜為每個人留下舞台",
+  "title": "The Review Nobody Expected",
+  "zh": "沒想到的評論",
+  "blurb": "一篇惡意的劇評，讓團隊重新想起他們為何修改劇本。",
+  "scene": "paper",
+  "pages": [
+    {
+      "en": "One review called the production an insane waste of money. Another accused the director of trying to provoke a fight. He did not answer with a personal attack. Instead, he invited people to examine the script, its sources, and the choices made during rehearsal. He would not resort to shouting merely because the reviewer had done so.",
+      "zh": "一篇評論把這齣戲稱為瘋狂的金錢浪費。另一篇指控導演想挑起衝突。他沒有用人身攻擊回應，而是邀請大家檢視劇本、資料來源，以及排練時作出的選擇。 他不會只因評論者大聲斥責，就也訴諸吼叫。"
+    },
+    {
+      "en": "A new actor felt tempted to indulge the anger and post an insulting reply. The performer with the painful sandals suggested he wait until morning. She had learned that a careless word could distract people from the real issue.",
+      "zh": "一名新演員很想放任怒氣，貼出辱罵的回覆。那位先前涼鞋磨痛腳的演員建議他等到早上。她已學到，一句不經思考的話可能讓人偏離真正的問題。"
+    },
+    {
+      "en": "The next day, the troupe published a short note explaining what it had changed and why. The director did not claim everyone must approve. He only hoped the audience would discuss the work they had actually seen.",
+      "zh": "隔天，劇團發布簡短聲明，解釋修改了什麼，以及原因。導演沒有宣稱人人都必須認同；他只希望觀眾討論自己真正看過的作品。"
+    }
+  ],
+  "quiz": [
+    {
+      "q": "How does the director respond to the review?",
+      "opts": [
+        "With another insult",
+        "By discussing the script and sources",
+        "By canceling the festival",
+        "By hiding the cast"
+      ],
+      "a": 1,
+      "why": "導演邀請大家檢視劇本與來源。"
+    },
+    {
+      "q": "Why does the performer suggest waiting?",
+      "opts": [
+        "She dislikes morning",
+        "She wants a new role",
+        "An angry reply may distract from the issue",
+        "The theater is locked"
+      ],
+      "a": 2,
+      "why": "衝動回覆可能使討論偏離主題。"
+    },
+    {
+      "q": "What does the troupe publish?",
+      "opts": [
+        "A brief explanation of revisions",
+        "A list of enemies",
+        "The audience’s private messages",
+        "A new election ballot"
+      ],
+      "a": 0,
+      "why": "劇團公布修改內容與理由。"
+    }
+  ],
+  "id": "lv5-211",
+  "words": [
+    "distract",
+    "indulge",
+    "insane",
+    "provoke",
+    "resort"
+  ]
+},
+{
+  "series": "第六十六部 · The Case of the Missing Voice｜消失的聲音案",
+  "title": "The Price of a Headline",
+  "zh": "一則標題的代價",
+  "blurb": "一份把人寫成壞人的報紙，究竟少了哪一段採訪？",
+  "scene": "paper",
+  "pages": [
+    {
+      "en": "June’s archive loaned its records to a journalism class. The students were examining a report about an old casino. Its owner had been accused of abuse and aggression toward employees, but the article contained no interviews with them. The headline called him corrupt before any inquiry had reached a conclusion.",
+      "zh": "June 的檔案館把資料借給新聞課。學生們研究一篇關於舊賭場的報導。業主被指控虐待與攻擊員工，但文章沒有訪問任何員工。在調查有結論前，標題就把他寫成貪腐者。"
+    },
+    {
+      "en": "A professor asked the class to separate the claims, the evidence, and the missing voices. The reporter had converted a loss of currency into a tale of personal greed; records instead showed payments in two different currencies. One student said the chaos could not be solved by a louder headline.",
+      "zh": "教授要全班分開主張、證據與缺席者的聲音。記者把一筆貨幣損失寫成個人貪婪的故事；紀錄卻顯示款項使用了兩種不同貨幣。一位學生說，再響亮的標題也無法解決混亂。"
+    },
+    {
+      "en": "The students interviewed former workers and published a corrected account. They did not declare the owner innocent or guilty. The feature described who had made each claim, what could be checked, and what remained unknown. June placed both reports on display. The students knew the unresolved accusations might depress readers, but hiding uncertainty would not help them understand the case.",
+      "zh": "學生訪問前員工，發布修訂報導。他們沒有宣告業主有罪或無罪，而是說明各項主張由誰提出、哪些能查證、哪些仍未知。June 把兩個版本的報導一起展出。 學生知道尚未解決的指控可能讓讀者心情低落，但掩蓋不確定性無助於理解案件。"
+    }
+  ],
+  "quiz": [
+    {
+      "q": "What is missing from the old article?",
+      "opts": [
+        "Interviews with employees",
+        "A photograph of the casino",
+        "The professor’s address",
+        "A train schedule"
+      ],
+      "a": 0,
+      "why": "舊報導沒有採訪員工。"
+    },
+    {
+      "q": "What complicates the account of lost money?",
+      "opts": [
+        "The casino had closed",
+        "Records show two currencies",
+        "The owner was abroad",
+        "The reporter lost his pen"
+      ],
+      "a": 1,
+      "why": "款項涉及兩種不同貨幣。"
+    },
+    {
+      "q": "How do students present the corrected report?",
+      "opts": [
+        "As a final criminal judgment",
+        "As a fictional play",
+        "By separating claims, evidence, and unknowns",
+        "Without interviewing anyone"
+      ],
+      "a": 2,
+      "why": "新報導區分主張、證據與未知之處。"
+    }
+  ],
+  "id": "lv5-212",
+  "words": [
+    "abuse",
+    "aggression",
+    "casino",
+    "chaos",
+    "corrupt",
+    "currency",
+    "depress",
+    "journalism"
+  ]
+},
+{
+  "series": "第六十六部 · The Case of the Missing Voice｜消失的聲音案",
+  "title": "The Rule in the Drawer",
+  "zh": "抽屜裡的規定",
+  "blurb": "新規定公布前，實習生找到一份從未回答的申訴。",
+  "scene": "meeting",
+  "pages": [
+    {
+      "en": "The city planned new legislation about public access to its buildings. A lawmaker said the rule would prohibit unfair entry checks. A judicial adviser asked whether the draft actually prevented officials from deciding who looked “suitable.” The text contained no clear standard.",
+      "zh": "市府打算制定關於公共建築進入權的新法規。一名立法者說，規定將禁止不公平的入口查驗。司法顧問問，草案是否真的防止人員依「看起來合不合適」來決定誰能進入。文字並沒有清楚標準。"
+    },
+    {
+      "en": "In the drawer, the intern found a complaint describing discrimination. The writer said guards would discriminate against visitors based on their clothing and background. Another account alleged racism. The intern did not merge the accounts; each needed its own context and evidence.",
+      "zh": "實習生在抽屜裡找到一份描述歧視的申訴。作者說警衛會根據衣著與背景歧視訪客。另一份紀錄則指稱種族歧視。實習生沒有把兩份說法混為一談；每份都需要自己的背景與證據。"
+    },
+    {
+      "en": "A public hearing asked how the old norm had developed and what the new rule would change. Speakers disagreed about details, but the minutes recorded each proposal. The intern added a plain-language summary so visitors could see what had been discussed, not just the final title of the law.",
+      "zh": "公聽會詢問舊慣例如何形成，以及新規定將改變什麼。發言者對細節意見不同，會議紀錄仍保存各項提案。實習生另外寫了白話摘要，讓訪客看見討論過的內容，而不只有法規標題。"
+    }
+  ],
+  "quiz": [
+    {
+      "q": "What problem does the judicial adviser find?",
+      "opts": [
+        "The building has no door",
+        "The rule lacks a clear entry standard",
+        "There are too many chairs",
+        "The proposal has no title"
+      ],
+      "a": 1,
+      "why": "草案沒有清楚的進入標準。"
+    },
+    {
+      "q": "Why are the complaints kept distinct?",
+      "opts": [
+        "They are the same document",
+        "They use different paper",
+        "Each requires its own evidence and context",
+        "The intern wants fewer pages"
+      ],
+      "a": 2,
+      "why": "不同指控應分別核查。"
+    },
+    {
+      "q": "What does the intern add?",
+      "opts": [
+        "A plain-language summary",
+        "A list of approved visitors",
+        "A new uniform",
+        "A secret code"
+      ],
+      "a": 0,
+      "why": "她增加白話摘要。"
+    }
+  ],
+  "id": "lv5-213",
+  "words": [
+    "discriminate",
+    "discrimination",
+    "judicial",
+    "lawmaker",
+    "legislation",
+    "norm",
+    "prohibit",
+    "racism"
+  ]
+},
+{
+  "series": "第六十六部 · The Case of the Missing Voice｜消失的聲音案",
+  "title": "The Name Nobody Submitted",
+  "zh": "沒有人送出的名字",
+  "blurb": "提名表上出現陌生人姓名，卻沒人知道誰把它寫進去。",
+  "scene": "paper",
+  "pages": [
+    {
+      "en": "At an exhibition on public offices, students found a blank nomination form with one name in the margin. The museum guide explained the difference between asking someone to nominate a person and declaring that person a nominee. A nomination had to be documented; a pencil mark alone proved little.",
+      "zh": "在公共職務展覽裡，學生找到一張提名表，頁邊寫著一個名字。導覽員解釋「請人提名」與「某人已成為被提名人」的差別。提名需要有紀錄；鉛筆字本身證明不了多少。"
+    },
+    {
+      "en": "A nearby display compared a premier’s office with a presidency and described how presidential roles could differ between systems. It also held a speech in which a progressive proposal was challenged as radical by its opponents. The guide presented those as positions stated in the source, not labels for visitors to accept.",
+      "zh": "旁邊的展示比較總理職位和總統任期，說明總統職責在不同制度下可能不同。另有一篇演說記錄某項進步派提案如何被反對者稱作激進。導覽員把這些當成原始資料中的立場，不要求參觀者接受那些標籤。"
+    },
+    {
+      "en": "By closing time, the students found the form’s source: it was an example used to train clerks, not a historical submission. They relabeled the case. The unnamed person had never entered the process, and the mystery ended with a lesson about checking what a document was made for.",
+      "zh": "閉館前，學生找到表單來源：它是訓練文書人員用的例子，不是真實提交的歷史文件。他們重新標示展櫃。那位陌生人從未進入程序；這個謎題最後變成一堂確認文件用途的課。"
+    }
+  ],
+  "quiz": [
+    {
+      "q": "What does the pencil mark fail to prove?",
+      "opts": [
+        "That a person was officially nominated",
+        "That the form exists",
+        "That the museum has students",
+        "That a guide can read"
+      ],
+      "a": 0,
+      "why": "單一鉛筆姓名不能證明正式提名。"
+    },
+    {
+      "q": "How does the guide present political labels?",
+      "opts": [
+        "As choices visitors must accept",
+        "As positions attributed to source speakers",
+        "As medical diagnoses",
+        "As a test of intelligence"
+      ],
+      "a": 1,
+      "why": "導覽員按來源歸屬不同立場說法。"
+    },
+    {
+      "q": "What is the form actually from?",
+      "opts": [
+        "A secret election",
+        "A foreign government",
+        "A training exercise",
+        "A stolen ballot box"
+      ],
+      "a": 2,
+      "why": "表單只是文書訓練範例。"
+    }
+  ],
+  "id": "lv5-214",
+  "words": [
+    "nominate",
+    "nomination",
+    "nominee",
+    "premier",
+    "presidency",
+    "presidential",
+    "progressive",
+    "radical"
+  ]
+},
+{
+  "series": "第六十六部 · The Case of the Missing Voice｜消失的聲音案",
+  "title": "A Decision Without a Shortcut",
+  "zh": "沒有捷徑的決定",
+  "blurb": "最後一本冊子封面寫著「真相」，裡面卻滿是尚未解開的疑問。",
+  "scene": "paper",
+  "pages": [
+    {
+      "en": "The exhibition ended with a case file that had reached the supreme court of a fictional republic. A witness had tried to plead for more time to correct the record. A successor to the original reporter later found that his newspaper had printed an answer the witness never gave.",
+      "zh": "展覽最後是一份曾送到虛構共和國最高法院的案件檔案。一名證人曾請求更多時間修正紀錄。原記者的接任者後來發現，報紙印出了一個證人從未給過的答案。"
+    },
+    {
+      "en": "The newspaper announced an unprecedented correction. Its editor argued that realism required showing how slowly reliable accounts were assembled. The staff did not guarantee that one account would prevail; they showed readers the sources and the questions still open.",
+      "zh": "報紙刊出前所未有的更正。編輯主張，寫實就必須呈現可信的敘述是如何緩慢拼湊出來的。員工沒有保證任何一種說法必然勝出，而是讓讀者看見來源和仍待回答的問題。"
+    },
+    {
+      "en": "June closed the exhibition with an empty frame. Beneath it she wrote: “We do not know everything, and we should not claim certainty whatsoever where evidence is missing.” The students understood: an archive was not a shortcut to a verdict.",
+      "zh": "June 用一個空畫框作為展覽的結尾。下方寫著：「我們並非什麼都知道；缺乏證據的地方，不應聲稱有任何程度的確定性。」學生理解了：檔案館不是通往判決的捷徑。"
+    }
+  ],
+  "quiz": [
+    {
+      "q": "What did the new reporter discover?",
+      "opts": [
+        "A witness’s answer was invented in print",
+        "The building was on fire",
+        "The judge was a musician",
+        "The election had two winners"
+      ],
+      "a": 0,
+      "why": "報紙印出證人從未說過的答案。"
+    },
+    {
+      "q": "What do newspaper staff show readers?",
+      "opts": [
+        "Only one conclusion",
+        "Sources and remaining questions",
+        "A fictional advertisement",
+        "A list of prizes"
+      ],
+      "a": 1,
+      "why": "報紙呈現來源與未解問題。"
+    },
+    {
+      "q": "What does the empty frame communicate?",
+      "opts": [
+        "All files are useless",
+        "The city has no money",
+        "Uncertainty should be acknowledged",
+        "Every story must end in court"
+      ],
+      "a": 2,
+      "why": "空框提醒觀眾承認未知。"
+    }
+  ],
+  "id": "lv5-215",
+  "words": [
+    "plead",
+    "prevail",
+    "realism",
+    "successor",
+    "supreme",
+    "unprecedented",
+    "whatsoever"
+  ]
+},
+{
+  "series": "第六十七部 · The Garden Between Rooms｜房間之間的花園",
+  "title": "A Corridor with Two Doors",
+  "zh": "兩道門的走廊",
+  "blurb": "醫院準備關閉一條舊通道，但一位病人說那是他唯一記得的路。",
+  "scene": "meeting",
+  "pages": [
+    {
+      "en": "At the clinic, Mina met a teenager whose medical file mentioned a syndrome she had never heard of. The physician explained the condition, then paused lest an unfamiliar term sound like a final judgment. The teenager asked whether he could still return to his gardening class.",
+      "zh": "在診所，Mina 遇到一名青少年，他的病歷提到她從未聽過的症候群。醫師解釋病況後停下來，以免陌生名詞聽起來像最終判決。少年問自己還能不能回到園藝課。"
+    },
+    {
+      "en": "After treatment, a nurse checked the bandage for signs of infection. The written instruction used the verb infect in a warning, but gave no clear steps for what symptoms to report. Mina asked the team to rewrite the notice in plain language.",
+      "zh": "治療後，護理師檢查繃帶是否有感染跡象。書面指示在警語裡使用 infect 這個動詞，卻沒有清楚說明該回報哪些症狀。Mina 請團隊把通知改成容易理解的語言。"
+    },
+    {
+      "en": "Outside the ward, staff planned a small garden to connect two waiting rooms. They called it an integration project: patients and relatives would be able to meet without walking around the entire building. The teenager offered to help choose plants.",
+      "zh": "病房外，員工計畫打造一座連接兩間候診室的小花園。他們稱它為整合工程：病人與家屬不必再繞過整棟建築，就能在花園相見。少年自願幫忙挑選植物。"
+    }
+  ],
+  "quiz": [
+    {
+      "q": "Why does the physician pause?",
+      "opts": [
+        "To avoid making an unfamiliar term sound final",
+        "To announce a festival",
+        "To locate the archive",
+        "To ask about a ferry"
+      ],
+      "a": 0,
+      "why": "醫師避免陌生術語聽起來像最終判斷。"
+    },
+    {
+      "q": "What does Mina ask the team to improve?",
+      "opts": [
+        "The cafeteria menu",
+        "The written patient notice",
+        "The city map",
+        "The garden color"
+      ],
+      "a": 1,
+      "why": "她要求改寫書面指示。"
+    },
+    {
+      "q": "What is the garden meant to connect?",
+      "opts": [
+        "Two schools",
+        "Two museums",
+        "Two waiting rooms",
+        "Two harbors"
+      ],
+      "a": 2,
+      "why": "花園連接兩間候診室。"
+    }
+  ],
+  "id": "lv5-216",
+  "words": [
+    "infect",
+    "integration",
+    "lest",
+    "syndrome"
+  ]
+},
+{
+  "series": "第六十七部 · The Garden Between Rooms｜房間之間的花園",
+  "title": "The Wrong Word on the Door",
+  "zh": "門上的錯字",
+  "blurb": "一個字的差異，差點讓病人以為自己必須接受另一種處置。",
+  "scene": "paper",
+  "pages": [
+    {
+      "en": "The construction team printed an instruction that said nurses would inject every visitor on arrival. The intended sentence was about checking visitors’ identification. Mina stopped the sign before it went up. Even one mistaken verb could frighten people.",
+      "zh": "施工團隊印出一份指示，寫成護理師將在每位訪客到達時替其注射。原意其實是查驗訪客身分。Mina 在標示張貼前攔下它：一個動詞錯誤就可能讓人害怕。"
+    },
+    {
+      "en": "An older patient said the mistake reminded her of a previous experience that had left her feeling depressed. She did not want sympathy or an unsolicited massage; she wanted staff to ask before touching her and to explain what they planned to do.",
+      "zh": "一名年長病人說，這個錯誤讓她想起過去一段使她感到低落的經歷。她不想要同情或未經請求的按摩；她希望員工碰觸前先詢問，並說明將要做什麼。"
+    },
+    {
+      "en": "Mina replaced the sign and returned to the garden. The teenager held the first seed packet and asked what it meant to conceive a plan. “To form an idea,” she replied. “And then to check whether other people can understand it.”",
+      "zh": "Mina 換掉標示，回到花園。少年拿著第一包種子問，conceive a plan 是什麼意思。「形成一個想法，」她回答，「接著再確認其他人能不能理解。」"
+    }
+  ],
+  "quiz": [
+    {
+      "q": "Which mistaken verb appears on the sign?",
+      "opts": [
+        "Conceive",
+        "Inject",
+        "Recruit",
+        "Prevail"
+      ],
+      "a": 1,
+      "why": "錯誤標示寫成 inject（注射）。"
+    },
+    {
+      "q": "What does the older patient request?",
+      "opts": [
+        "An unexplained procedure",
+        "A massage without asking",
+        "An explanation and permission before contact",
+        "A longer waiting line"
+      ],
+      "a": 2,
+      "why": "她希望先得到說明及同意。"
+    },
+    {
+      "q": "What does Mina explain conceive means here?",
+      "opts": [
+        "To form an idea",
+        "To leave a village",
+        "To clean a window",
+        "To lose a ticket"
+      ],
+      "a": 0,
+      "why": "在 conceive a plan 中指形成構想。"
+    }
+  ],
+  "id": "lv5-217",
+  "words": [
+    "conceive",
+    "inject",
+    "massage"
+  ]
+},
+{
+  "series": "第六十七部 · The Garden Between Rooms｜房間之間的花園",
+  "title": "The Garden Opens",
+  "zh": "花園開放那一天",
+  "blurb": "花園揭幕時，第一位訪客竟然不想走新通道。",
+  "scene": "meeting",
+  "pages": [
+    {
+      "en": "On opening day, the teenager’s grandfather stood at the gate and shrugged. He had a problem with his gut and was anxious about being far from the clinic restroom. The staff did not dismiss the concern; they showed him a shorter return route and offered a chair. His shrug was not a refusal; he simply wanted to know the way back.",
+      "zh": "開幕當天，少年的祖父站在門口聳聳肩。他的腸胃不舒服，擔心離診所洗手間太遠。員工沒有忽略他的顧慮，而是指給他一條較短的回程路線，並提供椅子。 他的聳肩不是拒絕，只是想先知道回去的路。"
+    },
+    {
+      "en": "The grandfather said the first week after treatment had felt like torment. Sometimes he could only moan, but he had not known how to explain what hurt. The new signs used plain words alongside medical terms, and staff invited questions without rushing him.",
+      "zh": "祖父說治療後第一週像受折磨。有時他只能低聲呻吟，卻不知道如何描述痛在哪裡。新標示把白話用語放在醫療術語旁邊，員工也讓他不必匆忙地發問。"
+    },
+    {
+      "en": "He took three slow steps into the garden. The teenager did not celebrate as if a garden had cured anything. He simply set a second chair beside his grandfather’s and began describing the plants he hoped to grow.",
+      "zh": "他緩慢走進花園三步。少年沒有把花園當成治好任何病症的奇蹟，只是把第二張椅子放在祖父旁邊，開始介紹自己想種的植物。"
+    }
+  ],
+  "quiz": [
+    {
+      "q": "Why is the grandfather reluctant?",
+      "opts": [
+        "He fears being far from the restroom",
+        "He dislikes all plants",
+        "He is late for a train",
+        "He cannot read the signs"
+      ],
+      "a": 0,
+      "why": "他擔心離洗手間太遠。"
+    },
+    {
+      "q": "What do the new signs include?",
+      "opts": [
+        "Only symbols",
+        "Only Latin words",
+        "Plain words alongside medical terms",
+        "Private patient records"
+      ],
+      "a": 2,
+      "why": "新標示讓一般用語與醫療術語並列。"
+    },
+    {
+      "q": "What does the teenager do at the end?",
+      "opts": [
+        "Announce a medical cure",
+        "Sit beside his grandfather and describe plants",
+        "Close the garden",
+        "Call the newspaper"
+      ],
+      "a": 1,
+      "why": "少年坐在祖父旁邊介紹植物。"
+    }
+  ],
+  "id": "lv5-218",
+  "words": [
+    "gut",
+    "moan",
+    "shrug",
+    "torment"
+  ]
+},
+{
+  "series": "第六十八部 · What the Storm Left Behind｜暴風雨留下的東西",
+  "title": "The Handrail on the Cliff",
+  "zh": "崖邊的扶手",
+  "blurb": "暴雨停後，一段被遺忘的階梯露出了裂縫。",
+  "scene": "night",
+  "pages": [
+    {
+      "en": "After the storm, a rescue team found a cracked stairway above the harbor. A loose rail could cripple access to the lighthouse for weeks. The team agreed to prohibit visitors from using that section until engineers inspected it.",
+      "zh": "暴風雨後，救援團隊發現港口上方的階梯裂開。鬆動的欄杆可能使通往燈塔的通道停用數週。團隊決定在工程師檢查前，禁止訪客使用那一段。"
+    },
+    {
+      "en": "Nessa noticed a sandal caught in a branch and a small rip in a backpack left near the steps. She did not assume someone had fallen. A witness remembered seeing a child swap shoes with a friend before the rain; the sandal might belong to either one.",
+      "zh": "Nessa 注意到一隻涼鞋卡在樹枝上，階梯旁留下的背包也有一道撕裂。她沒有直接假定有人跌落。目擊者記得下雨前，有個孩子和朋友交換鞋子；那隻涼鞋可能屬於任何一人。"
+    },
+    {
+      "en": "The team set a clear boundary and searched the safe paths. They found the children at a sheltered bus stop, wet but unharmed. Nessa wrote the ordinary explanation beside the dramatic early report.",
+      "zh": "團隊劃出清楚界線，沿安全路線尋找。他們在有遮蔽的公車站找到孩子，兩人濕透了，但沒有受傷。Nessa 把平凡的真相寫在一開始戲劇化的報告旁。"
+    }
+  ],
+  "quiz": [
+    {
+      "q": "Why is the stairway closed?",
+      "opts": [
+        "The lighthouse is for sale",
+        "The rail and stairs may be unsafe",
+        "The children requested a game",
+        "The ferry arrived twice"
+      ],
+      "a": 1,
+      "why": "欄杆與階梯可能不安全。"
+    },
+    {
+      "q": "Why is the sandal not firm evidence of a fall?",
+      "opts": [
+        "It is made of paper",
+        "It is brand new",
+        "The children had swapped shoes",
+        "No one saw the storm"
+      ],
+      "a": 2,
+      "why": "孩子曾交換鞋子，因此不能據此判斷有人跌落。"
+    },
+    {
+      "q": "Where are the children found?",
+      "opts": [
+        "At a sheltered bus stop",
+        "Inside the lighthouse lamp",
+        "Under the stairs",
+        "In the museum attic"
+      ],
+      "a": 0,
+      "why": "孩子在有遮蔽的公車站。"
+    }
+  ],
+  "id": "lv5-219",
+  "words": [
+    "cripple",
+    "rip",
+    "sandal",
+    "swap"
+  ]
+},
+{
+  "series": "第六十八部 · What the Storm Left Behind｜暴風雨留下的東西",
+  "title": "The Call Under the Bridge",
+  "zh": "橋下的求救聲",
+  "blurb": "搜救結束後，錄音裡又多出第二個聲音。",
+  "scene": "night",
+  "pages": [
+    {
+      "en": "A late recording captured a whine beneath the old bridge. One volunteer thought it was a dog. Another heard a person calling for help. Rather than thrust anyone into the unsafe water, the team sent a light down from the stable side.",
+      "zh": "一段較晚的錄音捕捉到舊橋下的細微哀鳴。一名志工以為是狗，另一人聽成有人求救。團隊沒有貿然把人推向危險水域，而是從穩固的一側把照明燈放下去。"
+    },
+    {
+      "en": "They found a dog tangled in fishing line beside a wooden crate. The volunteer reached out slowly as the animal tried to slap the water with its paws. It was frightened but alive. The team lifted the crate and freed the line on dry ground.",
+      "zh": "他們發現一隻狗被釣線纏住，身旁有個木箱。志工慢慢伸手時，動物用爪子拍打水面。牠受驚了，但還活著。團隊把木箱抬起，在乾地上解開釣線。"
+    },
+    {
+      "en": "As Nessa checked the bridge, she saw a skull painted on an old warning sign. A rumor described the mark as a secret threat, but it was simply an abandoned hazard symbol. The group documented the sign and asked the harbor to replace it.",
+      "zh": "Nessa 檢查橋梁時，看見舊警告牌上畫著一個骷髏頭。傳聞把它說成祕密威脅，但它只是一個廢棄的危險符號。團隊記錄標示，請港務單位更換。"
+    }
+  ],
+  "quiz": [
+    {
+      "q": "What is making the sound?",
+      "opts": [
+        "A warning bell",
+        "A trapped dog",
+        "A ferry engine",
+        "A radio advertisement"
+      ],
+      "a": 1,
+      "why": "聲音來自釣線纏住的狗。"
+    },
+    {
+      "q": "Why do rescuers avoid entering the water?",
+      "opts": [
+        "They dislike animals",
+        "It is too shallow",
+        "The water area is unsafe",
+        "The dog is already home"
+      ],
+      "a": 2,
+      "why": "救援者避免進入危險水域。"
+    },
+    {
+      "q": "What is the skull symbol?",
+      "opts": [
+        "An old hazard mark",
+        "A treasure map",
+        "A witness signature",
+        "A museum logo"
+      ],
+      "a": 0,
+      "why": "它是舊危險標誌。"
+    }
+  ],
+  "id": "lv5-220",
+  "words": [
+    "skull",
+    "slap",
+    "thrust",
+    "whine"
+  ]
+},
+{
+  "series": "第六十八部 · What the Storm Left Behind｜暴風雨留下的東西",
+  "title": "The Letter After the Weather",
+  "zh": "天氣過後的信",
+  "blurb": "最後一次檢查，讓一座城市知道防災並不只有英勇救援。",
+  "scene": "paper",
+  "pages": [
+    {
+      "en": "The council sought to recruit volunteers for a new safety program. Its first draft claimed the storm had created unprecedented damage; Nessa checked previous records and found comparable events. She asked the writer to replace that claim with specific observations.",
+      "zh": "市政單位希望為新安全計畫招募志工。初稿聲稱暴風雨造成前所未有的損害；Nessa 查閱舊紀錄，找到相似事件。她請撰稿人把那項主張換成具體觀察。"
+    },
+    {
+      "en": "The team examined the bridge, the stairway, and the bus route together. The repair schedule would undoubtedly take time, but the town could share accurate directions immediately. An editor wanted a heroic ending; Nessa preferred a map that people could actually use.",
+      "zh": "團隊一起檢查橋梁、階梯和公車路線。修復作業無疑需要時間，但小鎮可以立刻分享正確的路線。編輯想要英雄式結尾；Nessa 更希望有一張人們真的用得上的地圖。"
+    },
+    {
+      "en": "The final page contained no grand promise whatsoever. It showed the safe paths, the work not yet finished, and a number residents could call to report changes. Nessa sent it to every public notice board before the next rain arrived.",
+      "zh": "最後一頁沒有任何宏大的承諾。上面標示安全路線、尚未完成的工作，以及居民可通報變化的電話。下一場雨來之前，Nessa 把它送到每個公共公告欄。"
+    }
+  ],
+  "quiz": [
+    {
+      "q": "Why is the “unprecedented” claim changed?",
+      "opts": [
+        "No storm occurred",
+        "Earlier records show comparable events",
+        "The editor dislikes long words",
+        "The bridge is already repaired"
+      ],
+      "a": 1,
+      "why": "先前紀錄中有類似事件，不能宣稱完全前所未有。"
+    },
+    {
+      "q": "What does Nessa want readers to receive?",
+      "opts": [
+        "A usable map",
+        "A prize",
+        "A fictional speech",
+        "A museum ticket"
+      ],
+      "a": 0,
+      "why": "Nessa 希望居民拿到可實際使用的地圖。"
+    },
+    {
+      "q": "What appears on the final notice?",
+      "opts": [
+        "A final election result",
+        "An order to leave the town",
+        "Safe routes, unfinished work, and a contact number",
+        "A list of winners"
+      ],
+      "a": 2,
+      "why": "公告列出安全路線、未完成工作和通報電話。"
+    }
+  ],
+  "id": "lv5-221",
+  "words": [
+    "recruit",
+    "undoubtedly"
+  ]
+}
+];

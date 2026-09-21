@@ -1,0 +1,144 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>第三級故事 · 情境英語</title>
+<style>
+@font-face{font-family:Cubic11;src:url('../fonts/Cubic_11.ttf') format('truetype'),url('https://cdn.jsdelivr.net/gh/ACh-K/Cubic-11@main/fonts/ttf/Cubic_11.ttf') format('truetype');font-display:swap}
+:root{--paper:#f7f2e6;--ink:#2a2438;--frame:#1b1826;--accent:#84b8ab;--dim:#796b56;--ok:#2f6b3f;--bad:#a4493a}
+*{box-sizing:border-box}html{background:#15121f}body{margin:0;background:#15121f;color:#e9e3d5;font-family:Cubic11,ui-monospace,monospace;display:flex;justify-content:center}
+#app{width:100%;max-width:640px;min-height:100vh;padding:0 0 28px}
+a{color:inherit}a:focus-visible,button:focus-visible,select:focus-visible{outline:3px solid #a5daf6;outline-offset:2px}
+.top{display:flex;align-items:center;gap:12px;padding:13px 16px;background:#211c30;border-bottom:3px solid var(--frame)}.top a{text-decoration:none;color:#cabfda;font-size:13px}.top strong{font-size:15px;color:#ffe6b8}.grow{flex:1}
+.hero{background:#29253b;border-bottom:3px solid var(--frame)}.hero svg{width:100%;height:auto;display:block;image-rendering:pixelated}
+.meta{padding:16px 16px 12px;border-bottom:2px solid #38304c}.eyebrow{font-size:11px;color:#b4aa9d;letter-spacing:.06em}.meta h1{font-size:25px;color:#ffdfaa;margin:9px 0 7px;font-weight:normal}.meta p{font-size:13px;color:#bdb4c9;line-height:1.8;margin:0}
+.toolbar,.bottom{display:flex;gap:8px;padding:11px 13px;flex-wrap:wrap;align-items:center}.toolbar select{flex:1;min-width:170px}
+button,select,.linkbutton{font-family:inherit;font-size:13px;line-height:1.5;border:2px solid #58506e;background:#342d49;color:#f4eae0;padding:8px 11px;border-radius:0;cursor:pointer;text-decoration:none}
+button:hover,.linkbutton:hover{background:#453b5c}button:disabled{opacity:.48;cursor:default}button.primary{background:#376652;border-color:#73a385}button.primary:hover{background:#417861}
+button.quiet{background:#efe8d7;border-color:#cdbfa6;color:#2a2438}.pill{font-size:11px;color:#bcb1cc;border:1px solid #625a76;padding:5px 8px}
+.progress{display:flex;gap:5px;padding:0 16px 10px}.progress i{height:7px;background:#463d58;flex:1}.progress i.active{background:#88b8a9}
+.paper{background:var(--frame);padding:3px;margin:0 12px}.paper .rim{background:#92b6be;padding:2px}.paper .content{background:var(--paper);color:var(--ink);padding:17px 17px 19px;min-height:300px}
+.pretitle{font-size:12px;color:#7e6d5d;margin:0 0 13px}.en{font-family:Georgia,'Times New Roman',serif;font-size:19px;line-height:1.85;letter-spacing:.05px;margin:0 0 22px;white-space:pre-wrap}
+.en:last-child{margin-bottom:0}.word{font:inherit;background:transparent;border:0;border-bottom:2px dotted #a27f42;padding:0;color:inherit;cursor:pointer}.word.old{border-color:#648970}.word:hover,.word:focus{background:#ffe4a7;outline:0}.word.visited{background:#e9dcb3}.word.extra{border-bottom:2px dashed #68739d;color:#403f78}.word.extra:hover{background:#e0e8fd}.gloss-note{font-size:12px;color:#c9c7d5;margin-top:7px}.gloss-tag{font-size:11px;color:#80c0df;margin-right:7px}.phrase{border-bottom:2px dashed #68739d;cursor:pointer}.phrase:hover{background:#dce5fa}
+#hint{margin:12px 16px;padding:10px 12px;border:2px solid #464059;background:#221c32;color:#c4bed2;font-size:12px;line-height:1.8;min-height:45px}.hint-title{color:#ffe4af;font-size:15px;margin-right:7px}.hint-empty{color:#a49aaf}
+#translation{margin:10px 12px;padding:15px;background:#eadfc9;color:#4b4035;border:2px solid #b4a48a;line-height:1.9;font-size:14px;white-space:pre-wrap}
+/* 交卷後一次顯示整章繁體中文，不需一頁一頁返回閱讀。 */
+#fullTranslationPanel{margin:0 12px 18px;border:3px solid var(--frame);background:var(--paper);color:var(--ink)}
+#fullTranslationPanel .translation-head{padding:15px 15px 12px;border-bottom:2px solid #d5c8b5;display:flex;align-items:center;gap:10px;flex-wrap:wrap}
+#fullTranslationPanel .translation-head strong{font-size:17px;flex:1}
+#fullTranslationPanel .translation-head button{font-size:12px;background:#eadfc9;color:var(--ink);border-color:#b4a48a}
+#fullTranslationPanel .translation-help{font-size:12px;line-height:1.7;color:#675a4a;padding:10px 15px 0}
+#fullTranslation{padding:10px 17px 18px;font-size:15px;line-height:2.05}
+#fullTranslation p{margin:0 0 1em;white-space:pre-wrap}
+#fullTranslation p:last-child{margin-bottom:0}
+#quiz{padding:0 12px}.qcard{background:var(--paper);color:var(--ink);border:3px solid var(--frame);margin-bottom:12px;padding:15px}.qno{font-size:11px;color:#857257}.qtitle{font-size:17px;line-height:1.6;margin:9px 0 14px}.answers{display:grid;gap:7px}.answers button{text-align:left;background:#f0e7d8;border:2px solid #c6baa6;color:var(--ink);font-size:14px;line-height:1.7}.answers button.selected{background:#dce7e2;border-color:#5d907f}.answers button.right{background:#d9ecda;border-color:#438050}.answers button.wrong{background:#f2dad5;border-color:#b66358}.answerwhy{font-size:13px;line-height:1.8;margin-top:9px;padding:11px;background:#e9dfca}.result{font-size:15px;line-height:1.8;margin-bottom:13px;color:#ffe7bc}
+#vocab{padding:0 12px}.vcard{background:var(--paper);color:var(--ink);border:3px solid var(--frame);margin-bottom:8px;padding:12px 14px}.vcard .w{font-family:Georgia,serif;font-size:23px;color:#235949}.vcard .z{font-size:14px;margin-top:5px}.vcard .example{font-size:13px;line-height:1.75;margin-top:8px;color:#675a4a}.vcard button{font-size:11px;padding:3px 6px;margin-left:8px}.oldtag{font-size:11px;margin-left:9px;color:#53795b}
+.sectionhead{padding:10px 16px 12px;font-size:14px;color:#f1e2bb}.note{font-size:12px;color:#bfb4d0;line-height:1.9;padding:7px 16px}#reviewStat{padding:10px 16px;font-size:12px;color:#a9cfb3;line-height:1.8}
+.hide{display:none!important}.foot{padding:15px 16px;color:#8f879e;font-size:11px;line-height:1.8}
+@media(max-width:420px){.en{font-size:18px;line-height:1.82}.meta h1{font-size:23px}.paper .content{padding:15px}}
+@media(prefers-reduced-motion:reduce){*{scroll-behavior:auto!important}}
+</style>
+</head>
+<body><main id="app">
+  <header class="top"><a href="./index.html">← 情境英語</a><span class="grow"></span><strong>LEVEL 03 / STORY</strong></header>
+  <div class="hero" id="art" aria-hidden="true"></div>
+  <section class="meta"><div class="eyebrow" id="count"></div><h1 id="title"></h1><p id="blurb"></p></section>
+  <div class="note" id="coverageInfo" aria-live="polite"></div>
+  <div class="toolbar"><select id="pick" aria-label="選擇故事章節"></select><button id="bReview">隔日複習</button></div>
+  <div class="progress" id="progress" aria-label="閱讀進度"></div>
+  <section id="reader"><div class="paper"><div class="rim"><article class="content"><p class="pretitle" id="pageTag"></p><div id="storyText"></div></article></div></div>
+    <div id="hint"><span class="hint-empty">先讀劇情；點綠底線三級字、藍虛線補充字或片語，可查看中文與情境說明。</span></div>
+    <div id="translation" class="hide"></div>
+    <div class="bottom"><button id="bPrev">← 上一頁</button><button id="bSpeak">▶ 朗讀本頁</button><span class="grow"></span><button class="primary" id="bNext">下一頁 →</button></div>
+    <div class="note">先看完故事再作答；不需要看懂每個字，也不必靠選項猜。語音使用瀏覽器內建英文朗讀。</div>
+  </section>
+  <section id="quiz" class="hide"><div class="sectionhead" id="quizHead"></div><div id="quizItems"></div><div class="bottom"><button id="bBack">← 回故事</button><span class="grow"></span><button class="primary" id="bSubmit">交卷並解鎖單字 →</button></div><div class="note">不知道可以選「我不知道」。交卷後才公開解析，避免還沒讀懂就靠提示解題。</div></section>
+  <section id="review" class="hide"><div class="sectionhead" id="reviewHead"></div><div id="reviewStat"></div>
+    <section id="fullTranslationPanel" aria-label="完整中文故事">
+      <div class="translation-head"><strong>📖 完整中文翻譯</strong><button type="button" id="bFullTranslation" aria-controls="fullTranslation" aria-expanded="true">收起翻譯 ↑</button></div>
+      <div class="translation-help">已完成小考，現在可以一次讀完本章中文，核對原本沒看懂的細節。</div>
+      <div id="fullTranslation"></div>
+    </section>
+    <div id="vocab"></div><div class="bottom"><button id="bReread">← 不看中文重讀</button><span class="grow"></span><button class="primary" id="bContinue">下一章 →</button></div><div class="note">三級詞條中文沿用你的三級字庫。藍虛線的輔助字不計入三級覆蓋率。三級字會在後續故事再次出現；需要大範圍練習時，回到字彙對戰選「高中第 3 級」。</div></section>
+  <footer class="foot">進度只儲存在此瀏覽器。新的故事與考題為原創，並非官方多益試題。<br><a href="./cards.html">字彙對戰</a> · <a href="./read.html">原本閱讀</a></footer>
+</main>
+<script src="data/hs-vocab-2.js"></script>
+<script src="data/hs-vocab-3.js"></script>
+<script src="data/hs-vocab-4.js"></script>
+<script src="data/hs-vocab-4b.js"></script>
+<script src="data/hs-vocab-5.js"></script>
+<script src="data/hs-vocab-6.js"></script>
+<script src="data/level3-glossary.js"></script>
+<script src="data/level3-stories.js"></script>
+<script src="data/level3-extra-stories.js"></script>
+<script src="data/level3-more-stories.js"></script>
+<script>
+'use strict';
+const $=id=>document.getElementById(id);
+const KEY='pxlevel3.story.v1';
+const bank=Object.fromEntries(String(HS_VOCAB[3]).trim().split('\n').map(line=>line.split('|').map(x=>x.trim())).filter(p=>p.length===2));
+const otherBank={};for(const lv of [2,4,5,6])for(const line of String(HS_VOCAB[lv]||'').trim().split('\n')){const n=line.indexOf('|');if(n>0){const k=line.slice(0,n).trim().toLowerCase();if(!bank[k]&&!otherBank[k])otherBank[k]=line.slice(n+1).trim();}}
+const extraBank={...otherBank,...LEVEL3_GLOSSARY};
+const advancedBank=new Set([4,5,6].flatMap(lv=>String(HS_VOCAB[lv]||'').trim().split('\n').map(x=>x.split('|')[0].trim().toLowerCase())));
+const phrases=Object.keys(LEVEL3_PHRASES).sort((a,b)=>b.length-a.length);
+const WORDS=Object.keys(bank).sort((a,b)=>b.length-a.length);
+const introduced=new Set(LEVEL3_STORIES.flatMap(s=>s.words));
+let chapter=0,page=0,view='reader',translationOn=false,quizDone=false,answers=[],voice=null;
+const esc=s=>String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+const c=()=>LEVEL3_STORIES[chapter];
+let sessionSaved={};
+function getSaved(){try{return JSON.parse(localStorage.getItem(KEY)||'{}')}catch(e){return sessionSaved}}
+function setSaved(o){sessionSaved=o;try{localStorage.setItem(KEY,JSON.stringify(o))}catch(e){}}
+function today(){const d=new Date();return [d.getFullYear(),String(d.getMonth()+1).padStart(2,'0'),String(d.getDate()).padStart(2,'0')].join('-')}
+function nextDate(){let d=new Date();d.setDate(d.getDate()+1);return [d.getFullYear(),String(d.getMonth()+1).padStart(2,'0'),String(d.getDate()).padStart(2,'0')].join('-')}
+function lemma(raw){const w=raw.toLowerCase();if(bank[w])return w;
+  const cand=[];if(w.endsWith('ies'))cand.push(w.slice(0,-3)+'y');if(w.endsWith('ied'))cand.push(w.slice(0,-3)+'y');if(w.endsWith('ing'))cand.push(w.slice(0,-3),w.slice(0,-3)+'e');if(w.endsWith('ed'))cand.push(w.slice(0,-2),w.slice(0,-1));if(w.endsWith('es'))cand.push(w.slice(0,-2),w.slice(0,-1));if(w.endsWith('s'))cand.push(w.slice(0,-1));return cand.find(x=>bank[x])||null}
+function chapterWord(w){return c().words.includes(w)||LEVEL3_STORIES.slice(0,chapter).some(s=>s.words.includes(w))}
+function glossKey(raw,dict){const w=raw.toLowerCase();if(dict[w])return w;const cand=[];if(w.endsWith('ies'))cand.push(w.slice(0,-3)+'y');if(w.endsWith('ied'))cand.push(w.slice(0,-3)+'y');if(w.endsWith('ing'))cand.push(w.slice(0,-3),w.slice(0,-3)+'e');if(w.endsWith('ed'))cand.push(w.slice(0,-2),w.slice(0,-1));if(w.endsWith('es'))cand.push(w.slice(0,-2),w.slice(0,-1));if(w.endsWith('s'))cand.push(w.slice(0,-1));return cand.find(x=>dict[x])||null}
+function contextual(w,original){const txt=c().pages[page].en;const at=txt.toLowerCase().indexOf(original.toLowerCase());if(at<0)return '';const start=Math.max(0,txt.lastIndexOf('.',at-1)+1,txt.lastIndexOf('?',at-1)+1,txt.lastIndexOf('!',at-1)+1);let end=txt.slice(at).search(/[.!?]/);if(end<0)end=Math.min(txt.length-at,135);return txt.slice(start,at+end+1).trim().slice(0,170)}
+function showGloss(w,type,original){const def=type==='phrase'?LEVEL3_PHRASES[w]:(type==='core'?bank[w]:extraBank[w]);const context=contextual(w,original);$('hint').innerHTML=`<span class="hint-title">${esc(original)}</span><span class="gloss-tag">${type==='core'?'三級目標詞':type==='phrase'?'補充片語':'閱讀輔助詞'}</span>${esc(def||'')}<br><span class="gloss-note">${esc(context)}</span><br><button id="hearWord" aria-label="朗讀英文">▶ 發音</button>`;$('hearWord').onclick=()=>speak(original)}
+function highlight(s){let safe=esc(s);const reserved=[];for(const phrase of phrases){const re=new RegExp('\\b'+phrase.replace(/[.*+?^${}()|[\]\\]/g,'\\$&')+'\\b','gi');safe=safe.replace(re,t=>{const mark='ZZPHRASE'+reserved.length+'ZZ';reserved.push(`<button class="word extra phrase" data-type="phrase" data-word="${esc(phrase)}" type="button">${t}</button>`);return mark})}safe=safe.replace(/\b[A-Za-z]+(?:['’][A-Za-z]+)?\b/g,t=>{if(/^ZZPHRASE\d+ZZ$/.test(t))return t;const word=lemma(t);if(word&&chapterWord(word)){const own=c().words.includes(word);return `<button class="word${own?'':' old'}" data-type="core" data-word="${esc(word)}" type="button">${t}</button>`}const extra=glossKey(t,extraBank);if(extra&& (LEVEL3_GLOSSARY[extra] || LEVEL3_FOCUS_EXTRA.includes(extra) || (extra.length>=8 && advancedBank.has(extra))))return `<button class="word extra" data-type="extra" data-word="${esc(extra)}" type="button">${t}</button>`;return t});return safe.replace(/ZZPHRASE(\d+)ZZ/g,(_,i)=>reserved[+i])}
+function art(scene){const night=scene==='night';let sky=night?'#24354a':scene==='paper'?'#736b75':scene==='meeting'?'#657f8b':'#7796ae';let lit=night?'#f4d18c':'#f9dfa7';return `<svg viewBox="0 0 360 124" shape-rendering="crispEdges" xmlns="http://www.w3.org/2000/svg"><rect width="360" height="124" fill="${sky}"/><rect y="0" width="360" height="11" fill="#282437"/><rect x="222" y="17" width="111" height="66" fill="#27243b"/><rect x="227" y="22" width="101" height="56" fill="${night?'#192638':'#c2dbe2'}"/><rect x="277" y="22" width="5" height="56" fill="#282437"/><rect y="80" width="360" height="44" fill="#74573e"/><rect y="84" width="360" height="3" fill="#342836"/><rect x="28" y="41" width="84" height="41" fill="#2c2535"/><rect x="33" y="46" width="74" height="31" fill="#e7e0d0"/><rect x="40" y="52" width="54" height="3" fill="#8c8478"/><rect x="40" y="61" width="40" height="3" fill="#ab9c81"/><rect x="40" y="69" width="49" height="3" fill="#8c8478"/><rect x="150" y="60" width="67" height="42" fill="#3b344c"/><rect x="155" y="65" width="57" height="32" fill="${night?'#3b5e6c':'#a8d5df'}"/><rect x="161" y="72" width="43" height="5" fill="#7699a3"/><rect x="161" y="81" width="32" height="5" fill="#506e79"/><rect x="138" y="100" width="90" height="6" fill="#281e2c"/><rect x="70" y="92" width="65" height="21" fill="#b59168"/><rect x="75" y="95" width="55" height="3" fill="#e1c59c"/><rect x="267" y="96" width="44" height="18" fill="#3b344c"/><rect x="273" y="99" width="32" height="12" fill="#ead6ad"/><rect x="300" y="13" width="3" height="10" fill="${lit}"/><rect x="293" y="22" width="18" height="4" fill="${lit}"/></svg>`}
+function refreshTop(){stopVoice();$('count').textContent=`${c().series||"第一部 · 錯誤的地址"} · 第 ${chapter+1} / ${LEVEL3_STORIES.length} 章`;$('title').textContent=c().title;$('blurb').textContent=c().zh+'｜'+c().blurb;$('art').innerHTML=art(c().scene);const saved=getSaved();$('pick').innerHTML=LEVEL3_STORIES.map((s,i)=>`${i===0||LEVEL3_STORIES[i-1]?.series!==s.series?`<optgroup label="${esc(s.series||'第一部 · 錯誤的地址')}">`:''}<option value="${i}">${saved[s.id]?.score!==undefined?'✓ ':''}${String(i+1).padStart(2,'0')} · ${esc(s.title)}</option>${i===LEVEL3_STORIES.length-1||LEVEL3_STORIES[i+1]?.series!==s.series?'</optgroup>':''}`).join('');$('pick').value=chapter;let rec=saved[c().id];$('bReview').textContent=rec&&rec.next<=today()?'今日有複習':'隔日複習';$('bReview').disabled=!(rec&&rec.next<=today());}
+function stopVoice(){if('speechSynthesis' in window)speechSynthesis.cancel()}
+function showReader(){view='reader';refreshTop();$('reader').classList.remove('hide');$('quiz').classList.add('hide');$('review').classList.add('hide');$('progress').classList.remove('hide');$('translation').classList.toggle('hide',!translationOn);$('pageTag').textContent=`PAGE ${page+1} / ${c().pages.length}　·　第一次讀不必逐字查`;$('storyText').innerHTML=c().pages[page].en.split(/\n\s*\n/).map(x=>`<p class="en">${highlight(x)}</p>`).join('');$('translation').textContent=c().pages[page].zh;$('hint').innerHTML='<span class="hint-empty">先用上下文理解；點綠底線三級字、藍虛線補充字或片語可看中文。</span>';$('progress').innerHTML=c().pages.map((_,i)=>`<i class="${i<=page?'active':''}"></i>`).join('');$('bPrev').disabled=page===0;$('bNext').textContent=page===c().pages.length-1?'進入理解小考 →':'下一頁 →';$('storyText').querySelectorAll('.word').forEach(btn=>btn.addEventListener('click',()=>{btn.classList.add('visited');showGloss(btn.dataset.word,btn.dataset.type,btn.textContent)}))}
+function speak(t){if(!('speechSynthesis' in window)){return}stopVoice();const u=new SpeechSynthesisUtterance(t);u.lang='en-US';u.rate=.85;const voices=speechSynthesis.getVoices();const en=voices.find(v=>v.lang==='en-US')||voices.find(v=>v.lang.startsWith('en'));if(en)u.voice=en;speechSynthesis.speak(u)}
+function renderQuiz(){view='quiz';stopVoice();$('reader').classList.add('hide');$('review').classList.add('hide');$('quiz').classList.remove('hide');$('progress').classList.add('hide');$('quizHead').textContent=`第 ${chapter+1} 章 · 劇情理解（${c().quiz.length} 題）`;$('quizItems').innerHTML=c().quiz.map((q,i)=>`<div class="qcard"><div class="qno">QUESTION ${i+1}</div><div class="qtitle">${esc(q.q)}</div><div class="answers">${q.opts.map((opt,j)=>`<button type="button" data-q="${i}" data-a="${j}" class="${answers[i]===j?'selected':''}">${String.fromCharCode(65+j)}. ${esc(opt)}</button>`).join('')}<button type="button" data-q="${i}" data-a="-1" class="${answers[i]===-1?'selected':''}">？ 我不知道（不猜）</button></div></div>`).join('');$('quizItems').querySelectorAll('[data-q]').forEach(b=>b.onclick=()=>{const q=+b.dataset.q,a=+b.dataset.a;answers[q]=a;document.querySelectorAll('[data-q=\"'+q+'\"]').forEach(x=>x.classList.toggle('selected',+x.dataset.a===a));$('bSubmit').disabled=answers.some(x=>x===null)});$('bSubmit').disabled=answers.some(x=>x===null)}
+function saveQuiz(){const score=c().quiz.filter((q,i)=>answers[i]===q.a).length;const data=getSaved();const old=data[c().id]||{};data[c().id]={score,best:Math.max(old.best||0,score),date:today(),next:nextDate(),attempts:(old.attempts||0)+1,missed:c().quiz.map((q,i)=>answers[i]===q.a?null:i).filter(x=>x!==null)};setSaved(data)}
+function showReview(retest=false){view='review';stopVoice();$('reader').classList.add('hide');$('quiz').classList.add('hide');$('review').classList.remove('hide');$('progress').classList.add('hide');const rec=getSaved()[c().id];$('reviewHead').textContent=`第 ${chapter+1} 章 · 故事解密與字彙`;let r=rec?`本次答對 ${rec.score} / ${c().quiz.length} · 下次複習 ${rec.next} · 累計練習 ${rec.attempts} 次`:'尚未作答';$('reviewStat').textContent=r;
+  // 直接用既有每頁 zh 串成完整故事；逐段分段但不限制單頁，也不揭露後續章節。
+  $('fullTranslation').innerHTML=c().pages.flatMap(p=>p.zh.trim().split(/\n\s*\n/)).map(para=>`<p>${esc(para.trim())}</p>`).join('');
+  $('fullTranslation').classList.remove('hide');
+  $('bFullTranslation').textContent='收起翻譯 ↑';
+  $('bFullTranslation').setAttribute('aria-expanded','true');
+  $('vocab').innerHTML=`<div class="qcard"><div class="qtitle">閱讀理解解析</div>${c().quiz.map((q,i)=>`<div class="answerwhy"><b>${i+1}. ${esc(q.q)}</b><br>正確答案：${esc(q.opts[q.a])}<br>${esc(q.why)}</div>`).join('')}</div><div class="sectionhead">本章核心字彙 · ${c().words.length} 個</div>`+c().words.map((word)=>{const example=c().pages.map(p=>p.en.split(/[.!?]\s+/).find(t=>new RegExp('\\b'+word.replace(/e$/,'')+'[a-z]*\\b','i').test(t))).find(Boolean)||'';return `<div class="vcard"><span class="w">${esc(word)}</span><button type="button" data-say="${esc(word)}">▶ 發音</button><div class="z">${esc(bank[word])}</div><div class="example">${esc(example.trim())}</div></div>`}).join('');// 補充詞與本章三級核心字分開計數，交卷後集中整理較難詞彙。
+  const extras=new Map();for(const pg of c().pages){for(const m of pg.en.matchAll(/\b[A-Za-z]+(?:['’][A-Za-z]+)?\b/g)){const w=glossKey(m[0],extraBank);if(w&&!bank[w]&&(LEVEL3_GLOSSARY[w]||LEVEL3_FOCUS_EXTRA.includes(w)||(w.length>=8&&advancedBank.has(w))))extras.set(w,extraBank[w]);}}
+  const supplemental=[...extras].slice(0,16);
+  if(supplemental.length)$('vocab').innerHTML+=`<div class="sectionhead">閱讀補充難字 · 不計入三級詞數</div>`+supplemental.map(([w,z])=>`<div class="vcard"><span class="w">${esc(w)}</span><button type="button" data-say="${esc(w)}">▶ 發音</button><div class="z">${esc(z)}</div></div>`).join('');
+  $('vocab').querySelectorAll('[data-say]').forEach(b=>b.onclick=()=>speak(b.dataset.say));$('bContinue').textContent=chapter<LEVEL3_STORIES.length-1?'下一章 →':'回第一章 ↻'}
+$('bNext').onclick=()=>{if(page<c().pages.length-1){page++;showReader()}else{answers=Array(c().quiz.length).fill(null);renderQuiz()}};
+$('bPrev').onclick=()=>{if(page>0){page--;showReader()}};
+$('bSpeak').onclick=()=>speak(c().pages[page].en.replace(/\n+/g,' '));
+$('bBack').onclick=()=>{page=c().pages.length-1;showReader()};
+$('bSubmit').onclick=()=>{if(answers.some(x=>x===null))return;saveQuiz();showReview();refreshTop()};
+$('bFullTranslation').onclick=()=>{
+  const isOpen=$('bFullTranslation').getAttribute('aria-expanded')==='true';
+  $('fullTranslation').classList.toggle('hide',isOpen);
+  $('bFullTranslation').setAttribute('aria-expanded',String(!isOpen));
+  $('bFullTranslation').textContent=isOpen?'展開完整中文 ↓':'收起翻譯 ↑';
+};
+$('bReread').onclick=()=>{page=0;translationOn=false;showReader()};
+$('bContinue').onclick=()=>{chapter=(chapter+1)%LEVEL3_STORIES.length;page=0;translationOn=false;showReader()};
+$('bReview').onclick=()=>{answers=Array(c().quiz.length).fill(null);renderQuiz()};
+$('pick').onchange=e=>{chapter=+e.target.value;page=0;translationOn=false;showReader()};
+// 翻譯在完成小考後才可開啟：在單字解密階段手動返回並查看本頁中文。
+$('translation').classList.add('hide');
+// 想看逐段中文時可在解密後重新閱讀；不破壞第一次閱讀的體驗。
+const translationButton=document.createElement('button');translationButton.id='bTranslate';translationButton.textContent='本段中文（小考後）';translationButton.onclick=()=>{if(!getSaved()[c().id])return;translationOn=!translationOn;showReader()};$('bSpeak').after(translationButton);
+const originalShowReader=showReader;showReader=function(){originalShowReader();translationButton.disabled=!getSaved()[c().id];$('translation').classList.toggle('hide',!translationOn)};
+$('coverageInfo').textContent=`三級故事：${LEVEL3_STORIES.length} 章（${new Set(LEVEL3_STORIES.map(s=>s.series||"第一部")).size} 部） · 已故事化 ${introduced.size}／${Object.keys(bank).length} 個詞條；尚餘 ${Object.keys(bank).length-introduced.size} 個未故事化。部分系列已完結，不代表全級詞彙完成。`;
+const data=getSaved();chapter=Math.max(0,LEVEL3_STORIES.findIndex(s=>data[s.id]?.score===undefined));page=0;showReader();
+</script>
+</body>
+</html>
