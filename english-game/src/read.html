@@ -142,6 +142,7 @@ button:focus-visible,select:focus-visible{outline:2px solid var(--frame-in);outl
 <script src="data/chapters-9.js"></script>
 <script src="data/chapters-final.js"></script>
 <script src="data/scenes-more.js"></script>
+<script src="timed-mode.js"></script>
 <script>
 
 /* ── 防呆：直接開原始版會少掉旁邊的資料檔 ── */
@@ -347,6 +348,7 @@ function dueList(){
 }
 function showGate(){
   const c = ch();
+  TimedMode.leave();
   markRead(c.id);
   $('reader').style.display='none';
   $('quiz').style.display='block';
@@ -395,16 +397,19 @@ function showQuiz(){
   $('reader').style.display='none';
   $('quiz').style.display='block';
   let done = 0, right = 0, over = false;
-  const secs = c.quiz.map(q=>qSecs(q[0], !c.long));
+  TimedMode.leave();
+  // 限時模式開啟時，依難度縮放每題秒數（中等＝原本的 30／60 秒）
+  const qf = TimedMode.quizFactor(), sS = Math.round(30*qf), sL = Math.round(60*qf);
+  const secs = c.quiz.map(q=>qSecs(q[0], !c.long)===30 ? sS : sL);
   const budget = secs.reduce((a,b)=>a+b, 0);
-  const nShort = secs.filter(x=>x===30).length, nLong = secs.length - nShort;
+  const nShort = secs.filter(x=>x===sS).length, nLong = secs.length - nShort;
   let left = budget; const t0 = Date.now();
-  const on = timerOn();
+  const on = TimedMode.isOn() || timerOn();
 
   $('quiz').innerHTML = `<div id="tbar"><div class="l">
       <span id="tLeft">${on ? mmss(left) : '不計時'}</span>
-      <span id="tInfo">${nShort ? `字義題 ${nShort} 題 × 30 秒` : ''}${nShort&&nLong?'　':''}${nLong ? `理解題 ${nLong} 題 × 60 秒` : ''}<br>共 ${mmss(budget)}，自己分配</span>
-      <button id="tTog">${on ? '關掉計時' : '開啟計時'}</button></div>
+      <span id="tInfo">${TimedMode.isOn() ? `${TimedMode.PRESETS[TimedMode.settings().mode].label}　` : ''}${nShort ? `字義題 ${nShort} 題 × ${sS} 秒` : ''}${nShort&&nLong?'　':''}${nLong ? `理解題 ${nLong} 題 × ${sL} 秒` : ''}<br>共 ${mmss(budget)}，自己分配</span>
+      ${TimedMode.isOn() ? '' : `<button id="tTog">${on ? '關掉計時' : '開啟計時'}</button>`}</div>
       <div id="tGauge"${on?'':' style="display:none"'}><i></i></div></div>`
     + c.quiz.map((q,n)=>{
     const [prompt, opts] = q;
@@ -427,6 +432,8 @@ function showQuiz(){
       ? (over ? `時間到。這份的考試節奏是 ${mmss(budget)}。`
               : `用了 ${mmss(used)}，剩 ${mmss(Math.max(0,left))}。` + (used <= budget*0.7 ? '速度夠，可以把省下的時間拿去檢查。' : ''))
       : `用了 ${mmss(used)}（考試節奏是 ${mmss(budget)}）。`;
+    const sum = TimedMode.finish();
+    if(sum){ sum.quiz = null; u.textContent += ' ' + TimedMode.report(sum, right, c.quiz.length); }
   };
 
   const lockRest = ()=>{
@@ -459,7 +466,7 @@ function showQuiz(){
   };
   if(on) QT = setInterval(tick, 250);
 
-  $('tTog').onclick = ()=>{ setTimerOn(!on); showQuiz(); };
+  if($('tTog')) $('tTog').onclick = ()=>{ setTimerOn(!on); showQuiz(); };
 
   $('quiz').querySelectorAll('.qcard[data-n]').forEach(card=>{
     const n = +card.dataset.n, [ , opts, ans, why] = c.quiz[n];
@@ -518,6 +525,17 @@ document.addEventListener('keydown', e=>{
   if(e.key==='ArrowLeft') $('bp').click();
 });
 
+/* ── 限時模式：每頁依字數倒數；小考沿用上面的計時，依難度縮放 ── */
+{
+  const baseDraw = draw;
+  draw = function(){
+    baseDraw();
+    TimedMode.chapter(ch().id);
+    TimedMode.page(ci+':'+pi, TimedMode.countWords(PLAIN), ()=>$('bn').click());
+  };
+  TimedMode.mount({ app:'read', controlsAfter:document.querySelector('.bar'), stripBefore:$('reader'),
+    onChange:()=>{ if($('reader').style.display!=='none') draw(); else if($('quiz').querySelector('#tbar')) showQuiz(); } });
+}
 buildPicker();
 refreshDue();
 draw();

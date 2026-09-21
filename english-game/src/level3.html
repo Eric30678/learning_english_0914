@@ -73,6 +73,7 @@ button.quiet{background:#efe8d7;border-color:#cdbfa6;color:#2a2438}.pill{font-si
 <script src="data/level3-stories.js"></script>
 <script src="data/level3-extra-stories.js"></script>
 <script src="data/level3-more-stories.js"></script>
+<script src="timed-mode.js"></script>
 <script>
 'use strict';
 const $=id=>document.getElementById(id);
@@ -138,6 +139,18 @@ $('translation').classList.add('hide');
 const translationButton=document.createElement('button');translationButton.id='bTranslate';translationButton.textContent='本段中文（小考後）';translationButton.onclick=()=>{if(!getSaved()[c().id])return;translationOn=!translationOn;showReader()};$('bSpeak').after(translationButton);
 const originalShowReader=showReader;showReader=function(){originalShowReader();translationButton.disabled=!getSaved()[c().id];$('translation').classList.toggle('hide',!translationOn)};
 $('coverageInfo').textContent=`三級故事：${LEVEL3_STORIES.length} 章（${new Set(LEVEL3_STORIES.map(s=>s.series||"第一部")).size} 部） · 已故事化 ${introduced.size}／${Object.keys(bank).length} 個詞條；尚餘 ${Object.keys(bank).length-introduced.size} 個未故事化。部分系列已完結，不代表全級詞彙完成。`;
+// ── 限時模式：每頁依字數倒數，小考依題數倒數；設定與其他頁共用 ──
+(function(){
+  const reportEl=()=>{let el=document.getElementById('tmReport');if(!el){el=document.createElement('span');el.id='tmReport';el.className='tm-report';$('reviewStat').appendChild(el)}return el};
+  const timeUp=()=>{if(view!=='quiz'&&view!=='reader')return;if(!answers.length)answers=Array(c().quiz.length).fill(null);answers=answers.map(x=>x===null?-1:x);saveQuiz();showReview();refreshTop()};
+  const baseReader=showReader;
+  showReader=function(){baseReader();TimedMode.chapter(c().id);TimedMode.page(chapter+':'+page,TimedMode.countWords(c().pages[page].en),()=>$('bNext').click())};
+  const baseQuiz=renderQuiz;
+  renderQuiz=function(){baseQuiz();TimedMode.chapter(c().id);TimedMode.quiz(c().quiz.length,timeUp)};
+  const baseReview=showReview;
+  showReview=function(...a){const sum=TimedMode.finish();baseReview(...a);if(sum){const rec=getSaved()[c().id];reportEl().textContent=TimedMode.report(sum,rec?rec.score:0,c().quiz.length)}};
+  TimedMode.mount({app:'level3',controlsAfter:document.querySelector('.toolbar'),stripBefore:$('progress'),onChange:()=>{if(view==='quiz')renderQuiz();else if(view==='reader')showReader()}});
+})();
 const data=getSaved();chapter=Math.max(0,LEVEL3_STORIES.findIndex(s=>data[s.id]?.score===undefined));page=0;showReader();
 </script>
 </body>
